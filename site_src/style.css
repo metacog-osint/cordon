@@ -35,7 +35,7 @@ a { color: var(--link); }
 .legend .dt { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; }
 #map { height: min(62vh, 560px); min-height: 340px; background: var(--sea); }
 .leaflet-container { background: var(--sea); font: inherit; }
-.leaflet-tooltip { font-size: 13px; max-width: 320px; white-space: normal; }
+.leaflet-tooltip { font-size: 13px; width: max-content; max-width: min(320px, 80vw); white-space: normal; }
 .posture-icon { background: var(--posture); color: var(--panel); border-radius: 4px; font-size: 11px; font-weight: 700;
   line-height: 18px; text-align: center; box-shadow: 0 0 0 2px var(--panel); }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; margin-bottom: var(--gap); }
