@@ -1,0 +1,28 @@
+{
+  "program": "cordon",
+  "customer": "Travellers, aviation and maritime users, analysts, Verdict and COP. Written by the program owner.",
+  "reviewed": "2026-10-31",
+  "review_by": "2027-01-31",
+  "requirements": [
+    {"id": "CD-SQ-1", "type": "standing",
+     "question": "Where are governments and aviation and maritime authorities warning people away, and is that changing?"},
+    {"id": "CD-PIR-1", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Which countries carry a US travel advisory of level 3 or 4, and which levels changed this month?",
+     "series": ["State Department travel advisories (level, text hash)", "changes.jsonl (level changes)"],
+     "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-2", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where has the US ordered or authorized the departure of embassy staff, or suspended operations?",
+     "series": ["departure status read from advisory text", "US embassy alerts"],
+     "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-3", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Which airspaces carry an EASA conflict-zone bulletin, and when does each expire?",
+     "series": ["EASA CZIB table (status, revision, valid until)"],
+     "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-4", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where are mariners warned of launches, military activity, mines, GNSS trouble or other hazards?",
+     "series": ["NGA navigational warnings in force (NAVAREA IV/XII, HYDROLANT, HYDROPAC, HYDROARC)"]},
+    {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
+     "question": "Is each source answering (data/health.json)?",
+     "series": ["source health"]}
+  ]
+}

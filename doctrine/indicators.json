@@ -1,0 +1,41 @@
+{
+  "program": "cordon",
+  "indicator_rule": "Indicators meet Gentry's test. Lists stay flat (Grabo). Departure status is read from free text, so every change goes to a person for review before it is counted.",
+  "emerging_concerns": "A country that gets a departure order, a level-4 advisory or a new EASA bulletin without being in any Watchfloor zone goes to Watchfloor's review queue.",
+  "indicators": [
+    {"id": "CD-IND-1", "text": "The US orders or authorizes the departure of embassy staff, or suspends embassy operations",
+     "series": "departure status read from State's advisory text", "rule": "post posture changes from normal (or rises on the ladder)",
+     "baseline": "the post's previous status", "gentry": {"predictive": true, "diagnostic": false, "unambiguous": true, "collectable": true}},
+    {"id": "CD-IND-2", "text": "A US travel advisory is raised to level 4", "series": "State travel advisories",
+     "rule": "level rises to 4", "baseline": "the previous level",
+     "gentry": {"predictive": true, "diagnostic": false, "unambiguous": true, "collectable": true}},
+    {"id": "CD-IND-3", "text": "EASA issues a new conflict-zone bulletin or strengthens one", "series": "EASA CZIB table",
+     "rule": "a new active bulletin, or a revision that moves a recommendation from caution to do not operate",
+     "baseline": "the previous revision", "gentry": {"predictive": true, "diagnostic": true, "unambiguous": true, "collectable": true}},
+    {"id": "CD-IND-4", "text": "Military, launch or mine warnings to mariners in the region", "series": "NGA navigational warnings",
+     "rule": "a warning in category military, launch or mines within the area", "baseline": "warnings in force",
+     "gentry": {"predictive": true, "diagnostic": true, "unambiguous": true, "collectable": true}},
+    {"id": "CD-IND-5", "text": "A health, disaster or administrative cause is named for the change", "series": "advisory text",
+     "rule": "the departure sentence names a health, natural-disaster or administrative reason", "baseline": "none",
+     "gentry": {"predictive": false, "diagnostic": true, "unambiguous": false, "collectable": true}},
+    {"id": "CD-IND-6", "text": "The change comes from Cordon's reading, not the source", "series": "source health and the review queue",
+     "rule": "the source failed, or a person found the phrase match wrong", "baseline": "none",
+     "gentry": {"predictive": false, "diagnostic": true, "unambiguous": true, "collectable": true}}
+  ],
+  "warning_problems": [
+    {"id": "CD-WP-1", "title": "A diplomatic or aviation drawdown in a country (any country)", "frozen": "2026-10-31",
+     "watch_condition": {"current": "set per country from CD-IND-1 to CD-IND-3", "levels": ["normal", "drawdown", "closed"]},
+     "issue_on_change": "Issue a notice when a post's status or a bulletin changes; stay silent while it holds.",
+     "deactivation": "Back to normal when the post returns to normal operations and no bulletin is active.",
+     "hypotheses": [
+       {"id": "CD-WP-1-H1", "statement": "Security is deteriorating: conflict, attack or unrest is expected",
+        "emerging": ["CD-IND-1", "CD-IND-2", "CD-IND-3", "CD-IND-4"], "not_emerging": ["CD-IND-5"]},
+       {"id": "CD-WP-1-H2", "statement": "Political signalling or a dispute (reciprocity, sanctions, a downgrade of relations)",
+        "emerging": ["CD-IND-1"], "not_emerging": ["CD-IND-3", "CD-IND-4"]},
+       {"id": "CD-WP-1-H3", "statement": "A non-security cause: health, natural disaster or administration",
+        "emerging": ["CD-IND-5"], "not_emerging": ["CD-IND-3"]},
+       {"id": "CD-WP-1-H4", "statement": "Artefact: a source failure or a wrong phrase match",
+        "emerging": ["CD-IND-6"], "not_emerging": []}
+     ]}
+  ]
+}

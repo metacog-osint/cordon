@@ -1,0 +1,9 @@
+{
+  "program": "cordon",
+  "note": "Deterministic: the lane sets the functions. No AI calls.",
+  "rules": [
+    {"match": {"lane": "easa"}, "ncf": ["transport_by_air"]},
+    {"match": {"lane": "nga"}, "ncf": ["transport_by_vessel"]},
+    {"match": {"lane": "nga", "category": "gnss"}, "ncf": ["transport_by_vessel", "provide_pnt"]}
+  ]
+}

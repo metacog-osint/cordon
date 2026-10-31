@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cordon: where authorities warn people away</title>
+<meta name="description" content="US travel advisories and embassy departure status, EASA conflict-zone bulletins and NGA navigational warnings on one map. A project of The Intelligence Company.">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tic-time.css">
+<script src="tic-time.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <div class="brand"><strong>Cordon</strong><span class="muted">The Intelligence Company</span></div>
+    <nav class="top-nav">
+      <a href="https://theintelligence.company/">All programs</a>
+      <a href="data/feed.geojson">Feed</a>
+      <a href="https://github.com/metacog-osint/cordon">Code and data</a>
+      <span id="time-settings"></span>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
+    <p class="lede" id="lede">US travel advisories and embassy departure status, European aviation conflict-zone bulletins,
+      and US navigational warnings to mariners, collected every hour from the issuing authorities.</p>
+  </section>
+
+  <section class="mapcard" aria-label="Map">
+    <div class="map-tools">
+      <fieldset class="layers" aria-label="Layers">
+        <label><input type="checkbox" data-layer="advisories" checked> Travel advisory level</label>
+        <label><input type="checkbox" data-layer="posture" checked> US embassy departure status</label>
+        <label><input type="checkbox" data-layer="czib" checked> EASA conflict-zone bulletins</label>
+        <label><input type="checkbox" data-layer="navwarn" checked> Warnings to mariners</label>
+      </fieldset>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div id="map" role="region" aria-label="Map of advisories, bulletins and warnings"></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="posture-h">
+      <h2 id="posture-h">US embassy departure status</h2>
+      <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>
+      <div id="posture"></div>
+    </section>
+    <section class="card" aria-labelledby="czib-h">
+      <h2 id="czib-h">EASA conflict-zone bulletins in force</h2>
+      <p class="muted small">Sorted by the date each expires unless EASA renews it.</p>
+      <div id="czibs"></div>
+    </section>
+  </div>
+
+  <div class="two">
+    <section class="card" aria-labelledby="changes-h">
+      <h2 id="changes-h">Changes in the last 30 days</h2>
+      <div id="changes"></div>
+    </section>
+    <section class="card" aria-labelledby="nav-h">
+      <h2 id="nav-h">Warnings to mariners in force</h2>
+      <p class="muted small">NGA broadcast warnings, grouped by what they warn of. The map shows each one where its text places it.</p>
+      <div id="navcats"></div>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="levels-h">
+    <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
+    <div id="levels"></div>
+  </section>
+
+  <section class="card" aria-labelledby="health-h">
+    <h2 id="health-h">Sources</h2>
+    <div id="health"></div>
+    <p class="small muted">US Department of State (travel.state.gov) and NGA (msi.nga.mil) content is US public domain.
+      EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
+      Bulletins. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+      OSAC is not used: its terms bar republishing.</p>
+  </section>
+</main>
+
+<footer class="wrap foot small muted">
+  <p>A project of The Intelligence Company. Collected <time id="asof" data-tic="datetime"></time>. Cordon reports what each
+    authority published; it adds no judgment of its own. Places are drawn at a point inside each country, not at the capital.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
