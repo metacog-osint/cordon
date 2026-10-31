@@ -1,0 +1,23 @@
+{
+  "program": "cordon",
+  "assumptions": [
+    {"id": "CD-AS-1", "text": "A US departure order reflects the State Department's own security assessment.",
+     "test": {"type": "manual", "rule": "Read the departure sentence and the advisory's stated reasons"},
+     "status": "holds", "reviewed": "2026-10-31", "linked": ["CD-IND-1"]},
+    {"id": "CD-AS-2", "text": "Cordon's phrase set catches every departure order and suspension in the advisory text.",
+     "test": {"type": "manual", "rule": "Every posture change is flagged for review; tests cover the known wordings"},
+     "status": "strained",
+     "note": "There is no machine-readable field and the wording varies: Saudi Arabia (23 Oct 2026) said staff were 'ordered ... to leave'. Russia's text says its consulates suspended operations, which Cordon does not count as the embassy's.",
+     "reviewed": "2026-10-31", "linked": ["CD-IND-1"]},
+    {"id": "CD-AS-3", "text": "State's country codes map to the right ISO country.",
+     "test": {"type": "auto", "rule": "Tests compare every FIPS mapping with the advisory's own country name"},
+     "status": "holds",
+     "note": "14 advisories use ISO or State's own codes (for example Switzerland 'SR'); the title decides for those.",
+     "reviewed": "2026-10-31", "linked": ["CD-IND-2"]},
+    {"id": "CD-AS-4", "text": "US embassy alert feeds are reachable.",
+     "test": {"type": "auto", "rule": "data/health.json, source us-embassy-alerts"},
+     "status": "broken",
+     "note": "On 31 Oct 2026 every post site served a 'Technical Difficulties' page (HTTP 403). Cordon keeps trying and shows no data until they recover.",
+     "reviewed": "2026-10-31", "linked": ["CD-IND-1"]}
+  ]
+}

@@ -1,0 +1,3694 @@
+{
+ "source": "https://cadataapi.state.gov/api/TravelAdvisories",
+ "advisories": {
+  "IR": {
+   "key": "IR",
+   "iso": "IR",
+   "fips": "IR",
+   "name": "Iran",
+   "title": "Iran - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.irn.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:ada0ef5a6072d8a2b7dad54946445cb967d44bf8e2f370b0276602cb97142b36",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 711
+  },
+  "SY": {
+   "key": "SY",
+   "iso": "SY",
+   "fips": "SY",
+   "name": "Syria",
+   "title": "Syria - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.syr.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:86eb5cb42b3ec10f5f7a6b074ae728629aab3ea68e8f92cec12589afccf76fdd",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 599
+  },
+  "YE": {
+   "key": "YE",
+   "iso": "YE",
+   "fips": "YM",
+   "name": "Yemen",
+   "title": "Yemen - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.yem.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:8de78a44b07ae16fd7c10f149e2ca1245a652e8a7caa8e859b7a5f90039bdef4",
+   "posture": {
+    "state": "suspended_operations",
+    "sentence": "The US Embassy in Sana’a suspended its operations in February 2015."
+   },
+   "words": 853
+  },
+  "BH": {
+   "key": "BH",
+   "iso": "BH",
+   "fips": "BA",
+   "name": "Bahrain",
+   "title": "Bahrain - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bhr.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:4eb3a8df1fd4ec6fd92f861836503f87f8101f8adbbfa7e24579f5a56f728535",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 209
+  },
+  "JO": {
+   "key": "JO",
+   "iso": "JO",
+   "fips": "JO",
+   "name": "Jordan",
+   "title": "Jordan - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.jor.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:31d753545067b448a1208a24a63a8052c969e08fff3f0a0457e1b0d6665c74d8",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 439
+  },
+  "LB": {
+   "key": "LB",
+   "iso": "LB",
+   "fips": "LE",
+   "name": "Lebanon",
+   "title": "Lebanon - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lbn.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:8b7e776970d1a89c3cf0c7cfa8b156e4614bb02178aecb11b39abfa0355cc81d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 500
+  },
+  "OM": {
+   "key": "OM",
+   "iso": "OM",
+   "fips": "MU",
+   "name": "Oman",
+   "title": "Oman - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.omn.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:d4532601a6b7c017fc66b5ec3082da5a404a69acd34ccefd57b9e7e0225a9594",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 337
+  },
+  "SA": {
+   "key": "SA",
+   "iso": "SA",
+   "fips": "SA",
+   "name": "Saudi Arabia",
+   "title": "Saudi Arabia - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sau.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:dad9dfea11b475a03d13000b9b40b1fab9347c497448a5d99dbe9a850d2406c8",
+   "posture": {
+    "state": "ordered_departure",
+    "sentence": "On October 23, 2026, the Department of State ordered non-emergency US government employees and US government employee family members to leave Saudi Arabia due to safety risks."
+   },
+   "words": 795
+  },
+  "KW": {
+   "key": "KW",
+   "iso": "KW",
+   "fips": "KU",
+   "name": "Kuwait",
+   "title": "Kuwait - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kwt.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:17fd009d9ccfec1b1caebd4b5b5f2ea0cb4e05c063f4ea7e60c0f219c070b206",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 292
+  },
+  "IQ": {
+   "key": "IQ",
+   "iso": "IQ",
+   "fips": "IZ",
+   "name": "Iraq",
+   "title": "Iraq - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.irq.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:558b4320ba9e0aebc306635e8749009eb619278923a8946ab06406c4511a0a19",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 399
+  },
+  "AE": {
+   "key": "AE",
+   "iso": "AE",
+   "fips": "AE",
+   "name": "United Arab Emirates",
+   "title": "United Arab Emirates - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.are.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:fecdbd4006be69d3e942326038c9fcc910dfab9fc110410c7f1671fb32aeeb5c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 316
+  },
+  "QA": {
+   "key": "QA",
+   "iso": "QA",
+   "fips": "QA",
+   "name": "Qatar",
+   "title": "Qatar - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.qat.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:3eefe0038ad73b280acde136b2ebbaf312e24bf671e20fa950e15158a75dc4a7",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 161
+  },
+  "IL": {
+   "key": "IL",
+   "iso": "IL",
+   "fips": "IS",
+   "name": "Israel",
+   "title": "Israel - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.isr.html",
+   "updated": "2026-10-22T20:00:00-04:00",
+   "text_hash": "sha256:55dfab483158b0def0cd442387035d420d340c19846180c00182584cc0726de8",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 329
+  },
+  "FR": {
+   "key": "FR",
+   "iso": "FR",
+   "fips": "FR",
+   "name": "France",
+   "title": "France - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.fra.html",
+   "updated": "2026-10-20T20:00:00-04:00",
+   "text_hash": "sha256:7fcc0dc6f3de577905221933cee2858d6024db58f95ad3c194b207cc7454c9b6",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 192
+  },
+  "CN": {
+   "key": "CN",
+   "iso": "CN",
+   "fips": "CH",
+   "name": "China",
+   "title": "China - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.chn.html",
+   "updated": "2026-10-18T20:00:00-04:00",
+   "text_hash": "sha256:58625ed1dfe18a62ff20ead48cd465337b4d886fc9341627f3a5440b7fbf1b0c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 1830
+  },
+  "KE": {
+   "key": "KE",
+   "iso": "KE",
+   "fips": "KE",
+   "name": "Kenya",
+   "title": "Kenya - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ken.html",
+   "updated": "2026-10-18T20:00:00-04:00",
+   "text_hash": "sha256:facb42d3cac7b5fe379bdc25248de611a2a4805af7d5f30bc010547aa44ac51f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 723
+  },
+  "TZ": {
+   "key": "TZ",
+   "iso": "TZ",
+   "fips": "TZ",
+   "name": "Tanzania",
+   "title": "Tanzania - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tza.html",
+   "updated": "2026-10-15T20:00:00-04:00",
+   "text_hash": "sha256:581edad9ef2e1186a2430a01582dde85799fd1ebb8828c014a2b608f98fb08fb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 330
+  },
+  "KH": {
+   "key": "KH",
+   "iso": "KH",
+   "fips": "CB",
+   "name": "Cambodia",
+   "title": "Cambodia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.khm.html",
+   "updated": "2026-09-14T20:00:00-04:00",
+   "text_hash": "sha256:9babe94f5c9e20b6b9d02c594c39ad5652b596628d220e9414c895c009efae52",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 107
+  },
+  "IT": {
+   "key": "IT",
+   "iso": "IT",
+   "fips": "IT",
+   "name": "Italy",
+   "title": "Italy - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ita.html",
+   "updated": "2026-09-09T20:00:00-04:00",
+   "text_hash": "sha256:82a4aefb80a9bac965075ff6dd0e4f194860576017d003e160c3cbab509a16cb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 71
+  },
+  "MK": {
+   "key": "MK",
+   "iso": "MK",
+   "fips": "MK",
+   "name": "North Macedonia",
+   "title": "North Macedonia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mkd.html",
+   "updated": "2026-09-09T20:00:00-04:00",
+   "text_hash": "sha256:083ed839ff1b86de206ef7bdabd69f6303089d1b0135b1b54047a0a0646210b4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 32
+  },
+  "CW": {
+   "key": "CW",
+   "iso": "CW",
+   "fips": "UC",
+   "name": "Curaçao",
+   "title": "Curaçao - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cuw.html",
+   "updated": "2026-09-08T20:00:00-04:00",
+   "text_hash": "sha256:d5761517cbc2724e9fe0bd55ae3ac8cc783b1db41bc929e9e2dbaa62628ed4ed",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 133
+  },
+  "GB": {
+   "key": "GB",
+   "iso": "GB",
+   "fips": "UK",
+   "name": "United Kingdom",
+   "title": "United Kingdom - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gbr.html",
+   "updated": "2026-09-08T20:00:00-04:00",
+   "text_hash": "sha256:af59fc9d03cbbbccd085da38c03df2a4399c76aee8e0450d644fc49060eada61",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 89
+  },
+  "SR": {
+   "key": "SR",
+   "iso": "SR",
+   "fips": "NS",
+   "name": "Suriname",
+   "title": "Suriname - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sur.html",
+   "updated": "2026-09-07T20:00:00-04:00",
+   "text_hash": "sha256:cb8d8bcd7ff553bbde4fa83020e8db6a00c24ebbf56e6b7ef198f24bc9d48be3",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 27
+  },
+  "HK": {
+   "key": "HK",
+   "iso": "HK",
+   "fips": "HK",
+   "name": "Hong Kong",
+   "title": "Hong Kong - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.hkg.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:5b639fde15ebac37142308728cf86e69d08565a19806b6be6435d1098fba7af4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 600
+  },
+  "ST": {
+   "key": "ST",
+   "iso": "ST",
+   "fips": "TP",
+   "name": "São Tomé and Príncipe",
+   "title": "São Tomé and Príncipe - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.stp.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:87c0c5c272bb0d7f42f9ea855c77fa583ed7be4a6c6a8b7ac07232a37d471e5c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 90
+  },
+  "NP": {
+   "key": "NP",
+   "iso": "NP",
+   "fips": "NP",
+   "name": "Nepal",
+   "title": "Nepal - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.npl.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:1b596eb5b496ebc36e62790ada726c94a9afb51fd8c1ed0121de57b79366ee76",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 215
+  },
+  "MA": {
+   "key": "MA",
+   "iso": "MA",
+   "fips": "MO",
+   "name": "Morocco",
+   "title": "Morocco - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mar.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:21e645dec9aff72e2d99a3f48c3fb86e3f5517740b7aa24b71934f22c9f3c77a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 49
+  },
+  "PE": {
+   "key": "PE",
+   "iso": "PE",
+   "fips": "PE",
+   "name": "Peru",
+   "title": "Peru - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.per.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:08db879a04d02572efa289784b4b376951606e51d54adb6bd933af8171f5490b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 561
+  },
+  "TJ": {
+   "key": "TJ",
+   "iso": "TJ",
+   "fips": "TI",
+   "name": "Tajikistan",
+   "title": "Tajikistan - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tjk.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:5f85a7b1a5354a23e0c8449e1cd89accbb2136a9cdbb47a3eaf97dd96e3745ba",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 315
+  },
+  "BT": {
+   "key": "BT",
+   "iso": "BT",
+   "fips": "BT",
+   "name": "Bhutan",
+   "title": "Bhutan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.btn.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:44f8ddab2881b9e12709d45a6ff31b7cad88b13f2e1c51d5b78c0e01f82338cc",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 80
+  },
+  "MO": {
+   "key": "MO",
+   "iso": "MO",
+   "fips": "MC",
+   "name": "Macau",
+   "title": "Macau - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mac.html",
+   "updated": "2026-09-03T20:00:00-04:00",
+   "text_hash": "sha256:117b2e38b28e12e344416b1decb1bde1772e649bafd5175b60851afce6ca8b21",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 344
+  },
+  "PH": {
+   "key": "PH",
+   "iso": "PH",
+   "fips": "RP",
+   "name": "Philippines",
+   "title": "Philippines - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.phl.html",
+   "updated": "2026-08-31T20:00:00-04:00",
+   "text_hash": "sha256:b9bef2ac5ad7bc2aba8b33586b0a662fb3976bc3afebb291d683d88f877eec05",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 239
+  },
+  "BR": {
+   "key": "BR",
+   "iso": "BR",
+   "fips": "BR",
+   "name": "Brazil",
+   "title": "Brazil - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bra.html",
+   "updated": "2026-08-30T20:00:00-04:00",
+   "text_hash": "sha256:1e55d5c52fa4f23755b70c2e3fbcb9e08f49d71d2ee6036b87d093fc1f364168",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 335
+  },
+  "LY": {
+   "key": "LY",
+   "iso": "LY",
+   "fips": "LY",
+   "name": "Libya",
+   "title": "Libya - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lby.html",
+   "updated": "2026-08-30T20:00:00-04:00",
+   "text_hash": "sha256:d2314c53ac4febda4f534939372613233f2645ebf10559043829c8edbf7ca673",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 711
+  },
+  "UA": {
+   "key": "UA",
+   "iso": "UA",
+   "fips": "UP",
+   "name": "Ukraine",
+   "title": "Ukraine - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ukr.html",
+   "updated": "2026-08-27T20:00:00-04:00",
+   "text_hash": "sha256:b58c56070e4ff48d53ed229fc1770e16f047376e106fea85c73afc3a1b5aabd2",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 600
+  },
+  "RS": {
+   "key": "RS",
+   "iso": "RS",
+   "fips": "RI",
+   "name": "Serbia",
+   "title": "Serbia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.srb.html",
+   "updated": "2026-08-26T20:00:00-04:00",
+   "text_hash": "sha256:4b4bf9734ddc336e4c6b6c2b9aec8ecb3516f9c2233dcb77b5ec2c6df1cb2ec1",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 67
+  },
+  "ET": {
+   "key": "ET",
+   "iso": "ET",
+   "fips": "ET",
+   "name": "Ethiopia",
+   "title": "Ethiopia - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.eth.html",
+   "updated": "2026-08-26T20:00:00-04:00",
+   "text_hash": "sha256:a6fc05367318445d9c282d13c2301955ae5411682ab8b482885b08f53780a0da",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 666
+  },
+  "BA": {
+   "key": "BA",
+   "iso": "BA",
+   "fips": "BK",
+   "name": "Bosnia and Herzegovina",
+   "title": "Bosnia and Herzegovina - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bih.html",
+   "updated": "2026-08-26T20:00:00-04:00",
+   "text_hash": "sha256:8e8471e2a2154e639adc192c77862577dea4650548d36c1b0a03855487623a5f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 172
+  },
+  "ME": {
+   "key": "ME",
+   "iso": "ME",
+   "fips": "MJ",
+   "name": "Montenegro",
+   "title": "Montenegro - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mne.html",
+   "updated": "2026-08-26T20:00:00-04:00",
+   "text_hash": "sha256:98c7146060158263c0324e429621e085ecb8dad80f09d08b34cc3c454c91a531",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "PS-GZ": {
+   "key": "PS-GZ",
+   "iso": "PS",
+   "fips": "IS",
+   "name": "Gaza",
+   "title": "Gaza - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.xgz.html",
+   "updated": "2026-08-25T20:00:00-04:00",
+   "text_hash": "sha256:274a96c45beba7a4f43d1b9e66f258c24f006e1f6514228fefddf898c59d55e1",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 195
+  },
+  "GY": {
+   "key": "GY",
+   "iso": "GY",
+   "fips": "GY",
+   "name": "Guyana",
+   "title": "Guyana - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.guy.html",
+   "updated": "2026-08-25T20:00:00-04:00",
+   "text_hash": "sha256:52487a723e4ac4094e1ac6fcb44187974ce9322e06a4dd09febf988241738379",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 105
+  },
+  "AL": {
+   "key": "AL",
+   "iso": "AL",
+   "fips": "AL",
+   "name": "Albania",
+   "title": "Albania - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.alb.html",
+   "updated": "2026-08-25T20:00:00-04:00",
+   "text_hash": "sha256:ddb570cc6a7129e711950dc441ade5b883b8fce2646384e66a3201bb502a9b2f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 76
+  },
+  "PS-WB": {
+   "key": "PS-WB",
+   "iso": "PS",
+   "fips": "IS",
+   "name": "The West Bank",
+   "title": "The West Bank - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.xwb.html",
+   "updated": "2026-08-25T20:00:00-04:00",
+   "text_hash": "sha256:6aeba44ac99db56a11946cca72de05e7a53834a29deeb84ca35e776e2d4d0264",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 248
+  },
+  "DZ": {
+   "key": "DZ",
+   "iso": "DZ",
+   "fips": "AG",
+   "name": "Algeria",
+   "title": "Algeria - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dza.html",
+   "updated": "2026-08-24T20:00:00-04:00",
+   "text_hash": "sha256:1a1350b60e356acfd136dd7f769949812dc9312522ea4da3bfad6c91aa3840a0",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 238
+  },
+  "HN": {
+   "key": "HN",
+   "iso": "HN",
+   "fips": "HO",
+   "name": "Honduras",
+   "title": "Honduras - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.hnd.html",
+   "updated": "2026-08-24T20:00:00-04:00",
+   "text_hash": "sha256:b51cf47b3a85e86748c44e5ef30b9fadd8378a6f68246b30d0c217f48e55e52c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 441
+  },
+  "XK": {
+   "key": "XK",
+   "iso": "XK",
+   "fips": "KV",
+   "name": "Kosovo",
+   "title": "Kosovo - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.xks.html",
+   "updated": "2026-08-24T20:00:00-04:00",
+   "text_hash": "sha256:377897651e4f83f5f33f594ed84998af05f0ccecb5066df8c7c0f0cb1ad21c6e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 75
+  },
+  "SX": {
+   "key": "SX",
+   "iso": "SX",
+   "fips": "NN",
+   "name": "Sint Maarten",
+   "title": "Sint Maarten - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sxm.html",
+   "updated": "2026-08-23T20:00:00-04:00",
+   "text_hash": "sha256:6fca403bd772e5df3e99f93eef3fb776fc08ed9e1ecf79dfcbce2c3cb98817a3",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 137
+  },
+  "TM": {
+   "key": "TM",
+   "iso": "TM",
+   "fips": "TX",
+   "name": "Turkmenistan",
+   "title": "Turkmenistan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tkm.html",
+   "updated": "2026-08-20T20:00:00-04:00",
+   "text_hash": "sha256:7cc6c399564328187a2ab602a50115ebbfd82db959a70abfb987823545992559",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 69
+  },
+  "MZ": {
+   "key": "MZ",
+   "iso": "MZ",
+   "fips": "MZ",
+   "name": "Mozambique",
+   "title": "Mozambique - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.moz.html",
+   "updated": "2026-08-20T20:00:00-04:00",
+   "text_hash": "sha256:e828cce8e5359da40bb831dd6d55664d44395172405ca03a133bb2b5a1884c6f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 224
+  },
+  "AT": {
+   "key": "AT",
+   "iso": "AT",
+   "fips": "AU",
+   "name": "Austria",
+   "title": "Austria - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.aut.html",
+   "updated": "2026-08-20T20:00:00-04:00",
+   "text_hash": "sha256:204b241f8e635e9ca3db4700c70675a3c577e9e14e224cc95bd107b9b71159f4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 25
+  },
+  "GP": {
+   "key": "GP",
+   "iso": "GP",
+   "fips": "GP",
+   "name": "Guadeloupe",
+   "title": "Guadeloupe - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.glp.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:7978572e77599f3f1652745cc85dc60e441e3fb2154a34b68a85bc7cc61b32cb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 42
+  },
+  "BL": {
+   "key": "BL",
+   "iso": "BL",
+   "fips": "NT",
+   "name": "Saint Barthelemy",
+   "title": "Saint Barthelemy - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.blm.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:51ec1bb701b7d626aef9a97a4e53a4a7fdcc9c1fe1579c4c5053a71c9b893a2b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 47
+  },
+  "BQ-BO": {
+   "key": "BQ-BO",
+   "iso": "BQ",
+   "fips": "A1",
+   "name": "Bonaire",
+   "title": "Bonaire - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bes.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:3053ed022f2beaa7eda85b112cf667e6a92a5bceb1f827ffc9b426dee6e96d63",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 134
+  },
+  "BQ-SE": {
+   "key": "BQ-SE",
+   "iso": "BQ",
+   "fips": "A1",
+   "name": "Saba and Sint Eustatius",
+   "title": "Saba and Sint Eustatius - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.xqx.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:5920a5c0d6aeb8036dae373db643f9d1d713db3f8edc460da2889b9acc49c5ce",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 165
+  },
+  "AW": {
+   "key": "AW",
+   "iso": "AW",
+   "fips": "AA",
+   "name": "Aruba",
+   "title": "Aruba - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.abw.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:0bb775100c80faea6d0b88e590ca03d082235082cac3d1967f473e93e061a8c1",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 113
+  },
+  "MQ": {
+   "key": "MQ",
+   "iso": "MQ",
+   "fips": "MQ",
+   "name": "Martinique",
+   "title": "Martinique - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mtq.html",
+   "updated": "2026-08-19T20:00:00-04:00",
+   "text_hash": "sha256:f19eb77f005dc335213823def7ed0017c546fda01a4a45e56bf4290a826f21b7",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 42
+  },
+  "PA": {
+   "key": "PA",
+   "iso": "PA",
+   "fips": "PM",
+   "name": "Panama",
+   "title": "Panama - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.pan.html",
+   "updated": "2026-08-18T20:00:00-04:00",
+   "text_hash": "sha256:114df835db2fb6a46d046160f45c7d08bf9f50b92002bd3878fe2b2f3559c80c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 137
+  },
+  "PY": {
+   "key": "PY",
+   "iso": "PY",
+   "fips": "PA",
+   "name": "Paraguay",
+   "title": "Paraguay - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.pry.html",
+   "updated": "2026-08-18T20:00:00-04:00",
+   "text_hash": "sha256:322ca4a02d562d41b42b2193e994f48519e339ef9658fa1591aeb058726a42fb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 87
+  },
+  "CL": {
+   "key": "CL",
+   "iso": "CL",
+   "fips": "CI",
+   "name": "Chile",
+   "title": "Chile - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.chl.html",
+   "updated": "2026-08-18T20:00:00-04:00",
+   "text_hash": "sha256:19a5f37f1e86df364803c40d0ec1216e28705207f523016672e35a70ead1bfe9",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 100
+  },
+  "MR": {
+   "key": "MR",
+   "iso": "MR",
+   "fips": "MR",
+   "name": "Mauritania",
+   "title": "Mauritania - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mrt.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:a44251655cbf35a26c243b0e203d025155a3eff3a32e4ae636697c69ccad0621",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 384
+  },
+  "LI": {
+   "key": "LI",
+   "iso": "LI",
+   "fips": "LS",
+   "name": "Liechtenstein",
+   "title": "Liechtenstein - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lie.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:a64702c76c747476c06b4d7cec34c336f7115e603f203705d3f3d8a5698f694c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 42
+  },
+  "EC": {
+   "key": "EC",
+   "iso": "EC",
+   "fips": "EC",
+   "name": "Ecuador",
+   "title": "Ecuador - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ecu.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:b52f96f3f1fd46866f579fa18ac0941ccb65b9de8106c10b3a992b0d7400ea74",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 424
+  },
+  "BO": {
+   "key": "BO",
+   "iso": "BO",
+   "fips": "BL",
+   "name": "Bolivia",
+   "title": "Bolivia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bol.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:a78870dc585fc4ef19d00250948ff42a2198bd62cf30845a2e0906088390131c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 142
+  },
+  "AU": {
+   "key": "AU",
+   "iso": "AU",
+   "fips": "AS",
+   "name": "Australia",
+   "title": "Australia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.aus.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:6cbc6ae54da1945e894726612f7dc39fb921e1fa11525045546ee148cb57ad77",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "KZ": {
+   "key": "KZ",
+   "iso": "KZ",
+   "fips": "KZ",
+   "name": "Kazakhstan",
+   "title": "Kazakhstan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kaz.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:97b4b3d4c3c1c30a8e4254a31ed3155e307104f72d699959ccbdbbceaf21d24c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 43
+  },
+  "NL": {
+   "key": "NL",
+   "iso": "NL",
+   "fips": "NL",
+   "name": "Netherlands",
+   "title": "Netherlands - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nld.html",
+   "updated": "2026-08-17T20:00:00-04:00",
+   "text_hash": "sha256:d8629a5676053a1fff1dbc342abe56a41bbe5a9d254c7cd2525f486bce129e28",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 131
+  },
+  "CH": {
+   "key": "CH",
+   "iso": "CH",
+   "fips": "SR",
+   "name": "Switzerland",
+   "title": "Switzerland - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.che.html",
+   "updated": "2026-08-13T20:00:00-04:00",
+   "text_hash": "sha256:1ac055271c21f4b6bfce2176925cde0f59b04beea3a802061f56f87779e8e5eb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 41
+  },
+  "MF": {
+   "key": "MF",
+   "iso": "MF",
+   "fips": "MF",
+   "name": "French Saint Martin",
+   "title": "French Saint Martin - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.maf.html",
+   "updated": "2026-08-13T20:00:00-04:00",
+   "text_hash": "sha256:6fb8401d3e583dc3fa1bbe7d50c7b58022f50570fba417fd14160c3217a7c925",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 53
+  },
+  "ES": {
+   "key": "ES",
+   "iso": "ES",
+   "fips": "SP",
+   "name": "Spain",
+   "title": "Spain - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.esp.html",
+   "updated": "2026-07-31T20:00:00-04:00",
+   "text_hash": "sha256:a3e558a300ad927d5b721863ecadb8c31717e50bb3f3262efd8886c8030b3253",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 91
+  },
+  "BD": {
+   "key": "BD",
+   "iso": "BD",
+   "fips": "BG",
+   "name": "Bangladesh",
+   "title": "Bangladesh - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bgd.html",
+   "updated": "2026-07-29T20:00:00-04:00",
+   "text_hash": "sha256:51720aab27cf0c51ecb99ff9d2f7b43bcf7dfc3cd6f997e66765d7ab452ee4d7",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 297
+  },
+  "MN": {
+   "key": "MN",
+   "iso": "MN",
+   "fips": "MG",
+   "name": "Mongolia",
+   "title": "Mongolia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mng.html",
+   "updated": "2026-07-28T20:00:00-04:00",
+   "text_hash": "sha256:a0c3cf4ccd08a56880994f71b39186f7e39d4d281a778a3706f5d408f63d88d2",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 28
+  },
+  "UY": {
+   "key": "UY",
+   "iso": "UY",
+   "fips": "UY",
+   "name": "Uruguay",
+   "title": "Uruguay - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ury.html",
+   "updated": "2026-07-27T20:00:00-04:00",
+   "text_hash": "sha256:9f8e2a1e9f07fccc5f061aec14ab74e2b1312729bfb35b2dcdc89a1826e3e790",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 105
+  },
+  "BS": {
+   "key": "BS",
+   "iso": "BS",
+   "fips": "BF",
+   "name": "The Bahamas",
+   "title": "The Bahamas - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bhs.html",
+   "updated": "2026-07-27T20:00:00-04:00",
+   "text_hash": "sha256:e51f45b502bfa3a34259280781e030e85ffcecaa204d2a6718436f3725b73773",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 380
+  },
+  "LA": {
+   "key": "LA",
+   "iso": "LA",
+   "fips": "LA",
+   "name": "Laos",
+   "title": "Laos - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lao.html",
+   "updated": "2026-07-27T20:00:00-04:00",
+   "text_hash": "sha256:d9bf21e5d362038d42e492bee587f50406aabff69f6727a14cc57d8c7d80a13c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 144
+  },
+  "BE": {
+   "key": "BE",
+   "iso": "BE",
+   "fips": "BE",
+   "name": "Belgium",
+   "title": "Belgium - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bel.html",
+   "updated": "2026-07-22T20:00:00-04:00",
+   "text_hash": "sha256:049932da57c76b2cc537c664ebb27f7c1eb07c2bee6eef3643736ea8681e3583",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 106
+  },
+  "CD": {
+   "key": "CD",
+   "iso": "CD",
+   "fips": "CG",
+   "name": "Democratic Republic of the Congo",
+   "title": "Democratic Republic of the Congo - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cod.html",
+   "updated": "2026-07-14T20:00:00-04:00",
+   "text_hash": "sha256:0a7fb43f5c0f0a28c79b2a6c99f7afc7ee2f3e4744953826c624705a51d0607c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 286
+  },
+  "LC": {
+   "key": "LC",
+   "iso": "LC",
+   "fips": "ST",
+   "name": "Saint Lucia",
+   "title": "Saint Lucia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lca.html",
+   "updated": "2026-07-09T20:00:00-04:00",
+   "text_hash": "sha256:31e8a6e7461ae6865f0196e7943a34d2c80f9c386643e457d325f8f5106bc4ea",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 139
+  },
+  "AR": {
+   "key": "AR",
+   "iso": "AR",
+   "fips": "AR",
+   "name": "Argentina",
+   "title": "Argentina - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.arg.html",
+   "updated": "2026-07-09T20:00:00-04:00",
+   "text_hash": "sha256:133c11b521c36ed2698107949b7705a7e904b61d9fd704cf723f0e70e77e60d9",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 107
+  },
+  "SZ": {
+   "key": "SZ",
+   "iso": "SZ",
+   "fips": "WZ",
+   "name": "Eswatini",
+   "title": "Eswatini - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.swz.html",
+   "updated": "2026-07-09T20:00:00-04:00",
+   "text_hash": "sha256:83516acdf462045f24d127c82923761e07a976cde3d35499ff6a22a5bd8914dd",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 61
+  },
+  "HT": {
+   "key": "HT",
+   "iso": "HT",
+   "fips": "HA",
+   "name": "Haiti",
+   "title": "Haiti - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.hti.html",
+   "updated": "2026-07-09T20:00:00-04:00",
+   "text_hash": "sha256:d8c9d1bb5c4273923d9f9a70676ec3226fde4597fffa59d11b43f69a89f59ee9",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 459
+  },
+  "MT": {
+   "key": "MT",
+   "iso": "MT",
+   "fips": "MT",
+   "name": "Malta",
+   "title": "Malta - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mlt.html",
+   "updated": "2026-07-08T20:00:00-04:00",
+   "text_hash": "sha256:0d3953d509c192c4cfb6374d7944422279a5a25b48f27f68a9167105ef989797",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 49
+  },
+  "NE": {
+   "key": "NE",
+   "iso": "NE",
+   "fips": "NG",
+   "name": "Niger",
+   "title": "Niger - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ner.html",
+   "updated": "2026-07-08T20:00:00-04:00",
+   "text_hash": "sha256:b27294b3ef6e05e31130d95c45ce08d898208311354ec35e0f0c876774d26eab",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 428
+  },
+  "GF": {
+   "key": "GF",
+   "iso": "GF",
+   "fips": "A2",
+   "name": "French Guiana",
+   "title": "French Guiana - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.guf.html",
+   "updated": "2026-07-07T20:00:00-04:00",
+   "text_hash": "sha256:b51a16d46dc17e462beaa27c75e37ed8ea4a481725dc1283ea1df49e4218f84d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 53
+  },
+  "FM": {
+   "key": "FM",
+   "iso": "FM",
+   "fips": "FM",
+   "name": "Federated States of Micronesia",
+   "title": "Federated States of Micronesia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.fsm.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:5679b1f665ddac354f73e46d7bb8f25ca46c35a892ab94923f641390a004783b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 40
+  },
+  "VC": {
+   "key": "VC",
+   "iso": "VC",
+   "fips": "VC",
+   "name": "Saint Vincent and the Grenadines",
+   "title": "Saint Vincent and the Grenadines - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.vct.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:231eb005841f14eeefcfcf864e2d3341068385402ba876db7a42aae0dae73ed8",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 74
+  },
+  "TC": {
+   "key": "TC",
+   "iso": "TC",
+   "fips": "TK",
+   "name": "Turks and Caicos Islands",
+   "title": "Turks and Caicos Islands - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tca.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:62ff91903ac03c1e306228e904316254b7fb47ef858a0bb74c808dc270922c20",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 309
+  },
+  "GH": {
+   "key": "GH",
+   "iso": "GH",
+   "fips": "GH",
+   "name": "Ghana",
+   "title": "Ghana - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gha.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:793ed7758065ee056489d10dabf16391e3e9f112b751f780c1eb643765d3bae2",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 326
+  },
+  "ID": {
+   "key": "ID",
+   "iso": "ID",
+   "fips": "ID",
+   "name": "Indonesia",
+   "title": "Indonesia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.idn.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:e4ecf38f6a8b8a8888e628c32a340ce1f56cbb580b757a75e4369c1cab9e9acb",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 174
+  },
+  "MD": {
+   "key": "MD",
+   "iso": "MD",
+   "fips": "MD",
+   "name": "Moldova",
+   "title": "Moldova - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mda.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:7ccef83d51daad4a43237b7c08cae25173849b2765a39b3756f4cf15623ab8d0",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 192
+  },
+  "WS": {
+   "key": "WS",
+   "iso": "WS",
+   "fips": "WS",
+   "name": "Samoa",
+   "title": "Samoa - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.wsm.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:725b400a3417681429575d2744b7ed16a787c2fe152da95ccf5ea825a644e831",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "MS": {
+   "key": "MS",
+   "iso": "MS",
+   "fips": "MH",
+   "name": "Montserrat",
+   "title": "Montserrat - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.msr.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:70ff1aa2673efd36426af0c1c0e2414a3d63f99d45adb867442ac50c770ba209",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 94
+  },
+  "KN": {
+   "key": "KN",
+   "iso": "KN",
+   "fips": "SC",
+   "name": "Saint Kitts and Nevis",
+   "title": "Saint Kitts and Nevis - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kna.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:9a9351348ae7eb490c989ccbf6b92aec18823f3477b849a89fbcb77800e5686a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 57
+  },
+  "TH": {
+   "key": "TH",
+   "iso": "TH",
+   "fips": "TH",
+   "name": "Thailand",
+   "title": "Thailand - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tha.html",
+   "updated": "2026-07-06T20:00:00-04:00",
+   "text_hash": "sha256:e7b658646c4493fc72ebc92850a830764a1285ec88c6096ee12a98e073572b5e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 73
+  },
+  "NO": {
+   "key": "NO",
+   "iso": "NO",
+   "fips": "NO",
+   "name": "Norway",
+   "title": "Norway - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nor.html",
+   "updated": "2026-07-05T20:00:00-04:00",
+   "text_hash": "sha256:a12e0f83f83deafa5d3aa005f53da8f8021bb65ad578ecd2e8f11e9f6d469fea",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 90
+  },
+  "VE": {
+   "key": "VE",
+   "iso": "VE",
+   "fips": "VE",
+   "name": "Venezuela",
+   "title": "Venezuela - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ven.html",
+   "updated": "2026-06-26T20:00:00-04:00",
+   "text_hash": "sha256:abe35141ec758a222bbb51516d6b0c560ee9fe2c32993c9c5d1151f0b5cac1c1",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 547
+  },
+  "SV": {
+   "key": "SV",
+   "iso": "SV",
+   "fips": "ES",
+   "name": "El Salvador",
+   "title": "El Salvador - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.slv.html",
+   "updated": "2026-06-24T20:00:00-04:00",
+   "text_hash": "sha256:15ff36e4816f61b43029ce02779951335456079a97eade2b29955d7af2c7c09e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 232
+  },
+  "VN": {
+   "key": "VN",
+   "iso": "VN",
+   "fips": "VM",
+   "name": "Vietnam",
+   "title": "Vietnam - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.vnm.html",
+   "updated": "2026-06-23T20:00:00-04:00",
+   "text_hash": "sha256:f5ba47e9bac6ba723be56016a0ac6bf6207a308e6c44b67737fad85bfe3f0a7b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 95
+  },
+  "JM": {
+   "key": "JM",
+   "iso": "JM",
+   "fips": "JM",
+   "name": "Jamaica",
+   "title": "Jamaica - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.jam.html",
+   "updated": "2026-06-22T20:00:00-04:00",
+   "text_hash": "sha256:2823439dacce4ba4e8c1a0914b2355eb682d5f67a24f1aa605b647e0facaafef",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 555
+  },
+  "LS": {
+   "key": "LS",
+   "iso": "LS",
+   "fips": "LT",
+   "name": "Lesotho",
+   "title": "Lesotho - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lso.html",
+   "updated": "2026-06-16T20:00:00-04:00",
+   "text_hash": "sha256:feaa0d373278604c272be486df962c2d919dbe8b1a2fb17e741b5fcc4f5177f0",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 124
+  },
+  "BW": {
+   "key": "BW",
+   "iso": "BW",
+   "fips": "BC",
+   "name": "Botswana",
+   "title": "Botswana - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bwa.html",
+   "updated": "2026-06-16T20:00:00-04:00",
+   "text_hash": "sha256:ed02f8e32c98639a1af92533270b276642b7de4bdc0d45f4f8d7dc7302579b08",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 45
+  },
+  "PK": {
+   "key": "PK",
+   "iso": "PK",
+   "fips": "PK",
+   "name": "Pakistan",
+   "title": "Pakistan - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.pak.html",
+   "updated": "2026-06-15T20:00:00-04:00",
+   "text_hash": "sha256:311b8458ed6206ea7aaf01452d72ef354e19b5340742797cb85cb6bf32bbb6de",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 463
+  },
+  "NG": {
+   "key": "NG",
+   "iso": "NG",
+   "fips": "NI",
+   "name": "Nigeria",
+   "title": "Nigeria - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nga.html",
+   "updated": "2026-06-11T20:00:00-04:00",
+   "text_hash": "sha256:7eef82c30cf2f8047474e0621f78148d03e7a173eed1395b728ff1d76d0e3033",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 485
+  },
+  "TR": {
+   "key": "TR",
+   "iso": "TR",
+   "fips": "TU",
+   "name": "Turkey",
+   "title": "Turkey - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tur.html",
+   "updated": "2026-06-08T20:00:00-04:00",
+   "text_hash": "sha256:c41114e13034b89797830543a42ddbb1fefe54e055ca5fbd0632bc7c4890ae8d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 213
+  },
+  "ML": {
+   "key": "ML",
+   "iso": "ML",
+   "fips": "ML",
+   "name": "Mali",
+   "title": "Mali - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mli.html",
+   "updated": "2026-06-07T20:00:00-04:00",
+   "text_hash": "sha256:08888070bf1175d05932dc98fbd721477610bfb31955adc99368ec3707396794",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 469
+  },
+  "CA": {
+   "key": "CA",
+   "iso": "CA",
+   "fips": "CA",
+   "name": "Canada",
+   "title": "Canada - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.can.html",
+   "updated": "2026-06-04T20:00:00-04:00",
+   "text_hash": "sha256:d6b7320b2daed369dc81908729fd926f155439fe192f75b843b70bc444f83792",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 61
+  },
+  "UG": {
+   "key": "UG",
+   "iso": "UG",
+   "fips": "UG",
+   "name": "Uganda",
+   "title": "Uganda - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.uga.html",
+   "updated": "2026-06-03T20:00:00-04:00",
+   "text_hash": "sha256:41a70287f2459df9f16b56ff78e4238b848193bcd267e67ad039483b7fe93a0b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 445
+  },
+  "RW": {
+   "key": "RW",
+   "iso": "RW",
+   "fips": "RW",
+   "name": "Rwanda",
+   "title": "Rwanda - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.rwa.html",
+   "updated": "2026-06-03T20:00:00-04:00",
+   "text_hash": "sha256:532fcae37daea0f7cd026714a6f8806343be21388c150b9cff9e618065c98c81",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 171
+  },
+  "CY": {
+   "key": "CY",
+   "iso": "CY",
+   "fips": "CY",
+   "name": "Cyprus",
+   "title": "Cyprus - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cyp.html",
+   "updated": "2026-05-31T20:00:00-04:00",
+   "text_hash": "sha256:66133d78fff447d4102c0d6d4cdec553b55dcd0eeeb3cf1f3b79fe82af03d90e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 109
+  },
+  "MX": {
+   "key": "MX",
+   "iso": "MX",
+   "fips": "MX",
+   "name": "Mexico",
+   "title": "Mexico Travel Advisory - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mex.html",
+   "updated": "2026-05-28T20:00:00-04:00",
+   "text_hash": "sha256:e21c3e289910174ceb34ced7d403904d9658518f5cb2a934fd1f6e89b53e3933",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 238
+  },
+  "VG": {
+   "key": "VG",
+   "iso": "VG",
+   "fips": "VI",
+   "name": "British Virgin Islands",
+   "title": "British Virgin Islands - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.vgb.html",
+   "updated": "2026-05-21T20:00:00-04:00",
+   "text_hash": "sha256:19cb14e7b7114cb99e1b85ffde76cd3aa0dc2d8d0fa242fdb36aa5c93adc318c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 55
+  },
+  "AI": {
+   "key": "AI",
+   "iso": "AI",
+   "fips": "AV",
+   "name": "Anguilla",
+   "title": "Anguilla - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.aia.html",
+   "updated": "2026-05-21T20:00:00-04:00",
+   "text_hash": "sha256:80c2b637513954e7b973bf671f8dae52a09d225e446a0ccb3913f37904d9ca08",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 43
+  },
+  "SO": {
+   "key": "SO",
+   "iso": "SO",
+   "fips": "SO",
+   "name": "Somalia",
+   "title": "Somalia - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.som.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:3d9c7dfbf51f93493df0ceb0b441675667330e877a279b2ffa77830abef04c06",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 701
+  },
+  "TN": {
+   "key": "TN",
+   "iso": "TN",
+   "fips": "TS",
+   "name": "Tunisia",
+   "title": "Tunisia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tun.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:c8197b138c97cbed61386c4674c3125e5f4b53e8a17e5248f9778c881a413e47",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 353
+  },
+  "AD": {
+   "key": "AD",
+   "iso": "AD",
+   "fips": "AN",
+   "name": "Andorra",
+   "title": "Andorra - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.and.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:27e29d194b24ec77cf24a8e60200db411721cd1f4c562f17c09fdc46dd046d2e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 30
+  },
+  "TL": {
+   "key": "TL",
+   "iso": "TL",
+   "fips": "TT",
+   "name": "Timor-Leste",
+   "title": "Timor-Leste - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tls.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:77a2d1eafca8a7a48c917c192845e9e57649b2fe2b1c584bfd352c9dfd7b9056",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 52
+  },
+  "KY": {
+   "key": "KY",
+   "iso": "KY",
+   "fips": "CJ",
+   "name": "Cayman Islands",
+   "title": "Cayman Islands - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cym.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:b6dd293415904fac4d79015eee471a36ae28d4ceb33eb03b71d5cd5fb062f55b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 60
+  },
+  "MH": {
+   "key": "MH",
+   "iso": "MH",
+   "fips": "RM",
+   "name": "Marshall Islands",
+   "title": "Marshall Islands - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mhl.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:a5d5fcd712f44b44d74084e1bdc82cb86321bb4318acb9c802e2073c0f4da1f1",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 34
+  },
+  "NC": {
+   "key": "NC",
+   "iso": "NC",
+   "fips": "NC",
+   "name": "New Caledonia",
+   "title": "New Caledonia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ncl.html",
+   "updated": "2026-05-20T20:00:00-04:00",
+   "text_hash": "sha256:a4cda1da941f99c53394ac84d10b69ab1a83e1e6bdad366d98471fb5e25a9a66",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 41
+  },
+  "DM": {
+   "key": "DM",
+   "iso": "DM",
+   "fips": "DO",
+   "name": "Dominica",
+   "title": "Dominica - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dma.html",
+   "updated": "2026-05-19T20:00:00-04:00",
+   "text_hash": "sha256:1cf146a9f5232375cecba75262bd3fe8929c051fc561cddb1df7aa129fd10109",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 43
+  },
+  "AG": {
+   "key": "AG",
+   "iso": "AG",
+   "fips": "AC",
+   "name": "Antigua and Barbuda",
+   "title": "Antigua and Barbuda - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.atg.html",
+   "updated": "2026-05-19T20:00:00-04:00",
+   "text_hash": "sha256:fe3781969ba8a8c45cd34415bc0e2c667ebcde14cabc1567f60c3b809c7056ab",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 53
+  },
+  "HR": {
+   "key": "HR",
+   "iso": "HR",
+   "fips": "HR",
+   "name": "Croatia",
+   "title": "Croatia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.hrv.html",
+   "updated": "2026-05-17T20:00:00-04:00",
+   "text_hash": "sha256:500392f8b4e32bdf06706d8663c1498c890bf545ac905965c03561018de3fb9c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "SE": {
+   "key": "SE",
+   "iso": "SE",
+   "fips": "SW",
+   "name": "Sweden",
+   "title": "Sweden - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.swe.html",
+   "updated": "2026-05-17T20:00:00-04:00",
+   "text_hash": "sha256:2d5b4431280801332f6b9d468c7d6524fa2f6a1e1c0b3f723e4c8dad88444755",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 91
+  },
+  "SS": {
+   "key": "SS",
+   "iso": "SS",
+   "fips": "OD",
+   "name": "South Sudan",
+   "title": "South Sudan - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ssd.html",
+   "updated": "2026-05-16T20:00:00-04:00",
+   "text_hash": "sha256:7f891ad6d2b3fbae642f5c426bc626fc9563447f75c807a6729cc79815afa50d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 404
+  },
+  "SD": {
+   "key": "SD",
+   "iso": "SD",
+   "fips": "SU",
+   "name": "Sudan",
+   "title": "Sudan - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sdn.html",
+   "updated": "2026-05-14T20:00:00-04:00",
+   "text_hash": "sha256:58a1fe8e26f697af60dc6471503314854d9055fd7434c2a74ce1285ab0550409",
+   "posture": {
+    "state": "suspended_operations",
+    "sentence": "The US Embassy in Khartoum suspended its operations in April 2023 due to the outbreak of armed conflict in Sudan."
+   },
+   "words": 428
+  },
+  "SI": {
+   "key": "SI",
+   "iso": "SI",
+   "fips": "SI",
+   "name": "Slovenia",
+   "title": "Slovenia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.svn.html",
+   "updated": "2026-05-14T20:00:00-04:00",
+   "text_hash": "sha256:11f0efb47504c4c130865781a5bccd9324c02cfd9439ec159dfc3375b8451602",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 79
+  },
+  "CM": {
+   "key": "CM",
+   "iso": "CM",
+   "fips": "CM",
+   "name": "Cameroon",
+   "title": "Cameroon - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cmr.html",
+   "updated": "2026-05-14T20:00:00-04:00",
+   "text_hash": "sha256:724ed9fc1fed91d5824029ca745e29021b3a6007dcfadeaac02c3aa5be13d550",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 345
+  },
+  "NA": {
+   "key": "NA",
+   "iso": "NA",
+   "fips": "WA",
+   "name": "Namibia",
+   "title": "Namibia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nam.html",
+   "updated": "2026-05-14T20:00:00-04:00",
+   "text_hash": "sha256:e207a1dc6bb85e88a3e5cc09f88af19b9f8644324a77926a0a08d37fcea4437f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 95
+  },
+  "BN": {
+   "key": "BN",
+   "iso": "BN",
+   "fips": "BX",
+   "name": "Brunei",
+   "title": "Brunei - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.brn.html",
+   "updated": "2026-05-13T20:00:00-04:00",
+   "text_hash": "sha256:a82572ea17104fecaa3f8d11324b3421e9bda8ec47c9af7a671eeeb1d8f0291a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 60
+  },
+  "MW": {
+   "key": "MW",
+   "iso": "MW",
+   "fips": "MI",
+   "name": "Malawi",
+   "title": "Malawi - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mwi.html",
+   "updated": "2026-05-13T20:00:00-04:00",
+   "text_hash": "sha256:f16e437572af8db41b59727dd1ffcf446c012b60060e22ab7d71e72de6ac1377",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 80
+  },
+  "NI": {
+   "key": "NI",
+   "iso": "NI",
+   "fips": "NU",
+   "name": "Nicaragua",
+   "title": "Nicaragua - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nic.html",
+   "updated": "2026-05-13T20:00:00-04:00",
+   "text_hash": "sha256:b0d9936f6aceaa2b19d67e267fb8bf0de7e9e4996e430587c1759a121549989d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 688
+  },
+  "MM": {
+   "key": "MM",
+   "iso": "MM",
+   "fips": "BM",
+   "name": "Burma",
+   "title": "Burma - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mmr.html",
+   "updated": "2026-05-07T20:00:00-04:00",
+   "text_hash": "sha256:32e90ff0e641f07cf9848699b40a51ae73e8eb64f3712ff504783a04a7261db4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 650
+  },
+  "IS": {
+   "key": "IS",
+   "iso": "IS",
+   "fips": "IC",
+   "name": "Iceland",
+   "title": "Iceland - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.isl.html",
+   "updated": "2026-05-04T20:00:00-04:00",
+   "text_hash": "sha256:5bb2297a8b2d2a60e3377fb744cae152ad719f935c3ed823f3b48a6e5bbafec5",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 79
+  },
+  "BF": {
+   "key": "BF",
+   "iso": "BF",
+   "fips": "UV",
+   "name": "Burkina Faso",
+   "title": "Burkina Faso - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bfa.html",
+   "updated": "2026-05-03T20:00:00-04:00",
+   "text_hash": "sha256:4929c0ccb17a91d7197aa5889fb0214b66bb870bce0e6c583515a2f517f9967a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 457
+  },
+  "NZ": {
+   "key": "NZ",
+   "iso": "NZ",
+   "fips": "NZ",
+   "name": "New Zealand",
+   "title": "New Zealand - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nzl.html",
+   "updated": "2026-04-28T20:00:00-04:00",
+   "text_hash": "sha256:45197cc744b7fe3954b55058e782762a9dcb7c8f4d059714141463b9894f98c9",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 32
+  },
+  "LT": {
+   "key": "LT",
+   "iso": "LT",
+   "fips": "LH",
+   "name": "Lithuania",
+   "title": "Lithuania - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ltu.html",
+   "updated": "2026-04-27T20:00:00-04:00",
+   "text_hash": "sha256:9cd79b903a25f31c4167f3427d690bb842df505c4dd994a983ebb71bc2f22d73",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "AZ": {
+   "key": "AZ",
+   "iso": "AZ",
+   "fips": "AJ",
+   "name": "Azerbaijan",
+   "title": "Azerbaijan - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.aze.html",
+   "updated": "2026-04-27T20:00:00-04:00",
+   "text_hash": "sha256:4cf116675c2faccad59413edbd10913ad5f69f2c75dfc94991c627d735f83ca3",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 209
+  },
+  "TD": {
+   "key": "TD",
+   "iso": "TD",
+   "fips": "CD",
+   "name": "Chad",
+   "title": "Chad - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tcd.html",
+   "updated": "2026-04-27T20:00:00-04:00",
+   "text_hash": "sha256:bac6d48c136aac01e6f6f6f30881c48db1d5c7bee2b31c921830af4d626602e2",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 393
+  },
+  "HU": {
+   "key": "HU",
+   "iso": "HU",
+   "fips": "HU",
+   "name": "Hungary",
+   "title": "Hungary - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.hun.html",
+   "updated": "2026-04-14T20:00:00-04:00",
+   "text_hash": "sha256:509eb1742307b6ba788c17646bee29fd881f743be7ea0af71549827089a434d7",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 64
+  },
+  "TT": {
+   "key": "TT",
+   "iso": "TT",
+   "fips": "TD",
+   "name": "Trinidad and Tobago",
+   "title": "Trinidad and Tobago - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tto.html",
+   "updated": "2026-04-12T20:00:00-04:00",
+   "text_hash": "sha256:32958fc6a06c6024b1216656dd741c41e1f52567d28b7433c70e1f2dc133ed35",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 335
+  },
+  "BB": {
+   "key": "BB",
+   "iso": "BB",
+   "fips": "BB",
+   "name": "Barbados",
+   "title": "Barbados - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.brb.html",
+   "updated": "2026-04-09T20:00:00-04:00",
+   "text_hash": "sha256:d8b112d2dea82a91246b8c0f8d214181c77c4745545af399172fa9c1f5bb6885",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 56
+  },
+  "BM": {
+   "key": "BM",
+   "iso": "BM",
+   "fips": "BD",
+   "name": "Bermuda",
+   "title": "Bermuda - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bmu.html",
+   "updated": "2026-04-09T20:00:00-04:00",
+   "text_hash": "sha256:a265baea8a0b45807d266bc3101b45fa09ad0a185d0b4743c83dd61739b486aa",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "LU": {
+   "key": "LU",
+   "iso": "LU",
+   "fips": "LU",
+   "name": "Luxembourg",
+   "title": "Luxembourg - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lux.html",
+   "updated": "2026-04-07T20:00:00-04:00",
+   "text_hash": "sha256:bbbe9fee2f6254230abc27cb38686b48abe198cbb60f5ebcc4911d982182de69",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 41
+  },
+  "CR": {
+   "key": "CR",
+   "iso": "CR",
+   "fips": "CS",
+   "name": "Costa Rica",
+   "title": "Costa Rica - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cri.html",
+   "updated": "2026-04-01T20:00:00-04:00",
+   "text_hash": "sha256:871a3532062cdb0510059fc260277929faac7796e0ced70683054ecab2ac3bc2",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "LV": {
+   "key": "LV",
+   "iso": "LV",
+   "fips": "LG",
+   "name": "Latvia",
+   "title": "Latvia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lva.html",
+   "updated": "2026-03-31T20:00:00-04:00",
+   "text_hash": "sha256:89ff24e03838af6e52198fa4f8918a1cc3ae93623655eadce53bf0b212753016",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "EE": {
+   "key": "EE",
+   "iso": "EE",
+   "fips": "EN",
+   "name": "Estonia",
+   "title": "Estonia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.est.html",
+   "updated": "2026-03-30T20:00:00-04:00",
+   "text_hash": "sha256:7421139aa560198d6df7c426509eb06ad3e6a7e1ec1c25a06ada580fa76e9072",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "CO": {
+   "key": "CO",
+   "iso": "CO",
+   "fips": "CO",
+   "name": "Colombia",
+   "title": "Colombia - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.col.html",
+   "updated": "2026-03-30T20:00:00-04:00",
+   "text_hash": "sha256:20d05f0e809d39d49089889249717642a82801e972e6e7d5ddc28b4e45a81b63",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 485
+  },
+  "GA": {
+   "key": "GA",
+   "iso": "GA",
+   "fips": "GB",
+   "name": "Gabon",
+   "title": "Gabon - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gab.html",
+   "updated": "2026-03-29T20:00:00-04:00",
+   "text_hash": "sha256:5371dea37c8ae306d8f4a4faeaa36c567ea8d4d649731e7bc952e4c884e42b5e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 81
+  },
+  "IE": {
+   "key": "IE",
+   "iso": "IE",
+   "fips": "EI",
+   "name": "Ireland",
+   "title": "Ireland - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.irl.html",
+   "updated": "2026-03-19T20:00:00-04:00",
+   "text_hash": "sha256:70b45b0696cd32962371825543fd3c55a6b46666c0ac6d8000f975510af55a40",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 66
+  },
+  "FI": {
+   "key": "FI",
+   "iso": "FI",
+   "fips": "FI",
+   "name": "Finland",
+   "title": "Finland - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.fin.html",
+   "updated": "2026-03-12T20:00:00-04:00",
+   "text_hash": "sha256:379030f3510374a06caec8ec90871009bdb8736c5af0497c475999dd849e7c4d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 9
+  },
+  "GT": {
+   "key": "GT",
+   "iso": "GT",
+   "fips": "GT",
+   "name": "Guatemala",
+   "title": "Guatemala - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gtm.html",
+   "updated": "2026-03-11T20:00:00-04:00",
+   "text_hash": "sha256:0f0dae7f99b427010fdf96b2e35dbd38d212eb98d3322fef9995ed5d3e07615c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 414
+  },
+  "BZ": {
+   "key": "BZ",
+   "iso": "BZ",
+   "fips": "BH",
+   "name": "Belize",
+   "title": "Belize - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.blz.html",
+   "updated": "2026-03-11T20:00:00-04:00",
+   "text_hash": "sha256:7587c12bb1182468e8f51058e0cd072a6090406e0790ce7b1f51ea2a3aed8035",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 178
+  },
+  "SG": {
+   "key": "SG",
+   "iso": "SG",
+   "fips": "SN",
+   "name": "Singapore",
+   "title": "Singapore - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sgp.html",
+   "updated": "2026-03-08T20:00:00-04:00",
+   "text_hash": "sha256:a50955300828b6247392528f91e00bd4a7de04e14d1a56111cf3bbb570dbec5b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "TG": {
+   "key": "TG",
+   "iso": "TG",
+   "fips": "TO",
+   "name": "Togo",
+   "title": "Togo - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tgo.html",
+   "updated": "2026-03-08T20:00:00-04:00",
+   "text_hash": "sha256:b23cffe6c335d1230398f8bec1ad65d87fcc1d22dc5afd6333e01f61bafaf48b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 437
+  },
+  "AO": {
+   "key": "AO",
+   "iso": "AO",
+   "fips": "AO",
+   "name": "Angola",
+   "title": "Angola - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ago.html",
+   "updated": "2026-03-04T19:00:00-05:00",
+   "text_hash": "sha256:e567179c987b89a43a9c10326d37bd125c3554d5a757b6bda5f5e5c02db38394",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 134
+  },
+  "GN": {
+   "key": "GN",
+   "iso": "GN",
+   "fips": "GV",
+   "name": "Guinea",
+   "title": "Guinea - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gin.html",
+   "updated": "2026-02-24T19:00:00-05:00",
+   "text_hash": "sha256:a5a3652cedc6726760ed4d52e8d9ebb8f64873904417a059b08e8833457239f4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 163
+  },
+  "MY": {
+   "key": "MY",
+   "iso": "MY",
+   "fips": "MY",
+   "name": "Malaysia",
+   "title": "Malaysia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mys.html",
+   "updated": "2026-02-21T19:00:00-05:00",
+   "text_hash": "sha256:7f7af01aa2675cfcfcd7481ddc994c8c5bde2aea489071b6767f82084d215182",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 55
+  },
+  "AF": {
+   "key": "AF",
+   "iso": "AF",
+   "fips": "AF",
+   "name": "Afghanistan",
+   "title": "Afghanistan - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.afg.html",
+   "updated": "2026-02-19T19:00:00-05:00",
+   "text_hash": "sha256:f29fdefd20930d2660d95ee325b488d0a9883b1518bfd99ea22fa2d50e0fe40e",
+   "posture": {
+    "state": "suspended_operations",
+    "sentence": "The US Embassy in Kabul suspended operations in 2021."
+   },
+   "words": 453
+  },
+  "CI": {
+   "key": "CI",
+   "iso": "CI",
+   "fips": "IV",
+   "name": "Côte d’Ivoire",
+   "title": "Côte d’Ivoire - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.civ.html",
+   "updated": "2026-02-17T19:00:00-05:00",
+   "text_hash": "sha256:dfaf96de8f607b6d31ef85e816cc309e59c9f08ed35f7228a8ffbc7f663017f0",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 378
+  },
+  "SK": {
+   "key": "SK",
+   "iso": "SK",
+   "fips": "LO",
+   "name": "Slovakia",
+   "title": "Slovakia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.svk.html",
+   "updated": "2026-02-11T19:00:00-05:00",
+   "text_hash": "sha256:a188970d39202cf613b1e69cfdb3afb79a64bc0516d0ec7476316e92e4040e14",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "KG": {
+   "key": "KG",
+   "iso": "KG",
+   "fips": "KG",
+   "name": "The Kyrgyz Republic",
+   "title": "The Kyrgyz Republic - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kgz.html",
+   "updated": "2026-02-09T19:00:00-05:00",
+   "text_hash": "sha256:58db0f772472c0b374b34f0ec7aff2347a373dd0ca34aecce9b82bc76fa1ba17",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 80
+  },
+  "UZ": {
+   "key": "UZ",
+   "iso": "UZ",
+   "fips": "UZ",
+   "name": "Uzbekistan",
+   "title": "Uzbekistan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.uzb.html",
+   "updated": "2026-01-25T19:00:00-05:00",
+   "text_hash": "sha256:af508b9d7807e4ab0aa825c5c5dc59483161f5d87c87015e18129f26a09ecc5c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 15
+  },
+  "GM": {
+   "key": "GM",
+   "iso": "GM",
+   "fips": "GA",
+   "name": "The Gambia",
+   "title": "The Gambia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gmb.html",
+   "updated": "2026-01-15T19:00:00-05:00",
+   "text_hash": "sha256:f0a13136908544c20e9071a837fc92a539335a32bf9f2142366e864ae32780d5",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 136
+  },
+  "CF": {
+   "key": "CF",
+   "iso": "CF",
+   "fips": "CT",
+   "name": "Central African Republic",
+   "title": "Central African Republic - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.caf.html",
+   "updated": "2026-01-14T19:00:00-05:00",
+   "text_hash": "sha256:69d616750f6c72bac2f27aff9f2b560a8300076fd722d5939f2d91d7f00bb4bd",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 444
+  },
+  "KM": {
+   "key": "KM",
+   "iso": "KM",
+   "fips": "CN",
+   "name": "Comoros",
+   "title": "Comoros - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.com.html",
+   "updated": "2026-01-11T19:00:00-05:00",
+   "text_hash": "sha256:72288b1594676919d4ca0bb52a27b7d64dfdb9a9d7afabc6fc68de8531c2714d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 149
+  },
+  "CZ": {
+   "key": "CZ",
+   "iso": "CZ",
+   "fips": "EZ",
+   "name": "Czechia",
+   "title": "Czechia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cze.html",
+   "updated": "2026-01-07T19:00:00-05:00",
+   "text_hash": "sha256:df5285b91b4d61633a5f1e78a1573892641f230f49219b9b107493f2d31aff8d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 64
+  },
+  "PW": {
+   "key": "PW",
+   "iso": "PW",
+   "fips": "PS",
+   "name": "Palau",
+   "title": "Palau - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.plw.html",
+   "updated": "2026-01-06T19:00:00-05:00",
+   "text_hash": "sha256:47078bb58579a5996d40a22d9dfc01492756b1817eb07219f2c5cd8a2dc3fa1f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 36
+  },
+  "BJ": {
+   "key": "BJ",
+   "iso": "BJ",
+   "fips": "BN",
+   "name": "Benin",
+   "title": "Benin - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ben.html",
+   "updated": "2026-01-06T19:00:00-05:00",
+   "text_hash": "sha256:bd1f7440e3b95588aa3a608565119639ec540841e159e1f1ebebab491d57733e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 429
+  },
+  "GD": {
+   "key": "GD",
+   "iso": "GD",
+   "fips": "GJ",
+   "name": "Grenada",
+   "title": "Grenada - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.grd.html",
+   "updated": "2026-01-04T19:00:00-05:00",
+   "text_hash": "sha256:697ce57f6c4e8f5ad6e534177479d411eeed60ddfdd7f3b6776005b2ae6a8f77",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 53
+  },
+  "RU": {
+   "key": "RU",
+   "iso": "RU",
+   "fips": "RS",
+   "name": "Russia",
+   "title": "Russia - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.rus.html",
+   "updated": "2025-12-28T19:00:00-05:00",
+   "text_hash": "sha256:6e232537aaede2029521936df6ecfdac9848d55dd90a5dcaa49580bab7f51553",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 1118
+  },
+  "BY": {
+   "key": "BY",
+   "iso": "BY",
+   "fips": "BO",
+   "name": "Belarus",
+   "title": "Belarus - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.blr.html",
+   "updated": "2025-12-28T19:00:00-05:00",
+   "text_hash": "sha256:61cc5a383d69346042ed3e06ad26e9a482bd54f34866710d6ce005d315b531ee",
+   "posture": {
+    "state": "suspended_operations",
+    "sentence": "It also suspended operations at US Embassy Minsk."
+   },
+   "words": 565
+  },
+  "PT": {
+   "key": "PT",
+   "iso": "PT",
+   "fips": "PO",
+   "name": "Portugal",
+   "title": "Portugal - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.prt.html",
+   "updated": "2025-12-22T19:00:00-05:00",
+   "text_hash": "sha256:2827034ca46a87722338ee5b350c83e560ee1d6f8a4d912d72b64844f7f58c22",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 45
+  },
+  "CV": {
+   "key": "CV",
+   "iso": "CV",
+   "fips": "CV",
+   "name": "Cabo Verde",
+   "title": "Cabo Verde - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cpv.html",
+   "updated": "2025-12-17T19:00:00-05:00",
+   "text_hash": "sha256:2d8c71b5546fb332306c9a2ee94fddbe2be11ae9ae347047a77a3b54af6b10c6",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 23
+  },
+  "GW": {
+   "key": "GW",
+   "iso": "GW",
+   "fips": "GW",
+   "name": "Guinea-Bissau",
+   "title": "Guinea-Bissau - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gnb.html",
+   "updated": "2025-12-10T19:00:00-05:00",
+   "text_hash": "sha256:2af1481e63d0ab7d2ff248dbdb2bcbcf9ea46917e62c3c44aac0baa48c075b06",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 168
+  },
+  "LR": {
+   "key": "LR",
+   "iso": "LR",
+   "fips": "LI",
+   "name": "Liberia",
+   "title": "Liberia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lbr.html",
+   "updated": "2025-12-10T19:00:00-05:00",
+   "text_hash": "sha256:d1a8e743c7642461dc53f7030f188ebaeee22981d985cf3f4d247a59ed95393b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 230
+  },
+  "SC": {
+   "key": "SC",
+   "iso": "SC",
+   "fips": "SE",
+   "name": "Seychelles",
+   "title": "Seychelles - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.syc.html",
+   "updated": "2025-12-08T19:00:00-05:00",
+   "text_hash": "sha256:719c4e50e9467e1c43c8628b1f54a251fe11a9d45759a6fe3066c89767ffb56a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 19
+  },
+  "MU": {
+   "key": "MU",
+   "iso": "MU",
+   "fips": "MP",
+   "name": "Mauritius",
+   "title": "Mauritius - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mus.html",
+   "updated": "2025-12-07T19:00:00-05:00",
+   "text_hash": "sha256:bfa738a94cd081825903875eb2709705dd74c1874b4cf6e19b2e88a4df26f64a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 78
+  },
+  "MG": {
+   "key": "MG",
+   "iso": "MG",
+   "fips": "MA",
+   "name": "Madagascar",
+   "title": "Madagascar - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mdg.html",
+   "updated": "2025-12-04T19:00:00-05:00",
+   "text_hash": "sha256:1fc7bd40dceaa63b5f711ddbd13cc5a4912b1d17d7f70477b7b9d2389c00be02",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 154
+  },
+  "SN": {
+   "key": "SN",
+   "iso": "SN",
+   "fips": "SG",
+   "name": "Senegal",
+   "title": "Senegal - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sen.html",
+   "updated": "2025-11-30T19:00:00-05:00",
+   "text_hash": "sha256:155e7743a62cafacb6fb9cd11e5a10ecde4e9147b72bea0689bc5791bc79b37e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 14
+  },
+  "TW": {
+   "key": "TW",
+   "iso": "TW",
+   "fips": "TW",
+   "name": "Taiwan",
+   "title": "Taiwan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.twn.html",
+   "updated": "2025-11-24T19:00:00-05:00",
+   "text_hash": "sha256:c0e99261fa10bc4a4d21399e54595dd2843eaac848e713ca9e83c68101f1b976",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 23
+  },
+  "GR": {
+   "key": "GR",
+   "iso": "GR",
+   "fips": "GR",
+   "name": "Greece",
+   "title": "Greece - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.grc.html",
+   "updated": "2025-10-22T20:00:00-04:00",
+   "text_hash": "sha256:e3a0649feb0f38b3e250452b2571e1f90c0d8baa2644db36afb2aab2ca027894",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 49
+  },
+  "RO": {
+   "key": "RO",
+   "iso": "RO",
+   "fips": "RO",
+   "name": "Romania",
+   "title": "Romania - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.rou.html",
+   "updated": "2025-10-13T20:00:00-04:00",
+   "text_hash": "sha256:3efc2a4bcc950a93ac212cc7d713c803dee437a8e7ae822a70b65c9e439596f4",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 27
+  },
+  "LK": {
+   "key": "LK",
+   "iso": "LK",
+   "fips": "CE",
+   "name": "Sri Lanka",
+   "title": "Sri Lanka - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.lka.html",
+   "updated": "2025-10-13T20:00:00-04:00",
+   "text_hash": "sha256:0b9f24d250e59952dea77e6678bf080069137bedcd7bb53438fcf8a5c16d147d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 239
+  },
+  "BG": {
+   "key": "BG",
+   "iso": "BG",
+   "fips": "BU",
+   "name": "Bulgaria",
+   "title": "Bulgaria - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bgr.html",
+   "updated": "2025-10-08T20:00:00-04:00",
+   "text_hash": "sha256:b04386610d0ac7f69c0daf6b8a53786bd05bb49ea684cef835be8e9eb74a755b",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 13
+  },
+  "GQ": {
+   "key": "GQ",
+   "iso": "GQ",
+   "fips": "EK",
+   "name": "Equatorial Guinea",
+   "title": "Equatorial Guinea - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.gnq.html",
+   "updated": "2025-10-06T20:00:00-04:00",
+   "text_hash": "sha256:24355b43819bfa735f02f12d11317f4edadb9c6b05dc1eb0241fcf442a09353e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 124
+  },
+  "MV": {
+   "key": "MV",
+   "iso": "MV",
+   "fips": "MV",
+   "name": "Maldives",
+   "title": "Maldives - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mdv.html",
+   "updated": "2025-10-06T20:00:00-04:00",
+   "text_hash": "sha256:cd6bce8f1ccc65ec79598ef7b690637ca44d831696acd297fac5a5b523f57a60",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 74
+  },
+  "AQ": {
+   "key": "AQ",
+   "iso": "AQ",
+   "fips": "AY",
+   "name": "Antarctica",
+   "title": "Antarctica - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ata.html",
+   "updated": "2025-09-22T20:00:00-04:00",
+   "text_hash": "sha256:7db4250fcee2833a9b42151ec30dd40f37b95fe3b965b8b8e74934d254ba63de",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 75
+  },
+  "SL": {
+   "key": "SL",
+   "iso": "SL",
+   "fips": "SL",
+   "name": "Sierra Leone",
+   "title": "Sierra Leone - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.sle.html",
+   "updated": "2025-09-14T20:00:00-04:00",
+   "text_hash": "sha256:fa8262c95ffb0bdac59c9425d2c0ffce6009f3267d6796d6f1172a54c324220c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 203
+  },
+  "AM": {
+   "key": "AM",
+   "iso": "AM",
+   "fips": "AM",
+   "name": "Armenia",
+   "title": "Armenia - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.arm.html",
+   "updated": "2025-09-04T20:00:00-04:00",
+   "text_hash": "sha256:ece1c6d2ec63436488ad7d3815227fa93399d73ec93c79a2316443937d6ff329",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 107
+  },
+  "EG": {
+   "key": "EG",
+   "iso": "EG",
+   "fips": "EG",
+   "name": "Egypt",
+   "title": "Egypt - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.egy.html",
+   "updated": "2025-07-14T20:00:00-04:00",
+   "text_hash": "sha256:dafbc0526145dc2d2b9b67c67e02aaebb701d1be4d2230cbeb8880179250b547",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 373
+  },
+  "IN": {
+   "key": "IN",
+   "iso": "IN",
+   "fips": "IN",
+   "name": "India",
+   "title": "India - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.ind.html",
+   "updated": "2025-06-15T20:00:00-04:00",
+   "text_hash": "sha256:a6b7d29f51fe7ed9e48773ad2b9f177c741fca8d85f9d3e5d8b9a3d541183d90",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 113
+  },
+  "DO": {
+   "key": "DO",
+   "iso": "DO",
+   "fips": "DR",
+   "name": "Dominican Republic",
+   "title": "Dominican Republic - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dom.html",
+   "updated": "2025-06-11T20:00:00-04:00",
+   "text_hash": "sha256:7549356ae6fa4deab41dce25523770cc96ec5e61fa4ef90c8a09049273bf516d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 43
+  },
+  "PL": {
+   "key": "PL",
+   "iso": "PL",
+   "fips": "PL",
+   "name": "Poland",
+   "title": "Poland - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.pol.html",
+   "updated": "2025-06-04T20:00:00-04:00",
+   "text_hash": "sha256:90603cd095a3d4f41669ca6b04b531eaace4c6ebedc3c4811797bfd55f5c2ec0",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 29
+  },
+  "KR": {
+   "key": "KR",
+   "iso": "KR",
+   "fips": "KS",
+   "name": "South Korea",
+   "title": "South Korea - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kor.html",
+   "updated": "2025-05-27T20:00:00-04:00",
+   "text_hash": "sha256:b6aa91291e0d06946393e6e00d9988ab3923d7df58f1f7e67915fdc424ef16c8",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 94
+  },
+  "ZA": {
+   "key": "ZA",
+   "iso": "ZA",
+   "fips": "SF",
+   "name": "South Africa",
+   "title": "South Africa - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.zaf.html",
+   "updated": "2025-05-26T20:00:00-04:00",
+   "text_hash": "sha256:33fb9f86056c05abfe73f8ceaa5c234643d6dba22eb7091a50d17bf8f7ba3e60",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 170
+  },
+  "VU": {
+   "key": "VU",
+   "iso": "VU",
+   "fips": "NH",
+   "name": "Vanuatu",
+   "title": "Vanuatu - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.vut.html",
+   "updated": "2025-05-21T20:00:00-04:00",
+   "text_hash": "sha256:8a6dbec42dad84f131b279fdd7e074ac250104ad6d6236fd834ccd4ae7df3790",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 35
+  },
+  "JP": {
+   "key": "JP",
+   "iso": "JP",
+   "fips": "JA",
+   "name": "Japan",
+   "title": "Japan - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.jpn.html",
+   "updated": "2025-05-14T20:00:00-04:00",
+   "text_hash": "sha256:a8729f8a79e76017c09ba91fa7638889841cbd7ece9fbd2dec387214da0d1ff8",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 21
+  },
+  "DE": {
+   "key": "DE",
+   "iso": "DE",
+   "fips": "GM",
+   "name": "Germany",
+   "title": "Germany - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.deu.html",
+   "updated": "2025-05-12T20:00:00-04:00",
+   "text_hash": "sha256:50a01b08bdda1cd36a0f5635a73bf08ac08efbdab68a678a9ee9d2cd70f49735",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 80
+  },
+  "CU": {
+   "key": "CU",
+   "iso": "CU",
+   "fips": "CU",
+   "name": "Cuba",
+   "title": "Cuba - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cub.html",
+   "updated": "2025-05-06T20:00:00-04:00",
+   "text_hash": "sha256:4c2b0d67dde07814c212ec4a4b9b23e87e1c936894c4cf43904d6db00e12bbb3",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 364
+  },
+  "BI": {
+   "key": "BI",
+   "iso": "BI",
+   "fips": "BY",
+   "name": "Burundi",
+   "title": "Burundi - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.bdi.html",
+   "updated": "2025-04-28T20:00:00-04:00",
+   "text_hash": "sha256:66c8155f88f07e30b03d0a2d6a144b6e444f64221b60d6ec9327a11a31805a7a",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 307
+  },
+  "PG": {
+   "key": "PG",
+   "iso": "PG",
+   "fips": "PP",
+   "name": "Papua New Guinea",
+   "title": "Papua New Guinea - Level 3: Reconsider Travel",
+   "level": 3,
+   "level_text": "Reconsider Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.png.html",
+   "updated": "2025-04-28T20:00:00-04:00",
+   "text_hash": "sha256:bf8020f831e7509e56c14421624ba25f7e91033a4240dabfe39e0e2821cbaecc",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 498
+  },
+  "SB": {
+   "key": "SB",
+   "iso": "SB",
+   "fips": "BP",
+   "name": "Solomon Islands",
+   "title": "Solomon Islands - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.slb.html",
+   "updated": "2025-04-28T20:00:00-04:00",
+   "text_hash": "sha256:17752389e081394dd00d3b48f2b1ab8345ecc0664b6b332decd3b2f146bbf2cc",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 224
+  },
+  "KP": {
+   "key": "KP",
+   "iso": "KP",
+   "fips": "KN",
+   "name": "North Korea",
+   "title": "North Korea - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.prk.html",
+   "updated": "2025-04-28T20:00:00-04:00",
+   "text_hash": "sha256:6834438b000c5b3d6a9a79157ef1e5c9eabe5b86ec219adfabb1df46e362c04d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 227
+  },
+  "GE": {
+   "key": "GE",
+   "iso": "GE",
+   "fips": "GG",
+   "name": "Georgia",
+   "title": "Georgia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.geo.html",
+   "updated": "2025-03-12T20:00:00-04:00",
+   "text_hash": "sha256:b97de44f9a22b4ea80bb543ea5095aff60b184870b34060ec536236c6169bfbf",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 53
+  },
+  "DJ": {
+   "key": "DJ",
+   "iso": "DJ",
+   "fips": "DJ",
+   "name": "Djibouti",
+   "title": "Djibouti - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dji.html",
+   "updated": "2025-03-05T19:00:00-05:00",
+   "text_hash": "sha256:2b432a90ac78dd0f7499abfa924ba32eb86277496730df88dc636054abbf6d92",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 84
+  },
+  "TO": {
+   "key": "TO",
+   "iso": "TO",
+   "fips": "TN",
+   "name": "Tonga",
+   "title": "Tonga - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tonga-travel-advisory.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:c34e6d12f40771b1f99890aca9868aa68fc3596a2192a9fe2fdb93b15e0b8b80",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 107
+  },
+  "KI": {
+   "key": "KI",
+   "iso": "KI",
+   "fips": "KR",
+   "name": "Kiribati",
+   "title": "Kiribati - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.kir.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:6e7252a676c6c7e3dd40d639ae61d0224d3ee2d3a82be328a117a5cc74b293ba",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 24
+  },
+  "TV": {
+   "key": "TV",
+   "iso": "TV",
+   "fips": "TV",
+   "name": "Tuvalu",
+   "title": "Tuvalu - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.tuv.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:5f6107e19b8f2a74cf188d03dd18086de23838a1ea239fa30a866991a4ebddb3",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 36
+  },
+  "FJ": {
+   "key": "FJ",
+   "iso": "FJ",
+   "fips": "FJ",
+   "name": "Fiji",
+   "title": "Fiji - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.fji.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:41d386392d1ee05ad8951153050270b98b379d2cbed484e45826847f6a890623",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 55
+  },
+  "PF": {
+   "key": "PF",
+   "iso": "PF",
+   "fips": "FP",
+   "name": "French Polynesia",
+   "title": "French Polynesia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.pyf.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:4f91caaf75732dbda730bfd0442c19ee16c57cedaa2fe7ac233e4381ebf4b37e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 20
+  },
+  "NR": {
+   "key": "NR",
+   "iso": "NR",
+   "fips": "NR",
+   "name": "Naoero",
+   "title": "Naoero - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.nru.html",
+   "updated": "2024-12-01T19:00:00-05:00",
+   "text_hash": "sha256:114aa5acdb74f9c9598df1c4aebf91a75b17d7b0bfa0277d849f23528c32306c",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 18
+  },
+  "GL": {
+   "key": "GL",
+   "iso": "GL",
+   "fips": "GL",
+   "name": "Greenland",
+   "title": "Greenland - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.grl.html",
+   "updated": "2024-10-28T20:00:00-04:00",
+   "text_hash": "sha256:ccf7f998de17d430195bf4cfd44f89499ac6c99d804afd3ce800549a25b6218d",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 101
+  },
+  "CG": {
+   "key": "CG",
+   "iso": "CG",
+   "fips": "CF",
+   "name": "Republic of Congo",
+   "title": "Republic of Congo - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.cog.html",
+   "updated": "2024-10-01T20:00:00-04:00",
+   "text_hash": "sha256:85176c836a2df69a12f83c02a50a8895a4066a757e190cf4726a852de4aa29c9",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 75
+  },
+  "DK": {
+   "key": "DK",
+   "iso": "DK",
+   "fips": "DA",
+   "name": "Denmark",
+   "title": "Denmark - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dnk.html",
+   "updated": "2024-09-16T20:00:00-04:00",
+   "text_hash": "sha256:6dda43bd85a72adb253b141c2bc27f6cd1c6b5bd788b27eedfef3a6fc3dad781",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 92
+  },
+  "FR-WI": {
+   "key": "FR-WI",
+   "iso": "GP",
+   "fips": "A3",
+   "name": "French West Indies",
+   "title": "French West Indies - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/french-west-indies-travel-advisory.html",
+   "updated": "2024-08-21T20:00:00-04:00",
+   "text_hash": "sha256:e2ff93682fcc8b8f2e2c05805debac972839be672db8dd48e4af030e9573a4ed",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 119
+  },
+  "ZM": {
+   "key": "ZM",
+   "iso": "ZM",
+   "fips": "ZA",
+   "name": "Zambia",
+   "title": "Zambia - Level 1: Exercise Normal Precautions",
+   "level": 1,
+   "level_text": "Exercise Normal Precautions",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.zmb.html",
+   "updated": "2023-07-30T20:00:00-04:00",
+   "text_hash": "sha256:d526e6fd182901d6106a5ea2c6ace8152c95c6e29acd7601e721feede80b0432",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 23
+  },
+  "ER": {
+   "key": "ER",
+   "iso": "ER",
+   "fips": "ER",
+   "name": "Eritrea",
+   "title": "Eritrea - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.eri.html",
+   "updated": "2023-07-30T20:00:00-04:00",
+   "text_hash": "sha256:f36215f02effad3facaf5d135d91f8c6b2db5ae4da80d81ad0ad7f5f561a1c34",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 182
+  },
+  "ZW": {
+   "key": "ZW",
+   "iso": "ZW",
+   "fips": "ZI",
+   "name": "Zimbabwe",
+   "title": "Zimbabwe - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.zwe.html",
+   "updated": "2023-06-26T20:00:00-04:00",
+   "text_hash": "sha256:189316d1dfb177248205641ac48d0f8645c639521990d7f0bb04629796a182f5",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 107
+  }
+ }
+}
