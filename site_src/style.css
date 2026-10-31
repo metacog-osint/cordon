@@ -55,3 +55,4 @@ td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .empty { color: var(--muted); font-size: 14px; margin: 4px 0; }
 .foot { padding-top: 6px; padding-bottom: 28px; }
 .ok { color: inherit; } .bad { color: var(--l4); font-weight: 600; }
+.tip { white-space: pre-line; }
