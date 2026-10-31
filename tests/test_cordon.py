@@ -166,5 +166,29 @@ class Feed(unittest.TestCase):
         self.assertEqual(sum(1 for i in ids if i.startswith("cordon:alert:SA:")), 2)
 
 
+class Events(unittest.TestCase):
+    def test_bulletin_expiries_and_recent_changes(self):
+        from cordon import events
+        now = datetime(2026, 10, 31, 21, tzinfo=timezone.utc)
+        changes = [
+            {"lane": "state", "kind": "posture", "at": "2026-10-23T14:00:00Z", "key": "SA", "iso": "SA",
+             "name": "Saudi Arabia", "from": "normal", "to": "ordered_departure", "link": LINK},
+            {"lane": "state", "kind": "level", "at": "2026-09-01T00:00:00Z", "key": "LB", "iso": "LB",
+             "name": "Lebanon", "from": 3, "to": 4, "link": LINK},   # older than 30 days
+            {"lane": "state", "kind": "text", "at": "2026-10-30T00:00:00Z", "key": "MX", "iso": "MX", "name": "Mexico"},
+        ]
+        ev = events.build(easa.parse(EASA_CSV), changes, now)["events"]
+        ids = [e["id"] for e in ev]
+        self.assertIn("2026-11-16-easa-czib-2026-04", ids)
+        self.assertNotIn("2027-01-31-easa-czib-2017-06", ids, "withdrawn bulletins have no expiry to watch")
+        gulf = next(e for e in ev if e["ref"] == "CZIB-2026-07")
+        self.assertEqual((gulf["date"], gulf["countries"][:2]), ("2026-11-16", ["BH", "KW"]))
+        sa = next(e for e in ev if e["kind"] == "advisory_change")
+        self.assertEqual(sa["id"], "2026-10-23-state-sa-posture")
+        self.assertIn("normal operations to ordered departure", sa["title"])
+        self.assertEqual(sum(e["kind"] == "advisory_change" for e in ev), 1, "old and text-only changes stay out")
+        self.assertEqual(ev, sorted(ev, key=lambda e: (e["date"], e["id"])))
+
+
 if __name__ == "__main__":
     unittest.main()

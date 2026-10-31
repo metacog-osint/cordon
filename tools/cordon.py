@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import collect, feed  # noqa: E402
+from cordon import collect, events, feed  # noqa: E402
 from cordon.common import load, read_jsonl  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
@@ -63,6 +63,9 @@ def build() -> dict:
                                                encoding="utf-8", newline="\n")
     (OUT / "data" / "map.json").write_text(json.dumps(map_data(d, fc), ensure_ascii=False, separators=(",", ":")) + "\n",
                                            encoding="utf-8", newline="\n")
+    ev = events.build(d["czibs.json"].get("bulletins") or [], read_jsonl("changes.jsonl"))
+    (OUT / "data" / "events.json").write_text(json.dumps(ev, indent=1, ensure_ascii=False) + "\n",
+                                              encoding="utf-8", newline="\n")
     return fc
 
 
