@@ -13,6 +13,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 concurrency:
   group: update
   cancel-in-progress: false
@@ -41,6 +42,21 @@ jobs:
           else
             echo "no content change"
           fi
+      - name: Open a review issue for each new embassy-status change
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python tools/cordon.py reviews reviews
+          [ -n "$(ls reviews)" ] || exit 0
+          gh label create cordon-review --color 5B3FA8 --description "Embassy status read from advisory text: check it" 2>/dev/null || true
+          gh issue list --state all --label cordon-review --limit 500 --json title --jq '.[].title' > existing.txt
+          for f in reviews/*.md; do
+            title=$(head -n 1 "$f")
+            if ! grep -Fxq "$title" existing.txt; then
+              tail -n +2 "$f" > body.md
+              gh issue create --title "$title" --label cordon-review --body-file body.md
+            fi
+          done
       - name: Build site
         run: python tools/cordon.py build
       - uses: actions/configure-pages@v5

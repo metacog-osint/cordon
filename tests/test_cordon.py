@@ -190,5 +190,24 @@ class Events(unittest.TestCase):
         self.assertEqual(ev, sorted(ev, key=lambda e: (e["date"], e["id"])))
 
 
+class Review(unittest.TestCase):
+    def test_posture_changes_become_reviews(self):
+        from cordon import review
+        now = datetime(2026, 11, 2, tzinfo=timezone.utc)
+        changes = [
+            {"lane": "state", "kind": "posture", "at": "2026-11-01T15:25:00Z", "key": "LB", "iso": "LB", "name": "Lebanon",
+             "from": "normal", "to": "ordered_departure", "sentence": "The Department ordered the departure of family members.",
+             "link": LINK},
+            {"lane": "state", "kind": "level", "at": "2026-11-01T15:25:00Z", "key": "LB", "name": "Lebanon", "from": 3, "to": 4},
+            {"lane": "state", "kind": "posture", "at": "2026-09-01T00:00:00Z", "key": "ET", "name": "Ethiopia",
+             "from": "normal", "to": "authorized_departure"},
+        ]
+        r = review.pending(changes, now)
+        self.assertEqual(len(r), 1)
+        self.assertEqual(r[0]["title"], "Review: Lebanon embassy status normal operations to ordered departure (2026-11-01, LB)")
+        self.assertIn("> The Department ordered the departure of family members.", r[0]["body"])
+        self.assertIn(LINK, r[0]["body"])
+
+
 if __name__ == "__main__":
     unittest.main()

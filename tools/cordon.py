@@ -3,6 +3,7 @@
     python tools/cordon.py collect          fetch every source; update data/ (a failing source keeps its last data)
     python tools/cordon.py build            write site/ (the map page, feed.geojson, map.json) from data/
     python tools/cordon.py check            lint the feed with the doctrine kit; check the registers
+    python tools/cordon.py reviews <dir>    write one file per departure-status change to review (title, then body)
 """
 import json
 import shutil
@@ -89,6 +90,15 @@ def main(argv=None) -> int:
     if cmd == "build":
         fc = build()
         print(f"site/ written: {len(fc['features'])} feed items, {len(fc['dropped'])} dropped")
+        return 0
+    if cmd == "reviews":
+        from cordon import review
+        out = Path((argv or sys.argv[1:])[1] if len(argv or sys.argv[1:]) > 1 else "reviews")
+        out.mkdir(parents=True, exist_ok=True)
+        items = review.pending(read_jsonl("changes.jsonl"))
+        for i, r in enumerate(items):
+            (out / f"{i:03d}.md").write_text(r["title"] + "\n" + r["body"], encoding="utf-8", newline="\n")
+        print(f"{len(items)} review(s) written to {out}")
         return 0
     if cmd == "check":
         errs = check()
