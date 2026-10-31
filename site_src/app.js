@@ -23,6 +23,8 @@
   }
   function day(d) { if (!d) return "—"; var p = String(d).slice(0, 10).split("-"); return Number(p[2]) + " " + MONTHS[Number(p[1]) - 1] + " " + p[0]; }
   function when(iso) { return iso ? T.format(iso) : "—"; }
+  // Leaflet inserts a string tooltip as HTML; a text node keeps source text as text.
+  function tip(text) { return h("div", { "class": "tip" }, [text]); }
   function link(url, text) { return url ? h("a", { href: url, rel: "noopener" }, [text]) : text; }
   function table(head, rows) {
     return h("table", null, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
@@ -54,7 +56,7 @@
         var all = adv.filter(function (a) { return a.iso === f.properties.iso; });
         var text = all.length ? all.map(function (a) { return a.name + ": Level " + a.level + ", " + a.level_text; }).join("\n")
           : f.properties.name + ": no US advisory listed";
-        lyr.bindTooltip(text, { sticky: true });
+        lyr.bindTooltip(tip(text), { sticky: true });
       }
     }).addTo(map);
 
@@ -63,8 +65,8 @@
     layers.czib = L.geoJSON({ type: "FeatureCollection", features: world.features.filter(function (f) { return czibIso[f.properties.iso]; }) }, {
       style: { color: css("--czib"), weight: 2.2, dashArray: "6 4", fill: false },
       onEachFeature: function (f, lyr) {
-        lyr.bindTooltip(czibIso[f.properties.iso].map(function (b) {
-          return "EASA " + b.number + ": " + b.subject + " (valid until " + day(b.valid_until) + ")"; }).join("\n"), { sticky: true });
+        lyr.bindTooltip(tip(czibIso[f.properties.iso].map(function (b) {
+          return "EASA " + b.number + ": " + b.subject + " (valid until " + day(b.valid_until) + ")"; }).join("\n")), { sticky: true });
       }
     }).addTo(map);
 
@@ -75,7 +77,7 @@
       if (!p || !c) return;
       L.marker([c[1], c[0]], { icon: L.divIcon({ className: "posture-icon", html: "", iconSize: [26, 18] }), keyboard: true,
         title: a.name + ": " + p[1] })
-        .bindTooltip(a.name + ": US embassy, " + p[1].toLowerCase() + (a.sentence ? "\n" + a.sentence : ""))
+        .bindTooltip(tip(a.name + ": US embassy, " + p[1].toLowerCase() + (a.sentence ? "\n" + a.sentence : "")))
         .on("add", function (ev) { ev.target.getElement().textContent = p[0]; })
         .addTo(layers.posture);
     });
@@ -92,8 +94,8 @@
         return { color: key ? css("--nav-key") : css("--nav"), weight: 1.5, fillOpacity: 0.12 }; },
       onEachFeature: function (f, lyr) {
         var w = f.properties;
-        lyr.bindTooltip(w.number + " (" + (NAV[w.category] || w.category) + ")\n" + [w.sea, w.place].filter(Boolean).join(", ")
-          + "\n" + w.headline, { sticky: true });
+        lyr.bindTooltip(tip(w.number + " (" + (NAV[w.category] || w.category) + ")\n" + [w.sea, w.place].filter(Boolean).join(", ")
+          + "\n" + w.headline), { sticky: true });
       }
     }).addTo(map);
 
