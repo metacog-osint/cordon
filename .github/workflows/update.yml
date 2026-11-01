@@ -1,6 +1,6 @@
 name: update
 # Hourly: collect every source, commit data/ when its content changed, build site/ and publish it to GitHub Pages
-# (https://metacog-osint.github.io/cordon/). A failing source keeps its last good data; nothing here fails the run
+# (https://cordon.theintelligence.company/). A failing source keeps its last good data; nothing here fails the run
 # except a broken build. Free: public repo, no secrets.
 on:
   schedule:
