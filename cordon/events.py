@@ -46,5 +46,5 @@ def build(czibs: list[dict], changes: list[dict], now: datetime | None = None) -
         })
     out.sort(key=lambda e: (e["date"], e["id"]))
     return {"source": "cordon", "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "about": "Dated events for Verdict's calendar, from Cordon (https://metacog-osint.github.io/cordon/)",
+            "about": "Dated events for Verdict's calendar, from Cordon (https://cordon.theintelligence.company/)",
             "events": out}

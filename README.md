@@ -1,7 +1,7 @@
 # Cordon
 
 **Where governments and aviation and maritime authorities are warning people away, on one map.**
-Map: https://metacog-osint.github.io/cordon/ · Feed: https://metacog-osint.github.io/cordon/data/feed.geojson
+Map: https://cordon.theintelligence.company/ · Feed: https://cordon.theintelligence.company/data/feed.geojson
 
 Cordon collects official warnings every hour, straight from the issuing authorities:
 

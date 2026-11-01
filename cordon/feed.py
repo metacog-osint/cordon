@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
-SITE = "https://metacog-osint.github.io/cordon/"
+SITE = "https://cordon.theintelligence.company/"
 METHOD = "cordon-feed-1.0"
 RECENT_DAYS = 30
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
