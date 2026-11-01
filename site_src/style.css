@@ -1,16 +1,18 @@
 :root {
   --bg: #f6f7f9; --panel: #ffffff; --ink: #14181f; --muted: #5b6573; --line: #d9dee5; --soft: #eef1f5;
   --sea: #dfe8f1; --land: #f4f2ee; --border: #b7bec8; --link: #1f5fbf;
-  --l1: #fbe3cf; --l2: #f5b07a; --l3: #e0662f; --l4: #9f2a12;
-  --czib: #5b3fa8; --nav: #0f6f6a; --nav-key: #c2410c; --posture: #111827;
+  /* State Department levels as a stoplight: 1 green, 2 yellow, 3 orange, 4 red. Level 1 leans blue-green so that
+     red-blind readers can tell it from level 3; checked with the dataviz validator (all pairs, both modes). */
+  --l1: #38a98a; --l2: #f6d64a; --l3: #ee7d1e; --l4: #b0182c;
+  --czib: #5b3fa8; --nav: #475569; --nav-key: #1d4ed8; --posture: #111827;
   --radius: 10px; --gap: 16px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #0f1318; --panel: #171c23; --ink: #e8ecf1; --muted: #9aa4b2; --line: #2b333d; --soft: #1e252e;
     --sea: #0d1b2a; --land: #232a33; --border: #4a5562; --link: #6aa3ff;
-    --l1: #4a3326; --l2: #7d4524; --l3: #c4552a; --l4: #f08a5d;
-    --czib: #b59bff; --nav: #4fd1c5; --nav-key: #fb923c; --posture: #f3f4f6; color-scheme: dark; }
+    --l1: #30ad90; --l2: #f5d84f; --l3: #ec7a1c; --l4: #d42c45;
+    --czib: #b59bff; --nav: #cbd5e1; --nav-key: #60a5fa; --posture: #f3f4f6; color-scheme: dark; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.5; }
@@ -48,7 +50,7 @@ th, td { text-align: left; padding: 5px 6px; border-top: 1px solid var(--soft); 
 th { color: var(--muted); font-weight: 600; border-top: 0; }
 td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .lvl { display: inline-block; min-width: 22px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; padding: 0 4px; }
-.lvl-3 { background: var(--l3); color: #fff; } .lvl-4 { background: var(--l4); color: #fff; }
+.lvl-3 { background: var(--l3); color: #14181f; } .lvl-4 { background: var(--l4); color: #fff; }
 .bars { display: grid; grid-template-columns: minmax(0, 11rem) 1fr 3rem; gap: 6px 10px; align-items: center; font-size: 14px; }
 .bar { height: 10px; border-radius: 3px; background: var(--nav); opacity: .75; }
 .bar.key { background: var(--nav-key); opacity: 1; }
