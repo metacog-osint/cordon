@@ -453,12 +453,12 @@
    "level_text": "Exercise Increased Caution",
    "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mar.html",
    "updated": "2026-09-03T20:00:00-04:00",
-   "text_hash": "sha256:aa1c77c693b6bf7e48966e1398f9c9c9c8f4e91edf31e7d779ea4c11ed7f5e60",
+   "text_hash": "sha256:09c2f8d1d3694f6a9a23f24ef013336d5b7b040bf17cfd6b400c7014c0627cf5",
    "posture": {
     "state": "normal",
     "sentence": null
    },
-   "words": 44
+   "words": 39
   },
   "PE": {
    "key": "PE",
