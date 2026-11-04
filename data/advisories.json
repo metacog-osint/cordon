@@ -300,7 +300,7 @@
    "level_text": "Exercise Increased Caution",
    "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.khm.html",
    "updated": "2026-09-14T20:00:00-04:00",
-   "text_hash": "sha256:9babe94f5c9e20b6b9d02c594c39ad5652b596628d220e9414c895c009efae52",
+   "text_hash": "sha256:d494d30c9222734469e06ecc3787eb78e480950f84a05b9fdb9738d34565ce3c",
    "posture": {
     "state": "normal",
     "sentence": null
@@ -453,12 +453,12 @@
    "level_text": "Exercise Increased Caution",
    "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.mar.html",
    "updated": "2026-09-03T20:00:00-04:00",
-   "text_hash": "sha256:21e645dec9aff72e2d99a3f48c3fb86e3f5517740b7aa24b71934f22c9f3c77a",
+   "text_hash": "sha256:aa1c77c693b6bf7e48966e1398f9c9c9c8f4e91edf31e7d779ea4c11ed7f5e60",
    "posture": {
     "state": "normal",
     "sentence": null
    },
-   "words": 49
+   "words": 44
   },
   "PE": {
    "key": "PE",
