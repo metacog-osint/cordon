@@ -1,30 +1,30 @@
 {
  "state-travel-advisories": {
-  "last_ok": "2026-11-04T20:52:20Z",
+  "last_ok": "2026-11-07T14:11:04Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-04T20:52:20Z",
+  "checked_at": "2026-11-07T14:11:04Z",
   "detail": "217 advisories"
  },
  "us-embassy-alerts": {
-  "last_ok": null,
+  "last_ok": "2026-11-07T14:11:04Z",
   "last_error": "2026-11-04T20:52:20Z",
-  "failures": 3,
-  "checked_at": "2026-11-04T20:52:20Z",
-  "detail": "0 of 56 posts answered; e.g. HTTP 403"
+  "failures": 0,
+  "checked_at": "2026-11-07T14:11:04Z",
+  "detail": "1 of 56 posts answered; e.g. HTTP 403"
  },
  "easa-czib": {
-  "last_ok": "2026-11-04T20:52:20Z",
+  "last_ok": "2026-11-07T14:11:04Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-04T20:52:20Z",
+  "checked_at": "2026-11-07T14:11:04Z",
   "detail": "16 active"
  },
  "nga-navwarnings": {
   "last_ok": "2026-10-31T21:22:31Z",
-  "last_error": "2026-11-04T20:52:20Z",
-  "failures": 2,
-  "checked_at": "2026-11-04T20:52:20Z",
+  "last_error": "2026-11-07T14:11:04Z",
+  "failures": 3,
+  "checked_at": "2026-11-07T14:11:04Z",
   "detail": "HTTP 503"
  }
 }
