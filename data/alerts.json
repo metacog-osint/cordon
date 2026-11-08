@@ -175,15 +175,6 @@
   "HT": [
    {
     "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 7, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOF9sQ3RRcWVOTVB6MV80VUxqWUktN1RQRjItTEpHY0x6LVVWaHg5QWl2RGphcUw3QkgyNTd1Q3BSN0hFT0xsRFdKSURDTVFWZ2tXN3ItNHJ2RVEtSnB6SUFkOW8wdWpMY2pTUmwtem41ZEhzVFFJM09XR0kyNlFRSjN5cnVyaUZudHR0dmVRUkNkVmc?oc=5",
-    "published_at": "2026-11-07T15:12:15Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
     "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 2, 2026",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWGY3bjF4U25iU29nMnNnb1hhSjI5a0lNLUNLYUU5RUN4X2VPejhrM3FxRDlHaW9BMFFXcFlqZ3V2NS1OVmZCejZGUmpSMHl2UnZpOTE0WHlRV3dNeTdjdmsxNHhQVG5HSVU2NzlleDk5Y003UG5MQnA4N3JZUE1KRVktLUdOUGdYWVZhRjRsRmJKaHc?oc=5",
     "published_at": "2026-11-03T00:13:23Z",
@@ -206,6 +197,15 @@
     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNmlFS25kZVJDNnIyTEVidExhdGtZVE9Kb21jUkVrRWJFUThOSHlBWERXLWNrbDRRZ2Q2OHFwdGkweXpFZGlza2Q4Z0dsUEl1QnV0TE5CVjdyY1NVRlBiVmV2NHBsUmhYUzlURHc5d2ZEUlhob0prNFM1RTliMDFwR3hfaXMwRzlJWFgwZWRkZFpiQQ?oc=5",
     "published_at": "2026-10-23T07:00:00Z",
     "type": "weather",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 21, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVklydWNhVUN5d3MtSTBROEZON3c2Sm5GRlNvdzFoODZwbFBlazh0ZGl2aGRaOXB5NG5MeS1lWXZpWVR6TGRRZllnbGRyd3hiektUR3JjaWlZcFExM0tDOUJaU0VDMFRsYVpEUFFCTVBuRk5HS3cwcTN2dm5yYmtGaWg2YzdjWlh0aHB5RndURjdUSDA?oc=5",
+    "published_at": "2026-10-21T07:00:00Z",
+    "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
    },
@@ -606,6 +606,15 @@
     "title": "ALERT – MESSAGE FOR U.S. CITIZENS: CONSULAR OFFICERS FROM THE U.S. EMBASSY TO OFFER SERVICES TO ALL U.S. CITIZENS IN LVIV",
     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdmczbENodll1emllaG5WR2tkZGlUS1ZuOW5IeHFhODlyamI3ZTBjM0RHcEpuUnpWUWN0a25YQlg5WUtnR3NyQ3VlSEEwdDBVd0Y5b0JzeEtLcW91aUIzNkdjUFJYTkxNR0VzNERCY3paRjkzcmd6dGxETDR5dHAzc0lZTFh1eElITGd3LWVDdWRqdjdiSXlMYko0YlhWY3NFMVlXNE1GVFJ1RXF6RjVqMTNzbnFhckpZRnBkMWcyU0lpdGx2UnVUOGstRzY0NmhidWh2UHAwd0E?oc=5",
     "published_at": "2026-10-26T13:04:01Z",
+    "type": "alert",
+    "via": "google-news",
+    "post_url": "https://ua.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "UA",
+    "title": "MESSAGE FOR U.S. CITIZENS: VOTING FROM UKRAINE",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrNFBWVk9mdFhGVl9FcXcxTnVRSkV2VklIRWpTTTRzdWxVeWdUMTQ0Vm1NNThpc1J3VGZjZklYd2JlNmZBbi1adkFuM3NZMFZtS0VYa2JOcHllVVpBUmlUd0xWemwwZEt4NFAxUWR6OVExRlVncFdTbnNRWUE?oc=5",
+    "published_at": "2026-10-15T07:00:00Z",
     "type": "alert",
     "via": "google-news",
     "post_url": "https://ua.usembassy.gov/category/alert/"
