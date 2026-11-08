@@ -19,13 +19,14 @@ def run(when: str | None = None) -> dict:
     summary["state"] = err or f"{len(advisories)} advisories, {len(changes)} changes"
 
     prev_alerts = load("alerts.json", {}).get("posts", {})
-    alerts, errors = embassy.collect(advisories, prev_alerts, when)
+    alerts, errors, via = embassy.collect(advisories, prev_alerts, when)
     tried = len(embassy.posts(advisories))
     ok = tried - len(errors)
+    searched = f" ({len(via)} only through Google News search)" if via else ""
     save("alerts.json", {"posts": alerts})
-    health("us-embassy-alerts", ok > 0, f"{ok} of {tried} posts answered"
+    health("us-embassy-alerts", ok > 0, f"{ok} of {tried} posts answered{searched}"
            + (f"; e.g. {next(iter(errors.values()))}" if errors else ""), when)
-    summary["embassy"] = f"{ok} of {tried} posts"
+    summary["embassy"] = f"{ok} of {tried} posts{searched}"
 
     czibs, cz_changes, err = easa.collect(load("czibs.json", {}).get("bulletins"), when)
     if err:

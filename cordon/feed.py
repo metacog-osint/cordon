@@ -168,12 +168,17 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     al_fetched = alerts.get("fetched_at") or fetched
     for iso, items in sorted((alerts.get("posts") or {}).items()):
         for a in items:
+            src = {**EMBASSY_SRC, "id": f"usembassy-{iso.lower()}", "url": a["link"], "accessed_at": al_fetched}
+            if a.get("via") == "google-news":
+                # The link is a Google News redirect: cite the post's own alerts page, and say how it was found.
+                src.update({"url": a.get("post_url") or a["link"],
+                            "descriptor": "US embassy alert; title and date from a Google News search of the post's "
+                                          "site, because the post's own alert feed did not answer"})
             props = {**_base(al_fetched), "id": f"cordon:alert:{iso}:{digest(a['link'])[7:19]}",
                      "title": f"US embassy ({iso}): {a['title']}", "tier": "routine",
                      "data_as_of": a.get("published_at") or al_fetched, "countries": [iso], "precision_class": "country",
                      "requirement_ids": ["CD-PIR-2"], "ie_aspect": ["informational"], "pmesii_pt": ["social"],
-                     "ascope": ["events"], "sources": [{**EMBASSY_SRC, "id": f"usembassy-{iso.lower()}",
-                                                         "url": a["link"], "accessed_at": al_fetched}],
+                     "ascope": ["events"], "sources": [src],
                      "link": a["link"], "measures": {"type": a.get("type")}}
             feats.append({"type": "Feature", "geometry": point(iso), "properties": props})
 

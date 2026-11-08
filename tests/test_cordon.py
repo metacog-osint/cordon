@@ -3,6 +3,7 @@
 import json
 import sys
 import unittest
+import unittest.mock
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -144,6 +145,84 @@ class Embassy(unittest.TestCase):
         self.assertEqual(a[1]["published_at"], "2026-10-22T06:30:00Z")
         self.assertEqual(embassy.feed_url("GB"), "https://uk.usembassy.gov/category/alert/feed/")
         self.assertNotIn("IR", embassy.posts({"IR": {"iso": "IR", "level": 4}}))
+
+    GN_RSS = """<?xml version="1.0"?><rss><channel>
+        <item><title>Alerts Archives - U.S. Embassy in Ukraine</title>
+        <link>https://news.google.com/rss/articles/CBMiArchive?oc=5</link>
+        <pubDate>Fri, 03 Feb 2017 08:00:00 GMT</pubDate></item>
+        <item><title>Security Alert: U.S. Embassy Kyiv - U.S. Embassy in Ukraine</title>
+        <link>https://news.google.com/rss/articles/CBMiKyiv1?oc=5</link>
+        <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate></item>
+        <item><title>Demonstration Alert &#8211; U.S. Embassy Kyiv (November 4, 2026) - U.S. Embassy in Ukraine</title>
+        <link>https://news.google.com/rss/articles/CBMiKyiv2?oc=5</link>
+        <pubDate>Wed, 04 Nov 2026 09:00:00 GMT</pubDate></item>
+        <item><title>Security Alert: U.S. Embassy Kyiv - U.S. Embassy in Ukraine</title>
+        <link>https://news.google.com/rss/articles/CBMiKyiv1dup?oc=5</link>
+        <pubDate>Sat, 31 Oct 2026 10:05:00 GMT</pubDate></item>
+        <item><title>Health Alert: Measles - U.S. Embassy in Ukraine</title>
+        <link>https://news.google.com/rss/articles/CBMiOld?oc=5</link>
+        <pubDate>Mon, 15 Jan 2024 09:00:00 GMT</pubDate></item>
+        </channel></rss>"""
+
+    @staticmethod
+    def _fetch(direct=b"<html><body>Technical Difficulties</body></html>", search=None):
+        def fake(url, timeout=25):
+            if url.endswith("/category/alert/feed/"):
+                return direct, None
+            if "news.google.com/rss/search" in url:
+                return (search, None) if search is not None else (None, "HTTP 503")
+            return None, "HTTP 404"
+        return fake
+
+    def test_direct_feed_titles_are_left_whole(self):
+        rss = """<rss><channel><item><title>Demonstration Alert - U.S. Embassy Mexico City</title>
+        <link>https://mx.usembassy.gov/demonstration-alert/</link><pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+        </item></channel></rss>"""
+        a = embassy.parse_rss(rss, "MX")[0]
+        self.assertEqual((a["title"], a["type"]), ("Demonstration Alert - U.S. Embassy Mexico City", "demonstration"))
+
+    def test_html_error_page_falls_back_to_recent_search_alerts(self):
+        with unittest.mock.patch.object(embassy, "posts", lambda adv: ["UA"]):
+            out, errs, via = embassy.collect({}, when="2026-11-08T18:00:00Z",
+                                             fetch=self._fetch(search=self.GN_RSS.encode("utf-8")))
+        self.assertEqual((errs, via), ({}, {"UA": "google-news"}))
+        got = [(a["title"], a["type"], a["published_at"][:10]) for a in out["UA"]]
+        self.assertEqual(got, [
+            ("Demonstration Alert – U.S. Embassy Kyiv (November 4, 2026)", "demonstration", "2026-11-04"),
+            ("Security Alert: U.S. Embassy Kyiv", "security", "2026-10-31"),
+        ], "newest first; archive pages, old alerts and duplicates dropped; the site name trimmed")
+        self.assertEqual(out["UA"][0]["post_url"], "https://ua.usembassy.gov/category/alert/")
+
+    def test_a_search_with_nothing_recent_keeps_previous_alerts(self):
+        stale = b"<rss><channel><item><title>Alerts Archives - U.S. Embassy</title><link>https://news.google.com/x</link>" \
+                b"<pubDate>Fri, 03 Feb 2017 08:00:00 GMT</pubDate></item></channel></rss>"
+        with unittest.mock.patch.object(embassy, "posts", lambda adv: ["UA", "SA"]):
+            out, errs, via = embassy.collect({}, previous={"UA": [{"title": "kept UA"}], "SA": [{"title": "kept SA"}]},
+                                             when="2026-11-08T18:00:00Z", fetch=self._fetch(search=stale))
+        self.assertEqual((out["UA"], out["SA"]), ([{"title": "kept UA"}], [{"title": "kept SA"}]))
+        self.assertIn("no alert in the last 30 days", errs["UA"])
+        self.assertEqual(via, {})
+        with unittest.mock.patch.object(embassy, "posts", lambda adv: ["SA"]):
+            out, errs, _ = embassy.collect({}, previous={"SA": [{"title": "kept"}]}, fetch=self._fetch())
+        self.assertEqual(out["SA"], [{"title": "kept"}], "when both fail, previous alerts are kept")
+        self.assertIn("HTTP 503", errs["SA"])
+
+    def test_search_alerts_cite_the_posts_own_page(self):
+        found = embassy.search_results(embassy.parse_rss(self.GN_RSS, "UA", search=True), "UA", "2026-11-08T18:00:00Z")
+        fc = feed.build({"advisories": [], "fetched_at": "2026-11-08T18:00:00Z"},
+                        {"posts": {"UA": found}, "fetched_at": "2026-11-08T18:00:00Z"},
+                        {"bulletins": [], "fetched_at": "2026-11-08T18:00:00Z"},
+                        {"warnings": [], "fetched_at": "2026-11-08T18:00:00Z"},
+                        datetime(2026, 11, 8, 18, tzinfo=timezone.utc))
+        alerts = [f["properties"] for f in fc["features"] if f["properties"]["id"].startswith("cordon:alert:UA:")]
+        self.assertEqual(len(alerts), 2)
+        for p in alerts:
+            self.assertEqual(p["sources"][0]["url"], "https://ua.usembassy.gov/category/alert/")
+            self.assertIn("Google News", p["sources"][0]["descriptor"])
+            self.assertTrue(p["link"].startswith("https://news.google.com/"))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([p for p in contract.check(f, regs) if p[1] == "error"], [], f["properties"]["id"])
 
 
 class Feed(unittest.TestCase):
