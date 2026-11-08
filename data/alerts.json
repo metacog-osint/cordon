@@ -175,6 +175,15 @@
   "HT": [
    {
     "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOF9sQ3RRcWVOTVB6MV80VUxqWUktN1RQRjItTEpHY0x6LVVWaHg5QWl2RGphcUw3QkgyNTd1Q3BSN0hFT0xsRFdKSURDTVFWZ2tXN3ItNHJ2RVEtSnB6SUFkOW8wdWpMY2pTUmwtem41ZEhzVFFJM09XR0kyNlFRSjN5cnVyaUZudHR0dmVRUkNkVmc?oc=5",
+    "published_at": "2026-11-07T15:12:15Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
     "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 2, 2026",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWGY3bjF4U25iU29nMnNnb1hhSjI5a0lNLUNLYUU5RUN4X2VPejhrM3FxRDlHaW9BMFFXcFlqZ3V2NS1OVmZCejZGUmpSMHl2UnZpOTE0WHlRV3dNeTdjdmsxNHhQVG5HSVU2NzlleDk5Y003UG5MQnA4N3JZUE1KRVktLUdOUGdYWVZhRjRsRmJKaHc?oc=5",
     "published_at": "2026-11-03T00:13:23Z",
@@ -197,15 +206,6 @@
     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNmlFS25kZVJDNnIyTEVidExhdGtZVE9Kb21jUkVrRWJFUThOSHlBWERXLWNrbDRRZ2Q2OHFwdGkweXpFZGlza2Q4Z0dsUEl1QnV0TE5CVjdyY1NVRlBiVmV2NHBsUmhYUzlURHc5d2ZEUlhob0prNFM1RTliMDFwR3hfaXMwRzlJWFgwZWRkZFpiQQ?oc=5",
     "published_at": "2026-10-23T07:00:00Z",
     "type": "weather",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 21, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVklydWNhVUN5d3MtSTBROEZON3c2Sm5GRlNvdzFoODZwbFBlazh0ZGl2aGRaOXB5NG5MeS1lWXZpWVR6TGRRZllnbGRyd3hiektUR3JjaWlZcFExM0tDOUJaU0VDMFRsYVpEUFFCTVBuRk5HS3cwcTN2dm5yYmtGaWg2YzdjWlh0aHB5RndURjdUSDA?oc=5",
-    "published_at": "2026-10-21T07:00:00Z",
-    "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
    },
@@ -342,19 +342,19 @@
    },
    {
     "iso": "MX",
-    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
-    "published_at": "2026-10-30T13:16:21Z",
-    "type": "security",
+    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
+    "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
    {
     "iso": "MX",
-    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
+    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
     "published_at": "2026-10-30T07:00:00Z",
-    "type": "demonstration",
+    "type": "security",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
