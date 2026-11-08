@@ -71,6 +71,567 @@
     "published_at": "2026-09-04T02:54:32Z",
     "type": "routine"
    }
+  ],
+  "AE": [
+   {
+    "iso": "AE",
+    "title": "Security Alert: U.S. Mission United Arab Emirates – November 7, 2026 - https://ae.usembassy.gov/",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWUo4WWVtR1dycHI0cFlaTzZkeklhRGNPZU9qTlNYV2RGZE5oTzdINHdmb0tlS3pPbUdJOWxmNjVEVy1rVWltcXhsRXZ3NXMtTV9MLTQwVjJpbEhSZnd3ekN1VGlZVTdsMVlQaWFQMkFkdE4wbGdyMjh1ZFQ5dUNlRDNKS1A5Y1NKREFqUEVVMXIwTnc?oc=5",
+    "published_at": "2026-11-06T23:20:25Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ae.usembassy.gov/category/alert/"
+   }
+  ],
+  "BH": [
+   {
+    "iso": "BH",
+    "title": "Security Alert: U.S. Embassy Manama – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbFBpSFVyclVGRDFPbmZBUlNKS2J0ZUZ5emNDX3prajcxeGNQa0szYVQyRVBPTmU4VmVXWTlaNy03cXJIclppbWxFN2lNY1NGZkRoSWk4THJLU0U3NHJzYnFtU0FwLW9XekltY3FWd3FmZ3A2WTByZ2hUNkRJYVp0Xw?oc=5",
+    "published_at": "2026-11-06T23:04:49Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://bh.usembassy.gov/category/alert/"
+   }
+  ],
+  "CO": [
+   {
+    "iso": "CO",
+    "title": "Security Alert: Cartagena Independence Day (November 11–16, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQlJ1d0kyWUNMUUlZRlB4M2hGSlVUbUtjbTdIZmNwOERfOC1FNUJkX3RaY3g2ME96czMxX0pvbWhOX1hmWjhlSkt3ZFdYa1A2NjRfSlJqN0JLbFNYZ29KQ2NWZTZmUmRoZGZrTUVWNmpRLTUxWndxRnJZTzRuTFQtcWp3S1RTVlZ0SmphOWJla2E?oc=5",
+    "published_at": "2026-11-06T21:52:18Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://co.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "CO",
+    "title": "Demonstration Alert: Planned Protest Near the U.S. Embassy – October 19, 2026",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaGk1eGlYSTgzaHlsUjV0OXNVckROUlBlT09OT09EUDlyNEszcjdjd3ZoQ2dvVW1UQ2N6V0w2WmJaMVlPUXI0SUYwbUdOeXk0OTc1c0hGdzhXS0NHSHd3emQ4RWpzbF8tQ3BMUk1vODJ5VktySm1QUmxoTzhHV0toT1BqZ1FDLW5ERWp2YWFHVVpGeGRtVmlsM2sxTUtyTWc?oc=5",
+    "published_at": "2026-10-19T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://co.usembassy.gov/category/alert/"
+   }
+  ],
+  "CU": [
+   {
+    "iso": "CU",
+    "title": "Demonstration Alert – U.S. Embassy Havana, Cuba: October 28, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOXFqOXlRM0M3b2N0WHhnYWUyVnJ6cXVmMnhLRkJoS3dqdkZDVklET0kzbWYtTlJ5R21yR2JoQ2tLQjFIcWdXaVFfdm4yMGJhSnZob3loTFpZRWU0ZDVUVmRlMUFMYnBfbzhoN18wQnozbWhnX2wwR0h4WFUzZV83TWMzOHV4ZlRmYWhYWW9R?oc=5",
+    "published_at": "2026-10-28T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://cu.usembassy.gov/category/alert/"
+   }
+  ],
+  "ET": [
+   {
+    "iso": "ET",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "ET",
+    "title": "Security Alert – U.S. Embassy Addis Ababa, Ethiopia (October 28, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcFlVaUZpeFd2WlJ0cHRlZnU3TnlvNlhlUURWZHhITjNrTHBRWW9NOHpLUi00RlB2cTRHZC1OLWY4a0JDZjRtTk0xNl9sSktzOVR4Q1AxdzljU0t2c2xodjRvQUFVanA4czVEVkpLR1JtVllrcTJ2ZGFIV2x0U1VucTJxa1RnYjFLeFZJbjl2TG96S0U?oc=5",
+    "published_at": "2026-10-28T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "ET",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 20, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMHN6VkpMWUxoUF93VmozUmkzd3JQR042aUQ1cmJIUVdWdkp1ZWlIMWUyQ2R5Y1JpUm16UE94bGZtb3k4MWpIMTR0N250XzNtYTFUTWQyVXZwOGpia0dRU2hGSWlHTmo0MENLVmpSTTZUS2NRc19aUGFjSTVwVDFkdEFlNTA3WFduY0J3WW56MGhQV1k?oc=5",
+    "published_at": "2026-10-20T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "ET",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 15, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUVZWcXdjbjNRR1R0emVKbzVLd3FhTGNfNmRJWXFIa2VmbkxFcnRtdTdtams0eFJjMkJxMnBleVdFUnhJMF9EYjM2am1UbnJpNlRhVjVKTVA0akZTUUE1QlJaaDB2QjY5YnBETUJuZ3htYVM3TzdGZS0xVkJoRF9DTnFva1EzU1gyTjhfTG9PY3JfYTA?oc=5",
+    "published_at": "2026-10-15T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "ET",
+    "title": "Security Alert: Ethiopia (Oct 12, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5YZnUtRjRLTUF6R0xfY1NwU0lnTHpMNVU0YmFxNkdsUzFnc0VuX0RqUlA1TlRTbDd3R0tJWEJYd3UtTno0Ti1ZUnZVNmFRYWtiSDFyc29wbE0xYUMyWmN5M1FhU01jcjFjYnlaM1J3?oc=5",
+    "published_at": "2026-10-12T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   }
+  ],
+  "HT": [
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOF9sQ3RRcWVOTVB6MV80VUxqWUktN1RQRjItTEpHY0x6LVVWaHg5QWl2RGphcUw3QkgyNTd1Q3BSN0hFT0xsRFdKSURDTVFWZ2tXN3ItNHJ2RVEtSnB6SUFkOW8wdWpMY2pTUmwtem41ZEhzVFFJM09XR0kyNlFRSjN5cnVyaUZudHR0dmVRUkNkVmc?oc=5",
+    "published_at": "2026-11-07T15:12:15Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 2, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWGY3bjF4U25iU29nMnNnb1hhSjI5a0lNLUNLYUU5RUN4X2VPejhrM3FxRDlHaW9BMFFXcFlqZ3V2NS1OVmZCejZGUmpSMHl2UnZpOTE0WHlRV3dNeTdjdmsxNHhQVG5HSVU2NzlleDk5Y003UG5MQnA4N3JZUE1KRVktLUdOUGdYWVZhRjRsRmJKaHc?oc=5",
+    "published_at": "2026-11-03T00:13:23Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 25, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVXJ1X1AxeWluYXNwNlZVWXdoYmVOd3A3WTk3d2R6RGtRcFRwQmdPSmlWUHNTanVFWXlPVFV0c2lLT3FKbEEzOGNRTE9DVDgzaXZ0T0dYSC1GS1JMN1dtRFVHajBKajlERjI5Wlk3OXJaMldTdFZ3NGdBV3RTcjFucWVsQnpLMGNncmlpTUJJMll6N2s?oc=5",
+    "published_at": "2026-10-25T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Weather Alert: U.S. Embassy Port-au-Prince, Haiti (October 23, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNmlFS25kZVJDNnIyTEVidExhdGtZVE9Kb21jUkVrRWJFUThOSHlBWERXLWNrbDRRZ2Q2OHFwdGkweXpFZGlza2Q4Z0dsUEl1QnV0TE5CVjdyY1NVRlBiVmV2NHBsUmhYUzlURHc5d2ZEUlhob0prNFM1RTliMDFwR3hfaXMwRzlJWFgwZWRkZFpiQQ?oc=5",
+    "published_at": "2026-10-23T07:00:00Z",
+    "type": "weather",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 19, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWkRGUHNWNmtqMDVvUTJtUmdYQ3pmTVJfOGhKeDd4UDhfVnpVM3U4ZWk2aGttclJDVWd2U1lzMnlzRWc1V2hZQ1hhQWVPSHdTWUN1bE1zZHBIbDZJTlpSNzhSSVFuVVJrVDA1dmh3cnlLMXZrZk5lZkd2YWZXWDhBeFBHZnh5ZGVKVnh1WjlpSVJqa2c?oc=5",
+    "published_at": "2026-10-19T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 18, 2026",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcHFLRDFiNUFaTlhWTTdicjRpMGdSQjl6YndxczhqaDA1d0NrNDdzeU9XNFUxQjd1VzZUVTYwc2ZOekRsN016cDZKdVNJckdIZEpqYkZ1aTJtdk9tMDlRNmlPWFhTQ1JvMWpJX1BrZmY5UVRIMzMxR3BvV29fN21JeDlteDh6czViYzZxTjh3b2pfV1k?oc=5",
+    "published_at": "2026-10-18T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
+   }
+  ],
+  "IL": [
+   {
+    "iso": "IL",
+    "title": "Security Alert: U.S. Embassy Jerusalem – November 6, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWXZXNDdJZ0hxaHp6aVc5dWljRXd5azRtSE94Q1FHdmlEdnYta2k3Z0Jfb3hvU19Bb0RQQzZWbGNUQzlNbThaQmJaY3JHSl9qcUkzWnBhRkY1ZXVlOFJHRWRTbU15eFBicmZyNWtJV2J4cmdiT3Y1LTAzMWJlTXBRb1FyV1M?oc=5",
+    "published_at": "2026-11-06T23:28:30Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://il.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "IL",
+    "title": "Security Alert: U.S. Embassy Jerusalem – October 25, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSUlKQzllZkZyTkJDREtCZzlOWUNlbkE2enRCM2lMTWlvcl8xTDlHaEg2V3hMeHVRZDViM1lvSm1vYk1yX2VNSWdsVTA0ZWw4YWc2NjYzSnB4SDdhelFHOVZFN0xKY0k1NTBkN2VLRE9rY0V0LUZiYm41Y3hZSkQyS05zZEU?oc=5",
+    "published_at": "2026-10-25T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://il.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "IL",
+    "title": "Security Alert: U.S. Embassy Jerusalem – October 23, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNblJHRDVKQVpubl9rVlplMTlWYjlJS3pTRnA3d000X1llekIzeWFZOW9ZT09nSU1GemtQNVVYb0pRc2p4NFg1M3dneEM2ZEU1UlVrMjViMUZzUUF4czRNVUY5VmF1VFVqMjhmNGc5Y0gyaUlWN2hJSnlnTEtEaHE3OHAxakg?oc=5",
+    "published_at": "2026-10-23T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://il.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "IL",
+    "title": "Security Alert: U.S. Embassy Jerusalem – October 13, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUWZ0X0pNZi1hMG1VUE9xcy1BRGZZYnk3TGNPckZRRnN0bEZ3ek1aQzlPRGZQbFFHUmZyaEFUM1k4SjdBb1docHZZaWR0cXB4RHhQc3Vyc3ZQQ3p5TXNtd1JBeGhKeGcwTmloT3h6b045MDVRVjZkZVAtYTVuUl9Ta2Iwclo?oc=5",
+    "published_at": "2026-10-13T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://il.usembassy.gov/category/alert/"
+   }
+  ],
+  "IN": [
+   {
+    "iso": "IN",
+    "title": "Message for U.S. Citizens: Consular Services in Bhutan, November 17, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaWhkNmZndjdYNjlMY0Q5bFlIQnFKXy1scXdDR0lqOHhsY0ZBYlN4Q3NmLVRaYjNJUGdiOHZkNDl3YUgwcGlDeFhwei02WVF1aG9pbHU1WFhWTHY0TlB3VGJyNWYxcFZmdlZrMTJ5RVhfNGg0b3lQSE1HMnl4RHc5V1ZSQV8?oc=5",
+    "published_at": "2026-11-03T11:44:47Z",
+    "type": "alert",
+    "via": "google-news",
+    "post_url": "https://in.usembassy.gov/category/alert/"
+   }
+  ],
+  "IQ": [
+   {
+    "iso": "IQ",
+    "title": "Security Alert: U.S. Mission Iraq – November 6, 2026",
+    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5CZVcxMzJhaHVwbGpOMkpBam5tdEZ0SWRmT3NOSGRYUUhsQkEtWll1b2tpNThUNFRhMzNXR19WcjRPMkhDQzFmYjMxSnlxM19jcnFJVGwxTTdqUGJ4c2JPdjMzQnIyQ0xHeXJ1TExjQnZjYkRIN0FadHdtME1ZQQ?oc=5",
+    "published_at": "2026-11-06T23:10:27Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://iq.usembassy.gov/category/alert/"
+   }
+  ],
+  "JO": [
+   {
+    "iso": "JO",
+    "title": "Security Alert: U.S. Embassy Amman – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sQnZBYVZJeXlYa2liZkFXN3VqWE9WZGhhaXp6Ym15NnBnbVViZzNydlVMMEFXVkFiTjVpT0JXUDZGYWQzeWpPS2FCbmZxSGJ3eWpBZjY1aFJVdlNKODQzeUphLTVHSndiYjZJaGpqeXBVQTctNVpWcDRuOXhoWFk?oc=5",
+    "published_at": "2026-11-06T23:20:11Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://jo.usembassy.gov/category/alert/"
+   }
+  ],
+  "KW": [
+   {
+    "iso": "KW",
+    "title": "Security Alert: U.S. Embassy Kuwait – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcHQyRG14ZEM3cFVaUUJiSEdMQW1NX3d1MGFLRXFCd2dyMC1CM0tHQThBakxDQ25jSm45TlFoR3I3SzJZUmRsNmc1QjYycGxseGdmd0NmYzhBRHZaS1MtT3ZHNnZGTjE0VW41NEduMHBmRnFhRlY0cVY1RFVuWlBJOA?oc=5",
+    "published_at": "2026-11-06T23:30:12Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://kw.usembassy.gov/category/alert/"
+   }
+  ],
+  "LB": [
+   {
+    "iso": "LB",
+    "title": "Security Alert: U.S. Embassy Beirut – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OLXdXcXdHRkM1N3BOa3BVSFU3RzhCM1ZzUzV3VlR2dUd0THBzaW9HQW9XVGRodFE1RVpzQ0VGTDRDSE5uYWJpRGwxalJoTnJiRHpIRGhMXzZueVhib19qVEJLYl9OSlFhUVFnTm50WDc0a285NDhYZWZSVnpxZ2M?oc=5",
+    "published_at": "2026-11-07T00:01:30Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://lb.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "LB",
+    "title": "Security Alert: U.S. Embassy Beirut – October 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxON19fVjkwcHRMbk1CeE5hamNRUjVUZkJSYndDUjBoa1FMT2NJN2VhaDEzSFRMZGlyQmtvRXpOOUo0cjhXa1F3ODVCdng4T2ljSTRoYW1HWk1TYV9kMmpDQ0xEcmd1VjRhYk9jb1loREZadjFqNU5kbmlvTndLVW1xRw?oc=5",
+    "published_at": "2026-10-24T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://lb.usembassy.gov/category/alert/"
+   }
+  ],
+  "MX": [
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Protest and Traffic Disruptions Near Rio Lagartos – October 31, 2026",
+    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPckcycjl2OTRSd3M2bV8tQnFRbzNjSzJ5X0xfOGFqTjZLOW1uUlgxZ0RGbDhKclFfVUxqQzBFcDBKZnhRZ3hCNkJFTXZTOUJCckswNlAyVW1rOS16dXFLY0wtTEY0ZlVjRWNjSzZfa0VsMzR4bVRWUlE1QUQtcVNnWEY1N1g3SjB6R3RYUmZSdjRSMkx0ZE8zcUxyTVBjRk9GeEhINjdWR0FialF6S1FWeQ?oc=5",
+    "published_at": "2026-10-31T21:21:52Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
+    "published_at": "2026-10-30T13:16:21Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Security Alert: Active Law Enforcement Activity in the City of Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRDNUT0QyUm9TNDN6MW5obk5aUl9ybTJmcjBUcm42M2RaMm95NWZEZThSbmtWLWpDU1VUS1lNV2Q4TEJkRG56ZFUtMVZLTzQ3Ukpld3B4LTVMQmhfYXFuaW1SX0xMNTFZeWg4SVljX3BTaEtxOXFLU1ZxUF85QkhRaWNMT1RyYUlBYVgwSVRRaGstN1ZxYVRJSDBLZmRZZw?oc=5",
+    "published_at": "2026-10-29T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Protests to Cause Traffic Disruptions on Monday (October 26, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWDlyNEJzbXBuTGs0T3MyVWZQTFZFRVpkZVFyd3BjODNCenBFblNUM2ZNanpwcUduWnNGeEJuUVd4WFJISm5tclg5MVoyM05LdlphNlVub1pDa1dsVUprbFJ2TXpOX1VIVnBOOGNNeXVSYWpQdm5Sck1XOHpkMU41eTdXM1BzYUFWRWlsRW5CUW5aYmxZUFMwcUlkcHZtQVV3enoyendyTnF3RVNJQWc?oc=5",
+    "published_at": "2026-10-26T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Demonstrations in Guadalajara Area on October 23 and 25, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUVFpV0kwdzc4cnJEZXQtbFdzU2RnX1NyOTNJcEQ2TW5DUjRyeXZmOFg4ZDNrMEhDTGcyck9PeEd5cERqRVVvVlRsUF82SjNiZW9pYUdXUUgwZFAyRTB1cjBZSC1kOHdCYWpzeEd6cHJlSy1sNzRTX1pPTVR4Y2FKRlhTaWJlaElIZkszTzFoaU55V1R1Z0k3YmtPdmNjWFV6MlJNZFlvdGd2dw?oc=5",
+    "published_at": "2026-10-23T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Protest in Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB2MkQ3b00waEdJQTdkUzlQR2JoYzVmYmF1TS1BSGlQR2h2Rl9rUDlHaEZrWl9zb1U0aEwxdEQxZzcyQ2dqd3NMWU93NzFUWlRjNE9hOVhwa2V2SmYyQzFrT283TzZSZnJUbndKMWg3VTdSdUdB?oc=5",
+    "published_at": "2026-10-22T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Multiple Protests in Mexico City on October 21",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdFBNZ1FCcnZqLTZmQ1dLa0VLREEtUjhhcm8tcVVXLWQ2bjZOV002RUlzSTRBdGlHY2lHcEJEYnotZ2dBcjhxWVJxZ0FSZ3hla3FLUEl1UW9NNFh4bEVIY1hqTEZ0cy1yeU05djlQSmNJMkU0TUs4Tm9La1RVNjBqbGxxRXBtMXpaZUdtRXhvczFHajlpZl9N?oc=5",
+    "published_at": "2026-10-21T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: “Mega March for Water” in Guadalajara on October 18 at 11:00 a.m.",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZmtpOElQeDJhekt1UW5IM05xVTFkQVNMZlVZdFRaemlkVHhtQ25MYXM1Wm9mbUV2cHAxQXd4V1ZfV05CdHNMS3M0WHhpNlBHZFJHdHN0ajUwTVFkQlQ5cWN2Vm8ta1NPVE5WQjNIQVRwSzBSTGR5dHE5M1AxS0FrQjhvUUJ0SzYxbU9RNTdackZnZFE4UUhiVzJ4bVdWZU1GRmRsbFJfRFpPVm8?oc=5",
+    "published_at": "2026-10-16T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Weather Alert: Hurricane Trudy, U.S. Embassy Mexico City, U.S. Consulate General Guadalajara on Thursday, October 15, 2026",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdUdKTkt1R0QwOUxacjMzZW1LaEZrMXZJeWd5SDFsMDJKYzEzdGZ5M3d1Qmo3STVkV21YN3dPN3gyV2plMHE2YzVHUENfVFRfTlA4d1d1MUh1ci12V0FkdXo2SEhDWGVBaGt5Rm1ScGh5OUpVQU81S3I3elZMcFAtTl9hMVdXcEg3TXAxTkNiaXpRa1VHQlNuLTd6Xzl6TmVBLUxrLUVXd0xabnVpTjJtZ3RuUVJNRmlIRjU2OHVMWnJHdnRTSGM5RHlpRzE2XzlqMF8xNmIyT0E?oc=5",
+    "published_at": "2026-10-15T07:00:00Z",
+    "type": "weather",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   }
+  ],
+  "NE": [
+   {
+    "iso": "NE",
+    "title": "Security Alert: U. S. Embassy Niamey, Niger (October 22, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRmZjN0tmT19JR3VoTVZQaEZjd0liMGI1ZUVaZ0Z6YnJxVUJXaTdWZk9EbHBUWGNKeUpCTUx5dGRQTURycjdIZktuMHlMc2R2d1NqeElzZFR3UHlSWlRGM3RDUDhqNVl5Rm8zQjI0eWt6QXpmUlUtUUFwb0hSbDQtVElWdmxlWmNa?oc=5",
+    "published_at": "2026-10-22T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ne.usembassy.gov/category/alert/"
+   }
+  ],
+  "NG": [
+   {
+    "iso": "NG",
+    "title": "Security Alert: October 28, 2026 – Mission Nigeria",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmUVFOa2lueWdUTFViU3BxUWxGLVlvdEc1R0wyZF92bVRULUdUMGV1d2lsN1V3ckdDYW9SY3VIMW1IWEZBcmZRcXdfOFd3QzNfNXI4OXNHZWtLdFlMUnlOMVo1T1gxdDRaRllCeG1udnBJSUZKcjJTU2EwVHY?oc=5",
+    "published_at": "2026-10-28T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ng.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "NG",
+    "title": "Health Alert: U.S. Embassy Abuja, Nigeria (October 27, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTC10RGc4akFDUjRabG84Q3ZJSjg2cmR6NnlfOFlPNTNFMmY5WUxMMkl2Z1pBTU9wWTNLRW1PYWlzUmZDTmZrLWxsbkhuTjZ3NnkzZ0w4aEFVR3ZkYnJ6TmYzbFZ2SVJvQXctYWd1U0hSTEc5anFHcl9sQTV0Q0JhMGpUOUNld0U?oc=5",
+    "published_at": "2026-10-27T07:00:00Z",
+    "type": "health",
+    "via": "google-news",
+    "post_url": "https://ng.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "NG",
+    "title": "Health Alert: U.S. Embassy Abuja, Nigeria (October 20, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZ0Y2bFBiRmxXZnVyclBqYjdDX0xURjRmOXY5LWl6TnVablVmVk8xdjZ4NmhhMkstQWhHQWdNRkxLX2Y4cVVzN3ltLWlaSGxNVFN0bmlCR0RNbGMyS2FKSTViYkxBMzJMckdTLVdQSFhCVERKUGpwdExyVE9YZWZuY3paMkxWbDQ?oc=5",
+    "published_at": "2026-10-20T07:00:00Z",
+    "type": "health",
+    "via": "google-news",
+    "post_url": "https://ng.usembassy.gov/category/alert/"
+   }
+  ],
+  "OM": [
+   {
+    "iso": "OM",
+    "title": "Security Alert: U.S. Embassy Muscat – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdjNGSHhwR1c0UkltSFVGeGoyQmVGaFNTWWdleFlZSUgtVXhaN1EyMUVlcGluME5ZV3FCb0V3SkhEWWY4UGpsbWdjQkRhXzZ0OVVTdEloVFpqcW9NMUFNOHlnUGNyVWJJYUl0X2ZMckhhdy1VenNPcWhfM0M0NDd2RA?oc=5",
+    "published_at": "2026-11-06T23:05:11Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://om.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "OM",
+    "title": "Security Alert: U.S. Embassy Muscat – October 18, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUW1YbWJybmJtNmxkRmNCNDdsZWVhRWRHLWJQWmpzdDhwWl9wTThyNGhMcHJfakFWaVZndnF1OFY3eVRfMEFhdDJ0TGF4RjJPWmh2LTRESTBCb0xadjFFbURRUDF1VUpUUFVlLW1LSGNxOGpETjFmM3BDRUdrSnotVw?oc=5",
+    "published_at": "2026-10-18T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://om.usembassy.gov/category/alert/"
+   }
+  ],
+  "PG": [
+   {
+    "iso": "PG",
+    "title": "Routine Message: Message for U.S. Citizens: Consular Visit to Eastern Highlands November 19, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPTHRONEhqcy1vOWo1RmJlOVdNM0xDLXBpRnA4aWRkRmplUEEwMnJyQ0hJQTFZdTNWM1lhZHRESFBHeGw4UlNCc0F5aTd4U3pXbndfMmttUTZuUEx2Q19GUUlSN1p1dkJVbFdnVEMwSmk3X0pqMmlQMTJKMEFxbERoM0xYNy02NHdpRFZkdXdnOE12NFNsaXQ2QmNNLS1WcVNJeDhrMEZpTGlLM2xGaWVVNWJyY3psUmVMVC1Z?oc=5",
+    "published_at": "2026-10-23T12:00:35Z",
+    "type": "routine",
+    "via": "google-news",
+    "post_url": "https://pg.usembassy.gov/category/alert/"
+   }
+  ],
+  "QA": [
+   {
+    "iso": "QA",
+    "title": "Security Alert: U.S. Embassy Doha – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8ySF93VGt1ZENiVDROa2ltTzZUMnVnSkVnemNJZzlfWjJqRGdyaUxtbGM3OGlHME9qcGpOTzZsREVzb3U5ajhHcDM4ZUNVT3pOczhpVmx5Q0I5dExZaDBGZUdrR3Z3c0dZaWpwZ29hMUh5akZtRjRMeWdCdzRkQQ?oc=5",
+    "published_at": "2026-11-06T23:20:24Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://qa.usembassy.gov/category/alert/"
+   }
+  ],
+  "RU": [
+   {
+    "iso": "RU",
+    "title": "Security Alert: Threat to Tsaritsyno Museum Reserve in Moscow (October 31, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOb2l4UkVYVk16NFlyd19SZ1RzUm1nYnZnczdyMlpMN3lHTnQ2OHkyZ1huMXVvVVRfNnJqWEl1ekRFeUZtQnZ1cHhJQl9vWWp6cUxETjJ3NnVjRGotcEZoNTlkVHpxSTU3NVZGWGlZckJkMjRYbGg1dVo5WS1vcEVXVTBud0Z2cTVyQUcxS0Z6X2NXN0NGTDRDOFJDUHJZZEpKWDVsT09R?oc=5",
+    "published_at": "2026-10-31T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ru.usembassy.gov/category/alert/"
+   }
+  ],
+  "SA": [
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPT21DX09Sbk9fQi03ZkRGSllzZFFIRGNlTXZ0eEJ2TDVablhnRDFkYXp5bkJQei1KVmZ0dTd4Y2Z6aUlfTmlSclN0emtFSkxWZmZZNXoyMXRzbHNfWndpSzgxRW0xUXJXdkZBLVVNYUpRcVVLcU1JN19IOW5SQVRXVDdmZmtyb3pl?oc=5",
+    "published_at": "2026-11-06T23:20:24Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
+    "published_at": "2026-11-03T22:24:10Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 19, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQR0U2VE9XV0FJTFo2SEhlZjREakplNkJwcWtKUHFiUXhWQk04enVwM201SG92M0hVbXBYc0J0Ym1SdHp4ekgyUS1BWVFFcV9SWHJlN2t2eWk3Mk1HTDJ0SUJ0Tkt6eEJSVzNORlYtWG5WY2xFd0NZLVJLWmdSOUZ5aDRCSnFGN2Zfd3BDbA?oc=5",
+    "published_at": "2026-10-19T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – October 18, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYjlWREpXU3pNQUpPbldkeXN5STVKakVwNXRVY1B0VTBlelRwSndWUWczVUNoMDVIOU9Ra2ZqaVVvX3BvN2RzX1FqS09UX3ZqdGdpM2h2eGpIUUtzVlBoVDRoN1hibEFvRHhBOGJWU3p6U0pyTlFKWUs3QWZ1RXBFR2hDUlktYmda?oc=5",
+    "published_at": "2026-10-18T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – October 12, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYm5QWFczSkxTQ0lXOFhMMmt1bjFmSm5SaWZ2U1huVFM2dmlTOVFJN0dSSDBXaVdONlBweHNxOThTRDlrMzU2SWtCT0FFM3dPdDhlX1JDRS1uMFh4UTl4LVVmM1JkaFVVcmtka2FKZ3o1X2RZS0dteWJqYk9zeWJFb2d1Y3l0VllL?oc=5",
+    "published_at": "2026-10-12T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – October 11, 2026.",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5NT19Pb0diNG1wYS1uZzdaTlZiUnFmeFBZN1E1QWN1aTBKbWkydllFcENpVFBMeEF4R2xMMHlTZThwa3ZSbGdhSm1wRVlobGZvYnlveFlPaUlQb1owdmt5S1ZGYkY3TXMyLXE1cmEyT0ZvUmhyZ3VXRg?oc=5",
+    "published_at": "2026-10-11T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – October 10, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQX2ItZExEanhaSFZDOVotZWRlbnVnanBuNnVuRXkwQXBEWm5rdG41WFo4dXFRT090UlhvUzZuRFRmTEhsZXdMUEdzQjNyQ3RYNFFaX0MyNkJNbGZTMXhiOHJIZWF2Tm1sRTdTaXFPZDNodGR0Q3BrR3E1aUtUaV9DTVlvZXlyNm9k?oc=5",
+    "published_at": "2026-10-10T07:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   }
+  ],
+  "TR": [
+   {
+    "iso": "TR",
+    "title": "Weather Alert: Delayed Opening on Thursday, October 15, 2026 - U.S. Consulate General Istanbul (Release Date: October 14, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPR01ILWQtdVhKa1FYcVNSR3NNVmNyLWlvRWs2X1ZOM0Vid0VoY2p3Y1B0ZWpVTnNqZVFGenlwMHViekFnMnVaU0FYYXdpZWE5TnEtZ2hmSW03X3MwWkZ5RlVrNlV5RVN5ZFI5c3hKcUVNXzJxNklRMXpUdmk1ZWNpT0lLcUhTakEwLVpERlRkQW1NZWw4b2JBUHJ4aEVQTTA3RVJRZHJlNWdSQ1ZzZlBkVTUwcWpBSkc1cFdWd2hlMm1pa2hGUVFLUWhPZHg5NGxlMzdTTGNyUDFoYmc?oc=5",
+    "published_at": "2026-10-14T07:00:00Z",
+    "type": "weather",
+    "via": "google-news",
+    "post_url": "https://tr.usembassy.gov/category/alert/"
+   }
+  ],
+  "UA": [
+   {
+    "iso": "UA",
+    "title": "Demonstration Alert – U.S. Embassy Kyiv (November 4, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUEF6QTYwMTBWRnlkNVRpWEI0eC1waEZHR01MRFJ5WG1NZmVrTHYzMkMzclRSNzZRS0J6SnA4d2ZCLVhaZDZCRFNaVUwybWpjQ3ZXZDZaTjBUWVh6YlhQLWNaWExuUjZCdU5YT3FNVlc1RXIwckMxZVZ4bDg2M2dkZXZ4N04?oc=5",
+    "published_at": "2026-11-04T07:21:18Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://ua.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "UA",
+    "title": "ALERT – MESSAGE FOR U.S. CITIZENS: CONSULAR OFFICERS FROM THE U.S. EMBASSY TO OFFER SERVICES TO ALL U.S. CITIZENS IN LVIV",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdmczbENodll1emllaG5WR2tkZGlUS1ZuOW5IeHFhODlyamI3ZTBjM0RHcEpuUnpWUWN0a25YQlg5WUtnR3NyQ3VlSEEwdDBVd0Y5b0JzeEtLcW91aUIzNkdjUFJYTkxNR0VzNERCY3paRjkzcmd6dGxETDR5dHAzc0lZTFh1eElITGd3LWVDdWRqdjdiSXlMYko0YlhWY3NFMVlXNE1GVFJ1RXF6RjVqMTNzbnFhckpZRnBkMWcyU0lpdGx2UnVUOGstRzY0NmhidWh2UHAwd0E?oc=5",
+    "published_at": "2026-10-26T13:04:01Z",
+    "type": "alert",
+    "via": "google-news",
+    "post_url": "https://ua.usembassy.gov/category/alert/"
+   }
+  ],
+  "UG": [
+   {
+    "iso": "UG",
+    "title": "Health Alert: U.S. Embassy Kampala, Uganda (October 28, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSjdkZHZlczVKNXhfa2VoQkl0T0paM2hxRXlMU001Mm9mbE14STAxUkFCdWxqNDNqY2NKNzl2MEtGN3lvTjhXc01hUC11NGFYQ01FR2d0dE5ZaUhsTGtoWmE3YVhTaHlRVW1XdWt2WmhfdUpTQzhlNVRGVjV3cnVsdWN1N0ZvSGpS?oc=5",
+    "published_at": "2026-10-28T07:00:00Z",
+    "type": "health",
+    "via": "google-news",
+    "post_url": "https://ug.usembassy.gov/category/alert/"
+   }
+  ],
+  "YE": [
+   {
+    "iso": "YE",
+    "title": "Security Alert: Yemen – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBka3dDeGFGYWxfTGt0Q1FTMzRfMzJPU1dKUzdMMEJBb1cybFJTWVNfLWZ3UUxoMlNvdlg1VEtnaTBldmVfVlhnaDlHVVpIeHRHSHNkbm13MXdIdTBVWGRxSGlYbDhDSGtCc2NscWJLUQ?oc=5",
+    "published_at": "2026-11-07T08:03:45Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ye.usembassy.gov/category/alert/"
+   }
   ]
  }
 }
