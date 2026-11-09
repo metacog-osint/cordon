@@ -609,6 +609,15 @@
     "type": "alert",
     "via": "google-news",
     "post_url": "https://ua.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "UA",
+    "title": "MESSAGE FOR U.S. CITIZENS: VOTING FROM UKRAINE",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrNFBWVk9mdFhGVl9FcXcxTnVRSkV2VklIRWpTTTRzdWxVeWdUMTQ0Vm1NNThpc1J3VGZjZklYd2JlNmZBbi1adkFuM3NZMFZtS0VYa2JOcHllVVpBUmlUd0xWemwwZEt4NFAxUWR6OVExRlVncFdTbnNRWUE?oc=5",
+    "published_at": "2026-10-15T07:00:00Z",
+    "type": "alert",
+    "via": "google-news",
+    "post_url": "https://ua.usembassy.gov/category/alert/"
    }
   ],
   "UG": [
