@@ -100,15 +100,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "ET",
-    "title": "Security Alert: Ethiopia (Oct 12, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5YZnUtRjRLTUF6R0xfY1NwU0lnTHpMNVU0YmFxNkdsUzFnc0VuX0RqUlA1TlRTbDd3R0tJWEJYd3UtTno0Ti1ZUnZVNmFRYWtiSDFyc29wbE0xYUMyWmN5M1FhU01jcjFjYnlaM1J3?oc=5",
-    "published_at": "2026-10-12T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://et.usembassy.gov/category/alert/"
    }
   ],
   "HT": [
@@ -496,15 +487,6 @@
     "title": "Security Alert: U.S. Mission Saudi Arabia – October 18, 2026",
     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYjlWREpXU3pNQUpPbldkeXN5STVKakVwNXRVY1B0VTBlelRwSndWUWczVUNoMDVIOU9Ra2ZqaVVvX3BvN2RzX1FqS09UX3ZqdGdpM2h2eGpIUUtzVlBoVDRoN1hibEFvRHhBOGJWU3p6U0pyTlFKWUs3QWZ1RXBFR2hDUlktYmda?oc=5",
     "published_at": "2026-10-18T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://sa.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "SA",
-    "title": "Security Alert: U.S. Mission Saudi Arabia – October 12, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYm5QWFczSkxTQ0lXOFhMMmt1bjFmSm5SaWZ2U1huVFM2dmlTOVFJN0dSSDBXaVdONlBweHNxOThTRDlrMzU2SWtCT0FFM3dPdDhlX1JDRS1uMFh4UTl4LVVmM1JkaFVVcmtka2FKZ3o1X2RZS0dteWJqYk9zeWJFb2d1Y3l0VllL?oc=5",
-    "published_at": "2026-10-12T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
