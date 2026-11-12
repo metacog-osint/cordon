@@ -553,6 +553,17 @@
     "via": "google-news",
     "post_url": "https://ye.usembassy.gov/category/alert/"
    }
+  ],
+  "GT": [
+   {
+    "iso": "GT",
+    "title": "Message for U.S. Citizens:",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FNnJTWEI0S21CS0JTWllXdHNYbldrdS1JRkxJdmpPMncyWHlQTlFRWGc4MFpLZEMxSkIyU3M0bFFuOC00d2NLMEhVN3U3aTMyXzBIem54YUNBcm9ORVZpQXR3?oc=5",
+    "published_at": "2026-11-12T22:52:04Z",
+    "type": "alert",
+    "via": "google-news",
+    "post_url": "https://gt.usembassy.gov/category/alert/"
+   }
   ]
  }
 }
