@@ -15,7 +15,8 @@ METHOD = "cordon-feed-1.0"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 NEW_HOURS = 72  # a navigational warning issued within this long is new
-NEW_ALERT = {"security", "mines", "piracy", "gnss"}  # a new warning of these kinds is an anomaly, not routine
+# A new warning of these kinds is an anomaly, not routine (launch and military added by Tom, 13 Nov 2026).
+NEW_ALERT = {"security", "mines", "piracy", "gnss", "launch", "military"}
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
 NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "security", "ice", "restricted_area", "search_and_rescue", "pollution",
            "port", "cable_pipeline", "wreck", "hazard", "underwater_ops"}
