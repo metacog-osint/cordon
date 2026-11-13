@@ -1,0 +1,170 @@
+{
+ "source": "https://nasstatus.faa.gov/api/airport-events",
+ "programs": [
+  {
+   "kind": "closure",
+   "airport": "SNA",
+   "airport_name": "John Wayne Airport-Orange County",
+   "start": "2026-11-10T07:30:00Z",
+   "end": "2026-11-21T14:15:00Z",
+   "updated": "2026-11-07T17:18:37Z",
+   "notam": "!SNA 11/008 SNA AD AP CLSD DLY 0730-1415 2611100730-2611211415",
+   "issued": "2026-11-07T17:16:00Z"
+  },
+  {
+   "kind": "closure",
+   "airport": "SUA",
+   "airport_name": "Witham Field",
+   "start": "2026-11-13T16:00:00Z",
+   "end": "2026-11-14T01:00:00Z",
+   "updated": "2026-11-08T19:14:02Z",
+   "notam": "!MIA 11/158 SUA AD AP CLSD EXC AIRSHOW ACFT 2611131600-2611140100",
+   "issued": "2026-11-08T19:13:00Z"
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "BOS",
+   "airport_name": "General Edward Lawrence Logan International",
+   "start": "2026-11-13T18:00:00Z",
+   "end": "2026-11-14T02:59:00Z",
+   "updated": "2026-11-13T16:31:37Z",
+   "reason": "airport volume",
+   "center": "ZBW",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=79&adv_date=11132026&facId=BOS&title=ATCSCC ADVZY 079 BOS/ZBW 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
+   "included_facilities": 26,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 26.0,
+   "max_delay_min": 103.0
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-13T16:44:00Z",
+   "end": "2026-11-14T03:59:00Z",
+   "updated": "2026-11-13T16:49:45Z",
+   "reason": "wind",
+   "center": "ZNY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=82&adv_date=11132026&facId=LGA&title=ATCSCC ADVZY 082 LGA/ZNY 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
+   "included_facilities": 26,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 45.0,
+   "max_delay_min": 166.0
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "SAN",
+   "airport_name": "San Diego-Lindbergh Field",
+   "start": "2026-11-13T17:15:00Z",
+   "end": "2026-11-14T05:59:00Z",
+   "updated": "2026-11-13T15:09:23Z",
+   "reason": "airport volume",
+   "center": "ZLA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=73&adv_date=11132026&facId=SAN&title=ATCSCC ADVZY 073 SAN/ZLA 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
+   "included_facilities": 31,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 34.0,
+   "max_delay_min": 81.0
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "SFO",
+   "airport_name": "San Francisco International",
+   "start": "2026-11-13T18:45:00Z",
+   "end": "2026-11-14T07:59:00Z",
+   "updated": "2026-11-13T19:48:16Z",
+   "reason": "wind",
+   "center": "ZOA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=99&adv_date=11132026&facId=SFO&title=ATCSCC ADVZY 099 SFO/ZOA 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
+   "included_facilities": 23,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 138.0,
+   "max_delay_min": 690.0
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "YUL",
+   "airport_name": "Montréal-Pierre Elliott Trudeau International Airport",
+   "start": "2026-11-13T22:15:00Z",
+   "end": "2026-11-13T23:30:00Z",
+   "updated": "2026-11-13T22:29:45Z",
+   "reason": "other",
+   "center": "CZU",
+   "advisory_url": null,
+   "included_facilities": 23,
+   "included_flights": null,
+   "probability_of_extension": null
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "YYZ",
+   "airport_name": "Toronto Pearson International Airport",
+   "start": "2026-11-13T22:08:00Z",
+   "end": "2026-11-13T23:15:00Z",
+   "updated": "2026-11-13T22:20:32Z",
+   "reason": "other",
+   "center": "CZY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=6011&adv_date=11132026&facId=YYZ&title=ATCSCC ADVZY 011 CYYZ/CZY 11/13/2026 CDM GROUND STOP&titleDate=11/13/2026",
+   "included_facilities": 23,
+   "included_flights": null,
+   "probability_of_extension": "HIGH"
+  }
+ ],
+ "airports": {
+  "BDL": [
+   -72.6869,
+   41.939,
+   "Bradley International"
+  ],
+  "BOS": [
+   -71.0096,
+   42.3656,
+   "General Edward Lawrence Logan International"
+  ],
+  "LAS": [
+   -115.1537,
+   36.084,
+   "Harry Reid International"
+  ],
+  "LAX": [
+   -118.4085,
+   33.9416,
+   "Los Angeles International"
+  ],
+  "LGA": [
+   -73.874,
+   40.7769,
+   "La Guardia"
+  ],
+  "SAN": [
+   -117.1933,
+   32.7338,
+   "San Diego-Lindbergh Field"
+  ],
+  "SFO": [
+   -122.379,
+   37.6213,
+   "San Francisco International"
+  ],
+  "SNA": [
+   -117.8674,
+   33.6763,
+   "John Wayne Airport-Orange County"
+  ],
+  "SUA": [
+   -80.2246,
+   27.1781,
+   "Witham Field"
+  ],
+  "YUL": [
+   -73.7455,
+   45.4657,
+   "Montréal-Pierre Elliott Trudeau International Airport"
+  ],
+  "YYZ": [
+   -79.62534,
+   43.67809,
+   "Toronto Pearson International Airport"
+  ]
+ }
+}
