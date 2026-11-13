@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import easa, embassy, feed, navarea, state  # noqa: E402
+from cordon import easa, embassy, faa, feed, navarea, state  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -437,6 +437,137 @@ class Feed(unittest.TestCase):
         fc = feed.build({}, {}, {}, nav, now, h)
         self.assertEqual(len(fc["features"]), 2, "failing for a few hours: the warnings still stand")
 
+
+# The FAA's airport-events JSON as served on 13 Nov 2026 (nasstatus.faa.gov/api/airport-events), trimmed. BDL's
+# freeForm entry (closed to non-scheduled international carriers) is not a closure program and stays out.
+FAA_EVENTS = [
+    {"airportId": "BDL", "groundStop": None, "groundDelay": None, "airportClosure": None,
+     "freeForm": {"simpleText": "!BDL 11/082 BDL AD AP CLSD TO NON SKED INTL AIR CARRIERS EXC 6HR PPR",
+                  "startTime": "2026-11-13T21:39:00Z", "endTime": "2026-11-14T05:00:00Z"},
+     "airportLongName": "Bradley International", "latitude": "41.9390", "longitude": "-72.6869"},
+    {"airportId": "BOS", "groundStop": None, "groundDelay": {
+        "airportId": "BOS", "sourceTimeStamp": "2026-11-13T16:30:57Z", "updatedAt": "2026-11-13T16:31:37Z",
+        "impactingCondition": "airport volume", "avgDelay": 26.0, "maxDelay": 103, "startTime": "2026-11-13T18:00:00Z",
+        "endTime": "2026-11-14T02:59:00Z", "center": "ZBW", "includedFacilities": ["ZLA", "ZAU"],
+        "includedFlights": ": ALL CONTIGUOUS US DEP",
+        "advisoryUrl": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=79&adv_date=11132026&facId=BOS"},
+     "airportClosure": None, "freeForm": None,
+     "airportLongName": "General Edward Lawrence Logan International", "latitude": "42.3656", "longitude": "-71.0096"},
+    {"airportId": "SNA", "groundStop": None, "groundDelay": None, "airportClosure": {
+        "airportId": "SNA", "updatedAt": "2026-11-07T17:18:37Z", "startTime": "2026-11-10T07:30:00Z",
+        "endTime": "2026-11-21T14:15:00Z", "simpleText": "!SNA 11/008 SNA AD AP CLSD DLY 0730-1415 2611100730-2611211415",
+        "issuedDate": "2026-11-07T17:16:00Z"},
+     "airportLongName": "John Wayne Airport-Orange County", "latitude": "33.6763", "longitude": "-117.8674"},
+    {"airportId": "YUL", "groundStop": {
+        "airportId": "YUL", "sourceTimeStamp": "2026-11-13T22:28:13Z", "updatedAt": "2026-11-13T22:29:45Z",
+        "impactingCondition": "other", "startTime": "2026-11-13T22:15:00Z", "endTime": "2026-11-13T23:30:00Z",
+        "center": "CZU", "advisoryUrl": None, "includedFacilities": ["ZAN", "ZLA"], "probabilityOfExtension": None},
+     "airportLongName": "Montréal-Pierre Elliott Trudeau International Airport", "latitude": "45.4657", "longitude": "-73.7455"},
+]
+
+
+def gs(apt, lat, lon, reason="thunderstorms", start="2026-11-13T21:00:00Z", end="2026-11-13T23:00:00Z"):
+    return {"airportId": apt, "latitude": str(lat), "longitude": str(lon), "airportLongName": apt + " Airport",
+            "groundStop": {"impactingCondition": reason, "startTime": start, "endTime": end,
+                           "updatedAt": "2026-11-13T21:01:00Z", "includedFacilities": []}}
+
+
+class Faa(unittest.TestCase):
+    NOW = datetime(2026, 11, 13, 22, 30, tzinfo=timezone.utc)
+    STAMP = "2026-11-13T22:30:00Z"
+
+    def nas(self, rows):
+        progs, apts = faa.parse(rows)
+        return {"programs": progs, "airports": apts, "fetched_at": self.STAMP}
+
+    def health(self, last_ok=None):
+        return {"faa-nas-status": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+
+    def build(self, rows, counts=(), last_ok=None):
+        return feed.build({}, {}, {}, {}, self.NOW, self.health(last_ok), self.nas(rows), faa_counts=list(counts))
+
+    def items(self, fc):
+        return {f["properties"]["id"]: f for f in fc["features"] if f["properties"]["id"].startswith("cordon:faa:")}
+
+    def test_parse_keeps_the_three_programs_and_the_faas_coordinates(self):
+        progs, apts = faa.parse(FAA_EVENTS)
+        self.assertEqual([(p["kind"], p["airport"]) for p in progs],
+                         [("closure", "SNA"), ("ground_delay", "BOS"), ("ground_stop", "YUL")])
+        self.assertEqual(apts["BOS"][:2], [-71.0096, 42.3656])
+        bos = progs[1]
+        self.assertEqual((bos["reason"], bos["avg_delay_min"], bos["max_delay_min"], bos["included_flights"]),
+                         ("airport volume", 26.0, 103.0, "ALL CONTIGUOUS US DEP"))
+        self.assertEqual(progs[0]["end"], "2026-11-21T14:15:00Z")
+        self.assertRaises(ValueError, faa.parse, {"error": "x"})
+
+    def test_items_pass_the_linter_and_report_the_faas_words(self):
+        fc = self.build(FAA_EVENTS)
+        self.assertEqual(fc["dropped"], [])
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([p for p in contract.check(f, regs) if p[1] == "error"], [], f["properties"]["id"])
+        it = self.items(fc)
+        yul = it["cordon:faa:ground_stop:YUL:20261113T2215"]["properties"]
+        self.assertEqual(yul["tier"], "routine", "one ground stop on a normal day is routine")
+        self.assertEqual(yul["countries"], ["CA"])
+        self.assertIn("reason as listed: other", yul["title"])
+        self.assertEqual(yul["valid_until"], "2026-11-13T23:30:00Z")
+        self.assertEqual(it["cordon:faa:ground_delay:BOS:20261113T1800"]["geometry"]["coordinates"], [-71.0096, 42.3656])
+        self.assertIn("cordon:faa:closure:SNA:20261110T0730", it)
+        self.assertEqual(len(it), 3)
+
+    def test_baseline_prior_then_measured(self):
+        b = faa.baseline([], self.NOW)
+        self.assertEqual((b["threshold"], b["basis"]), (faa.PRIOR_THRESHOLD, "prior"))
+        rows = [{"at": f"2026-11-{d:02d}T{h:02d}:00:00Z", "ground_stop": 2 if h == 20 else 0}
+                for d in range(1, 13) for h in range(24)]
+        b = faa.baseline(rows, self.NOW)
+        self.assertEqual((b["basis"], b["samples"], b["p99"], b["threshold"]), ("measured", 288, 2, 3))
+        quiet = [{**r, "ground_stop": 0} for r in rows]
+        self.assertEqual(faa.baseline(quiet, self.NOW)["threshold"], faa.FLOOR, "never below the floor")
+        late = [{"at": "2026-11-13T23:00:00Z", "ground_stop": 50}] * 100
+        self.assertEqual(faa.baseline(late, self.NOW)["basis"], "prior", "counts from after now are not baseline")
+
+    def test_many_ground_stops_at_once_are_an_anomaly(self):
+        rows = [gs("ATL", 33.64, -84.43), gs("ORD", 41.98, -87.90), gs("DFW", 32.90, -97.04), gs("DEN", 39.86, -104.67)]
+        it = self.items(self.build(rows))
+        self.assertEqual({f["properties"]["tier"] for f in it.values()}, {"anomaly"})
+        p = it["cordon:faa:ground_stop:ATL:20261113T2100"]["properties"]
+        self.assertEqual(p["baseline_ref"]["id"], "faa-concurrent-ground-stops")
+        self.assertEqual((p["measures"]["ground_stops_in_effect"], p["measures"]["unusual_at"]), (4, 4))
+        self.assertEqual({f["properties"]["tier"] for f in self.items(self.build(rows[:3])).values()}, {"routine"})
+
+    def test_a_ground_stop_for_a_center_or_the_system_is_an_anomaly_at_country_level(self):
+        rows = [{"airportId": "ZNY", "groundStop": {"impactingCondition": "equipment / outage",
+                                                    "startTime": "2026-11-13T20:45:00Z"}}]
+        f = self.items(self.build(rows))["cordon:faa:ground_stop:ZNY:20261113T2045"]
+        self.assertEqual(f["properties"]["tier"], "anomaly")
+        self.assertEqual(f["properties"]["baseline_ref"]["id"], "faa-ground-stop-scope")
+        self.assertEqual((f["properties"]["countries"], f["properties"]["precision_class"]), (["US"], "country"))
+        self.assertEqual(f["geometry"]["type"], "Point")
+        self.assertEqual([p for p in contract.check(f, registers.ids(ROOT / "doctrine")) if p[1] == "error"], [])
+
+    def test_a_held_list_drops_ended_programs_and_a_stale_one_is_withheld(self):
+        rows = [gs("ATL", 33.64, -84.43, end="2026-11-13T22:00:00Z"), gs("ORD", 41.98, -87.90, end="2026-11-14T01:00:00Z")]
+        fresh = self.items(self.build(rows))
+        self.assertEqual(len(fresh), 2, "a fresh list is the FAA's word, even past a listed end time")
+        h = {"faa-nas-status": {"last_ok": "2026-11-13T21:30:00Z", "last_error": self.STAMP, "failures": 1}}
+        held = feed.build({}, {}, {}, {}, self.NOW, h, self.nas(rows), faa_counts=[])
+        self.assertEqual(held["health"]["faa-nas-status"]["state"], "failing")
+        self.assertEqual(list(self.items(held)), ["cordon:faa:ground_stop:ORD:20261113T2100"])
+        stale = self.build(rows, last_ok="2026-11-13T19:00:00Z")
+        self.assertEqual(stale["health"]["faa-nas-status"]["state"], "stale", "three hours without a good fetch")
+        self.assertEqual((self.items(stale), stale["health"]["faa-nas-status"]["withheld"]), ({}, 2))
+        never = feed.build({}, {}, {}, {}, self.NOW, {}, self.nas(rows), faa_counts=[])
+        self.assertEqual(never["health"]["faa-nas-status"]["state"], "never")
+        self.assertEqual(self.items(never), {})
+
+    def test_collect_reports_failures_without_data(self):
+        self.assertEqual(faa.collect(fetch=lambda u, t: (None, "HTTP 503"))[2], "HTTP 503")
+        self.assertIn("unreadable", faa.collect(fetch=lambda u, t: (b"<html>", None))[2])
+        progs, apts, err = faa.collect(fetch=lambda u, t: (json.dumps(FAA_EVENTS).encode(), None))
+        self.assertEqual((len(progs), err), (3, None))
+        self.assertEqual(faa.collect(fetch=lambda u, t: (b"[]", None))[:2], ([], {}), "an empty list is a quiet NAS")
 
 class Events(unittest.TestCase):
     def test_bulletin_expiries_and_recent_changes(self):

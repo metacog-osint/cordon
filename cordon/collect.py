@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import easa, embassy, navarea, state
+from . import easa, embassy, faa, navarea, state
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -45,4 +45,16 @@ def run(when: str | None = None) -> dict:
         save("navarea.json", {"source": source, "warnings": warnings})
         health("nga-navwarnings", True, f"{len(warnings)} warnings in force", when, newest_item=newest)
     summary["nga"] = err or f"{len(warnings)} warnings"
+
+    programs, airports, err = faa.collect(when)
+    if err:
+        health("faa-nas-status", False, err, when)
+    else:
+        known = {**(load("faa_nas.json", {}).get("airports") or {}), **airports}  # keep places seen before
+        save("faa_nas.json", {"source": faa.SOURCE_URL, "programs": programs, "airports": dict(sorted(known.items()))})
+        n = faa.counts(programs)
+        append_jsonl("faa_counts.jsonl", [{"at": when, **n}])  # Cordon's own baseline of concurrent programs
+        health("faa-nas-status", True, f"{n['ground_stop']} ground stops, {n['ground_delay']} ground delay programs, "
+                                       f"{n['closure']} closures", when)
+    summary["faa"] = err or f"{len(programs)} programs"
     return summary

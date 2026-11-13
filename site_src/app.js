@@ -13,6 +13,7 @@
     hazard: "Reefs, groundings, obstructions", underwater_ops: "Underwater work and salvage", drilling_survey: "Drilling and surveys",
     shoal: "Shoals", aids_to_navigation: "Lights and buoys", radio_service: "Radio and NAVTEX services", other: "Other" };
   var KEY_NAV = { launch: 1, gnss: 1, military: 1, mines: 1, piracy: 1, security: 1 };
+  var FAA_WORD = { ground_stop: "Ground stop", ground_delay: "Ground delay program", closure: "Closed" };
 
   function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
   function h(tag, attrs, kids) {
@@ -37,7 +38,7 @@
     .setView([24, 20], 2);
   map.once("click", function () { map.scrollWheelZoom.enable(); });
   map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA");
+  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA");
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
@@ -99,6 +100,18 @@
       }
     }).addTo(map);
 
+    layers.faa = L.layerGroup();
+    (d.faa || []).forEach(function (p) {
+      if (!p.coordinates) return;
+      var key = p.tier === "anomaly";
+      L.circleMarker([p.coordinates[1], p.coordinates[0]], { radius: key ? 7 : (p.program === "closure" ? 4 : 5.5),
+        weight: key ? 2 : 1.5, color: key ? css("--faa-key") : css("--faa"), fillColor: key ? css("--faa-key") : css("--faa"),
+        fillOpacity: p.program === "closure" ? 0.2 : 0.75 })
+        .bindTooltip(tip(p.title + (p.until ? "\nUntil " + when(p.until) : "") + (key ? "\nUnusual: more ground stops at once than normal" : "")))
+        .addTo(layers.faa);
+    });
+    layers.faa.addTo(map);
+
     document.querySelectorAll(".layers input").forEach(function (box) {
       box.addEventListener("change", function () {
         var l = layers[box.getAttribute("data-layer")];
@@ -115,7 +128,9 @@
       h("span", null, [h("span", { "class": "ln" }), "EASA bulletin"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--nav-key") }), "launch, military, mines, GNSS"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--nav") }), "other maritime warnings"]),
-      h("span", null, [h("span", { "class": "posture-icon", style: "display:inline-block;padding:0 4px;margin-right:4px" }, ["OD"]), "embassy status"]));
+      h("span", null, [h("span", { "class": "posture-icon", style: "display:inline-block;padding:0 4px;margin-right:4px" }, ["OD"]), "embassy status"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa") }), "FAA airport program"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]));
   }
 
   function lists(d) {
@@ -146,13 +161,27 @@
         h("span", null, [h("div", { "class": "bar" + (KEY_NAV[c] ? " key" : ""), style: "width:" + Math.max(2, 100 * counts[c] / max) + "%" })]),
         h("span", { "class": "num" }, [counts[c]])]); }, [])));
 
+    var fp = (d.faa || []).slice().sort(function (x, y) {
+      var o = { ground_stop: 0, ground_delay: 1, closure: 2 };
+      return o[x.program] - o[y.program] || x.airport.localeCompare(y.airport); });
+    document.getElementById("faa").replaceChildren(fp.length ? table(["Program", "Airport", "As the FAA lists it", "Until"],
+      fp.map(function (p) {
+        var what = p.program === "closure" ? (p.notam || "—")
+          : "Reason: " + (p.reason || "none given") + (p.avg_delay_min != null ? "; average delay " + Math.round(p.avg_delay_min) + " min" : "");
+        return [FAA_WORD[p.program] + (p.tier === "anomaly" ? " (unusual)" : ""),
+          p.airport + (p.airport_name ? " " + p.airport_name : ""), what, { td: when(p.until), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["faa-nas-status"] || {}).state === "fresh"
+          ? "The FAA lists no ground stop, ground delay program or airport closure."
+          : "No current FAA data: see Sources below."]));
+
     var hi = d.advisories.filter(function (a) { return a.level >= 3; })
       .sort(function (x, y) { return y.level - x.level || x.name.localeCompare(y.name); });
     document.getElementById("levels").replaceChildren(table(["Level", "Place", "Advice"], hi.map(function (a) {
       return [{ td: h("span", { "class": "lvl lvl-" + a.level }, [a.level]) }, link(a.link, a.name), a.level_text]; })));
 
     var names = { "state-travel-advisories": "State Department travel advisories", "us-embassy-alerts": "US embassy alerts",
-      "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners" };
+      "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
+      "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
       var old = s.state === "stale" || s.state === "never";

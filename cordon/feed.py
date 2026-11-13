@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import navarea
+from . import faa, navarea
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -33,6 +33,13 @@ NGA_SRC = {"id": "nga-navwarnings", "publisher": "US National Geospatial-Intelli
 EMBASSY_SRC = {"publisher": "US Department of State (embassy)", "licence": "US public domain", "grade": "A1",
                "independence_group": "us-state-department", "source_type": "official notice",
                "descriptor": "US embassy alert"}
+FAA_SRC = {"id": "faa-nas-status", "publisher": "US Federal Aviation Administration (FAA), ATC System Command Center",
+           "url": faa.PAGE_URL, "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); "
+           "the FAA states no licence on nasstatus", "grade": "A1", "independence_group": "faa",
+           "source_type": "official notice", "descriptor": "National Airspace System status: airport events "
+           "(ground stops, ground delay programs, closures)"}
+FAA_WORDS = {"ground_stop": "ground stop", "ground_delay": "ground delay program", "closure": "airport closure"}
+STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS}
 POSTURE_WORDS = {"authorized_departure": "authorized departure", "ordered_departure": "ordered departure",
                  "suspended_operations": "suspended operations"}
 nga_time = navarea.issued_time
@@ -43,14 +50,14 @@ def source_health(health: dict | None, nav: dict, now: datetime) -> dict:
 
     fresh    the latest attempt worked
     failing  the latest attempt failed; the last good fetch is under STALE_HOURS old, so the data still stand
-    stale    no good fetch for STALE_HOURS or more; or, for NGA, the newest warning held is over
+    stale    no good fetch for STALE_HOURS (FAA: faa.STALE_HOURS) or more; or, for NGA, the newest warning held is over
              navarea.STALE_DAYS old (NGA issues warnings daily, so that is a frozen list, never a quiet sea)
     never    no good fetch on record
     A stale or never source has its items withheld from the feed (counted in `withheld`): it reads as no data."""
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    cutoff = (now - timedelta(hours=STALE_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     out = {}
     for sid, h in sorted((health or {}).items()):
+        cutoff = (now - timedelta(hours=STALE_BY_SOURCE.get(sid, STALE_HOURS))).strftime("%Y-%m-%dT%H:%M:%SZ")
         last_ok = h.get("last_ok")
         state = ("never" if not last_ok else "stale" if last_ok < cutoff
                  else "failing" if h.get("failures") else "fresh")
@@ -102,8 +109,63 @@ def recent_changes(now: datetime) -> list[dict]:
     return [c for c in read_jsonl("changes.jsonl") if c.get("at", "") >= cutoff]
 
 
+def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> list[dict]:
+    """FAA programs as items, placed at the FAA's own airport coordinates. See cordon/faa.py for the tiers."""
+    fetched = nas.get("fetched_at") or now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    progs = faa.in_effect(nas.get("programs") or [], now, state == "fresh")
+    places = nas.get("airports") or {}
+    base = faa.baseline(counts_rows, now)
+    stops = sum(1 for p in progs if p["kind"] == "ground_stop")
+    many = stops >= base["threshold"]
+    out = []
+    for p in progs:
+        apt, kind = p["airport"], p["kind"]
+        where = places.get(apt)
+        name = p.get("airport_name") or (where[2] if where and len(where) > 2 else "")
+        label = f"{apt} ({name})" if name else apt
+        wide = faa.wide_scope(apt)
+        if kind == "closure":
+            title = f"FAA lists {label} as closed: {p.get('notam') or 'no text given'}"
+        else:
+            title = f"FAA {FAA_WORDS[kind]}: {label}; reason as listed: {p.get('reason') or 'none given'}"
+            if kind == "ground_delay" and p.get("avg_delay_min") is not None:
+                title += f"; average delay {int(p['avg_delay_min'])} min"
+        anomaly = kind == "ground_stop" and (many or wide)
+        start = (p.get("start") or "").replace("-", "").replace(":", "")[:13]
+        props = {**_base(fetched), "id": f"cordon:faa:{kind}:{apt}:{start or 'open'}", "title": title,
+                 "tier": "anomaly" if anomaly else "routine", "data_as_of": p.get("updated") or fetched,
+                 "countries": faa.country(apt, where), "precision_class": "point" if where else "none",
+                 "ncf": ["transport_by_air"], "sector": vocab.derive_sectors(["transport_by_air"]),
+                 "requirement_ids": ["CD-PIR-5"], "ie_aspect": ["physical"], "pmesii_pt": ["infrastructure"],
+                 "ascope": ["structures", "events"], "sources": [{**FAA_SRC, "accessed_at": fetched}],
+                 "link": faa.PAGE_URL,
+                 "measures": {"program": kind, "airport": apt, "airport_name": name or None,
+                              **{k: v for k, v in p.items() if k not in ("kind", "airport", "airport_name", "updated")
+                                 and v is not None}}}
+        if p.get("end"):
+            props["valid_until"] = p["end"]
+        if kind == "ground_stop":
+            props["measures"].update({"ground_stops_in_effect": stops, "unusual_at": base["threshold"],
+                                      "baseline_basis": base["basis"], "baseline_samples": base["samples"]})
+        if anomaly:
+            props["baseline_ref"] = (
+                {"id": "faa-concurrent-ground-stops", "type": "rolling", "version": "1",
+                 "window": f"ground stops in effect at once, Cordon's own counts over {faa.BASELINE_DAYS} days "
+                           f"(unusual at {base['threshold']} or more; {base['basis']}, {base['samples']} counts)"}
+                if many else {"id": "faa-ground-stop-scope", "type": "fixed", "version": "1",
+                              "window": "a ground stop listed against a center or the whole system, not one airport"})
+        if not where and not wide:
+            props["visual"] = {"type": "page", "url": faa.PAGE_URL}
+        geom = {"type": "Point", "coordinates": where[:2]} if where else None
+        if geom is None and wide:
+            geom = point("US")
+            props["precision_class"] = "country"
+        out.append({"type": "Feature", "geometry": geom, "properties": props})
+    return out
+
+
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
-          health: dict | None = None) -> dict:
+          health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -224,13 +286,21 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                      "link": a["link"], "measures": {"type": a.get("type")}}
             feats.append({"type": "Feature", "geometry": point(iso), "properties": props})
 
+    if nas is not None:
+        fa = src_health.setdefault(FAA_SRC["id"], {"state": "never"})
+        if fa["state"] in ("stale", "never"):
+            fa["withheld"] = len(nas.get("programs") or [])
+        else:
+            feats += faa_items(nas, fa["state"], now,
+                               faa_counts if faa_counts is not None else read_jsonl("faa_counts.jsonl"))
+
     regs = registers.ids(ROOT / "doctrine")
     kept, dropped = [], []
     for f in feats:
         errs = [m for _, sev, m in contract.check(f, regs) if sev == "error"]
         (dropped.append({"id": f["properties"]["id"], "errors": errs}) if errs else kept.append(f))
     return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
-            "licence": "Cordon code MIT; State Department and NGA content US public domain; EASA content with acknowledgement",
-            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA.",
+            "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with acknowledgement",
+            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}

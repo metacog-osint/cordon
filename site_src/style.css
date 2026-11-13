@@ -4,7 +4,7 @@
   /* State Department levels as a stoplight: 1 green, 2 yellow, 3 orange, 4 red. Level 1 leans blue-green so that
      red-blind readers can tell it from level 3; checked with the dataviz validator (all pairs, both modes). */
   --l1: #38a98a; --l2: #f6d64a; --l3: #ee7d1e; --l4: #b0182c;
-  --czib: #5b3fa8; --nav: #475569; --nav-key: #1d4ed8; --posture: #111827;
+  --czib: #5b3fa8; --nav: #475569; --nav-key: #1d4ed8; --posture: #111827; --faa: #b45309; --faa-key: #b91c1c;
   --radius: 10px; --gap: 16px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color-scheme: light;
 }
@@ -12,7 +12,7 @@
   :root { --bg: #0f1318; --panel: #171c23; --ink: #e8ecf1; --muted: #9aa4b2; --line: #2b333d; --soft: #1e252e;
     --sea: #0d1b2a; --land: #232a33; --border: #4a5562; --link: #6aa3ff;
     --l1: #30ad90; --l2: #f5d84f; --l3: #ec7a1c; --l4: #d42c45;
-    --czib: #b59bff; --nav: #cbd5e1; --nav-key: #60a5fa; --posture: #f3f4f6; color-scheme: dark; }
+    --czib: #b59bff; --nav: #cbd5e1; --nav-key: #60a5fa; --posture: #f3f4f6; --faa: #fbbf24; --faa-key: #f87171; color-scheme: dark; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.5; }

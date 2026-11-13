@@ -21,6 +21,9 @@
     {"id": "CD-PIR-4", "type": "pir", "parent": "CD-SQ-1",
      "question": "Where are mariners warned of launches, military activity, mines, GNSS trouble or other hazards?",
      "series": ["NGA navigational warnings in force (NAVAREA IV/XII, HYDROLANT, HYDROPAC, HYDROARC)"]},
+    {"id": "CD-PIR-5", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where has the FAA stopped or metered flights to an airport, or listed one as closed, and are more ground stops in effect at once than is normal?",
+     "series": ["FAA NAS status airport events (ground stops, ground delay programs, closures)", "faa_counts.jsonl (Cordon's own count of programs in effect per collection)"]},
     {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
      "question": "Is each source answering (data/health.json)?",
      "series": ["source health"]}
