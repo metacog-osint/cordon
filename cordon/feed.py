@@ -4,15 +4,16 @@ Every item is a measurement (kind observation): what an authority has published,
 response_stage. A change in the last 30 days (a level raised or lowered, a departure order) is an anomaly against the
 previous value. Each item is checked with the doctrine kit's linter; a failing item is dropped and listed.
 """
-import re
 from datetime import datetime, timedelta, timezone
 
+from . import navarea
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
 SITE = "https://cordon.theintelligence.company/"
 METHOD = "cordon-feed-1.0"
 RECENT_DAYS = 30
+STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
 NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "restricted_area", "search_and_rescue", "pollution",
            "port", "cable_pipeline", "wreck", "hazard", "underwater_ops"}
@@ -32,19 +33,34 @@ EMBASSY_SRC = {"publisher": "US Department of State (embassy)", "licence": "US p
                "descriptor": "US embassy alert"}
 POSTURE_WORDS = {"authorized_departure": "authorized departure", "ordered_departure": "ordered departure",
                  "suspended_operations": "suspended operations"}
-MONTHS = {m: i for i, m in enumerate(["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"], 1)}
+nga_time = navarea.issued_time
 
 
-def nga_time(s: str) -> str | None:
-    """'081653Z MAY 2024' -> '2024-05-08T16:53:00Z'."""
-    m = re.match(r"(\d{2})(\d{2})(\d{2})Z\s+([A-Z]{3})\s+(\d{4})", (s or "").strip().upper())
-    if not m or m.group(4) not in MONTHS:
-        return None
-    try:
-        return datetime(int(m.group(5)), MONTHS[m.group(4)], int(m.group(1)), int(m.group(2)), int(m.group(3)),
-                        tzinfo=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    except ValueError:
-        return None
+def source_health(health: dict | None, nav: dict, now: datetime) -> dict:
+    """The feed's health block: one entry per source, with a state a reader can act on.
+
+    fresh    the latest attempt worked
+    failing  the latest attempt failed; the last good fetch is under STALE_HOURS old, so the data still stand
+    stale    no good fetch for STALE_HOURS or more; or, for NGA, the newest warning held is over
+             navarea.STALE_DAYS old (NGA issues warnings daily, so that is a frozen list, never a quiet sea)
+    never    no good fetch on record
+    A stale or never source has its items withheld from the feed (counted in `withheld`): it reads as no data."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    cutoff = (now - timedelta(hours=STALE_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out = {}
+    for sid, h in sorted((health or {}).items()):
+        last_ok = h.get("last_ok")
+        state = ("never" if not last_ok else "stale" if last_ok < cutoff
+                 else "failing" if h.get("failures") else "fresh")
+        out[sid] = {"state": state, "last_ok": last_ok, "last_error": h.get("last_error"),
+                    "failures": h.get("failures", 0), "checked_at": h.get("checked_at"), "detail": h.get("detail")}
+    held = nav.get("warnings") or []
+    if held or NGA_SRC["id"] in out:
+        e = out.setdefault(NGA_SRC["id"], {"state": "fresh"})
+        e["newest_item"] = navarea.newest(held)
+        if held and e["state"] in ("fresh", "failing") and navarea.is_stale(e["newest_item"], stamp):
+            e["state"] = "stale"
+    return out
 
 
 _FIPS_POINTS = None
@@ -84,8 +100,14 @@ def recent_changes(now: datetime) -> list[dict]:
     return [c for c in read_jsonl("changes.jsonl") if c.get("at", "") >= cutoff]
 
 
-def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None) -> dict:
+def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
+          health: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
+    src_health = source_health(health, nav, now)
+    nga = src_health.get(NGA_SRC["id"]) or {}
+    if nga.get("state") in ("stale", "never"):
+        nga["withheld"] = sum(1 for w in nav.get("warnings") or [] if w["category"] in NOTABLE)
+        nav = {**nav, "warnings": []}
     fetched = adv.get("fetched_at") or now.strftime("%Y-%m-%dT%H:%M:%SZ")
     changes = recent_changes(now)
     last_level = {c["key"]: c for c in changes if c.get("lane") == "state" and c["kind"] == "level"}
@@ -191,4 +213,4 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             "licence": "Cordon code MIT; State Department and NGA content US public domain; EASA content with acknowledgement",
             "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
-            "dropped": dropped, "features": kept}
+            "health": src_health, "dropped": dropped, "features": kept}

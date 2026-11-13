@@ -37,11 +37,12 @@ def run(when: str | None = None) -> dict:
         health("easa-czib", True, f"{sum(b['status'] == 'active' for b in czibs)} active", when)
     summary["easa"] = err or f"{len(czibs)} bulletins, {len(cz_changes)} changes"
 
-    warnings, err = navarea.collect(load("navarea.json", {}).get("warnings"), when)
+    warnings, err, source = navarea.collect(load("navarea.json", {}).get("warnings"), when)
+    newest = navarea.newest(warnings)  # of what is held now, new or kept: the feed reads staleness from this
     if err:
-        health("nga-navwarnings", False, err, when)
+        health("nga-navwarnings", False, err, when, newest_item=newest)
     else:
-        save("navarea.json", {"source": navarea.SOURCE_URL, "warnings": warnings})
-        health("nga-navwarnings", True, f"{len(warnings)} warnings in force", when)
+        save("navarea.json", {"source": source, "warnings": warnings})
+        health("nga-navwarnings", True, f"{len(warnings)} warnings in force", when, newest_item=newest)
     summary["nga"] = err or f"{len(warnings)} warnings"
     return summary
