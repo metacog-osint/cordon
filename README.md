@@ -11,7 +11,7 @@ Cordon collects official warnings every hour, straight from the issuing authorit
 | Embassy departure status, read from that text | Authorized or ordered departure, suspended operations | as above |
 | US embassy alerts (each post's RSS) | Security, demonstration, health and weather alerts | US public domain |
 | EASA Conflict Zone Information Bulletins (CSV export) | Airspaces to avoid, with each bulletin's expiry | EASA content, reused with acknowledgement |
-| NGA navigational warnings in force (MSI API) | Launches, military activity, mines, GNSS trouble and other hazards to ships | US public domain |
+| NGA navigational warnings in force (MSI daily lists, or its API when that is current) | Launches, military activity, mines, GNSS trouble and other hazards to ships | US public domain |
 
 OSAC is not used: its terms bar republishing.
 
@@ -24,6 +24,8 @@ OSAC is not used: its terms bar republishing.
   when the sentence names the embassy. Every change is flagged for a person to review.
 - NGA warnings are plain text. Cordon reads the positions written in them, draws an "area bound by" as a polygon,
   sorts each warning into a category from its wording, and drops self-cancelling notices and in-force lists.
+- A source that stops answering, or whose list has stopped moving, is marked stale in the feed's `health` block and
+  on the page. A stale list of NGA warnings is withheld: it reads as no data, never as a quiet sea.
 
 Everything Cordon publishes is a measurement of what an authority said, in The Intelligence Company's feed contract
 v2 (`tic-feed/2`). Each item carries its authority's own ladder value (for example `state_travel_advisory:level_4`,
