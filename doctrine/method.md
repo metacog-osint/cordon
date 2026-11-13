@@ -33,12 +33,19 @@ those come through warning problem CD-WP-1 and through Verdict, which scores for
 
 ## Places
 Countries are drawn at a label point inside the country (the kit's Natural Earth points), not at the capital. Gaza and
-the West Bank, which State files under Israel's code, are placed by hand. NGA positions are drawn as written. FAA
+the West Bank, which State files under Israel's code, are placed by hand. NGA positions are drawn as written, in the
+shape the warning's words give: "area bound by" is a polygon, "trackline joining" a line, and "within N miles of" a
+position a circle (a 32-sided polygon; NGA's miles are nautical). "Within N miles of trackline joining" is drawn as
+the line, with N in `measures.corridor_half_width_m`; circle radii are in `measures.radius_m`. Positions with none of
+these words are points. A shape that crosses 180 degrees keeps its longitudes continuous (some run past 180), so it is
+drawn across the date line and not the long way round. Warning text over 6,000 characters is cut, and the cut says so. FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
 whole system is drawn at the US label point.
 
 ## Gaps and no data
-A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. Embassy
+A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. NGA
+serves one daily file per area: when one fails and the others answer, that area keeps its earlier warnings, the
+health detail and `held_areas` say so, and after 48 hours held its warnings are withheld. Embassy
 alert feeds were down on 31 Oct 2026 ("Technical Difficulties"), so that layer may be empty. FAA programs last hours,
 so the FAA list goes stale after 3 hours without a good fetch and is then withheld; from a held list (the latest fetch
 failed) a program past its listed end time is dropped.

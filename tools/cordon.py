@@ -36,6 +36,9 @@ def data() -> dict:
 def map_data(d: dict, fc: dict) -> dict:
     """The compact picture the map page draws."""
     adv = d["advisories.json"].get("advisories") or {}
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    nga = fc["health"].get("nga-navwarnings") or {}
+    old_areas = navarea.held_too_long(nga.get("held_areas"), now, feed.STALE_HOURS)
     return {
         "generated_at": fc["generated_at"],
         "advisories": [{"key": k, "iso": r["iso"], "name": r["name"], "level": r["level"], "level_text": r["level_text"],
@@ -46,8 +49,8 @@ def map_data(d: dict, fc: dict) -> dict:
         "warnings": [{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued", "geometry",
                                             "cancel_at")}
                      for w in d["navarea.json"].get("warnings") or [] if w.get("geometry")
-                     and navarea.in_force(w, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
-                     and (fc["health"].get("nga-navwarnings") or {}).get("state") not in ("stale", "never")],
+                     and navarea.in_force(w, now) and w.get("area") not in old_areas
+                     and nga.get("state") not in ("stale", "never")],
         "alerts": d["alerts.json"].get("posts") or {},
         "changes": sorted(read_jsonl("changes.jsonl"), key=lambda c: c.get("at", ""), reverse=True)[:60],
         "health": fc["health"],

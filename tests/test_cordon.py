@@ -98,11 +98,12 @@ RACON AT PULLEN ISLAND LIGHT
 """
 
 
-def nga_site(api=None, text=NGA_TEXT):
-    """A stand-in for fetch_or_none: the API body (or HTTP 503), and one text file for every area."""
+def nga_site(api=None, text=NGA_TEXT, down=()):
+    """A stand-in for fetch_or_none: the API body (or HTTP 503), and one text file for every area (HTTP 404 for the
+    file names in `down`)."""
     def fetch(url, timeout=40):
         if "apology_objects" in url:
-            if text is None:
+            if text is None or any(url.endswith(f"DailyMem{n}.txt") for n in down):
                 return None, "HTTP 404"
             area = next(a for a, n in navarea.TEXT_FILES.items() if url.endswith(f"DailyMem{n}.txt"))
             return text.replace("NAVAREA IV", navarea.AREAS[area]).encode(), None
@@ -250,6 +251,57 @@ class Navarea(unittest.TestCase):
                  "2. FIRING IN AREA BOUND BY\n   30-00.0N 040-00.0W, 31-00.0N 040-00.0W, 31-00.0N 041-00.0W.")
         self.assertEqual(len(navarea.geometry(paras, navarea.positions(paras))["coordinates"]), 2)
 
+    def test_tracklines_are_lines_and_radii_are_circles(self):
+        """Wording seen in NGA's lists on 13 Nov 2026 (HYDROLANT 2088/24, NAVAREA IV 1091/26, HYDROLANT 237/26)."""
+        one = ("CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE\nALONG TRACKLINE JOINING\n"
+               "10-40.23N 063-15.13W, 10-42.82N 063-15.05W.\nWIDE BERTH REQUESTED.")
+        self.assertEqual(navarea.geometry(one, navarea.positions(one)),
+                         {"type": "LineString", "coordinates": [[-63.252, 10.671], [-63.251, 10.714]]})
+        lettered = ("1. DUE TO THE PRESENCE OF MINES, USE THE FOLLOWING TRACKS:\n"
+                    "   A. PORT OF MANGALIA ALONG TRACKLINE JOINING\n      43-47.59N 028-50.86E, 43-47.50N 028-37.61E.\n"
+                    "   B. PORT OF NAVODARI ALONG TRAKLINE JOINING\n      43-47.59N 028-50.86E, 44-11.33N 028-50.86E,\n"
+                    "      44-15.52N 028-45.04E.\n2. REPORT MINES TO MRCC 44-10.00N 028-39.00E.")
+        g = navarea.geometry(lettered, navarea.positions(lettered))
+        self.assertEqual((g["type"], [len(x) for x in g["coordinates"]]), ("MultiLineString", [2, 3]),
+                         "NGA's own misspelling counts; a position in a later paragraph is no vertex")
+        corridor = ("1. SURVEY OPERATIONS BY M/V FUGRO DISCOVERY WITHIN 500 METERS OF\n   TRACKLINE JOINING "
+                    "29-28.60N 081-01.60W,\n   29-27.60N 080-35.73W.\n2. CANCEL THIS MSG 270001Z NOV 26.")
+        rec = navarea._record("4", 1091, 2026, None, "121000Z NOV 2026", "", corridor)
+        self.assertEqual((rec["geometry"]["type"], rec["corridor_half_width_m"]), ("LineString", [500.0]))
+        self.assertNotIn("radius_m", rec, "a corridor is not a circle")
+        gunnery = "1. GUNNERY EXERCISES 171800Z TO 172200Z NOV\n   IN AREA WITHIN 12 MILES OF 14-35.00N 061-47.30W."
+        rec = navarea._record("4", 1096, 2026, None, "121000Z NOV 2026", "", gunnery)
+        ring = rec["geometry"]["coordinates"][0]
+        self.assertEqual((rec["geometry"]["type"], len(ring), ring[0], rec["radius_m"]),
+                         ("Polygon", navarea.CIRCLE_SIDES + 1, ring[-1], [22224.0]), "a closed ring; nautical miles")
+        self.assertAlmostEqual(ring[0][1] - 14.583, 0.2, places=2, msg="12 nautical miles is 0.2 degree of latitude")
+        mixed = ("1. MISSILE OPERATIONS IN AREAS:\n   A. BOUND BY\n      35-36.00N 024-07.00E, 36-18.00N 024-07.00E,\n"
+                 "      36-18.00N 025-59.00E, 35-31.00N 024-11.00E.\n   B. WITHIN ONE MILE OF 35-32.00N 024-13.00E.\n"
+                 "   C. WITHIN ONE MILE OF 35-36.33N 024-10.00E.\n2. CANCEL THIS MSG 010001Z JAN 27.")
+        g = navarea.geometry(mixed, navarea.positions(mixed))
+        self.assertEqual((g["type"], len(g["coordinates"])), ("MultiPolygon", 3), "the area and both circles")
+        guam = "1. HAZARDOUS OPERATIONS IN AREAS WITHIN\n   THREE MILE OF:\n   A. 13-27.00N 145-08.00E.\n   B. 13-42.00N 144-36.00E."
+        self.assertEqual(len(navarea.geometry(guam, navarea.positions(guam))["coordinates"]), 2)
+        both = ("2. ROUTES:\n   A. ROUTE WITHIN THREE MILES OF\n      TRACKLINE JOINING\n      45-05.00N 030-03.00E, "
+                "45-14.00N 030-01.00E.\n3. ANCHORAGE IN AREA BOUND BY\n   45-00N 030-00E, 45-10N 030-00E, 45-10N 030-10E.")
+        g = navarea.geometry(both, navarea.positions(both))
+        self.assertEqual([x["type"] for x in g["geometries"]], ["Polygon", "LineString"])
+        self.assertEqual(navarea.distance_m("1.5", "NM"), 2778.0)
+        dateline = "IN AREA BOUND BY\n   31-25N 179-58W, 31-25N 178-00E,\n   23-24N 178-00E, 23-24N 179-58W."
+        ring = navarea.geometry(dateline, navarea.positions(dateline))["coordinates"][0]
+        self.assertEqual([p[0] for p in ring], [-179.967, -182.0, -182.0, -179.967, -179.967],
+                         "two degrees wide across 180, not 358 degrees the other way")
+        self.assertIsNone(navarea.distance_m("SEVERAL", "MILES"))
+
+    def test_long_text_is_kept_or_the_cut_is_marked(self):
+        body = "1. SURVEY OPERATIONS IN 10-00.0N 020-00.0W.\n" + "   B. MORE DETAIL.\n" * 200
+        rec = navarea._record("4", 1, 2026, None, "121000Z NOV 2026", "", body)
+        self.assertEqual(rec["text"], body.strip(), "4,000 characters are kept whole")
+        long_ = body * 3
+        rec = navarea._record("4", 1, 2026, None, "121000Z NOV 2026", "", long_)
+        self.assertTrue(rec["text"].endswith(f"[Cut by Cordon: {len(long_.strip()) - navarea.TEXT_MAX} more characters. "
+                                             "Full text: NGA, msi.nga.mil/NavWarnings]"))
+
     def test_cancel_time(self):
         self.assertEqual(navarea.cancel_time("1. X.\n2. CANCEL THIS MSG 220300Z NOV 26."), "2026-11-22T03:00:00Z")
         self.assertEqual(navarea.cancel_time("1. X.\n2. CANCEL THIS\n   MSG 010001Z DEC 26."), "2026-12-01T00:01:00Z")
@@ -265,13 +317,13 @@ class Navarea(unittest.TestCase):
         self.assertTrue(navarea.is_stale(None, "2026-11-12T00:00:00Z"))
 
     def test_collect_takes_a_fresh_api_answer(self):
-        got, err, src = navarea.collect([], "2026-10-31T00:00:00Z", nga_site(api=NGA, text=None))
-        self.assertEqual((len(got), err, src), (3, None, navarea.SOURCE_URL))
+        got, err, src, held = navarea.collect([], "2026-10-31T00:00:00Z", nga_site(api=NGA, text=None))
+        self.assertEqual((len(got), err, src, held), (3, None, navarea.SOURCE_URL, {}))
 
     def test_collect_reads_the_daily_lists_when_the_api_is_down_or_frozen(self):
         frozen = {"broadcast-warn": [{**NGA["broadcast-warn"][1], "issueDate": "101515Z MAY 2024"}]}
         for api in (None, frozen):  # HTTP 503 since 31 Oct 2026; before that, a database frozen at 10 May 2024
-            got, err, src = navarea.collect([{"id": "old"}], "2026-11-12T17:00:00Z", nga_site(api=api))
+            got, err, src, _ = navarea.collect([{"id": "old"}], "2026-11-12T17:00:00Z", nga_site(api=api))
             self.assertEqual((len(got), err), (15, None), "three warnings from each of five areas")
             self.assertIn("apology_objects", src)
             self.assertEqual(len({w["id"] for w in got}), 15)
@@ -279,11 +331,23 @@ class Navarea(unittest.TestCase):
     def test_collect_never_calls_a_stale_or_missing_list_good(self):
         frozen = {"broadcast-warn": [{**NGA["broadcast-warn"][1], "issueDate": "101515Z MAY 2024"}]}
         old = [{"id": "old"}]
-        got, err, src = navarea.collect(old, "2026-11-12T17:00:00Z", nga_site(api=frozen, text=None))
+        got, err, src, _ = navarea.collect(old, "2026-11-12T17:00:00Z", nga_site(api=frozen, text=None))
         self.assertEqual((got, src), (old, None), "the previous warnings are kept")
         self.assertEqual(err, "API: stale: newest warning 2024-05-10; daily lists: NAVAREA IV: HTTP 404")
-        got, err, _ = navarea.collect(old, "2027-03-01T00:00:00Z", nga_site())
+        got, err, _, _ = navarea.collect(old, "2027-03-01T00:00:00Z", nga_site())
         self.assertEqual((got, err), (old, "API: HTTP 503; daily lists: stale: newest warning 2026-11-12"))
+
+    def test_one_failed_file_keeps_that_area_and_takes_the_others(self):
+        old = [{"id": "P-1-2026", "area": "HYDROPAC"}, {"id": "A-1-2026", "area": "HYDROLANT"}]
+        got, err, src, held = navarea.collect(old, "2026-11-12T17:00:00Z", nga_site(down=("PAC",)))
+        self.assertEqual((err, held), (None, {"HYDROPAC": "HTTP 404"}))
+        ids = {w["id"] for w in got}
+        self.assertEqual(len(ids), 13, "three from each of four areas, and HYDROPAC's one earlier warning")
+        self.assertIn("P-1-2026", ids)
+        self.assertNotIn("A-1-2026", ids, "an area that answered is replaced, not merged")
+        self.assertEqual(navarea.held_too_long({"HYDROPAC": {"since": "2026-11-10T16:00:00Z"},
+                                                "HYDROARC": {"since": "2026-11-12T10:00:00Z"}},
+                                               "2026-11-12T17:00:00Z", 48), {"HYDROPAC"})
 
 
 class Embassy(unittest.TestCase):
@@ -438,6 +502,18 @@ class Feed(unittest.TestCase):
         self.assertEqual(got, {"nga-navwarnings": "failing", "easa-czib": "stale", "us-embassy-alerts": "never"})
         fc = feed.build({}, {}, {}, nav, now, h)
         self.assertEqual(len(fc["features"]), 2, "failing for a few hours: the warnings still stand")
+
+    def test_an_area_held_for_two_days_is_withheld(self):
+        now = datetime(2026, 11, 12, 17, tzinfo=timezone.utc)
+        nav = {"warnings": navarea.parse_text(NGA_TEXT, "4") + navarea.parse_text(
+            NGA_TEXT.replace("NAVAREA IV", "HYDROPAC"), "P")}
+        ok = {"last_ok": "2026-11-12T16:00:00Z", "failures": 0, "detail": "6 warnings in force"}
+        for since, shown, withheld in (("2026-11-12T10:00:00Z", 4, None), ("2026-11-10T16:00:00Z", 2, 2)):
+            held = {"HYDROPAC": {"error": "HTTP 404", "since": since}}
+            fc = feed.build({}, {}, {}, nav, now, {"nga-navwarnings": {**ok, "held_areas": held}})
+            nga = fc["health"]["nga-navwarnings"]
+            self.assertEqual((len(fc["features"]), nga["state"], nga.get("withheld")), (shown, "fresh", withheld))
+            self.assertEqual(nga["held_areas"], held)
 
 
 # The FAA's airport-events JSON as served on 13 Nov 2026 (nasstatus.faa.gov/api/airport-events), trimmed. BDL's
