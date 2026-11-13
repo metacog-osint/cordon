@@ -420,8 +420,10 @@ class Feed(unittest.TestCase):
         self.assertEqual(sorted(p), ["1-2026", "2-2026", "4-2026"], "a warning past its cancel time is left out")
         self.assertEqual(fc["health"]["nga-navwarnings"]["expired"], 1)
         self.assertEqual([(p[k]["tier"], p[k]["measures"]["new"]) for k in sorted(p)],
-                         [("anomaly", True), ("routine", False), ("routine", True)],
-                         "new and of an alert kind; old; new but an everyday kind")
+                         [("anomaly", True), ("routine", False), ("anomaly", True)],
+                         "new security incident; old one; new military exercise")
+        self.assertTrue({"launch", "military"} <= feed.NEW_ALERT)
+        self.assertNotIn("wreck", feed.NEW_ALERT, "everyday kinds stay routine even when new")
         self.assertEqual(p["1-2026"]["baseline_ref"]["id"], "nga-warnings-in-force")
         self.assertEqual(p["4-2026"]["valid_until"], "2026-11-14T12:00:00Z")
         self.assertNotIn("valid_until", p["1-2026"])
