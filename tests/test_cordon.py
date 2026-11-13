@@ -233,7 +233,7 @@ class Navarea(unittest.TestCase):
         }
         for text, want in cases.items():
             self.assertEqual(navarea.category(text), want, text)
-        self.assertIn("security", feed.NOTABLE)
+        self.assertTrue({"security", "ice"} <= feed.NOTABLE, "both are on the feed")
 
     def test_staleness_is_judged_by_the_newest_warning(self):
         self.assertFalse(navarea.is_stale("2026-11-06T00:00:00Z", "2026-11-12T00:00:00Z"))
