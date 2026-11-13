@@ -37,13 +37,18 @@ def run(when: str | None = None) -> dict:
         health("easa-czib", True, f"{sum(b['status'] == 'active' for b in czibs)} active", when)
     summary["easa"] = err or f"{len(czibs)} bulletins, {len(cz_changes)} changes"
 
-    warnings, err, source = navarea.collect(load("navarea.json", {}).get("warnings"), when)
+    warnings, err, source, held = navarea.collect(load("navarea.json", {}).get("warnings"), when)
     newest = navarea.newest(warnings)  # of what is held now, new or kept: the feed reads staleness from this
     if err:
         health("nga-navwarnings", False, err, when, newest_item=newest)
     else:
         save("navarea.json", {"source": source, "warnings": warnings})
-        health("nga-navwarnings", True, f"{len(warnings)} warnings in force", when, newest_item=newest)
+        # An area whose file failed keeps its earlier warnings; `since` is when its file last answered.
+        before = (load("health.json", {}).get("nga-navwarnings") or {}).get("held_areas") or {}
+        held_areas = {a: {"error": e, "since": (before.get(a) or {}).get("since") or when} for a, e in held.items()}
+        kept = "".join(f"; {a} kept from the list of {h['since']} ({h['error']})" for a, h in held_areas.items())
+        health("nga-navwarnings", True, f"{len(warnings)} warnings in force{kept}", when, newest_item=newest,
+               held_areas=held_areas)
     summary["nga"] = err or f"{len(warnings)} warnings"
 
     programs, airports, err = faa.collect(when)
