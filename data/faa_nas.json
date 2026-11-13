@@ -3,16 +3,6 @@
  "programs": [
   {
    "kind": "closure",
-   "airport": "SNA",
-   "airport_name": "John Wayne Airport-Orange County",
-   "start": "2026-11-10T07:30:00Z",
-   "end": "2026-11-21T14:15:00Z",
-   "updated": "2026-11-07T17:18:37Z",
-   "notam": "!SNA 11/008 SNA AD AP CLSD DLY 0730-1415 2611100730-2611211415",
-   "issued": "2026-11-07T17:16:00Z"
-  },
-  {
-   "kind": "closure",
    "airport": "SUA",
    "airport_name": "Witham Field",
    "start": "2026-11-13T16:00:00Z",
@@ -80,34 +70,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 138.0,
    "max_delay_min": 690.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "YUL",
-   "airport_name": "Montréal-Pierre Elliott Trudeau International Airport",
-   "start": "2026-11-13T22:15:00Z",
-   "end": "2026-11-13T23:30:00Z",
-   "updated": "2026-11-13T22:29:45Z",
-   "reason": "other",
-   "center": "CZU",
-   "advisory_url": null,
-   "included_facilities": 23,
-   "included_flights": null,
-   "probability_of_extension": null
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "YYZ",
-   "airport_name": "Toronto Pearson International Airport",
-   "start": "2026-11-13T22:08:00Z",
-   "end": "2026-11-13T23:15:00Z",
-   "updated": "2026-11-13T22:20:32Z",
-   "reason": "other",
-   "center": "CZY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=6011&adv_date=11132026&facId=YYZ&title=ATCSCC ADVZY 011 CYYZ/CZY 11/13/2026 CDM GROUND STOP&titleDate=11/13/2026",
-   "included_facilities": 23,
-   "included_flights": null,
-   "probability_of_extension": "HIGH"
   }
  ],
  "airports": {
@@ -120,6 +82,16 @@
    -71.0096,
    42.3656,
    "General Edward Lawrence Logan International"
+  ],
+  "FLL": [
+   -80.1506,
+   26.0742,
+   "Fort Lauderdale/Hollywood International"
+  ],
+  "IAH": [
+   -95.3368,
+   29.9902,
+   "George Bush Intercontinental/Houston"
   ],
   "LAS": [
    -115.1537,
