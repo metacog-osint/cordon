@@ -254,6 +254,15 @@
   "MX": [
    {
     "iso": "MX",
+    "title": "Weather Alert: El Niño and the Potential for Heavy Rainfall this Winter",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaDRIMGw4WGlpSDEzMlU5LTY1emZ4YUxLOHc2ZFhacTg2ekVKSTFiSWdRMFJOejZ0LW5mdFUyekk1dnoxcXQteER6ZE9pNWRWSmk4Yy05aDRKVHJrY21vOEdJalR3OXdWLWRlWkRoaGt3Z1BTS0pQMHcyME53MURoblRtZTFNSFVfYUtHelNScHBEdkdTd1FUTHpsWEc?oc=5",
+    "published_at": "2026-11-13T21:07:56Z",
+    "type": "weather",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
     "title": "Demonstration Alert: Protest and Traffic Disruptions Near Rio Lagartos – October 31, 2026",
     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPckcycjl2OTRSd3M2bV8tQnFRbzNjSzJ5X0xfOGFqTjZLOW1uUlgxZ0RGbDhKclFfVUxqQzBFcDBKZnhRZ3hCNkJFTXZTOUJCckswNlAyVW1rOS16dXFLY0wtTEY0ZlVjRWNjSzZfa0VsMzR4bVRWUlE1QUQtcVNnWEY1N1g3SjB6R3RYUmZSdjRSMkx0ZE8zcUxyTVBjRk9GeEhINjdWR0FialF6S1FWeQ?oc=5",
     "published_at": "2026-10-31T07:00:00Z",
@@ -330,15 +339,6 @@
     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZmtpOElQeDJhekt1UW5IM05xVTFkQVNMZlVZdFRaemlkVHhtQ25MYXM1Wm9mbUV2cHAxQXd4V1ZfV05CdHNMS3M0WHhpNlBHZFJHdHN0ajUwTVFkQlQ5cWN2Vm8ta1NPVE5WQjNIQVRwSzBSTGR5dHE5M1AxS0FrQjhvUUJ0SzYxbU9RNTdackZnZFE4UUhiVzJ4bVdWZU1GRmRsbFJfRFpPVm8?oc=5",
     "published_at": "2026-10-16T07:00:00Z",
     "type": "demonstration",
-    "via": "google-news",
-    "post_url": "https://mx.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "MX",
-    "title": "Weather Alert: Hurricane Trudy, U.S. Embassy Mexico City, U.S. Consulate General Guadalajara on Thursday, October 15, 2026",
-    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdUdKTkt1R0QwOUxacjMzZW1LaEZrMXZJeWd5SDFsMDJKYzEzdGZ5M3d1Qmo3STVkV21YN3dPN3gyV2plMHE2YzVHUENfVFRfTlA4d1d1MUh1ci12V0FkdXo2SEhDWGVBaGt5Rm1ScGh5OUpVQU81S3I3elZMcFAtTl9hMVdXcEg3TXAxTkNiaXpRa1VHQlNuLTd6Xzl6TmVBLUxrLUVXd0xabnVpTjJtZ3RuUVJNRmlIRjU2OHVMWnJHdnRTSGM5RHlpRzE2XzlqMF8xNmIyT0E?oc=5",
-    "published_at": "2026-10-15T07:00:00Z",
-    "type": "weather",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    }
