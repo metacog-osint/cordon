@@ -200,6 +200,41 @@ class Navarea(unittest.TestCase):
         self.assertEqual(navarea.newest(w.values()), "2026-11-12T08:59:00Z")
         self.assertEqual(navarea.parse_text(NGA_TEXT, "P"), [], "another area's file holds none of these")
 
+    def test_header_lines_are_not_the_headline(self):
+        """Seas, a country, and a chart reference come first; the headline is the warning's own first sentence."""
+        cases = {
+            "BLACK SEA.\nROMANIA.\nDNC 10.\nMINES REPORTED IN AREA WITHIN FIVE MILES OF 45-07.10N 030-09.70E.":
+                ("Black Sea", "Romania", "MINES REPORTED IN AREA WITHIN FIVE MILES OF 45-07.10N 030-09.70E."),
+            "ARABIAN SEA.\nGULF OF OMAN.\nSTRAIT OF HORMUZ.\nU.A.E.\nDNC 10.\nGPS INTERFERENCE REPORTED.\nMORE.":
+                ("Arabian Sea", "U.A.E", "GPS INTERFERENCE REPORTED."),
+            "BALTIC SEA\nLITHUANIA\n1. HAZARDOUS OPERATIONS 1000Z TO 1600Z DAILY.\n2. CANCEL THIS MSG 121900Z NOV 26.":
+                ("Baltic Sea", "Lithuania", "HAZARDOUS OPERATIONS 1000Z TO 1600Z DAILY."),
+            "CARIBBEAN SEA.\nHONDURAS.\n1. LIGHTS UNLIT:\n   A. PUNTA IZOPO 15-50.90N 087-22.50W.\n   B. X 16-07.30N 086-00.00W.":
+                ("Caribbean Sea", "Honduras", "LIGHTS UNLIT"),
+            "NGA MARITIME DISSEMINATION ADVISORY\n1. NGA IS EXPERIENCING WEBSITE OUTAGES.\n2. CANCEL HYDROARC 325/26.":
+                (None, None, "NGA MARITIME DISSEMINATION ADVISORY"),
+            "LM BUOY 09-25.99N 079-49.78W\nMISSING.": (None, None, "LM BUOY 09-25.99N 079-49.78W MISSING."),
+            "PERSIAN GULF.\nKUWAIT.": ("Persian Gulf", None, "KUWAIT."),
+        }
+        for text, want in cases.items():
+            self.assertEqual(navarea.header(text), want, text)
+
+    def test_categories_from_the_wording_seen_in_november_2026(self):
+        cases = {
+            "STRAIT OF HORMUZ.\nOMAN.\nM/V RITI SUFFERED A SECURITY INCIDENT,\nIS ON FIRE AND ANCHORED IN 26-24.07N 056-24.72E.": "security",
+            "ARABIAN SEA.\nINDIA.\nF/V VARDANI MAULI SANK IN 18-25.90N 072-41.57E.": "wreck",
+            "1. NORTH AMERICAN ICE SERVICE (NAIS)\n   ICEBERG BULLETIN 130001Z NOV.": "ice",
+            "CANCELLED ELECTRONIC NAVIGATIONAL CHART (ENC)\nADVISORY.": "radio_service",
+            "NAVAREA X AND JRCC AUSTRALIA PRIMARY EMAIL\nUNUSABLE UNTIL FURTHER NOTICE.": "radio_service",
+            "PERSIAN GULF.\nKUWAIT.\nNAVIGATION PROHIBITED UNTIL FURTHER NOTICE IN AREA WITHIN 600 METERS OF X.": "restricted_area",
+            "SCIENTIFIC MOORING, AT DEPTH SEVEN METERS, ESTABLISHED IN 66-19.59N 168-57.01W.": "hazard",
+            "9 METER DEPTHS REPORTED IN BOROUGE CHANNEL 24-09.00N 052-45.20E.": "shoal",
+            "VESSELS REPORT TO MRCC BY E-MAIL: X@Y.Z. REEF UNCHARTED.": "hazard",
+        }
+        for text, want in cases.items():
+            self.assertEqual(navarea.category(text), want, text)
+        self.assertIn("security", feed.NOTABLE)
+
     def test_staleness_is_judged_by_the_newest_warning(self):
         self.assertFalse(navarea.is_stale("2026-11-06T00:00:00Z", "2026-11-12T00:00:00Z"))
         self.assertTrue(navarea.is_stale("2024-05-10T15:15:00Z", "2026-10-31T21:22:31Z"))

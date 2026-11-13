@@ -8,11 +8,11 @@
   var POSTURE = { authorized_departure: ["AD", "Authorized departure"], ordered_departure: ["OD", "Ordered departure"],
     suspended_operations: ["S", "Suspended operations"] };
   var NAV = { launch: "Launches and space debris", gnss: "GNSS (GPS) interference or testing", military: "Military exercises and firing",
-    mines: "Mines and ordnance", piracy: "Piracy", restricted_area: "Restricted areas", search_and_rescue: "Search and rescue",
+    mines: "Mines and ordnance", piracy: "Piracy", security: "Security incidents", ice: "Ice and icebergs", restricted_area: "Restricted areas", search_and_rescue: "Search and rescue",
     pollution: "Pollution", port: "Ports", cable_pipeline: "Cable and pipeline work", wreck: "Wrecks and drifting objects",
     hazard: "Reefs, groundings, obstructions", underwater_ops: "Underwater work and salvage", drilling_survey: "Drilling and surveys",
     shoal: "Shoals", aids_to_navigation: "Lights and buoys", radio_service: "Radio and NAVTEX services", other: "Other" };
-  var KEY_NAV = { launch: 1, gnss: 1, military: 1, mines: 1, piracy: 1 };
+  var KEY_NAV = { launch: 1, gnss: 1, military: 1, mines: 1, piracy: 1, security: 1 };
 
   function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
   function h(tag, attrs, kids) {

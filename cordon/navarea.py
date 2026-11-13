@@ -32,39 +32,64 @@ CATEGORIES = [
     ("military", r"GUNNERY|FIRING|NAVAL EXERCISE|MILITARY EXERCISE|LIVE FIRE|HAZARDOUS OPERATIONS"),
     ("mines", r"\bMINE\b|MINES\b|UNEXPLODED|ORDNANCE"),
     ("piracy", r"PIRACY|PIRATE|ARMED ROBBERY|HIJACK"),
+    ("security", r"SECURITY INCIDENT|\bATTACK(ED)?\b|EXPLOSION"),
     ("search_and_rescue", r"SEARCH AND RESCUE|OVERDUE|MISSING VESSEL|PERSON IN WATER|TAKING ON WATER|"
                           r"KEEP A SHARP LOOKOUT"),
     ("pollution", r"OIL SPILL|POLLUTION"),
     ("port", r"\bPORT OF\b|PORT [A-Z ]{0,30}(CLOSED|RESTRICTIONS)|CHANNEL CLOSED"),
-    ("radio_service", r"OFF AIR|UNRELIABLE|\bDSC\b|NAVTEX|RADIO STATION|COMMUNICATION FACILIT"),
-    ("wreck", r"WRECK|DERELICT|ADRIFT|SUNKEN|SUBMERGED|ABANDONED VESSEL"),
+    ("radio_service", r"OFF AIR|UNRELIABLE|\bDSC\b|NAVTEX|RADIO STATION|COMMUNICATION FACILIT|E-?MAIL [A-Z ]*UNUSABLE|"
+                      r"HF RECEIVE|UNABLE TO RECEIVE|DISSEMINATION ADVISORY|\(ENC\) ADVISORY"),
+    ("ice", r"ICEBERG|SEA ICE|ICE LIMIT"),
+    ("wreck", r"WRECK|DERELICT|ADRIFT|SUNKEN|SUBMERGED|ABANDONED VESSEL|\bSANK\b|\bSUNK\b|ON FIRE|CAPSIZED"),
     ("cable_pipeline", r"CABLE|PIPELINE"),
     ("underwater_ops", r"UNDERWATER OPERATIONS|DIVING|\bROV\b|SALVAGE"),
-    ("drilling_survey", r"DRILLING|SURVEY|SEISMIC|RIG\b"),
-    ("shoal", r"SHOAL|LESS WATER THAN CHARTED|DEPTH OF"),
-    ("hazard", r"REEF|AGROUND|OBSTRUCTION|UNCHARTED|ROCK\b"),
-    ("restricted_area", r"ANCHORING PROHIBITED|PROHIBITED AREA|RESTRICTED AREA|SAFETY ZONE|EXCLUSION ZONE"),
+    ("drilling_survey", r"DRILLING|SURVEY|SEISMIC|RIG\b|MINING OPERATIONS"),
+    ("shoal", r"SHOAL|LESS (WATER )?THAN CHARTED|DEPTHS? (OF|REPORTED)|DISCOLORED WATER"),
+    ("hazard", r"REEF|AGROUND|OBSTRUCTION|UNCHARTED|ROCK\b|FOUL GROUND|SCIENTIFIC MOORING|OCEAN BOTTOM MOORING|"
+               r"VOLCANIC|PLATFORM [A-Z ]*ESTABLISHED"),
+    ("restricted_area", r"ANCHORING PROHIBITED|NAVIGATION PROHIBITED|PROHIBITED AREA|RESTRICTED AREA|SAFETY ZONE|EXCLUSION ZONE"),
     ("aids_to_navigation", r"LIGHT|BUOY|RACON|BEACON|AIS AID|NAVIGATIONAL AIDS|INOPERATIVE"),
 ]
 INDEX_RE = re.compile(r"WARNINGS IN FORCE", re.I)
 SELF_CANCEL_RE = re.compile(r"^\s*(?:\d+\.\s*)?CANCEL\b[^\n]*\bTHIS (?:MSG|MESSAGE)\b", re.I | re.M)
 
 
-def headline(text: str) -> tuple[str | None, str]:
-    """(place, headline): skip the sea-area line, take a short place line, then the warning's own words."""
+CHART_RE = re.compile(r"^(DNC|CHART|ENC)S? [\dA-Z, ]+\.?$")
+PLACE_RE = re.compile(r"^[A-Z][A-Z '.\-]*$")  # also "U.A.E." and "ST. KITTS AND NEVIS."
+NUMBERED_RE = re.compile(r"^\d+\.\s")
+
+
+def _header_kind(line: str) -> str | None:
+    """'chart' for a chart reference (DNC 10.), 'place' for a sea or country line, None for the warning's own words.
+    A place line is a few plain words that name no hazard: "LIGHTS UNLIT" and "HAZARDOUS OPERATIONS" are not places."""
+    if CHART_RE.match(line):
+        return "chart"
+    if PLACE_RE.match(line) and len(line.split()) <= 5 and category(line) == "other":
+        return "place"
+    return None
+
+
+def header(text: str) -> tuple[str | None, str | None, str]:
+    """(sea, place, headline). A warning opens with its sea areas, often a country or place, sometimes a chart
+    reference; then come its own words. The sea is the first of those lines and the place the last (when there are
+    two or more); the headline is the first sentence after them. The last line is never taken as a header, and a
+    line with no full stop counts only when another header line or a numbered paragraph follows it."""
     lines = [ln.strip() for ln in (text or "").splitlines() if ln.strip()]
-    place = None
-    i = 0
-    if lines and len(lines[0].split()) <= 5 and lines[0].endswith("."):
-        i = 1
-        if len(lines) > 2 and len(lines[1].split()) <= 4 and lines[1].endswith(".") and not POS_RE.search(lines[1]):
-            place = lines[1].rstrip(".").title()
-            i = 2
-    body = " ".join(lines[i:])
-    body = re.sub(r"^\d+\.\s*", "", body)
-    body = re.sub(r"\s+", " ", body)
+    places, i = [], 0
+    while i < len(lines) - 1:
+        kind = _header_kind(lines[i])
+        if not kind:
+            break
+        if kind == "place":
+            if not lines[i].endswith(".") and not (_header_kind(lines[i + 1]) or NUMBERED_RE.match(lines[i + 1])):
+                break
+            places.append(lines[i].rstrip(".").title())
+        i += 1
+    body = re.sub(r"\s+", " ", re.sub(r"^\d+\.\s*", "", " ".join(lines[i:])))
     cut = body.find(". ")
-    return place, (body[:cut + 1] if 0 < cut < 160 else body[:160]).strip()
+    head = (body[:cut + 1] if 0 < cut < 160 else body[:160]).strip()
+    head = re.sub(r"\s*[:,]?\s+(?:A|1)\.$", "", head)  # "LIGHTS UNLIT: A." -> "LIGHTS UNLIT": the list follows in the text
+    return (places[0] if places else None), (places[-1] if len(places) > 1 else None), head
 
 
 def positions(text: str) -> list[list[float]]:
@@ -80,7 +105,7 @@ def positions(text: str) -> list[list[float]]:
 
 
 def category(text: str) -> str:
-    t = (text or "").upper()
+    t = re.sub(r"\s+", " ", (text or "").upper())  # the wording wraps across lines
     for name, rx in CATEGORIES:
         if re.search(rx, t):
             return name
@@ -128,11 +153,9 @@ def _record(area: str, number, year, subregion, issued, authority: str, text: st
     text = (text or "").strip()
     if INDEX_RE.search(text[:200]):
         return None  # a list of warnings in force, not a warning
-    place, head = headline(text)
+    sea, place, head = header(text)
     if SELF_CANCEL_RE.match(head or ""):
         return None  # "cancel ... and this msg": the hazard is over
-    first = text.splitlines()[0].strip() if text else ""
-    sea = None if (not first or first[0].isdigit()) else first.rstrip(".").title()
     return {
         "id": f"{area}-{number}-{year}", "area": AREAS.get(area, area), "subregion": subregion,
         "number": f"{AREAS.get(area, area)} {number}/{year}", "issued": issued,
