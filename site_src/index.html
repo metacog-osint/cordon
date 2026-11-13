@@ -30,7 +30,8 @@
   <section class="hero">
     <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
     <p class="lede" id="lede">US travel advisories and embassy departure status, European aviation conflict-zone bulletins,
-      and US navigational warnings to mariners, collected every hour from the issuing authorities.</p>
+      US navigational warnings to mariners, and the FAA's ground stops, ground delay programs and airport closures,
+      collected every hour from the issuing authorities.</p>
   </section>
 
   <section class="mapcard" aria-label="Map">
@@ -40,6 +41,7 @@
         <label><input type="checkbox" data-layer="posture" checked> US embassy departure status</label>
         <label><input type="checkbox" data-layer="czib" checked> EASA conflict-zone bulletins</label>
         <label><input type="checkbox" data-layer="navwarn" checked> Warnings to mariners</label>
+        <label><input type="checkbox" data-layer="faa" checked> US airport programs (FAA)</label>
       </fieldset>
       <div class="legend" id="legend"></div>
     </div>
@@ -71,6 +73,14 @@
     </section>
   </div>
 
+  <section class="card" aria-labelledby="faa-h">
+    <h2 id="faa-h">US airport ground stops, delay programs and closures</h2>
+    <p class="muted small">As the FAA's National Airspace System status lists them, with the reason in the FAA's own words.
+      Cordon adds no cause. A ground stop is marked unusual when more are in effect at once than Cordon's own record of
+      them makes normal.</p>
+    <div id="faa"></div>
+  </section>
+
   <section class="card" aria-labelledby="levels-h">
     <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
     <div id="levels"></div>
@@ -79,7 +89,8 @@
   <section class="card" aria-labelledby="health-h">
     <h2 id="health-h">Sources</h2>
     <div id="health"></div>
-    <p class="small muted">US Department of State (travel.state.gov) and NGA (msi.nga.mil) content is US public domain.
+    <p class="small muted">US Department of State (travel.state.gov), NGA (msi.nga.mil) and FAA (nasstatus.faa.gov)
+      content is US public domain; the FAA's airport coordinates come with its status data.
       EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
       Bulletins. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
       OSAC is not used: its terms bar republishing.</p>
