@@ -41,6 +41,10 @@ FAA_SRC = {"id": "faa-nas-status", "publisher": "US Federal Aviation Administrat
            "(ground stops, ground delay programs, closures)"}
 FAA_WORDS = {"ground_stop": "ground stop", "ground_delay": "ground delay program", "closure": "airport closure"}
 STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS}
+# Lines are tracklines as published; a GeometryCollection is areas or circles with tracklines; MultiPoint is a set of
+# positions with no shape given, so its extent is approximate.
+PRECISION = {"Point": "point", "LineString": "point", "MultiLineString": "point", "Polygon": "area",
+             "MultiPolygon": "area", "GeometryCollection": "area"}
 POSTURE_WORDS = {"authorized_departure": "authorized departure", "ordered_departure": "ordered departure",
                  "suspended_operations": "suspended operations"}
 nga_time = navarea.issued_time
@@ -54,7 +58,9 @@ def source_health(health: dict | None, nav: dict, now: datetime) -> dict:
     stale    no good fetch for STALE_HOURS (FAA: faa.STALE_HOURS) or more; or, for NGA, the newest warning held is over
              navarea.STALE_DAYS old (NGA issues warnings daily, so that is a frozen list, never a quiet sea)
     never    no good fetch on record
-    A stale or never source has its items withheld from the feed (counted in `withheld`): it reads as no data."""
+    A stale or never source has its items withheld from the feed (counted in `withheld`): it reads as no data.
+    NGA's `held_areas` names any area whose daily file failed and whose earlier warnings were kept, with the time its
+    file last answered; an area held for STALE_HOURS is withheld the same way (see build)."""
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     out = {}
     for sid, h in sorted((health or {}).items()):
@@ -64,6 +70,8 @@ def source_health(health: dict | None, nav: dict, now: datetime) -> dict:
                  else "failing" if h.get("failures") else "fresh")
         out[sid] = {"state": state, "last_ok": last_ok, "last_error": h.get("last_error"),
                     "failures": h.get("failures", 0), "checked_at": h.get("checked_at"), "detail": h.get("detail")}
+        if h.get("held_areas"):
+            out[sid]["held_areas"] = h["held_areas"]
     held = nav.get("warnings") or []
     if held or NGA_SRC["id"] in out:
         e = out.setdefault(NGA_SRC["id"], {"state": "fresh"})
@@ -238,8 +246,12 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     expired = 0
+    old_areas = navarea.held_too_long(nga.get("held_areas"), stamp, STALE_HOURS)
     for w in nav.get("warnings") or []:
         if w["category"] not in NOTABLE:
+            continue
+        if w.get("area") in old_areas:
+            nga["withheld"] = nga.get("withheld", 0) + 1  # its area's file has not answered for STALE_HOURS
             continue
         if not navarea.in_force(w, stamp):
             expired += 1  # past its own "cancel this msg" time, though still on NGA's daily list
@@ -251,13 +263,12 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         ncf = ["transport_by_vessel"] + (["provide_pnt"] if w["category"] == "gnss" else [])
         props = {**_base(nv_fetched), "id": f"cordon:navwarn:{w['id']}", "title": f"{w['number']}: {w['headline']}",
                  "tier": "anomaly" if alert else "routine", "data_as_of": issued or nv_fetched, "countries": [],
-                 "precision_class": {"Point": "point", "Polygon": "area", "MultiPolygon": "area"}.get(
-                     (g or {}).get("type"), "approximate")
-                 if g else "none", "ncf": ncf, "sector": vocab.derive_sectors(ncf), "requirement_ids": ["CD-PIR-4"],
+                 "precision_class": PRECISION.get((g or {}).get("type"), "approximate") if g else "none", "ncf": ncf, "sector": vocab.derive_sectors(ncf), "requirement_ids": ["CD-PIR-4"],
                  "ie_aspect": ["physical"], "pmesii_pt": ["infrastructure"], "ascope": ["areas"],
                  "sources": [{**NGA_SRC, "accessed_at": nv_fetched}],
                  "measures": {"category": w["category"], "sea": w.get("sea"), "place": w.get("place"),
-                              "authority": w.get("authority"), "text": w["text"], "new": is_new}}
+                              "authority": w.get("authority"), "text": w["text"], "new": is_new,
+                              **{k: w[k] for k in ("radius_m", "corridor_half_width_m") if w.get(k)}}}
         if w.get("cancel_at"):
             props["valid_until"] = w["cancel_at"]
         if alert:
