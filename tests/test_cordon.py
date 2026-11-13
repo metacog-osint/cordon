@@ -235,6 +235,30 @@ class Navarea(unittest.TestCase):
             self.assertEqual(navarea.category(text), want, text)
         self.assertTrue({"security", "ice"} <= feed.NOTABLE, "both are on the feed")
 
+    def test_each_bounded_area_is_its_own_polygon(self):
+        two = ("NORTH ATLANTIC.\nFLORIDA.\n1. HAZARDOUS OPERATIONS, ROCKET LAUNCHING\n   IN AREAS BOUND BY:\n"
+               "   A. 28-00.00N 080-00.00W, 29-00.00N 080-00.00W,\n      29-00.00N 079-00.00W, 28-00.00N 079-00.00W.\n"
+               "   B. 43-00.00N 059-00.00W, 44-00.00N 059-00.00W,\n      44-00.00N 058-00.00W.\n"
+               "2. CANCEL THIS MSG 191824Z NOV 26.\n3. REPORTS TO 10-00.00N 020-00.00W.")
+        g = navarea.geometry(two, navarea.positions(two))
+        self.assertEqual(g["type"], "MultiPolygon")
+        self.assertEqual([len(p[0]) for p in g["coordinates"]], [5, 4], "closed rings; the later position is no corner")
+        self.assertEqual(g["coordinates"][1][0][0], [-59.0, 43.0])
+        one = "1. SPACE DEBRIS IN AREA BOUND BY\n   54-35.00N 038-33.00W, 54-25.00N 037-11.00W,\n   48-44.00N 039-10.00W."
+        self.assertEqual(navarea.geometry(one, navarea.positions(one))["type"], "Polygon")
+        paras = ("1. FIRING IN AREA BOUND BY\n   10-00.0N 020-00.0W, 11-00.0N 020-00.0W, 11-00.0N 021-00.0W.\n"
+                 "2. FIRING IN AREA BOUND BY\n   30-00.0N 040-00.0W, 31-00.0N 040-00.0W, 31-00.0N 041-00.0W.")
+        self.assertEqual(len(navarea.geometry(paras, navarea.positions(paras))["coordinates"]), 2)
+
+    def test_cancel_time(self):
+        self.assertEqual(navarea.cancel_time("1. X.\n2. CANCEL THIS MSG 220300Z NOV 26."), "2026-11-22T03:00:00Z")
+        self.assertEqual(navarea.cancel_time("1. X.\n2. CANCEL THIS\n   MSG 010001Z DEC 26."), "2026-12-01T00:01:00Z")
+        self.assertIsNone(navarea.cancel_time("2. CANCEL HYDROPAC 3151/26."))
+        w = navarea.parse_text(NGA_TEXT, "4")[0]
+        self.assertEqual(w["cancel_at"], "2026-11-22T03:00:00Z")
+        self.assertTrue(navarea.in_force(w, "2026-11-22T02:59:00Z"))
+        self.assertFalse(navarea.in_force(w, "2026-11-22T03:00:00Z"))
+
     def test_staleness_is_judged_by_the_newest_warning(self):
         self.assertFalse(navarea.is_stale("2026-11-06T00:00:00Z", "2026-11-12T00:00:00Z"))
         self.assertTrue(navarea.is_stale("2024-05-10T15:15:00Z", "2026-10-31T21:22:31Z"))
@@ -381,6 +405,26 @@ class Feed(unittest.TestCase):
         self.assertEqual((nga["state"], nga["newest_item"], nga["withheld"]), ("stale", "2024-05-10T15:15:00Z", 3))
         self.assertEqual(fc["features"], [], "a frozen list reads as no data, never as warnings in force")
         self.assertEqual(fc["health"]["easa-czib"]["state"], "fresh")
+
+    def test_new_expired_and_alert_warnings(self):
+        def w(num, issued, text):
+            return {"msgYear": 2026, "msgNumber": num, "navArea": "P", "issueDate": issued, "authority": "", "text": text}
+        hormuz = "STRAIT OF HORMUZ.\nOMAN.\nM/V X SUFFERED A SECURITY INCIDENT IN 26-24.07N 056-24.72E."
+        nav = {"warnings": navarea.parse({"broadcast-warn": [
+            w(1, "121000Z NOV 2026", hormuz), w(2, "011000Z NOV 2026", hormuz),
+            w(3, "121000Z NOV 2026", "RED SEA.\n1. GUNNERY IN 15-00.0N 041-00.0E.\n2. CANCEL THIS MSG 131200Z NOV 26."),
+            w(4, "121000Z NOV 2026", "RED SEA.\n1. GUNNERY IN 15-00.0N 041-00.0E.\n2. CANCEL THIS MSG 141200Z NOV 26.")]})}
+        fc = feed.build({}, {}, {}, nav, datetime(2026, 11, 13, 17, tzinfo=timezone.utc))
+        self.assertEqual(fc["dropped"], [])
+        p = {f["properties"]["id"][-6:]: f["properties"] for f in fc["features"]}
+        self.assertEqual(sorted(p), ["1-2026", "2-2026", "4-2026"], "a warning past its cancel time is left out")
+        self.assertEqual(fc["health"]["nga-navwarnings"]["expired"], 1)
+        self.assertEqual([(p[k]["tier"], p[k]["measures"]["new"]) for k in sorted(p)],
+                         [("anomaly", True), ("routine", False), ("routine", True)],
+                         "new and of an alert kind; old; new but an everyday kind")
+        self.assertEqual(p["1-2026"]["baseline_ref"]["id"], "nga-warnings-in-force")
+        self.assertEqual(p["4-2026"]["valid_until"], "2026-11-14T12:00:00Z")
+        self.assertNotIn("valid_until", p["1-2026"])
 
     def test_health_states(self):
         now = datetime(2026, 11, 12, 17, tzinfo=timezone.utc)

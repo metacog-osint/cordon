@@ -112,12 +112,49 @@ def category(text: str) -> str:
     return "other"
 
 
+BOUND_RE = re.compile(r"AREAS? BOUND(?:ED)? BY:?", re.I)
+PARAGRAPH_RE = re.compile(r"^\s*\d+\.\s", re.M)
+LETTERED_RE = re.compile(r"^\s*[A-Z]\.\s", re.M)
+CANCEL_AT_RE = re.compile(r"CANCEL THIS (?:MSG|MESSAGE) (\d{6}Z) ([A-Z]{3}) (\d{2})\b", re.I)
+
+
+def areas(text: str) -> list[list[list[float]]]:
+    """One closed ring for each area a warning bounds. "AREA BOUND BY" is followed by one area's corners; "AREAS
+    BOUND BY:" by lettered areas (A., B., ...), each with its own corners. An area ends at the next lettered item, the
+    next numbered paragraph or the next "bound by"."""
+    text = text or ""
+    rings = []
+    marks = list(BOUND_RE.finditer(text))
+    for n, m in enumerate(marks):
+        tail = text[m.end():marks[n + 1].start() if n + 1 < len(marks) else len(text)]
+        stop = PARAGRAPH_RE.search(tail)
+        tail = tail[:stop.start()] if stop else tail
+        for chunk in LETTERED_RE.split(tail):
+            pts = positions(chunk)
+            if len(pts) >= 3:
+                rings.append(pts + [pts[0]] if pts[0] != pts[-1] else pts)
+    return rings
+
+
+def cancel_time(text: str) -> str | None:
+    """'CANCEL THIS MSG 220300Z NOV 26' -> '2026-11-22T03:00:00Z': when the warning says it ends."""
+    m = CANCEL_AT_RE.search(re.sub(r"\s+", " ", text or ""))
+    return issued_time(f"{m.group(1)} {m.group(2).upper()} {2000 + int(m.group(3))}") if m else None
+
+
+def in_force(w: dict, when: str) -> bool:
+    """False once a warning's own cancel time has passed (NGA's lists are refreshed once a day)."""
+    return not (w.get("cancel_at") and w["cancel_at"] <= when)
+
+
 def geometry(text: str, pts: list[list[float]]):
     if not pts:
         return None
-    if len(pts) >= 3 and re.search(r"AREA[S]? BOUND", (text or "").upper()):
-        ring = pts + [pts[0]] if pts[0] != pts[-1] else pts
-        return {"type": "Polygon", "coordinates": [ring]}
+    rings = areas(text)
+    if len(rings) == 1:
+        return {"type": "Polygon", "coordinates": [rings[0]]}
+    if rings:
+        return {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}
     if len(pts) == 1:
         return {"type": "Point", "coordinates": pts[0]}
     return {"type": "MultiPoint", "coordinates": pts}
@@ -161,6 +198,7 @@ def _record(area: str, number, year, subregion, issued, authority: str, text: st
         "number": f"{AREAS.get(area, area)} {number}/{year}", "issued": issued,
         "authority": (authority or "").strip()[:160], "category": category(text), "sea": sea, "place": place,
         "headline": head, "text": text[:2000], "geometry": geometry(text, positions(text)),
+        "cancel_at": cancel_time(text),
     }
 
 

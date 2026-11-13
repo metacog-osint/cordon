@@ -14,6 +14,8 @@ SITE = "https://cordon.theintelligence.company/"
 METHOD = "cordon-feed-1.0"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
+NEW_HOURS = 72  # a navigational warning issued within this long is new
+NEW_ALERT = {"security", "mines", "piracy", "gnss"}  # a new warning of these kinds is an anomaly, not routine
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
 NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "security", "ice", "restricted_area", "search_and_rescue", "pollution",
            "port", "cable_pipeline", "wreck", "hazard", "underwater_ops"}
@@ -170,22 +172,40 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         feats.append({"type": "Feature", "geometry": geom, "properties": props})
 
     nv_fetched = nav.get("fetched_at") or fetched
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    expired = 0
     for w in nav.get("warnings") or []:
         if w["category"] not in NOTABLE:
             continue
+        if not navarea.in_force(w, stamp):
+            expired += 1  # past its own "cancel this msg" time, though still on NGA's daily list
+            continue
         g = w.get("geometry")
+        issued = nga_time(w.get("issued"))
+        is_new = bool(issued and issued >= new_from)
+        alert = is_new and w["category"] in NEW_ALERT
         ncf = ["transport_by_vessel"] + (["provide_pnt"] if w["category"] == "gnss" else [])
         props = {**_base(nv_fetched), "id": f"cordon:navwarn:{w['id']}", "title": f"{w['number']}: {w['headline']}",
-                 "tier": "routine", "data_as_of": nga_time(w.get("issued")) or nv_fetched, "countries": [],
-                 "precision_class": {"Point": "point", "Polygon": "area"}.get((g or {}).get("type"), "approximate")
+                 "tier": "anomaly" if alert else "routine", "data_as_of": issued or nv_fetched, "countries": [],
+                 "precision_class": {"Point": "point", "Polygon": "area", "MultiPolygon": "area"}.get(
+                     (g or {}).get("type"), "approximate")
                  if g else "none", "ncf": ncf, "sector": vocab.derive_sectors(ncf), "requirement_ids": ["CD-PIR-4"],
                  "ie_aspect": ["physical"], "pmesii_pt": ["infrastructure"], "ascope": ["areas"],
                  "sources": [{**NGA_SRC, "accessed_at": nv_fetched}],
                  "measures": {"category": w["category"], "sea": w.get("sea"), "place": w.get("place"),
-                              "authority": w.get("authority"), "text": w["text"]}}
+                              "authority": w.get("authority"), "text": w["text"], "new": is_new}}
+        if w.get("cancel_at"):
+            props["valid_until"] = w["cancel_at"]
+        if alert:
+            props["baseline_ref"] = {"id": "nga-warnings-in-force", "type": "rolling", "version": "1",
+                                     "window": f"the warnings in force {NEW_HOURS} hours earlier"}
         if not g:
             props["visual"] = {"type": "page", "url": NGA_SRC["url"]}
         feats.append({"type": "Feature", "geometry": g, "properties": props})
+
+    if expired:
+        nga["expired"] = expired
 
     al_fetched = alerts.get("fetched_at") or fetched
     for iso, items in sorted((alerts.get("posts") or {}).items()):
