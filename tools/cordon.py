@@ -42,11 +42,13 @@ def map_data(d: dict, fc: dict) -> dict:
                         "link": r["link"], "updated": r.get("updated"), "posture": r["posture"]["state"],
                         "sentence": r["posture"]["sentence"]} for k, r in sorted(adv.items())],
         "czibs": [b for b in d["czibs.json"].get("bulletins") or [] if b["status"] == "active"],
+        # A stale warning list is not drawn: the Sources table says why (see feed.source_health).
         "warnings": [{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued", "geometry")}
-                     for w in d["navarea.json"].get("warnings") or [] if w.get("geometry")],
+                     for w in d["navarea.json"].get("warnings") or [] if w.get("geometry")
+                     and (fc["health"].get("nga-navwarnings") or {}).get("state") not in ("stale", "never")],
         "alerts": d["alerts.json"].get("posts") or {},
         "changes": sorted(read_jsonl("changes.jsonl"), key=lambda c: c.get("at", ""), reverse=True)[:60],
-        "health": d["health"],
+        "health": fc["health"],
         "points": {f["properties"]["id"]: f["geometry"]["coordinates"] for f in fc["features"]
                    if f["geometry"] and f["geometry"]["type"] == "Point" and f["properties"]["id"].startswith("cordon:advisory:")},
     }
@@ -55,7 +57,7 @@ def map_data(d: dict, fc: dict) -> dict:
 def build() -> dict:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
-                    datetime.now(timezone.utc))
+                    datetime.now(timezone.utc), d["health"])
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -73,7 +75,7 @@ def build() -> dict:
 def check() -> list[str]:
     errs = [f"registers: {e}" for e in registers.check(ROOT / "doctrine")]
     d = data()
-    fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"])
+    fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:

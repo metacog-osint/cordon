@@ -155,8 +155,10 @@
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
-      var bad = !s.last_ok || (s.failures || 0) > 0;
-      return [names[k], { td: when(s.last_ok), cls: "num" }, { td: h("span", { "class": bad ? "bad" : "ok" }, [s.detail || "—"]) }]; })));
+      var old = s.state === "stale" || s.state === "never";
+      var bad = !s.last_ok || (s.failures || 0) > 0 || old;
+      return [names[k], { td: when(s.last_ok), cls: "num" },
+        { td: h("span", { "class": bad ? "bad" : "ok" }, [(old ? "Stale, not shown: " : "") + (s.detail || "—")]) }]; })));
 
     document.getElementById("asof").setAttribute("datetime", d.generated_at);
     T.renderAll(document);
