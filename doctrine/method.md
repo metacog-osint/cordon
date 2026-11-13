@@ -16,7 +16,9 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
 
 ## Anomaly versus warning
 Everything Cordon publishes is a measurement of what an authority said (kind observation). A level change or a
-departure order in the last 30 days is an anomaly against the previous value. Cordon makes no judgment of its own;
+departure order in the last 30 days is an anomaly against the previous value. So is a navigational warning of a
+security incident, mines, piracy or GNSS interference issued in the last 72 hours, against the warnings in force
+before it; every other warning is routine, and each says whether it is new. Cordon makes no judgment of its own;
 those come through warning problem CD-WP-1 and through Verdict, which scores forecasts of renewals and changes.
 
 ## Places

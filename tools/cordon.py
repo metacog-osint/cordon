@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import collect, events, feed  # noqa: E402
+from cordon import collect, events, feed, navarea  # noqa: E402
 from cordon.common import load, read_jsonl  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
@@ -43,8 +43,10 @@ def map_data(d: dict, fc: dict) -> dict:
                         "sentence": r["posture"]["sentence"]} for k, r in sorted(adv.items())],
         "czibs": [b for b in d["czibs.json"].get("bulletins") or [] if b["status"] == "active"],
         # A stale warning list is not drawn: the Sources table says why (see feed.source_health).
-        "warnings": [{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued", "geometry")}
+        "warnings": [{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued", "geometry",
+                                            "cancel_at")}
                      for w in d["navarea.json"].get("warnings") or [] if w.get("geometry")
+                     and navarea.in_force(w, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
                      and (fc["health"].get("nga-navwarnings") or {}).get("state") not in ("stale", "never")],
         "alerts": d["alerts.json"].get("posts") or {},
         "changes": sorted(read_jsonl("changes.jsonl"), key=lambda c: c.get("at", ""), reverse=True)[:60],
