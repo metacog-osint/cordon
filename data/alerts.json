@@ -254,6 +254,15 @@
   "MX": [
    {
     "iso": "MX",
+    "title": "Demonstration Alert: Protest in Mexico City, November 15, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUzZZc2tsX3NfRWVtd05SOWtobm5pdWdKZ3poX3I0RzR0RHd1T1hHb21TQ3lreUNQQmg1WVJWWHZxNkYta29lWDR5QWNoVXZva3p0M0pkckhRSzh5ZkI3N2Z0NUt3bFZ2aVdwZWZqYk1kZ0dUWE1QSEpJMGdnNFFqM1NsRHpXOWJXUFdpZnRB?oc=5",
+    "published_at": "2026-11-13T21:43:40Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
     "title": "Weather Alert: El Niño and the Potential for Heavy Rainfall this Winter",
     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaDRIMGw4WGlpSDEzMlU5LTY1emZ4YUxLOHc2ZFhacTg2ekVKSTFiSWdRMFJOejZ0LW5mdFUyekk1dnoxcXQteER6ZE9pNWRWSmk4Yy05aDRKVHJrY21vOEdJalR3OXdWLWRlWkRoaGt3Z1BTS0pQMHcyME53MURoblRtZTFNSFVfYUtHelNScHBEdkdTd1FUTHpsWEc?oc=5",
     "published_at": "2026-11-13T21:07:56Z",
@@ -332,15 +341,6 @@
     "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "MX",
-    "title": "Demonstration Alert: “Mega March for Water” in Guadalajara on October 18 at 11:00 a.m.",
-    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZmtpOElQeDJhekt1UW5IM05xVTFkQVNMZlVZdFRaemlkVHhtQ25MYXM1Wm9mbUV2cHAxQXd4V1ZfV05CdHNMS3M0WHhpNlBHZFJHdHN0ajUwTVFkQlQ5cWN2Vm8ta1NPVE5WQjNIQVRwSzBSTGR5dHE5M1AxS0FrQjhvUUJ0SzYxbU9RNTdackZnZFE4UUhiVzJ4bVdWZU1GRmRsbFJfRFpPVm8?oc=5",
-    "published_at": "2026-10-16T07:00:00Z",
-    "type": "demonstration",
-    "via": "google-news",
-    "post_url": "https://mx.usembassy.gov/category/alert/"
    }
   ],
   "NE": [
@@ -375,9 +375,9 @@
    },
    {
     "iso": "NG",
-    "title": "Health Alert: U.S. Embassy Abuja (21 October, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ETE1VTXc4ZWU4NXZ2NVREaExZajZyT0dDNmNsTWFVdVN1XzMzLUxabE5TeHBsODdKcFBobGxydVJLcW5XMFpGTnExV09yUlFkVGZ4Y0JxV0NuajhLcURpcHJpMEhMOW5MSG5XVU00RkNuSW92WnBFeHMyUmc?oc=5",
-    "published_at": "2026-10-21T07:00:00Z",
+    "title": "Health Alert: U.S. Embassy Abuja, Nigeria (October 20, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZ0Y2bFBiRmxXZnVyclBqYjdDX0xURjRmOXY5LWl6TnVablVmVk8xdjZ4NmhhMkstQWhHQWdNRkxLX2Y4cVVzN3ltLWlaSGxNVFN0bmlCR0RNbGMyS2FKSTViYkxBMzJMckdTLVdQSFhCVERKUGpwdExyVE9YZWZuY3paMkxWbDQ?oc=5",
+    "published_at": "2026-10-20T07:00:00Z",
     "type": "health",
     "via": "google-news",
     "post_url": "https://ng.usembassy.gov/category/alert/"
