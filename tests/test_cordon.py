@@ -50,15 +50,65 @@ EASA_CSV = ('Subject,"CZIB number","Issue date","Valid until","Valid until descr
 NGA = {"broadcast-warn": [
     {"msgYear": 2026, "msgNumber": 101, "navArea": "12", "issueDate": "081653Z MAY 2026", "authority": "X",
      "text": "NORTH PACIFIC.\n1. HAZARDOUS OPERATIONS, ROCKET LAUNCHING\n   IN AREA BOUND BY\n   30-00.0N 150-00.0W, 31-00.0N 150-00.0W,\n   31-00.0N 151-00.0W, 30-00.0N 151-00.0W."},
-    {"msgYear": 2026, "msgNumber": 102, "navArea": "4", "issueDate": "011610Z OCT 2026", "authority": "Y",
+    {"msgYear": 2026, "msgNumber": 102, "navArea": "4", "issueDate": "291610Z OCT 2026", "authority": "Y",
      "text": "EASTERN CARIBBEAN SEA.\nMARTINIQUE.\n14 METER S/V SISYPHE TAKING ON WATER\nIN 14-51.78N 061-18.18W. VESSELS IN VICINITY\nREQUESTED TO KEEP A SHARP LOOKOUT."},
-    {"msgYear": 2026, "msgNumber": 103, "navArea": "4", "issueDate": "011610Z OCT 2026", "authority": "Z",
+    {"msgYear": 2026, "msgNumber": 103, "navArea": "4", "issueDate": "291610Z OCT 2026", "authority": "Z",
      "text": "1. NAVAREA IV WARNINGS IN FORCE AS OF 031554Z MAY.\n   496/2024, 495/2024."},
-    {"msgYear": 2026, "msgNumber": 104, "navArea": "12", "issueDate": "011610Z OCT 2026", "authority": "Z",
+    {"msgYear": 2026, "msgNumber": 104, "navArea": "12", "issueDate": "291610Z OCT 2026", "authority": "Z",
      "text": "CALIFORNIA.\nCANCEL NAVAREA XII 227/23 AND THIS MSG, OPERATIONS COMPLETED."},
-    {"msgYear": 2026, "msgNumber": 105, "navArea": "A", "issueDate": "011610Z OCT 2026", "authority": "Z",
+    {"msgYear": 2026, "msgNumber": 105, "navArea": "A", "issueDate": "291610Z OCT 2026", "authority": "Z",
      "text": "EASTERN MEDITERRANEAN.\nGNSS INTERFERENCE REPORTED IN VICINITY 34-00.0S 033-00.0E."},
 ]}
+
+# NGA's daily in-force list as plain text, in the form served on 12 Nov 2026 (msi.nga.mil/apology_objects/).
+NGA_TEXT = """
+NAVAREA IV IN FORCE AS OF 121615Z NOV.
+
+To receive Broadcast Warning messages via email, go to
+msi.nga.mil and click on the 'NAVIGATION WARNINGS' button.
+
+120859Z NOV 26
+NAVAREA IV 1090/26.
+NORTH ATLANTIC.
+1. HAZARDOUS OPERATIONS, SPACE DEBRIS
+   0100Z TO 0200Z DAILY 14 THRU 22 NOV
+   IN AREA BOUND BY
+   54-35.00N 038-33.00W, 54-25.00N 037-11.00W,
+   48-44.00N 039-10.00W, 48-52.00N 040-28.00W.
+2. CANCEL THIS MSG 220300Z NOV 26.
+
+120025Z NOV 26
+NAVAREA IV 1089/26(24)
+NORTH ATLANTIC.
+TRINIDAD AND TOBAGO.
+1. UNDERWATER OPERATIONS IN PROGRESS
+   UNTIL 312200Z DEC BY M/V SEVEN NAVICA
+   IN 10-05.05N 060-20.69W.
+
+061615Z NOV 26
+NAVAREA IV 1070/26.
+1. NAVAREA IV WARNINGS IN FORCE AS OF 061615Z NOV.
+   1069/26, 1068/26.
+
+150429Z AUG 23
+NAVAREA IV 163/23(15).
+BEAUFORT SEA.
+RACON AT PULLEN ISLAND LIGHT
+69-46.60N 134-24.40W INOPERATIVE.
+"""
+
+
+def nga_site(api=None, text=NGA_TEXT):
+    """A stand-in for fetch_or_none: the API body (or HTTP 503), and one text file for every area."""
+    def fetch(url, timeout=40):
+        if "apology_objects" in url:
+            if text is None:
+                return None, "HTTP 404"
+            area = next(a for a, n in navarea.TEXT_FILES.items() if url.endswith(f"DailyMem{n}.txt"))
+            return text.replace("NAVAREA IV", navarea.AREAS[area]).encode(), None
+        return (json.dumps(api).encode(), None) if api else (None, "HTTP 503")
+    return fetch
+
 
 RSS = """<?xml version="1.0"?><rss><channel>
 <item><title>Security Alert: U.S. Embassy Riyadh, October 23, 2026</title><link>https://sa.usembassy.gov/security-alert-1/</link>
@@ -136,6 +186,45 @@ class Navarea(unittest.TestCase):
     def test_issue_time(self):
         self.assertEqual(feed.nga_time("081653Z MAY 2026"), "2026-05-08T16:53:00Z")
         self.assertIsNone(feed.nga_time("garbage"))
+
+    def test_daily_text_list(self):
+        w = {x["id"]: x for x in navarea.parse_text(NGA_TEXT, "4")}
+        self.assertEqual(sorted(w), ["4-1089-2026", "4-1090-2026", "4-163-2023"], "the in-force index is not a warning")
+        debris, ops, racon = w["4-1090-2026"], w["4-1089-2026"], w["4-163-2023"]
+        self.assertEqual((debris["number"], debris["issued"], debris["category"], debris["geometry"]["type"]),
+                         ("NAVAREA IV 1090/2026", "120859Z NOV 2026", "launch", "Polygon"))
+        self.assertIn("CANCEL THIS MSG 220300Z", debris["text"], "a timed self-cancel is still a warning in force")
+        self.assertEqual((ops["subregion"], ops["sea"], ops["place"]), ("24", "North Atlantic", "Trinidad And Tobago"))
+        self.assertEqual(ops["geometry"], {"type": "Point", "coordinates": [-60.345, 10.084]})
+        self.assertEqual((racon["subregion"], racon["category"]), ("15", "aids_to_navigation"))
+        self.assertEqual(navarea.newest(w.values()), "2026-11-12T08:59:00Z")
+        self.assertEqual(navarea.parse_text(NGA_TEXT, "P"), [], "another area's file holds none of these")
+
+    def test_staleness_is_judged_by_the_newest_warning(self):
+        self.assertFalse(navarea.is_stale("2026-11-06T00:00:00Z", "2026-11-12T00:00:00Z"))
+        self.assertTrue(navarea.is_stale("2024-05-10T15:15:00Z", "2026-10-31T21:22:31Z"))
+        self.assertTrue(navarea.is_stale(None, "2026-11-12T00:00:00Z"))
+
+    def test_collect_takes_a_fresh_api_answer(self):
+        got, err, src = navarea.collect([], "2026-10-31T00:00:00Z", nga_site(api=NGA, text=None))
+        self.assertEqual((len(got), err, src), (3, None, navarea.SOURCE_URL))
+
+    def test_collect_reads_the_daily_lists_when_the_api_is_down_or_frozen(self):
+        frozen = {"broadcast-warn": [{**NGA["broadcast-warn"][1], "issueDate": "101515Z MAY 2024"}]}
+        for api in (None, frozen):  # HTTP 503 since 31 Oct 2026; before that, a database frozen at 10 May 2024
+            got, err, src = navarea.collect([{"id": "old"}], "2026-11-12T17:00:00Z", nga_site(api=api))
+            self.assertEqual((len(got), err), (15, None), "three warnings from each of five areas")
+            self.assertIn("apology_objects", src)
+            self.assertEqual(len({w["id"] for w in got}), 15)
+
+    def test_collect_never_calls_a_stale_or_missing_list_good(self):
+        frozen = {"broadcast-warn": [{**NGA["broadcast-warn"][1], "issueDate": "101515Z MAY 2024"}]}
+        old = [{"id": "old"}]
+        got, err, src = navarea.collect(old, "2026-11-12T17:00:00Z", nga_site(api=frozen, text=None))
+        self.assertEqual((got, src), (old, None), "the previous warnings are kept")
+        self.assertEqual(err, "API: stale: newest warning 2024-05-10; daily lists: NAVAREA IV: HTTP 404")
+        got, err, _ = navarea.collect(old, "2027-03-01T00:00:00Z", nga_site())
+        self.assertEqual((got, err), (old, "API: HTTP 503; daily lists: stale: newest warning 2026-11-12"))
 
 
 class Embassy(unittest.TestCase):
@@ -243,6 +332,31 @@ class Feed(unittest.TestCase):
         self.assertIn("cordon:czib:CZIB-2026-07", ids)
         self.assertNotIn("cordon:czib:CZIB-2017-06", ids, "withdrawn bulletins stay off the feed")
         self.assertEqual(sum(1 for i in ids if i.startswith("cordon:alert:SA:")), 2)
+        self.assertEqual(fc["health"]["nga-navwarnings"], {"state": "fresh", "newest_item": "2026-10-29T16:10:00Z"})
+
+    def test_a_frozen_warning_list_is_stale_and_withheld(self):
+        """What happened from 31 Oct 2026: one good fetch, of a list whose newest warning was from May 2024."""
+        frozen = {"broadcast-warn": [{**w, "issueDate": "101515Z MAY 2024"} for w in NGA["broadcast-warn"]]}
+        nav = {"warnings": navarea.parse(frozen), "fetched_at": "2026-10-31T21:22:31Z"}
+        ok = {"last_ok": "2026-10-31T21:22:31Z", "last_error": None, "failures": 0,
+              "checked_at": "2026-10-31T21:22:31Z", "detail": "3 warnings in force"}
+        now = datetime(2026, 10, 31, 22, tzinfo=timezone.utc)
+        fc = feed.build({}, {}, {}, nav, now, {"nga-navwarnings": ok, "easa-czib": {**ok, "detail": "16 active"}})
+        nga = fc["health"]["nga-navwarnings"]
+        self.assertEqual((nga["state"], nga["newest_item"], nga["withheld"]), ("stale", "2024-05-10T15:15:00Z", 3))
+        self.assertEqual(fc["features"], [], "a frozen list reads as no data, never as warnings in force")
+        self.assertEqual(fc["health"]["easa-czib"]["state"], "fresh")
+
+    def test_health_states(self):
+        now = datetime(2026, 11, 12, 17, tzinfo=timezone.utc)
+        nav = {"warnings": navarea.parse_text(NGA_TEXT, "4")}
+        h = {"nga-navwarnings": {"last_ok": "2026-11-12T10:00:00Z", "failures": 3, "detail": "HTTP 503"},
+             "easa-czib": {"last_ok": "2026-11-09T10:00:00Z", "failures": 70, "detail": "HTTP 500"},
+             "us-embassy-alerts": {"last_ok": None, "failures": 1}}
+        got = {k: v["state"] for k, v in feed.source_health(h, nav, now).items()}
+        self.assertEqual(got, {"nga-navwarnings": "failing", "easa-czib": "stale", "us-embassy-alerts": "never"})
+        fc = feed.build({}, {}, {}, nav, now, h)
+        self.assertEqual(len(fc["features"]), 2, "failing for a few hours: the warnings still stand")
 
 
 class Events(unittest.TestCase):

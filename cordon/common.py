@@ -92,8 +92,9 @@ def digest(text: str) -> str:
     return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def health(source: str, ok: bool, detail: str = "", when: str | None = None) -> None:
-    """Record a source's latest attempt in data/health.json: last_ok, last_error, consecutive failures."""
+def health(source: str, ok: bool, detail: str = "", when: str | None = None, **facts) -> None:
+    """Record a source's latest attempt in data/health.json: last_ok, last_error, consecutive failures. Extra facts
+    (newest_item: the date of the newest item held) are stored as given, on a good attempt or a failed one."""
     when = when or now_utc()
     h = load("health.json", {})
     s = h.setdefault(source, {"last_ok": None, "last_error": None, "failures": 0})
@@ -102,6 +103,7 @@ def health(source: str, ok: bool, detail: str = "", when: str | None = None) -> 
         s.update({"last_ok": when, "failures": 0, "detail": detail})
     else:
         s.update({"last_error": when, "failures": s.get("failures", 0) + 1, "detail": detail})
+    s.update(facts)
     save("health.json", h)
 
 
