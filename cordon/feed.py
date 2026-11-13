@@ -15,7 +15,7 @@ METHOD = "cordon-feed-1.0"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
-NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "security", "restricted_area", "search_and_rescue", "pollution",
+NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "security", "ice", "restricted_area", "search_and_rescue", "pollution",
            "port", "cable_pipeline", "wreck", "hazard", "underwater_ops"}
 STATE_SRC = {"id": "state-travel-advisories", "publisher": "US Department of State", "licence":
              "US public domain (seals and logos restricted)", "grade": "A1", "independence_group": "us-state-department",
