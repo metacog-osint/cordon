@@ -19,7 +19,7 @@ from tic_doctrine import contract, registers  # noqa: E402
 
 SRC, OUT = ROOT / "site_src", ROOT / "site"
 LANES = {"advisories.json": "state-travel-advisories", "alerts.json": "us-embassy-alerts",
-         "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings"}
+         "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings", "faa_nas.json": "faa-nas-status"}
 
 
 def data() -> dict:
@@ -51,6 +51,12 @@ def map_data(d: dict, fc: dict) -> dict:
         "alerts": d["alerts.json"].get("posts") or {},
         "changes": sorted(read_jsonl("changes.jsonl"), key=lambda c: c.get("at", ""), reverse=True)[:60],
         "health": fc["health"],
+        # FAA programs as published in the feed (a stale list is withheld there, so it is not drawn either).
+        "faa": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                 "until": f["properties"].get("valid_until"), **{k: f["properties"]["measures"].get(k) for k in
+                 ("program", "airport", "airport_name", "reason", "start", "notam", "avg_delay_min")},
+                 "coordinates": f["geometry"]["coordinates"] if f["geometry"] and f["geometry"]["type"] == "Point" else None}
+                for f in fc["features"] if f["properties"]["id"].startswith("cordon:faa:")],
         "points": {f["properties"]["id"]: f["geometry"]["coordinates"] for f in fc["features"]
                    if f["geometry"] and f["geometry"]["type"] == "Point" and f["properties"]["id"].startswith("cordon:advisory:")},
     }
@@ -59,7 +65,7 @@ def map_data(d: dict, fc: dict) -> dict:
 def build() -> dict:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
-                    datetime.now(timezone.utc), d["health"])
+                    datetime.now(timezone.utc), d["health"], d["faa_nas.json"])
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -77,7 +83,8 @@ def build() -> dict:
 def check() -> list[str]:
     errs = [f"registers: {e}" for e in registers.check(ROOT / "doctrine")]
     d = data()
-    fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"])
+    fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"],
+                    nas=d["faa_nas.json"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:
