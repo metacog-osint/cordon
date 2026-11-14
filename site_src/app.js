@@ -49,7 +49,7 @@
     .setView([24, 20], 2);
   map.once("click", function () { map.scrollWheelZoom.enable(); });
   map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0) · Global Affairs Canada (OGL-Canada)");
+  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0) · Global Affairs Canada (OGL-Canada) · CDC");
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
@@ -170,7 +170,10 @@
 
     var ch = d.changes;
     document.getElementById("changes").replaceChildren(ch.length ? table(["When", "Where", "Change"], ch.map(function (c) {
-      var what = c.lane === "canada" ? (c.kind === "level" ? "Canada's advisory: " + (CA_LEVEL[c.from] || c.from) + " to " + (CA_LEVEL[c.to] || c.to)
+      var what = c.lane === "cdc" ? (c.kind === "new" ? "New CDC health notice, level " + c.to
+          : c.kind === "level" ? "CDC health notice level " + c.from + " to " + c.to
+          : c.kind === "removed" ? "CDC health notice removed (was level " + c.from + ")" : c.kind)
+        : c.lane === "canada" ? (c.kind === "level" ? "Canada's advisory: " + (CA_LEVEL[c.from] || c.from) + " to " + (CA_LEVEL[c.to] || c.to)
           : c.kind === "regional" ? "Canada: regional advisories " + (c.to ? "added" : "removed") : c.kind)
         : c.kind === "level" ? "Advisory level " + c.from + " to " + c.to
         : c.kind === "posture" ? "Embassy status " + String(c.from).replace(/_/g, " ") + " to " + String(c.to).replace(/_/g, " ") + " (under review)"
@@ -212,6 +215,18 @@
       : h("p", { "class": "empty" }, [(d.health["uk-fcdo-travel-advice"] || {}).state === "fresh"
           ? "The FCDO advises against travel nowhere." : "No current UK FCDO data: see Sources below."]));
 
+    var hn = (d.cdc || []).slice().sort(function (x, y) {
+      return (y.tier === "anomaly") - (x.tier === "anomaly") || y.level - x.level || (y.published || "").localeCompare(x.published || ""); });
+    document.getElementById("cdc").replaceChildren(hn.length ? table(["Level", "Notice", "Places", "CDC's date"],
+      hn.map(function (n) {
+        var what = n.title.replace(/^CDC Level [^:]+: /, "");
+        var where = n.countries.length > 4 ? n.countries.length + " countries" : n.countries.join(", ") || "—";
+        var note = n.tier === "anomaly" ? (n.change === "new" ? " (new)" : " (was level " + n.from_level + ")") : "";
+        return [{ td: h("span", { "class": "lvl lvl-" + n.level }, [n.level]) }, link(n.link, what + note),
+          where, { td: n.date ? day(n.date) : when(n.published), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["cdc-travel-notices"] || {}).state === "fresh"
+          ? "CDC lists no travel health notice." : "No current CDC data: see Sources below."]));
+
     // The page lists Canada's two highest levels, changes and fresh updates; the feed carries every place above level 0.
     var ca = (d.canada || []).filter(function (c) { return c.level >= 2 || c.tier === "anomaly" || c.new; })
       .sort(function (x, y) { return (y.tier === "anomaly") - (x.tier === "anomaly") || y.level - x.level
@@ -244,7 +259,8 @@
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
       "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
       "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
-      "gac-travel-advisories": "Government of Canada travel advisories" };
+      "gac-travel-advisories": "Government of Canada travel advisories",
+      "cdc-travel-notices": "CDC travel health notices" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
       var old = s.state === "stale" || s.state === "never";

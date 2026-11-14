@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import canada, easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
+from cordon import canada, cdc, easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -1055,6 +1055,96 @@ class Canada(unittest.TestCase):
         self.assertEqual(fc["features"], [])
         self.assertEqual((fc["health"]["gac-travel-advisories"]["state"], fc["health"]["gac-travel-advisories"]["withheld"]),
                          ("stale", 1))
+
+
+def cdc_item(level, slug, what, desc, pub="Mon, 09 Nov 2026 05:00:00 GMT"):
+    return (f"<item><title>Level {level} - {what}</title><description><![CDATA[{desc}]]></description>"
+            f"<link>https://wwwnc.cdc.gov/travel/notices/level{level}/{slug}</link><pubDate>{pub}</pubDate>"
+            f"<guid>https://wwwnc.cdc.gov/travel/notices/level{level}/{slug}</guid></item>")
+
+
+def cdc_feed(*items):
+    return ('<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel><title>Travel Notices</title>'
+            + "".join(items) + "</channel></rss>").encode()
+
+
+CDC_BASE = [
+    cdc_item(2, "yellow-fever-ghana", "Yellow Fever in Burkina Faso, C&#244;te d’Ivoire, and Ghana",
+             "There are outbreaks. Country List : Ghana, Burkina Faso, Côte d'Ivoire (Ivory Coast) "
+             "Country List : Ghana, Burkina Faso, Côte d'Ivoire (Ivory Coast)"),
+    cdc_item(4, "ebola-drc-provinces", "Ebola Bundibugyo Virus Disease in Ituri and Nord-Kivu Provinces of the "
+             "Democratic Republic of the Congo", "CDC recommends avoiding all travel to Ituri and Nord-Kivu.",
+             "Tue, 04 Aug 2026 04:00:00 GMT"),
+    cdc_item(2, "global-polio", "Global Polio", "Some destinations have poliovirus. Country List : Germany, United "
+             "Kingdom, including England, Scotland, Wales, and Northern Ireland, Tanzania, including Zanzibar, "
+             "the West Bank and Gaza, Gibraltar (U.K.), Republic of South Sudan, Atlantis",
+             "Wed, 23 Sep 2026 04:00:00 GMT"),
+]
+
+
+class Cdc(unittest.TestCase):
+    NOW = datetime(2026, 11, 10, 12, 0, tzinfo=timezone.utc)
+    STAMP = "2026-11-10T12:00:00Z"
+
+    def test_parse_reads_levels_places_and_dates(self):
+        got = cdc.parse(cdc_feed(*CDC_BASE))
+        self.assertEqual(sorted(got), ["ebola-drc-provinces", "global-polio", "yellow-fever-ghana"])
+        yf = got["yellow-fever-ghana"]
+        self.assertEqual((yf["level"], yf["level_text"], yf["countries"], yf["published"]),
+                         (2, "Practice Enhanced Precautions", ["BF", "CI", "GH"], "2026-11-09T05:00:00Z"))
+        self.assertEqual(yf["summary"], "There are outbreaks.")
+        self.assertEqual((yf["date"], got["ebola-drc-provinces"]["date"]), ("2026-11-09", "2026-08-04"))
+        self.assertEqual(got["ebola-drc-provinces"]["countries"], ["CD"])  # from the title
+        self.assertEqual(got["ebola-drc-provinces"]["level_text"], "Avoid All Travel")
+        polio = got["global-polio"]
+        self.assertEqual(polio["countries"], ["DE", "GB", "PS", "SS", "TZ"])  # "including ..." pieces are parts
+        self.assertEqual(polio["unplaced"], ["Atlantis"])
+
+    def test_collect_finds_new_raised_and_removed_notices(self):
+        first, changes, err = cdc.collect(None, self.STAMP, lambda u, t=30: (cdc_feed(*CDC_BASE), None))
+        self.assertEqual((err, len(first), changes), (None, 3, []))
+        later = [CDC_BASE[0].replace("Level 2", "Level 3").replace("level2", "level3"), CDC_BASE[1],
+                 cdc_item(1, "ebola-kenya", "Ebola Bundibugyo Virus Disease in Kenya", "Imported case.")]
+        new, changes, err = cdc.collect(first, self.STAMP, lambda u, t=30: (cdc_feed(*later), None))
+        self.assertEqual(sorted((c["key"], c["kind"], c["from"], c["to"]) for c in changes),
+                         [("ebola-kenya", "new", None, 1), ("global-polio", "removed", 2, None),
+                          ("yellow-fever-ghana", "level", 2, 3)])
+
+    def test_a_broken_or_empty_feed_is_an_error(self):
+        self.assertIn("unreadable", cdc.collect({}, self.STAMP, lambda u, t=30: (b"<html>", None))[2])
+        self.assertIn("only 0 notices", cdc.collect({}, self.STAMP, lambda u, t=30: (cdc_feed(), None))[2])
+
+    def build(self, changes=(), last_ok=None):
+        h = {"cdc-travel-notices": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        hn = {"notices": cdc.parse(cdc_feed(*CDC_BASE)), "fetched_at": self.STAMP}
+        with unittest.mock.patch.object(feed, "recent_changes", lambda now: list(changes)):
+            return feed.build({}, {}, {}, {}, self.NOW, h, health_notices=hn)
+
+    def test_items_carry_level_places_and_changes(self):
+        changes = [{"at": "2026-11-09T12:00:00Z", "lane": "cdc", "kind": "level", "key": "ebola-drc-provinces",
+                    "from": 3, "to": 4}]
+        fc = self.build(changes)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f for f in fc["features"]}
+        self.assertEqual(len(items), 3)
+        yf = items["cordon:cdc:yellow-fever-ghana"]
+        self.assertEqual(yf["properties"]["title"], "CDC Level 2 (Practice Enhanced Precautions): Yellow Fever in "
+                         "Burkina Faso, Côte d’Ivoire, and Ghana")
+        self.assertEqual((yf["properties"]["tier"], yf["properties"]["measures"]["new"], yf["geometry"]["type"]),
+                         ("routine", True, "MultiPoint"))
+        eb = items["cordon:cdc:ebola-drc-provinces"]["properties"]
+        self.assertEqual((eb["tier"], eb["measures"]["from_level"], eb["baseline_ref"]["id"]),
+                         ("anomaly", 3, "previous-cdc-notices"))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
+        self.assertIn("does not imply endorsement by CDC", fc["attribution"])
+
+    def test_a_stale_feed_is_withheld(self):
+        fc = self.build(last_ok="2026-11-07T00:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual((fc["health"]["cdc-travel-notices"]["state"], fc["health"]["cdc-travel-notices"]["withheld"]),
+                         ("stale", 3))
 
 
 class Events(unittest.TestCase):
