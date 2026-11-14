@@ -12,19 +12,14 @@
    "issued": "2026-11-09T13:10:00Z"
   },
   {
-   "kind": "ground_delay",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-13T18:45:00Z",
-   "end": "2026-11-14T07:59:00Z",
-   "updated": "2026-11-13T19:48:16Z",
-   "reason": "wind",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=99&adv_date=11132026&facId=SFO&title=ATCSCC ADVZY 099 SFO/ZOA 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
-   "included_facilities": 23,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 138.0,
-   "max_delay_min": 690.0
+   "kind": "closure",
+   "airport": "SNA",
+   "airport_name": "John Wayne Airport-Orange County",
+   "start": "2026-11-14T08:00:00Z",
+   "end": "2026-11-14T14:15:00Z",
+   "updated": "2026-11-13T23:32:38Z",
+   "notam": "!SNA 11/021 SNA AD AP CLSD 2611140800-2611141415",
+   "issued": "2026-11-13T23:30:00Z"
   }
  ],
  "airports": {
