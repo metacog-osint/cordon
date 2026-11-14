@@ -35,13 +35,148 @@
    "headline": "GUNNERY EXERCISES 171800Z TO 172200Z, 181200Z TO 181600Z, 181800Z TO 182200Z NOV IN AREA WITHIN 12 MILES OF 14-35.00N 061-47.30W.",
    "text": "CARIBBEAN SEA.\nSAINT LUCIA.\n1. GUNNERY EXERCISES 171800Z TO 172200Z,\n   181200Z TO 181600Z, 181800Z TO 182200Z NOV\n   IN AREA WITHIN 12 MILES OF 14-35.00N 061-47.30W.\n2. CANCEL THIS MSG 182300Z NOV 26.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     -61.788,
-     14.583
+     [
+      [
+       -61.788,
+       14.7829
+      ],
+      [
+       -61.7477,
+       14.779
+      ],
+      [
+       -61.709,
+       14.7677
+      ],
+      [
+       -61.6733,
+       14.7492
+      ],
+      [
+       -61.642,
+       14.7243
+      ],
+      [
+       -61.6163,
+       14.694
+      ],
+      [
+       -61.5972,
+       14.6595
+      ],
+      [
+       -61.5855,
+       14.622
+      ],
+      [
+       -61.5815,
+       14.583
+      ],
+      [
+       -61.5855,
+       14.544
+      ],
+      [
+       -61.5972,
+       14.5065
+      ],
+      [
+       -61.6163,
+       14.472
+      ],
+      [
+       -61.642,
+       14.4417
+      ],
+      [
+       -61.6733,
+       14.4168
+      ],
+      [
+       -61.709,
+       14.3983
+      ],
+      [
+       -61.7477,
+       14.387
+      ],
+      [
+       -61.788,
+       14.3831
+      ],
+      [
+       -61.8283,
+       14.387
+      ],
+      [
+       -61.867,
+       14.3983
+      ],
+      [
+       -61.9027,
+       14.4168
+      ],
+      [
+       -61.934,
+       14.4417
+      ],
+      [
+       -61.9597,
+       14.472
+      ],
+      [
+       -61.9788,
+       14.5065
+      ],
+      [
+       -61.9905,
+       14.544
+      ],
+      [
+       -61.9945,
+       14.583
+      ],
+      [
+       -61.9905,
+       14.622
+      ],
+      [
+       -61.9788,
+       14.6595
+      ],
+      [
+       -61.9597,
+       14.694
+      ],
+      [
+       -61.934,
+       14.7243
+      ],
+      [
+       -61.9027,
+       14.7492
+      ],
+      [
+       -61.867,
+       14.7677
+      ],
+      [
+       -61.8283,
+       14.779
+      ],
+      [
+       -61.788,
+       14.7829
+      ]
+     ]
     ]
    },
-   "cancel_at": "2026-11-18T23:00:00Z"
+   "cancel_at": "2026-11-18T23:00:00Z",
+   "radius_m": [
+    22224.0
+   ]
   },
   {
    "id": "4-1095-2026",
@@ -56,13 +191,148 @@
    "headline": "GUNNERY EXERCISES 141200Z TO 141600Z, 171100Z TO 171500Z, 211100Z TO 212100Z NOV IN AREA WITHIN 12 MILES OF 14-35.00N 061-48.00W.",
    "text": "CARIBBEAN SEA.\nGUADELOUPE.\n1. GUNNERY EXERCISES 141200Z TO 141600Z,\n   171100Z TO 171500Z, 211100Z TO 212100Z NOV\n   IN AREA WITHIN 12 MILES OF 14-35.00N 061-48.00W.\n2. CANCEL THIS MSG 212200Z NOV 26.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     -61.8,
-     14.583
+     [
+      [
+       -61.8,
+       14.7829
+      ],
+      [
+       -61.7597,
+       14.779
+      ],
+      [
+       -61.721,
+       14.7677
+      ],
+      [
+       -61.6853,
+       14.7492
+      ],
+      [
+       -61.654,
+       14.7243
+      ],
+      [
+       -61.6283,
+       14.694
+      ],
+      [
+       -61.6092,
+       14.6595
+      ],
+      [
+       -61.5975,
+       14.622
+      ],
+      [
+       -61.5935,
+       14.583
+      ],
+      [
+       -61.5975,
+       14.544
+      ],
+      [
+       -61.6092,
+       14.5065
+      ],
+      [
+       -61.6283,
+       14.472
+      ],
+      [
+       -61.654,
+       14.4417
+      ],
+      [
+       -61.6853,
+       14.4168
+      ],
+      [
+       -61.721,
+       14.3983
+      ],
+      [
+       -61.7597,
+       14.387
+      ],
+      [
+       -61.8,
+       14.3831
+      ],
+      [
+       -61.8403,
+       14.387
+      ],
+      [
+       -61.879,
+       14.3983
+      ],
+      [
+       -61.9147,
+       14.4168
+      ],
+      [
+       -61.946,
+       14.4417
+      ],
+      [
+       -61.9717,
+       14.472
+      ],
+      [
+       -61.9908,
+       14.5065
+      ],
+      [
+       -62.0025,
+       14.544
+      ],
+      [
+       -62.0065,
+       14.583
+      ],
+      [
+       -62.0025,
+       14.622
+      ],
+      [
+       -61.9908,
+       14.6595
+      ],
+      [
+       -61.9717,
+       14.694
+      ],
+      [
+       -61.946,
+       14.7243
+      ],
+      [
+       -61.9147,
+       14.7492
+      ],
+      [
+       -61.879,
+       14.7677
+      ],
+      [
+       -61.8403,
+       14.779
+      ],
+      [
+       -61.8,
+       14.7829
+      ]
+     ]
     ]
    },
-   "cancel_at": "2026-11-21T22:00:00Z"
+   "cancel_at": "2026-11-21T22:00:00Z",
+   "radius_m": [
+    22224.0
+   ]
   },
   {
    "id": "4-1094-2026",
@@ -98,115 +368,63 @@
    "headline": "NORTH AMERICAN ICE SERVICE (NAIS) ICEBERG BULLETIN 130001Z NOV.",
    "text": "1. NORTH AMERICAN ICE SERVICE (NAIS)\n   ICEBERG BULLETIN 130001Z NOV.\n2. ICEBERG LIMIT ALONG TRACKLINE JOINING\n   52-00N 056-00W, 51-45N 055-00W,\n   52-15N 050-45W, 53-30N 050-30W,\n   55-15N 052-00W, 60-00N 058-00W.\n3. ESTIMATED ICEBERG LIMIT ALONG\n   TRACKLINE JOINING\n   60-00N 058-00W, 61-50N 053-40W,\n   59-15N 047-00W, 58-55N 044-15W,\n   59-25N 041-40W, 64-25N 036-50W,\n   65-00N 028-00W.\n4. SEA ICE LIMIT ALONG TRACKLINES\n   JOINING:\n   A. 59-36N 065-27W, 58-54N 067-33W,\n      59-28N 069-09W, 61-06N 069-01W,\n      62-49N 074-12W, 62-32N 080-13W,\n      61-36N 080-37W, 58-41N 078-36W.\n   B. 62-12N 065-54W, 62-12N 064-09W,\n      66-45N 060-34W, 68-14N 063-20W,\n      69-10N 062-16W, 72-42N 064-48W.\n5. MOST RECENT RECONNAISSANCE:\n   INTERIOR SATELLITE PASS 12 NOV 26.\n6. REPORT POSITION AND TIME OF ANY ICEBERGS\n   SEA ICE OR STATIONARY RADAR TARGETS THAT\n   MAY LIKELY BE ICE TO THE NEAREST CANADIAN\n   COAST GUARD MARINE COMMUNICATIONS AND\n   TRAFFIC SERVICE STATION OR\n   USING INMARSAT CODE 42.\n7. FOR MORE REPORTING INFORMATION OR TO\n   DOWNLOAD SHAPEFILES AND WEEKLY PREDICTIONS,\n   GO TO\n   WWW.NAVCEN.USCG.GOV/INTERNATIONAL-ICE-PATROL.\n8. CANCEL THIS MSG 140001Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      -56.0,
-      52.0
+      [
+       -56.0,
+       52.0
+      ],
+      [
+       -55.0,
+       51.75
+      ],
+      [
+       -50.75,
+       52.25
+      ],
+      [
+       -50.5,
+       53.5
+      ],
+      [
+       -52.0,
+       55.25
+      ],
+      [
+       -58.0,
+       60.0
+      ]
      ],
      [
-      -55.0,
-      51.75
-     ],
-     [
-      -50.75,
-      52.25
-     ],
-     [
-      -50.5,
-      53.5
-     ],
-     [
-      -52.0,
-      55.25
-     ],
-     [
-      -58.0,
-      60.0
-     ],
-     [
-      -58.0,
-      60.0
-     ],
-     [
-      -53.667,
-      61.833
-     ],
-     [
-      -47.0,
-      59.25
-     ],
-     [
-      -44.25,
-      58.917
-     ],
-     [
-      -41.667,
-      59.417
-     ],
-     [
-      -36.833,
-      64.417
-     ],
-     [
-      -28.0,
-      65.0
-     ],
-     [
-      -65.45,
-      59.6
-     ],
-     [
-      -67.55,
-      58.9
-     ],
-     [
-      -69.15,
-      59.467
-     ],
-     [
-      -69.017,
-      61.1
-     ],
-     [
-      -74.2,
-      62.817
-     ],
-     [
-      -80.217,
-      62.533
-     ],
-     [
-      -80.617,
-      61.6
-     ],
-     [
-      -78.6,
-      58.683
-     ],
-     [
-      -65.9,
-      62.2
-     ],
-     [
-      -64.15,
-      62.2
-     ],
-     [
-      -60.567,
-      66.75
-     ],
-     [
-      -63.333,
-      68.233
-     ],
-     [
-      -62.267,
-      69.167
-     ],
-     [
-      -64.8,
-      72.7
+      [
+       -58.0,
+       60.0
+      ],
+      [
+       -53.667,
+       61.833
+      ],
+      [
+       -47.0,
+       59.25
+      ],
+      [
+       -44.25,
+       58.917
+      ],
+      [
+       -41.667,
+       59.417
+      ],
+      [
+       -36.833,
+       64.417
+      ],
+      [
+       -28.0,
+       65.0
+      ]
      ]
     ]
    },
@@ -225,7 +443,7 @@
    "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV BY M/V FUGRO DISCOVERY WITHIN 500 METERS OF TRACKLINE JOINING 29-28.60N 081-01.60W, 29-27.60N 080-35.73W.",
    "text": "NORTH ATLANTIC.\nFLORIDA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV\n   BY M/V FUGRO DISCOVERY WITHIN 500 METERS OF\n   TRACKLINE JOINING 29-28.60N 081-01.60W,\n   29-27.60N 080-35.73W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 270001Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -81.027,
@@ -237,7 +455,10 @@
      ]
     ]
    },
-   "cancel_at": "2026-11-27T00:01:00Z"
+   "cancel_at": "2026-11-27T00:01:00Z",
+   "corridor_half_width_m": [
+    500.0
+   ]
   },
   {
    "id": "4-1090-2026",
@@ -377,7 +598,7 @@
    "headline": "UNDERWATER OPERATIONS IN PROGRESS UNTIL 072100Z DEC BY M/V HOS WARLAND ALONG TRACKLINE JOINING 10-05.80N 060-08.20W, 10-21.91N 060-36.22W, 10-07.32N 060-18.67W.",
    "text": "NORTH ATLANTIC.\nTRINIDAD AND TOBAGO.\n1. UNDERWATER OPERATIONS IN PROGRESS\n   UNTIL 072100Z DEC BY M/V HOS WARLAND\n   ALONG TRACKLINE JOINING\n   10-05.80N 060-08.20W, 10-21.91N 060-36.22W,\n   10-07.32N 060-18.67W.\n   500 METER BERTH REQUESTED.\n2. CANCEL NAVAREA IV 1008/26.\n3. CANCEL THIS MSG 072200Z DEC 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -60.137,
@@ -843,7 +1064,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE ALONG TRACKLINE JOINING 10-40.23N 063-15.13W, 10-42.82N 063-15.05W.",
    "text": "CARIBBEAN SEA.\nVENEZUELA.\nCABLE OPERATIONS IN PROGRESS\nUNTIL FURTHER NOTICE ALONG TRACKLINE JOINING\n10-40.23N 063-15.13W, 10-42.82N 063-15.05W.\nWIDE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -63.252,
@@ -909,7 +1130,7 @@
    "sea": null,
    "place": null,
    "headline": "NAVAREA IV MOBILE OFFSHORE DRILLING UNITS POSITIONS AT 051700Z NOV",
-   "text": "1. NAVAREA IV MOBILE OFFSHORE DRILLING UNITS\n   POSITIONS AT 051700Z NOV:\n   A. AGOSTO 12 19-23.0N 092-03.1W.\n   B. ARGOS PLATFORM 27-10.4N 090-22.0W.\n   C. ATLANTIS 19-23.9N 092-02.3W.\n   D. AUGER TLP 27-32.7N 092-26.6W.\n   E. BLUE EAGLE 18-31.8N 093-20.3W.\n   F. BORR RAN 18-20.4N 093-53.6W.\n   G. BORR SIF 07-08.3N 055-41.1W.\n   H. BP ATLANTIS PLATFORM 27-11.7N 090-01.6W.\n   I. CAMPECHE 19-33.7N 092-11.0W.\n   J. CENTENARIO GR 21-07.7N 097-08.1W.\n   K. CHIHUAHUA 19-17.7N 091-57.5W.\n   L. CME I 19-34.6N 092-02.7W.\n   M. CME II 18-34.4N 092-46.2W.\n   N. COATZACOALCOS 18-14.0N 094-12.9W.\n   O. CPOC MAGNOLIA 27-12.2N 092-12.2W.\n   P. DEEPWATER ATLAS 26-40.1N 091-33.5W.\n   Q. DEEPWATER CONQUEROR 27-19.0N 090-45.1W.\n   R. DEEPWATER INVICTUS 26-40.7N 092-34.6W.\n   S. DEEPWATER PONTUS 28-00.4N 089-09.7W.\n   T. DEEPWATER POSEIDON 26-10.5N 094-46.4W.\n   U. DEEPWATER PROTEUS 27-32.0N 090-09.9W.\n   V. DEEPWATER THALASSA 25-45.0N 095-24.3W.\n   W. DEEPWATER TITAN 27-09.1N 091-12.7W.\n   X. DEFENDER 18-28.6N 094-01.9W.\n   Y. DEVELOPMENT DRILLER III 10-38.5N 061-39.0W.\n   Z. ERREA WITTU 07-59.5N 056-49.5W.\n   AA. ESSAR WILDCAT 18-51.5N 091-45.7W.\n   AB. FRIDA I 19-36.1N 092-31.6W.\n   AC. GALAR 18-44.5N 093-07.2W.\n   AD. GERSEMI 19-02.5N 092-14.8W.\n   AE. (NEW POSITION) GULF DRILLER VI\n       18-29.3N 093-20.6W.\n   AF. GULF DRILLER VIII 18-29.9N 094-00.4W.\n   AG. HILD 18-49.0N 091-46.0W.\n   AH. INDEPENDENCIA 1 19-02.5N 092-26.6W.\n   AI. INDEPENDENCIA 2 12-23.2N 070-08.5W.\n   AJ. IOLAIR 19-36.0N 092-14.1W.\n   AK. JACK ST MALO 26-14.1N 091-15.7W.\n   AL. JOE DOUGLAS 09-59.9N 060-31.9W.\n   AM. KUKULKAN 18-16.4N 094-03.6W.\n   AN. LA COVADONGA 19-29.3N 091-57.9W.\n   AO. LA SANTA MARIA 18-36.8N 093-17.7W.\n   AP. LIZA DESTINY 08-00.7N 056-59.5W.\n   AQ. LIZA UNITY 08-00.6N 056-54.9W.\n   AR. MAD DOG 27-11.3N 090-16.1W.\n   AS. MARLIN TLP 29-06.5N 087-56.7W.\n   AT. MARS TLP 28-10.4N 089-13.4W.\n   AU. MAZU 18-18.9N 093-49.6W.\n   AV. MIAMTE MV34 18-24.3N 093-46.2W.\n   AW. NABARIMA 10-14.8N 062-09.",
+   "text": "1. NAVAREA IV MOBILE OFFSHORE DRILLING UNITS\n   POSITIONS AT 051700Z NOV:\n   A. AGOSTO 12 19-23.0N 092-03.1W.\n   B. ARGOS PLATFORM 27-10.4N 090-22.0W.\n   C. ATLANTIS 19-23.9N 092-02.3W.\n   D. AUGER TLP 27-32.7N 092-26.6W.\n   E. BLUE EAGLE 18-31.8N 093-20.3W.\n   F. BORR RAN 18-20.4N 093-53.6W.\n   G. BORR SIF 07-08.3N 055-41.1W.\n   H. BP ATLANTIS PLATFORM 27-11.7N 090-01.6W.\n   I. CAMPECHE 19-33.7N 092-11.0W.\n   J. CENTENARIO GR 21-07.7N 097-08.1W.\n   K. CHIHUAHUA 19-17.7N 091-57.5W.\n   L. CME I 19-34.6N 092-02.7W.\n   M. CME II 18-34.4N 092-46.2W.\n   N. COATZACOALCOS 18-14.0N 094-12.9W.\n   O. CPOC MAGNOLIA 27-12.2N 092-12.2W.\n   P. DEEPWATER ATLAS 26-40.1N 091-33.5W.\n   Q. DEEPWATER CONQUEROR 27-19.0N 090-45.1W.\n   R. DEEPWATER INVICTUS 26-40.7N 092-34.6W.\n   S. DEEPWATER PONTUS 28-00.4N 089-09.7W.\n   T. DEEPWATER POSEIDON 26-10.5N 094-46.4W.\n   U. DEEPWATER PROTEUS 27-32.0N 090-09.9W.\n   V. DEEPWATER THALASSA 25-45.0N 095-24.3W.\n   W. DEEPWATER TITAN 27-09.1N 091-12.7W.\n   X. DEFENDER 18-28.6N 094-01.9W.\n   Y. DEVELOPMENT DRILLER III 10-38.5N 061-39.0W.\n   Z. ERREA WITTU 07-59.5N 056-49.5W.\n   AA. ESSAR WILDCAT 18-51.5N 091-45.7W.\n   AB. FRIDA I 19-36.1N 092-31.6W.\n   AC. GALAR 18-44.5N 093-07.2W.\n   AD. GERSEMI 19-02.5N 092-14.8W.\n   AE. (NEW POSITION) GULF DRILLER VI\n       18-29.3N 093-20.6W.\n   AF. GULF DRILLER VIII 18-29.9N 094-00.4W.\n   AG. HILD 18-49.0N 091-46.0W.\n   AH. INDEPENDENCIA 1 19-02.5N 092-26.6W.\n   AI. INDEPENDENCIA 2 12-23.2N 070-08.5W.\n   AJ. IOLAIR 19-36.0N 092-14.1W.\n   AK. JACK ST MALO 26-14.1N 091-15.7W.\n   AL. JOE DOUGLAS 09-59.9N 060-31.9W.\n   AM. KUKULKAN 18-16.4N 094-03.6W.\n   AN. LA COVADONGA 19-29.3N 091-57.9W.\n   AO. LA SANTA MARIA 18-36.8N 093-17.7W.\n   AP. LIZA DESTINY 08-00.7N 056-59.5W.\n   AQ. LIZA UNITY 08-00.6N 056-54.9W.\n   AR. MAD DOG 27-11.3N 090-16.1W.\n   AS. MARLIN TLP 29-06.5N 087-56.7W.\n   AT. MARS TLP 28-10.4N 089-13.4W.\n   AU. MAZU 18-18.9N 093-49.6W.\n   AV. MIAMTE MV34 18-24.3N 093-46.2W.\n   AW. NABARIMA 10-14.8N 062-09.0W.\n   AX. NFE PIONEER III 22-39.2N 097-40.8W.\n   AY. NJORD 19-15.9N 092-26.2W.\n   AZ. NOBLE BLACKHAWK 29-05.1N 087-57.6W.\n   AAA. NOBLE BLACKHORNET 27-13.4N 090-01.9W.\n   AAB. NOBLE BLACKLION 27-08.8N 090-19.1W.\n   AAC. NOBLE DEVELOPER 07-16.7N 055-47.1W.\n   AAD. (NEW POSITION) NOBLE DON TAYLOR\n        07-56.0N 056-40.2W.\n   AAE. NOBLE GLOBETROTTER II 28-51.4N 090-07.4W.\n   AAF. NOBLE SAM CROFT 07-59.6N 056-42.4W.\n   AAG. (NEW POSITION) NOBLE STANLEY LAFOSSE\n        27-28.5N 089-53.5W.\n   AAH. NOBLE TOM MADDEN 07-52.1N 056-39.5W.\n   AAI. NOBLE VOYAGER 28-10.7N 089-07.0W.\n   AAJ. OLYMPUS N88 28-09.6N 089-12.8W.\n   AAK. ONE GUYANA 07-57.4N 056-43.0W.\n   AAL. PAPALOAPAN 19-33.4N 092-12.9W.\n   AAM. PERRO NEGRO 10 18-20.2N 093-52.2W.\n   AAN. PIONEER 26-41.7N 090-30.6W.\n   AAO. PROSPERITY 08-11.7N 057-00.2W.\n   AAP. Q4000 28-34.1N 088-15.4W.\n   AAQ. Q5000 27-28.5N 090-33.4W.\n   AAR. (NEW POSITION) RALPH COFFMAN\n        10-14.8N 060-30.9W.\n   AAS. ROWAN RELENTLESS 07-34.5N 055-27.2W.\n   AAT. SANDUNGA 18-52.9N 091-49.0W.\n   AAU. SEAROSE FPSO 46-47.2N 048-00.8W.\n   AAV. SEVAN LOUISIANA 28-39.9N 090-01.8W.\n   AAW. SHELL WHALE 26-13.4N 094-40.4W.\n   AAX. STENA CARRON 08-06.6N 056-56.5W.\n   AAY. TABASCO 19-35.5N 092-16.3W.\n   AAZ. TAHITI SPAR 27-19.6N 090-42.9W.\n   AAAA. TERRA NOVA 46-28.3N 048-27.9W.\n   AAAB. THUNDER HORSE PDQ 28-11.4N 088-29.7W.\n   AAAC. TURRITELLA 26-25.7N 090-48.8W.\n   AAAD. TUXPAN 18-45.8N 091-45.7W.\n   AAAE. UXPANAPA 18-32.4N 093-17.7W.\n   AAAF. VALARIS DS-16 29-04.5N 087-55.6W.\n   AAAG. VITO FPU 28-01.5N 089-12.6W.\n   AAAH. WEST COURAGEOUS 19-10.3N 092-25.7W.\n   AAAI. WEST INTREPID 19-34.6N 092-02.8W.\n   AAAJ. WEST NEPTUNE 26-14.5N 092-22.7W.\n   AAAK. WEST VELA 26-19.2N 092-38.7W.\n   AAAL. WFD 400 28-41.0N 090-08.9W.\n   AAAM. YUNUEN 19-32.4N 092-10.5W.\n   AAAN. YUUM K'AK' NAAB 19-36.7N 092-17.9W.\n   AAAO. ZACATECAS 19-29.1N 091-57.1W.\n2. TO REPORT A MOBILE OFFSHORE DRILLING UNIT AS\n   PER IMO RESOLUTION A.1023(26), PARAGRAPH 11.5.1,\n   CONTACT NAVSAFETY@NGA.MIL SUBJ: MODU REPORT.\n3. CANCEL NAVAREA IV 1043/26.",
    "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -4478,13 +4699,148 @@
    "headline": "HAZARDOUS OPERATIONS 181600Z TO 182300Z NOV IN AREA WITHIN ONE MILE OF 32-35.82N 117-10.88W.",
    "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 181600Z TO 182300Z NOV\n   IN AREA WITHIN ONE MILE OF 32-35.82N 117-10.88W.\n2. CANCEL THIS MSG 190001Z NOV 26.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     -117.181,
-     32.597
+     [
+      [
+       -117.181,
+       32.6137
+      ],
+      [
+       -117.1771,
+       32.6133
+      ],
+      [
+       -117.1734,
+       32.6124
+      ],
+      [
+       -117.17,
+       32.6108
+      ],
+      [
+       -117.167,
+       32.6088
+      ],
+      [
+       -117.1646,
+       32.6063
+      ],
+      [
+       -117.1627,
+       32.6034
+      ],
+      [
+       -117.1616,
+       32.6002
+      ],
+      [
+       -117.1612,
+       32.597
+      ],
+      [
+       -117.1616,
+       32.5938
+      ],
+      [
+       -117.1627,
+       32.5906
+      ],
+      [
+       -117.1646,
+       32.5877
+      ],
+      [
+       -117.167,
+       32.5852
+      ],
+      [
+       -117.17,
+       32.5832
+      ],
+      [
+       -117.1734,
+       32.5816
+      ],
+      [
+       -117.1771,
+       32.5807
+      ],
+      [
+       -117.181,
+       32.5803
+      ],
+      [
+       -117.1849,
+       32.5807
+      ],
+      [
+       -117.1886,
+       32.5816
+      ],
+      [
+       -117.192,
+       32.5832
+      ],
+      [
+       -117.195,
+       32.5852
+      ],
+      [
+       -117.1974,
+       32.5877
+      ],
+      [
+       -117.1993,
+       32.5906
+      ],
+      [
+       -117.2004,
+       32.5938
+      ],
+      [
+       -117.2008,
+       32.597
+      ],
+      [
+       -117.2004,
+       32.6002
+      ],
+      [
+       -117.1993,
+       32.6034
+      ],
+      [
+       -117.1974,
+       32.6063
+      ],
+      [
+       -117.195,
+       32.6088
+      ],
+      [
+       -117.192,
+       32.6108
+      ],
+      [
+       -117.1886,
+       32.6124
+      ],
+      [
+       -117.1849,
+       32.6133
+      ],
+      [
+       -117.181,
+       32.6137
+      ]
+     ]
     ]
    },
-   "cancel_at": "2026-11-19T00:01:00Z"
+   "cancel_at": "2026-11-19T00:01:00Z",
+   "radius_m": [
+    1852
+   ]
   },
   {
    "id": "12-801-2026",
@@ -4689,7 +5045,7 @@
    "sea": "North Pacific",
    "place": "California",
    "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 2345Z TO 0355Z DAILY 16 THRU 28 NOV IN AREAS BOUND BY",
-   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   2345Z TO 0355Z DAILY 16 THRU 28 NOV\n   IN AREAS BOUND BY:\n   A. 33-47.00N 119-15.00W, 33-45.00N 119-18.00W,\n      33-36.00N 119-18.00W, 33-33.00N 119-14.00W,\n      33-33.00N 119-07.00W, 33-37.00N 119-02.00W,\n      33-45.00N 119-02.00W, 33-47.00N 119-05.00W.\n   B. 38-19.00N 125-59.00W, 38-57.00N 128-05.00W,\n      41-11.00N 132-05.00W, 44-07.00N 138-25.00W,\n      45-30.00N 137-21.00W, 42-30.00N 130-55.00W,\n      40-13.00N 126-53.00W, 38-44.00N 125-34.00W.\n   C. 28-16.00N 124-55.00W, 26-39.00N 125-48.00W,\n      23-48.00N 128-35.00W, 19-33.00N 132-24.00W,\n      20-36.00N 133-39.00W, 24-52.00N 129-51.00W,\n      27-45.00N 127-03.00W, 28-39.00N 125-21.00W.\n   D. 33-07.00N 117-50.00W, 33-05.00N 117-54.00W,\n      32-56.00N 117-54.00W, 32-53.00N 117-50.00W,\n      32-53.00N 117-43.00W, 32-57.00N 117-38.00W,\n      33-05.00N 117-38.00W, 33-07.00N 117-41.00W.\n   E. 37-42.00N 124-28.00W, 38-22.00N 126-32.00W,\n      40-39.00N 130-29.00W, 43-38.00N 136-41.00W,\n      45-00.00N 135-36.00W, 41-57.00N 129-19.00W,\n      39-37.00N 125-20.00W, 38-08.00N 124-03.00W.\n   F. 27-33.00N 123-25.00W, 25-56.00N 124-17.00W,\n      23-04.00N 127-02.00W, 18-48.00N 130-48.00W,\n      19-51.00N 132-03.00W, 24-08.00N 128-18.00W,\n      27-02.00N 125-32.00W, 27-56.00N 123-51.00W.\n   G. 32-42.00N 117-48.00W, 32-40.00N 117-51.00W,\n      32-31.00N 117-51.00W, 32-28.00N 117-47.00W,\n      32-28.00N 117-40.00W, 32-32.00N 117-35.00W,\n      32-40.00N 117-35.00W, 32-42.00N 117-38.00W.\n   H. 37-20.00N 124-21.00W, 38-00.00N 126-25.00W,\n      40-18.00N 130-19.00W, 43-20.00N 136-27.00W,\n      44-42.00N 135-21.00W, 41-36.00N 129-08.00W,\n      39-15.00N 125-12.00W, 37-45.00N 123-56.00W.\n   I. 27-07.00N 123-19.00W, 25-30.00N 124-10.00W,\n      22-37.00N 126-54.00W, 18-21.00N 130-39.00W,\n      19-23.00N 131-54.00W, 23-41.00N 128-10.00W,\n      26-35.00N 125-45.00W, 27-30.00N 123-45.00W.\n   J. 20-36.00N 133-39.00W, 24-52.00N 129-51.00W,\n      27-45.00N 127-03.0",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   2345Z TO 0355Z DAILY 16 THRU 28 NOV\n   IN AREAS BOUND BY:\n   A. 33-47.00N 119-15.00W, 33-45.00N 119-18.00W,\n      33-36.00N 119-18.00W, 33-33.00N 119-14.00W,\n      33-33.00N 119-07.00W, 33-37.00N 119-02.00W,\n      33-45.00N 119-02.00W, 33-47.00N 119-05.00W.\n   B. 38-19.00N 125-59.00W, 38-57.00N 128-05.00W,\n      41-11.00N 132-05.00W, 44-07.00N 138-25.00W,\n      45-30.00N 137-21.00W, 42-30.00N 130-55.00W,\n      40-13.00N 126-53.00W, 38-44.00N 125-34.00W.\n   C. 28-16.00N 124-55.00W, 26-39.00N 125-48.00W,\n      23-48.00N 128-35.00W, 19-33.00N 132-24.00W,\n      20-36.00N 133-39.00W, 24-52.00N 129-51.00W,\n      27-45.00N 127-03.00W, 28-39.00N 125-21.00W.\n   D. 33-07.00N 117-50.00W, 33-05.00N 117-54.00W,\n      32-56.00N 117-54.00W, 32-53.00N 117-50.00W,\n      32-53.00N 117-43.00W, 32-57.00N 117-38.00W,\n      33-05.00N 117-38.00W, 33-07.00N 117-41.00W.\n   E. 37-42.00N 124-28.00W, 38-22.00N 126-32.00W,\n      40-39.00N 130-29.00W, 43-38.00N 136-41.00W,\n      45-00.00N 135-36.00W, 41-57.00N 129-19.00W,\n      39-37.00N 125-20.00W, 38-08.00N 124-03.00W.\n   F. 27-33.00N 123-25.00W, 25-56.00N 124-17.00W,\n      23-04.00N 127-02.00W, 18-48.00N 130-48.00W,\n      19-51.00N 132-03.00W, 24-08.00N 128-18.00W,\n      27-02.00N 125-32.00W, 27-56.00N 123-51.00W.\n   G. 32-42.00N 117-48.00W, 32-40.00N 117-51.00W,\n      32-31.00N 117-51.00W, 32-28.00N 117-47.00W,\n      32-28.00N 117-40.00W, 32-32.00N 117-35.00W,\n      32-40.00N 117-35.00W, 32-42.00N 117-38.00W.\n   H. 37-20.00N 124-21.00W, 38-00.00N 126-25.00W,\n      40-18.00N 130-19.00W, 43-20.00N 136-27.00W,\n      44-42.00N 135-21.00W, 41-36.00N 129-08.00W,\n      39-15.00N 125-12.00W, 37-45.00N 123-56.00W.\n   I. 27-07.00N 123-19.00W, 25-30.00N 124-10.00W,\n      22-37.00N 126-54.00W, 18-21.00N 130-39.00W,\n      19-23.00N 131-54.00W, 23-41.00N 128-10.00W,\n      26-35.00N 125-45.00W, 27-30.00N 123-45.00W.\n   J. 20-36.00N 133-39.00W, 24-52.00N 129-51.00W,\n      27-45.00N 127-03.00W, 28-39.00N 125-24.00W,\n      28-16.00N 124-55.00W, 27-56.00N 123-51.00W,\n      27-33.00N 123-25.00W, 27-07.00N 123-19.00W,\n      25-30.00N 124-10.00W, 22-37.00N 126-54.00W,\n      18-21.00N 130-39.00W, 19-23.00N 131-54.00W,\n      19-33.00N 132-24.00W.\n   K. 44-07.00N 138-25.00W, 45-30.00N 137-21.00W,\n      45-00.00N 135-36.00W, 41-57.00N 129-19.00W,\n      39-37.00N 125-20.00W, 38-08.00N 124-03.00W,\n      37-45.00N 123-56.00W, 37-20.00N 124-21.00W,\n      38-00.00N 126-25.00W, 38-57.00N 128-05.00W,\n      41-11.00N 132-05.00W.\n2. CANCEL THIS MSG 290455Z NOV 26.",
    "geometry": {
     "type": "MultiPolygon",
     "coordinates": [
@@ -5366,23 +5722,27 @@
    "headline": "CABLE OPERATIONS 110600Z NOV UNTIL FURTHER NOTICE BY M/V GRACE ALONG TRACKLINES JOINING",
    "text": "NORTH PACIFIC.\nCABLE OPERATIONS 110600Z NOV UNTIL FURTHER\nNOTICE BY M/V GRACE ALONG TRACKLINES JOINING:\nA. 39-46.36N 126-20.51W, 39-26.18N 126-11.86W.\nB. 39-46.36N 126-20.51W, 40-06.66N 126-29.70W.\nTWO MILE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      -126.342,
-      39.773
+      [
+       -126.342,
+       39.773
+      ],
+      [
+       -126.198,
+       39.436
+      ]
      ],
      [
-      -126.198,
-      39.436
-     ],
-     [
-      -126.342,
-      39.773
-     ],
-     [
-      -126.495,
-      40.111
+      [
+       -126.342,
+       39.773
+      ],
+      [
+       -126.495,
+       40.111
+      ]
      ]
     ]
    },
@@ -5490,59 +5850,59 @@
        31.167
       ],
       [
-       -175.017,
+       184.983,
        31.267
       ],
       [
-       -171.45,
+       188.55,
        31.35
       ],
       [
-       -161.25,
+       198.75,
        30.55
       ],
       [
-       -155.667,
+       204.333,
        29.617
       ],
       [
-       -151.583,
+       208.417,
        28.817
       ],
       [
-       -145.433,
+       214.567,
        26.883
       ],
       [
-       -145.467,
+       214.533,
        26.833
       ],
       [
-       -154.533,
+       205.467,
        24.05
       ],
       [
-       -156.183,
+       203.817,
        23.767
       ],
       [
-       -159.317,
+       200.683,
        24.867
       ],
       [
-       -167.817,
+       192.183,
        27.633
       ],
       [
-       -175.0,
+       185.0,
        29.383
       ],
       [
-       -176.6,
+       183.4,
        29.583
       ],
       [
-       -179.967,
+       180.033,
        29.617
       ],
       [
@@ -5615,55 +5975,55 @@
        22.717
       ],
       [
-       -176.217,
+       183.783,
        24.85
       ],
       [
-       -173.333,
+       186.667,
        25.883
       ],
       [
-       -171.033,
+       188.967,
        26.067
       ],
       [
-       -161.233,
+       198.767,
        28.517
       ],
       [
-       -150.267,
+       209.733,
        30.55
       ],
       [
-       -150.25,
+       209.75,
        29.383
       ],
       [
-       -153.817,
+       206.183,
        26.017
       ],
       [
-       -154.9,
+       205.1,
        24.767
       ],
       [
-       -157.767,
+       202.233,
        25.4
       ],
       [
-       -161.7,
+       198.3,
        24.9
       ],
       [
-       -168.533,
+       191.467,
        23.183
       ],
       [
-       -173.133,
+       186.867,
        22.133
       ],
       [
-       -179.117,
+       180.883,
        20.2
       ],
       [
@@ -5769,7 +6129,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY CABLESHIP ILE DE SEIN ALONG TRACKLINE JOINING 39-00.00N 123-45.00W, 38-58.00N 124-30.00W, 37-38.00N 127-48.",
    "text": "NORTH PACIFIC.\nCALIFORNIA.\nCABLE OPERATIONS IN PROGRESS UNTIL FURTHER\nNOTICE BY CABLESHIP ILE DE SEIN\nALONG TRACKLINE JOINING\n39-00.00N 123-45.00W, 38-58.00N 124-30.00W,\n37-38.00N 127-48.00W, 37-23.00N 128-16.00W.\nWIDE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -123.75,
@@ -6228,7 +6588,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE IN VICINITY OF TRACKLINE JOINING 02-01.46N 157-29.67W, 02-01.45N 157-29.69W, 02-01.45N 157-29.72W, 02-01.42N 1",
    "text": "EASTERN NORTH PACIFIC.\nKIRIBATI.\nCABLE OPERATIONS IN PROGRESS UNTIL FURTHER\nNOTICE IN VICINITY OF TRACKLINE JOINING\n02-01.46N 157-29.67W, 02-01.45N 157-29.69W,\n02-01.45N 157-29.72W, 02-01.42N 157-29.82W,\n02-01.36N 157-30.04W, 02-01.22N 157-30.29W,\n02-00.20N 157-32.23W.\n100 METER BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -157.494,
@@ -6483,13 +6843,148 @@
    "headline": "HAZARDOUS OPERATIONS 0700Z TO 1900Z DAILY 17 THRU 20 NOV IN AREA WITHIN 26 MILES OF 57-27.00N 008-16.00W.",
    "text": "NORTH ATLANTIC.\nSCOTLAND.\n1. HAZARDOUS OPERATIONS 0700Z TO 1900Z\n   DAILY 17 THRU 20 NOV IN AREA WITHIN\n   26 MILES OF 57-27.00N 008-16.00W.\n2. CANCEL HYDROLANT 2232/26.\n3. CANCEL THIS MSG 202000Z NOV 26.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     -8.267,
-     57.45
+     [
+      [
+       -8.267,
+       57.883
+      ],
+      [
+       -8.11,
+       57.8747
+      ],
+      [
+       -7.959,
+       57.8501
+      ],
+      [
+       -7.8198,
+       57.8101
+      ],
+      [
+       -7.6979,
+       57.7562
+      ],
+      [
+       -7.5978,
+       57.6906
+      ],
+      [
+       -7.5234,
+       57.6157
+      ],
+      [
+       -7.4776,
+       57.5345
+      ],
+      [
+       -7.4621,
+       57.45
+      ],
+      [
+       -7.4776,
+       57.3655
+      ],
+      [
+       -7.5234,
+       57.2843
+      ],
+      [
+       -7.5978,
+       57.2094
+      ],
+      [
+       -7.6979,
+       57.1438
+      ],
+      [
+       -7.8198,
+       57.0899
+      ],
+      [
+       -7.959,
+       57.0499
+      ],
+      [
+       -8.11,
+       57.0253
+      ],
+      [
+       -8.267,
+       57.017
+      ],
+      [
+       -8.424,
+       57.0253
+      ],
+      [
+       -8.575,
+       57.0499
+      ],
+      [
+       -8.7142,
+       57.0899
+      ],
+      [
+       -8.8361,
+       57.1438
+      ],
+      [
+       -8.9362,
+       57.2094
+      ],
+      [
+       -9.0106,
+       57.2843
+      ],
+      [
+       -9.0564,
+       57.3655
+      ],
+      [
+       -9.0719,
+       57.45
+      ],
+      [
+       -9.0564,
+       57.5345
+      ],
+      [
+       -9.0106,
+       57.6157
+      ],
+      [
+       -8.9362,
+       57.6906
+      ],
+      [
+       -8.8361,
+       57.7562
+      ],
+      [
+       -8.7142,
+       57.8101
+      ],
+      [
+       -8.575,
+       57.8501
+      ],
+      [
+       -8.424,
+       57.8747
+      ],
+      [
+       -8.267,
+       57.883
+      ]
+     ]
     ]
    },
-   "cancel_at": "2026-11-20T20:00:00Z"
+   "cancel_at": "2026-11-20T20:00:00Z",
+   "radius_m": [
+    48152.0
+   ]
   },
   {
    "id": "A-2273-2026",
@@ -6574,159 +7069,163 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 19 MAR 27 BY M/V ABEILLE MARENGO ALONG TRACKLINES JOINING",
    "text": "EASTERN MEDITERRANEAN SEA.\n1. CABLE OPERATIONS IN PROGRESS UNTIL\n   19 MAR 27 BY M/V ABEILLE MARENGO\n   ALONG TRACKLINES JOINING:\n   A. 35-20.46N 027-15.61E, 35-19.85N 027-25.20E,\n      35-13.14N 027-35.10E, 35-01.94N 027-42.89E,\n      34-47.85N 028-10.04E, 34-42.47N 028-40.81E,\n      34-26.64N 029-25.47E, 34-23.31N 029-32.66E,\n      34-17.27N 029-52.26E, 34-11.80N 029-58.14E,\n      34-11.30N 030-05.12E, 34-11.39N 030-10.16E,\n      34-14.77N 030-22.77E, 34-16.58N 030-47.94E,\n      34-16.21N 031-01.50E, 34-12.98N 031-58.64E,\n      34-11.33N 032-12.28E, 34-11.59N 032-16.26E.\n   B. 35-19.06N 027-15.23E, 35-18.46N 027-24.34E,\n      35-12.52N 027-33.34E, 35-00.55N 027-40.43E,\n      34-45.86N 028-08.84E, 34-40.75N 028-39.87E,\n      34-25.15N 029-24.13E, 34-21.91N 029-31.56E,\n      34-16.29N 029-50.62E, 34-10.31N 029-56.42E,\n      34-08.69N 030-03.04E, 34-09.16N 030-08.66E,\n      34-09.41N 030-12.39E, 34-11.58N 030-25.77E,\n      34-12.79N 030-44.83E, 34-13.69N 030-55.76E,\n      34-13.60N 031-07.73E, 34-12.80N 031-21.45E,\n      34-11.13N 031-31.70E, 34-08.16N 032-15.96E.\n   TWO MILE BERTH REQUESTED.\n2. CANCEL THIS MSG 200001Z MAR 27.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      27.26,
-      35.341
+      [
+       27.26,
+       35.341
+      ],
+      [
+       27.42,
+       35.331
+      ],
+      [
+       27.585,
+       35.219
+      ],
+      [
+       27.715,
+       35.032
+      ],
+      [
+       28.167,
+       34.797
+      ],
+      [
+       28.68,
+       34.708
+      ],
+      [
+       29.424,
+       34.444
+      ],
+      [
+       29.544,
+       34.389
+      ],
+      [
+       29.871,
+       34.288
+      ],
+      [
+       29.969,
+       34.197
+      ],
+      [
+       30.085,
+       34.188
+      ],
+      [
+       30.169,
+       34.19
+      ],
+      [
+       30.38,
+       34.246
+      ],
+      [
+       30.799,
+       34.276
+      ],
+      [
+       31.025,
+       34.27
+      ],
+      [
+       31.977,
+       34.216
+      ],
+      [
+       32.205,
+       34.189
+      ],
+      [
+       32.271,
+       34.193
+      ]
      ],
      [
-      27.42,
-      35.331
-     ],
-     [
-      27.585,
-      35.219
-     ],
-     [
-      27.715,
-      35.032
-     ],
-     [
-      28.167,
-      34.797
-     ],
-     [
-      28.68,
-      34.708
-     ],
-     [
-      29.424,
-      34.444
-     ],
-     [
-      29.544,
-      34.389
-     ],
-     [
-      29.871,
-      34.288
-     ],
-     [
-      29.969,
-      34.197
-     ],
-     [
-      30.085,
-      34.188
-     ],
-     [
-      30.169,
-      34.19
-     ],
-     [
-      30.38,
-      34.246
-     ],
-     [
-      30.799,
-      34.276
-     ],
-     [
-      31.025,
-      34.27
-     ],
-     [
-      31.977,
-      34.216
-     ],
-     [
-      32.205,
-      34.189
-     ],
-     [
-      32.271,
-      34.193
-     ],
-     [
-      27.254,
-      35.318
-     ],
-     [
-      27.406,
-      35.308
-     ],
-     [
-      27.556,
-      35.209
-     ],
-     [
-      27.674,
-      35.009
-     ],
-     [
-      28.147,
-      34.764
-     ],
-     [
-      28.665,
-      34.679
-     ],
-     [
-      29.402,
-      34.419
-     ],
-     [
-      29.526,
-      34.365
-     ],
-     [
-      29.844,
-      34.272
-     ],
-     [
-      29.94,
-      34.172
-     ],
-     [
-      30.051,
-      34.145
-     ],
-     [
-      30.144,
-      34.153
-     ],
-     [
-      30.206,
-      34.157
-     ],
-     [
-      30.43,
-      34.193
-     ],
-     [
-      30.747,
-      34.213
-     ],
-     [
-      30.929,
-      34.228
-     ],
-     [
-      31.129,
-      34.227
-     ],
-     [
-      31.358,
-      34.213
-     ],
-     [
-      31.528,
-      34.185
-     ],
-     [
-      32.266,
-      34.136
+      [
+       27.254,
+       35.318
+      ],
+      [
+       27.406,
+       35.308
+      ],
+      [
+       27.556,
+       35.209
+      ],
+      [
+       27.674,
+       35.009
+      ],
+      [
+       28.147,
+       34.764
+      ],
+      [
+       28.665,
+       34.679
+      ],
+      [
+       29.402,
+       34.419
+      ],
+      [
+       29.526,
+       34.365
+      ],
+      [
+       29.844,
+       34.272
+      ],
+      [
+       29.94,
+       34.172
+      ],
+      [
+       30.051,
+       34.145
+      ],
+      [
+       30.144,
+       34.153
+      ],
+      [
+       30.206,
+       34.157
+      ],
+      [
+       30.43,
+       34.193
+      ],
+      [
+       30.747,
+       34.213
+      ],
+      [
+       30.929,
+       34.228
+      ],
+      [
+       31.129,
+       34.227
+      ],
+      [
+       31.358,
+       34.213
+      ],
+      [
+       31.528,
+       34.185
+      ],
+      [
+       32.266,
+       34.136
+      ]
      ]
     ]
    },
@@ -7049,7 +7548,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC BY M/V REBECCA ALONG TRACKLINE JOINING 27-19.68S 007-56.75E, 21-05.60S 000-05.18W.",
    "text": "SOUTH ATLANTIC.\n1. CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC\n   BY M/V REBECCA ALONG TRACKLINE JOINING\n   27-19.68S 007-56.75E, 21-05.60S 000-05.18W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 160001Z DEC 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       7.946,
@@ -7384,123 +7883,127 @@
    "headline": "UNDERWATER OPERATIONS 05 NOV THRU 15 FEB BY M/V BRITOIL CENTURION ALONG TRACKLINES JOINING",
    "text": "TYRRHENIAN SEA.\nSARDINIA.\n1. UNDERWATER OPERATIONS 05 NOV THRU 15 FEB\n   BY M/V BRITOIL CENTURION ALONG\n   TRACKLINES JOINING:\n   A. 42-11.71N 009-59.77E, 41-55.46N 010-06.57E,\n      41-48.92N 010-22.38E, 41-36.28N 010-32.81E,\n      41-18.76N 010-35.89E, 41-02.47N 010-42.35E,\n      40-51.51N 010-55.69E.\n   B. 41-24.53N 006-10.31E, 41-15.35N 006-42.29E,\n      41-04.44N 006-55.01E, 40-46.98N 006-58.88E,\n      40-29.05N 006-59.90E, 40-11.21N 007-01.86E,\n      39-53.53N 007-05.22E, 39-36.13N 007-09.84E,\n      39-23.90N 007-21.33E, 39-17.64N 007-32.11E,\n      39-07.24N 007-40.41E, 38-54.09N 007-44.94E,\n      38-47.21N 007-55.73E, 38-34.10N 008-08.81E,\n      38-24.40N 008-23.95E, 38-22.90N 008-37.25E,\n      38-27.20N 008-54.30E, 38-26.99N 009-12.30E,\n      38-27.61N 009-30.25E, 38-30.56N 009-53.98E,\n      38-25.97N 010-11.26E, 38-24.20N 010-30.11E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 160001Z FEB 27.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      9.996,
-      42.195
+      [
+       9.996,
+       42.195
+      ],
+      [
+       10.11,
+       41.924
+      ],
+      [
+       10.373,
+       41.815
+      ],
+      [
+       10.547,
+       41.605
+      ],
+      [
+       10.598,
+       41.313
+      ],
+      [
+       10.706,
+       41.041
+      ],
+      [
+       10.928,
+       40.858
+      ]
      ],
      [
-      10.11,
-      41.924
-     ],
-     [
-      10.373,
-      41.815
-     ],
-     [
-      10.547,
-      41.605
-     ],
-     [
-      10.598,
-      41.313
-     ],
-     [
-      10.706,
-      41.041
-     ],
-     [
-      10.928,
-      40.858
-     ],
-     [
-      6.172,
-      41.409
-     ],
-     [
-      6.705,
-      41.256
-     ],
-     [
-      6.917,
-      41.074
-     ],
-     [
-      6.981,
-      40.783
-     ],
-     [
-      6.998,
-      40.484
-     ],
-     [
-      7.031,
-      40.187
-     ],
-     [
-      7.087,
-      39.892
-     ],
-     [
-      7.164,
-      39.602
-     ],
-     [
-      7.356,
-      39.398
-     ],
-     [
-      7.535,
-      39.294
-     ],
-     [
-      7.673,
-      39.121
-     ],
-     [
-      7.749,
-      38.901
-     ],
-     [
-      7.929,
-      38.787
-     ],
-     [
-      8.147,
-      38.568
-     ],
-     [
-      8.399,
-      38.407
-     ],
-     [
-      8.621,
-      38.382
-     ],
-     [
-      8.905,
-      38.453
-     ],
-     [
-      9.205,
-      38.45
-     ],
-     [
-      9.504,
-      38.46
-     ],
-     [
-      9.9,
-      38.509
-     ],
-     [
-      10.188,
-      38.433
-     ],
-     [
-      10.502,
-      38.403
+      [
+       6.172,
+       41.409
+      ],
+      [
+       6.705,
+       41.256
+      ],
+      [
+       6.917,
+       41.074
+      ],
+      [
+       6.981,
+       40.783
+      ],
+      [
+       6.998,
+       40.484
+      ],
+      [
+       7.031,
+       40.187
+      ],
+      [
+       7.087,
+       39.892
+      ],
+      [
+       7.164,
+       39.602
+      ],
+      [
+       7.356,
+       39.398
+      ],
+      [
+       7.535,
+       39.294
+      ],
+      [
+       7.673,
+       39.121
+      ],
+      [
+       7.749,
+       38.901
+      ],
+      [
+       7.929,
+       38.787
+      ],
+      [
+       8.147,
+       38.568
+      ],
+      [
+       8.399,
+       38.407
+      ],
+      [
+       8.621,
+       38.382
+      ],
+      [
+       8.905,
+       38.453
+      ],
+      [
+       9.205,
+       38.45
+      ],
+      [
+       9.504,
+       38.46
+      ],
+      [
+       9.9,
+       38.509
+      ],
+      [
+       10.188,
+       38.433
+      ],
+      [
+       10.502,
+       38.403
+      ]
      ]
     ]
    },
@@ -7578,7 +8081,7 @@
    "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V X-16 ALONG TRACKLINE JOINING 53-31.30N 003-24.40W, 53-32.20N 003-30.00W, 53-31.50N 003-34.60W, 53-31.9",
    "text": "IRISH SEA.\nENGLAND.\nSURVEY OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE\nBY M/V X-16 ALONG TRACKLINE JOINING\n53-31.30N 003-24.40W, 53-32.20N 003-30.00W,\n53-31.50N 003-34.60W, 53-31.90N 003-35.70W,\n53-35.70N 003-40.00W.\nWIDE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       -3.407,
@@ -7746,207 +8249,211 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V KOBI RUEGG ALONG TRACKLINES JOINING",
    "text": "EASTERN MEDITERRANEAN SEA.\n1. CABLE OPERATIONS IN PROGRESS UNTIL\n   FURTHER NOTICE BY M/V KOBI RUEGG\n   ALONG TRACKLINES JOINING:\n   A. 33-52.69N 031-40.64E, 33-53.25N 031-39.63E,\n      34-07.00N 031-26.26E, 34-15.76N 031-22.46E,\n      34-25.90N 031-14.97E, 34-38.63N 031-03.99E,\n      34-41.88N 030-57.11E, 34-43.23N 030-46.80E,\n      34-45.50N 030-09.43E, 34-49.61N 029-43.56E,\n      34-49.45N 029-35.24E, 34-46.10N 029-28.47E,\n      34-45.82N 029-14.53E, 34-46.98N 029-02.24E,\n      34-49.21N 028-45.52E, 34-42.70N 028-22.87E,\n      34-29.57N 027-52.13E, 34-17.90N 027-27.64E,\n      34-16.33N 027-03.89E, 34-11.53N 026-32.40E.\n   B. 33-48.39N 032-16.30E, 33-49.09N 032-15.77E,\n      34-06.10N 031-56.22E, 34-17.54N 031-52.27E,\n      34-27.23N 031-47.10E, 34-39.13N 031-38.51E,\n      34-53.39N 031-20.74E, 35-01.43N 030-53.91E,\n      35-05.66N 029-59.98E, 35-07.18N 029-36.03E,\n      35-09.06N 028-59.96E, 35-08.82N 028-58.02E,\n      35-07.46N 028-53.98E, 35-02.00N 028-44.86E,\n      35-01.04N 028-38.39E, 35-02.03N 028-34.33E,\n      35-01.54N 028-29.62E, 35-01.62N 028-21.96E,\n      34-56.80N 028-12.64E, 34-53.56N 028-07.78E,\n      34-48.39N 027-56.16E, 34-39.37N 027-32.66E,\n      34-39.39N 027-27.24E, 34-42.86N 027-15.84E,\n      34-43.15N 027-11.15E, 34-42.95N 026-56.42E,\n      34-39.25N 026-41.67E, 34-35.92N 026-32.45E,\n      34-32.02N 026-23.52E, 34-31.17N 026-20.14E.\n   FIVE MILE BERTH REQUESTED.\n2. CANCEL HYDROLANT 2081/26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      31.677,
-      33.878
+      [
+       31.677,
+       33.878
+      ],
+      [
+       31.66,
+       33.888
+      ],
+      [
+       31.438,
+       34.117
+      ],
+      [
+       31.374,
+       34.263
+      ],
+      [
+       31.25,
+       34.432
+      ],
+      [
+       31.067,
+       34.644
+      ],
+      [
+       30.952,
+       34.698
+      ],
+      [
+       30.78,
+       34.721
+      ],
+      [
+       30.157,
+       34.758
+      ],
+      [
+       29.726,
+       34.827
+      ],
+      [
+       29.587,
+       34.824
+      ],
+      [
+       29.474,
+       34.768
+      ],
+      [
+       29.242,
+       34.764
+      ],
+      [
+       29.037,
+       34.783
+      ],
+      [
+       28.759,
+       34.82
+      ],
+      [
+       28.381,
+       34.712
+      ],
+      [
+       27.869,
+       34.493
+      ],
+      [
+       27.461,
+       34.298
+      ],
+      [
+       27.065,
+       34.272
+      ],
+      [
+       26.54,
+       34.192
+      ]
      ],
      [
-      31.66,
-      33.888
-     ],
-     [
-      31.438,
-      34.117
-     ],
-     [
-      31.374,
-      34.263
-     ],
-     [
-      31.25,
-      34.432
-     ],
-     [
-      31.067,
-      34.644
-     ],
-     [
-      30.952,
-      34.698
-     ],
-     [
-      30.78,
-      34.721
-     ],
-     [
-      30.157,
-      34.758
-     ],
-     [
-      29.726,
-      34.827
-     ],
-     [
-      29.587,
-      34.824
-     ],
-     [
-      29.474,
-      34.768
-     ],
-     [
-      29.242,
-      34.764
-     ],
-     [
-      29.037,
-      34.783
-     ],
-     [
-      28.759,
-      34.82
-     ],
-     [
-      28.381,
-      34.712
-     ],
-     [
-      27.869,
-      34.493
-     ],
-     [
-      27.461,
-      34.298
-     ],
-     [
-      27.065,
-      34.272
-     ],
-     [
-      26.54,
-      34.192
-     ],
-     [
-      32.272,
-      33.806
-     ],
-     [
-      32.263,
-      33.818
-     ],
-     [
-      31.937,
-      34.102
-     ],
-     [
-      31.871,
-      34.292
-     ],
-     [
-      31.785,
-      34.454
-     ],
-     [
-      31.642,
-      34.652
-     ],
-     [
-      31.346,
-      34.89
-     ],
-     [
-      30.898,
-      35.024
-     ],
-     [
-      30.0,
-      35.094
-     ],
-     [
-      29.601,
-      35.12
-     ],
-     [
-      28.999,
-      35.151
-     ],
-     [
-      28.967,
-      35.147
-     ],
-     [
-      28.9,
-      35.124
-     ],
-     [
-      28.748,
-      35.033
-     ],
-     [
-      28.64,
-      35.017
-     ],
-     [
-      28.572,
-      35.034
-     ],
-     [
-      28.494,
-      35.026
-     ],
-     [
-      28.366,
-      35.027
-     ],
-     [
-      28.211,
-      34.947
-     ],
-     [
-      28.13,
-      34.893
-     ],
-     [
-      27.936,
-      34.806
-     ],
-     [
-      27.544,
-      34.656
-     ],
-     [
-      27.454,
-      34.657
-     ],
-     [
-      27.264,
-      34.714
-     ],
-     [
-      27.186,
-      34.719
-     ],
-     [
-      26.94,
-      34.716
-     ],
-     [
-      26.695,
-      34.654
-     ],
-     [
-      26.541,
-      34.599
-     ],
-     [
-      26.392,
-      34.534
-     ],
-     [
-      26.336,
-      34.52
+      [
+       32.272,
+       33.806
+      ],
+      [
+       32.263,
+       33.818
+      ],
+      [
+       31.937,
+       34.102
+      ],
+      [
+       31.871,
+       34.292
+      ],
+      [
+       31.785,
+       34.454
+      ],
+      [
+       31.642,
+       34.652
+      ],
+      [
+       31.346,
+       34.89
+      ],
+      [
+       30.898,
+       35.024
+      ],
+      [
+       30.0,
+       35.094
+      ],
+      [
+       29.601,
+       35.12
+      ],
+      [
+       28.999,
+       35.151
+      ],
+      [
+       28.967,
+       35.147
+      ],
+      [
+       28.9,
+       35.124
+      ],
+      [
+       28.748,
+       35.033
+      ],
+      [
+       28.64,
+       35.017
+      ],
+      [
+       28.572,
+       35.034
+      ],
+      [
+       28.494,
+       35.026
+      ],
+      [
+       28.366,
+       35.027
+      ],
+      [
+       28.211,
+       34.947
+      ],
+      [
+       28.13,
+       34.893
+      ],
+      [
+       27.936,
+       34.806
+      ],
+      [
+       27.544,
+       34.656
+      ],
+      [
+       27.454,
+       34.657
+      ],
+      [
+       27.264,
+       34.714
+      ],
+      [
+       27.186,
+       34.719
+      ],
+      [
+       26.94,
+       34.716
+      ],
+      [
+       26.695,
+       34.654
+      ],
+      [
+       26.541,
+       34.599
+      ],
+      [
+       26.392,
+       34.534
+      ],
+      [
+       26.336,
+       34.52
+      ]
      ]
     ]
    },
@@ -9082,47 +9589,322 @@
    "headline": "MISSILE OPERATIONS 0530Z TO SUNSET DAILY EVERY WEDNESDAY THRU SATURDAY UNTIL 14 JUN AND 16 SEB THRU 31 DEC IN AREAS",
    "text": "AEGEAN SEA.\nDNC 09.\n1. MISSILE OPERATIONS 0530Z TO SUNSET DAILY EVERY\n   WEDNESDAY THRU SATURDAY UNTIL 14 JUN AND\n   16 SEB THRU 31 DEC IN AREAS:\n   A. BOUND BY\n      35-36.00N 024-07.00E, 36-18.00N 024-07.00E,\n      36-18.00N 025-59.00E, 36-25.00N 026-12.00E,\n      36-16.00N 026-40.00E, 35-36.00N 026-41.00E,\n      35-31.00N 024-11.00E.\n   B. WITHIN ONE MILE OF 35-32.00N 024-13.00E.\n   C. WITHIN ONE MILE OF 35-36.33N 024-10.00E.\n2. CANCEL THIS MSG 010001Z JAN 27.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiPolygon",
     "coordinates": [
      [
-      24.117,
-      35.6
+      [
+       [
+        24.117,
+        35.6
+       ],
+       [
+        24.117,
+        36.3
+       ],
+       [
+        25.983,
+        36.3
+       ],
+       [
+        26.2,
+        36.417
+       ],
+       [
+        26.667,
+        36.267
+       ],
+       [
+        26.683,
+        35.6
+       ],
+       [
+        24.183,
+        35.517
+       ],
+       [
+        24.117,
+        35.6
+       ]
+      ]
      ],
      [
-      24.117,
-      36.3
+      [
+       [
+        24.217,
+        35.5497
+       ],
+       [
+        24.221,
+        35.5493
+       ],
+       [
+        24.2248,
+        35.5484
+       ],
+       [
+        24.2284,
+        35.5468
+       ],
+       [
+        24.2315,
+        35.5448
+       ],
+       [
+        24.234,
+        35.5423
+       ],
+       [
+        24.2359,
+        35.5394
+       ],
+       [
+        24.2371,
+        35.5362
+       ],
+       [
+        24.2375,
+        35.533
+       ],
+       [
+        24.2371,
+        35.5298
+       ],
+       [
+        24.2359,
+        35.5266
+       ],
+       [
+        24.234,
+        35.5237
+       ],
+       [
+        24.2315,
+        35.5212
+       ],
+       [
+        24.2284,
+        35.5192
+       ],
+       [
+        24.2248,
+        35.5176
+       ],
+       [
+        24.221,
+        35.5167
+       ],
+       [
+        24.217,
+        35.5163
+       ],
+       [
+        24.213,
+        35.5167
+       ],
+       [
+        24.2092,
+        35.5176
+       ],
+       [
+        24.2056,
+        35.5192
+       ],
+       [
+        24.2025,
+        35.5212
+       ],
+       [
+        24.2,
+        35.5237
+       ],
+       [
+        24.1981,
+        35.5266
+       ],
+       [
+        24.1969,
+        35.5298
+       ],
+       [
+        24.1965,
+        35.533
+       ],
+       [
+        24.1969,
+        35.5362
+       ],
+       [
+        24.1981,
+        35.5394
+       ],
+       [
+        24.2,
+        35.5423
+       ],
+       [
+        24.2025,
+        35.5448
+       ],
+       [
+        24.2056,
+        35.5468
+       ],
+       [
+        24.2092,
+        35.5484
+       ],
+       [
+        24.213,
+        35.5493
+       ],
+       [
+        24.217,
+        35.5497
+       ]
+      ]
      ],
      [
-      25.983,
-      36.3
-     ],
-     [
-      26.2,
-      36.417
-     ],
-     [
-      26.667,
-      36.267
-     ],
-     [
-      26.683,
-      35.6
-     ],
-     [
-      24.183,
-      35.517
-     ],
-     [
-      24.217,
-      35.533
-     ],
-     [
-      24.167,
-      35.605
+      [
+       [
+        24.167,
+        35.6217
+       ],
+       [
+        24.171,
+        35.6213
+       ],
+       [
+        24.1748,
+        35.6204
+       ],
+       [
+        24.1784,
+        35.6188
+       ],
+       [
+        24.1815,
+        35.6168
+       ],
+       [
+        24.184,
+        35.6143
+       ],
+       [
+        24.1859,
+        35.6114
+       ],
+       [
+        24.1871,
+        35.6082
+       ],
+       [
+        24.1875,
+        35.605
+       ],
+       [
+        24.1871,
+        35.6018
+       ],
+       [
+        24.1859,
+        35.5986
+       ],
+       [
+        24.184,
+        35.5957
+       ],
+       [
+        24.1815,
+        35.5932
+       ],
+       [
+        24.1784,
+        35.5912
+       ],
+       [
+        24.1748,
+        35.5896
+       ],
+       [
+        24.171,
+        35.5887
+       ],
+       [
+        24.167,
+        35.5883
+       ],
+       [
+        24.163,
+        35.5887
+       ],
+       [
+        24.1592,
+        35.5896
+       ],
+       [
+        24.1556,
+        35.5912
+       ],
+       [
+        24.1525,
+        35.5932
+       ],
+       [
+        24.15,
+        35.5957
+       ],
+       [
+        24.1481,
+        35.5986
+       ],
+       [
+        24.1469,
+        35.6018
+       ],
+       [
+        24.1465,
+        35.605
+       ],
+       [
+        24.1469,
+        35.6082
+       ],
+       [
+        24.1481,
+        35.6114
+       ],
+       [
+        24.15,
+        35.6143
+       ],
+       [
+        24.1525,
+        35.6168
+       ],
+       [
+        24.1556,
+        35.6188
+       ],
+       [
+        24.1592,
+        35.6204
+       ],
+       [
+        24.163,
+        35.6213
+       ],
+       [
+        24.167,
+        35.6217
+       ]
+      ]
      ]
     ]
    },
-   "cancel_at": "2027-01-01T00:01:00Z"
+   "cancel_at": "2027-01-01T00:01:00Z",
+   "radius_m": [
+    1852
+   ]
   },
   {
    "id": "A-236-2026",
@@ -9326,67 +10108,77 @@
    "headline": "DUE TO THE PRESENCE OF MINES, ALL VESSELS APPROACHING AND DEPARTING ROMANIAN PORTS ARE ENCOURAGED TO USE THE FOLLOWING RECOMMENDED TRACKS",
    "text": "BLACK SEA.\nROMANIA.\nDNC 10.\n1. DUE TO THE PRESENCE OF MINES, ALL VESSELS\n   APPROACHING AND DEPARTING ROMANIAN PORTS ARE\n   ENCOURAGED TO USE THE FOLLOWING RECOMMENDED\n   TRACKS:\n   A. PORT OF MANGALIA ALONG TRACKLINE JOINING\n      43-47.59N 028-50.86E, 43-47.50N 028-37.61E.\n   B. PORT OF NAVODARI ALONG TRAKLINE JOINING\n      43-47.59N 028-50.86E, 44-11.33N 028-50.86E,\n      44-15.52N 028-45.04E.\n   C. ENTRANCE TO PORT OF CONSTANTA TRAFFIC\n      SEPERATION SCHEME ALONG TRACKLINE JOINING\n      43-47.59N 028-50.86E, 43-58.79N 028-50.86E.\n   D. EXIT FROM PORT OF CONSTANTA TRAFFIC\n      SEPERATION SCHEME ALONG TRACKLINE JOINING\n      43-56.75N 028-50.86E, 43-47.59N 028-50.86E.\n   E. PORT OF SULINA ALONG TRACKLINE JOINING\n      43-47.59N 028-50.86E, 44-00.57N 028-50.87E,\n      44-26.93N 029-43.20E, 44-36.49N 029-52.56E,\n      45-05.89N 029-52.56E, 45-08.04N 029-47.58E.\n2. VESSELS ARE REQUESTED TO IMMEDIATELY REPORT\n   SIGHTINGS OF MINES OR MINE-LIKE OBJECTS TO:\n   A. ROMANIAN MARITIME HYDROGRAPHIC DIRECTORATE,\n      PHONE: 402 4165 1040, EMAIL: NTM@DHMFN.RO.\n   B. MRCC CONSTANTA, PHONE: 402 4161 5949,\n      EMAIL: MRCC@RNA.RO.\n   C. ROMANIAN COAST GUARD, PHONE: 424 164 1188,\n      EMAIL: SCOMAR@MAI.GOV.RO.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiLineString",
     "coordinates": [
      [
-      28.848,
-      43.793
+      [
+       28.848,
+       43.793
+      ],
+      [
+       28.627,
+       43.792
+      ]
      ],
      [
-      28.627,
-      43.792
+      [
+       28.848,
+       43.793
+      ],
+      [
+       28.848,
+       44.189
+      ],
+      [
+       28.751,
+       44.259
+      ]
      ],
      [
-      28.848,
-      43.793
+      [
+       28.848,
+       43.793
+      ],
+      [
+       28.848,
+       43.98
+      ]
      ],
      [
-      28.848,
-      44.189
+      [
+       28.848,
+       43.946
+      ],
+      [
+       28.848,
+       43.793
+      ]
      ],
      [
-      28.751,
-      44.259
-     ],
-     [
-      28.848,
-      43.793
-     ],
-     [
-      28.848,
-      43.98
-     ],
-     [
-      28.848,
-      43.946
-     ],
-     [
-      28.848,
-      43.793
-     ],
-     [
-      28.848,
-      43.793
-     ],
-     [
-      28.848,
-      44.01
-     ],
-     [
-      29.72,
-      44.449
-     ],
-     [
-      29.876,
-      44.608
-     ],
-     [
-      29.876,
-      45.098
-     ],
-     [
-      29.793,
-      45.134
+      [
+       28.848,
+       43.793
+      ],
+      [
+       28.848,
+       44.01
+      ],
+      [
+       29.72,
+       44.449
+      ],
+      [
+       29.876,
+       44.608
+      ],
+      [
+       29.876,
+       45.098
+      ],
+      [
+       29.793,
+       45.134
+      ]
      ]
     ]
    },
@@ -9424,141 +10216,238 @@
    "sea": "Black Sea",
    "place": "Ukraine",
    "headline": "UKRAINIAN COASTAL WARNING COORDINATOR HAS DECLARED THE FOLLOWING COASTAL APROACH INSTRUCTIONS FOR ENTRY OR DEPARTURE IN UKRAINIAN PORTS 0200Z TO 1700Z DAILY UNT",
-   "text": "BLACK SEA.\nUKRAINE.\nDNC 10.\n1. UKRAINIAN COASTAL WARNING COORDINATOR HAS\n   DECLARED THE FOLLOWING COASTAL APROACH\n   INSTRUCTIONS FOR ENTRY OR DEPARTURE IN UKRAINIAN\n   PORTS 0200Z TO 1700Z DAILY UNTIL FUTHER NOTICE.\n2. ROUTES TO THE PORTS OF UKRAINE:\n   A. ROUTE FOR VESSELS WITH A DRAFT OF UP TO\n      EIGHT METERS WITHIN THREE MILES OF\n      TRACKLINE JOINING\n      45-05.00N 030-03.00E, 45-14.00N 030-01.00E,\n      45-39.00N 030-05.70E, 45-47.80N 030-22.70E.\n   B. ROUTE FOR VESSELS WITH A DRAFT OF\n      UP TO EIGHT METERS WITHIN ONE MILE OF\n      TRACKLINE JOINING\n      45-47.80N 030-22.70E, 45-58.86N 030-30.79E,\n      46-03.40N 030-32.60E, 46-10.81N 030-40.84E,\n      46-19.84N 030-48.00E, 46-25.38N 030-53.23E.\n   C. TWO-WAY ROUTE FOR VESSELS WITH DRAFT UP TO 12\n      METERS WITHIN THREE MILES OF TRACKLINE JOINING\n      45-05.00N 030-03.00E, 45-14.00N 030-01.00E,\n      45-39.00N 030-05.70E, 46-00.00N 030-57.80E,\n      46-02.80N 031-04.40E, 46-19.30N 031-04.40E,\n      46-26.30N 030-53.90E.\n   D. TWO-WAY ROUTE FOR VESSELS OVER 12 METERS\n      DRAFT WITHIN THREE MILES OF TRACKLINE JOINING\n      45-03.90N 030-18.50E, 45-33.80N 030-36.90E,\n      46-00.00N 030-57.80E, 46-02.80N 031-04.40E,\n      46-19.30N 031-04.40E, 46-26.30N 030-53.90E.\n   E. SOUTHERN TEMPORARY WAITING AREA FOR VESSELS\n      GOING TO THE PORTS OF CHORNOMORSK, ODESA,\n      OR PIVDENNYI MAY BE USED TO WAIT FOR\n      TRANSITING THE ROUTES DURING ALLOWED TIMES\n      IN AREA BOUND BY\n      45-00.00N 030-10.00E, 44-55.00N 030-25.00E,\n      44-50.00N 030-25.00E, 44-50.00N 030-10.00E.\n   F. NORTHERN HOLDING AREA AR 354 USED FOR SHORT\n      STAYING VESSELS IN EMERGENCY CASES\n      IN AREA BOUND BY\n      46-29.98N 030-50.37E, 46-30.48N 030-53.90E,\n      46-25.38N 030-53.90E, 46-25.38N 030-52.60E.\n   G. CHORNOMORSK TO NORTHERN HOLDING AREA CHANNEL\n      WITHIN 200 METERS OF TRACKLINE JOINING\n      46-25.38N 030-52.60E, 46-22.00N 030-47.70E,\n      46-21.55N 030-46.29E, 46-20.00N 030-42.70E,\n      46-18.84N 030-41.",
+   "text": "BLACK SEA.\nUKRAINE.\nDNC 10.\n1. UKRAINIAN COASTAL WARNING COORDINATOR HAS\n   DECLARED THE FOLLOWING COASTAL APROACH\n   INSTRUCTIONS FOR ENTRY OR DEPARTURE IN UKRAINIAN\n   PORTS 0200Z TO 1700Z DAILY UNTIL FUTHER NOTICE.\n2. ROUTES TO THE PORTS OF UKRAINE:\n   A. ROUTE FOR VESSELS WITH A DRAFT OF UP TO\n      EIGHT METERS WITHIN THREE MILES OF\n      TRACKLINE JOINING\n      45-05.00N 030-03.00E, 45-14.00N 030-01.00E,\n      45-39.00N 030-05.70E, 45-47.80N 030-22.70E.\n   B. ROUTE FOR VESSELS WITH A DRAFT OF\n      UP TO EIGHT METERS WITHIN ONE MILE OF\n      TRACKLINE JOINING\n      45-47.80N 030-22.70E, 45-58.86N 030-30.79E,\n      46-03.40N 030-32.60E, 46-10.81N 030-40.84E,\n      46-19.84N 030-48.00E, 46-25.38N 030-53.23E.\n   C. TWO-WAY ROUTE FOR VESSELS WITH DRAFT UP TO 12\n      METERS WITHIN THREE MILES OF TRACKLINE JOINING\n      45-05.00N 030-03.00E, 45-14.00N 030-01.00E,\n      45-39.00N 030-05.70E, 46-00.00N 030-57.80E,\n      46-02.80N 031-04.40E, 46-19.30N 031-04.40E,\n      46-26.30N 030-53.90E.\n   D. TWO-WAY ROUTE FOR VESSELS OVER 12 METERS\n      DRAFT WITHIN THREE MILES OF TRACKLINE JOINING\n      45-03.90N 030-18.50E, 45-33.80N 030-36.90E,\n      46-00.00N 030-57.80E, 46-02.80N 031-04.40E,\n      46-19.30N 031-04.40E, 46-26.30N 030-53.90E.\n   E. SOUTHERN TEMPORARY WAITING AREA FOR VESSELS\n      GOING TO THE PORTS OF CHORNOMORSK, ODESA,\n      OR PIVDENNYI MAY BE USED TO WAIT FOR\n      TRANSITING THE ROUTES DURING ALLOWED TIMES\n      IN AREA BOUND BY\n      45-00.00N 030-10.00E, 44-55.00N 030-25.00E,\n      44-50.00N 030-25.00E, 44-50.00N 030-10.00E.\n   F. NORTHERN HOLDING AREA AR 354 USED FOR SHORT\n      STAYING VESSELS IN EMERGENCY CASES\n      IN AREA BOUND BY\n      46-29.98N 030-50.37E, 46-30.48N 030-53.90E,\n      46-25.38N 030-53.90E, 46-25.38N 030-52.60E.\n   G. CHORNOMORSK TO NORTHERN HOLDING AREA CHANNEL\n      WITHIN 200 METERS OF TRACKLINE JOINING\n      46-25.38N 030-52.60E, 46-22.00N 030-47.70E,\n      46-21.55N 030-46.29E, 46-20.00N 030-42.70E,\n      46-18.84N 030-41.81E, 46-19.12N 030-40.60E.\n   H. ODESA TO NORTHERN HOLDING AREA CHANNEL\n      WITHIN 200 METERS OF TRACKLINE JOINING\n      46-30.00N 030-50.51E, 46-30.00N 030-46.40E,\n      46-29.90N 030-46.04E, 46-29.99N 030-44.54E.\n   I. PIVDENNYI TO NORTHERN HOLDING AREA CHANNEL\n      WITHIN 200 METERS OF TRACKLINE JOINING\n      46-30.48N 030-53.90E, 46-31.84N 030-53.90E,\n      46-33.36N 031-00.06E, 46-36.19N 031-01.00E.\n3. CANCEL HYDROLANT 603/23.",
    "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-     [
-      [
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "MultiPolygon",
+      "coordinates": [
        [
-        30.167,
-        45.0
+        [
+         [
+          30.167,
+          45.0
+         ],
+         [
+          30.417,
+          44.917
+         ],
+         [
+          30.417,
+          44.833
+         ],
+         [
+          30.167,
+          44.833
+         ],
+         [
+          30.167,
+          45.0
+         ]
+        ]
        ],
        [
-        30.417,
-        44.917
-       ],
-       [
-        30.417,
-        44.833
-       ],
-       [
-        30.167,
-        44.833
-       ],
-       [
-        30.167,
-        45.0
+        [
+         [
+          30.84,
+          46.5
+         ],
+         [
+          30.898,
+          46.508
+         ],
+         [
+          30.898,
+          46.423
+         ],
+         [
+          30.877,
+          46.423
+         ],
+         [
+          30.84,
+          46.5
+         ]
+        ]
        ]
       ]
-     ],
-     [
-      [
+     },
+     {
+      "type": "MultiLineString",
+      "coordinates": [
        [
-        30.84,
-        46.5
+        [
+         30.05,
+         45.083
+        ],
+        [
+         30.017,
+         45.233
+        ],
+        [
+         30.095,
+         45.65
+        ],
+        [
+         30.378,
+         45.797
+        ]
        ],
        [
-        30.898,
-        46.508
+        [
+         30.378,
+         45.797
+        ],
+        [
+         30.513,
+         45.981
+        ],
+        [
+         30.543,
+         46.057
+        ],
+        [
+         30.681,
+         46.18
+        ],
+        [
+         30.8,
+         46.331
+        ],
+        [
+         30.887,
+         46.423
+        ]
        ],
        [
-        30.898,
-        46.423
+        [
+         30.05,
+         45.083
+        ],
+        [
+         30.017,
+         45.233
+        ],
+        [
+         30.095,
+         45.65
+        ],
+        [
+         30.963,
+         46.0
+        ],
+        [
+         31.073,
+         46.047
+        ],
+        [
+         31.073,
+         46.322
+        ],
+        [
+         30.898,
+         46.438
+        ]
        ],
        [
-        30.877,
-        46.423
+        [
+         30.308,
+         45.065
+        ],
+        [
+         30.615,
+         45.563
+        ],
+        [
+         30.963,
+         46.0
+        ],
+        [
+         31.073,
+         46.047
+        ],
+        [
+         31.073,
+         46.322
+        ],
+        [
+         30.898,
+         46.438
+        ]
        ],
        [
-        30.84,
-        46.5
+        [
+         30.877,
+         46.423
+        ],
+        [
+         30.795,
+         46.367
+        ],
+        [
+         30.771,
+         46.359
+        ],
+        [
+         30.712,
+         46.333
+        ],
+        [
+         30.697,
+         46.314
+        ],
+        [
+         30.677,
+         46.319
+        ]
+       ],
+       [
+        [
+         30.842,
+         46.5
+        ],
+        [
+         30.773,
+         46.5
+        ],
+        [
+         30.767,
+         46.498
+        ],
+        [
+         30.742,
+         46.5
+        ]
+       ],
+       [
+        [
+         30.898,
+         46.508
+        ],
+        [
+         30.898,
+         46.531
+        ],
+        [
+         31.001,
+         46.556
+        ],
+        [
+         31.017,
+         46.603
+        ]
        ]
       ]
-     ],
-     [
-      [
-       [
-        30.877,
-        46.423
-       ],
-       [
-        30.795,
-        46.367
-       ],
-       [
-        30.771,
-        46.359
-       ],
-       [
-        30.712,
-        46.333
-       ],
-       [
-        30.697,
-        46.314
-       ],
-       [
-        30.677,
-        46.319
-       ],
-       [
-        30.877,
-        46.423
-       ]
-      ]
-     ],
-     [
-      [
-       [
-        30.842,
-        46.5
-       ],
-       [
-        30.773,
-        46.5
-       ],
-       [
-        30.767,
-        46.498
-       ],
-       [
-        30.742,
-        46.5
-       ],
-       [
-        30.842,
-        46.5
-       ]
-      ]
-     ],
-     [
-      [
-       [
-        30.898,
-        46.508
-       ],
-       [
-        30.898,
-        46.531
-       ],
-       [
-        31.001,
-        46.556
-       ],
-       [
-        31.017,
-        46.603
-       ],
-       [
-        30.898,
-        46.508
-       ]
-      ]
-     ]
+     }
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "corridor_half_width_m": [
+    200.0,
+    1852,
+    5556
+   ]
   },
   {
    "id": "A-2452-2023",
@@ -9825,10 +10714,149 @@
         46.37
        ]
       ]
+     ],
+     [
+      [
+       [
+        30.162,
+        45.2013
+       ],
+       [
+        30.185,
+        45.1997
+       ],
+       [
+        30.2072,
+        45.1949
+       ],
+       [
+        30.2276,
+        45.1872
+       ],
+       [
+        30.2454,
+        45.1769
+       ],
+       [
+        30.2601,
+        45.1643
+       ],
+       [
+        30.271,
+        45.1499
+       ],
+       [
+        30.2777,
+        45.1342
+       ],
+       [
+        30.28,
+        45.118
+       ],
+       [
+        30.2777,
+        45.1018
+       ],
+       [
+        30.271,
+        45.0861
+       ],
+       [
+        30.2601,
+        45.0717
+       ],
+       [
+        30.2454,
+        45.0591
+       ],
+       [
+        30.2276,
+        45.0488
+       ],
+       [
+        30.2072,
+        45.0411
+       ],
+       [
+        30.185,
+        45.0363
+       ],
+       [
+        30.162,
+        45.0347
+       ],
+       [
+        30.139,
+        45.0363
+       ],
+       [
+        30.1168,
+        45.0411
+       ],
+       [
+        30.0964,
+        45.0488
+       ],
+       [
+        30.0786,
+        45.0591
+       ],
+       [
+        30.0639,
+        45.0717
+       ],
+       [
+        30.053,
+        45.0861
+       ],
+       [
+        30.0463,
+        45.1018
+       ],
+       [
+        30.044,
+        45.118
+       ],
+       [
+        30.0463,
+        45.1342
+       ],
+       [
+        30.053,
+        45.1499
+       ],
+       [
+        30.0639,
+        45.1643
+       ],
+       [
+        30.0786,
+        45.1769
+       ],
+       [
+        30.0964,
+        45.1872
+       ],
+       [
+        30.1168,
+        45.1949
+       ],
+       [
+        30.139,
+        45.1997
+       ],
+       [
+        30.162,
+        45.2013
+       ]
+      ]
      ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "radius_m": [
+    9260
+   ]
   },
   {
    "id": "P-3324-2026",
@@ -10830,19 +11858,286 @@
    "headline": "HAZARDOUS OPERATIONS 0100Z TO 1300Z DAILY 17 THRU 19 NOV IN AREAS WITHIN THREE MILE OF",
    "text": "NORTH PACIFIC.\nPHILIPPINE SEA.\nGUAM.\n1. HAZARDOUS OPERATIONS 0100Z TO 1300Z\n   DAILY 17 THRU 19 NOV IN AREAS WITHIN\n   THREE MILE OF:\n   A. 13-27.00N 145-08.00E.\n   B. 13-42.00N 144-36.00E.\n2. CANCEL THIS MSG 191400Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "MultiPolygon",
     "coordinates": [
      [
-      145.133,
-      13.45
+      [
+       [
+        145.133,
+        13.5
+       ],
+       [
+        145.143,
+        13.499
+       ],
+       [
+        145.1527,
+        13.4962
+       ],
+       [
+        145.1615,
+        13.4915
+       ],
+       [
+        145.1693,
+        13.4853
+       ],
+       [
+        145.1757,
+        13.4778
+       ],
+       [
+        145.1805,
+        13.4691
+       ],
+       [
+        145.1834,
+        13.4597
+       ],
+       [
+        145.1844,
+        13.45
+       ],
+       [
+        145.1834,
+        13.4403
+       ],
+       [
+        145.1805,
+        13.4309
+       ],
+       [
+        145.1757,
+        13.4222
+       ],
+       [
+        145.1693,
+        13.4147
+       ],
+       [
+        145.1615,
+        13.4085
+       ],
+       [
+        145.1527,
+        13.4038
+       ],
+       [
+        145.143,
+        13.401
+       ],
+       [
+        145.133,
+        13.4
+       ],
+       [
+        145.123,
+        13.401
+       ],
+       [
+        145.1133,
+        13.4038
+       ],
+       [
+        145.1045,
+        13.4085
+       ],
+       [
+        145.0967,
+        13.4147
+       ],
+       [
+        145.0903,
+        13.4222
+       ],
+       [
+        145.0855,
+        13.4309
+       ],
+       [
+        145.0826,
+        13.4403
+       ],
+       [
+        145.0816,
+        13.45
+       ],
+       [
+        145.0826,
+        13.4597
+       ],
+       [
+        145.0855,
+        13.4691
+       ],
+       [
+        145.0903,
+        13.4778
+       ],
+       [
+        145.0967,
+        13.4853
+       ],
+       [
+        145.1045,
+        13.4915
+       ],
+       [
+        145.1133,
+        13.4962
+       ],
+       [
+        145.123,
+        13.499
+       ],
+       [
+        145.133,
+        13.5
+       ]
+      ]
      ],
      [
-      144.6,
-      13.7
+      [
+       [
+        144.6,
+        13.75
+       ],
+       [
+        144.61,
+        13.749
+       ],
+       [
+        144.6197,
+        13.7462
+       ],
+       [
+        144.6286,
+        13.7415
+       ],
+       [
+        144.6364,
+        13.7353
+       ],
+       [
+        144.6428,
+        13.7278
+       ],
+       [
+        144.6475,
+        13.7191
+       ],
+       [
+        144.6504,
+        13.7097
+       ],
+       [
+        144.6514,
+        13.7
+       ],
+       [
+        144.6504,
+        13.6903
+       ],
+       [
+        144.6475,
+        13.6809
+       ],
+       [
+        144.6428,
+        13.6722
+       ],
+       [
+        144.6364,
+        13.6647
+       ],
+       [
+        144.6286,
+        13.6585
+       ],
+       [
+        144.6197,
+        13.6538
+       ],
+       [
+        144.61,
+        13.651
+       ],
+       [
+        144.6,
+        13.65
+       ],
+       [
+        144.59,
+        13.651
+       ],
+       [
+        144.5803,
+        13.6538
+       ],
+       [
+        144.5714,
+        13.6585
+       ],
+       [
+        144.5636,
+        13.6647
+       ],
+       [
+        144.5572,
+        13.6722
+       ],
+       [
+        144.5525,
+        13.6809
+       ],
+       [
+        144.5496,
+        13.6903
+       ],
+       [
+        144.5486,
+        13.7
+       ],
+       [
+        144.5496,
+        13.7097
+       ],
+       [
+        144.5525,
+        13.7191
+       ],
+       [
+        144.5572,
+        13.7278
+       ],
+       [
+        144.5636,
+        13.7353
+       ],
+       [
+        144.5714,
+        13.7415
+       ],
+       [
+        144.5803,
+        13.7462
+       ],
+       [
+        144.59,
+        13.749
+       ],
+       [
+        144.6,
+        13.75
+       ]
+      ]
      ]
     ]
    },
-   "cancel_at": "2026-11-19T14:00:00Z"
+   "cancel_at": "2026-11-19T14:00:00Z",
+   "radius_m": [
+    5556
+   ]
   },
   {
    "id": "P-3296-2026",
@@ -10919,7 +12214,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY CABLESHIP CS MARAM ALONG TRACKLINE JOINING 24-43.60N 066-40.29E, 24-42.29N 066-34.75E.",
    "text": "ARABIAN SEA.\nPAKISTAN.\nCABLE OPERATIONS IN PROGRESS UNTIL\nFURTHER NOTICE BY CABLESHIP CS MARAM\nALONG TRACKLINE JOINING\n24-43.60N 066-40.29E, 24-42.29N 066-34.75E.\nWIDE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       66.671,
@@ -11790,59 +13085,59 @@
        31.167
       ],
       [
-       -175.017,
+       184.983,
        31.267
       ],
       [
-       -171.45,
+       188.55,
        31.35
       ],
       [
-       -161.25,
+       198.75,
        30.55
       ],
       [
-       -155.667,
+       204.333,
        29.617
       ],
       [
-       -151.583,
+       208.417,
        28.817
       ],
       [
-       -145.433,
+       214.567,
        26.883
       ],
       [
-       -145.467,
+       214.533,
        26.833
       ],
       [
-       -154.533,
+       205.467,
        24.05
       ],
       [
-       -156.183,
+       203.817,
        23.767
       ],
       [
-       -159.317,
+       200.683,
        24.867
       ],
       [
-       -167.817,
+       192.183,
        27.633
       ],
       [
-       -175.0,
+       185.0,
        29.383
       ],
       [
-       -176.6,
+       183.4,
        29.583
       ],
       [
-       -179.967,
+       180.033,
        29.617
       ],
       [
@@ -11915,55 +13210,55 @@
        22.717
       ],
       [
-       -176.217,
+       183.783,
        24.85
       ],
       [
-       -173.333,
+       186.667,
        25.883
       ],
       [
-       -171.033,
+       188.967,
        26.067
       ],
       [
-       -161.233,
+       198.767,
        28.517
       ],
       [
-       -150.267,
+       209.733,
        30.55
       ],
       [
-       -150.25,
+       209.75,
        29.383
       ],
       [
-       -153.817,
+       206.183,
        26.017
       ],
       [
-       -154.9,
+       205.1,
        24.767
       ],
       [
-       -157.767,
+       202.233,
        25.4
       ],
       [
-       -161.7,
+       198.3,
        24.9
       ],
       [
-       -168.533,
+       191.467,
        23.183
       ],
       [
-       -173.133,
+       186.867,
        22.133
       ],
       [
-       -179.117,
+       180.883,
        20.2
       ],
       [
@@ -12122,7 +13417,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY CABLESHIP ANIEK ALONG TRACKLINE JOINING 16-19.00N 159-56.00E, 15-56.00N 158-58.00E, 15-57.00N 158-40.00E, 1",
    "text": "NORTH PACIFIC.\n1. CABLE OPERATIONS IN PROGRESS UNTIL\n   FURTHER NOTICE BY CABLESHIP ANIEK\n   ALONG TRACKLINE JOINING\n   16-19.00N 159-56.00E, 15-56.00N 158-58.00E,\n   15-57.00N 158-40.00E, 15-52.00N 158-10.00E,\n   15-25.00N 156-55.00E, 15-20.00N 156-30.00E,\n   15-00.00N 155-50.00E, 14-15.00N 155-04.00E,\n   14-05.00N 154-50.00E, 14-03.00N 154-39.00E.\n   TWO MILE BERTH REQUESTED.\n2. CANCEL HYDROPAC 3250/26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       159.933,
@@ -12614,7 +13909,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 15 NOV BY M/V MT RAAJ 1, AND UNTIL 21 NOV BY M/V LADY GRACE AND M/V DB MARINE 1, ALONG TRACKLINE JOINING 19-03.45N 072-40.64E",
    "text": "ARABIAN SEA.\nINDIA.\n1. CABLE OPERATIONS IN PROGRESS UNTIL 15 NOV\n   BY M/V MT RAAJ 1,  AND UNTIL 21 NOV BY\n   M/V LADY GRACE AND M/V DB MARINE 1,\n   ALONG TRACKLINE JOINING\n   19-03.45N  072-40.64E, 19-01.07N  072-32.77E,\n   18-04.69N  070-50.32E.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROPAC 799/25, 3114/26.\n3. CANCEL THIS MSG 220001Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       72.677,
@@ -13084,7 +14379,7 @@
    "headline": "PIPELINE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V NORDNES ALONG TRACKLINE JOINING 20-15.96S 114-53.96E, 20-41.38S 115-24.69E.",
    "text": "EASTERN INDIAN OCEAN.\nAUSTRALIA.\nPIPELINE OPERATIONS IN PROGRESS UNTIL FURTHER\nNOTICE BY M/V NORDNES ALONG TRACKLINE JOINING\n20-15.96S 114-53.96E, 20-41.38S 115-24.69E.\n500 METER BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       114.899,
@@ -13785,7 +15080,7 @@
    "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 301830Z NOV BY M/V VANESSA 6 ALONG TRACKLINE JOINING 20-27.10N 071-53.45E, 20-23.41N 071-52.47E, 20-20.07N 072-01.18E, 19-01",
    "text": "ARABIAN SEA.\nGULF OF KHAMBHAT.\nINDIA.\n1. SURVEY OPERATIONS IN PROGRESS\n   UNTIL 301830Z NOV BY M/V VANESSA 6\n   ALONG TRACKLINE JOINING\n   20-27.10N 071-53.45E, 20-23.41N 071-52.47E,\n   20-20.07N 072-01.18E, 19-01.33N 071-21.49E,\n   19-01.44N 071-25.34E, 18-58.25N 071-37.25E,\n   19-00.49N 071-25.21E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 301930Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       71.891,
@@ -14072,13 +15367,148 @@
    "headline": "12 SIX METER BUOYS, YELLOW, FL W 3 SEC, TEMPORARILY ESTABLISHED IN AREA WITHIN ONE MILE OF 38-48.03S 142-52.08E.",
    "text": "GREAT AUSTRALIAN BIGHT.\nAUSTRALIA.\n12 SIX METER BUOYS, YELLOW, FL W 3 SEC,\nTEMPORARILY ESTABLISHED IN AREA WITHIN\nONE MILE OF 38-48.03S 142-52.08E.\nTHREE MILE BERTH REQUESTED.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     142.868,
-     -38.8
+     [
+      [
+       142.868,
+       -38.7833
+      ],
+      [
+       142.8722,
+       -38.7837
+      ],
+      [
+       142.8762,
+       -38.7846
+      ],
+      [
+       142.8799,
+       -38.7862
+      ],
+      [
+       142.8831,
+       -38.7882
+      ],
+      [
+       142.8858,
+       -38.7907
+      ],
+      [
+       142.8877,
+       -38.7936
+      ],
+      [
+       142.889,
+       -38.7968
+      ],
+      [
+       142.8894,
+       -38.8
+      ],
+      [
+       142.889,
+       -38.8032
+      ],
+      [
+       142.8877,
+       -38.8064
+      ],
+      [
+       142.8858,
+       -38.8093
+      ],
+      [
+       142.8831,
+       -38.8118
+      ],
+      [
+       142.8799,
+       -38.8138
+      ],
+      [
+       142.8762,
+       -38.8154
+      ],
+      [
+       142.8722,
+       -38.8163
+      ],
+      [
+       142.868,
+       -38.8167
+      ],
+      [
+       142.8638,
+       -38.8163
+      ],
+      [
+       142.8598,
+       -38.8154
+      ],
+      [
+       142.8561,
+       -38.8138
+      ],
+      [
+       142.8529,
+       -38.8118
+      ],
+      [
+       142.8502,
+       -38.8093
+      ],
+      [
+       142.8483,
+       -38.8064
+      ],
+      [
+       142.847,
+       -38.8032
+      ],
+      [
+       142.8466,
+       -38.8
+      ],
+      [
+       142.847,
+       -38.7968
+      ],
+      [
+       142.8483,
+       -38.7936
+      ],
+      [
+       142.8502,
+       -38.7907
+      ],
+      [
+       142.8529,
+       -38.7882
+      ],
+      [
+       142.8561,
+       -38.7862
+      ],
+      [
+       142.8598,
+       -38.7846
+      ],
+      [
+       142.8638,
+       -38.7837
+      ],
+      [
+       142.868,
+       -38.7833
+      ]
+     ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "radius_m": [
+    1852
+   ]
   },
   {
    "id": "P-3059-2026",
@@ -14290,7 +15720,7 @@
    "headline": "UNDERWATER OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V CONSTRUCTOR ALONG TRACKLINE JOINING 25-57.81N 051-30.54E, 26-04.52N 051-33.64E, 26-16.27N 051-34.5",
    "text": "PERSIAN GULF.\nQATAR.\n1. UNDERWATER OPERATIONS IN PROGRESS UNTIL\n   FURTHER NOTICE BY M/V CONSTRUCTOR\n   ALONG TRACKLINE JOINING\n   25-57.81N 051-30.54E, 26-04.52N 051-33.64E,\n   26-16.27N 051-34.56E, 26-30.47N 051-45.57E,\n   26-36.57N 051-53.58E, 26-36.28N 051-57.01E,\n   26-36.27N 051-59.40E.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROPAC 2280/26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       51.509,
@@ -14378,7 +15808,7 @@
    "headline": "HAZARDOUS OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE ALONG TRACKLINE JOINING 21-03.82S 054-57.81E, 20-54.03S 055-16.23E, 20-53.39S 055-20.83E.",
    "text": "EASTERN INDIAN OCEAN.\nREUNION.\nHAZARDOUS OPERATIONS IN PROGRESS\nUNTIL FURTHER NOTICE ALONG TRACKLINE JOINING\n21-03.82S 054-57.81E, 20-54.03S 055-16.23E,\n20-53.39S 055-20.83E.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       54.964,
@@ -14487,7 +15917,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 13 NOV BY CABLESHIP BLUE NAVIGATOR ALONG TRACKLINE JOINING 14-04.98N 093-57.24E, 13-53.66N 094-17.61E, 13-57.53N 094-37.46E,",
    "text": "ANDAMAN SEA.\nINDIA.\n1. CABLE OPERATIONS IN PROGRESS UNTIL 13 NOV\n   BY CABLESHIP BLUE NAVIGATOR\n   ALONG TRACKLINE JOINING\n   14-04.98N 093-57.24E, 13-53.66N 094-17.61E,\n   13-57.53N 094-37.46E, 13-55.36N 094-52.75E,\n   13-41.22N 095-19.57E, 13-44.03N 096-09.34E,\n   14-00.08N 096-15.59E, 14-02.48N 096-21.90E,\n   14-05.39N 096-24.55E, 14-07.76N 096-24.01E,\n   14-07.79N 096-23.60E.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROPAC 2855/26.\n3. CANCEL THIS MSG 140001Z NOV 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       93.954,
@@ -14763,13 +16193,148 @@
    "headline": "VOLCANIC ACTIVITY REPORTED IN AREA WITHIN ONE MILE OF 27-14.60N 140-52.70E AT 080200Z SEP.",
    "text": "NORTH PACIFIC.\nPHILIPPINE SEA.\nJAPAN.\nVOLCANIC ACTIVITY REPORTED IN AREA WITHIN\nONE MILE OF 27-14.60N 140-52.70E AT 080200Z SEP.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     140.878,
-     27.243
+     [
+      [
+       140.878,
+       27.2597
+      ],
+      [
+       140.8817,
+       27.2593
+      ],
+      [
+       140.8852,
+       27.2584
+      ],
+      [
+       140.8884,
+       27.2568
+      ],
+      [
+       140.8912,
+       27.2548
+      ],
+      [
+       140.8936,
+       27.2523
+      ],
+      [
+       140.8953,
+       27.2494
+      ],
+      [
+       140.8964,
+       27.2462
+      ],
+      [
+       140.8967,
+       27.243
+      ],
+      [
+       140.8964,
+       27.2398
+      ],
+      [
+       140.8953,
+       27.2366
+      ],
+      [
+       140.8936,
+       27.2337
+      ],
+      [
+       140.8912,
+       27.2312
+      ],
+      [
+       140.8884,
+       27.2292
+      ],
+      [
+       140.8852,
+       27.2276
+      ],
+      [
+       140.8817,
+       27.2267
+      ],
+      [
+       140.878,
+       27.2263
+      ],
+      [
+       140.8743,
+       27.2267
+      ],
+      [
+       140.8708,
+       27.2276
+      ],
+      [
+       140.8676,
+       27.2292
+      ],
+      [
+       140.8648,
+       27.2312
+      ],
+      [
+       140.8624,
+       27.2337
+      ],
+      [
+       140.8607,
+       27.2366
+      ],
+      [
+       140.8596,
+       27.2398
+      ],
+      [
+       140.8593,
+       27.243
+      ],
+      [
+       140.8596,
+       27.2462
+      ],
+      [
+       140.8607,
+       27.2494
+      ],
+      [
+       140.8624,
+       27.2523
+      ],
+      [
+       140.8648,
+       27.2548
+      ],
+      [
+       140.8676,
+       27.2568
+      ],
+      [
+       140.8708,
+       27.2584
+      ],
+      [
+       140.8743,
+       27.2593
+      ],
+      [
+       140.878,
+       27.2597
+      ]
+     ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "radius_m": [
+    1852
+   ]
   },
   {
    "id": "P-2483-2026",
@@ -14784,7 +16349,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC BY M/V TOPAZ AND M/V BUREYA WITHIN TWO MILES OF TRACKLINE JOINING 49-03.00N 140-18.60E, 49-02.40N 140-33.00E, 48-49.80",
    "text": "SEA OF JAPAN.\nRUSSIA.\n1. CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC\n   BY M/V TOPAZ AND M/V BUREYA WITHIN\n   TWO MILES OF TRACKLINE JOINING\n   49-03.00N 140-18.60E, 49-02.40N 140-33.00E,\n   48-49.80N 141-16.80E, 48-19.80N 141-51.60E,\n   48-05.40N 141-56.40E, 47-37.20N 141-48.00E,\n   47-12.60N 141-54.60E, 46-40.20N 141-27.20E,\n   46-10.80N 141-48.00E, 45-55.20N 141-56.40E,\n   45-54.00N 142-03.60E, 45-54.00N 142-04.20E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 160001Z DEC 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       140.31,
@@ -14836,7 +16401,10 @@
      ]
     ]
    },
-   "cancel_at": "2026-12-16T00:01:00Z"
+   "cancel_at": "2026-12-16T00:01:00Z",
+   "corridor_half_width_m": [
+    3704
+   ]
   },
   {
    "id": "P-2482-2026",
@@ -15371,7 +16939,7 @@
    "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY CABLESHIP RESPONDER WITHIN FIVE MILES OF TRACKLINE JOINING 38-19.86S 144-19.61E, 39-06.11S 145-33.18E, 39-1",
    "text": "BASS STRAIT.\nTASMAN SEA.\nAUSTRALIA.\nCABLE OPERATIONS IN PROGRESS UNTIL FURTHER\nNOTICE BY CABLESHIP RESPONDER\nWITHIN FIVE MILES OF TRACKLINE JOINING\n38-19.86S 144-19.61E, 39-06.11S 145-33.18E,\n39-17.45S 146-22.33E, 39-23.78S 148-40.00E,\n39-20.00S 149-46.17E, 37-18.44S 153-20.94E.\nONE MILE BERTH REQUESTED.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       144.327,
@@ -15399,7 +16967,10 @@
      ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "corridor_half_width_m": [
+    9260
+   ]
   },
   {
    "id": "P-1869-2026",
@@ -15977,13 +17548,148 @@
    "headline": "NAVIGATION PROHIBITED UNTIL FURTHER NOTICE IN AREA WITHIN 600 METERS OF 29-13.10N 048-44.42E.",
    "text": "PERSIAN GULF.\nKUWAIT.\nDNC 10.\nNAVIGATION PROHIBITED UNTIL FURTHER NOTICE\nIN AREA WITHIN 600 METERS OF 29-13.10N 048-44.42E.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     48.74,
-     29.218
+     [
+      [
+       48.74,
+       29.2234
+      ],
+      [
+       48.7412,
+       29.2233
+      ],
+      [
+       48.7424,
+       29.223
+      ],
+      [
+       48.7434,
+       29.2225
+      ],
+      [
+       48.7444,
+       29.2218
+      ],
+      [
+       48.7451,
+       29.221
+      ],
+      [
+       48.7457,
+       29.2201
+      ],
+      [
+       48.7461,
+       29.2191
+      ],
+      [
+       48.7462,
+       29.218
+      ],
+      [
+       48.7461,
+       29.2169
+      ],
+      [
+       48.7457,
+       29.2159
+      ],
+      [
+       48.7451,
+       29.215
+      ],
+      [
+       48.7444,
+       29.2142
+      ],
+      [
+       48.7434,
+       29.2135
+      ],
+      [
+       48.7424,
+       29.213
+      ],
+      [
+       48.7412,
+       29.2127
+      ],
+      [
+       48.74,
+       29.2126
+      ],
+      [
+       48.7388,
+       29.2127
+      ],
+      [
+       48.7376,
+       29.213
+      ],
+      [
+       48.7366,
+       29.2135
+      ],
+      [
+       48.7356,
+       29.2142
+      ],
+      [
+       48.7349,
+       29.215
+      ],
+      [
+       48.7343,
+       29.2159
+      ],
+      [
+       48.7339,
+       29.2169
+      ],
+      [
+       48.7338,
+       29.218
+      ],
+      [
+       48.7339,
+       29.2191
+      ],
+      [
+       48.7343,
+       29.2201
+      ],
+      [
+       48.7349,
+       29.221
+      ],
+      [
+       48.7356,
+       29.2218
+      ],
+      [
+       48.7366,
+       29.2225
+      ],
+      [
+       48.7376,
+       29.223
+      ],
+      [
+       48.7388,
+       29.2233
+      ],
+      [
+       48.74,
+       29.2234
+      ]
+     ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "radius_m": [
+    600.0
+   ]
   },
   {
    "id": "P-111-2025",
@@ -16013,13 +17719,148 @@
    "headline": "NAVIGATION PROHIBITED UNTIL FURTHER NOTICE IN AREA WITHIN 600 METERS OF 28-52.49N 048-21.63E.",
    "text": "PERSIAN GULF.\nKUWAIT.\nDNC 10.\nNAVIGATION PROHIBITED UNTIL FURTHER\nNOTICE IN AREA WITHIN 600 METERS OF\n28-52.49N 048-21.63E.",
    "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-     48.361,
-     28.875
+     [
+      [
+       48.361,
+       28.8804
+      ],
+      [
+       48.3622,
+       28.8803
+      ],
+      [
+       48.3634,
+       28.88
+      ],
+      [
+       48.3644,
+       28.8795
+      ],
+      [
+       48.3654,
+       28.8788
+      ],
+      [
+       48.3661,
+       28.878
+      ],
+      [
+       48.3667,
+       28.8771
+      ],
+      [
+       48.367,
+       28.8761
+      ],
+      [
+       48.3672,
+       28.875
+      ],
+      [
+       48.367,
+       28.8739
+      ],
+      [
+       48.3667,
+       28.8729
+      ],
+      [
+       48.3661,
+       28.872
+      ],
+      [
+       48.3654,
+       28.8712
+      ],
+      [
+       48.3644,
+       28.8705
+      ],
+      [
+       48.3634,
+       28.87
+      ],
+      [
+       48.3622,
+       28.8697
+      ],
+      [
+       48.361,
+       28.8696
+      ],
+      [
+       48.3598,
+       28.8697
+      ],
+      [
+       48.3586,
+       28.87
+      ],
+      [
+       48.3576,
+       28.8705
+      ],
+      [
+       48.3566,
+       28.8712
+      ],
+      [
+       48.3559,
+       28.872
+      ],
+      [
+       48.3553,
+       28.8729
+      ],
+      [
+       48.355,
+       28.8739
+      ],
+      [
+       48.3548,
+       28.875
+      ],
+      [
+       48.355,
+       28.8761
+      ],
+      [
+       48.3553,
+       28.8771
+      ],
+      [
+       48.3559,
+       28.878
+      ],
+      [
+       48.3566,
+       28.8788
+      ],
+      [
+       48.3576,
+       28.8795
+      ],
+      [
+       48.3586,
+       28.88
+      ],
+      [
+       48.3598,
+       28.8803
+      ],
+      [
+       48.361,
+       28.8804
+      ]
+     ]
     ]
    },
-   "cancel_at": null
+   "cancel_at": null,
+   "radius_m": [
+    600.0
+   ]
   },
   {
    "id": "P-1423-2024",
@@ -16698,7 +18539,7 @@
    "headline": "CABLE OPERATIONS 10 AUG THRU 30 NOV BY M/V NORTON WAVE, CABLESHIP YAUZA, M/V SOPHIA, AND M/V SIRIUS ALONG TRACKLINE JOINING 75-12.21N 074-39.20E, 76-09.92N 080-",
    "text": "KARA SEA.\nLAPTEV SEA.\nRUSSIA.\n1. CABLE OPERATIONS 10 AUG THRU 30 NOV\n   BY M/V NORTON WAVE, CABLESHIP YAUZA,\n   M/V SOPHIA, AND M/V SIRIUS\n   ALONG TRACKLINE JOINING\n   75-12.21N 074-39.20E, 76-09.92N 080-22.98E,\n   76-23.62N 086-43.61E, 76-37.48N 091-21.17E,\n   77-03.58N 094-34.27E, 77-38.01N 097-30.99E,\n   77-46.25N 098-41.60E, 77-44.75N 099-54.39E,\n   78-00.14N 105-56.61E, 77-56.46N 108-05.31E,\n   77-14.76N 116-57.40E, 76-55.62N 124-22.09E,\n   77-01.91N 129-04.97E, 75-59.97N 129-27.98E,\n   73-48.97N 131-09.10E, 72-19.46N 131-10.33E,\n   71-26.38N 130-36.24E, 71-23.82N 129-55.75E,\n   71-36.55N 129-20.09E, 71-38.37N 128-53.33E.\n   TWO MILE BERTH REQUESTED.\n2. CANCEL THIS MSG 010001Z DEC 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "LineString",
     "coordinates": [
      [
       74.653,
