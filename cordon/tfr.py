@@ -38,8 +38,10 @@ STALE_HOURS = 6  # launch and VIP TFRs last hours; with no good list for this lo
 NEW_HOURS = 72
 # A TFR of these types issued within NEW_HOURS is an anomaly (as for NGA's launch, military and security warnings).
 NEW_ALERT = {"SPACE OPERATIONS", "SECURITY", "SPECIAL"}
-# Types left out of the feed (kept in data). Empty for now; "SPACE OPERATIONS" would leave them to Launch.
-SKIP_TYPES: set[str] = set()
+# Types left out of the feed (kept in data and counted as skipped in health). SPACE OPERATIONS TFRs are Launch's
+# (launch.theintelligence.company), which tiers a new one anomaly by the same 72-hour rule; COP drew each twice while
+# both carried them (Tom, 14 Nov 2026). Empty this set to bring them back.
+SKIP_TYPES: set[str] = {"SPACE OPERATIONS"}
 # The list's state field for US territories with their own ISO code; every other TFR is the US's. (The world outlines
 # are thinned to about 5 km, so a TFR at Brownsville or Starbase would otherwise also be tagged Mexico.)
 TERRITORIES = {"PR": "PR", "GU": "GU", "VI": "VI", "AS": "AS", "MP": "MP"}

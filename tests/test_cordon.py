@@ -926,10 +926,23 @@ class Tfr(unittest.TestCase):
         h = {"faa-tfr": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
         return feed.build({}, {}, {}, {}, self.NOW, h, tfrs={"tfrs": held, "fetched_at": self.STAMP})
 
+    def test_space_operations_left_to_launch(self):
+        fetch, _ = self.fetcher()
+        held = tfr.collect(None, self.STAMP, fetch, pause=0)[0]
+        fc = self.build(held)
+        ids = {f["properties"]["id"] for f in fc["features"]}
+        self.assertNotIn("cordon:tfr:6-7131", ids)
+        self.assertIn("6/7131", held)  # kept in data
+        self.assertEqual(fc["health"]["faa-tfr"]["skipped"], 1)
+
     def test_items_new_launches_statutory_no_shape_and_expired(self):
         fetch, _ = self.fetcher(fail={"6_7546"})
         held = tfr.collect(None, self.STAMP, fetch, pause=0)[0]
-        fc = self.build(held)
+        saved, tfr.SKIP_TYPES = tfr.SKIP_TYPES, set()  # the anomaly rule still holds if the skip is lifted
+        try:
+            fc = self.build(held)
+        finally:
+            tfr.SKIP_TYPES = saved
         self.assertEqual(fc["dropped"], [])
         items = {f["properties"]["id"]: f for f in fc["features"]}
         self.assertEqual(sorted(items), ["cordon:tfr:6-2698", "cordon:tfr:6-6924", "cordon:tfr:6-7131", "cordon:tfr:6-7546"])

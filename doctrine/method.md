@@ -42,9 +42,11 @@ center or the whole system instead of one airport. A single ground stop on a nor
 and every closure is routine. Cordon reports the reason the FAA lists ("wind", "other") and never infers a cause.
 A change of the FCDO's statements for a country in the last 30 days is an anomaly against its previous statements;
 countries where the FCDO advises against some travel, or that it updated in the last 72 hours, are listed as routine.
-Cordon does not rank the FCDO's statements against the State Department's levels. A TFR for space operations,
-security or a special notice issued in the last 72 hours is an anomaly against the TFRs listed before it, except the
-statutory TFRs over stadiums and Disney parks, which are standing; every other TFR is routine.
+Cordon does not rank the FCDO's statements against the State Department's levels. A TFR for security or a
+special notice issued in the last 72 hours is an anomaly against the TFRs listed before it, except the statutory TFRs
+over stadiums and Disney parks, which are standing; every other TFR is routine. Space operations TFRs are read and
+kept in Cordon's data but left off its feed and map: Launch publishes them and marks one issued in the last 72 hours
+an anomaly by the same rule (since 14 Nov 2026).
 A change of Canada's level or regional advisories for a place in the last 30 days is an anomaly against what Cordon
 held before; so is an update in the last 72 hours that Canada itself labels an advisory change, or whose note starts
 with its risk level section (the label alone missed one: Mexico, 12 Nov 2026). Places above Canada's lowest level or
