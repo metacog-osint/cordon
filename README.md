@@ -33,8 +33,9 @@ OSAC is not used: its terms bar republishing.
   stop is an anomaly when more are in effect at once than Cordon's own 30-day count makes normal, or when the FAA lists
   one against a center or the whole system. ATCSCC advisory text is not read: fly.faa.gov answered "No message" to
   plain requests on 13 Nov 2026.
-- TFRs are drawn with the FAA's own outline. A space operations, security or special TFR issued in the last 72 hours
-  is an anomaly; the standing statutory TFRs over stadiums and Disney parks never are. Nationwide notices with no area
+- TFRs are drawn with the FAA's own outline. Space operations TFRs are left to Launch
+  (https://launch.theintelligence.company), which marks a new one the same way. A security or special TFR issued in
+  the last 72 hours is an anomaly; the standing statutory TFRs over stadiums and Disney parks never are. Nationwide notices with no area
   are counted in the health block, not listed.
 - The FCDO's statements are reported as the FCDO words them; a change in the last 30 days is an anomaly. Cordon does
   not rank them against the State Department's levels. A country's page is read only when the FCDO updates it.

@@ -155,7 +155,7 @@
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa") }), "FAA airport program"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr") }), "FAA flight restriction"]),
-      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new launch or security restriction"]));
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new security or special restriction"]));
   }
 
   function lists(d) {
