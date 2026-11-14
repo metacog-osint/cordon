@@ -2,16 +2,6 @@
  "source": "https://nasstatus.faa.gov/api/airport-events",
  "programs": [
   {
-   "kind": "closure",
-   "airport": "SUA",
-   "airport_name": "Witham Field",
-   "start": "2026-11-13T16:00:00Z",
-   "end": "2026-11-14T01:00:00Z",
-   "updated": "2026-11-08T19:14:02Z",
-   "notam": "!MIA 11/158 SUA AD AP CLSD EXC AIRSHOW ACFT 2611131600-2611140100",
-   "issued": "2026-11-08T19:13:00Z"
-  },
-  {
    "kind": "ground_delay",
    "airport": "BOS",
    "airport_name": "General Edward Lawrence Logan International",
@@ -73,6 +63,11 @@
   }
  ],
  "airports": {
+  "ATL": [
+   -84.4277,
+   33.6407,
+   "Hartsfield-Jackson Atlanta International"
+  ],
   "BDL": [
    -72.6869,
    41.939,
