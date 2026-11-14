@@ -505,8 +505,9 @@ class Feed(unittest.TestCase):
 
     def test_an_area_held_for_two_days_is_withheld(self):
         now = datetime(2026, 11, 12, 17, tzinfo=timezone.utc)
-        nav = {"warnings": navarea.parse_text(NGA_TEXT, "4") + navarea.parse_text(
-            NGA_TEXT.replace("NAVAREA IV", "HYDROPAC"), "P")}
+        pac = NGA_TEXT.replace("NAVAREA IV", "HYDROPAC").replace("0100Z TO 0200Z", "0300Z TO 0400Z").replace(
+            "10-05.05N", "11-05.05N")  # other times and places, so these are not rebroadcasts of the NAVAREA IV ones
+        nav = {"warnings": navarea.parse_text(NGA_TEXT, "4") + navarea.parse_text(pac, "P")}
         ok = {"last_ok": "2026-11-12T16:00:00Z", "failures": 0, "detail": "6 warnings in force"}
         for since, shown, withheld in (("2026-11-12T10:00:00Z", 4, None), ("2026-11-10T16:00:00Z", 2, 2)):
             held = {"HYDROPAC": {"error": "HTTP 404", "since": since}}
@@ -514,6 +515,70 @@ class Feed(unittest.TestCase):
             nga = fc["health"]["nga-navwarnings"]
             self.assertEqual((len(fc["features"]), nga["state"], nga.get("withheld")), (shown, "fresh", withheld))
             self.assertEqual(nga["held_areas"], held)
+
+
+    def test_a_rebroadcast_is_one_item_listing_the_other(self):
+        """NAVAREA XII 788/26 and HYDROPAC 3257/26, as NGA's daily lists carried them on 13 Nov 2026: one hazard."""
+        now = datetime(2026, 11, 13, 17, tzinfo=timezone.utc)
+        xii = navarea.parse_text(REBROADCAST.format(series="NAVAREA XII", num=788), "12")
+        pac = navarea.parse_text(REBROADCAST.format(series="HYDROPAC", num=3257), "P")
+        fc = feed.build({}, {}, {}, {"warnings": pac + xii}, now)
+        self.assertEqual(fc["dropped"], [])
+        self.assertEqual([f["properties"]["id"] for f in fc["features"]], ["cordon:navwarn:12-788-2026"],
+                         "the NAVAREA copy leads; the HYDROPAC copy is not drawn again")
+        p = fc["features"][0]["properties"]
+        self.assertEqual(p["measures"]["rebroadcasts"], [{"id": "cordon:navwarn:P-3257-2026", "number": "HYDROPAC 3257/2026",
+                                                          "issued": "2026-11-07T01:15:00Z", "vertex_differences": []}])
+        self.assertTrue(p["title"].endswith("(also HYDROPAC 3257/2026)"))
+        self.assertEqual(fc["health"]["nga-navwarnings"]["rebroadcasts_merged"], 1)
+
+    def test_rebroadcast_matching_rules(self):
+        xii = navarea.parse_text(REBROADCAST.format(series="NAVAREA XII", num=787), "12")
+        # One position written differently (as NAVAREA XI 0507/26 wrote 178-12E where HYDROPAC 3256/26 has 178-21E).
+        moved = navarea.parse_text(REBROADCAST.replace("31-10.00N 178-00.00E", "31-10.00N 178-09.00E")
+                                   .format(series="HYDROPAC", num=3256), "P")
+        leads, merged = navarea.rebroadcasts(moved + xii)
+        self.assertEqual(merged, {"P-3256-2026": "12-787-2026"})
+        self.assertEqual(leads["12-787-2026"][0]["vertex_differences"],
+                         [{"position": 6, "lead": [178.0, 31.167], "rebroadcast": [178.15, 31.167]}],
+                         "shown as each wrote it, not corrected")
+        other_times = navarea.parse_text(REBROADCAST.replace("0130Z TO 0501Z", "0230Z TO 0601Z")
+                                         .format(series="HYDROPAC", num=3258), "P")
+        same_series = navarea.parse_text(REBROADCAST.format(series="NAVAREA XII", num=790), "12")
+        self.assertEqual(navarea.rebroadcasts(other_times + same_series + xii), ({}, {}),
+                         "other times, or a second warning in the same series, are separate hazards")
+        far = REBROADCAST
+        for a, b in (("23-56.00N", "22-56.00N"), ("26-09.00N", "25-09.00N"), ("27-46.00N", "26-46.00N"),
+                     ("29-28.00N 165", "28-28.00N 165"), ("30-43.00N", "29-43.00N"), ("31-10.00N", "30-10.00N")):
+            far = far.replace(a, b)
+        self.assertEqual(navarea.rebroadcasts(navarea.parse_text(far.format(series="HYDROPAC", num=3259), "P") + xii),
+                         ({}, {}), "more than a fifth of the positions differ: a different area")
+
+
+# NAVAREA XII 788/26 as NGA's daily list carried it on 13 Nov 2026 (HYDROPAC 3257/26 is word for word the same).
+REBROADCAST = """
+070115Z NOV 26
+{series} {num}/26.
+NORTH PACIFIC.
+MIDWAY ISLANDS.
+1. HAZARDOUS OPERATIONS, SPACE DEBRIS
+   0130Z TO 0501Z DAILY 14 THRU 20 NOV
+   IN AREA BOUND BY
+   23-56.00N 144-37.00E, 26-09.00N 151-14.00E,
+   27-46.00N 156-36.00E, 29-28.00N 165-10.00E,
+   30-43.00N 172-44.00E, 31-10.00N 178-00.00E,
+   31-16.00N 175-01.00W, 31-21.00N 171-27.00W,
+   30-33.00N 161-15.00W, 29-37.00N 155-40.00W,
+   28-49.00N 151-35.00W, 26-53.00N 145-26.00W,
+   26-50.00N 145-28.00W, 24-03.00N 154-32.00W,
+   23-46.00N 156-11.00W, 24-52.00N 159-19.00W,
+   27-38.00N 167-49.00W, 29-23.00N 175-00.00W,
+   29-35.00N 176-36.00W, 29-37.00N 179-58.00W,
+   29-28.00N 176-13.00E, 29-11.00N 170-10.00E,
+   28-12.00N 163-45.00E, 26-39.00N 156-17.00E,
+   23-27.00N 144-49.00E.
+2. CANCEL THIS MSG 200601Z NOV 26.
+"""
 
 
 # The FAA's airport-events JSON as served on 13 Nov 2026 (nasstatus.faa.gov/api/airport-events), trimmed. BDL's

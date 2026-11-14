@@ -247,6 +247,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     expired = 0
     old_areas = navarea.held_too_long(nga.get("held_areas"), stamp, STALE_HOURS)
+    shown = []
     for w in nav.get("warnings") or []:
         if w["category"] not in NOTABLE:
             continue
@@ -255,6 +256,14 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             continue
         if not navarea.in_force(w, stamp):
             expired += 1  # past its own "cancel this msg" time, though still on NGA's daily list
+            continue
+        shown.append(w)
+    # One item per hazard: a warning NGA also broadcast in another series is listed on the lead, not drawn twice.
+    leads, merged = navarea.rebroadcasts(shown)
+    if merged:
+        nga["rebroadcasts_merged"] = len(merged)
+    for w in shown:
+        if w["id"] in merged:
             continue
         g = w.get("geometry")
         issued = nga_time(w.get("issued"))
@@ -271,6 +280,9 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                               **{k: w[k] for k in ("radius_m", "corridor_half_width_m") if w.get(k)}}}
         if w.get("cancel_at"):
             props["valid_until"] = w["cancel_at"]
+        if w["id"] in leads:
+            props["measures"]["rebroadcasts"] = [{**r, "id": f"cordon:navwarn:{r['id']}"} for r in leads[w["id"]]]
+            props["title"] += " (also " + ", ".join(r["number"] for r in leads[w["id"]]) + ")"
         if alert:
             props["baseline_ref"] = {"id": "nga-warnings-in-force", "type": "rolling", "version": "1",
                                      "window": f"the warnings in force {NEW_HOURS} hours earlier"}

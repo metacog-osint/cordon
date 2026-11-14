@@ -352,6 +352,57 @@ def _from_text(fetch, when: str, old: list[dict] | None = None):
     return new, err, held
 
 
+# Rebroadcasts. NGA puts some warnings out in two series (NAVAREA XII 788/26 and HYDROPAC 3257/26 on 13 Nov 2026) and
+# neither copy cites the other, so they are matched on what they say: same category, the same time groups, and the
+# same positions in the same order. A NAVAREA copy leads, then the earliest issued.
+REBROADCAST_TOL = 0.05  # degrees; positions further apart than this differ
+TIME_TOKEN_RE = re.compile(r"\b\d{4}(?:\d{2})?Z\b")
+SERIES_RANK = {"NAVAREA IV": 0, "NAVAREA XII": 0}
+
+
+def _same_place(a: list[list[float]], b: list[list[float]]) -> list[int] | None:
+    """Indexes of the positions that differ, or None when the two are not the same shape. Up to a fifth of the
+    positions may differ (at least one, from three positions up); fewer than three must match exactly."""
+    if not a or len(a) != len(b):
+        return None
+    diff = [i for i, (p, q) in enumerate(zip(a, b))
+            if abs((p[0] - q[0] + 180) % 360 - 180) > REBROADCAST_TOL or abs(p[1] - q[1]) > REBROADCAST_TOL]
+    allowed = max(1, len(a) // 5) if len(a) >= 3 else 0
+    return diff if len(diff) <= allowed else None
+
+
+def rebroadcasts(warnings: list[dict]) -> tuple[dict, dict]:
+    """({lead id: [rebroadcast, ...]}, {rebroadcast id: lead id}). Each group holds at most one warning per series.
+    A rebroadcast is listed with its number, issue time, and every position that differs from the lead's, as both
+    were written; nothing is corrected."""
+    def key(w):
+        return (SERIES_RANK.get(w.get("area"), 1), issued_time(w.get("issued")) or "9999", w["id"])
+    sig = {w["id"]: (positions(w.get("text")),
+                     tuple(sorted(TIME_TOKEN_RE.findall(re.sub(r"\s+", " ", (w.get("text") or "").upper())))))
+           for w in warnings}
+    groups, leads, merged = [], {}, {}
+    for w in sorted(warnings, key=key):
+        pts, times = sig[w["id"]]
+        for g in groups:
+            lead = g[0]
+            lpts, ltimes = sig[lead["id"]]
+            if (lead["category"] != w["category"] or ltimes != times
+                    or w.get("area") in {m.get("area") for m in g}):
+                continue
+            diff = _same_place(lpts, pts)
+            if diff is None:
+                continue
+            g.append(w)
+            merged[w["id"]] = lead["id"]
+            leads.setdefault(lead["id"], []).append({
+                "id": w["id"], "number": w["number"], "issued": issued_time(w.get("issued")),
+                "vertex_differences": [{"position": i + 1, "lead": lpts[i], "rebroadcast": pts[i]} for i in diff]})
+            break
+        else:
+            groups.append([w])
+    return leads, merged
+
+
 def held_too_long(held_areas: dict | None, when: str, hours: float) -> set[str]:
     """Areas whose list has been held (kept from an earlier fetch) since before `hours` ago."""
     limit = (datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ") - timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
