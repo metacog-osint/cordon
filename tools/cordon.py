@@ -39,6 +39,9 @@ def map_data(d: dict, fc: dict) -> dict:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     nga = fc["health"].get("nga-navwarnings") or {}
     old_areas = navarea.held_too_long(nga.get("held_areas"), now, feed.STALE_HOURS)
+    shown = [w for w in d["navarea.json"].get("warnings") or [] if w.get("geometry") and navarea.in_force(w, now)
+             and w.get("area") not in old_areas and nga.get("state") not in ("stale", "never")]
+    leads, merged = navarea.rebroadcasts(shown)  # a warning NGA also broadcast in another series is drawn once
     return {
         "generated_at": fc["generated_at"],
         "advisories": [{"key": k, "iso": r["iso"], "name": r["name"], "level": r["level"], "level_text": r["level_text"],
@@ -46,11 +49,10 @@ def map_data(d: dict, fc: dict) -> dict:
                         "sentence": r["posture"]["sentence"]} for k, r in sorted(adv.items())],
         "czibs": [b for b in d["czibs.json"].get("bulletins") or [] if b["status"] == "active"],
         # A stale warning list is not drawn: the Sources table says why (see feed.source_health).
-        "warnings": [{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued", "geometry",
-                                            "cancel_at")}
-                     for w in d["navarea.json"].get("warnings") or [] if w.get("geometry")
-                     and navarea.in_force(w, now) and w.get("area") not in old_areas
-                     and nga.get("state") not in ("stale", "never")],
+        "warnings": [{**{k: w.get(k) for k in ("id", "number", "category", "headline", "sea", "place", "issued",
+                                               "geometry", "cancel_at")},
+                      **({"also": [r["number"] for r in leads[w["id"]]]} if w["id"] in leads else {})}
+                     for w in shown if w["id"] not in merged],
         "alerts": d["alerts.json"].get("posts") or {},
         "changes": sorted(read_jsonl("changes.jsonl"), key=lambda c: c.get("at", ""), reverse=True)[:60],
         "health": fc["health"],
