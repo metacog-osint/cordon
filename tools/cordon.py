@@ -20,7 +20,8 @@ from tic_doctrine import contract, registers  # noqa: E402
 SRC, OUT = ROOT / "site_src", ROOT / "site"
 LANES = {"advisories.json": "state-travel-advisories", "alerts.json": "us-embassy-alerts",
          "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings", "faa_nas.json": "faa-nas-status",
-         "fcdo.json": "uk-fcdo-travel-advice", "tfr.json": "faa-tfr", "canada.json": "gac-travel-advisories"}
+         "fcdo.json": "uk-fcdo-travel-advice", "tfr.json": "faa-tfr", "canada.json": "gac-travel-advisories",
+         "cdc.json": "cdc-travel-notices"}
 
 
 def data() -> dict:
@@ -74,6 +75,12 @@ def map_data(d: dict, fc: dict) -> dict:
                   **{k: f["properties"]["measures"].get(k) for k in ("alert_status", "advice", "change", "updated", "new",
                                                                      "from_advice")}}
                  for f in fc["features"] if f["properties"]["id"].startswith("cordon:fcdo:")],
+        # CDC's travel health notices as published in the feed (withheld there when stale, so not listed either).
+        "cdc": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                 "link": f["properties"]["link"], "countries": f["properties"]["countries"],
+                 **{k: f["properties"]["measures"].get(k) for k in ("level", "level_text", "summary", "published", "date",
+                                                                    "new", "change", "from_level")}}
+                for f in fc["features"] if f["properties"]["id"].startswith("cordon:cdc:")],
         # Canada's advisories as published in the feed (withheld there when stale, so not listed either).
         "canada": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
                     "link": f["properties"]["link"], "countries": f["properties"]["countries"],
@@ -90,7 +97,7 @@ def build() -> dict:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
                     datetime.now(timezone.utc), d["health"], d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"],
-                    ca=d["canada.json"])
+                    ca=d["canada.json"], health_notices=d["cdc.json"])
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -109,7 +116,8 @@ def check() -> list[str]:
     errs = [f"registers: {e}" for e in registers.check(ROOT / "doctrine")]
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"],
-                    nas=d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"], ca=d["canada.json"])
+                    nas=d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"], ca=d["canada.json"],
+                    health_notices=d["cdc.json"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:

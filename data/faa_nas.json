@@ -10,6 +10,20 @@
    "updated": "2026-11-08T19:15:11Z",
    "notam": "!MIA 11/159 SUA AD AP CLSD EXC AIRSHOW ACFT 2611141600-2611142230",
    "issued": "2026-11-08T19:14:00Z"
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-14T20:47:00Z",
+   "end": "2026-11-14T22:30:00Z",
+   "updated": "2026-11-14T21:00:22Z",
+   "reason": "other",
+   "center": "ZNY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=102&adv_date=11142026&facId=LGA&title=ATCSCC ADVZY 102 LGA/ZNY 11/14/2026 CDM GROUND STOP&titleDate=11/14/2026",
+   "included_facilities": 15,
+   "included_flights": "CARRIER DAL ONLY",
+   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {

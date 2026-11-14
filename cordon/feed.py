@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import canada, faa, fcdo, navarea, tfr
+from . import canada, cdc, faa, fcdo, navarea, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -46,6 +46,10 @@ FCDO_SRC = {"id": "uk-fcdo-travel-advice", "publisher": "UK Foreign, Commonwealt
 CANADA_SRC = {"id": "gac-travel-advisories", "publisher": "Global Affairs Canada (Government of Canada)",
               "licence": "Open Government Licence - Canada", "grade": "A1", "independence_group": "gac",
               "source_type": "official notice", "descriptor": "Travel advice and advisories (travel.gc.ca open data)"}
+CDC_SRC = {"id": "cdc-travel-notices", "publisher": "US Centers for Disease Control and Prevention (CDC), Travelers' Health",
+           "licence": "US public domain (CDC asks for credit and a no-endorsement disclaimer)", "grade": "A1",
+           "independence_group": "cdc", "source_type": "official notice",
+           "descriptor": "Travel health notice (wwwnc.cdc.gov/travel/notices)"}
 TFR_SRC = {"id": "faa-tfr", "publisher": "US Federal Aviation Administration (FAA)", "url": tfr.SITE_URL,
            "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on "
            "the TFR site", "grade": "A1", "independence_group": "faa", "source_type": "official notice",
@@ -260,6 +264,36 @@ def canada_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     return out
 
 
+def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """Every CDC travel health notice in force, in CDC's words. A notice Cordon saw appear, or whose level it saw
+    change, in the last RECENT_DAYS is an anomaly; one CDC published or updated in the last NEW_HOURS is marked new."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    last = {c["key"]: c for c in changes if c.get("lane") == "cdc" and c.get("kind") in ("new", "level")}
+    out = []
+    for slug, r in sorted((data.get("notices") or {}).items()):
+        ch = last.get(slug)
+        is_new = bool(r.get("published") and r["published"] >= new_from)
+        props = {**_base(fetched), "id": f"cordon:cdc:{slug}",
+                 "title": f"CDC Level {r['level']} ({r['level_text']}): {r['disease_place']}",
+                 "tier": "anomaly" if ch else "routine", "data_as_of": r.get("published") or fetched,
+                 "countries": r["countries"], "precision_class": "country", "requirement_ids": ["CD-PIR-9"],
+                 "ie_aspect": ["physical"], "pmesii_pt": ["social"], "ascope": ["events"],
+                 "sources": [{**CDC_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
+                 "measures": {"level": r["level"], "level_text": r["level_text"], "summary": r.get("summary"),
+                              "published": r.get("published"), "date": r.get("date"), "new": is_new}}
+        if ch:
+            props["baseline_ref"] = {"id": "previous-cdc-notices", "type": "fixed", "version": "1",
+                                     "window": "the CDC notices Cordon held before, and each notice's previous level"}
+            props["measures"].update({"changed_at": ch["at"], "change": ch["kind"], "from_level": ch["from"]})
+        pts = [p["coordinates"] for p in (point(c) for c in r["countries"]) if p]
+        geom = ({"type": "Point", "coordinates": pts[0]} if len(pts) == 1
+                else {"type": "MultiPoint", "coordinates": pts} if pts else None)
+        out.append(_place({"type": "Feature", "geometry": geom, "properties": props}, r["link"]))
+    return out
+
+
 def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
     """(items, counts) for the TFRs the FAA lists, drawn with the FAA's own outline. Left out and counted: TFRs past
     their own expiry (expired), TFRs with no area (no_shape: the standing nationwide notices) and types in
@@ -313,7 +347,8 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
 
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
-          uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None) -> dict:
+          uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
+          health_notices: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -471,6 +506,13 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         else:
             feats += canada_items(ca, now, changes)
 
+    if health_notices is not None:
+        cd = src_health.setdefault(CDC_SRC["id"], {"state": "never"})
+        if cd["state"] in ("stale", "never"):
+            cd["withheld"] = len(health_notices.get("notices") or {})
+        else:
+            feats += cdc_items(health_notices, now, changes)
+
     if tfrs is not None:
         tf = src_health.setdefault(TFR_SRC["id"], {"state": "never"})
         if tf["state"] in ("stale", "never"):
@@ -488,10 +530,12 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
             "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
                        "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
-                       "content under the Open Government Licence - Canada",
+                       "content under the Open Government Licence - Canada; CDC content US public domain",
             "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO, "
                            "Global Affairs Canada. Contains public sector information licensed under the Open "
                            "Government Licence v3.0. Contains information licensed under the Open Government "
-                           "Licence - Canada.",
+                           "Licence - Canada. Health notices: Source: CDC; available free at "
+                           "wwwnc.cdc.gov/travel/notices; their use here does not imply endorsement by CDC, HHS or the "
+                           "US Government.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}
