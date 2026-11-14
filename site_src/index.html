@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cordon: where authorities warn people away</title>
-<meta name="description" content="US and UK travel advice, US embassy departure status, EASA conflict-zone bulletins, NGA navigational warnings and FAA flight restrictions on one map. A project of The Intelligence Company.">
+<meta name="description" content="US, UK and Canadian travel advice, US embassy departure status, EASA conflict-zone bulletins, NGA navigational warnings and FAA flight restrictions on one map. A project of The Intelligence Company.">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-time.css">
@@ -29,7 +29,7 @@
 <main class="wrap">
   <section class="hero">
     <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
-    <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's foreign travel advice, European
+    <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's and Canada's travel advice, European
       aviation conflict-zone bulletins, US navigational warnings to mariners, and the FAA's ground stops, ground delay
       programs, airport closures and temporary flight restrictions, collected every hour from the issuing authorities.</p>
   </section>
@@ -96,6 +96,14 @@
       essential travel, and any country whose advice it updated in the last 72 hours, with its own note of what changed.</p>
     <div id="fcdo"></div>
   </section>
+  <section class="card" aria-labelledby="canada-h">
+    <h2 id="canada-h">Canada's travel advisories</h2>
+    <p class="muted small">Where the Government of Canada advises avoiding non-essential travel or all travel, any
+      change to a level or to regional advisories, and any place it updated in the last 72 hours (editorial
+      changes and updates to embassy contacts aside), with its own note of what changed. The feed also carries every place where Canada advises a high degree of
+      caution or has regional advisories.</p>
+    <div id="canada"></div>
+  </section>
   <section class="card" aria-labelledby="levels-h">
     <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
     <div id="levels"></div>
@@ -108,7 +116,8 @@
       content is US public domain; the FAA's airport coordinates come with its status data.
       EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
       Bulletins. UK travel advice: contains public sector information licensed under the Open Government Licence v3.0
-      (FCDO, gov.uk/foreign-travel-advice). FAA flight restrictions (tfr.faa.gov) are a US Government work. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+      (FCDO, gov.uk/foreign-travel-advice). Canada's travel advice: contains information licensed under the Open
+      Government Licence - Canada (Global Affairs Canada, travel.gc.ca). FAA flight restrictions (tfr.faa.gov) are a US Government work. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
       OSAC is not used: its terms bar republishing.</p>
   </section>
 </main>

@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import easa, embassy, faa, fcdo, navarea, state, tfr
+from . import canada, easa, embassy, faa, fcdo, navarea, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -75,6 +75,19 @@ def run(when: str | None = None) -> dict:
                f"{read} country pages read" + (f", {failed} failed" if failed else "")
                + (f", {unread} not yet read" if unread else ""), when)
     summary["fcdo"] = err or f"{len(countries)} countries, {len(uk_changes)} changes, {read} pages read"
+
+    places, ca_changes, generated, err = canada.collect(load("canada.json", {}).get("countries"), when)
+    if err:
+        health("gac-travel-advisories", False, err, when)
+    else:
+        save("canada.json", {"source": canada.SOURCE_URL, "generated": generated, "countries": places})
+        append_jsonl("changes.jsonl", [{**c, "lane": "canada"} for c in ca_changes])
+        n = {lv: sum(1 for r in places.values() if r["level"] == lv) for lv in canada.LEVELS}
+        regional = sum(1 for r in places.values() if r["regional"])
+        health("gac-travel-advisories", True, f"{len(places)} places: {n[3]} avoid all travel, {n[2]} avoid "
+               f"non-essential travel, {n[1]} high degree of caution, {regional} with regional advisories; index "
+               f"generated {generated or 'at an unstated time'}", when)
+    summary["canada"] = err or f"{len(places)} places, {len(ca_changes)} changes"
 
 
     tfrs, err, read, failed = tfr.collect(load("tfr.json", {}).get("tfrs"), when)
