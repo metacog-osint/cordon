@@ -1,7 +1,7 @@
 # Cordon method (doctrine summary)
 
 Cordon collects official warnings that tell people to stay away: US travel advisories and embassy departure status,
-the UK's and Canada's travel advice, EASA conflict-zone bulletins for aircraft, NGA's navigational warnings for ships, and
+the UK's and Canada's travel advice, CDC's travel health notices, EASA conflict-zone bulletins for aircraft, NGA's navigational warnings for ships, and
 the FAA's ground stops, ground delay programs, airport closures and temporary flight restrictions. It states them in the terms of
 The Intelligence Company's doctrine kit (`doctrine/kit/`).
 
@@ -26,6 +26,9 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   Government Licence - Canada): for about 230 places, Canada's level (exercise normal security precautions, a high
   degree of caution, avoid non-essential travel, avoid all travel), whether it has regional advisories, and its own
   label and one-line note of each update. One file a run.
+- **CDC travel health notices** (`wwwnc.cdc.gov/travel/rss/notices.xml`, keyless, US public domain; CDC asks for
+  credit, a no-endorsement disclaimer and unaltered substance): every notice in force, at CDC's level (1 Practice Usual
+  Precautions to 4 Avoid All Travel), with the disease, CDC's summary, the places it names and CDC's date.
 
 ## Anomaly versus warning
 Everything Cordon publishes is a measurement of what an authority said (kind observation). A level change or a
@@ -48,6 +51,9 @@ with its risk level section (the label alone missed one: Mexico, 12 Nov 2026). P
 with regional advisories, and places it updated in the last 72 hours, are listed as routine; editorial changes and
 updates to the embassy contacts section alone do not count as updates. Cordon does not rank Canada's levels against
 the State Department's or the UK's.
+A CDC notice that Cordon sees appear, or change level, in the last 30 days is an anomaly against the notices it held
+before; every other notice is routine, and one CDC dated in the last 72 hours is marked new. A notice CDC withdraws is
+recorded as a change. Cordon does not rank CDC's health levels against any travel advisory level.
 Cordon makes no judgment of its own;
 those come through warning problem CD-WP-1 and through Verdict, which scores forecasts of renewals and changes.
 
@@ -67,7 +73,10 @@ The hazard is drawn once, under the NAVAREA copy (otherwise the earliest issued)
 `rebroadcasts_merged`. FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
 whole system is drawn at the US label point. FCDO and Canadian advice is placed at the country's label point (the Azores, which
-Canada advises on apart from Portugal, at Ponta Delgada). TFRs are drawn with
+Canada advises on apart from Portugal, at Ponta Delgada). A CDC notice is placed at the label point of each
+country it names: from its Country List when CDC gives one (the pieces after "including" are parts of the country
+before them; a territory such as "Azores (Portugal)" is placed in the country in its parentheses), otherwise from the
+title. CDC dates notices without a time; Cordon shows that date and keeps the GMT stamp CDC gives. TFRs are drawn with
 the outline the FAA publishes (its circles already turned into rings; a circle given only by centre and radius is a
 32-sided polygon) and tagged with the country from the FAA's own state field (Puerto Rico, Guam and the other
 territories by their own codes, everything else US), not from the outline, because coarse borders would tag a TFR at
@@ -80,5 +89,5 @@ health detail and `held_areas` say so, and after 48 hours held its warnings are 
 alert feeds were down on 31 Oct 2026 ("Technical Difficulties"), so that layer may be empty. FAA programs last hours,
 so the FAA list goes stale after 3 hours without a good fetch and is then withheld; from a held list (the latest fetch
 failed) a program past its listed end time is dropped. TFRs go stale after 6 hours without a good list; a TFR past
-its own expiry is dropped and counted (`expired`). Canada's index goes stale after 48 hours. The FCDO list goes stale after 48 hours; a country page that fails
+its own expiry is dropped and counted (`expired`). Canada's index and CDC's notices go stale after 48 hours. The FCDO list goes stale after 48 hours; a country page that fails
 keeps its last statements and is asked for again on the next run.

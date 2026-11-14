@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import canada, easa, embassy, faa, fcdo, navarea, state, tfr
+from . import canada, cdc, easa, embassy, faa, fcdo, navarea, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -88,6 +88,18 @@ def run(when: str | None = None) -> dict:
                f"non-essential travel, {n[1]} high degree of caution, {regional} with regional advisories; index "
                f"generated {generated or 'at an unstated time'}", when)
     summary["canada"] = err or f"{len(places)} places, {len(ca_changes)} changes"
+
+    notices, cdc_changes, err = cdc.collect(load("cdc.json", {}).get("notices"), when)
+    if err:
+        health("cdc-travel-notices", False, err, when)
+    else:
+        save("cdc.json", {"source": cdc.SOURCE_URL, "notices": notices})
+        append_jsonl("changes.jsonl", [{**c, "lane": "cdc"} for c in cdc_changes])
+        n = {lv: sum(1 for r in notices.values() if r["level"] == lv) for lv in cdc.LEVELS}
+        unplaced = sum(1 for r in notices.values() if not r["countries"])
+        health("cdc-travel-notices", True, f"{len(notices)} notices: {n[4]} level 4, {n[3]} level 3, {n[2]} level 2, "
+               f"{n[1]} level 1" + (f"; {unplaced} matched no country" if unplaced else ""), when)
+    summary["cdc"] = err or f"{len(notices)} notices, {len(cdc_changes)} changes"
 
 
     tfrs, err, read, failed = tfr.collect(load("tfr.json", {}).get("tfrs"), when)

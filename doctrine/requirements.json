@@ -35,6 +35,9 @@
      "question": "Where does Canada advise a high degree of caution, avoiding non-essential travel or avoiding all travel, and when do those advisories change?",
      "series": ["Government of Canada travel advice and advisories (advisory-state 0-3, regional advisories, update notes)", "changes.jsonl (lane canada: level and regional advisory changes)"],
      "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-9", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where has CDC issued travel health notices for disease outbreaks, at what level, and which notices are new or changed level?",
+     "series": ["CDC travel health notices (RSS: level 1-4, disease, places, publication date)", "changes.jsonl (lane cdc: new notices, level changes, removals)"]},
     {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
      "question": "Is each source answering (data/health.json)?",
      "series": ["source health"]}
