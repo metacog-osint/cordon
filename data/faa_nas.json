@@ -3,21 +3,6 @@
  "programs": [
   {
    "kind": "ground_delay",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-13T16:44:00Z",
-   "end": "2026-11-14T03:59:00Z",
-   "updated": "2026-11-13T16:49:45Z",
-   "reason": "wind",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=82&adv_date=11132026&facId=LGA&title=ATCSCC ADVZY 082 LGA/ZNY 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
-   "included_facilities": 26,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 45.0,
-   "max_delay_min": 166.0
-  },
-  {
-   "kind": "ground_delay",
    "airport": "SAN",
    "airport_name": "San Diego-Lindbergh Field",
    "start": "2026-11-13T17:15:00Z",
