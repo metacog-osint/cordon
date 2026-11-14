@@ -24,6 +24,13 @@
     {"id": "CD-PIR-5", "type": "pir", "parent": "CD-SQ-1",
      "question": "Where has the FAA stopped or metered flights to an airport, or listed one as closed, and are more ground stops in effect at once than is normal?",
      "series": ["FAA NAS status airport events (ground stops, ground delay programs, closures)", "faa_counts.jsonl (Cordon's own count of programs in effect per collection)"]},
+    {"id": "CD-PIR-6", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where does the UK FCDO advise against all or all but essential travel, and when does that advice change?",
+     "series": ["UK FCDO foreign travel advice (alert_status per country, update notes)", "changes.jsonl (lane fcdo: statement changes)"],
+     "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-7", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where has the FAA restricted airspace for space launches and recoveries, security, hazards or VIP movements, and which restrictions are new?",
+     "series": ["FAA temporary flight restrictions (list, NOTAM text, outline, effective and expiry times)"]},
     {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
      "question": "Is each source answering (data/health.json)?",
      "series": ["source health"]}

@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import faa, navarea
+from . import faa, fcdo, navarea, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -39,8 +39,15 @@ FAA_SRC = {"id": "faa-nas-status", "publisher": "US Federal Aviation Administrat
            "the FAA states no licence on nasstatus", "grade": "A1", "independence_group": "faa",
            "source_type": "official notice", "descriptor": "National Airspace System status: airport events "
            "(ground stops, ground delay programs, closures)"}
+FCDO_SRC = {"id": "uk-fcdo-travel-advice", "publisher": "UK Foreign, Commonwealth & Development Office (FCDO)",
+            "licence": "Open Government Licence v3.0", "grade": "A1", "independence_group": "uk-fcdo",
+            "source_type": "official notice", "descriptor": "Foreign travel advice (GOV.UK Content API)"}
+TFR_SRC = {"id": "faa-tfr", "publisher": "US Federal Aviation Administration (FAA)", "url": tfr.SITE_URL,
+           "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on "
+           "the TFR site", "grade": "A1", "independence_group": "faa", "source_type": "official notice",
+           "descriptor": "Temporary flight restriction (NOTAM), with the FAA's own boundary"}
 FAA_WORDS = {"ground_stop": "ground stop", "ground_delay": "ground delay program", "closure": "airport closure"}
-STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS}
+STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS, TFR_SRC["id"]: tfr.STALE_HOURS}
 # Lines are tracklines as published; a GeometryCollection is areas or circles with tracklines; MultiPoint is a set of
 # positions with no shape given, so its extent is approximate.
 PRECISION = {"Point": "point", "LineString": "point", "MultiLineString": "point", "Polygon": "area",
@@ -173,8 +180,92 @@ def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> 
     return out
 
 
+def fcdo_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """The FCDO's advice for every country where it advises against some travel, whose statements changed in the
+    last RECENT_DAYS, or whose advice it updated in the last NEW_HOURS (with the FCDO's own note of what changed)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    last = {c["key"]: c for c in changes if c.get("lane") == "fcdo" and c.get("kind") == "alert"}
+    out = []
+    for slug, r in sorted((data.get("countries") or {}).items()):
+        st, ch = r.get("alert_status"), last.get(slug)
+        is_new = bool(r.get("updated") and r["updated"] >= new_from)
+        if not st and not ch and not is_new:
+            continue
+        title = f"UK FCDO, {r['name']}: {fcdo.words(st)}"
+        if is_new and r.get("change"):
+            title += f" (updated: {r['change']})"
+        props = {**_base(fetched), "id": f"cordon:fcdo:{slug}", "title": title, "tier": "anomaly" if ch else "routine",
+                 "data_as_of": r.get("updated") or fetched, "countries": [r["iso"]] if r.get("iso") else [],
+                 "precision_class": "country", "requirement_ids": ["CD-PIR-6"], "ie_aspect": ["informational"],
+                 "pmesii_pt": ["political"], "ascope": ["areas"],
+                 "sources": [{**FCDO_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
+                 "measures": {"alert_status": st, "advice": fcdo.words(st), "change": r.get("change") or None,
+                              "updated": r.get("updated"), "new": is_new}}
+        if ch:
+            props["baseline_ref"] = {"id": "previous-fcdo-alert-status", "type": "fixed", "version": "1",
+                                     "window": "the FCDO's previous statements for the country"}
+            props["measures"].update({"changed_at": ch["at"], "from": ch["from"], "from_advice": fcdo.words(ch["from"])})
+        geom = _pt(r["iso"], r["iso"]) if r.get("iso") else None
+        out.append(_place({"type": "Feature", "geometry": geom, "properties": props}, r["link"]))
+    return out
+
+
+def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
+    """(items, counts) for the TFRs the FAA lists, drawn with the FAA's own outline. Left out and counted: TFRs past
+    their own expiry (expired), TFRs with no area (no_shape: the standing nationwide notices) and types in
+    tfr.SKIP_TYPES (skipped). A TFR whose detail has not been read yet is listed with the FAA's page as its visual."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=tfr.NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out, n = [], {"expired": 0, "no_shape": 0, "skipped": 0}
+    for nid, r in sorted((data.get("tfrs") or {}).items()):
+        d = r.get("detail") or {}
+        g = d.get("geometry")
+        if r["type"] in tfr.SKIP_TYPES:
+            n["skipped"] += 1
+            continue
+        if not tfr.in_force(r, stamp):
+            n["expired"] += 1
+            continue
+        if d and not g:
+            n["no_shape"] += 1
+            continue
+        place = d.get("city") or (r.get("description") or "").split(",")[0].strip() or "no place given"
+        where = f"{place}, {r['state']}" if r.get("state") and r["state"] != "USA" else place
+        title = f"FAA TFR {nid} ({r['type'].lower() or 'type not given'}): {where}"
+        if d.get("name") and d["name"] != nid:
+            title += f" ({d['name']})"
+        issued = d.get("issued")
+        is_new = bool(issued and issued >= new_from)
+        alert = is_new and r["type"] in tfr.NEW_ALERT and not d.get("statutory")
+        page = tfr.PAGE_URL.format(id=tfr.file_id(nid))
+        props = {**_base(fetched), "id": f"cordon:tfr:{nid.replace('/', '-')}", "title": title,
+                 "tier": "anomaly" if alert else "routine", "data_as_of": issued or fetched,
+                 "countries": [tfr.TERRITORIES.get(r.get("state") or "", "US")],
+                 "precision_class": "area" if g else "none", "ncf": ["transport_by_air"],
+                 "sector": vocab.derive_sectors(["transport_by_air"]), "requirement_ids": ["CD-PIR-7"],
+                 "ie_aspect": ["physical"], "pmesii_pt": ["infrastructure"], "ascope": ["areas"],
+                 "sources": [{**TFR_SRC, "url": page, "accessed_at": fetched}], "link": page,
+                 "measures": {"notam_id": nid, "type": r["type"], "new": is_new,
+                              **{k: r[k] for k in ("facility", "state", "description", "created") if r.get(k)},
+                              **{k: d[k] for k in ("effective", "issued", "regulation", "purpose", "floor", "ceiling",
+                                                   "statutory", "text") if d.get(k)}}}
+        if d.get("expires"):
+            props["valid_until"] = d["expires"]
+        if alert:
+            props["baseline_ref"] = {"id": "faa-tfrs-in-force", "type": "rolling", "version": "1",
+                                     "window": f"the TFRs the FAA listed {tfr.NEW_HOURS} hours earlier"}
+        if not g:
+            props["visual"] = {"type": "page", "url": page}  # detail not read yet: the FAA's page stands in
+        out.append({"type": "Feature", "geometry": g, "properties": props})
+    return out, n
+
+
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
-          health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None) -> dict:
+          health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
+          uk: dict | None = None, tfrs: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -318,13 +409,31 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             feats += faa_items(nas, fa["state"], now,
                                faa_counts if faa_counts is not None else read_jsonl("faa_counts.jsonl"))
 
+    if uk is not None:
+        fc = src_health.setdefault(FCDO_SRC["id"], {"state": "never"})
+        if fc["state"] in ("stale", "never"):
+            fc["withheld"] = sum(1 for r in (uk.get("countries") or {}).values() if r.get("alert_status"))
+        else:
+            feats += fcdo_items(uk, now, changes)
+
+    if tfrs is not None:
+        tf = src_health.setdefault(TFR_SRC["id"], {"state": "never"})
+        if tf["state"] in ("stale", "never"):
+            tf["withheld"] = len(tfrs.get("tfrs") or {})
+        else:
+            items, counts = tfr_items(tfrs, now)
+            feats += items
+            tf.update({k: v for k, v in counts.items() if v})
+
     regs = registers.ids(ROOT / "doctrine")
     kept, dropped = [], []
     for f in feats:
         errs = [m for _, sev, m in contract.check(f, regs) if sev == "error"]
         (dropped.append({"id": f["properties"]["id"], "errors": errs}) if errs else kept.append(f))
     return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
-            "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with acknowledgement",
-            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA.",
+            "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
+                       "acknowledgement; UK FCDO content under the Open Government Licence v3.0",
+            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO. "
+                           "Contains public sector information licensed under the Open Government Licence v3.0.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}

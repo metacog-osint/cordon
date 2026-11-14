@@ -19,7 +19,8 @@ from tic_doctrine import contract, registers  # noqa: E402
 
 SRC, OUT = ROOT / "site_src", ROOT / "site"
 LANES = {"advisories.json": "state-travel-advisories", "alerts.json": "us-embassy-alerts",
-         "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings", "faa_nas.json": "faa-nas-status"}
+         "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings", "faa_nas.json": "faa-nas-status",
+         "fcdo.json": "uk-fcdo-travel-advice", "tfr.json": "faa-tfr"}
 
 
 def data() -> dict:
@@ -62,6 +63,17 @@ def map_data(d: dict, fc: dict) -> dict:
                  ("program", "airport", "airport_name", "reason", "start", "notam", "avg_delay_min")},
                  "coordinates": f["geometry"]["coordinates"] if f["geometry"] and f["geometry"]["type"] == "Point" else None}
                 for f in fc["features"] if f["properties"]["id"].startswith("cordon:faa:")],
+        # The FCDO's advice as published in the feed (withheld there when stale, so not listed either).
+        # TFRs with an area, as published in the feed (withheld there when stale, so not drawn either).
+        "tfr": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                 "until": f["properties"].get("valid_until"), "link": f["properties"]["link"], "geometry": f["geometry"],
+                 **{k: f["properties"]["measures"].get(k) for k in ("notam_id", "type", "effective", "floor", "ceiling")}}
+                for f in fc["features"] if f["properties"]["id"].startswith("cordon:tfr:") and f["geometry"]],
+        "fcdo": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                  "link": f["properties"]["link"], "countries": f["properties"]["countries"],
+                  **{k: f["properties"]["measures"].get(k) for k in ("alert_status", "advice", "change", "updated", "new",
+                                                                     "from_advice")}}
+                 for f in fc["features"] if f["properties"]["id"].startswith("cordon:fcdo:")],
         "points": {f["properties"]["id"]: f["geometry"]["coordinates"] for f in fc["features"]
                    if f["geometry"] and f["geometry"]["type"] == "Point" and f["properties"]["id"].startswith("cordon:advisory:")},
     }
@@ -70,7 +82,7 @@ def map_data(d: dict, fc: dict) -> dict:
 def build() -> dict:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
-                    datetime.now(timezone.utc), d["health"], d["faa_nas.json"])
+                    datetime.now(timezone.utc), d["health"], d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"])
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -89,7 +101,7 @@ def check() -> list[str]:
     errs = [f"registers: {e}" for e in registers.check(ROOT / "doctrine")]
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"],
-                    nas=d["faa_nas.json"])
+                    nas=d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:

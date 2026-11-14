@@ -14,6 +14,15 @@
     shoal: "Shoals", aids_to_navigation: "Lights and buoys", radio_service: "Radio and NAVTEX services", other: "Other" };
   var KEY_NAV = { launch: 1, gnss: 1, military: 1, mines: 1, piracy: 1, security: 1 };
   var FAA_WORD = { ground_stop: "Ground stop", ground_delay: "Ground delay program", closure: "Closed" };
+  var UK_ALERT = { avoid_all_travel_to_whole_country: "all travel to the whole country",
+    avoid_all_but_essential_travel_to_whole_country: "all but essential travel to the whole country",
+    avoid_all_travel_to_parts: "all travel to parts", avoid_all_but_essential_travel_to_parts: "all but essential travel to parts" };
+  function ukWords(list) {
+    if (!list) return "not read";
+    var order = Object.keys(UK_ALERT);
+    var s = list.slice().sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); });
+    return s.length ? "Advises against " + s.map(function (x) { return UK_ALERT[x] || x.replace(/_/g, " "); }).join(" and ") : "No advice against travel";
+  }
 
   function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
   function h(tag, attrs, kids) {
@@ -38,7 +47,7 @@
     .setView([24, 20], 2);
   map.once("click", function () { map.scrollWheelZoom.enable(); });
   map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA");
+  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0)");
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
@@ -112,6 +121,18 @@
     });
     layers.faa.addTo(map);
 
+    layers.tfr = L.geoJSON({ type: "FeatureCollection", features: (d.tfr || []).map(function (t) {
+      return { type: "Feature", geometry: t.geometry, properties: t }; }) }, {
+      style: function (f) { var key = f.properties.tier === "anomaly";
+        return { color: key ? css("--tfr-key") : css("--tfr"), weight: key ? 2 : 1.4, fillOpacity: key ? 0.18 : 0.1 }; },
+      onEachFeature: function (f, lyr) {
+        var t = f.properties;
+        lyr.bindTooltip(tip(t.title + "\n" + [t.floor, t.ceiling].filter(Boolean).join(" to ")
+          + (t.effective ? "\nFrom " + when(t.effective) : "") + (t.until ? "\nUntil " + when(t.until) : "")
+          + (t.tier === "anomaly" ? "\nNew in the last 72 hours" : "")), { sticky: true });
+      }
+    }).addTo(map);
+
     document.querySelectorAll(".layers input").forEach(function (box) {
       box.addEventListener("change", function () {
         var l = layers[box.getAttribute("data-layer")];
@@ -130,7 +151,9 @@
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--nav") }), "other maritime warnings"]),
       h("span", null, [h("span", { "class": "posture-icon", style: "display:inline-block;padding:0 4px;margin-right:4px" }, ["OD"]), "embassy status"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa") }), "FAA airport program"]),
-      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]));
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr") }), "FAA flight restriction"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new launch or security restriction"]));
   }
 
   function lists(d) {
@@ -148,7 +171,8 @@
       var what = c.kind === "level" ? "Advisory level " + c.from + " to " + c.to
         : c.kind === "posture" ? "Embassy status " + String(c.from).replace(/_/g, " ") + " to " + String(c.to).replace(/_/g, " ") + " (under review)"
         : c.kind === "text" ? "Advisory text revised" : c.kind === "revised" ? "Bulletin revised: " + c.to[0] + ", valid until " + day(c.to[1])
-        : c.kind === "status" ? "Bulletin " + c.from + " to " + c.to : c.kind === "new" ? "New" : c.kind;
+        : c.kind === "status" ? "Bulletin " + c.from + " to " + c.to : c.kind === "new" ? "New"
+        : c.kind === "alert" ? "UK FCDO advice: " + ukWords(c.from).toLowerCase() + " to " + ukWords(c.to).toLowerCase() : c.kind;
       return [{ td: when(c.at), cls: "num" }, c.name || c.subject || c.number, what]; }))
       : h("p", { "class": "empty" }, ["No changes recorded yet. Collection began on 31 Oct 2026."]));
 
@@ -174,6 +198,26 @@
           ? "The FAA lists no ground stop, ground delay program or airport closure."
           : "No current FAA data: see Sources below."]));
 
+    var uk = (d.fcdo || []).slice().sort(function (x, y) {
+      return (y.tier === "anomaly") - (x.tier === "anomaly") || (y.updated || "").localeCompare(x.updated || ""); });
+    document.getElementById("fcdo").replaceChildren(uk.length ? table(["Place", "UK FCDO advice", "Latest update", "Updated"],
+      uk.map(function (u) {
+        var name = u.title.replace(/^UK FCDO, /, "").split(":")[0];
+        return [link(u.link, name), ukWords(u.alert_status) + (u.tier === "anomaly" ? " (changed; was: " + (u.from_advice || "—") + ")" : ""),
+          u.new ? (u.change || "—") : "—", { td: when(u.updated), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["uk-fcdo-travel-advice"] || {}).state === "fresh"
+          ? "The FCDO advises against travel nowhere." : "No current UK FCDO data: see Sources below."]));
+
+    var tf = (d.tfr || []).slice().sort(function (x, y) {
+      return (y.tier === "anomaly") - (x.tier === "anomaly") || (x.effective || "").localeCompare(y.effective || ""); });
+    document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "From", "Until"],
+      tf.map(function (t) {
+        var where = t.title.replace(/^FAA TFR [^:]+: /, "");
+        return [link(t.link, t.notam_id), String(t.type || "").toLowerCase() + (t.tier === "anomaly" ? " (new)" : ""), where,
+          { td: when(t.effective), cls: "num" }, { td: when(t.until), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["faa-tfr"] || {}).state === "fresh"
+          ? "The FAA lists no flight restriction with an area." : "No current FAA TFR data: see Sources below."]));
+
     var hi = d.advisories.filter(function (a) { return a.level >= 3; })
       .sort(function (x, y) { return y.level - x.level || x.name.localeCompare(y.name); });
     document.getElementById("levels").replaceChildren(table(["Level", "Place", "Advice"], hi.map(function (a) {
@@ -181,7 +225,8 @@
 
     var names = { "state-travel-advisories": "State Department travel advisories", "us-embassy-alerts": "US embassy alerts",
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
-      "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)" };
+      "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
+      "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
       var old = s.state === "stale" || s.state === "never";
