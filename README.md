@@ -3,6 +3,10 @@
 **Where governments and aviation and maritime authorities are warning people away, on one map.**
 Map: https://cordon.theintelligence.company/ · Feed: https://cordon.theintelligence.company/data/feed.geojson
 
+History: every item Cordon has published is kept after it leaves the feed, in `data/history/` (the doctrine kit's
+history log, `tic-history/1`), from the first run after 14 Nov 2026. The items that ended in the last 7 days are at
+https://cordon.theintelligence.company/data/ended.geojson (not drawn on the map, not in the feed).
+
 Cordon collects official warnings every hour, straight from the issuing authorities:
 
 | Source | What it gives | Licence |
