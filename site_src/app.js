@@ -96,7 +96,7 @@
       onEachFeature: function (f, lyr) {
         var w = f.properties;
         lyr.bindTooltip(tip(w.number + " (" + (NAV[w.category] || w.category) + ")\n" + [w.sea, w.place].filter(Boolean).join(", ")
-          + "\n" + w.headline), { sticky: true });
+          + "\n" + w.headline + (w.also ? "\nAlso broadcast as " + w.also.join(", ") : "")), { sticky: true });
       }
     }).addTo(map);
 

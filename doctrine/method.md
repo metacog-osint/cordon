@@ -38,7 +38,13 @@ shape the warning's words give: "area bound by" is a polygon, "trackline joining
 position a circle (a 32-sided polygon; NGA's miles are nautical). "Within N miles of trackline joining" is drawn as
 the line, with N in `measures.corridor_half_width_m`; circle radii are in `measures.radius_m`. Positions with none of
 these words are points. A shape that crosses 180 degrees keeps its longitudes continuous (some run past 180), so it is
-drawn across the date line and not the long way round. Warning text over 6,000 characters is cut, and the cut says so. FAA
+drawn across the date line and not the long way round. Warning text over 6,000 characters is cut, and the cut says so.
+NGA broadcasts some warnings in two series (NAVAREA XII and HYDROPAC) and neither copy cites the other, so Cordon
+matches them on their words: same category, same time groups, and the same positions in the same order, at most a
+fifth of them more than 0.05 degrees apart (fewer than three positions must match exactly), from different series.
+The hazard is drawn once, under the NAVAREA copy (otherwise the earliest issued); the other copies are listed in
+`measures.rebroadcasts` with every position that differs, as each was written, and counted in the health block's
+`rebroadcasts_merged`. FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
 whole system is drawn at the US label point.
 
