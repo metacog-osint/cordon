@@ -1,5 +1,6 @@
 name: update
-# Hourly: collect every source, commit data/ when its content changed, build site/ and publish it to GitHub Pages
+# Hourly: collect every source, commit data/ when its content changed, build site/, log what changed in data/history/
+# (new, changed and ended items, kept after they leave the feed) and publish site/ to GitHub Pages
 # (https://cordon.theintelligence.company/). A failing source keeps its last good data; nothing here fails the run
 # except a broken build. Free: public repo, no secrets.
 #
@@ -93,6 +94,25 @@ jobs:
           done
       - name: Build site
         run: python tools/cordon.py build
+      # History: what is new, changed or ended since the last run, kept after it leaves the feed (the doctrine kit's
+      # tic-history/1, doctrine/kit/docs/history-log.md). The feed's own health block says which sources were read, so a
+      # failed source, or a stale one whose items are withheld, ends nothing; embassy posts read as us-embassy-alerts.
+      # Kept in data/history/ (data/** never starts a run) and committed; the items that ended in the last 7 days are
+      # served at /data/ended.geojson. A failure here is a gap in the history, never a missed deploy.
+      - name: History (data/history/, and site/data/ended.geojson)
+        run: |
+          python doctrine/kit/tic.py history site/data/feed.geojson --dir data/history --ended site/data/ended.geojson             --lane-map "usembassy-*=us-embassy-alerts"             || { echo "::warning::history step failed; this run is missing from data/history/"; exit 0; }
+          [ -n "$(git status --porcelain -- data/history)" ] || exit 0
+          git config user.name "cordon-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history
+          git commit -q -m "history: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push -q origin HEAD:main && exit 0
+            echo "::warning::history push attempt $i failed"
+            sleep $((i * 15)); git pull -q --rebase origin main || true
+          done
+          echo "::warning::history not committed this run; the next run logs these changes again from the last state"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
