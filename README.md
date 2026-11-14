@@ -13,6 +13,8 @@ Cordon collects official warnings every hour, straight from the issuing authorit
 | EASA Conflict Zone Information Bulletins (CSV export) | Airspaces to avoid, with each bulletin's expiry | EASA content, reused with acknowledgement |
 | NGA navigational warnings in force (MSI daily lists, or its API when that is current) | Launches, military activity, mines, GNSS trouble and other hazards to ships | US public domain |
 | FAA National Airspace System status (the JSON behind nasstatus.faa.gov) | Ground stops, ground delay programs and airport closures in effect, with the FAA's airport coordinates | US Government work (17 U.S.C. 105); the FAA states no licence |
+| FAA temporary flight restrictions (tfr.faa.gov list and detail files) | Space launches and recoveries, security, VIP movements, fires and other hazards, with the FAA's own outline and UTC times | US Government work (17 U.S.C. 105); the FAA states no licence |
+| UK FCDO foreign travel advice (GOV.UK Content API) | Where the UK advises against all or all but essential travel, and the FCDO's note of each update, for about 226 countries | Open Government Licence v3.0 |
 
 OSAC is not used: its terms bar republishing.
 
@@ -29,6 +31,11 @@ OSAC is not used: its terms bar republishing.
   stop is an anomaly when more are in effect at once than Cordon's own 30-day count makes normal, or when the FAA lists
   one against a center or the whole system. ATCSCC advisory text is not read: fly.faa.gov answered "No message" to
   plain requests on 13 Nov 2026.
+- TFRs are drawn with the FAA's own outline. A space operations, security or special TFR issued in the last 72 hours
+  is an anomaly; the standing statutory TFRs over stadiums and Disney parks never are. Nationwide notices with no area
+  are counted in the health block, not listed.
+- The FCDO's statements are reported as the FCDO words them; a change in the last 30 days is an anomaly. Cordon does
+  not rank them against the State Department's levels. A country's page is read only when the FCDO updates it.
 - A source that stops answering, or whose list has stopped moving, is marked stale in the feed's `health` block and
   on the page. A stale list of NGA warnings is withheld: it reads as no data, never as a quiet sea.
 
