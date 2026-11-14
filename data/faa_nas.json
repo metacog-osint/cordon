@@ -1,17 +1,6 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [
-  {
-   "kind": "closure",
-   "airport": "SNA",
-   "airport_name": "John Wayne Airport-Orange County",
-   "start": "2026-11-14T08:00:00Z",
-   "end": "2026-11-14T14:15:00Z",
-   "updated": "2026-11-13T23:32:38Z",
-   "notam": "!SNA 11/021 SNA AD AP CLSD 2611140800-2611141415",
-   "issued": "2026-11-13T23:30:00Z"
-  }
- ],
+ "programs": [],
  "airports": {
   "ASE": [
    -106.8626,
