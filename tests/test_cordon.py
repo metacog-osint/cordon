@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import canada, cdc, easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
+from cordon import canada, cdc, easa, embassy, faa, fcdo, feed, navarea, safetravel, state, tfr  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -1067,6 +1067,135 @@ class Canada(unittest.TestCase):
                         last_ok="2026-11-11T00:00:00Z")
         self.assertEqual(fc["features"], [])
         self.assertEqual((fc["health"]["gac-travel-advisories"]["state"], fc["health"]["gac-travel-advisories"]["withheld"]),
+                         ("stale", 1))
+
+
+def nz_row(code, name, level, updated="2 November 2025", slug=None):
+    return {"code": code.lower(), "link": {"title": name, "href": f"/destinations/{slug or name.lower().replace(' ', '-')}"},
+            "region": "Somewhere", "adviceLevel": level, "nearestOffices": [], "updatedDate": updated}
+
+
+def nz_listing(n=160, rows=()):
+    """The destinations page as MFAT publishes it: the list HTML-escaped in a data-content attribute."""
+    import html as _html
+    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    filler = [nz_row(a + b, f"Place {a}{b}", "low" if a in "QR" else "normal")
+              for a in "JQRWXYZ" for b in letters if a + b != "XK"]
+    data = {"data": filler[:n] + list(rows), "countries": [],
+            "adviceLevels": [{"title": w, "value": k} for k, w in safetravel.LEVELS.items()]}
+    return (f'<html><body><div id="js-country-listing" data-content="{_html.escape(json.dumps(data), quote=True)}">'
+            f'</div></body></html>').encode()
+
+
+def nz_page(headline, note=None, updated="2 November 2025"):
+    extra = f"\n    <span>{note}</span>" if note else ""
+    return (f'<p class="text-off-black-100">\n Page updated {updated}\n</p><h1>X</h1>'
+            f'<div class="rounded-b-2xl px-6 py-3 bg-caution-light-two">\n<p class="flex flex-col">\n'
+            f'<strong class="flex gap-2">\n<span class="material-symbols-sharp" aria-hidden="true">error</span>\n'
+            f'<span>{headline}</span>\n</strong>{extra}\n</p></div>').encode()
+
+
+class SafeTravel(unittest.TestCase):
+    NOW = datetime(2026, 11, 14, 21, 0, tzinfo=timezone.utc)
+    STAMP = "2026-11-14T21:00:00Z"
+
+    def fetcher(self, listing, pages, calls=None):
+        def fetch(url, timeout=40):
+            if calls is not None:
+                calls.append(url)
+            if url == safetravel.SOURCE_URL:
+                return listing, None
+            slug = url.rsplit("/", 1)[-1]
+            return (pages[slug], None) if slug in pages else (nz_page("Exercise normal safety and security precautions"), None)
+        return fetch
+
+    def test_parse_listing_and_page(self):
+        body = nz_listing(n=0, rows=[nz_row("MX", "Mexico", "medium", "21 May 2026"),
+                                     {**nz_row("", "Kosovo", "medium"), "code": ""},
+                                     nz_row("VI", "Virgin Islands, US", "low", slug="virgin-islands,-u-s"),
+                                     nz_row("ZZ", "Nowhere", "extreme")]).decode()
+        got, words = safetravel.parse_listing(body)
+        self.assertEqual(sorted(got), ["MX", "VI", "XK"])  # Kosovo by hand; an unknown level is left out
+        self.assertEqual((got["MX"]["advice"], got["MX"]["updated"], got["MX"]["link"]),
+                         ("Exercise increased caution", "2026-05-21", "https://www.safetravel.govt.nz/destinations/mexico"))
+        self.assertEqual(got["VI"]["link"], "https://www.safetravel.govt.nz/destinations/virgin-islands,-u-s")
+        self.assertEqual(safetravel.parse_page(nz_page("Exercise increased caution", "with higher advice levels in some areas",
+                                                       "21 May 2026").decode()),
+                         {"headline": "Exercise increased caution", "regional_note": "with higher advice levels in some areas",
+                          "page_updated": "2026-05-21"})
+        self.assertIsNone(safetravel.parse_page(nz_page("Do not travel").decode())["regional_note"])
+        with self.assertRaises(ValueError):
+            safetravel.parse_page("<html></html>")
+
+    def test_collect_reads_pages_only_when_the_day_moves_and_finds_changes(self):
+        rows = [nz_row("MX", "Mexico", "medium", "21 May 2026"), nz_row("PE", "Peru", "medium")]
+        pages = {"mexico": nz_page("Exercise increased caution", "with higher advice levels in some areas"),
+                 "peru": nz_page("Exercise increased caution")}
+        calls = []
+        first, changes, err, read, failed = safetravel.collect(None, self.STAMP, self.fetcher(nz_listing(rows=rows), pages, calls), pause=0)
+        self.assertEqual((err, changes, read, failed, len(first)), (None, [], 162, 0, 162))
+        self.assertEqual(first["MX"]["regional_note"], "with higher advice levels in some areas")
+        rows = [nz_row("MX", "Mexico", "high", "21 May 2026"), nz_row("PE", "Peru", "medium", "13 November 2026")]
+        pages["peru"] = nz_page("Exercise increased caution", "with higher advice levels in some areas")
+        calls = []
+        new, changes, err, read, failed = safetravel.collect(first, self.STAMP, self.fetcher(nz_listing(rows=rows), pages, calls), pause=0)
+        self.assertEqual((read, calls), (1, [safetravel.SOURCE_URL, "https://www.safetravel.govt.nz/destinations/peru"]))
+        self.assertEqual(sorted((c["key"], c["kind"], c["from"], c["to"]) for c in changes),
+                         [("MX", "level", "medium", "high"), ("PE", "regional", None, "with higher advice levels in some areas")])
+
+    def test_a_short_or_broken_list_is_an_error(self):
+        self.assertIn("only 20", safetravel.collect({}, self.STAMP, lambda u, t=40: (nz_listing(n=20), None), pause=0)[2])
+        self.assertIn("unreadable", safetravel.collect({}, self.STAMP, lambda u, t=40: (b"<html>", None), pause=0)[2])
+        kept = {"AF": {"level": "avoid"}}
+        self.assertIs(safetravel.collect(kept, self.STAMP, lambda u, t=40: (None, "HTTP 503"), pause=0)[0], kept)
+
+    def build(self, recs, changes=(), last_ok=None):
+        h = {"nz-mfat-safetravel": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        nz = {"countries": recs, "fetched_at": self.STAMP}
+        with unittest.mock.patch.object(feed, "recent_changes", lambda now: list(changes)):
+            return feed.build({}, {}, {}, {}, self.NOW, h, nz=nz)
+
+    def rec(self, key, name, level, updated="2025-11-02", note=None):
+        return {"key": key, "iso": key, "name": name, "slug": name.lower(), "region": "R", "level": level,
+                "advice": safetravel.LEVELS[level], "updated": updated, "link": f"https://www.safetravel.govt.nz/destinations/{name.lower()}",
+                "regional_note": note, "page_for": updated}
+
+    def test_items_list_levels_regional_notes_changes_and_fresh_updates(self):
+        recs = {"AF": self.rec("AF", "Afghanistan", "avoid"),
+                "FR": self.rec("FR", "France", "low"),  # low, old update, no note: not listed
+                "DZ": self.rec("DZ", "Algeria", "low", note="with higher advice levels in some areas"),
+                "DE": self.rec("DE", "Germany", "low", updated="2026-11-12"),  # inside 72 hours
+                "ML": self.rec("ML", "Mali", "avoid"),
+                "MX": self.rec("MX", "Mexico", "medium", note="with higher advice levels in some areas")}
+        changes = [{"at": "2026-11-10T10:00:00Z", "lane": "safetravel", "kind": "level", "key": "ML", "from": "high", "to": "avoid"},
+                   {"at": "2026-11-11T10:00:00Z", "lane": "safetravel", "kind": "regional", "key": "MX", "from": None,
+                    "to": "with higher advice levels in some areas"},
+                   {"at": "2026-11-10T10:00:00Z", "lane": "canada", "kind": "level", "key": "AF", "from": 2, "to": 3}]
+        fc = self.build(recs, changes)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f["properties"] for f in fc["features"]}
+        self.assertEqual(sorted(items), ["cordon:safetravel:AF", "cordon:safetravel:DE", "cordon:safetravel:DZ",
+                                         "cordon:safetravel:ML", "cordon:safetravel:MX"])
+        self.assertEqual((items["cordon:safetravel:AF"]["title"], items["cordon:safetravel:AF"]["tier"]),
+                         ("New Zealand, Afghanistan: Do not travel", "routine"))
+        self.assertTrue(items["cordon:safetravel:DE"]["measures"]["new"])
+        self.assertEqual(items["cordon:safetravel:DZ"]["title"],
+                         "New Zealand, Algeria: Exercise normal safety and security precautions (other levels apply in some areas)")
+        ml = items["cordon:safetravel:ML"]
+        self.assertEqual((ml["tier"], ml["baseline_ref"]["id"], ml["measures"]["from_advice"]),
+                         ("anomaly", "previous-mfat-advice", "Avoid non-essential travel"))
+        self.assertEqual((items["cordon:safetravel:MX"]["tier"], items["cordon:safetravel:MX"]["measures"]["from_regional_note"]),
+                         ("anomaly", None))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
+        self.assertIn("CC BY 4.0", fc["attribution"])
+
+    def test_a_stale_list_is_withheld(self):
+        fc = self.build({"AF": self.rec("AF", "Afghanistan", "avoid"), "FR": self.rec("FR", "France", "low")},
+                        last_ok="2026-11-11T00:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual((fc["health"]["nz-mfat-safetravel"]["state"], fc["health"]["nz-mfat-safetravel"]["withheld"]),
                          ("stale", 1))
 
 

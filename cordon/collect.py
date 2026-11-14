@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import canada, cdc, easa, embassy, faa, fcdo, navarea, state, tfr
+from . import canada, cdc, easa, embassy, faa, fcdo, navarea, safetravel, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -88,6 +88,21 @@ def run(when: str | None = None) -> dict:
                f"non-essential travel, {n[1]} high degree of caution, {regional} with regional advisories; index "
                f"generated {generated or 'at an unstated time'}", when)
     summary["canada"] = err or f"{len(places)} places, {len(ca_changes)} changes"
+
+    dests, nz_changes, err, read, failed = safetravel.collect(load("safetravel.json", {}).get("countries"), when)
+    if err:
+        health("nz-mfat-safetravel", False, err, when)
+    else:
+        save("safetravel.json", {"source": safetravel.SOURCE_URL, "countries": dests})
+        append_jsonl("changes.jsonl", [{**c, "lane": "safetravel"} for c in nz_changes])
+        n = {lv: sum(1 for r in dests.values() if r["level"] == lv) for lv in safetravel.LEVELS}
+        regional = sum(1 for r in dests.values() if r.get("regional_note"))
+        unread = sum(1 for r in dests.values() if not r.get("page_for"))
+        health("nz-mfat-safetravel", True, f"{len(dests)} destinations: {n['avoid']} do not travel, {n['high']} avoid "
+               f"non-essential travel, {n['medium']} increased caution, {regional} with other levels in some areas; "
+               f"{read} country pages read" + (f", {failed} failed" if failed else "")
+               + (f", {unread} not yet read" if unread else ""), when)
+    summary["safetravel"] = err or f"{len(dests)} destinations, {len(nz_changes)} changes, {read} pages read"
 
     notices, cdc_changes, err = cdc.collect(load("cdc.json", {}).get("notices"), when)
     if err:

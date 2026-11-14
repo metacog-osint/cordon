@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import canada, cdc, faa, fcdo, navarea, tfr
+from . import canada, cdc, faa, fcdo, navarea, safetravel, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -46,6 +46,10 @@ FCDO_SRC = {"id": "uk-fcdo-travel-advice", "publisher": "UK Foreign, Commonwealt
 CANADA_SRC = {"id": "gac-travel-advisories", "publisher": "Global Affairs Canada (Government of Canada)",
               "licence": "Open Government Licence - Canada", "grade": "A1", "independence_group": "gac",
               "source_type": "official notice", "descriptor": "Travel advice and advisories (travel.gc.ca open data)"}
+SAFETRAVEL_SRC = {"id": "nz-mfat-safetravel", "publisher": "New Zealand Ministry of Foreign Affairs and Trade (MFAT)",
+                  "licence": "Crown copyright, Creative Commons Attribution 4.0 International", "grade": "A1",
+                  "independence_group": "nz-mfat", "source_type": "official notice",
+                  "descriptor": "Travel advice (safetravel.govt.nz)"}
 CDC_SRC = {"id": "cdc-travel-notices", "publisher": "US Centers for Disease Control and Prevention (CDC), Travelers' Health",
            "licence": "US public domain (CDC asks for credit and a no-endorsement disclaimer)", "grade": "A1",
            "independence_group": "cdc", "source_type": "official notice",
@@ -264,6 +268,48 @@ def canada_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     return out
 
 
+def safetravel_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """New Zealand's advice for every destination at "Exercise increased caution" or above, or with other levels in
+    some areas, whose level or regional note changed in the last RECENT_DAYS, or that MFAT updated in the last NEW_HOURS
+    (MFAT gives a day, not a time, so "the last NEW_HOURS" is read as from that day on)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%d")
+    mine = [c for c in changes if c.get("lane") == "safetravel"]
+    lvl = {c["key"]: c for c in mine if c.get("kind") == "level"}
+    reg = {c["key"]: c for c in mine if c.get("kind") == "regional"}
+    out = []
+    for key, r in sorted((data.get("countries") or {}).items()):
+        is_new = bool(r.get("updated") and r["updated"] >= new_from)
+        lc, rc = lvl.get(key), reg.get(key)
+        if not (safetravel.level_rank(r["level"]) >= 2 or r.get("regional_note") or lc or rc or is_new):
+            continue
+        title = f"New Zealand, {r['name']}: {r['advice']}"
+        if r.get("regional_note"):
+            # MFAT words this note four ways (14 Nov 2026: "with higher advice levels in some areas" 54 times, "See
+            # regional advice below", "There are areas of Bolivia where higher advice levels apply ...", "in Mozambique
+            # overall due to ..."); the title uses one phrase and measures.regional_note keeps MFAT's words.
+            title += " (other levels apply in some areas)"
+        props = {**_base(fetched), "id": f"cordon:safetravel:{key}", "title": title,
+                 "tier": "anomaly" if (lc or rc) else "routine",
+                 "data_as_of": f"{r['updated']}T00:00:00Z" if r.get("updated") else fetched,
+                 "countries": [r["iso"]], "precision_class": "country", "requirement_ids": ["CD-PIR-10"],
+                 "ie_aspect": ["informational"], "pmesii_pt": ["political"], "ascope": ["areas"],
+                 "sources": [{**SAFETRAVEL_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
+                 "measures": {"level": r["level"], "advice": r["advice"], "regional_note": r.get("regional_note"),
+                              "region": r.get("region"), "updated": r.get("updated"), "new": is_new}}
+        if lc or rc:
+            props["baseline_ref"] = {"id": "previous-mfat-advice", "type": "fixed", "version": "1",
+                                     "window": "New Zealand's previous level and regional note for the destination"}
+        if lc:
+            props["measures"].update({"changed_at": lc["at"], "from_level": lc["from"],
+                                      "from_advice": safetravel.LEVELS.get(lc["from"])})
+        if rc:
+            props["measures"].update({"regional_changed_at": rc["at"], "from_regional_note": rc["from"]})
+        out.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
+    return out
+
+
 def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     """Every CDC travel health notice in force, in CDC's words. A notice Cordon saw appear, or whose level it saw
     change, in the last RECENT_DAYS is an anomaly; one CDC published or updated in the last NEW_HOURS is marked new."""
@@ -348,7 +394,7 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
           uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
-          health_notices: dict | None = None) -> dict:
+          health_notices: dict | None = None, nz: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -506,6 +552,14 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         else:
             feats += canada_items(ca, now, changes)
 
+    if nz is not None:
+        ns = src_health.setdefault(SAFETRAVEL_SRC["id"], {"state": "never"})
+        if ns["state"] in ("stale", "never"):
+            ns["withheld"] = sum(1 for r in (nz.get("countries") or {}).values()
+                                 if safetravel.level_rank(r["level"]) >= 2 or r.get("regional_note"))
+        else:
+            feats += safetravel_items(nz, now, changes)
+
     if health_notices is not None:
         cd = src_health.setdefault(CDC_SRC["id"], {"state": "never"})
         if cd["state"] in ("stale", "never"):
@@ -530,12 +584,14 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
             "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
                        "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
-                       "content under the Open Government Licence - Canada; CDC content US public domain",
+                       "content under the Open Government Licence - Canada; CDC content US public domain; New Zealand MFAT "
+                       "content Crown copyright under CC BY 4.0",
             "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO, "
                            "Global Affairs Canada. Contains public sector information licensed under the Open "
                            "Government Licence v3.0. Contains information licensed under the Open Government "
                            "Licence - Canada. Health notices: Source: CDC; available free at "
                            "wwwnc.cdc.gov/travel/notices; their use here does not imply endorsement by CDC, HHS or the "
-                           "US Government.",
+                           "US Government. New Zealand travel advice: Ministry of Foreign Affairs and Trade, "
+                           "SafeTravel (safetravel.govt.nz), licensed under CC BY 4.0.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}

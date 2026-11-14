@@ -17,6 +17,9 @@
   var UK_ALERT = { avoid_all_travel_to_whole_country: "all travel to the whole country",
     avoid_all_but_essential_travel_to_whole_country: "all but essential travel to the whole country",
     avoid_all_travel_to_parts: "all travel to parts", avoid_all_but_essential_travel_to_parts: "all but essential travel to parts" };
+  var NZ_LEVEL = { normal: "No advice level at this time", low: "Exercise normal safety and security precautions",
+    medium: "Exercise increased caution", high: "Avoid non-essential travel", avoid: "Do not travel" };
+  var NZ_RANK = { normal: 0, low: 1, medium: 2, high: 3, avoid: 4 };
   var CA_LEVEL = { 0: "Exercise normal security precautions", 1: "Exercise a high degree of caution",
     2: "Avoid non-essential travel", 3: "Avoid all travel" };
   function ukWords(list) {
@@ -49,7 +52,7 @@
     .setView([24, 20], 2);
   map.once("click", function () { map.scrollWheelZoom.enable(); });
   map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0) · Global Affairs Canada (OGL-Canada) · CDC");
+  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0) · Global Affairs Canada (OGL-Canada) · NZ MFAT (CC BY 4.0) · CDC");
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
@@ -173,6 +176,8 @@
       var what = c.lane === "cdc" ? (c.kind === "new" ? "New CDC health notice, level " + c.to
           : c.kind === "level" ? "CDC health notice level " + c.from + " to " + c.to
           : c.kind === "removed" ? "CDC health notice removed (was level " + c.from + ")" : c.kind)
+        : c.lane === "safetravel" ? (c.kind === "level" ? "New Zealand's advice: " + (NZ_LEVEL[c.from] || c.from) + " to " + (NZ_LEVEL[c.to] || c.to)
+          : c.kind === "regional" ? "New Zealand: " + (c.to ? (c.from ? "note changed to \u201c" + c.to + "\u201d" : "now " + c.to) : "other levels in some areas removed") : c.kind)
         : c.lane === "canada" ? (c.kind === "level" ? "Canada's advisory: " + (CA_LEVEL[c.from] || c.from) + " to " + (CA_LEVEL[c.to] || c.to)
           : c.kind === "regional" ? "Canada: regional advisories " + (c.to ? "added" : "removed") : c.kind)
         : c.kind === "level" ? "Advisory level " + c.from + " to " + c.to
@@ -240,6 +245,18 @@
       : h("p", { "class": "empty" }, [(d.health["gac-travel-advisories"] || {}).state === "fresh"
           ? "Canada advises avoiding travel nowhere and lists no change." : "No current Government of Canada data: see Sources below."]));
 
+    // The page lists New Zealand's two highest levels, changes and fresh updates; the feed carries the rest.
+    var nz = (d.safetravel || []).filter(function (c) { return NZ_RANK[c.level] >= 3 || c.tier === "anomaly" || c.new; })
+      .sort(function (x, y) { return (y.tier === "anomaly") - (x.tier === "anomaly") || NZ_RANK[y.level] - NZ_RANK[x.level]
+        || (y.updated || "").localeCompare(x.updated || ""); });
+    document.getElementById("safetravel").replaceChildren(nz.length ? table(["Place", "New Zealand's advice", "Other levels", "Updated"],
+      nz.map(function (c) {
+        var name = c.title.replace(/^New Zealand, /, "").split(":")[0];
+        var was = c.tier !== "anomaly" ? "" : c.from_advice ? " (changed; was: " + c.from_advice + ")" : " (regional note changed)";
+        return [link(c.link, name), c.advice + was, c.regional_note || "—", { td: c.updated ? day(c.updated) : "—", cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["nz-mfat-safetravel"] || {}).state === "fresh"
+          ? "New Zealand advises against travel nowhere and lists no change." : "No current New Zealand data: see Sources below."]));
+
     var tf = (d.tfr || []).slice().sort(function (x, y) {
       return (y.tier === "anomaly") - (x.tier === "anomaly") || (x.effective || "").localeCompare(y.effective || ""); });
     document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "From", "Until"],
@@ -260,6 +277,7 @@
       "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
       "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
       "gac-travel-advisories": "Government of Canada travel advisories",
+      "nz-mfat-safetravel": "New Zealand SafeTravel advice",
       "cdc-travel-notices": "CDC travel health notices" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
