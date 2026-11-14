@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import easa, embassy, faa, feed, navarea, state  # noqa: E402
+from cordon import easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -711,6 +711,251 @@ class Faa(unittest.TestCase):
         progs, apts, err = faa.collect(fetch=lambda u, t: (json.dumps(FAA_EVENTS).encode(), None))
         self.assertEqual((len(progs), err), (3, None))
         self.assertEqual(faa.collect(fetch=lambda u, t: (b"[]", None))[:2], ([], {}), "an empty list is a quiet NAS")
+
+def fcdo_index(n=160, overrides=None):
+    """A GOV.UK travel-advice index shaped like the live one (14 Nov 2026): n countries, slug c<i>, plus overrides."""
+    kids = []
+    rows = {f"c{i:03d}": ("Country " + str(i), "2026-10-01T09:00:00Z", "Latest update.") for i in range(n)}
+    rows.update(overrides or {})
+    for slug, (name, at, change) in rows.items():
+        kids.append({"base_path": f"/foreign-travel-advice/{slug}", "public_updated_at": at,
+                     "web_url": f"https://www.gov.uk/foreign-travel-advice/{slug}", "title": f"{name} travel advice",
+                     "details": {"change_description": change, "country": {"name": name, "slug": slug, "synonyms": []}}})
+    return json.dumps({"links": {"children": kids}}).encode()
+
+
+def fcdo_page(statuses):
+    return json.dumps({"details": {"alert_status": statuses}}).encode()
+
+
+class Fcdo(unittest.TestCase):
+    NOW = datetime(2026, 11, 14, 14, 30, tzinfo=timezone.utc)
+    STAMP = "2026-11-14T14:30:00Z"
+
+    def fetcher(self, index, pages, fail=()):
+        calls = []
+
+        def fetch(url, timeout=40):
+            calls.append(url)
+            if url == fcdo.SOURCE_URL:
+                return index, None
+            slug = url.rsplit("/", 1)[-1]
+            if slug in fail:
+                return None, "HTTP 429"
+            return fcdo_page(pages.get(slug, [])), None
+        return fetch, calls
+
+    def test_words_put_the_whole_country_first(self):
+        self.assertEqual(fcdo.words(["avoid_all_but_essential_travel_to_parts", "avoid_all_travel_to_parts"]),
+                         "advises against all travel to parts and all but essential travel to parts")
+        self.assertEqual(fcdo.words([]), "no advice against travel")
+        self.assertEqual(fcdo.words(None), "advice status not yet read")
+
+    def test_collect_reads_a_page_only_when_the_fcdo_updates_it(self):
+        ua = {"ukraine": ("Ukraine", "2026-10-02T08:30:25Z", "Updated information about the Russian invasion.")}
+        fetch, calls = self.fetcher(fcdo_index(overrides=ua), {"ukraine": ["avoid_all_travel_to_parts"]})
+        first, changes, err, read, failed = fcdo.collect(None, self.STAMP, fetch, pause=0)
+        self.assertIsNone(err)
+        self.assertEqual((len(first), read, failed, changes), (161, 161, 0, []))
+        self.assertEqual(first["ukraine"]["alert_status"], ["avoid_all_travel_to_parts"])
+        self.assertEqual(first["ukraine"]["iso"], "UA")
+        # Nothing updated: only the index is asked for.
+        fetch, calls = self.fetcher(fcdo_index(overrides=ua), {})
+        same, changes, err, read, failed = fcdo.collect(first, self.STAMP, fetch, pause=0)
+        self.assertEqual((calls, read, changes), ([fcdo.SOURCE_URL], 0, []))
+        # The FCDO updates Ukraine and widens its advice: one page read, one change.
+        ua2 = {"ukraine": ("Ukraine", "2026-11-14T12:00:00Z", "Change to advice for the whole country.")}
+        fetch, calls = self.fetcher(fcdo_index(overrides=ua2), {"ukraine": ["avoid_all_travel_to_whole_country"]})
+        new, changes, err, read, failed = fcdo.collect(same, self.STAMP, fetch, pause=0)
+        self.assertEqual(read, 1)
+        self.assertEqual([(c["key"], c["kind"], c["from"], c["to"]) for c in changes],
+                         [("ukraine", "alert", ["avoid_all_travel_to_parts"], ["avoid_all_travel_to_whole_country"])])
+
+    def test_a_failed_page_keeps_its_last_status_and_is_asked_again(self):
+        ua = {"ukraine": ("Ukraine", "2026-10-02T08:30:25Z", "x")}
+        fetch, _ = self.fetcher(fcdo_index(overrides=ua), {"ukraine": ["avoid_all_travel_to_parts"]})
+        first = fcdo.collect(None, self.STAMP, fetch, pause=0)[0]
+        ua2 = {"ukraine": ("Ukraine", "2026-11-14T12:00:00Z", "y")}
+        fetch, _ = self.fetcher(fcdo_index(overrides=ua2), {}, fail={"ukraine"})
+        held, changes, err, read, failed = fcdo.collect(first, self.STAMP, fetch, pause=0)
+        self.assertEqual((failed, changes), (1, []))
+        self.assertEqual(held["ukraine"]["alert_status"], ["avoid_all_travel_to_parts"])
+        fetch, calls = self.fetcher(fcdo_index(overrides=ua2), {"ukraine": ["avoid_all_travel_to_parts"]})
+        fcdo.collect(held, self.STAMP, fetch, pause=0)
+        self.assertEqual(calls, [fcdo.SOURCE_URL, fcdo.COUNTRY_API.format(slug="ukraine")])
+
+    def test_a_short_or_broken_index_is_an_error(self):
+        fetch, _ = self.fetcher(fcdo_index(n=20), {})
+        self.assertIn("only 20 countries", fcdo.collect({}, self.STAMP, fetch, pause=0)[2])
+        fetch, _ = self.fetcher(b"<html>", {})
+        self.assertIn("unreadable", fcdo.collect({}, self.STAMP, fetch, pause=0)[2])
+
+    def build(self, countries, changes=(), last_ok=None):
+        h = {"uk-fcdo-travel-advice": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        uk = {"countries": countries, "fetched_at": self.STAMP}
+        with unittest.mock.patch.object(feed, "recent_changes", lambda now: list(changes)):
+            return feed.build({}, {}, {}, {}, self.NOW, h, uk=uk)
+
+    def rec(self, slug, iso, statuses, updated="2026-10-01T09:00:00Z", change="Latest update."):
+        return {"slug": slug, "name": slug.title(), "iso": iso, "alert_status": statuses, "updated": updated,
+                "change": change, "link": f"https://www.gov.uk/foreign-travel-advice/{slug}", "status_for": updated}
+
+    def test_items_list_advice_against_travel_recent_updates_and_changes(self):
+        countries = {"ukraine": self.rec("ukraine", "UA", ["avoid_all_travel_to_parts"]),
+                     "france": self.rec("france", "FR", []),
+                     "usa": self.rec("usa", "US", [], "2026-11-14T02:26:03Z", "Updated information on air traffic."),
+                     "poland": self.rec("poland", "PL", [])}
+        changes = [{"at": "2026-11-10T10:00:00Z", "lane": "fcdo", "kind": "alert", "key": "poland", "iso": "PL",
+                    "from": ["avoid_all_but_essential_travel_to_parts"], "to": []}]
+        fc = self.build(countries, changes)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f["properties"] for f in fc["features"]}
+        self.assertEqual(sorted(items), ["cordon:fcdo:poland", "cordon:fcdo:ukraine", "cordon:fcdo:usa"])
+        self.assertEqual(items["cordon:fcdo:ukraine"]["title"], "UK FCDO, Ukraine: advises against all travel to parts")
+        self.assertEqual(items["cordon:fcdo:usa"]["title"],
+                         "UK FCDO, Usa: no advice against travel (updated: Updated information on air traffic.)")
+        self.assertEqual(items["cordon:fcdo:poland"]["tier"], "anomaly")
+        self.assertEqual(items["cordon:fcdo:poland"]["baseline_ref"]["id"], "previous-fcdo-alert-status")
+        self.assertEqual(items["cordon:fcdo:poland"]["measures"]["from_advice"],
+                         "advises against all but essential travel to parts")
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
+        self.assertIn("Open Government Licence v3.0", fc["attribution"])
+
+    def test_a_stale_list_is_withheld(self):
+        countries = {"ukraine": self.rec("ukraine", "UA", ["avoid_all_travel_to_parts"])}
+        fc = self.build(countries, last_ok="2026-11-11T00:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual(fc["health"]["uk-fcdo-travel-advice"]["state"], "stale")
+        self.assertEqual(fc["health"]["uk-fcdo-travel-advice"]["withheld"], 1)
+
+
+def tfr_xml(nid="7131", issued="2026-11-14T10:00:00", effective="2026-11-14T20:53:00", expire="2026-11-15T00:14:00",
+            area="merged", text="!FDC 6/7131 ZHU TX..AIRSPACE STARBASE, TX..TEMPORARY FLIGHT RESTRICTIONS.",
+            name="261114 SpaceX Recovery Starship 15", city="STARBASE"):
+    """A detail file in the FAA's XNOTAM shape (from detail_6_7131.xml and detail_6_7546.xml, 14 Nov 2026)."""
+    shapes = {
+        "merged": "<abdMergedArea>" + "".join(
+            f"<Avx><codeDatum>WGE</codeDatum><codeType>GRC</codeType><geoLat>{la}</geoLat><geoLong>{lo}</geoLong></Avx>"
+            for la, lo in [("25.93333333N", "097.16666667W"), ("26.01666667N", "097.2W"), ("26.1N", "096.91666667W"),
+                           ("25.93333333N", "097.16666667W")]) + "</abdMergedArea>",
+        "circle": "<aseShapes><Abd><Avx><codeDatum>WGE</codeDatum><codeType>CIR</codeType><geoLat>39.52833333N</geoLat>"
+                  "<geoLong>078.31472222W</geoLong><valRadiusArc>10.0</valRadiusArc><uomRadiusArc>NM</uomRadiusArc>"
+                  "</Avx></Abd></aseShapes>",
+        "none": ""}[area]
+    return (f'<XNOTAM-Update version="0.1"><Group><Add><Not><NotUid><txtNameAcctFac>FDC</txtNameAcctFac>'
+            f"<dateIndexYear>2026</dateIndexYear><noSeqNo>{nid}</noSeqNo><dateIssued>{issued}</dateIssued>"
+            f"<txtLocalName>{name}</txtLocalName></NotUid><dateEffective>{effective}</dateEffective>"
+            + (f"<dateExpire>{expire}</dateExpire>" if expire else "")
+            + f"<codeTimeZone>CST</codeTimeZone><AffLocGroup><txtNameCity>{city}</txtNameCity>"
+            f"<txtNameUSState>TEXAS</txtNameUSState></AffLocGroup><TfrNot><codeType>91.143</codeType><TFRAreaGroup>"
+            f"<aseTFRArea><txtName>Area A</txtName><codeDistVerUpper>ALT</codeDistVerUpper><valDistVerUpper>999"
+            f"</valDistVerUpper><uomDistVerUpper>FL</uomDistVerUpper><codeDistVerLower>HEI</codeDistVerLower>"
+            f"<valDistVerLower>0</valDistVerLower><uomDistVerLower>FT</uomDistVerLower></aseTFRArea>{shapes}"
+            f"</TFRAreaGroup><txtDescrUSNS>{text}</txtDescrUSNS></TfrNot></Not></Add></Group></XNOTAM-Update>").encode()
+
+
+TFR_LIST = [
+    {"notam_id": "6/7131", "type": "SPACE OPERATIONS", "facility": "ZHU", "state": "TX",
+     "description": "STARBASE, TX, Saturday, November 14, 2026 Local", "creation_date": "11/14/2026"},
+    {"notam_id": "6/7546", "type": "HAZARDS", "facility": "ZDC", "state": "WV",
+     "description": "W MARTINSBURG, WV, Saturday, November 14, 2026 UTC", "creation_date": "11/14/2026"},
+    {"notam_id": "6/6924", "type": "SECURITY", "facility": "ZJX", "state": "FL",
+     "description": "DISNEY WORLD THEME PARK, ORLANDO, FL", "creation_date": "11/13/2026"},
+    {"notam_id": "1/5060", "type": "SPECIAL", "facility": "FDC", "state": "USA",
+     "description": "  USA, Wednesday, September 29, 2021 UTC", "creation_date": "01/27/2024"},
+    {"notam_id": "6/2698", "type": "HAZARDS", "facility": "ZSU", "state": "PR",
+     "description": "VIEQUES, PR", "creation_date": "01/13/2026"},
+    {"notam_id": "6/0001", "type": "VIP", "facility": "ZDC", "state": "VA",
+     "description": "Sterling, VA, Sunday, November 1, 2026 Local", "creation_date": "10/30/2026"},
+]
+TFR_DETAILS = {
+    "6_7131": tfr_xml(),
+    "6_7546": tfr_xml("7546", area="circle", name="6/7546", city="W MARTINSBURG"),
+    "6_6924": tfr_xml("6924", issued="2026-11-13T09:00:00", expire=None, city="ORLANDO", name="6/6924",
+                      text="!FDC 6/6924 ... PURSUANT TO SECTION 352 OF PUBLIC LAW 108-7 ..."),
+    "1_5060": tfr_xml("5060", issued="2024-01-27T08:23:00", expire=None, area="none", name="1/5060", city=""),
+    "6_2698": tfr_xml("2698", issued="2026-01-13T14:45:00", expire="2026-12-18T21:00:00", city="VIEQUES", name="6/2698"),
+    "6_0001": tfr_xml("0001", issued="2026-10-30T12:00:00", effective="2026-11-01T12:00:00",
+                      expire="2026-11-01T20:00:00", name="6/0001", city="Sterling"),
+}
+
+
+class Tfr(unittest.TestCase):
+    NOW = datetime(2026, 11, 14, 14, 30, tzinfo=timezone.utc)
+    STAMP = "2026-11-14T14:30:00Z"
+
+    def fetcher(self, details=None, fail=()):
+        calls = []
+        details = TFR_DETAILS if details is None else details
+
+        def fetch(url, timeout=30):
+            calls.append(url)
+            if url == tfr.LIST_URL:
+                return json.dumps(TFR_LIST).encode(), None
+            fid = url.rsplit("detail_", 1)[-1][:-4]
+            return (None, "HTTP 500") if fid in fail else (details[fid], None)
+        return fetch, calls
+
+    def test_parse_detail_keeps_the_faas_outline_utc_times_and_heights(self):
+        d = tfr.parse_detail(TFR_DETAILS["6_7131"])
+        self.assertEqual((d["effective"], d["expires"], d["issued"]),
+                         ("2026-11-14T20:53:00Z", "2026-11-15T00:14:00Z", "2026-11-14T10:00:00Z"))
+        self.assertEqual(d["geometry"]["type"], "Polygon")
+        self.assertEqual(d["geometry"]["coordinates"][0][:2], [[-97.16667, 25.93333], [-97.2, 26.01667]])
+        self.assertEqual((d["floor"], d["ceiling"], d["regulation"], d["city"]), ("surface", "FL999", "91.143", "STARBASE"))
+        circle = tfr.parse_detail(TFR_DETAILS["6_7546"])["geometry"]
+        self.assertEqual((circle["type"], len(circle["coordinates"][0])), ("Polygon", 33))
+        self.assertIsNone(tfr.parse_detail(TFR_DETAILS["1_5060"])["geometry"])
+        self.assertTrue(tfr.parse_detail(TFR_DETAILS["6_6924"])["statutory"])
+        self.assertEqual(tfr.coord("097.2W"), -97.2)
+
+    def test_collect_reads_each_detail_once_and_retries_a_failure(self):
+        fetch, calls = self.fetcher(fail={"6_7546"})
+        first, err, read, failed = tfr.collect(None, self.STAMP, fetch, pause=0)
+        self.assertEqual((err, read, failed, len(first)), (None, 5, 1, 6))
+        self.assertIsNone(first["6/7546"]["detail"])
+        fetch, calls = self.fetcher()
+        again, err, read, failed = tfr.collect(first, self.STAMP, fetch, pause=0)
+        self.assertEqual((read, calls), (1, [tfr.LIST_URL, tfr.DETAIL_URL.format(id="6_7546")]))
+        fetch, _ = self.fetcher()
+        self.assertEqual(tfr.collect(again, self.STAMP, lambda u, t=30: (None, "HTTP 503"))[1], "HTTP 503")
+
+    def build(self, held, last_ok=None):
+        h = {"faa-tfr": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        return feed.build({}, {}, {}, {}, self.NOW, h, tfrs={"tfrs": held, "fetched_at": self.STAMP})
+
+    def test_items_new_launches_statutory_no_shape_and_expired(self):
+        fetch, _ = self.fetcher(fail={"6_7546"})
+        held = tfr.collect(None, self.STAMP, fetch, pause=0)[0]
+        fc = self.build(held)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f for f in fc["features"]}
+        self.assertEqual(sorted(items), ["cordon:tfr:6-2698", "cordon:tfr:6-6924", "cordon:tfr:6-7131", "cordon:tfr:6-7546"])
+        launch = items["cordon:tfr:6-7131"]["properties"]
+        self.assertEqual(launch["title"], "FAA TFR 6/7131 (space operations): STARBASE, TX (261114 SpaceX Recovery Starship 15)")
+        self.assertEqual((launch["tier"], launch["baseline_ref"]["id"], launch["valid_until"]),
+                         ("anomaly", "faa-tfrs-in-force", "2026-11-15T00:14:00Z"))
+        self.assertEqual(launch["countries"], ["US"])  # Starbase touches Mexico on the coarse outlines; not tagged MX
+        self.assertEqual(items["cordon:tfr:6-6924"]["properties"]["tier"], "routine")  # statutory: never new
+        self.assertEqual(items["cordon:tfr:6-2698"]["properties"]["countries"], ["PR"])
+        pending = items["cordon:tfr:6-7546"]
+        self.assertIsNone(pending["geometry"])
+        self.assertEqual(pending["properties"]["visual"]["url"], "https://tfr.faa.gov/tfr3/?page=detail_6_7546")
+        hl = fc["health"]["faa-tfr"]
+        self.assertEqual((hl["no_shape"], hl["expired"]), (1, 1))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
+
+    def test_a_list_unread_for_six_hours_is_withheld(self):
+        fetch, _ = self.fetcher()
+        held = tfr.collect(None, self.STAMP, fetch, pause=0)[0]
+        fc = self.build(held, last_ok="2026-11-14T08:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual((fc["health"]["faa-tfr"]["state"], fc["health"]["faa-tfr"]["withheld"]), ("stale", 6))
+
 
 class Events(unittest.TestCase):
     def test_bulletin_expiries_and_recent_changes(self):

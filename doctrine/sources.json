@@ -1,13 +1,15 @@
 {
   "program": "cordon",
   "register": "this file",
-  "note": "Cordon's five sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
+  "note": "Cordon's seven sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
   "sources": [
     {"id": "state-travel-advisories", "name": "US Department of State travel advisories (JSON)", "licence": "US public domain (seals and logos restricted)", "use": "ingest"},
     {"id": "us-embassy-alerts", "name": "US embassy alert RSS feeds (per post)", "licence": "US public domain", "use": "ingest"},
     {"id": "easa-czib", "name": "EASA Conflict Zone Information Bulletins (CSV export)", "licence": "EASA content, reusable with acknowledgement", "use": "ingest"},
     {"id": "nga-navwarnings", "name": "NGA Maritime Safety Information navigational warnings in force (daily text lists; the JSON API when it answers with current data)", "licence": "US public domain", "use": "ingest"},
     {"id": "faa-nas-status", "name": "FAA National Airspace System status, airport events (the JSON behind nasstatus.faa.gov)", "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on nasstatus", "use": "ingest"},
+    {"id": "uk-fcdo-travel-advice", "name": "UK FCDO foreign travel advice (GOV.UK Content API: index and country pages)", "licence": "Open Government Licence v3.0", "use": "ingest"},
+    {"id": "faa-tfr", "name": "FAA temporary flight restrictions (tfr.faa.gov list JSON and detail XML)", "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on the TFR site", "use": "ingest"},
     {"id": "osac", "name": "Overseas Security Advisory Council reports", "licence": "Terms bar publishing or harvesting without authorization", "use": "exclude"}
   ],
   "extra": {
@@ -20,6 +22,10 @@
     "nga-navwarnings": {"grade": "A1", "independence_group": "nga", "ease_of_faking": "low", "cadence_s": 3600,
       "descriptor": "Broadcast navigational warnings in force", "probe": {"url": "https://msi.nga.mil/apology_objects/DailyMemIV.txt", "expect": "any"}},
     "faa-nas-status": {"grade": "A1", "independence_group": "faa", "ease_of_faking": "low", "cadence_s": 3600,
-      "descriptor": "Ground stops, ground delay programs and airport closures in effect, with UTC times and airport coordinates; keyless, checked live 13 Nov 2026", "probe": {"url": "https://nasstatus.faa.gov/api/airport-events", "expect": "json"}}
+      "descriptor": "Ground stops, ground delay programs and airport closures in effect, with UTC times and airport coordinates; keyless, checked live 13 Nov 2026", "probe": {"url": "https://nasstatus.faa.gov/api/airport-events", "expect": "json"}},
+    "uk-fcdo-travel-advice": {"grade": "A1", "independence_group": "uk-fcdo", "ease_of_faking": "low", "cadence_s": 3600,
+      "descriptor": "226 countries with the FCDO's advise-against statements and its own note of each update; keyless, checked live 14 Nov 2026", "probe": {"url": "https://www.gov.uk/api/content/foreign-travel-advice", "expect": "json"}},
+    "faa-tfr": {"grade": "A1", "independence_group": "faa", "ease_of_faking": "low", "cadence_s": 3600,
+      "descriptor": "Temporary flight restrictions with NOTAM text, UTC times and the FAA's own outline; keyless, checked live 14 Nov 2026", "probe": {"url": "https://tfr.faa.gov/tfrapi/exportTfrList", "expect": "json"}}
   }
 }

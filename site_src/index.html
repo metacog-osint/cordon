@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cordon: where authorities warn people away</title>
-<meta name="description" content="US travel advisories and embassy departure status, EASA conflict-zone bulletins and NGA navigational warnings on one map. A project of The Intelligence Company.">
+<meta name="description" content="US and UK travel advice, US embassy departure status, EASA conflict-zone bulletins, NGA navigational warnings and FAA flight restrictions on one map. A project of The Intelligence Company.">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-time.css">
@@ -29,9 +29,9 @@
 <main class="wrap">
   <section class="hero">
     <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
-    <p class="lede" id="lede">US travel advisories and embassy departure status, European aviation conflict-zone bulletins,
-      US navigational warnings to mariners, and the FAA's ground stops, ground delay programs and airport closures,
-      collected every hour from the issuing authorities.</p>
+    <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's foreign travel advice, European
+      aviation conflict-zone bulletins, US navigational warnings to mariners, and the FAA's ground stops, ground delay
+      programs, airport closures and temporary flight restrictions, collected every hour from the issuing authorities.</p>
   </section>
 
   <section class="mapcard" aria-label="Map">
@@ -42,6 +42,7 @@
         <label><input type="checkbox" data-layer="czib" checked> EASA conflict-zone bulletins</label>
         <label><input type="checkbox" data-layer="navwarn" checked> Warnings to mariners</label>
         <label><input type="checkbox" data-layer="faa" checked> US airport programs (FAA)</label>
+        <label><input type="checkbox" data-layer="tfr" checked> US flight restrictions (FAA TFRs)</label>
       </fieldset>
       <div class="legend" id="legend"></div>
     </div>
@@ -81,6 +82,20 @@
     <div id="faa"></div>
   </section>
 
+  <section class="card" aria-labelledby="tfr-h">
+    <h2 id="tfr-h">US temporary flight restrictions</h2>
+    <p class="muted small">FAA TFRs with an area: space launches and recoveries, security, VIP movements, fires and other
+      hazards, drones over crowds, air shows. Outlines and times as the FAA publishes them (times are UTC in its data).
+      A launch, security or special TFR issued in the last 72 hours is marked new. Standing nationwide notices with no
+      area are not listed.</p>
+    <div id="tfrs"></div>
+  </section>
+  <section class="card" aria-labelledby="fcdo-h">
+    <h2 id="fcdo-h">UK foreign travel advice</h2>
+    <p class="muted small">Where the UK Foreign, Commonwealth &amp; Development Office advises against all or all but
+      essential travel, and any country whose advice it updated in the last 72 hours, with its own note of what changed.</p>
+    <div id="fcdo"></div>
+  </section>
   <section class="card" aria-labelledby="levels-h">
     <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
     <div id="levels"></div>
@@ -92,7 +107,8 @@
     <p class="small muted">US Department of State (travel.state.gov), NGA (msi.nga.mil) and FAA (nasstatus.faa.gov)
       content is US public domain; the FAA's airport coordinates come with its status data.
       EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
-      Bulletins. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+      Bulletins. UK travel advice: contains public sector information licensed under the Open Government Licence v3.0
+      (FCDO, gov.uk/foreign-travel-advice). FAA flight restrictions (tfr.faa.gov) are a US Government work. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
       OSAC is not used: its terms bar republishing.</p>
   </section>
 </main>

@@ -1,8 +1,8 @@
 # Cordon method (doctrine summary)
 
 Cordon collects official warnings that tell people to stay away: US travel advisories and embassy departure status,
-EASA conflict-zone bulletins for aircraft, NGA's navigational warnings for ships, and the FAA's ground stops, ground
-delay programs and airport closures. It states them in the terms of
+the UK's foreign travel advice, EASA conflict-zone bulletins for aircraft, NGA's navigational warnings for ships, and
+the FAA's ground stops, ground delay programs, airport closures and temporary flight restrictions. It states them in the terms of
 The Intelligence Company's doctrine kit (`doctrine/kit/`).
 
 ## What it collects (hourly, GitHub Actions)
@@ -17,6 +17,11 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
 - **FAA National Airspace System status** (`nasstatus.faa.gov/api/airport-events`, the JSON behind the FAA's NAS
   status page; keyless): ground stops, ground delay programs and airport closures in effect, with the reason in the
   FAA's own words and UTC start and end times. Each run's count of programs goes to `data/faa_counts.jsonl`.
+- **UK FCDO foreign travel advice** (GOV.UK Content API, keyless, Open Government Licence v3.0): for about 226
+  countries, the FCDO's "advise against" statements (all travel or all but essential travel, to parts or the whole
+  country) and its own one-line note of each update. A country's page is read only when the FCDO updates it.
+- **FAA temporary flight restrictions** (`tfr.faa.gov`, keyless): the list, and for each TFR its NOTAM text, UTC
+  times, floor and ceiling, and the FAA's own outline. Each detail file is read once per NOTAM number.
 
 ## Anomaly versus warning
 Everything Cordon publishes is a measurement of what an authority said (kind observation). A level change or a
@@ -28,6 +33,11 @@ more ground stops are in effect at once than Cordon's own counts make normal (`f
 than the 99th percentile, never under 3; a prior of 4 until 72 counts exist), or when the FAA lists it against a
 center or the whole system instead of one airport. A single ground stop on a normal day, every ground delay program
 and every closure is routine. Cordon reports the reason the FAA lists ("wind", "other") and never infers a cause.
+A change of the FCDO's statements for a country in the last 30 days is an anomaly against its previous statements;
+countries where the FCDO advises against some travel, or that it updated in the last 72 hours, are listed as routine.
+Cordon does not rank the FCDO's statements against the State Department's levels. A TFR for space operations,
+security or a special notice issued in the last 72 hours is an anomaly against the TFRs listed before it, except the
+statutory TFRs over stadiums and Disney parks, which are standing; every other TFR is routine.
 Cordon makes no judgment of its own;
 those come through warning problem CD-WP-1 and through Verdict, which scores forecasts of renewals and changes.
 
@@ -46,7 +56,11 @@ The hazard is drawn once, under the NAVAREA copy (otherwise the earliest issued)
 `measures.rebroadcasts` with every position that differs, as each was written, and counted in the health block's
 `rebroadcasts_merged`. FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
-whole system is drawn at the US label point.
+whole system is drawn at the US label point. FCDO advice is placed at the country's label point. TFRs are drawn with
+the outline the FAA publishes (its circles already turned into rings; a circle given only by centre and radius is a
+32-sided polygon) and tagged with the country from the FAA's own state field (Puerto Rico, Guam and the other
+territories by their own codes, everything else US), not from the outline, because coarse borders would tag a TFR at
+Brownsville as Mexico. Standing nationwide TFRs with no area are not listed; the health block counts them (`no_shape`).
 
 ## Gaps and no data
 A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. NGA
@@ -54,4 +68,6 @@ serves one daily file per area: when one fails and the others answer, that area 
 health detail and `held_areas` say so, and after 48 hours held its warnings are withheld. Embassy
 alert feeds were down on 31 Oct 2026 ("Technical Difficulties"), so that layer may be empty. FAA programs last hours,
 so the FAA list goes stale after 3 hours without a good fetch and is then withheld; from a held list (the latest fetch
-failed) a program past its listed end time is dropped.
+failed) a program past its listed end time is dropped. TFRs go stale after 6 hours without a good list; a TFR past
+its own expiry is dropped and counted (`expired`). The FCDO list goes stale after 48 hours; a country page that fails
+keeps its last statements and is asked for again on the next run.

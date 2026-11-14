@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import easa, embassy, faa, navarea, state
+from . import easa, embassy, faa, fcdo, navarea, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -62,4 +62,28 @@ def run(when: str | None = None) -> dict:
         health("faa-nas-status", True, f"{n['ground_stop']} ground stops, {n['ground_delay']} ground delay programs, "
                                        f"{n['closure']} closures", when)
     summary["faa"] = err or f"{len(programs)} programs"
+
+    countries, uk_changes, err, read, failed = fcdo.collect(load("fcdo.json", {}).get("countries"), when)
+    if err:
+        health("uk-fcdo-travel-advice", False, err, when)
+    else:
+        save("fcdo.json", {"source": fcdo.SOURCE_URL, "countries": countries})
+        append_jsonl("changes.jsonl", [{**c, "lane": "fcdo"} for c in uk_changes])
+        unread = sum(1 for r in countries.values() if r.get("alert_status") is None)
+        against = sum(1 for r in countries.values() if r.get("alert_status"))
+        health("uk-fcdo-travel-advice", True, f"{len(countries)} countries, {against} with advice against some travel; "
+               f"{read} country pages read" + (f", {failed} failed" if failed else "")
+               + (f", {unread} not yet read" if unread else ""), when)
+    summary["fcdo"] = err or f"{len(countries)} countries, {len(uk_changes)} changes, {read} pages read"
+
+
+    tfrs, err, read, failed = tfr.collect(load("tfr.json", {}).get("tfrs"), when)
+    if err:
+        health("faa-tfr", False, err, when)
+    else:
+        save("tfr.json", {"source": tfr.LIST_URL, "tfrs": tfrs})
+        shapes = sum(1 for r in tfrs.values() if (r.get("detail") or {}).get("geometry"))
+        health("faa-tfr", True, f"{len(tfrs)} TFRs listed, {shapes} with an area; {read} detail files read"
+               + (f", {failed} failed" if failed else ""), when)
+    summary["tfr"] = err or f"{len(tfrs)} TFRs, {read} details read"
     return summary
