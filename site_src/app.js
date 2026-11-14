@@ -17,6 +17,8 @@
   var UK_ALERT = { avoid_all_travel_to_whole_country: "all travel to the whole country",
     avoid_all_but_essential_travel_to_whole_country: "all but essential travel to the whole country",
     avoid_all_travel_to_parts: "all travel to parts", avoid_all_but_essential_travel_to_parts: "all but essential travel to parts" };
+  var CA_LEVEL = { 0: "Exercise normal security precautions", 1: "Exercise a high degree of caution",
+    2: "Avoid non-essential travel", 3: "Avoid all travel" };
   function ukWords(list) {
     if (!list) return "not read";
     var order = Object.keys(UK_ALERT);
@@ -47,7 +49,7 @@
     .setView([24, 20], 2);
   map.once("click", function () { map.scrollWheelZoom.enable(); });
   map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0)");
+  map.attributionControl.addAttribution("Natural Earth · State Dept · EASA · NGA · FAA · UK FCDO (OGL v3.0) · Global Affairs Canada (OGL-Canada)");
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
@@ -168,7 +170,9 @@
 
     var ch = d.changes;
     document.getElementById("changes").replaceChildren(ch.length ? table(["When", "Where", "Change"], ch.map(function (c) {
-      var what = c.kind === "level" ? "Advisory level " + c.from + " to " + c.to
+      var what = c.lane === "canada" ? (c.kind === "level" ? "Canada's advisory: " + (CA_LEVEL[c.from] || c.from) + " to " + (CA_LEVEL[c.to] || c.to)
+          : c.kind === "regional" ? "Canada: regional advisories " + (c.to ? "added" : "removed") : c.kind)
+        : c.kind === "level" ? "Advisory level " + c.from + " to " + c.to
         : c.kind === "posture" ? "Embassy status " + String(c.from).replace(/_/g, " ") + " to " + String(c.to).replace(/_/g, " ") + " (under review)"
         : c.kind === "text" ? "Advisory text revised" : c.kind === "revised" ? "Bulletin revised: " + c.to[0] + ", valid until " + day(c.to[1])
         : c.kind === "status" ? "Bulletin " + c.from + " to " + c.to : c.kind === "new" ? "New"
@@ -208,6 +212,19 @@
       : h("p", { "class": "empty" }, [(d.health["uk-fcdo-travel-advice"] || {}).state === "fresh"
           ? "The FCDO advises against travel nowhere." : "No current UK FCDO data: see Sources below."]));
 
+    // The page lists Canada's two highest levels, changes and fresh updates; the feed carries every place above level 0.
+    var ca = (d.canada || []).filter(function (c) { return c.level >= 2 || c.tier === "anomaly" || c.new; })
+      .sort(function (x, y) { return (y.tier === "anomaly") - (x.tier === "anomaly") || y.level - x.level
+        || (y.updated || "").localeCompare(x.updated || ""); });
+    document.getElementById("canada").replaceChildren(ca.length ? table(["Place", "Canada's advice", "Latest update", "Updated"],
+      ca.map(function (c) {
+        var name = c.title.replace(/^Canada, /, "").split(":")[0];
+        var was = c.tier !== "anomaly" ? "" : c.from_advice ? " (changed; was: " + c.from_advice + ")"
+          : c.from_regional != null ? " (regional advisories " + (c.regional ? "added" : "removed") + ")" : " (Canada lists an advisory change)";
+        return [link(c.link, name), c.advisory + was, c.new ? (c.update || "—") : "—", { td: when(c.updated), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [(d.health["gac-travel-advisories"] || {}).state === "fresh"
+          ? "Canada advises avoiding travel nowhere and lists no change." : "No current Government of Canada data: see Sources below."]));
+
     var tf = (d.tfr || []).slice().sort(function (x, y) {
       return (y.tier === "anomaly") - (x.tier === "anomaly") || (x.effective || "").localeCompare(y.effective || ""); });
     document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "From", "Until"],
@@ -226,7 +243,8 @@
     var names = { "state-travel-advisories": "State Department travel advisories", "us-embassy-alerts": "US embassy alerts",
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
       "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
-      "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice" };
+      "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
+      "gac-travel-advisories": "Government of Canada travel advisories" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};
       var old = s.state === "stale" || s.state === "never";

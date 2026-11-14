@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
+from cordon import canada, easa, embassy, faa, fcdo, feed, navarea, state, tfr  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -955,6 +955,106 @@ class Tfr(unittest.TestCase):
         fc = self.build(held, last_ok="2026-11-14T08:00:00Z")
         self.assertEqual(fc["features"], [])
         self.assertEqual((fc["health"]["faa-tfr"]["state"], fc["health"]["faa-tfr"]["withheld"]), ("stale", 6))
+
+
+def canada_row(iso, name, level, ts=1791975710, kind="Regular text update", note="Safety and security - updated.",
+               regional=0):
+    """One entry of Canada's index as published (ts 1791975710 = 2026-10-14T11:01:50Z)."""
+    slug = name.lower().replace(" ", "-")
+    return {"country-iso": iso, "country-eng": name, "advisory-state": level,
+            "date-published": {"timestamp": ts, "date": "x", "asp": "x"}, "has-advisory-warning": int(level >= 2),
+            "has-regional-advisory": regional, "recent-updates-type": kind,
+            "eng": {"name": name, "url-slug": slug, "advisory-text": canada.LEVELS[level], "recent-updates": note}}
+
+
+def canada_index(n=160, rows=()):
+    keys = [chr(65 + i // 26) + chr(65 + i % 26) for i in range(n)]  # AA, AB ... (n < 676)
+    data = {k: canada_row(k, f"Place {k}", 0) for k in keys}
+    for r in rows:
+        data[r["country-iso"]] = r
+    return json.dumps({"metadata": {"generated": {"timestamp": 1794624016}}, "data": data}).encode()
+
+
+class Canada(unittest.TestCase):
+    NOW = datetime(2026, 11, 14, 17, 0, tzinfo=timezone.utc)
+    STAMP = "2026-11-14T17:00:00Z"
+
+    def test_parse_reads_levels_times_and_regional_places(self):
+        doc = json.loads(canada_index(rows=[canada_row("AF", "Afghanistan", 3),
+                                            canada_row("PT-20", "Azores", 0, kind="Editorial change"),
+                                            {**canada_row("ZZ", "Nowhere", 0), "advisory-state": 7}]))
+        got = canada.parse(doc)
+        self.assertEqual(got["AF"]["updated"], "2026-10-14T11:01:50Z")
+        self.assertEqual((got["AF"]["level"], got["AF"]["advisory"], got["AF"]["link"]),
+                         (3, "Avoid all travel", "https://travel.gc.ca/destinations/afghanistan"))
+        self.assertEqual((got["PT-20"]["iso"], got["PT-20"]["name"]), ("PT", "Azores"))
+        self.assertNotIn("ZZ", got)  # a level Canada does not define is left out
+
+    def test_collect_finds_level_and_regional_changes(self):
+        def fetcher(body):
+            return lambda url, timeout=40: (body, None)
+        first, changes, generated, err = canada.collect(None, self.STAMP, fetcher(canada_index(
+            rows=[canada_row("ML", "Mali", 2, regional=1), canada_row("PE", "Peru", 1)])))
+        self.assertIsNone(err)
+        self.assertEqual((len(first), changes, generated), (162, [], "2026-11-14T02:40:16Z"))
+        new, changes, _, err = canada.collect(first, self.STAMP, fetcher(canada_index(
+            rows=[canada_row("ML", "Mali", 3, regional=1), canada_row("PE", "Peru", 1, regional=1)])))
+        self.assertEqual(sorted((c["key"], c["kind"], c["from"], c["to"]) for c in changes),
+                         [("ML", "level", 2, 3), ("PE", "regional", False, True)])
+
+    def test_a_short_or_broken_index_is_an_error(self):
+        self.assertIn("only 20 places", canada.collect({}, self.STAMP, lambda u, t=40: (canada_index(n=20), None))[3])
+        self.assertIn("unreadable", canada.collect({}, self.STAMP, lambda u, t=40: (b"<html>", None))[3])
+        kept = {"AF": {"level": 3}}
+        self.assertIs(canada.collect(kept, self.STAMP, lambda u, t=40: (None, "HTTP 503"))[0], kept)
+
+    def build(self, rows, changes=(), last_ok=None):
+        h = {"gac-travel-advisories": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        ca = {"countries": canada.parse(json.loads(canada_index(n=0, rows=rows))), "fetched_at": self.STAMP}
+        with unittest.mock.patch.object(feed, "recent_changes", lambda now: list(changes)):
+            return feed.build({}, {}, {}, {}, self.NOW, h, ca=ca)
+
+    def test_items_list_raised_levels_regional_changes_and_fresh_updates(self):
+        recent = 1794584290  # 2026-11-13T15:38:10Z, inside 72 hours
+        rows = [canada_row("AF", "Afghanistan", 3),
+                canada_row("FR", "France", 0),  # level 0, old update: not listed
+                canada_row("PT-20", "Azores", 0, ts=recent, kind="Editorial change"),  # editorial: not listed
+                canada_row("BB", "Barbados", 0, ts=recent, note="Need help? section \u2013 updated mission coordinates"),
+                canada_row("MX", "Mexico", 1, regional=1, ts=recent, note="Risk levels section \u2013 removed advisory to "
+                           "avoid non-essential travel to the west-central coast; Natural disasters and climate section"),
+                canada_row("US", "United States", 0, ts=recent, note="Updated information on a nationwide ground stop"),
+                canada_row("TH", "Thailand", 1, regional=1, ts=recent, kind="Regional advisory modified",
+                           note="Regional advisory for the border updated"),
+                canada_row("ML", "Mali", 3)]
+        changes = [{"at": "2026-11-10T10:00:00Z", "lane": "canada", "kind": "level", "key": "ML", "from": 2, "to": 3},
+                   {"at": "2026-11-10T10:00:00Z", "lane": "fcdo", "kind": "alert", "key": "AF", "from": [], "to": []}]
+        fc = self.build(rows, changes)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f["properties"] for f in fc["features"]}
+        self.assertEqual(sorted(items), ["cordon:canada:AF", "cordon:canada:ML", "cordon:canada:MX", "cordon:canada:TH",
+                                         "cordon:canada:US"])
+        self.assertEqual(items["cordon:canada:MX"]["tier"], "anomaly")  # the note, not the kind, says so
+        self.assertEqual(items["cordon:canada:AF"]["title"], "Canada, Afghanistan: Avoid all travel")
+        self.assertEqual(items["cordon:canada:AF"]["tier"], "routine")
+        self.assertEqual(items["cordon:canada:US"]["title"], "Canada, United States: Exercise normal security "
+                         "precautions (updated: Updated information on a nationwide ground stop)")
+        self.assertEqual(items["cordon:canada:US"]["tier"], "routine")
+        self.assertEqual((items["cordon:canada:TH"]["tier"], items["cordon:canada:TH"]["baseline_ref"]["id"]),
+                         ("anomaly", "gac-declared-advisory-change"))
+        ml = items["cordon:canada:ML"]
+        self.assertEqual((ml["tier"], ml["baseline_ref"]["id"], ml["measures"]["from_advice"]),
+                         ("anomaly", "previous-gac-advisory", "Avoid non-essential travel"))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
+        self.assertIn("Open Government Licence - Canada", fc["attribution"])
+
+    def test_a_stale_index_is_withheld(self):
+        fc = self.build([canada_row("AF", "Afghanistan", 3), canada_row("FR", "France", 0)],
+                        last_ok="2026-11-11T00:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual((fc["health"]["gac-travel-advisories"]["state"], fc["health"]["gac-travel-advisories"]["withheld"]),
+                         ("stale", 1))
 
 
 class Events(unittest.TestCase):

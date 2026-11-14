@@ -31,6 +31,10 @@
     {"id": "CD-PIR-7", "type": "pir", "parent": "CD-SQ-1",
      "question": "Where has the FAA restricted airspace for space launches and recoveries, security, hazards or VIP movements, and which restrictions are new?",
      "series": ["FAA temporary flight restrictions (list, NOTAM text, outline, effective and expiry times)"]},
+    {"id": "CD-PIR-8", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Where does Canada advise a high degree of caution, avoiding non-essential travel or avoiding all travel, and when do those advisories change?",
+     "series": ["Government of Canada travel advice and advisories (advisory-state 0-3, regional advisories, update notes)", "changes.jsonl (lane canada: level and regional advisory changes)"],
+     "warning_problems": ["CD-WP-1"]},
     {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
      "question": "Is each source answering (data/health.json)?",
      "series": ["source health"]}

@@ -1,7 +1,7 @@
 {
   "program": "cordon",
   "register": "this file",
-  "note": "Cordon's seven sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
+  "note": "Cordon's eight sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
   "sources": [
     {"id": "state-travel-advisories", "name": "US Department of State travel advisories (JSON)", "licence": "US public domain (seals and logos restricted)", "use": "ingest"},
     {"id": "us-embassy-alerts", "name": "US embassy alert RSS feeds (per post)", "licence": "US public domain", "use": "ingest"},
@@ -10,6 +10,7 @@
     {"id": "faa-nas-status", "name": "FAA National Airspace System status, airport events (the JSON behind nasstatus.faa.gov)", "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on nasstatus", "use": "ingest"},
     {"id": "uk-fcdo-travel-advice", "name": "UK FCDO foreign travel advice (GOV.UK Content API: index and country pages)", "licence": "Open Government Licence v3.0", "use": "ingest"},
     {"id": "faa-tfr", "name": "FAA temporary flight restrictions (tfr.faa.gov list JSON and detail XML)", "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on the TFR site", "use": "ingest"},
+    {"id": "gac-travel-advisories", "name": "Government of Canada travel advice and advisories (open.canada.ca dataset bef2ebb3-ca9a-485f-aaff-5dc36eb89426, data.international.gc.ca JSON index)", "licence": "Open Government Licence - Canada", "use": "ingest"},
     {"id": "osac", "name": "Overseas Security Advisory Council reports", "licence": "Terms bar publishing or harvesting without authorization", "use": "exclude"}
   ],
   "extra": {
@@ -26,6 +27,8 @@
     "uk-fcdo-travel-advice": {"grade": "A1", "independence_group": "uk-fcdo", "ease_of_faking": "low", "cadence_s": 3600,
       "descriptor": "226 countries with the FCDO's advise-against statements and its own note of each update; keyless, checked live 14 Nov 2026", "probe": {"url": "https://www.gov.uk/api/content/foreign-travel-advice", "expect": "json"}},
     "faa-tfr": {"grade": "A1", "independence_group": "faa", "ease_of_faking": "low", "cadence_s": 3600,
-      "descriptor": "Temporary flight restrictions with NOTAM text, UTC times and the FAA's own outline; keyless, checked live 14 Nov 2026", "probe": {"url": "https://tfr.faa.gov/tfrapi/exportTfrList", "expect": "json"}}
+      "descriptor": "Temporary flight restrictions with NOTAM text, UTC times and the FAA's own outline; keyless, checked live 14 Nov 2026", "probe": {"url": "https://tfr.faa.gov/tfrapi/exportTfrList", "expect": "json"}},
+    "gac-travel-advisories": {"grade": "A1", "independence_group": "gac", "ease_of_faking": "low", "cadence_s": 3600,
+      "descriptor": "230 places with Canada's advisory level 0-3, regional advisories and its own note of each update, in one file; keyless, checked live 14 Nov 2026", "probe": {"url": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json", "expect": "json"}}
   }
 }

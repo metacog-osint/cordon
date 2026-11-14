@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import faa, fcdo, navarea, tfr
+from . import canada, faa, fcdo, navarea, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -17,7 +17,8 @@ STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever
 NEW_HOURS = 72  # a navigational warning issued within this long is new
 # A new warning of these kinds is an anomaly, not routine (launch and military added by Tom, 13 Nov 2026).
 NEW_ALERT = {"security", "mines", "piracy", "gnss", "launch", "military"}
-HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95]}  # [lon, lat], as Watchfloor places them
+HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95],  # [lon, lat], as Watchfloor places them
+              "PT-20": [-25.67, 37.74]}  # the Azores (Ponta Delgada), which Canada advises on apart from Portugal
 NOTABLE = {"launch", "gnss", "military", "mines", "piracy", "security", "ice", "restricted_area", "search_and_rescue", "pollution",
            "port", "cable_pipeline", "wreck", "hazard", "underwater_ops"}
 STATE_SRC = {"id": "state-travel-advisories", "publisher": "US Department of State", "licence":
@@ -42,6 +43,9 @@ FAA_SRC = {"id": "faa-nas-status", "publisher": "US Federal Aviation Administrat
 FCDO_SRC = {"id": "uk-fcdo-travel-advice", "publisher": "UK Foreign, Commonwealth & Development Office (FCDO)",
             "licence": "Open Government Licence v3.0", "grade": "A1", "independence_group": "uk-fcdo",
             "source_type": "official notice", "descriptor": "Foreign travel advice (GOV.UK Content API)"}
+CANADA_SRC = {"id": "gac-travel-advisories", "publisher": "Global Affairs Canada (Government of Canada)",
+              "licence": "Open Government Licence - Canada", "grade": "A1", "independence_group": "gac",
+              "source_type": "official notice", "descriptor": "Travel advice and advisories (travel.gc.ca open data)"}
 TFR_SRC = {"id": "faa-tfr", "publisher": "US Federal Aviation Administration (FAA)", "url": tfr.SITE_URL,
            "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on "
            "the TFR site", "grade": "A1", "independence_group": "faa", "source_type": "official notice",
@@ -212,6 +216,50 @@ def fcdo_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     return out
 
 
+def canada_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """Canada's advisory for every place above its lowest level or with regional advisories, whose level or regional
+    advisories changed in the last RECENT_DAYS, or that Canada updated in the last NEW_HOURS other than editorially or
+    in its contacts section alone (with Canada's own note of what changed)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    mine = [c for c in changes if c.get("lane") == "canada"]
+    lvl = {c["key"]: c for c in mine if c.get("kind") == "level"}
+    reg = {c["key"]: c for c in mine if c.get("kind") == "regional"}
+    out = []
+    for key, r in sorted((data.get("countries") or {}).items()):
+        is_new = bool(r.get("updated") and r["updated"] >= new_from and canada.counts_as_new(r))
+        declared = is_new and canada.declares_change(r)
+        lc, rc = lvl.get(key), reg.get(key)
+        if not (r["level"] >= 1 or r.get("regional") or lc or rc or is_new):
+            continue
+        title = f"Canada, {r['name']}: {r['advisory']}"
+        if is_new and r.get("update"):
+            title += f" (updated: {r['update']})"
+        props = {**_base(fetched), "id": f"cordon:canada:{key}", "title": title,
+                 "tier": "anomaly" if (lc or rc or declared) else "routine",
+                 "data_as_of": r.get("updated") or fetched, "countries": [r["iso"]], "precision_class": "country",
+                 "requirement_ids": ["CD-PIR-8"], "ie_aspect": ["informational"], "pmesii_pt": ["political"],
+                 "ascope": ["areas"], "sources": [{**CANADA_SRC, "url": r["link"], "accessed_at": fetched}],
+                 "link": r["link"], "measures": {"level": r["level"], "advisory": r["advisory"],
+                                                 "regional": bool(r.get("regional")), "update_type": r.get("update_type"),
+                                                 "update": r.get("update"), "updated": r.get("updated"), "new": is_new}}
+        if lc or rc:
+            props["baseline_ref"] = {"id": "previous-gac-advisory", "type": "fixed", "version": "1",
+                                     "window": "Canada's previous level and regional advisories for the place"}
+        elif declared:
+            props["baseline_ref"] = {"id": "gac-declared-advisory-change", "type": "fixed", "version": "1",
+                                     "window": f"Canada's own label for its latest update, published in the last "
+                                               f"{NEW_HOURS} hours"}
+        if lc:
+            props["measures"].update({"changed_at": lc["at"], "from_level": lc["from"],
+                                      "from_advice": canada.LEVELS.get(lc["from"])})
+        if rc:
+            props["measures"].update({"regional_changed_at": rc["at"], "from_regional": rc["from"]})
+        out.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
+    return out
+
+
 def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
     """(items, counts) for the TFRs the FAA lists, drawn with the FAA's own outline. Left out and counted: TFRs past
     their own expiry (expired), TFRs with no area (no_shape: the standing nationwide notices) and types in
@@ -265,7 +313,7 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
 
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
-          uk: dict | None = None, tfrs: dict | None = None) -> dict:
+          uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -416,6 +464,13 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         else:
             feats += fcdo_items(uk, now, changes)
 
+    if ca is not None:
+        cs = src_health.setdefault(CANADA_SRC["id"], {"state": "never"})
+        if cs["state"] in ("stale", "never"):
+            cs["withheld"] = sum(1 for r in (ca.get("countries") or {}).values() if r["level"] >= 1 or r.get("regional"))
+        else:
+            feats += canada_items(ca, now, changes)
+
     if tfrs is not None:
         tf = src_health.setdefault(TFR_SRC["id"], {"state": "never"})
         if tf["state"] in ("stale", "never"):
@@ -432,8 +487,11 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         (dropped.append({"id": f["properties"]["id"], "errors": errs}) if errs else kept.append(f))
     return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
             "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
-                       "acknowledgement; UK FCDO content under the Open Government Licence v3.0",
-            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO. "
-                           "Contains public sector information licensed under the Open Government Licence v3.0.",
+                       "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
+                       "content under the Open Government Licence - Canada",
+            "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO, "
+                           "Global Affairs Canada. Contains public sector information licensed under the Open "
+                           "Government Licence v3.0. Contains information licensed under the Open Government "
+                           "Licence - Canada.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}
