@@ -3,21 +3,6 @@
  "programs": [
   {
    "kind": "ground_delay",
-   "airport": "BOS",
-   "airport_name": "General Edward Lawrence Logan International",
-   "start": "2026-11-13T18:00:00Z",
-   "end": "2026-11-14T02:59:00Z",
-   "updated": "2026-11-13T16:31:37Z",
-   "reason": "airport volume",
-   "center": "ZBW",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=79&adv_date=11132026&facId=BOS&title=ATCSCC ADVZY 079 BOS/ZBW 11/13/2026 CDM GROUND DELAY PROGRAM&titleDate=11/13/2026",
-   "included_facilities": 26,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 26.0,
-   "max_delay_min": 103.0
-  },
-  {
-   "kind": "ground_delay",
    "airport": "LGA",
    "airport_name": "La Guardia",
    "start": "2026-11-13T16:44:00Z",
