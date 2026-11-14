@@ -1,39 +1,39 @@
 {
  "state-travel-advisories": {
-  "last_ok": "2026-11-14T11:11:05Z",
+  "last_ok": "2026-11-14T11:41:04Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-14T11:11:05Z",
+  "checked_at": "2026-11-14T11:41:04Z",
   "detail": "217 advisories"
  },
  "us-embassy-alerts": {
-  "last_ok": "2026-11-14T11:11:05Z",
+  "last_ok": "2026-11-14T11:41:04Z",
   "last_error": "2026-11-04T20:52:20Z",
   "failures": 0,
-  "checked_at": "2026-11-14T11:11:05Z",
+  "checked_at": "2026-11-14T11:41:04Z",
   "detail": "24 of 56 posts answered (24 only through Google News search); e.g. HTTP 403; Google News: no alert in the last 30 days"
  },
  "easa-czib": {
-  "last_ok": "2026-11-14T11:11:05Z",
+  "last_ok": "2026-11-14T11:41:04Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-14T11:11:05Z",
+  "checked_at": "2026-11-14T11:41:04Z",
   "detail": "16 active"
  },
  "nga-navwarnings": {
-  "last_ok": "2026-11-14T11:11:05Z",
+  "last_ok": "2026-11-14T11:41:04Z",
   "last_error": "2026-11-13T04:39:32Z",
   "failures": 0,
-  "checked_at": "2026-11-14T11:11:05Z",
+  "checked_at": "2026-11-14T11:41:04Z",
   "detail": "397 warnings in force",
   "newest_item": "2026-11-13T15:34:00Z",
   "held_areas": {}
  },
  "faa-nas-status": {
-  "last_ok": "2026-11-14T11:11:05Z",
+  "last_ok": "2026-11-14T11:41:04Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-14T11:11:05Z",
+  "checked_at": "2026-11-14T11:41:04Z",
   "detail": "0 ground stops, 0 ground delay programs, 1 closures"
  }
 }
