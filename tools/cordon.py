@@ -112,7 +112,8 @@ def build() -> dict:
                                                encoding="utf-8", newline="\n")
     (OUT / "data" / "map.json").write_text(json.dumps(map_data(d, fc), ensure_ascii=False, separators=(",", ":")) + "\n",
                                            encoding="utf-8", newline="\n")
-    ev = events.build(d["czibs.json"].get("bulletins") or [], read_jsonl("changes.jsonl"))
+    ev = events.build(d["czibs.json"].get("bulletins") or [], read_jsonl("changes.jsonl"),
+                      canada=d["canada.json"].get("countries") or {})
     (OUT / "data" / "events.json").write_text(json.dumps(ev, indent=1, ensure_ascii=False) + "\n",
                                               encoding="utf-8", newline="\n")
     return fc
