@@ -45,7 +45,7 @@
   // page itself stays as wide as the screen and the house bar's buttons stay on it.
   function table(head, rows) {
     return h("div", { "class": "tbl", tabindex: "0" }, [h("table", null, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
-      h("tbody", null, rows.map(function (r) { return h("tr", null, r.map(function (c) {
+      h("tbody", null, rows.map(function (r) { return h("tr", r.cls ? { "class": r.cls } : null, r.map(function (c) {
         return c && c.td ? h("td", { "class": c.cls }, [c.td]) : h("td", null, [c]); })); }))])]);
   }
 
@@ -58,6 +58,37 @@
   var layers = {};
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
+
+  // "My area" (tic-area.js, Tom 15 Nov 2026): place-bound notices outside the viewer's area are dimmed, not hidden.
+  // Travel advice is about destinations, so it is never dimmed.
+  var A = window.TicArea;
+  function inArea(item) { return !A || A.contains(item); }
+  function keepBase(lyr) {
+    lyr._base = { opacity: lyr.options.opacity == null ? 1 : lyr.options.opacity, fillOpacity: lyr.options.fillOpacity };
+  }
+  function dim(d) {
+    var n = { tfr: [0, 0], faa: [0, 0], nav: [0, 0] };
+    [["tfr", "tfr"], ["navwarn", "nav"], ["faa", "faa"]].forEach(function (pair) {
+      var group = layers[pair[0]];
+      if (!group) return;
+      group.eachLayer(function (lyr) {
+        var item = lyr._item || (lyr.feature && { subdivisions: lyr.feature.properties.subdivisions, geometry: lyr.feature.geometry });
+        var ok = inArea(item);
+        if (lyr._base) lyr.setStyle(ok ? lyr._base : { opacity: 0.18, fillOpacity: 0.03 });
+        if (ok) { n[pair[1]][0] += 1; if ((lyr._item || lyr.feature.properties).tier === "anomaly") n[pair[1]][1] += 1; }
+      });
+    });
+    var note = document.getElementById("area-note");
+    if (!A || A.get().kind === "all") {
+      note.textContent = "Area: everywhere. Choose one with the Area button at the top to dim flight restrictions, airport " +
+        "programs and maritime warnings elsewhere.";
+      return;
+    }
+    function part(c, one, many) { return c[0] + " " + (c[0] === 1 ? one : many) + (c[1] ? " (" + c[1] + " flagged)" : ""); }
+    note.textContent = "Your area: " + A.label() + ". In it: " + part(n.tfr, "flight restriction", "flight restrictions") +
+      ", " + part(n.faa, "FAA airport program", "FAA airport programs") + ", " +
+      part(n.nav, "maritime warning", "maritime warnings") + ". The rest are dimmed.";
+  }
 
   function draw(world, d) {
     var byIso = {};
@@ -119,6 +150,7 @@
       style: function (f) { var key = KEY_NAV[f.properties.category];
         return { color: key ? css("--nav-key") : css("--nav"), weight: 1.5, fillOpacity: 0.12 }; },
       onEachFeature: function (f, lyr) {
+        keepBase(lyr);
         var w = f.properties;
         lyr.bindTooltip(tip(w.number + " (" + (NAV[w.category] || w.category) + ")\n" + [w.sea, w.place].filter(Boolean).join(", ")
           + "\n" + w.headline + (w.also ? "\nAlso broadcast as " + w.also.join(", ") : "")), { sticky: true });
@@ -132,8 +164,11 @@
       L.circleMarker([p.coordinates[1], p.coordinates[0]], { radius: key ? 7 : (p.program === "closure" ? 4 : 5.5),
         weight: key ? 2 : 1.5, color: key ? css("--faa-key") : css("--faa"), fillColor: key ? css("--faa-key") : css("--faa"),
         fillOpacity: p.program === "closure" ? 0.2 : 0.75 })
+        .on("add", function (ev) { keepBase(ev.target); })
         .bindTooltip(tip(p.title + (p.until ? "\nUntil " + when(p.until) : "") + (key ? "\nUnusual: more ground stops at once than normal" : "")))
         .addTo(layers.faa);
+      layers.faa.getLayers()[layers.faa.getLayers().length - 1]._item = { subdivisions: p.subdivisions, tier: p.tier,
+        geometry: { type: "Point", coordinates: p.coordinates } };
     });
     layers.faa.addTo(map);
 
@@ -142,10 +177,13 @@
       style: function (f) { var key = f.properties.tier === "anomaly";
         return { color: key ? css("--tfr-key") : css("--tfr"), weight: key ? 2 : 1.4, fillOpacity: key ? 0.18 : 0.1 }; },
       onEachFeature: function (f, lyr) {
+        keepBase(lyr);
         var t = f.properties;
         lyr.bindTooltip(tip(t.title + "\n" + [t.floor, t.ceiling].filter(Boolean).join(" to ")
           + (t.effective ? "\nFrom " + when(t.effective) : "") + (t.until ? "\nUntil " + when(t.until) : "")
-          + (t.tier === "anomaly" ? "\nNew in the last 72 hours" : "")), { sticky: true });
+          + (t.impact ? "\nImpact " + t.impact + (t.impact_basis && t.impact_basis.length ? ": " + t.impact_basis.join("; ") : "") : "")
+          + (t.reissue_of ? "\nRe-issue of " + t.reissue_of : "")
+          + (t.tier === "anomaly" ? "\nNew in the last 72 hours, and of some impact" : "")), { sticky: true });
       }
     }).addTo(map);
 
@@ -170,7 +208,7 @@
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa") }), "FAA airport program"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr") }), "FAA flight restriction"]),
-      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new security or special restriction"]));
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new restriction of some impact"]));
   }
 
   function lists(d) {
@@ -218,8 +256,10 @@
       fp.map(function (p) {
         var what = p.program === "closure" ? (p.notam || "—")
           : "Reason: " + (p.reason || "none given") + (p.avg_delay_min != null ? "; average delay " + Math.round(p.avg_delay_min) + " min" : "");
-        return [FAA_WORD[p.program] + (p.tier === "anomaly" ? " (unusual)" : ""),
-          p.airport + (p.airport_name ? " " + p.airport_name : ""), what, { td: when(p.until), cls: "num" }]; }))
+        var row = [FAA_WORD[p.program] + (p.tier === "anomaly" ? " (unusual)" : ""),
+          p.airport + (p.airport_name ? " " + p.airport_name : ""), what, { td: when(p.until), cls: "num" }];
+        if (p.coordinates && !inArea({ subdivisions: p.subdivisions, geometry: { type: "Point", coordinates: p.coordinates } })) row.cls = "outside";
+        return row; }))
       : h("p", { "class": "empty" }, [(d.health["faa-nas-status"] || {}).state === "fresh"
           ? "The FAA lists no ground stop, ground delay program or airport closure."
           : "No current FAA data: see Sources below."]));
@@ -288,11 +328,14 @@
 
     var tf = (d.tfr || []).slice().sort(function (x, y) {
       return (y.tier === "anomaly") - (x.tier === "anomaly") || (x.effective || "").localeCompare(y.effective || ""); });
-    document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "From", "Until"],
+    document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "Impact", "From", "Until"],
       tf.map(function (t) {
         var where = t.title.replace(/^FAA TFR [^:]+: /, "");
-        return [link(t.link, t.notam_id), String(t.type || "").toLowerCase() + (t.tier === "anomaly" ? " (new)" : ""), where,
-          { td: when(t.effective), cls: "num" }, { td: when(t.until), cls: "num" }]; }))
+        var row = [link(t.link, t.notam_id), String(t.type || "").toLowerCase() + (t.tier === "anomaly" ? " (new)" : "")
+          + (t.reissue_of ? " (re-issue)" : ""), where, t.impact || "—",
+          { td: when(t.effective), cls: "num" }, { td: when(t.until), cls: "num" }];
+        if (!inArea(t)) row.cls = "outside";
+        return row; }))
       : h("p", { "class": "empty" }, [(d.health["faa-tfr"] || {}).state === "fresh"
           ? "The FAA lists no flight restriction with an area." : "No current FAA TFR data: see Sources below."]));
 
@@ -321,12 +364,15 @@
   }
 
   T.mountSettings(document.getElementById("time-settings"));
-  Promise.all(["geo/world.json", "data/map.json"].map(function (u) {
+  Promise.all(["geo/world.json", "data/map.json", "geo/states.json"].map(function (u) {
     return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u + " " + r.status); return r.json(); });
   })).then(function (x) {
+    if (A) A.mountSettings(document.getElementById("area-settings"), x[2].states);
     draw(x[0], x[1]);
     lists(x[1]);
+    dim(x[1]);
     T.onChange(function () { lists(x[1]); });
+    if (A) A.onChange(function () { lists(x[1]); dim(x[1]); });
   }).catch(function (e) {
     document.getElementById("map").replaceChildren(h("p", { "class": "empty", style: "padding:16px" }, ["The data could not be loaded (" + e.message + ")."]));
   });

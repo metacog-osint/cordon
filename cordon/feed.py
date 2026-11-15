@@ -4,11 +4,12 @@ Every item is a measurement (kind observation): what an authority has published,
 response_stage. A change in the last 30 days (a level raised or lowered, a departure order) is an anomaly against the
 previous value. Each item is checked with the doctrine kit's linter; a failing item is dropped and listed.
 """
+import re
 from datetime import datetime, timedelta, timezone
 
-from . import canada, cdc, faa, faaprn, fcdo, navarea, safetravel, tfr
+from . import airports, canada, cdc, faa, faaprn, fcdo, navarea, safetravel, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
-from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
+from tic_doctrine import CONTRACT, contract, geo, registers, vocab  # noqa: E402
 
 SITE = "https://cordon.theintelligence.company/"
 METHOD = "cordon-feed-1.0"
@@ -125,6 +126,20 @@ def _pt(key: str, iso: str):
     return {"type": "Point", "coordinates": [q[1], q[0]]} if q else None
 
 
+POSTAL = re.compile(r"^[A-Z]{2}$")
+
+
+def us_subdivisions(countries: list, geom: dict | None, postal: str | None = None) -> list[str]:
+    """ISO 3166-2 codes of the US states an item is in (kit 0.5.7 `subdivisions`): the source's own two-letter state
+    when it gives one (the FAA's TFR list), else the states its shape's vertices fall in. Only for US items with a
+    shape; a country-level item (at the country's label point, in Kansas) gets none."""
+    if "US" not in (countries or []):
+        return []
+    if postal and POSTAL.match(postal) and postal not in tfr.TERRITORIES and postal != "US":
+        return [f"US-{postal}"]
+    return geo.subdivisions_for_geometry(geom) if geom else []
+
+
 def _place(feature: dict, link: str) -> dict:
     """With no point, the item still needs a visual: the source's own page."""
     if feature["geometry"] is None:
@@ -191,6 +206,17 @@ def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> 
         if not where and not wide:
             props["visual"] = {"type": "page", "url": faa.PAGE_URL}
         geom = {"type": "Point", "coordinates": where[:2]} if where else None
+        if where:
+            # Impact (Tom, 15 Nov 2026): whether the airport is one of the FAA's Core 30, whose programs ripple across
+            # the system, or how far it is from the nearest. Measured only; the tier rule above is unchanged.
+            near = airports.nearest_core30([(where[1], where[0])])
+            code = apt.upper()[1:] if len(apt) == 4 and apt.upper().startswith("K") else apt.upper()
+            props["measures"]["core30"] = code in airports.CORE30
+            if near:
+                props["measures"]["nearest_core30"] = {"airport": near[0], "km": near[1]}
+            subs = us_subdivisions(props["countries"], geom)
+            if subs:
+                props["subdivisions"] = subs
         if geom is None and wide:
             geom = point("US")
             props["precision_class"] = "country"
@@ -373,7 +399,12 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
             title += f" ({d['name']})"
         issued = d.get("issued")
         is_new = bool(issued and issued >= new_from)
-        alert = is_new and r["type"] in tfr.NEW_ALERT and not d.get("statutory")
+        imp = tfr.impact(r) if g else {}
+        again = tfr.reissue(nid, r, data.get("tfrs") or {}, data.get("gone") or {}) if is_new and g else None
+        fresh = is_new and not (again and not again["enlarged"])
+        # New, not a plain re-issue, not statutory, and of some impact (a high one for VIP TFRs); see tfr.impact.
+        alert = (fresh and not d.get("statutory") and imp.get("impact") in ("moderate", "high")
+                 and (r["type"] in tfr.NEW_ALERT or (r["type"] in tfr.IMPACT_ALERT and imp.get("impact") == "high")))
         page = tfr.PAGE_URL.format(id=tfr.file_id(nid))
         props = {**_base(fetched), "id": f"cordon:tfr:{nid.replace('/', '-')}", "title": title,
                  "tier": "anomaly" if alert else "routine", "data_as_of": issued or fetched,
@@ -385,12 +416,19 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
                  "measures": {"notam_id": nid, "type": r["type"], "new": is_new,
                               **{k: r[k] for k in ("facility", "state", "description", "created") if r.get(k)},
                               **{k: d[k] for k in ("effective", "issued", "regulation", "purpose", "floor", "ceiling",
-                                                   "statutory", "text") if d.get(k)}}}
+                                                   "statutory", "text") if d.get(k)}, **imp}}
+        if again:
+            props["measures"]["reissue_of"] = again["of"]
+            props["measures"]["enlarged"] = again["enlarged"]
+        subs = us_subdivisions(props["countries"], g, r.get("state"))
+        if subs:
+            props["subdivisions"] = subs
         if d.get("expires"):
             props["valid_until"] = d["expires"]
         if alert:
-            props["baseline_ref"] = {"id": "faa-tfrs-in-force", "type": "rolling", "version": "1",
-                                     "window": f"the TFRs the FAA listed {tfr.NEW_HOURS} hours earlier"}
+            props["baseline_ref"] = {"id": "faa-tfrs-in-force", "type": "rolling", "version": "2",
+                                     "window": f"the TFRs the FAA listed {tfr.NEW_HOURS} hours earlier, and those Cordon "
+                                               f"held in the {tfr.GONE_DAYS} days before (re-issues)"}
         if not g:
             props["visual"] = {"type": "page", "url": page}  # detail not read yet: the FAA's page stands in
         out.append({"type": "Feature", "geometry": g, "properties": props})

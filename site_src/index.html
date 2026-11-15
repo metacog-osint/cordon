@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-time.css">
 <script src="tic-time.js"></script>
+<script src="tic-area.js"></script>
 <link rel="stylesheet" href="tic-nav.css">
 <script src="tic-nav.js" defer></script>
 <script src="vendor/leaflet/leaflet.js"></script>
@@ -21,6 +22,7 @@
       <a href="https://theintelligence.company/">All programs</a>
       <a href="data/feed.geojson">Feed</a>
       <a href="https://github.com/metacog-osint/cordon">Code and data</a>
+      <span id="area-settings"></span>
       <span id="time-settings"></span>
     </nav>
   </div>
@@ -48,6 +50,7 @@
       <div class="legend" id="legend"></div>
     </div>
     <div id="map" role="region" aria-label="Map of advisories, bulletins and warnings"></div>
+    <p id="area-note" class="muted small" aria-live="polite"></p>
   </section>
 
   <div class="two">
@@ -86,8 +89,10 @@
   <section class="card" aria-labelledby="tfr-h">
     <h2 id="tfr-h">US temporary flight restrictions</h2>
     <p class="muted small">FAA TFRs with an area: security, VIP movements, fires and other hazards, drones over crowds,
-      air shows. Outlines and times as the FAA publishes them (times are UTC in its data). A security or special TFR
-      issued in the last 72 hours is marked new. Standing nationwide notices with no area are not listed. Space
+      air shows. Outlines and times as the FAA publishes them (times are UTC in its data). Impact is Cordon's measure
+      of what a TFR restricts: high near one of the FAA's 30 busiest airports, over 2,500 km&sup2; or reaching FL180
+      over a wide area; low when small, low and away from them. A security or special TFR (or a VIP TFR of high impact)
+      issued in the last 72 hours is marked new unless its impact is low or it re-issues one held before. Standing nationwide notices with no area are not listed. Space
       operations TFRs (launches and recoveries) are on
       <a href="https://launch.theintelligence.company/">Launch</a>.</p>
     <div id="tfrs"></div>
