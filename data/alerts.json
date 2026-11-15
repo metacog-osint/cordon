@@ -557,10 +557,10 @@
   "GT": [
    {
     "iso": "GT",
-    "title": "Message for U.S. Citizens:",
-    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FNnJTWEI0S21CS0JTWllXdHNYbldrdS1JRkxJdmpPMncyWHlQTlFRWGc4MFpLZEMxSkIyU3M0bFFuOC00d2NLMEhVN3U3aTMyXzBIem54YUNBcm9ORVZpQXR3?oc=5",
-    "published_at": "2026-11-12T22:52:04Z",
-    "type": "alert",
+    "title": "Security Alert: U.S. Embassy Guatemala City, Guatemala – November 15, 2026",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPeGF4a1owbUpMM2tON0FNNUpBX2taWFE1UFVuanZsM1dPa0RHUS1CUjdaTXNWVDZoazFUdlNkeDJMcVdFODNGSEJQMHhyUjRib0s5N2JaU2tQcTZkVkRJZHVTdGdFdjVJTHJIRkpXcjVuX0FzR1pXMDJyRmpEbkZrQms5dmV0aDJZN2F1bXlGdVNNbHNYZnNfV0Rn?oc=5",
+    "published_at": "2026-11-15T20:51:22Z",
+    "type": "security",
     "via": "google-news",
     "post_url": "https://gt.usembassy.gov/category/alert/"
    }
