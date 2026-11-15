@@ -5689,182 +5689,6 @@
     }
    }
   },
-  "6/7206": {
-   "notam_id": "6/7206",
-   "type": "HAZARDS",
-   "facility": "ZBW",
-   "state": "NH",
-   "description": "10NM SE BERLIN, NH, Thursday, November 12, 2026 through Sunday, November 15, 2026 UTC",
-   "created": "11/12/2026",
-   "detail": {
-    "name": "6/7206",
-    "issued": "2026-11-12T14:00:44Z",
-    "effective": "2026-11-12T14:30:00Z",
-    "expires": "2026-11-15T23:00:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
-    "city": "10NM SE BERLIN",
-    "floor": "surface",
-    "ceiling": "5000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7206 ZBW NH..AIRSPACE 10NM SE BERLIN, NH..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 5NM RADIUS OF 442000N0710200W (CON034070.9) SFC-5000FT NORTHEASTERN COORDINATION CENTER TEL 603-536-6208 OR FREQ 122.925 WILD RIVER FIRE IS IN CHARGE OF THE OPERATION. BOSTON/ZBW/ARTCC TEL 603-879-6655 IS THE FAA CDN FAC. 2611121430-2611152300",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -71.03333,
-        44.41667
-       ],
-       [
-        -71.01314,
-        44.4154
-       ],
-       [
-        -70.99357,
-        44.41163
-       ],
-       [
-        -70.97521,
-        44.40549
-       ],
-       [
-        -70.95862,
-        44.39715
-       ],
-       [
-        -70.94431,
-        44.38686
-       ],
-       [
-        -70.93271,
-        44.37496
-       ],
-       [
-        -70.92418,
-        44.36178
-       ],
-       [
-        -70.91896,
-        44.34775
-       ],
-       [
-        -70.91723,
-        44.33327
-       ],
-       [
-        -70.91902,
-        44.31881
-       ],
-       [
-        -70.92428,
-        44.30478
-       ],
-       [
-        -70.93286,
-        44.29162
-       ],
-       [
-        -70.94447,
-        44.27973
-       ],
-       [
-        -70.95878,
-        44.26947
-       ],
-       [
-        -70.97535,
-        44.26115
-       ],
-       [
-        -70.99368,
-        44.25502
-       ],
-       [
-        -71.0132,
-        44.25126
-       ],
-       [
-        -71.03333,
-        44.25
-       ],
-       [
-        -71.05347,
-        44.25126
-       ],
-       [
-        -71.07299,
-        44.25502
-       ],
-       [
-        -71.09131,
-        44.26115
-       ],
-       [
-        -71.10788,
-        44.26947
-       ],
-       [
-        -71.12219,
-        44.27973
-       ],
-       [
-        -71.13381,
-        44.29162
-       ],
-       [
-        -71.14238,
-        44.30478
-       ],
-       [
-        -71.14765,
-        44.31881
-       ],
-       [
-        -71.14944,
-        44.33327
-       ],
-       [
-        -71.1477,
-        44.34775
-       ],
-       [
-        -71.14249,
-        44.36178
-       ],
-       [
-        -71.13395,
-        44.37496
-       ],
-       [
-        -71.12236,
-        44.38686
-       ],
-       [
-        -71.10804,
-        44.39715
-       ],
-       [
-        -71.09146,
-        44.40549
-       ],
-       [
-        -71.0731,
-        44.41163
-       ],
-       [
-        -71.05352,
-        44.4154
-       ],
-       [
-        -71.03333,
-        44.41667
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7271": {
    "notam_id": "6/7271",
    "type": "HAZARDS",
@@ -6983,32 +6807,32 @@
     }
    }
   },
-  "6/7601": {
-   "notam_id": "6/7601",
+  "6/7631": {
+   "notam_id": "6/7631",
    "type": "HAZARDS",
    "facility": "ZHU",
    "state": "MS",
-   "description": "1NM W MCLAIN, MS, Sunday, November 15, 2026 through Monday, November 16, 2026 UTC",
+   "description": "1NM W MCLAIN, MS, Monday, November 16, 2026 through Tuesday, November 17, 2026 UTC",
    "created": "11/15/2026",
    "detail": {
-    "name": "6/7601",
-    "issued": "2026-11-15T17:58:40Z",
-    "effective": "2026-11-15T17:49:00Z",
-    "expires": "2026-11-16T02:00:00Z",
+    "name": "6/7631",
+    "issued": "2026-11-15T22:49:48Z",
+    "effective": "2026-11-16T14:00:00Z",
+    "expires": "2026-11-17T02:00:00Z",
     "regulation": "91.137(a)(2)",
     "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
     "city": "1NM W MCLAIN",
     "floor": "surface",
     "ceiling": "2000 ft MSL",
     "statutory": false,
-    "text": "!FDC 6/7601 ZHU MS..AIRSPACE 1NM W MCLAIN, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 310700N0885700W (LBY127026.9) TO 311000N0885300W (SJI310037.8) TO 310300N0884700W (SJI307029.3) TO 310000N0885100W (SJI298030.2) TO POINT OF ORIGIN SFC-2000FT MISSISSIPPI INTERAGENCY DISPATH CENTER TEL 601-420-6005 OR FREQ 122.925 MERIT CREEK IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611151749-2611160200EST",
+    "text": "!FDC 6/7631 ZHU MS..AIRSPACE 1NM W MCLAIN, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 310730N0885700W (LBY126026.6) TO 311000N0885300W (SJI310037.8) TO 310300N0884700W (SJI307029.3) TO 310030N0885000W (SJI300029.7) TO POINT OF ORIGIN SFC-2000FT MISSISSIPPI INTERAGENCY DISPATH CENTER TEL 601-420-6005 OR FREQ 122.9250 MERIT CREEK IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. DLY 1400-0200 2611161400-2611170200",
     "geometry": {
      "type": "Polygon",
      "coordinates": [
       [
        [
         -88.95,
-        31.11667
+        31.125
        ],
        [
         -88.88333,
@@ -7019,12 +6843,12 @@
         31.05
        ],
        [
-        -88.85,
-        31.0
+        -88.83333,
+        31.00833
        ],
        [
         -88.95,
-        31.11667
+        31.125
        ]
       ]
      ]
