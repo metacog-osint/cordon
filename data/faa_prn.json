@@ -1,0 +1,570 @@
+{
+ "source": "https://www.faa.gov/air_traffic/publications/us_restrictions",
+ "sections": {
+  "afghanistan": {
+   "key": "afghanistan",
+   "name": "Afghanistan",
+   "iso": "AF",
+   "anchor": "Afghanistan",
+   "entries": {
+    "KICZ-A0007-25": {
+     "key": "KICZ-A0007-25",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0007/25",
+     "text": "KICZ NOTAM A0007/25 Kabul Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/Afghanistan/doc/KICZ-NOTAM-A0007-25-Kabul-Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-119": {
+     "key": "SFAR-119",
+     "kind": "prohibition",
+     "label": "SFAR 119",
+     "text": "Special Federal Aviation Regulation (SFAR) 119 - Prohibitions Against Certain Flights in the Kabul Flight Information Region (FIR) (OAKX)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/Afghanistan/doc/KICZ-NOTAM-AFGHANISTAN-FLIGHT-PROHIBITION.pdf",
+     "firs": [
+      "OAKX"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "bahamas": {
+   "key": "bahamas",
+   "name": "Bahamas",
+   "iso": "BS",
+   "anchor": "Bahamas",
+   "entries": {},
+   "background": [],
+   "other": 1
+  },
+  "belarus": {
+   "key": "belarus",
+   "name": "Belarus",
+   "iso": "BY",
+   "anchor": "Belarus",
+   "entries": {
+    "KICZ-A0003-22": {
+     "key": "KICZ-A0003-22",
+     "kind": "prohibition",
+     "label": "KICZ NOTAM A0003/22",
+     "text": "KICZ NOTAM A0003/22 — Security — United States of America Prohibition Against Certain Flights in the Minsk Flight Information Region (FIR) (UMMV) (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_A0003-22_Prohibitory_NOTAM-Belarus_MINSK_FIR_(UMMV)_(2022024_1930Z).pdf",
+     "firs": [
+      "UMMV"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "canada": {
+   "key": "canada",
+   "name": "Canada",
+   "iso": "CA",
+   "anchor": "Canada",
+   "entries": {},
+   "background": [],
+   "other": 1
+  },
+  "central-america": {
+   "key": "central-america",
+   "name": "Central America",
+   "iso": null,
+   "anchor": "central-america",
+   "entries": {
+    "KICZ-A0054-26": {
+     "key": "KICZ-A0054-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0054/26",
+     "text": "KICZ NOTAM A0054/26 - United States of America Advisory for Potentially Hazardous Situation in the Overwater Areas Above the Pacific Ocean in the Central America Flight Information Region (MHCC)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/pacific_ocean/KICZ_ADVISORY_NOTAM_A0054_26_MHCC.pdf",
+     "firs": [
+      "MHCC"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "colombia": {
+   "key": "colombia",
+   "name": "Colombia",
+   "iso": "CO",
+   "anchor": "colombia",
+   "entries": {
+    "KICZ-A0050-26": {
+     "key": "KICZ-A0050-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0050/26",
+     "text": "KICZ NOTAM A0050/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Overwater Areas Above the Pacific Ocean in the Bogota Flight Information Region (SKED)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/colombia/KICZ_ADVISORY_NOTAM_A0050_26_SKED.pdf",
+     "firs": [
+      "SKED"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "cuba": {
+   "key": "cuba",
+   "name": "Cuba",
+   "iso": "CU",
+   "anchor": "cuba",
+   "entries": {},
+   "background": [],
+   "other": 2
+  },
+  "ecuador": {
+   "key": "ecuador",
+   "name": "Ecuador",
+   "iso": "EC",
+   "anchor": "ecuador",
+   "entries": {
+    "KICZ-A0051-26": {
+     "key": "KICZ-A0051-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0051/26",
+     "text": "KICZ NOTAM A0051/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Overwater Areas of the Guayaquil Flight Information Region (SEFG)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/ecuador/KICZ_ADVISORY_NOTAM_A0051_26_SEFG.pdf",
+     "firs": [
+      "SEFG"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "haiti": {
+   "key": "haiti",
+   "name": "Haiti",
+   "iso": "HT",
+   "anchor": "Haiti",
+   "entries": {
+    "KICZ-A0046-26": {
+     "key": "KICZ-A0046-26",
+     "kind": "prohibition",
+     "label": "KICZ NOTAM A0046/26",
+     "text": "KICZ NOTAM A0046/26 - Security - United States of America Prohibition Against Certain Flights in the Territory and Airspace of Haiti",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/KICZ_NOTAM_A0046-26_Haiti_Prohibition.pdf",
+     "firs": []
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding U.S. Civil Aviation Haiti",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/Haiti_Background_Notice.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "iran": {
+   "key": "iran",
+   "name": "Iran",
+   "iso": "IR",
+   "anchor": "Iran",
+   "entries": {
+    "KICZ-A0011-24": {
+     "key": "KICZ-A0011-24",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0011/24",
+     "text": "KICZ NOTAM A0011/24-Security - Tehran Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/Tehran_Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-117": {
+     "key": "SFAR-117",
+     "kind": "prohibition",
+     "label": "SFAR 117",
+     "text": "Special Federal Aviation Regulation (SFAR) 117 — Prohibition Against Certain Flights in the Tehran Flight Information Region (FIR) (OIIX)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/Special-Federal-Aviation-Regulation-SFAR-117.pdf",
+     "firs": [
+      "OIIX"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "iraq": {
+   "key": "iraq",
+   "name": "Iraq",
+   "iso": "IQ",
+   "anchor": "Iraq",
+   "entries": {
+    "KICZ-A0013-24": {
+     "key": "KICZ-A0013-24",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0013/24",
+     "text": "KICZ NOTAM A0013/24 — Security — Baghdad Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/Baghdad_Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-77": {
+     "key": "SFAR-77",
+     "kind": "prohibition",
+     "label": "SFAR 77",
+     "text": "Special Federal Aviation Regulation (SFAR)77 - Prohibition Against Certain Flights in the Baghdad Flight Information Region (FIR) (ORBB)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/SFAR_77.pdf",
+     "firs": [
+      "ORBB"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "korea-north": {
+   "key": "korea-north",
+   "name": "Korea, North",
+   "iso": "KP",
+   "anchor": "NKorea",
+   "entries": {
+    "KICZ-A0003-24": {
+     "key": "KICZ-A0003-24",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0003/24",
+     "text": "KICZ NOTAM A0003/24 — Security — Pyongyang Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/Pyongyang_Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-79": {
+     "key": "SFAR-79",
+     "kind": "prohibition",
+     "label": "SFAR 79",
+     "text": "Special Federal Aviation Regulation (SFAR) 79 – Prohibition Against Certain Flights in the Pyongyang Flight Information Region (FIR) (ZKKP)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/Special_Federal_Aviation_Regulation_SFAR_79_Pyongyang_Prohibition.pdf",
+     "firs": [
+      "ZKKP"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "libya": {
+   "key": "libya",
+   "name": "Libya",
+   "iso": "LY",
+   "anchor": "Libya",
+   "entries": {
+    "KICZ-A0005-25": {
+     "key": "KICZ-A0005-25",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0005/25",
+     "text": "KICZ NOTAM A0005/25 — Security — Libya Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/KICZ_NOTAM_A0005-25-Libya Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-112": {
+     "key": "SFAR-112",
+     "kind": "prohibition",
+     "label": "SFAR 112",
+     "text": "Special Federal Aviation Regulation (SFAR) 112 — PROHIBITION AGAINST CERTAIN FLIGHTS IN THE TERRITORY AND AIRSPACE OF LIBYA",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/LIBYA_SFAR_112_FINAL_RULE.pdf",
+     "firs": []
+    }
+   },
+   "background": [],
+   "other": 1
+  },
+  "mali": {
+   "key": "mali",
+   "name": "Mali",
+   "iso": "ML",
+   "anchor": "Mali",
+   "entries": {
+    "KICZ-A0023-26": {
+     "key": "KICZ-A0023-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0023/26",
+     "text": "KICZ NOTAM A0023/26 - Security - United States of America Advisory for Mali",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_NOTAM_A0023-26_Mali_Advisory.pdf",
+     "firs": []
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Notice Regarding U.S. Civil Aviation in the Territory and Airspace of Mali",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/Mali_Background_Notice_0.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "mexico": {
+   "key": "mexico",
+   "name": "Mexico",
+   "iso": "MX",
+   "anchor": "Mexico",
+   "entries": {
+    "KICZ-A0047-26": {
+     "key": "KICZ-A0047-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0047/26",
+     "text": "KICZ NOTAM A0047/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Mazatlan Flight Information Region (MMFO)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/mexico/KICZ_ADVISORY_NOTAM_A0047_26_MMFO.pdf",
+     "firs": [
+      "MMFO"
+     ]
+    },
+    "KICZ-A0053-26": {
+     "key": "KICZ-A0053-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0053/26",
+     "text": "KICZ NOTAM A0053/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Overwater Areas Above the Pacific Ocean and the Gulf of California in the Mexico Flight Information Region (MMFR)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/mexico/KICZ_ADVISORY_NOTAM_A0053_26_MMFR.pdf",
+     "firs": [
+      "MMFR"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 1
+  },
+  "pacific-ocean": {
+   "key": "pacific-ocean",
+   "name": "Pacific Ocean",
+   "iso": null,
+   "anchor": "pacific-ocean",
+   "entries": {
+    "KICZ-A0052-26": {
+     "key": "KICZ-A0052-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0052/26",
+     "text": "KICZ NOTAM A0052/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Specified Portion of the No FIR Flight Information Region (XX01)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/pacific_ocean/KICZ_ADVISORY_NOTAM_A0052_26_XX01.pdf",
+     "firs": []
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "panama": {
+   "key": "panama",
+   "name": "Panama",
+   "iso": "PA",
+   "anchor": "panama",
+   "entries": {
+    "KICZ-A0048-26": {
+     "key": "KICZ-A0048-26",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0048/26",
+     "text": "KICZ NOTAM A0048/26 Security - United States of America Advisory for Potentially Hazardous Situation in the Overwater Areas Above the Pacific Ocean in the Panama Flight Information Region (MPZL)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/panama/KICZ_ADVISORY_NOTAM_A0048_26_MPZL.pdf",
+     "firs": [
+      "MPZL"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding Airspace Risks Within the Eastern Pacific Ocean Region",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/FAA-Background-Information-Regarding-Airspace-Risks_20260304.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "persian-gulf-and-gulf-of-oman": {
+   "key": "persian-gulf-and-gulf-of-oman",
+   "name": "Persian Gulf and Gulf of Oman",
+   "iso": null,
+   "anchor": "PersianGulf",
+   "entries": {
+    "KICZ-A0016-20": {
+     "key": "KICZ-A0016-20",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0016/20",
+     "text": "KICZ NOTAM A0016/20 — Security — United States of America Advisory for Overwater Airspace Above the Persian Gulf and the Gulf of Oman (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_A0016-20_Advisory_NOTAM-Persian_Gulf_and_Gulf_of_Oman.pdf",
+     "firs": []
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding U.S. Civil Aviation-Overwater Airspace Above the Persian Gulf and Gulf of Oman (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/FAA_Background_Information-Persian_Gulf_and_Gulf_of_Oman_Advisory_20200218.pdf"
+    }
+   ],
+   "other": 0
+  },
+  "russian-federation": {
+   "key": "russian-federation",
+   "name": "Russian Federation",
+   "iso": "RU",
+   "anchor": "RussianFederation",
+   "entries": {
+    "KICZ-A0005-22": {
+     "key": "KICZ-A0005-22",
+     "kind": "prohibition",
+     "label": "KICZ NOTAM A0005/22",
+     "text": "KICZ NOTAM A0005/22 — Security — United States of America Prohibition Against Certain Flights in the specified areas of the Moscow (UUWV), Samara (UWWW) and Rostov-Na Donu (URRV) Flight Information Regions (FIR) (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_A0005-22_Prohibitory_NOTAM-Russia_MOSCOW_SAMARA_and_ROSTOV_FIRs_(20220224_1930Z).pdf",
+     "firs": [
+      "URRV",
+      "UUWV",
+      "UWWW"
+     ]
+    }
+   },
+   "background": [],
+   "other": 1
+  },
+  "somalia": {
+   "key": "somalia",
+   "name": "Somalia",
+   "iso": "SO",
+   "anchor": "Somalia",
+   "entries": {
+    "KICZ-A0020-22": {
+     "key": "KICZ-A0020-22",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0020/22",
+     "text": "KICZ NOTAM A0020/22 – Security – Somalia Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/KICZ_Pointer_NOTAM_A0020-22_Somalia_SFAR_107.pdf",
+     "firs": []
+    },
+    "SFAR-107": {
+     "key": "SFAR-107",
+     "kind": "prohibition",
+     "label": "SFAR 107",
+     "text": "Special Federal Aviation Regulation (SFAR) 107 — Prohibition Against Certain Flights in the Territory and Airspace of Somalia",
+     "url": "https://www.federalregister.gov/documents/2022/12/27/2022-28134/prohibition-against-certain-flights-in-the-territory-and-airspace-of-somalia",
+     "firs": []
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "syria": {
+   "key": "syria",
+   "name": "Syria",
+   "iso": "SY",
+   "anchor": "Syria",
+   "entries": {
+    "KICZ-A0009-18": {
+     "key": "KICZ-A0009-18",
+     "kind": "advisory",
+     "label": "KICZ NOTAM A0009/18",
+     "text": "KICZ NOTAM A0009/18 — Security — United States of America Advisory for Airspace Immediately Adjacent to Damascus Flight Information Region (OSTT FIR) (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_Advisory_NOTAM_A0009-18-Syria.pdf",
+     "firs": [
+      "OSTT"
+     ]
+    },
+    "KICZ-A0012-23": {
+     "key": "KICZ-A0012-23",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0012/23",
+     "text": "KICZ NOTAM A0012/23 — Security — Damascus Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/KICZ_Pointer_NOTAM_A0012-23_Damascus_SFAR_114.pdf",
+     "firs": []
+    },
+    "SFAR-114": {
+     "key": "SFAR-114",
+     "kind": "prohibition",
+     "label": "SFAR 114",
+     "text": "Special Federal Aviation Regulation (SFAR) 114 — Prohibition Against Certain Flights in the Damascus Flight Information Region (FIR) (OSTT)",
+     "url": "https://www.govinfo.gov/content/pkg/FR-2023-12-27/pdf/2023-28502.pdf",
+     "firs": [
+      "OSTT"
+     ]
+    }
+   },
+   "background": [
+    {
+     "text": "FAA Background Information Regarding U.S. Civil Aviation — Airspace Immediately Adjacent to the Damascus Flight Information Region (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/FAA_Background_Notice-Syria.pdf"
+    }
+   ],
+   "other": 1
+  },
+  "ukraine": {
+   "key": "ukraine",
+   "name": "Ukraine",
+   "iso": "UA",
+   "anchor": "Ukraine",
+   "entries": {
+    "KICZ-A0004-22": {
+     "key": "KICZ-A0004-22",
+     "kind": "prohibition",
+     "label": "KICZ NOTAM A0004/22",
+     "text": "KICZ NOTAM A0004/22 — Security — United States of America Prohibition Against Certain Flights in the Lviv (UKLV), Kyiv (UKBV), Dnipro (UKDV), Simferopol (UKFV), and Odesa (UKOV) Flight Information Regions (FIR), as well as, the Kyiv Upper Information Region (UIR) (UKBU) (PDF)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/KICZ_A0004-22_Prohibitory_NOTAM-Ukraine_all_FIRs_and_UIR_(2022024_1930Z).pdf",
+     "firs": [
+      "UKBU",
+      "UKBV",
+      "UKDV",
+      "UKFV",
+      "UKLV",
+      "UKOV"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  },
+  "united-states": {
+   "key": "united-states",
+   "name": "United States",
+   "iso": "US",
+   "anchor": "US",
+   "entries": {},
+   "background": [],
+   "other": 7
+  },
+  "yemen": {
+   "key": "yemen",
+   "name": "Yemen",
+   "iso": "YE",
+   "anchor": "Yemen",
+   "entries": {
+    "KICZ-A0022-24": {
+     "key": "KICZ-A0022-24",
+     "kind": "pointer",
+     "label": "KICZ NOTAM A0022/24",
+     "text": "KICZ NOTAM A0022/24 — Security — Sanaa Pointer",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/doc/KICZ NOTAM A0022_24 - Sanaa Pointer.pdf",
+     "firs": []
+    },
+    "SFAR-115": {
+     "key": "SFAR-115",
+     "kind": "prohibition",
+     "label": "SFAR 115",
+     "text": "Special Federal Aviation Regulation (SFAR) 115 – Prohibition Against Certain Flights in the Sanaa Flight Information Region (FIR) (OYSC)",
+     "url": "https://www.faa.gov/air_traffic/publications/us_restrictions/media/SFAR 115 Sanaa FIR.pdf",
+     "firs": [
+      "OYSC"
+     ]
+    }
+   },
+   "background": [],
+   "other": 0
+  }
+ }
+}
