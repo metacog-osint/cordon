@@ -117,11 +117,13 @@ def run(when: str | None = None) -> dict:
     summary["cdc"] = err or f"{len(notices)} notices, {len(cdc_changes)} changes"
 
 
-    tfrs, err, read, failed = tfr.collect(load("tfr.json", {}).get("tfrs"), when)
+    held_tfr = load("tfr.json", {})
+    tfrs, err, read, failed = tfr.collect(held_tfr.get("tfrs"), when)
     if err:
         health("faa-tfr", False, err, when)
     else:
-        save("tfr.json", {"source": tfr.LIST_URL, "tfrs": tfrs})
+        gone = tfr.remember(held_tfr.get("tfrs"), tfrs, held_tfr.get("gone"), when)
+        save("tfr.json", {"source": tfr.LIST_URL, "tfrs": tfrs, "gone": gone})
         health("faa-tfr", True, tfr.health_detail(tfrs, read, failed), when)
     summary["tfr"] = err or f"{len(tfrs)} TFRs, {read} details read"
 

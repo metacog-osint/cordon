@@ -20,10 +20,13 @@ caps one run and a failed detail is asked for again next run. Terms: the FAA sta
 of the US Government, not subject to US copyright (17 U.S.C. 105). That is Cordon's reading, not an FAA statement.
 """
 import json
+import math
 import re
 import time
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
 
+from . import airports
 from .common import fetch_or_none, now_utc, to_utc
 from .navarea import circle, unwrap
 
@@ -197,6 +200,8 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, paus
     out = {}
     for nid, rec in listed.items():
         prev = old.get(nid) or {}
+        # first read of this field (15 Nov 2026): a TFR already held keeps the FAA's issue time as its first sighting
+        rec["first_seen"] = prev.get("first_seen") or (prev.get("detail") or {}).get("issued") or when
         if prev.get("detail") and prev.get("created") == rec["created"]:
             out[nid] = {**rec, "detail": prev["detail"]}
             continue
@@ -214,6 +219,157 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, paus
                 failed += 1
         out[nid] = rec
     return dict(sorted(out.items())), None, read, failed
+
+
+# Impact (Tom, 15 Nov 2026: alerts should weigh what a restriction does, so a small volcano or range TFR far from
+# busy airspace is not flagged like one over a hub). Measured on the 43 shaped TFRs held 15 Nov (space operations
+# left out): hazards 11-1,066 km2 up to 11,000 ft; most security TFRs 11-700 km2; DC's SFRA 11,571 km2; the VIP TFR
+# at Anchorage 10,646 km2 to 17,999 ft. FL180 is the floor of Class A (jet routes); 56 km (30 nm) is about the
+# outer edge of a Class B airport's arrival and departure airspace.
+NEAR_CORE_KM = 56.0
+NEAR_CORE_CEILING_FT = 3000
+CLASS_A_FT = 18000
+WIDE_KM2 = 2500.0
+SIZEABLE_KM2 = 500.0
+MODERATE_KM2 = 250.0
+# A VIP TFR is listed but routine unless its impact is high (a presidential visit's 30 nm ring is).
+IMPACT_ALERT = {"VIP"}
+# Re-issues (item 4 of Tom's list, 15 Nov 2026): the FAA cancels a changed TFR and issues it under a new number,
+# and long-running ranges are renewed. A new TFR is a re-issue when one of the same type, whose bounding box
+# overlaps its own by REISSUE_IOU, was held before it, now or within GONE_DAYS; it counts as new only if it is
+# larger (area over ENLARGED_BY times the earlier one, or a higher ceiling).
+GONE_DAYS = 14
+REISSUE_IOU = 0.5
+ENLARGED_BY = 1.25
+
+
+def feet(height: str | None) -> int | None:
+    """Feet from the words _height writes: "surface" 0, "FL180" 18000, "5000 ft MSL" 5000; None if unreadable."""
+    if not height:
+        return None
+    if height == "surface":
+        return 0
+    m = re.match(r"FL(\d+)$", height)
+    if m:
+        return int(m.group(1)) * 100
+    m = re.match(r"(\d+(?:\.\d+)?) ft\b", height)
+    return int(float(m.group(1))) if m else None
+
+
+def _polys(geom: dict | None) -> list:
+    if not geom:
+        return []
+    return [geom["coordinates"]] if geom["type"] == "Polygon" else list(geom["coordinates"])
+
+
+def area_km2(geom: dict | None) -> float:
+    """Area of a TFR's outer rings in km2 (equirectangular about each ring's mean latitude; fine at TFR sizes)."""
+    total = 0.0
+    for poly in _polys(geom):
+        ring = poly[0]
+        lat0 = sum(p[1] for p in ring) / len(ring)
+        kx, ky = 111.32 * math.cos(math.radians(lat0)), 110.57
+        a = sum((x1 * kx) * (y2 * ky) - (x2 * kx) * (y1 * ky) for (x1, y1), (x2, y2) in zip(ring, ring[1:]))
+        total += abs(a) / 2
+    return round(total, 1)
+
+
+def bbox(geom: dict | None) -> list[float] | None:
+    pts = [p for poly in _polys(geom) for p in poly[0]]
+    if not pts:
+        return None
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    return [round(min(xs), 4), round(min(ys), 4), round(max(xs), 4), round(max(ys), 4)]
+
+
+def _iou(a, b) -> float:
+    x1, y1, x2, y2 = max(a[0], b[0]), max(a[1], b[1]), min(a[2], b[2]), min(a[3], b[3])
+    if x2 <= x1 or y2 <= y1:
+        return 0.0
+    inter = (x2 - x1) * (y2 - y1)
+    union = (a[2] - a[0]) * (a[3] - a[1]) + (b[2] - b[0]) * (b[3] - b[1]) - inter
+    return inter / union if union > 0 else 0.0
+
+
+def impact(rec: dict) -> dict:
+    """What a TFR restricts, as measures, and a level: high, moderate or low.
+
+    high: within NEAR_CORE_KM of a Core 30 airport with a ceiling of NEAR_CORE_CEILING_FT or more; or WIDE_KM2 or
+          more; or reaching Class A (FL180) over SIZEABLE_KM2 or more.
+    moderate: any one of reaching Class A, MODERATE_KM2 or more, or within NEAR_CORE_KM of a Core 30 airport.
+    low: the rest (small, low and away from the busiest airports, such as most volcano, fire and range TFRs)."""
+    d = rec.get("detail") or {}
+    g = d.get("geometry")
+    area = area_km2(g)
+    ceiling, floor = feet(d.get("ceiling")), feet(d.get("floor"))
+    pts = [(p[1], p[0]) for poly in _polys(g) for p in poly[0]]
+    near = airports.nearest_core30(pts)
+    hours = None
+    if d.get("effective") and d.get("expires"):
+        hours = round((datetime.fromisoformat(d["expires"].replace("Z", "+00:00"))
+                       - datetime.fromisoformat(d["effective"].replace("Z", "+00:00"))).total_seconds() / 3600, 1)
+    close = bool(near and near[1] <= NEAR_CORE_KM)
+    class_a = ceiling is not None and ceiling >= CLASS_A_FT
+    why = []
+    if close and (ceiling is None or ceiling >= NEAR_CORE_CEILING_FT):
+        why.append(f"within {int(NEAR_CORE_KM)} km of {near[0]} (Core 30)")
+    if area >= WIDE_KM2:
+        why.append(f"{area:,.0f} km2")
+    if class_a and area >= SIZEABLE_KM2:
+        why.append(f"reaches FL{CLASS_A_FT // 100} over {area:,.0f} km2")
+    if why:
+        level = "high"
+    elif class_a or area >= MODERATE_KM2 or close:
+        level = "moderate"
+        why = [w for w, on in ((f"reaches FL{CLASS_A_FT // 100}", class_a), (f"{area:,.0f} km2", area >= MODERATE_KM2),
+                               (f"within {int(NEAR_CORE_KM)} km of {near[0] if near else ''} (Core 30)", close)) if on]
+    else:
+        level = "low"
+    out = {"area_km2": area, "ceiling_ft": ceiling, "floor_ft": floor, "hours": hours, "impact": level,
+           "impact_basis": why}
+    if near:
+        out["nearest_core30"] = {"airport": near[0], "km": near[1]}
+    return out
+
+
+def memory_entry(rec: dict, first_seen: str) -> dict:
+    """What Cordon keeps of a TFR to recognise its re-issue later."""
+    d = rec.get("detail") or {}
+    return {"type": rec.get("type"), "state": rec.get("state"), "bbox": bbox(d.get("geometry")),
+            "area_km2": area_km2(d.get("geometry")), "ceiling_ft": feet(d.get("ceiling")), "first_seen": first_seen}
+
+
+def remember(old: dict, new: dict, gone: dict | None, when: str) -> dict:
+    """The TFRs that left the FAA's list in the last GONE_DAYS, for re-issue checks: the earlier memory, pruned, plus
+    any TFR held before this read and not listed now."""
+    cutoff = (datetime.fromisoformat(when.replace("Z", "+00:00")) - timedelta(days=GONE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out = {k: v for k, v in (gone or {}).items() if (v.get("left_at") or "") >= cutoff and k not in new}
+    for nid, rec in (old or {}).items():
+        if nid not in new and (rec.get("detail") or {}).get("geometry"):
+            out[nid] = {**memory_entry(rec, rec.get("first_seen") or ""), "left_at": when}
+    return dict(sorted(out.items()))
+
+
+def reissue(nid: str, rec: dict, held: dict, gone: dict) -> dict | None:
+    """{of, enlarged} when this TFR repeats one Cordon held before it (see GONE_DAYS), else None."""
+    me = memory_entry(rec, rec.get("first_seen") or "")
+    if not me["bbox"]:
+        return None
+    mine = me["first_seen"] or "9999"
+    others = [(k, memory_entry(r, r.get("first_seen") or "")) for k, r in held.items() if k != nid]
+    others += list((gone or {}).items())
+    best = None
+    for k, o in others:
+        if o.get("type") != me["type"] or not o.get("bbox") or (o.get("first_seen") or "") >= mine:
+            continue
+        if _iou(o["bbox"], me["bbox"]) >= REISSUE_IOU and (best is None or (o.get("first_seen") or "") > best[1]["first_seen"]):
+            best = (k, o)
+    if not best:
+        return None
+    o = best[1]
+    bigger = (me["area_km2"] > ENLARGED_BY * (o.get("area_km2") or 0)
+              or (me["ceiling_ft"] or 0) > (o.get("ceiling_ft") or 0))
+    return {"of": best[0], "enlarged": bigger}
 
 
 def in_force(rec: dict, stamp: str) -> bool:

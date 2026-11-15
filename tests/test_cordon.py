@@ -978,6 +978,61 @@ class Tfr(unittest.TestCase):
         self.assertEqual(fc["features"], [])
         self.assertEqual((fc["health"]["faa-tfr"]["state"], fc["health"]["faa-tfr"]["withheld"]), ("stale", 6))
 
+    @staticmethod
+    def square(lon, lat, half_deg):
+        return {"type": "Polygon", "coordinates": [[[lon - half_deg, lat - half_deg], [lon + half_deg, lat - half_deg],
+                                                    [lon + half_deg, lat + half_deg], [lon - half_deg, lat + half_deg],
+                                                    [lon - half_deg, lat - half_deg]]]}
+
+    def rec(self, nid, typ, state, geom, ceiling="5000 ft MSL", issued="2026-11-14T10:00:00Z", first_seen=None):
+        return {"notam_id": nid, "type": typ, "facility": "ZLA", "state": state, "description": f"PLACE, {state}",
+                "created": "11/14/2026", "first_seen": first_seen or issued,
+                "detail": {"name": nid, "issued": issued, "effective": "2026-11-14T10:00:00Z",
+                           "expires": "2026-11-16T10:00:00Z", "city": "PLACE", "floor": "surface", "ceiling": ceiling,
+                           "statutory": False, "text": "x", "geometry": geom}}
+
+    def test_impact_levels_weigh_size_height_and_the_busiest_airports(self):
+        # Tom, 15 Nov 2026: a small volcano TFR in Hawaii is not one over a hub.
+        volcano = tfr.impact(self.rec("6/1", "HAZARDS", "HI", self.square(-155.28, 19.41, 0.03), "4000 ft MSL"))
+        self.assertEqual((volcano["impact"], volcano["nearest_core30"]["airport"], volcano["ceiling_ft"]),
+                         ("low", "HNL", 4000))
+        self.assertLess(volcano["area_km2"], 100)
+        hub = tfr.impact(self.rec("6/2", "SECURITY", "IL", self.square(-87.90, 41.98, 0.05), "3000 ft MSL"))
+        self.assertEqual((hub["impact"], hub["impact_basis"]), ("high", ["within 56 km of ORD (Core 30)"]))
+        wide = tfr.impact(self.rec("6/3", "VIP", "AK", self.square(-149.9, 61.2, 0.5), "17999 ft MSL"))
+        self.assertEqual(wide["impact"], "high")
+        tall = tfr.impact(self.rec("6/4", "SECURITY", "FL", self.square(-86.6, 30.36, 0.03), "FL999"))
+        self.assertEqual((tall["impact"], tall["ceiling_ft"]), ("moderate", 99900))
+        self.assertEqual([tfr.feet(h) for h in ("surface", "FL180", "2500 ft AGL", None, "odd")], [0, 18000, 2500, None, None])
+
+    def test_reissues_are_not_new_unless_larger(self):
+        geom = self.square(-157.77, 21.45, 0.1)
+        old = self.rec("6/10", "SECURITY", "HI", geom, issued="2026-11-10T00:00:00Z")
+        new = self.rec("6/11", "SECURITY", "HI", geom, issued="2026-11-14T10:00:00Z")
+        gone = tfr.remember({"6/10": old}, {"6/11": new}, {}, "2026-11-14T11:00:00Z")
+        self.assertEqual((list(gone), gone["6/10"]["left_at"]), (["6/10"], "2026-11-14T11:00:00Z"))
+        self.assertEqual(tfr.reissue("6/11", new, {"6/11": new}, gone), {"of": "6/10", "enlarged": False})
+        bigger = self.rec("6/12", "SECURITY", "HI", self.square(-157.77, 21.45, 0.13), issued="2026-11-14T10:00:00Z")
+        self.assertTrue(tfr.reissue("6/12", bigger, {"6/12": bigger}, gone)["enlarged"])
+        other_type = self.rec("6/13", "HAZARDS", "HI", geom)
+        self.assertIsNone(tfr.reissue("6/13", other_type, {"6/13": other_type}, gone))
+        self.assertEqual(tfr.remember({}, {}, gone, "2026-11-29T00:00:00Z"), {})  # forgotten after 14 days
+        # In the feed: the re-issue is routine and names the one it repeats; the enlarged one is new.
+        data = {"tfrs": {"6/11": new, "6/12": bigger}, "gone": gone, "fetched_at": self.STAMP}
+        items = {f["properties"]["id"]: f["properties"] for f in feed.tfr_items(data, self.NOW)[0]}
+        self.assertEqual((items["cordon:tfr:6-11"]["tier"], items["cordon:tfr:6-11"]["measures"]["reissue_of"]),
+                         ("routine", "6/10"))
+        self.assertEqual(items["cordon:tfr:6-12"]["tier"], "anomaly")
+        self.assertEqual(items["cordon:tfr:6-11"]["subdivisions"], ["US-HI"])
+
+    def test_states_from_the_faa_or_the_shape(self):
+        self.assertEqual(feed.us_subdivisions(["US"], None, "HI"), ["US-HI"])
+        self.assertEqual(feed.us_subdivisions(["PR"], None, "PR"), [])
+        dc = self.square(-77.04, 38.89, 0.3)  # the DC area TFR: the FAA's state is "USA"
+        self.assertEqual(feed.us_subdivisions(["US"], dc, "USA"), ["US-DC", "US-MD", "US-VA"])
+        self.assertEqual(feed.us_subdivisions(["US"], {"type": "Point", "coordinates": [-98.6, 39.8]}, None), ["US-KS"])
+        self.assertEqual(feed.us_subdivisions(["CA"], dc, None), [])
+
 
 def canada_row(iso, name, level, ts=1791975710, kind="Regular text update", note="Safety and security - updated.",
                regional=0):

@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from cordon import collect, events, feed, navarea  # noqa: E402
 from cordon.common import load, read_jsonl  # noqa: E402
-from tic_doctrine import contract, registers  # noqa: E402
+from tic_doctrine import contract, geo, registers  # noqa: E402
 
 SRC, OUT = ROOT / "site_src", ROOT / "site"
 LANES = {"advisories.json": "state-travel-advisories", "alerts.json": "us-embassy-alerts",
@@ -62,14 +62,18 @@ def map_data(d: dict, fc: dict) -> dict:
         # FAA programs as published in the feed (a stale list is withheld there, so it is not drawn either).
         "faa": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
                  "until": f["properties"].get("valid_until"), **{k: f["properties"]["measures"].get(k) for k in
-                 ("program", "airport", "airport_name", "reason", "start", "notam", "avg_delay_min")},
+                 ("program", "airport", "airport_name", "reason", "start", "notam", "avg_delay_min", "core30")},
+                 "subdivisions": f["properties"].get("subdivisions") or [],
                  "coordinates": f["geometry"]["coordinates"] if f["geometry"] and f["geometry"]["type"] == "Point" else None}
                 for f in fc["features"] if f["properties"]["id"].startswith("cordon:faa:")],
         # The FCDO's advice as published in the feed (withheld there when stale, so not listed either).
         # TFRs with an area, as published in the feed (withheld there when stale, so not drawn either).
         "tfr": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
                  "until": f["properties"].get("valid_until"), "link": f["properties"]["link"], "geometry": f["geometry"],
-                 **{k: f["properties"]["measures"].get(k) for k in ("notam_id", "type", "effective", "floor", "ceiling")}}
+                 "subdivisions": f["properties"].get("subdivisions") or [],
+                 **{k: f["properties"]["measures"].get(k) for k in ("notam_id", "type", "effective", "floor", "ceiling",
+                                                                    "impact", "impact_basis", "area_km2",
+                                                                    "nearest_core30", "reissue_of")}}
                 for f in fc["features"] if f["properties"]["id"].startswith("cordon:tfr:") and f["geometry"]],
         "fcdo": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
                   "link": f["properties"]["link"], "countries": f["properties"]["countries"],
@@ -106,6 +110,19 @@ def map_data(d: dict, fc: dict) -> dict:
     }
 
 
+def state_boxes(rings: list) -> list[list[float]]:
+    """[west, south, east, north] boxes for a state's rings, one for its rings east of 0 degrees and one for those
+    west of it, so a state across 180 degrees (Alaska) gets two boxes instead of one around the world."""
+    out = {}
+    for ring in rings:
+        xs, ys = [p[0] for p in ring], [p[1] for p in ring]
+        b = [min(xs), min(ys), max(xs), max(ys)]
+        side = "e" if b[0] >= 0 else "w"
+        o = out.get(side)
+        out[side] = b if o is None else [min(o[0], b[0]), min(o[1], b[1]), max(o[2], b[2]), max(o[3], b[3])]
+    return [out[k] for k in sorted(out)]
+
+
 def build() -> dict:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
@@ -116,6 +133,12 @@ def build() -> dict:
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
     (OUT / "data").mkdir(exist_ok=True)
+    subs = json.loads(geo.SUBDIVISIONS.read_text(encoding="utf-8"))["subdivisions"]
+    (OUT / "geo" / "states.json").write_text(json.dumps(
+        {"source": "doctrine kit geo/subdivisions.json (Natural Earth 1:10m, public domain): code, name and boxes only "
+                   "(one box per side of 180 degrees, so Alaska's Aleutians do not make a box around the world)",
+         "states": [{"code": s["code"], "name": s["name"], "boxes": state_boxes(s["rings"])} for s in subs]},
+        separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
     (OUT / "data" / "feed.geojson").write_text(json.dumps(fc, ensure_ascii=False, separators=(",", ":")) + "\n",
                                                encoding="utf-8", newline="\n")
     (OUT / "data" / "map.json").write_text(json.dumps(map_data(d, fc), ensure_ascii=False, separators=(",", ":")) + "\n",
