@@ -38,10 +38,11 @@ STALE_HOURS = 6  # launch and VIP TFRs last hours; with no good list for this lo
 NEW_HOURS = 72
 # A TFR of these types issued within NEW_HOURS is an anomaly (as for NGA's launch, military and security warnings).
 NEW_ALERT = {"SPACE OPERATIONS", "SECURITY", "SPECIAL"}
-# Types left out of the feed (kept in data and counted as skipped in health). SPACE OPERATIONS TFRs are Launch's
-# (launch.theintelligence.company), which tiers a new one anomaly by the same 72-hour rule; COP drew each twice while
-# both carried them (Tom, 14 Nov 2026). Empty this set to bring them back.
-SKIP_TYPES: set[str] = {"SPACE OPERATIONS"}
+# Types left out of the feed (kept in data and counted as skipped in health), each with the TIC program that
+# publishes it instead. SPACE OPERATIONS TFRs are Launch's (launch.theintelligence.company), which tiers a new one
+# anomaly by the same 72-hour rule; COP drew each twice while both carried them (Tom, 14 Nov 2026). Empty this to
+# bring them back.
+SKIP_TYPES: dict[str, str] = {"SPACE OPERATIONS": "Launch"}
 # The list's state field for US territories with their own ISO code; every other TFR is the US's. (The world outlines
 # are thinned to about 5 km, so a TFR at Brownsville or Starbase would otherwise also be tagged Mexico.)
 TERRITORIES = {"PR": "PR", "GU": "GU", "VI": "VI", "AS": "AS", "MP": "MP"}
@@ -164,6 +165,19 @@ def parse_list(rows) -> dict:
                     "description": re.sub(r"\s+", " ", str(r.get("description") or "")).strip()[:300],
                     "created": (r.get("creation_date") or "").strip() or None}
     return out
+
+
+def health_detail(tfrs: dict, read: int, failed: int) -> str:
+    """The faa-tfr health line: how many TFRs the FAA lists, how many have an area, how many are left to another
+    program (SKIP_TYPES; counted whether or not they are still in force, as the feed's skipped count is), and how
+    many detail files this run read."""
+    shapes = sum(1 for r in tfrs.values() if (r.get("detail") or {}).get("geometry"))
+    out = f"{len(tfrs)} TFRs listed, {shapes} with an area"
+    for kind, program in sorted(SKIP_TYPES.items()):
+        n = sum(1 for r in tfrs.values() if r.get("type") == kind)
+        if n:
+            out += f"; {n} {kind.lower()} {'TFR' if n == 1 else 'TFRs'} left to {program}"
+    return out + f"; {read} detail files read" + (f", {failed} failed" if failed else "")
 
 
 def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, pause: float = PAUSE_S):

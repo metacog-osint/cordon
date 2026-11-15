@@ -934,11 +934,20 @@ class Tfr(unittest.TestCase):
         self.assertNotIn("cordon:tfr:6-7131", ids)
         self.assertIn("6/7131", held)  # kept in data
         self.assertEqual(fc["health"]["faa-tfr"]["skipped"], 1)
+        line = tfr.health_detail(held, 0, 0)
+        self.assertIn("; 1 space operations TFR left to Launch;", line)
+        self.assertTrue(line.endswith("; 0 detail files read"))
+        saved, tfr.SKIP_TYPES = tfr.SKIP_TYPES, {}
+        try:
+            self.assertNotIn("left to", tfr.health_detail(held, 2, 1))
+            self.assertTrue(tfr.health_detail(held, 2, 1).endswith("; 2 detail files read, 1 failed"))
+        finally:
+            tfr.SKIP_TYPES = saved
 
     def test_items_new_launches_statutory_no_shape_and_expired(self):
         fetch, _ = self.fetcher(fail={"6_7546"})
         held = tfr.collect(None, self.STAMP, fetch, pause=0)[0]
-        saved, tfr.SKIP_TYPES = tfr.SKIP_TYPES, set()  # the anomaly rule still holds if the skip is lifted
+        saved, tfr.SKIP_TYPES = tfr.SKIP_TYPES, {}  # the anomaly rule still holds if the skip is lifted
         try:
             fc = self.build(held)
         finally:

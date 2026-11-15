@@ -50,7 +50,7 @@ jobs:
     timeout-minutes: 15
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
@@ -116,5 +116,17 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
+      # Pages sometimes lists no artifact just after the upload has finished ("Found 0 artifact(s)": 5 of 100 runs,
+      # 13-15 Nov 2026, each with the artifact finalized under an ID half a second earlier), and the site then waits a
+      # run for its refresh. So a failed deploy is tried once more after a pause; the run fails only if both do.
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before deploying again
+        if: steps.deployment.outcome == 'failure'
+        run: |
+          echo "::warning::first Pages deploy failed; trying once more in 20 s"
+          sleep 20
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4

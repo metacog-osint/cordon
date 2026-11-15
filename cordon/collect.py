@@ -122,8 +122,6 @@ def run(when: str | None = None) -> dict:
         health("faa-tfr", False, err, when)
     else:
         save("tfr.json", {"source": tfr.LIST_URL, "tfrs": tfrs})
-        shapes = sum(1 for r in tfrs.values() if (r.get("detail") or {}).get("geometry"))
-        health("faa-tfr", True, f"{len(tfrs)} TFRs listed, {shapes} with an area; {read} detail files read"
-               + (f", {failed} failed" if failed else ""), when)
+        health("faa-tfr", True, tfr.health_detail(tfrs, read, failed), when)
     summary["tfr"] = err or f"{len(tfrs)} TFRs, {read} details read"
     return summary
