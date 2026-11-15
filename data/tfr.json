@@ -7145,182 +7145,6 @@
     }
    }
   },
-  "6/7546": {
-   "notam_id": "6/7546",
-   "type": "HAZARDS",
-   "facility": "ZDC",
-   "state": "WV",
-   "description": "W MARTINSBURG, WV, Saturday, November 14, 2026 through Sunday, November 15, 2026 UTC",
-   "created": "11/14/2026",
-   "detail": {
-    "name": "6/7546",
-    "issued": "2026-11-14T13:29:41Z",
-    "effective": "2026-11-14T13:16:00Z",
-    "expires": "2026-11-15T23:59:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
-    "city": "W MARTINSBURG",
-    "floor": "surface",
-    "ceiling": "4000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7546 ZDC WV..AIRSPACE W MARTINSBURG, WV..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 10NM RADIUS OF 393142N0781853W (MRB299023.3) SFC-4000FT WV FORESTRY, ROSIE SANTERRE TEL 304-703-9392 KESSEL LANE FIRE IS IN CHARGE OF THE OPERATION. WASHINGTON/ZDC/ARTCC TEL 703-771-3470 IS THE FAA CDN FAC. 2611141316-2611152359",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -78.31472,
-        39.69514
-       ],
-       [
-        -78.27723,
-        39.6926
-       ],
-       [
-        -78.24088,
-        39.68506
-       ],
-       [
-        -78.2068,
-        39.67274
-       ],
-       [
-        -78.17601,
-        39.65603
-       ],
-       [
-        -78.14946,
-        39.63544
-       ],
-       [
-        -78.12795,
-        39.61159
-       ],
-       [
-        -78.11214,
-        39.58521
-       ],
-       [
-        -78.1025,
-        39.55711
-       ],
-       [
-        -78.09932,
-        39.52813
-       ],
-       [
-        -78.10268,
-        39.49917
-       ],
-       [
-        -78.11248,
-        39.47111
-       ],
-       [
-        -78.1284,
-        39.44478
-       ],
-       [
-        -78.14997,
-        39.42099
-       ],
-       [
-        -78.17652,
-        39.40047
-       ],
-       [
-        -78.20724,
-        39.38382
-       ],
-       [
-        -78.24122,
-        39.37156
-       ],
-       [
-        -78.27741,
-        39.36405
-       ],
-       [
-        -78.31472,
-        39.36152
-       ],
-       [
-        -78.35204,
-        39.36405
-       ],
-       [
-        -78.38823,
-        39.37156
-       ],
-       [
-        -78.4222,
-        39.38382
-       ],
-       [
-        -78.45293,
-        39.40047
-       ],
-       [
-        -78.47948,
-        39.42099
-       ],
-       [
-        -78.50104,
-        39.44478
-       ],
-       [
-        -78.51697,
-        39.47111
-       ],
-       [
-        -78.52676,
-        39.49917
-       ],
-       [
-        -78.53012,
-        39.52813
-       ],
-       [
-        -78.52694,
-        39.55711
-       ],
-       [
-        -78.5173,
-        39.58521
-       ],
-       [
-        -78.50149,
-        39.61159
-       ],
-       [
-        -78.47998,
-        39.63544
-       ],
-       [
-        -78.45343,
-        39.65603
-       ],
-       [
-        -78.42265,
-        39.67274
-       ],
-       [
-        -78.38856,
-        39.68506
-       ],
-       [
-        -78.35221,
-        39.6926
-       ],
-       [
-        -78.31472,
-        39.69514
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7549": {
    "notam_id": "6/7549",
    "type": "SPACE OPERATIONS",
@@ -8785,6 +8609,58 @@
        [
         -88.95,
         31.11667
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/7602": {
+   "notam_id": "6/7602",
+   "type": "HAZARDS",
+   "facility": "ZHU",
+   "state": "MS",
+   "description": "4NM NW WIGGINS, MS, Sunday, November 15, 2026 through Monday, November 16, 2026 UTC",
+   "created": "11/15/2026",
+   "detail": {
+    "name": "6/7602",
+    "issued": "2026-11-15T18:21:53Z",
+    "effective": "2026-11-15T18:16:00Z",
+    "expires": "2026-11-16T02:00:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "4NM NW WIGGINS",
+    "floor": "surface",
+    "ceiling": "2000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/7602 ZHU MS..AIRSPACE 4NM NW WIGGINS, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 310430N0891230W (LBY157021.7) TO 310330N0890830W (LBY150023.9) TO 305730N0890730W (LBY153029.7) TO 305200N0891230W (GPT344028.4) TO 305330N0891600W (GPT339030.7) TO POINT OF ORIGIN SFC-2000FT MISSISSIPPI INTERANGENCY DISPATCH CENTER TEL 601-420-6005 OR FREQ 122.925 ICE BOX IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611151816-2611160200EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -89.20833,
+        31.075
+       ],
+       [
+        -89.14167,
+        31.05833
+       ],
+       [
+        -89.125,
+        30.95833
+       ],
+       [
+        -89.20833,
+        30.86667
+       ],
+       [
+        -89.26667,
+        30.89167
+       ],
+       [
+        -89.20833,
+        31.075
        ]
       ]
      ]
