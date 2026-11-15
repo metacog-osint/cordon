@@ -1321,6 +1321,79 @@ class Events(unittest.TestCase):
         self.assertEqual(sum(e["kind"] == "advisory_change" for e in ev), 1, "old and text-only changes stay out")
         self.assertEqual(ev, sorted(ev, key=lambda e: (e["date"], e["id"])))
 
+    def test_travel_advice_lanes_and_canada_declared_changes(self):
+        from cordon import events
+        now = datetime(2026, 11, 15, 1, tzinfo=timezone.utc)
+        ab, ap = "avoid_all_but_essential_travel_to_parts", "avoid_all_travel_to_parts"
+        changes = [
+            {"lane": "fcdo", "kind": "alert", "at": "2026-11-10T03:00:00Z", "key": "mexico", "iso": "MX",
+             "name": "Mexico", "link": LINK, "from": [ab], "to": [ap, ab], "change": "Updated advice"},
+            {"lane": "fcdo", "kind": "alert", "at": "2026-10-01T00:00:00Z", "key": "chad", "iso": "TD",
+             "name": "Chad", "from": [], "to": [ab]},  # older than 30 days
+            {"lane": "canada", "kind": "regional", "at": "2026-11-03T18:10:00Z", "key": "NP", "iso": "NP",
+             "name": "Nepal", "link": LINK, "from": False, "to": True,
+             "change": "Risk levels section \u2013 avoid non-essential travel to parts of the Trishuli River corridor; "
+                       "Natural disasters"},
+            {"lane": "canada", "kind": "level", "at": "2026-11-08T05:00:00Z", "key": "PT-20", "iso": "PT",
+             "name": "Azores", "link": LINK, "from": 0, "to": 1, "change": None},
+            {"lane": "safetravel", "kind": "level", "at": "2026-11-12T09:00:00Z", "key": "HT", "iso": "HT",
+             "name": "Haiti", "link": LINK, "from": "high", "to": "medium"},
+            {"lane": "safetravel", "kind": "level", "at": "2026-11-12T21:00:00Z", "key": "HT", "iso": "HT",
+             "name": "Haiti", "link": LINK, "from": "medium", "to": "avoid"},  # same day: the later wins
+            {"lane": "safetravel", "kind": "regional", "at": "2026-11-13T09:00:00Z", "key": "BO",
+             "iso": "BO", "name": "Bolivia", "link": LINK, "from": None,
+             "to": "with higher advice levels in some areas"},
+            {"lane": "cdc", "kind": "new", "at": "2026-11-11T13:00:00Z", "key": "measles-global",
+             "name": "Global Measles", "link": LINK, "countries": ["US", "CA"], "from": None, "to": 1},
+            {"lane": "cdc", "kind": "removed", "at": "2026-11-12T13:00:00Z", "key": "polio-global",
+             "name": "Global Polio", "link": LINK, "countries": ["PK"], "from": 2, "to": None},
+            {"lane": "cdc", "kind": "text", "at": "2026-11-12T13:00:00Z", "key": "x", "name": "X"},
+        ]
+        places = {
+            "JP": {"key": "JP", "iso": "JP", "name": "Japan", "link": LINK, "updated": "2026-10-26T14:39:17Z",
+                   "update_type": "Regional advisory removed",
+                   "update": "Risk levels section \u2013 removed advisory to avoid non-essential travel to the Ryukyu "
+                             "Islands; Natural disaster"},
+            "ET": {"key": "ET", "iso": "ET", "name": "Ethiopia", "link": LINK, "updated": "2026-10-29T19:40:16Z",
+                   "update_type": "Regular text update", "update": "Risk level \u2013 updated information"},
+            "NP": {"key": "NP", "iso": "NP", "name": "Nepal", "link": LINK, "updated": "2026-11-03T16:56:03Z",
+                   "update_type": "Regional advisory modified", "update": "Risk levels section \u2013 avoid ..."},
+            "MX": {"key": "MX", "iso": "MX", "name": "Mexico", "link": LINK, "updated": "2026-11-12T12:31:31Z",
+                   "update_type": "Regular text update",
+                   "update": "Risk levels section \u2013 removed advisory to avoid non-essential travel to the "
+                             "west-central coast; Natural disasters and climate"},
+            "BR": {"key": "BR", "iso": "BR", "name": "Brazil", "link": LINK, "updated": "2026-09-30T00:00:00Z",
+                   "update_type": "Regional advisory modified", "update": "Risk levels section"},  # too old
+        }
+        ev = events.build([], changes, now, canada=places)["events"]
+        by = {e["id"]: e for e in ev}
+        self.assertEqual(sorted(by), sorted([
+            "2026-10-26-canada-jp-update", "2026-11-03-canada-np-regional", "2026-11-08-canada-pt-20-level",
+            "2026-11-10-fcdo-mexico-alert", "2026-11-11-cdc-measles-global-new", "2026-11-12-canada-mx-update",
+            "2026-11-12-cdc-polio-global-removed", "2026-11-12-safetravel-ht-level",
+            "2026-11-13-safetravel-bo-regional"]))
+        self.assertTrue(all(e["kind"] == "advisory_change" and e["occurred"] and e["source"]["url"] for e in ev))
+        self.assertEqual(by["2026-11-10-fcdo-mexico-alert"]["title"],
+                         'Mexico: UK FCDO advice changed from "advises against all but essential travel to parts" to '
+                         '"advises against all travel to parts and all but essential travel to parts"')
+        self.assertIn("(Canada's note: Risk levels section \u2013 avoid non-essential travel to parts of the Trishuli "
+                      "River corridor)", by["2026-11-03-canada-np-regional"]["title"])
+        self.assertIn('raised from "Exercise normal security precautions" to "Exercise a high degree of caution"',
+                      by["2026-11-08-canada-pt-20-level"]["title"])
+        self.assertEqual(by["2026-11-08-canada-pt-20-level"]["countries"], ["PT"])
+        self.assertIn('raised from "Exercise increased caution" to "Do not travel"',
+                      by["2026-11-12-safetravel-ht-level"]["title"])
+        self.assertIn("added a note on other levels", by["2026-11-13-safetravel-bo-regional"]["title"])
+        self.assertEqual(by["2026-11-11-cdc-measles-global-new"]["countries"], ["US", "CA"])
+        self.assertIn("CDC removed its level 2 travel health notice", by["2026-11-12-cdc-polio-global-removed"]["title"])
+        self.assertEqual(by["2026-11-12-canada-mx-update"]["title"],
+                         "Mexico: Canada's travel advice: Risk levels section \u2013 removed advisory to avoid "
+                         "non-essential travel to the west-central coast")
+        self.assertIn("Canada's travel advice, Regional advisory removed: ", by["2026-10-26-canada-jp-update"]["title"])
+        self.assertEqual(by["2026-10-26-canada-jp-update"]["date"], "2026-10-26")
+        self.assertFalse(canada.names_advisory_change(places["ET"]), "a risk-level note naming no advisory")
+        self.assertTrue(canada.declares_change(places["ET"]), "the feed's looser rule is unchanged")
+
 
 class Review(unittest.TestCase):
     def test_posture_changes_become_reviews(self):

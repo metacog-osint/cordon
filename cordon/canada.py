@@ -33,6 +33,9 @@ LEVELS = {0: "Exercise normal security precautions", 1: "Exercise a high degree 
 # "Regular text update".
 ADVISORY_UPDATE = re.compile(r"advisory", re.I)
 RISK_NOTE = re.compile(r"^Risk levels?\b", re.I)
+# For Verdict's calendar a declared change must name the advisory: Ethiopia's "Risk level - updated information"
+# (29 Oct 2026) says no advisory was issued, changed or removed, so it is not an event (Tom, 15 Nov 2026).
+ADVISORY_WORD = re.compile(r"\b(advisor(y|ies)|avoid)\b", re.I)
 # Updates that do not count as new: Canada's own "Editorial change", and a note about only the "Need help?" section
 # (embassy and consulate contacts). On 13 Nov 2026 23 of 30 updates in 72 hours were "updated mission coordinates".
 EDITORIAL = "Editorial change"
@@ -56,6 +59,20 @@ def counts_as_new(rec: dict) -> bool:
 def declares_change(rec: dict) -> bool:
     """Canada's own word that this update issued, changed or removed an advisory."""
     return bool(ADVISORY_UPDATE.search(rec.get("update_type") or "") or RISK_NOTE.match(rec.get("update") or ""))
+
+
+def first_note(rec: dict) -> str:
+    """The first section of Canada's update note (its sections are joined by semicolons)."""
+    return (rec.get("update") or "").split(";")[0].strip()
+
+
+def names_advisory_change(rec: dict) -> bool:
+    """Stricter than declares_change, for Verdict: the update's kind names an advisory ("Regional advisory
+    removed"), or its note starts with the risk level section and names an advisory or an avoid statement there."""
+    if ADVISORY_UPDATE.search(rec.get("update_type") or ""):
+        return True
+    note = first_note(rec)
+    return bool(RISK_NOTE.match(note) and ADVISORY_WORD.search(note))
 
 
 def parse(doc) -> dict:
