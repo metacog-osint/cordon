@@ -45,6 +45,7 @@ a { color: var(--link); }
 .card p { margin: 0 0 10px; }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
 @media (max-width: 820px) { .two { grid-template-columns: 1fr; } }
+.tbl { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { text-align: left; padding: 5px 6px; border-top: 1px solid var(--soft); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; border-top: 0; }
