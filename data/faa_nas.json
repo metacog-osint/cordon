@@ -3,16 +3,6 @@
  "programs": [
   {
    "kind": "closure",
-   "airport": "DAL",
-   "airport_name": "Dallas Love Field",
-   "start": "2026-11-15T02:29:00Z",
-   "end": "2026-11-15T12:00:00Z",
-   "updated": "2026-11-15T02:32:54Z",
-   "notam": "!DAL 11/044 DAL AD AP CLSD 2611150229-2611151200",
-   "issued": "2026-11-15T02:29:00Z"
-  },
-  {
-   "kind": "closure",
    "airport": "SAN",
    "airport_name": "San Diego-Lindbergh Field",
    "start": "2026-11-15T09:00:00Z",
