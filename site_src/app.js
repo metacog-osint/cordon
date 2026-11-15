@@ -87,6 +87,15 @@
       }
     }).addTo(map);
 
+    var prnIso = {};
+    (d.faaprn || []).forEach(function (s) { s.countries.forEach(function (c) { (prnIso[c] = prnIso[c] || []).push(s); }); });
+    layers.prn = L.geoJSON({ type: "FeatureCollection", features: world.features.filter(function (f) { return prnIso[f.properties.iso]; }) }, {
+      style: { color: css("--prn"), weight: 2, dashArray: "1 5", lineCap: "round", fill: false },
+      onEachFeature: function (f, lyr) {
+        lyr.bindTooltip(tip(prnIso[f.properties.iso].map(function (s) { return s.title; }).join("\n")), { sticky: true });
+      }
+    }).addTo(map);
+
     layers.posture = L.layerGroup();
     d.advisories.forEach(function (a) {
       var p = POSTURE[a.posture];
@@ -154,6 +163,7 @@
       h("span", null, [h("span", { "class": "sw", style: "background:" + css("--l3") }), "3"]),
       h("span", null, [h("span", { "class": "sw", style: "background:" + css("--l4") }), "4"]),
       h("span", null, [h("span", { "class": "ln" }), "EASA bulletin"]),
+      h("span", null, [h("span", { "class": "ln prn" }), "FAA prohibition or advisory"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--nav-key") }), "launch, military, mines, GNSS"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--nav") }), "other maritime warnings"]),
       h("span", null, [h("span", { "class": "posture-icon", style: "display:inline-block;padding:0 4px;margin-right:4px" }, ["OD"]), "embassy status"]),
@@ -175,7 +185,9 @@
 
     var ch = d.changes;
     document.getElementById("changes").replaceChildren(ch.length ? table(["When", "Where", "Change"], ch.map(function (c) {
-      var what = c.lane === "cdc" ? (c.kind === "new" ? "New CDC health notice, level " + c.to
+      var what = c.lane === "faaprn" ? "FAA " + (c.kind === "new" ? "listed " : "withdrew ") + (c.label || c.key)
+          + (c.entry_kind ? " (" + c.entry_kind + ")" : "")
+        : c.lane === "cdc" ? (c.kind === "new" ? "New CDC health notice, level " + c.to
           : c.kind === "level" ? "CDC health notice level " + c.from + " to " + c.to
           : c.kind === "removed" ? "CDC health notice removed (was level " + c.from + ")" : c.kind)
         : c.lane === "safetravel" ? (c.kind === "level" ? "New Zealand's advice: " + (NZ_LEVEL[c.from] || c.from) + " to " + (NZ_LEVEL[c.to] || c.to)
@@ -259,6 +271,21 @@
       : h("p", { "class": "empty" }, [(d.health["nz-mfat-safetravel"] || {}).state === "fresh"
           ? "New Zealand advises against travel nowhere and lists no change." : "No current New Zealand data: see Sources below."]));
 
+    var PRN_RANK = { prohibition: 0, advisory: 1, pointer: 2, notice: 3 };
+    var pr = (d.faaprn || []).slice().sort(function (x, y) {
+      return (y.tier === "anomaly") - (x.tier === "anomaly") || PRN_RANK[x.strongest] - PRN_RANK[y.strongest]
+        || x.title.localeCompare(y.title); });
+    document.getElementById("prn").replaceChildren(pr.length ? table(["Where", "What the FAA lists", "FIRs"],
+      pr.map(function (s) {
+        var name = s.title.replace(/^FAA, /, "").split(": ")[0];
+        var list = h("span", null, (s.entries || []).reduce(function (acc, e, i) {
+          return acc.concat((i ? ["; "] : []).concat([link(e.url, e.label), " (" + e.kind + ")"])); }, []));
+        var was = s.tier !== "anomaly" ? "" : " \u2014 changed" + ((s.added || []).length ? "; new: " + s.added.join(", ") : "")
+          + ((s.removed || []).length ? "; withdrawn: " + s.removed.join(", ") : "");
+        return [link(s.link, name), h("span", null, [list, was]), (s.firs || []).join(" ") || "\u2014"]; }))
+      : h("p", { "class": "empty" }, [(d.health["faa-prohibitions-notices"] || {}).state === "fresh"
+          ? "The FAA lists no prohibition or advisory for foreign airspace." : "No current FAA data: see Sources below."]));
+
     var tf = (d.tfr || []).slice().sort(function (x, y) {
       return (y.tier === "anomaly") - (x.tier === "anomaly") || (x.effective || "").localeCompare(y.effective || ""); });
     document.getElementById("tfrs").replaceChildren(tf.length ? table(["NOTAM", "Type", "Where", "From", "Until"],
@@ -277,7 +304,8 @@
     var names = { "state-travel-advisories": "State Department travel advisories", "us-embassy-alerts": "US embassy alerts",
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
       "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
-      "faa-tfr": "FAA temporary flight restrictions", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
+      "faa-tfr": "FAA temporary flight restrictions",
+      "faa-prohibitions-notices": "FAA prohibitions and advisories for foreign airspace", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
       "gac-travel-advisories": "Government of Canada travel advisories",
       "nz-mfat-safetravel": "New Zealand SafeTravel advice",
       "cdc-travel-notices": "CDC travel health notices" };

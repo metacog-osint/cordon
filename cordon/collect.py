@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import canada, cdc, easa, embassy, faa, fcdo, navarea, safetravel, state, tfr
+from . import canada, cdc, easa, embassy, faa, faaprn, fcdo, navarea, safetravel, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -124,4 +124,13 @@ def run(when: str | None = None) -> dict:
         save("tfr.json", {"source": tfr.LIST_URL, "tfrs": tfrs})
         health("faa-tfr", True, tfr.health_detail(tfrs, read, failed), when)
     summary["tfr"] = err or f"{len(tfrs)} TFRs, {read} details read"
+
+    sections, prn_changes, err = faaprn.collect(load("faa_prn.json", {}).get("sections"), when)
+    if err:
+        health("faa-prohibitions-notices", False, err, when)
+    else:
+        save("faa_prn.json", {"source": faaprn.SOURCE_URL, "sections": sections})
+        append_jsonl("changes.jsonl", [{**c, "lane": "faaprn"} for c in prn_changes])
+        health("faa-prohibitions-notices", True, faaprn.summary(sections), when)
+    summary["faaprn"] = err or f"{len(sections)} sections, {len(prn_changes)} changes"
     return summary
