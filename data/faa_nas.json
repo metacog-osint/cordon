@@ -35,6 +35,21 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 92.0,
    "max_delay_min": 166.0
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "SAN",
+   "airport_name": "San Diego-Lindbergh Field",
+   "start": "2026-11-15T18:30:00Z",
+   "end": "2026-11-16T02:59:00Z",
+   "updated": "2026-11-15T16:16:52Z",
+   "reason": "airport volume",
+   "center": "ZLA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=39&adv_date=11152026&facId=SAN&title=ATCSCC ADVZY 039 SAN/ZLA 11/15/2026 CDM GROUND DELAY PROGRAM&titleDate=11/15/2026",
+   "included_facilities": 31,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 32.0,
+   "max_delay_min": 85.0
   }
  ],
  "airports": {
