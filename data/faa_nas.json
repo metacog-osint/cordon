@@ -12,6 +12,16 @@
    "issued": "2026-11-13T23:25:00Z"
   },
   {
+   "kind": "closure",
+   "airport": "SUA",
+   "airport_name": "Witham Field",
+   "start": "2026-11-15T16:00:00Z",
+   "end": "2026-11-15T22:30:00Z",
+   "updated": "2026-11-08T19:17:27Z",
+   "notam": "!MIA 11/160 SUA AD AP CLSD EXC AIRSHOW ACFT 2611151600-2611152230",
+   "issued": "2026-11-08T19:16:00Z"
+  },
+  {
    "kind": "ground_delay",
    "airport": "DJT",
    "airport_name": "President Donald J Trump International",
@@ -87,6 +97,11 @@
    -73.874,
    40.7769,
    "La Guardia"
+  ],
+  "MIA": [
+   -80.2871,
+   25.7959,
+   "Miami International"
   ],
   "ORD": [
    -87.9073,
