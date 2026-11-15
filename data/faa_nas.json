@@ -12,16 +12,6 @@
    "issued": "2026-11-13T23:25:00Z"
   },
   {
-   "kind": "closure",
-   "airport": "SUA",
-   "airport_name": "Witham Field",
-   "start": "2026-11-15T16:00:00Z",
-   "end": "2026-11-15T22:30:00Z",
-   "updated": "2026-11-08T19:17:27Z",
-   "notam": "!MIA 11/160 SUA AD AP CLSD EXC AIRSHOW ACFT 2611151600-2611152230",
-   "issued": "2026-11-08T19:16:00Z"
-  },
-  {
    "kind": "ground_delay",
    "airport": "AUS",
    "airport_name": "Austin-Bergstrom International",
@@ -35,21 +25,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 65.0,
    "max_delay_min": 183.0
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "SAN",
-   "airport_name": "San Diego-Lindbergh Field",
-   "start": "2026-11-15T18:30:00Z",
-   "end": "2026-11-16T02:59:00Z",
-   "updated": "2026-11-15T16:16:52Z",
-   "reason": "airport volume",
-   "center": "ZLA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=39&adv_date=11152026&facId=SAN&title=ATCSCC ADVZY 039 SAN/ZLA 11/15/2026 CDM GROUND DELAY PROGRAM&titleDate=11/15/2026",
-   "included_facilities": 31,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 32.0,
-   "max_delay_min": 85.0
   },
   {
    "kind": "ground_delay",
