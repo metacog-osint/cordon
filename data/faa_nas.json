@@ -1,6 +1,17 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [],
+ "programs": [
+  {
+   "kind": "closure",
+   "airport": "DAL",
+   "airport_name": "Dallas Love Field",
+   "start": "2026-11-15T02:29:00Z",
+   "end": "2026-11-15T12:00:00Z",
+   "updated": "2026-11-15T02:32:54Z",
+   "notam": "!DAL 11/044 DAL AD AP CLSD 2611150229-2611151200",
+   "issued": "2026-11-15T02:29:00Z"
+  }
+ ],
  "airports": {
   "ASE": [
    -106.8626,
@@ -21,6 +32,11 @@
    -71.0096,
    42.3656,
    "General Edward Lawrence Logan International"
+  ],
+  "DAL": [
+   -96.8512,
+   32.848,
+   "Dallas Love Field"
   ],
   "DCA": [
    -77.0402,
