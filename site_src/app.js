@@ -41,10 +41,12 @@
   // Leaflet inserts a string tooltip as HTML; a text node keeps source text as text.
   function tip(text) { return h("div", { "class": "tip" }, [text]); }
   function link(url, text) { return url ? h("a", { href: url, rel: "noopener" }, [text]) : text; }
+  // A table wider than a phone scrolls inside its own box (focusable, so the keyboard can scroll it too), so the
+  // page itself stays as wide as the screen and the house bar's buttons stay on it.
   function table(head, rows) {
-    return h("table", null, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
+    return h("div", { "class": "tbl", tabindex: "0" }, [h("table", null, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
       h("tbody", null, rows.map(function (r) { return h("tr", null, r.map(function (c) {
-        return c && c.td ? h("td", { "class": c.cls }, [c.td]) : h("td", null, [c]); })); }))]);
+        return c && c.td ? h("td", { "class": c.cls }, [c.td]) : h("td", null, [c]); })); }))])]);
   }
 
   // Wheel zoom stays off until the reader clicks the map, so scrolling the page never gets trapped in it.
