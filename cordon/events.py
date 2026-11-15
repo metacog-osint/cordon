@@ -1,7 +1,8 @@
 """Dated events for Verdict's calendar (site/data/events.json): when each active EASA bulletin expires unless
 renewed, and what changed in the last 30 days in the travel advice Cordon reads: State's advisory levels and embassy
 departure status, the UK FCDO's advise-against statements, Canada's and New Zealand's levels and regional advice,
-and CDC's travel health notices (issued, level changed, removed).
+CDC's travel health notices (issued, level changed, removed), and the FAA's SFARs and KICZ NOTAMs for foreign
+airspace (listed, withdrawn).
 
 Shaped like Verdict's calendar/events.json entries, with origin "cordon" and a ref (the bulletin's base number,
 e.g. CZIB-2026-04, or the lane's own key) so Verdict can link each event to the forecasts that name it.
@@ -17,7 +18,7 @@ import re
 from datetime import datetime, timedelta, timezone
 
 from . import canada as ca, cdc, fcdo, safetravel
-from .feed import CANADA_SRC, CDC_SRC, FCDO_SRC, SAFETRAVEL_SRC, STATE_SRC
+from .feed import CANADA_SRC, CDC_SRC, FAAPRN_SRC, FCDO_SRC, SAFETRAVEL_SRC, STATE_SRC
 
 EASA_PAGE = "https://www.easa.europa.eu/en/domains/air-operations/czibs"
 POSTURE_WORDS = {"normal": "normal operations", "authorized_departure": "authorized departure",
@@ -26,9 +27,10 @@ RECENT_DAYS = 30
 COVER_DAYS = 2  # a Canada change Cordon saw within this long after Canada's own update is that update
 # The change kinds each lane turns into events (State's text-only edits, new and removed advisories stay out).
 KINDS = {"state": {"level", "posture"}, "fcdo": {"alert"}, "canada": {"level", "regional"},
-         "safetravel": {"level", "regional"}, "cdc": {"new", "level", "removed"}}
+         "safetravel": {"level", "regional"}, "cdc": {"new", "level", "removed"}, "faaprn": {"new", "removed"}}
 PUBLISHERS = {"state": STATE_SRC["publisher"], "fcdo": FCDO_SRC["publisher"], "canada": CANADA_SRC["publisher"],
-              "safetravel": SAFETRAVEL_SRC["publisher"], "cdc": CDC_SRC["publisher"]}
+              "safetravel": SAFETRAVEL_SRC["publisher"], "cdc": CDC_SRC["publisher"],
+              "faaprn": FAAPRN_SRC["publisher"]}
 
 
 def _slug(key: str) -> str:
@@ -68,6 +70,9 @@ def _what(c: dict) -> str:
         if not b:
             return f'New Zealand SafeTravel removed its note on other levels in some areas (was: "{a}")'
         return f'New Zealand SafeTravel reworded its note on other levels in some areas: "{b}"'
+    if lane == "faaprn":
+        what = "listed" if kind == "new" else "withdrew"
+        return f"FAA {what} {c.get('label') or c['key']} ({c.get('entry_kind') or 'notice'}) for US operators"
     # cdc
     if kind == "new":
         return f"CDC issued a level {b} travel health notice ({cdc.LEVELS.get(b, b)})"
@@ -78,6 +83,8 @@ def _what(c: dict) -> str:
 
 def _change_event(c: dict) -> dict:
     countries = c.get("countries") if c["lane"] == "cdc" else ([c["iso"]] if c.get("iso") else [])
+    if c["lane"] == "faaprn":  # the FAA's page, at the section; the entry's own document is in the descriptor
+        c = {**c, "link": c.get("link") or FAAPRN_SRC["url"]}
     return {
         "id": f"{c['at'][:10]}-{c['lane']}-{_slug(c['key'])}-{c['kind']}", "date": c["at"][:10],
         "title": f"{c['name']}: {_what(c)}", "kind": "advisory_change", "occurred": True,

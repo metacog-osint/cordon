@@ -6,7 +6,7 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 """
 from datetime import datetime, timedelta, timezone
 
-from . import canada, cdc, faa, fcdo, navarea, safetravel, tfr
+from . import canada, cdc, faa, faaprn, fcdo, navarea, safetravel, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, registers, vocab  # noqa: E402
 
@@ -59,6 +59,12 @@ TFR_SRC = {"id": "faa-tfr", "publisher": "US Federal Aviation Administration (FA
            "the TFR site", "grade": "A1", "independence_group": "faa", "source_type": "official notice",
            "descriptor": "Temporary flight restriction (NOTAM), with the FAA's own boundary"}
 FAA_WORDS = {"ground_stop": "ground stop", "ground_delay": "ground delay program", "closure": "airport closure"}
+FAAPRN_SRC = {"id": "faa-prohibitions-notices", "publisher": "US Federal Aviation Administration (FAA)",
+              "url": faaprn.PAGE_URL, "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); "
+              "the FAA states no licence on the page", "grade": "A1", "independence_group": "faa",
+              "source_type": "official notice",
+              "descriptor": "Prohibitions, Restrictions and Notices: US flight prohibitions (SFARs) and security "
+                            "NOTAMs (KICZ) for foreign airspace"}
 STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS, TFR_SRC["id"]: tfr.STALE_HOURS}
 # Lines are tracklines as published; a GeometryCollection is areas or circles with tracklines; MultiPoint is a set of
 # positions with no shape given, so its extent is approximate.
@@ -391,10 +397,54 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
     return out, n
 
 
+def faaprn_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """One item per country or region where the FAA lists an SFAR or a KICZ NOTAM for US operators, titled by the
+    strongest of them (prohibition, advisory, pointer). A section where Cordon saw one appear or go in the last
+    RECENT_DAYS is an anomaly; one that appeared in the last NEW_HOURS is marked new. Seas and regions with no
+    country (Central America's Pacific, the Pacific Ocean, the Persian Gulf and Gulf of Oman) have no point."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    mine = {}
+    for c in changes:
+        if c.get("lane") == "faaprn":
+            mine.setdefault(c["section"], []).append(c)
+    out = []
+    for skey, s in sorted((data.get("sections") or {}).items()):
+        if not s.get("entries"):
+            continue
+        ents = sorted(s["entries"].values(), key=lambda e: (faaprn.KINDS.index(e["kind"]), e["key"]))
+        top = faaprn.strongest(s["entries"])
+        ch = mine.get(skey, [])
+        added = sorted({c["label"] for c in ch if c["kind"] == "new" and c["key"] in s["entries"]})
+        removed = sorted({c["label"] for c in ch if c["kind"] == "removed" and c["key"] not in s["entries"]})
+        is_new = any(c["kind"] == "new" and c["at"] >= new_from for c in ch)
+        link = f"{faaprn.PAGE_URL}#{s.get('anchor') or skey}"
+        iso = s.get("iso")
+        props = {**_base(fetched), "id": f"cordon:faaprn:{skey}",
+                 "title": f"FAA, {s['name']}: {faaprn.WORDS[top]} (" + ", ".join(e["label"] for e in ents) + ")",
+                 "tier": "anomaly" if (added or removed) else "routine", "data_as_of": fetched,
+                 "countries": [iso] if iso else [], "precision_class": "country" if iso else "none",
+                 "ncf": ["transport_by_air"], "sector": vocab.derive_sectors(["transport_by_air"]),
+                 "requirement_ids": ["CD-PIR-11"], "ie_aspect": ["physical"], "pmesii_pt": ["military", "infrastructure"],
+                 "ascope": ["areas"], "sources": [{**FAAPRN_SRC, "url": link, "accessed_at": fetched}], "link": link,
+                 "measures": {"strongest": top, "new": is_new,
+                              "entries": [{k: e[k] for k in ("key", "label", "kind", "text", "url", "firs")} for e in ents],
+                              "firs": sorted({f for e in ents for f in e.get("firs") or []}),
+                              "background": s.get("background") or []}}
+        if added or removed:
+            props["baseline_ref"] = {"id": "previous-faa-prohibitions", "type": "fixed", "version": "1",
+                                     "window": "the SFARs and KICZ NOTAMs the FAA listed for the section before"}
+            props["measures"].update({"changed_at": max(c["at"] for c in ch), "added": added, "removed": removed})
+        feat = {"type": "Feature", "geometry": _pt(iso, iso) if iso else None, "properties": props}
+        out.append(_place(feat, link))
+    return out
+
+
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
           uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
-          health_notices: dict | None = None, nz: dict | None = None) -> dict:
+          health_notices: dict | None = None, nz: dict | None = None, prn: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -566,6 +616,13 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             cd["withheld"] = len(health_notices.get("notices") or {})
         else:
             feats += cdc_items(health_notices, now, changes)
+
+    if prn is not None:
+        pr = src_health.setdefault(FAAPRN_SRC["id"], {"state": "never"})
+        if pr["state"] in ("stale", "never"):
+            pr["withheld"] = sum(1 for s in (prn.get("sections") or {}).values() if s.get("entries"))
+        else:
+            feats += faaprn_items(prn, now, changes)
 
     if tfrs is not None:
         tf = src_health.setdefault(TFR_SRC["id"], {"state": "never"})

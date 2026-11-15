@@ -30,7 +30,7 @@
   <section class="hero">
     <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
     <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's, Canada's and New Zealand's travel advice, CDC travel health notices, European
-      aviation conflict-zone bulletins, US navigational warnings to mariners, and the FAA's ground stops, ground delay
+      aviation conflict-zone bulletins, the FAA's flight prohibitions and advisories for foreign airspace, US navigational warnings to mariners, and the FAA's ground stops, ground delay
       programs, airport closures and temporary flight restrictions, collected every hour from the issuing authorities.</p>
   </section>
 
@@ -40,6 +40,7 @@
         <label><input type="checkbox" data-layer="advisories" checked> Travel advisory level</label>
         <label><input type="checkbox" data-layer="posture" checked> US embassy departure status</label>
         <label><input type="checkbox" data-layer="czib" checked> EASA conflict-zone bulletins</label>
+        <label><input type="checkbox" data-layer="prn" checked> FAA prohibitions and advisories abroad</label>
         <label><input type="checkbox" data-layer="navwarn" checked> Warnings to mariners</label>
         <label><input type="checkbox" data-layer="faa" checked> US airport programs (FAA)</label>
         <label><input type="checkbox" data-layer="tfr" checked> US flight restrictions (FAA TFRs)</label>
@@ -91,6 +92,15 @@
       <a href="https://launch.theintelligence.company/">Launch</a>.</p>
     <div id="tfrs"></div>
   </section>
+  <section class="card" aria-labelledby="prn-h">
+    <h2 id="prn-h">FAA prohibitions and advisories for foreign airspace</h2>
+    <p class="muted small">Where the FAA prohibits US operators from flying (Special Federal Aviation Regulations and
+      prohibition NOTAMs) or warns them of potentially hazardous airspace (advisory NOTAMs), from its Prohibitions,
+      Restrictions and Notices page. It applies to US operators and US-registered aircraft. A section where Cordon saw a
+      notice listed or withdrawn in the last 30 days is marked. The FAA gives no dates; a NOTAM number carries its year
+      (A0054/26 is 2026).</p>
+    <div id="prn"></div>
+  </section>
   <section class="card" aria-labelledby="fcdo-h">
     <h2 id="fcdo-h">UK foreign travel advice</h2>
     <p class="muted small">Where the UK Foreign, Commonwealth &amp; Development Office advises against all or all but
@@ -136,7 +146,7 @@
       Government Licence - Canada (Global Affairs Canada, travel.gc.ca). Travel health notices: Source: CDC; they are
       available free at wwwnc.cdc.gov/travel/notices, and their use here does not imply endorsement by CDC, HHS or the
       US Government. New Zealand's travel advice: Ministry of Foreign Affairs and Trade, SafeTravel
-      (safetravel.govt.nz), Crown copyright, licensed under CC BY 4.0. FAA flight restrictions (tfr.faa.gov) are a US Government work. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+      (safetravel.govt.nz), Crown copyright, licensed under CC BY 4.0. FAA flight restrictions (tfr.faa.gov) and the FAA's Prohibitions, Restrictions and Notices are US Government works. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
       OSAC is not used: its terms bar republishing.</p>
   </section>
 </main>

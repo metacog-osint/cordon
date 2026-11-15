@@ -1,7 +1,7 @@
 # Cordon method (doctrine summary)
 
 Cordon collects official warnings that tell people to stay away: US travel advisories and embassy departure status,
-the UK's, Canada's and New Zealand's travel advice, CDC's travel health notices, EASA conflict-zone bulletins for aircraft, NGA's navigational warnings for ships, and
+the UK's, Canada's and New Zealand's travel advice, CDC's travel health notices, EASA conflict-zone bulletins and the FAA's flight prohibitions and advisories for foreign airspace for aircraft, NGA's navigational warnings for ships, and
 the FAA's ground stops, ground delay programs, airport closures and temporary flight restrictions. It states them in the terms of
 The Intelligence Company's doctrine kit (`doctrine/kit/`).
 
@@ -22,6 +22,12 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   country) and its own one-line note of each update. A country's page is read only when the FCDO updates it.
 - **FAA temporary flight restrictions** (`tfr.faa.gov`, keyless): the list, and for each TFR its NOTAM text, UTC
   times, floor and ceiling, and the FAA's own outline. Each detail file is read once per NOTAM number.
+- **FAA Prohibitions, Restrictions and Notices** (`faa.gov/air_traffic/publications/us_restrictions`, one page,
+  keyless; a US Government work, as Cordon reads it, since the FAA states no licence there): for each country or
+  region the FAA lists, its Special Federal Aviation Regulations (prohibitions) and its KICZ security NOTAMs
+  (prohibitions, advisories of potentially hazardous airspace, and pointers to an SFAR), each with the FAA's own
+  title, document and the FIR codes it names; FAA background notices are kept as links. Routing rules for US
+  territory, CFR sections, ICAO letters and DOT or OFAC notices on the page are not read. The page gives no dates.
 - **Government of Canada travel advice and advisories** (`data.international.gc.ca` open data, keyless, Open
   Government Licence - Canada): for about 230 places, Canada's level (exercise normal security precautions, a high
   degree of caution, avoid non-essential travel, avoid all travel), whether it has regional advisories, and its own
@@ -55,6 +61,10 @@ special notice issued in the last 72 hours is an anomaly against the TFRs listed
 over stadiums and Disney parks, which are standing; every other TFR is routine. Space operations TFRs are read and
 kept in Cordon's data but left off its feed and map: Launch publishes them and marks one issued in the last 72 hours
 an anomaly by the same rule (since 14 Nov 2026).
+An SFAR or KICZ NOTAM that Cordon saw the FAA list or withdraw for a country or region in the last 30 days makes
+that section an anomaly against what the FAA listed before (none on the first read); every other section with an
+SFAR or KICZ NOTAM is routine. Cordon reports the FAA's own words (prohibition, advisory, pointer) and does not rank
+them against EASA's bulletins. The FAA's notices bind US operators; they are not a statement about other airlines.
 A change of Canada's level or regional advisories for a place in the last 30 days is an anomaly against what Cordon
 held before; so is an update in the last 72 hours that Canada itself labels an advisory change, or whose note starts
 with its risk level section (the label alone missed one: Mexico, 12 Nov 2026). Places above Canada's lowest level or
@@ -86,7 +96,9 @@ The hazard is drawn once, under the NAVAREA copy (otherwise the earliest issued)
 `measures.rebroadcasts` with every position that differs, as each was written, and counted in the health block's
 `rebroadcasts_merged`. FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
-whole system is drawn at the US label point. FCDO, Canadian and New Zealand advice is placed at the country's label point (the Azores, which
+whole system is drawn at the US label point. The FAA's prohibitions and advisories are drawn as the country's outline
+on the map and placed at its label point in the feed; the three sections that name a sea or region (Central America's
+Pacific waters, the Pacific Ocean, the Persian Gulf and Gulf of Oman) have no point and link the FAA's page. FCDO, Canadian and New Zealand advice is placed at the country's label point (the Azores, which
 Canada advises on apart from Portugal, at Ponta Delgada). A CDC notice is placed at the label point of each
 country it names: from its Country List when CDC gives one (the pieces after "including" are parts of the country
 before them; a territory such as "Azores (Portugal)" is placed in the country in its parentheses), otherwise from the
@@ -103,5 +115,5 @@ health detail and `held_areas` say so, and after 48 hours held its warnings are 
 alert feeds were down on 31 Oct 2026 ("Technical Difficulties"), so that layer may be empty. FAA programs last hours,
 so the FAA list goes stale after 3 hours without a good fetch and is then withheld; from a held list (the latest fetch
 failed) a program past its listed end time is dropped. TFRs go stale after 6 hours without a good list; a TFR past
-its own expiry is dropped and counted (`expired`). Canada's index, New Zealand's list and CDC's notices go stale after 48 hours. The FCDO list goes stale after 48 hours; a country page that fails
+its own expiry is dropped and counted (`expired`). Canada's index, New Zealand's list, CDC's notices and the FAA's prohibitions page go stale after 48 hours. The FCDO list goes stale after 48 hours; a country page that fails
 keeps its last statements and is asked for again on the next run.

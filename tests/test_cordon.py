@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import canada, cdc, easa, embassy, faa, fcdo, feed, navarea, safetravel, state, tfr  # noqa: E402
+from cordon import canada, cdc, easa, embassy, faa, faaprn, fcdo, feed, navarea, safetravel, state, tfr  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -1296,6 +1296,128 @@ class Cdc(unittest.TestCase):
         self.assertEqual(fc["features"], [])
         self.assertEqual((fc["health"]["cdc-travel-notices"]["state"], fc["health"]["cdc-travel-notices"]["withheld"]),
                          ("stale", 3))
+
+
+
+PRN_US = ['<a href="/media/82381">Federal Aviation Administration (FAA) Flight Routing Authorization Requirements for '
+          'China in United States Territorial Airspace</a>']
+PRN_AF = ['<a href="/x/SFAR-119.pdf">Special Federal Aviation Regulation (<abbr>SFAR</abbr>) 119 -&nbsp;Prohibitions '
+          'Against Certain Flights in the Kabul Flight Information Region (<abbr>FIR</abbr>) (<abbr>OAKX</abbr>)</a>',
+          '<a href="/x/A0007-25.pdf">KICZ NOTAM A0007/25 Kabul Pointer</a>']
+PRN_BY = ['<a href="media/KICZ_A0003-22.pdf"><abbr>KICZ</abbr> <abbr>NOTAM</abbr> A0003/22 \u2014 Security \u2014 United States '
+          'of America Prohibition Against Certain Flights in the Minsk Flight Information Region (<abbr>FIR</abbr>) '
+          '(<abbr>UMMV</abbr>)</a> <small>(</small><abbr><small>PDF</small></abbr><small>)</small>']
+PRN_CO = ['<a href="/x/A0050_26_SKED.pdf">KICZ NOTAM A0050/26 Security - United States of America Advisory for '
+          'Potentially Hazardous Situation in the Overwater Areas Above the Pacific Ocean in the Bogota Flight '
+          'Information Region (SKED)</a>',
+          '<a href="/x/Background.pdf">FAA Background Information Regarding Airspace Risks Within the Eastern Pacific '
+          'Ocean Region</a>']
+PRN_KP = ['<a href="/x/SFAR79.pdf">Special Federal Aviation Regulation (SFAR) 79 \u2013 Prohibition Against Certain Flights '
+          'in the Pyongyang Flight Information Region (FIR) (ZKKP)</a>']
+PRN_PO = ['<a href="/x/A0052_26_XX01.pdf">KICZ NOTAM A0052/26 Security - United States of America Advisory for '
+          'Potentially Hazardous Situation in the Specified Portion of the No FIR Flight Information Region</a>']
+
+
+def prn_page(colombia=None, drop=()):
+    """A cut-down copy of the FAA page as served on 15 Nov 2026: an index and an acronyms heading with no anchor,
+    then one h2 with a ck-anchor per section, and a footer list after </main>."""
+    secs = [("United States", "US", PRN_US), ("Afghanistan", "Afghanistan", PRN_AF), ("Belarus", "Belarus", PRN_BY),
+            ("Colombia", "colombia", PRN_CO if colombia is None else colombia), ("Korea, North", "NKorea", PRN_KP),
+            ("Pacific Ocean", "pacific-ocean", PRN_PO), ("Saudi Arabia", "saudi_arabia", [])]
+    secs += [(n, n, []) for n in ("Bahamas", "Canada", "Cuba", "Panama")]
+    body = "".join(f'<h2 id="restrict{a}">{n}<a class="ck-anchor" id="{a}"></a></h2><ul>'
+                   + "".join(f"<li>{x}</li>" for x in lis) + '</ul><p><a class="anchorUp" href="#content">Back to top</a></p>'
+                   for n, a, lis in secs if n not in drop)
+    return ('<main><h2>Alphabetical List by Country</h2><ul><li><a href="#US">United States</a></li></ul>'
+            '<h2>The following acronyms are used to identify sources of information:</h2>' + body
+            + '</main><footer><ul><li><a href="/about">About FAA</a></li></ul></footer>').encode()
+
+
+class FaaPrn(unittest.TestCase):
+    NOW = datetime(2026, 11, 15, 3, 0, tzinfo=timezone.utc)
+    STAMP = "2026-11-15T03:00:00Z"
+
+    def test_parse_entries_kinds_firs_and_places(self):
+        s = faaprn.parse(prn_page())
+        self.assertEqual(len(s), 11)
+        af = s["afghanistan"]["entries"]
+        self.assertEqual(sorted(af), ["KICZ-A0007-25", "SFAR-119"])
+        self.assertEqual((af["SFAR-119"]["kind"], af["SFAR-119"]["label"], af["SFAR-119"]["firs"]),
+                         ("prohibition", "SFAR 119", ["OAKX"]))  # "(<abbr>SFAR</abbr>) 119" read; SFAR is no FIR
+        self.assertEqual(af["KICZ-A0007-25"]["kind"], "pointer")
+        by = s["belarus"]["entries"]["KICZ-A0003-22"]
+        self.assertEqual((by["kind"], by["firs"], by["url"]),
+                         ("prohibition", ["UMMV"], faaprn.PAGE_URL + "/media/KICZ_A0003-22.pdf"))
+        co = s["colombia"]
+        self.assertEqual((co["entries"]["KICZ-A0050-26"]["kind"], co["entries"]["KICZ-A0050-26"]["firs"]),
+                         ("advisory", ["SKED"]))
+        self.assertEqual(co["background"][0]["url"], "https://www.faa.gov/x/Background.pdf")
+        self.assertEqual((s["korea-north"]["iso"], s["pacific-ocean"]["iso"], s["colombia"]["iso"]), ("KP", None, "CO"))
+        self.assertEqual((s["united-states"]["entries"], s["united-states"]["other"]), ({}, 1))
+        self.assertEqual(s["panama"]["other"], 0, "the footer after </main> is not part of the last section")
+        self.assertEqual(faaprn.summary(s), "5 of 11 sections with an SFAR or KICZ NOTAM: 2 SFARs, 4 KICZ NOTAMs; "
+                                            "3 prohibitions, 2 advisories, 1 pointers")
+
+    def test_collect_logs_entries_listed_and_withdrawn(self):
+        first, ch, err = faaprn.collect(None, self.STAMP, lambda u, t=40: (prn_page(), None))
+        self.assertEqual((ch, err), ([], None))
+        co = [PRN_CO[0].replace("A0050/26", "A0060/26").replace("A0050_26", "A0060_26"), PRN_CO[1]]
+        _, ch, err = faaprn.collect(first, self.STAMP, lambda u, t=40: (prn_page(colombia=co, drop=("Belarus",)), None))
+        self.assertIsNone(err)
+        self.assertEqual(sorted((c["section"], c["key"], c["kind"], c["entry_kind"]) for c in ch),
+                         [("belarus", "KICZ-A0003-22", "removed", "prohibition"),
+                          ("colombia", "KICZ-A0050-26", "removed", "advisory"),
+                          ("colombia", "KICZ-A0060-26", "new", "advisory")])
+        new = next(c for c in ch if c["kind"] == "new")
+        self.assertEqual((new["iso"], new["name"], new["link"]), ("CO", "Colombia", faaprn.PAGE_URL + "#colombia"))
+        few = prn_page(drop=("Bahamas", "Canada", "Cuba"))
+        self.assertIn("only 8 sections", faaprn.collect(first, self.STAMP, lambda u, t=40: (few, None))[2])
+        self.assertIs(faaprn.collect(first, self.STAMP, lambda u, t=40: (None, "HTTP 503"))[0], first)
+
+    def build(self, changes=(), last_ok=None):
+        h = {"faa-prohibitions-notices": {"last_ok": last_ok or self.STAMP, "failures": 0, "checked_at": self.STAMP}}
+        prn = {"sections": faaprn.parse(prn_page()), "fetched_at": self.STAMP}
+        with unittest.mock.patch.object(feed, "recent_changes", lambda now: list(changes)):
+            return feed.build({}, {}, {}, {}, self.NOW, h, prn=prn)
+
+    def test_items_titles_tiers_and_places(self):
+        changes = [{"at": "2026-11-14T10:00:00Z", "lane": "faaprn", "kind": "new", "section": "colombia",
+                    "key": "KICZ-A0050-26", "label": "KICZ NOTAM A0050/26", "entry_kind": "advisory", "name": "Colombia",
+                    "iso": "CO", "link": faaprn.PAGE_URL + "#colombia", "from": None, "to": "advisory"}]
+        fc = self.build(changes)
+        self.assertEqual(fc["dropped"], [])
+        items = {f["properties"]["id"]: f for f in fc["features"]}
+        self.assertEqual(sorted(items), ["cordon:faaprn:afghanistan", "cordon:faaprn:belarus", "cordon:faaprn:colombia",
+                                         "cordon:faaprn:korea-north", "cordon:faaprn:pacific-ocean"])
+        af = items["cordon:faaprn:afghanistan"]
+        self.assertEqual(af["properties"]["title"], "FAA, Afghanistan: US flight prohibition (SFAR 119, KICZ NOTAM A0007/25)")
+        self.assertEqual((af["properties"]["tier"], af["properties"]["countries"], af["geometry"]["type"]),
+                         ("routine", ["AF"], "Point"))
+        co = items["cordon:faaprn:colombia"]["properties"]
+        self.assertEqual((co["tier"], co["measures"]["added"], co["measures"]["new"], co["baseline_ref"]["id"]),
+                         ("anomaly", ["KICZ NOTAM A0050/26"], True, "previous-faa-prohibitions"))
+        self.assertTrue(co["title"].startswith("FAA, Colombia: US advisory for potentially hazardous airspace"))
+        po = items["cordon:faaprn:pacific-ocean"]
+        self.assertEqual((po["geometry"], po["properties"]["countries"], po["properties"]["precision_class"],
+                          po["properties"]["visual"]["url"]), (None, [], "none", faaprn.PAGE_URL + "#pacific-ocean"))
+        self.assertEqual(fc["health"]["faa-prohibitions-notices"]["state"], "fresh")
+
+    def test_a_stale_page_is_withheld(self):
+        fc = self.build(last_ok="2026-11-12T00:00:00Z")
+        self.assertEqual(fc["features"], [])
+        self.assertEqual((fc["health"]["faa-prohibitions-notices"]["state"],
+                          fc["health"]["faa-prohibitions-notices"]["withheld"]), ("stale", 5))
+
+    def test_verdict_event_for_a_listed_notice(self):
+        from cordon import events
+        c = {"at": "2026-11-14T10:00:00Z", "lane": "faaprn", "kind": "new", "section": "colombia",
+             "key": "KICZ-A0050-26", "label": "KICZ NOTAM A0050/26", "entry_kind": "advisory", "name": "Colombia",
+             "iso": "CO", "link": faaprn.PAGE_URL + "#colombia", "from": None, "to": "advisory"}
+        ev = events.build([], [c], self.NOW)["events"]
+        self.assertEqual([(e["id"], e["title"], e["countries"], e["source"]["publisher"]) for e in ev],
+                         [("2026-11-14-faaprn-kicz-a0050-26-new",
+                           "Colombia: FAA listed KICZ NOTAM A0050/26 (advisory) for US operators", ["CO"],
+                           "US Federal Aviation Administration (FAA)")])
 
 
 class Events(unittest.TestCase):
