@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-14T02:40:16Z",
+ "generated": "2026-11-15T18:40:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -981,9 +981,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-06T13:03:06Z",
+   "updated": "2026-11-15T18:20:52Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Safety and security – added information on a state of siege in the departments of Izabal and Zacapa",
    "link": "https://travel.gc.ca/destinations/guatemala"
   },
   "GU": {
