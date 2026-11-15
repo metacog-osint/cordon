@@ -20,6 +20,16 @@
    "updated": "2026-11-09T13:14:35Z",
    "notam": "!PNS 11/029 PNS AD AP CLSD EXC HEL OPS 2611150600-2611151100",
    "issued": "2026-11-09T13:11:00Z"
+  },
+  {
+   "kind": "closure",
+   "airport": "SNA",
+   "airport_name": "John Wayne Airport-Orange County",
+   "start": "2026-11-15T07:30:00Z",
+   "end": "2026-11-21T14:15:00Z",
+   "updated": "2026-11-13T23:29:10Z",
+   "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
+   "issued": "2026-11-13T23:25:00Z"
   }
  ],
  "airports": {
