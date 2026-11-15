@@ -98,10 +98,20 @@
    40.7769,
    "La Guardia"
   ],
+  "MCO": [
+   -81.3081,
+   28.4312,
+   "Orlando International"
+  ],
   "MIA": [
    -80.2871,
    25.7959,
    "Miami International"
+  ],
+  "OPF": [
+   -80.27736,
+   25.90743,
+   "Miami-Opa Locka Executive Airport"
   ],
   "ORD": [
    -87.9073,
@@ -112,6 +122,11 @@
    -87.1866,
    30.4738,
    "Pensacola Regional"
+  ],
+  "RSW": [
+   -81.7553,
+   26.5337,
+   "Southwest Florida International"
   ],
   "SAN": [
    -117.1933,
