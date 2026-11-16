@@ -3,16 +3,6 @@
  "programs": [
   {
    "kind": "closure",
-   "airport": "ARA",
-   "airport_name": "Acadiana Regional",
-   "start": "2026-11-16T17:12:00Z",
-   "end": "2026-11-16T19:00:00Z",
-   "updated": "2026-11-16T17:17:52Z",
-   "notam": "!ARA 11/005 ARA AD AP CLSD 2611161712-2611161900",
-   "issued": "2026-11-16T17:12:00Z"
-  },
-  {
-   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
@@ -55,13 +45,13 @@
    "kind": "ground_stop",
    "airport": "AUS",
    "airport_name": "Austin-Bergstrom International",
-   "start": "2026-11-16T17:54:00Z",
-   "end": "2026-11-16T19:15:00Z",
-   "updated": "2026-11-16T18:10:21Z",
+   "start": "2026-11-16T18:55:00Z",
+   "end": "2026-11-16T20:15:00Z",
+   "updated": "2026-11-16T19:07:08Z",
    "reason": "runway construction",
    "center": "ZHU",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=49&adv_date=11162026&facId=AUS&title=ATCSCC ADVZY 049 AUS/ZHU 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
-   "included_facilities": 3,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=54&adv_date=11162026&facId=AUS&title=ATCSCC ADVZY 054 AUS/ZHU 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "included_facilities": 7,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
   },
@@ -70,14 +60,14 @@
    "airport": "LGA",
    "airport_name": "La Guardia",
    "start": "2026-11-16T18:00:00Z",
-   "end": "2026-11-16T19:00:00Z",
-   "updated": "2026-11-16T18:12:29Z",
+   "end": "2026-11-16T19:45:00Z",
+   "updated": "2026-11-16T18:51:39Z",
    "reason": "airspace volume",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=50&adv_date=11162026&facId=LGA&title=ATCSCC ADVZY 050 LGA/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=53&adv_date=11162026&facId=LGA&title=ATCSCC ADVZY 053 LGA/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
    "included_facilities": 1,
    "included_flights": null,
-   "probability_of_extension": "LOW"
+   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
