@@ -1,10 +1,12 @@
-/*! tic-area.js v1.0 (Cordon, 15 Nov 2026) · "My area": each viewer picks the part of the world they care about,
+/*! tic-area.js v1.1 (Cordon 15 Nov 2026; Elements 16 Nov 2026: per-site note) · "My area": each viewer picks the part of the world they care about,
  * saved in this browser only. Places outside it are dimmed, never hidden. Written to move into the hub's shared/
  * folder beside tic-time.js once a second site uses it. Uses tic-time.css for its dialog.
  *
- *    TicArea.mountSettings(el, states)  adds an "Area" button; states = [{code: "US-ND", name, boxes: [[w,s,e,n], ...]}]
+ *    TicArea.mountSettings(el, states, opts)  adds an "Area" button; states = [{code: "US-ND", name, boxes: [[w,s,e,n], ...]}];
+ *                                       opts.note replaces the dialog's closing note (v1.1)
  *    TicArea.get()                      {kind: "all"|"conus"|"state"|"near", code?, lat?, lon?, km?}
- *    TicArea.contains(item)             true or false; item = {subdivisions, countries, geometry}
+ *    TicArea.contains(item)             true or false; item = {subdivisions, countries, geometry}; countries
+ *                                       without "US" put an item outside any US state or the US 48 (v1.1)
  *    TicArea.label()                    the area in words ("North Dakota", "within 150 km of 46.88, -96.79")
  *    TicArea.onChange(fn)
  */
@@ -76,8 +78,9 @@
     return 6371 * 2 * Math.asin(Math.min(1, Math.sqrt(h)));
   }
 
-  /* An item is in the area when its program placed it in a chosen state (its `subdivisions`); failing that, when
-   * one of its points lies in the area's box, or (for an area or line) its box meets the area's box: a warning at sea
+  /* An item is in the area when its program placed it in a chosen state (its `subdivisions`); an item whose
+   * `countries` leave out the US is outside any US state or the US 48 (v1.1: a flood in Mexico inside the US 48's box);
+   * failing that, when one of its points lies in the area's box, or (for an area or line) its box meets the area's box: a warning at sea
    * off the coast. A "near" area takes any of its points within the distance, or a polygon around the centre. A set
    * of scattered points (drilling rigs, radio sites) is never judged by the box around all of them. */
   function contains(item) {
@@ -96,6 +99,8 @@
       var ib = boxOf(g);
       return boxes.some(function (b) { return meets(ib, b); });
     }
+    var cc = item.countries || [];
+    if ((a.kind === "state" || a.kind === "conus") && cc.length && cc.indexOf("US") < 0) return false;
     if (a.kind === "state") {
       if (subs.length) return subs.indexOf(a.code) >= 0;
       return placed((byCode[a.code] || {}).boxes || []);
@@ -120,7 +125,9 @@
     (kids || []).forEach(function (k) { e.append(k); });
     return e;
   }
-  function mountSettings(container, list) {
+  var NOTE = "Notices tied to a place outside your area are dimmed, not hidden. Travel advice for other countries is " +
+    "never dimmed. Saved in this browser only; your location is never sent anywhere.";
+  function mountSettings(container, list, opts) {
     states = (list || []).slice().sort(function (x, y) { return x.name.localeCompare(y.name); });
     byCode = {};
     conusBox = null;
@@ -152,8 +159,7 @@
     dlg.append(el("h2", null, ["Your area"]),
       el("p", { "class": "tic-time-row" }, [el("label", { "for": "tic-area-kind" }, ["Area "]), sel]), nearRow, msg,
       el("p", { "class": "tic-time-actions" }, [cancel, done]),
-      el("p", { "class": "tic-time-note" }, ["Notices tied to a place outside your area are dimmed, not hidden. Travel advice " +
-        "for other countries is never dimmed. Saved in this browser only; your location is never sent anywhere."]));
+      el("p", { "class": "tic-time-note" }, [(opts && opts.note) || NOTE]));
     function show() {
       var a = current;
       sel.value = a.kind === "state" ? "state:" + a.code : a.kind;
