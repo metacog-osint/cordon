@@ -61,8 +61,9 @@ special notice issued in the last 72 hours is an anomaly against the TFRs listed
 impact and not a re-issue (since 15 Nov 2026, Tom's request that alerts weigh what a restriction does). Impact is
 measured from the FAA's own outline, floor, ceiling and times: high when within 56 km (30 nm) of one of the FAA's
 Core 30 airports with a ceiling of 3,000 ft or more, when it covers 2,500 km2 or more, or when it reaches FL180 (the
-floor of Class A) over 500 km2 or more; moderate when it reaches FL180, covers 250 km2 or more, or lies within 56 km of
-a Core 30 airport; low otherwise (a small, low TFR away from the busiest airports, as most volcano, fire and range
+floor of Class A) over 500 km2 or more; moderate when it reaches FL180 over 100 km2 or more, covers 250 km2 or more,
+or lies within 56 km of a Core 30 airport; low otherwise (since 16 Nov 2026, a smaller column to FL180 or above, such
+as a range's 29 km2 munitions test, is low: traffic steps around it) (a small, low TFR away from the busiest airports, as most volcano, fire and range
 TFRs are). Low-impact TFRs stay routine. A VIP TFR is an anomaly only at high impact. A re-issue is a new TFR of
 the same type whose bounding box overlaps by half or more one Cordon held before it, still listed or gone within 14
 days (the FAA cancels a changed TFR and reissues it under a new number); it is routine and names the one it repeats,
