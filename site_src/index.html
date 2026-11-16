@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-time.css">
+<link rel="stylesheet" href="tic-tabs.css">
+<script src="tic-tabs.js" defer></script>
 <script src="tic-time.js"></script>
 <script src="tic-area.js"></script>
 <link rel="stylesheet" href="tic-nav.css">
@@ -53,107 +55,116 @@
     <p id="area-note" class="muted small" aria-live="polite"></p>
   </section>
 
-  <div class="two">
-    <section class="card" aria-labelledby="posture-h">
-      <h2 id="posture-h">US embassy departure status</h2>
-      <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>
-      <div id="posture"></div>
-    </section>
-    <section class="card" aria-labelledby="czib-h">
-      <h2 id="czib-h">EASA conflict-zone bulletins in force</h2>
-      <p class="muted small">Sorted by the date each expires unless EASA renews it.</p>
-      <div id="czibs"></div>
-    </section>
+  <!-- Sections: one group at a time on phones, a section row everywhere (tic-tabs.js from the hub) -->
+  <div data-tic-tabs>
+    <div id="sec-changes" data-tab-label="Changes">
+      <section class="card" aria-labelledby="changes-h">
+        <h2 id="changes-h">Changes in the last 30 days</h2>
+        <div id="changes"></div>
+      </section>
+    </div>
+    <div id="sec-travel" data-tab-label="Travel">
+      <div class="two">
+        <section class="card" aria-labelledby="levels-h">
+          <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
+          <div id="levels"></div>
+        </section>
+        <section class="card" aria-labelledby="posture-h">
+          <h2 id="posture-h">US embassy departure status</h2>
+          <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>
+          <div id="posture"></div>
+        </section>
+      </div>
+      <section class="card" aria-labelledby="fcdo-h">
+        <h2 id="fcdo-h">UK foreign travel advice</h2>
+        <p class="muted small">Where the UK Foreign, Commonwealth &amp; Development Office advises against all or all but
+          essential travel, and any country whose advice it updated in the last 72 hours, with its own note of what changed.</p>
+        <div id="fcdo"></div>
+      </section>
+      <section class="card" aria-labelledby="canada-h">
+        <h2 id="canada-h">Canada's travel advisories</h2>
+        <p class="muted small">Where the Government of Canada advises avoiding non-essential travel or all travel, any
+          change to a level or to regional advisories, and any place it updated in the last 72 hours (editorial
+          changes and updates to embassy contacts aside), with its own note of what changed. The feed also carries every place where Canada advises a high degree of
+          caution or has regional advisories.</p>
+        <div id="canada"></div>
+      </section>
+      <section class="card" aria-labelledby="safetravel-h">
+        <h2 id="safetravel-h">New Zealand's travel advice</h2>
+        <p class="muted small">Where New Zealand's Ministry of Foreign Affairs and Trade advises avoiding non-essential travel
+          or not travelling, any change to a level or to its note of other levels in some areas, and any destination it
+          updated in the last 72 hours (it gives the day, not the time). The feed also carries every destination where it
+          advises increased caution or where other levels apply in some areas.</p>
+        <div id="safetravel"></div>
+      </section>
+      <section class="card" aria-labelledby="cdc-h">
+        <h2 id="cdc-h">Travel health notices (CDC)</h2>
+        <p class="muted small">Every travel health notice CDC has in force, at its own level (1 Practice Usual Precautions,
+          2 Practice Enhanced Precautions, 3 Reconsider Nonessential Travel, 4 Avoid All Travel), with the places it names.
+          A notice Cordon saw appear or change level in the last 30 days is marked.</p>
+        <div id="cdc"></div>
+      </section>
+    </div>
+    <div id="sec-air" data-tab-label="Air">
+      <div class="two">
+        <section class="card" aria-labelledby="czib-h">
+          <h2 id="czib-h">EASA conflict-zone bulletins in force</h2>
+          <p class="muted small">Sorted by the date each expires unless EASA renews it.</p>
+          <div id="czibs"></div>
+        </section>
+        <section class="card" aria-labelledby="faa-h">
+          <h2 id="faa-h">US airport ground stops, delay programs and closures</h2>
+          <p class="muted small">As the FAA's National Airspace System status lists them, with the reason in the FAA's own words.
+            Cordon adds no cause. A ground stop is marked unusual when more are in effect at once than Cordon's own record of
+            them makes normal.</p>
+          <div id="faa"></div>
+        </section>
+      </div>
+      <section class="card" aria-labelledby="prn-h">
+        <h2 id="prn-h">FAA prohibitions and advisories for foreign airspace</h2>
+        <p class="muted small">Where the FAA prohibits US operators from flying (Special Federal Aviation Regulations and
+          prohibition NOTAMs) or warns them of potentially hazardous airspace (advisory NOTAMs), from its Prohibitions,
+          Restrictions and Notices page. It applies to US operators and US-registered aircraft. A section where Cordon saw a
+          notice listed or withdrawn in the last 30 days is marked. The FAA gives no dates; a NOTAM number carries its year
+          (A0054/26 is 2026).</p>
+        <div id="prn"></div>
+      </section>
+      <section class="card" aria-labelledby="tfr-h">
+        <h2 id="tfr-h">US temporary flight restrictions</h2>
+        <p class="muted small">FAA TFRs with an area: security, VIP movements, fires and other hazards, drones over crowds,
+          air shows. Outlines and times as the FAA publishes them (times are UTC in its data). Impact is Cordon's measure
+          of what a TFR restricts: high near one of the FAA's 30 busiest airports, over 2,500 km&sup2; or reaching FL180
+          over a wide area; low when small, low and away from them. A security or special TFR (or a VIP TFR of high impact)
+          issued in the last 72 hours is marked new unless its impact is low or it re-issues one held before. Standing nationwide notices with no area are not listed. Space
+          operations TFRs (launches and recoveries) are on
+          <a href="https://launch.theintelligence.company/">Launch</a>.</p>
+        <div id="tfrs"></div>
+      </section>
+    </div>
+    <div id="sec-sea" data-tab-label="Sea">
+      <section class="card" aria-labelledby="nav-h">
+        <h2 id="nav-h">Warnings to mariners in force</h2>
+        <p class="muted small">NGA broadcast warnings, grouped by what they warn of. The map shows each one where its text places it.</p>
+        <div id="navcats"></div>
+      </section>
+    </div>
+    <div id="sec-sources" data-tab-label="Sources">
+      <section class="card" aria-labelledby="health-h">
+        <h2 id="health-h">Sources</h2>
+        <div id="health"></div>
+        <p class="small muted">US Department of State (travel.state.gov), NGA (msi.nga.mil) and FAA (nasstatus.faa.gov)
+          content is US public domain; the FAA's airport coordinates come with its status data.
+          EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
+          Bulletins. UK travel advice: contains public sector information licensed under the Open Government Licence v3.0
+          (FCDO, gov.uk/foreign-travel-advice). Canada's travel advice: contains information licensed under the Open
+          Government Licence - Canada (Global Affairs Canada, travel.gc.ca). Travel health notices: Source: CDC; they are
+          available free at wwwnc.cdc.gov/travel/notices, and their use here does not imply endorsement by CDC, HHS or the
+          US Government. New Zealand's travel advice: Ministry of Foreign Affairs and Trade, SafeTravel
+          (safetravel.govt.nz), Crown copyright, licensed under CC BY 4.0. FAA flight restrictions (tfr.faa.gov) and the FAA's Prohibitions, Restrictions and Notices are US Government works. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+          OSAC is not used: its terms bar republishing.</p>
+      </section>
+    </div>
   </div>
-
-  <div class="two">
-    <section class="card" aria-labelledby="changes-h">
-      <h2 id="changes-h">Changes in the last 30 days</h2>
-      <div id="changes"></div>
-    </section>
-    <section class="card" aria-labelledby="nav-h">
-      <h2 id="nav-h">Warnings to mariners in force</h2>
-      <p class="muted small">NGA broadcast warnings, grouped by what they warn of. The map shows each one where its text places it.</p>
-      <div id="navcats"></div>
-    </section>
-  </div>
-
-  <section class="card" aria-labelledby="faa-h">
-    <h2 id="faa-h">US airport ground stops, delay programs and closures</h2>
-    <p class="muted small">As the FAA's National Airspace System status lists them, with the reason in the FAA's own words.
-      Cordon adds no cause. A ground stop is marked unusual when more are in effect at once than Cordon's own record of
-      them makes normal.</p>
-    <div id="faa"></div>
-  </section>
-
-  <section class="card" aria-labelledby="tfr-h">
-    <h2 id="tfr-h">US temporary flight restrictions</h2>
-    <p class="muted small">FAA TFRs with an area: security, VIP movements, fires and other hazards, drones over crowds,
-      air shows. Outlines and times as the FAA publishes them (times are UTC in its data). Impact is Cordon's measure
-      of what a TFR restricts: high near one of the FAA's 30 busiest airports, over 2,500 km&sup2; or reaching FL180
-      over a wide area; low when small, low and away from them. A security or special TFR (or a VIP TFR of high impact)
-      issued in the last 72 hours is marked new unless its impact is low or it re-issues one held before. Standing nationwide notices with no area are not listed. Space
-      operations TFRs (launches and recoveries) are on
-      <a href="https://launch.theintelligence.company/">Launch</a>.</p>
-    <div id="tfrs"></div>
-  </section>
-  <section class="card" aria-labelledby="prn-h">
-    <h2 id="prn-h">FAA prohibitions and advisories for foreign airspace</h2>
-    <p class="muted small">Where the FAA prohibits US operators from flying (Special Federal Aviation Regulations and
-      prohibition NOTAMs) or warns them of potentially hazardous airspace (advisory NOTAMs), from its Prohibitions,
-      Restrictions and Notices page. It applies to US operators and US-registered aircraft. A section where Cordon saw a
-      notice listed or withdrawn in the last 30 days is marked. The FAA gives no dates; a NOTAM number carries its year
-      (A0054/26 is 2026).</p>
-    <div id="prn"></div>
-  </section>
-  <section class="card" aria-labelledby="fcdo-h">
-    <h2 id="fcdo-h">UK foreign travel advice</h2>
-    <p class="muted small">Where the UK Foreign, Commonwealth &amp; Development Office advises against all or all but
-      essential travel, and any country whose advice it updated in the last 72 hours, with its own note of what changed.</p>
-    <div id="fcdo"></div>
-  </section>
-  <section class="card" aria-labelledby="cdc-h">
-    <h2 id="cdc-h">Travel health notices (CDC)</h2>
-    <p class="muted small">Every travel health notice CDC has in force, at its own level (1 Practice Usual Precautions,
-      2 Practice Enhanced Precautions, 3 Reconsider Nonessential Travel, 4 Avoid All Travel), with the places it names.
-      A notice Cordon saw appear or change level in the last 30 days is marked.</p>
-    <div id="cdc"></div>
-  </section>
-  <section class="card" aria-labelledby="canada-h">
-    <h2 id="canada-h">Canada's travel advisories</h2>
-    <p class="muted small">Where the Government of Canada advises avoiding non-essential travel or all travel, any
-      change to a level or to regional advisories, and any place it updated in the last 72 hours (editorial
-      changes and updates to embassy contacts aside), with its own note of what changed. The feed also carries every place where Canada advises a high degree of
-      caution or has regional advisories.</p>
-    <div id="canada"></div>
-  </section>
-  <section class="card" aria-labelledby="safetravel-h">
-    <h2 id="safetravel-h">New Zealand's travel advice</h2>
-    <p class="muted small">Where New Zealand's Ministry of Foreign Affairs and Trade advises avoiding non-essential travel
-      or not travelling, any change to a level or to its note of other levels in some areas, and any destination it
-      updated in the last 72 hours (it gives the day, not the time). The feed also carries every destination where it
-      advises increased caution or where other levels apply in some areas.</p>
-    <div id="safetravel"></div>
-  </section>
-  <section class="card" aria-labelledby="levels-h">
-    <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
-    <div id="levels"></div>
-  </section>
-
-  <section class="card" aria-labelledby="health-h">
-    <h2 id="health-h">Sources</h2>
-    <div id="health"></div>
-    <p class="small muted">US Department of State (travel.state.gov), NGA (msi.nga.mil) and FAA (nasstatus.faa.gov)
-      content is US public domain; the FAA's airport coordinates come with its status data.
-      EASA content is used with acknowledgement: European Union Aviation Safety Agency, Conflict Zone Information
-      Bulletins. UK travel advice: contains public sector information licensed under the Open Government Licence v3.0
-      (FCDO, gov.uk/foreign-travel-advice). Canada's travel advice: contains information licensed under the Open
-      Government Licence - Canada (Global Affairs Canada, travel.gc.ca). Travel health notices: Source: CDC; they are
-      available free at wwwnc.cdc.gov/travel/notices, and their use here does not imply endorsement by CDC, HHS or the
-      US Government. New Zealand's travel advice: Ministry of Foreign Affairs and Trade, SafeTravel
-      (safetravel.govt.nz), Crown copyright, licensed under CC BY 4.0. FAA flight restrictions (tfr.faa.gov) and the FAA's Prohibitions, Restrictions and Notices are US Government works. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
-      OSAC is not used: its terms bar republishing.</p>
-  </section>
 </main>
 
 <footer class="wrap foot small muted">

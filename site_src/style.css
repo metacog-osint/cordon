@@ -46,11 +46,24 @@ a { color: var(--link); }
 .card p { margin: 0 0 10px; }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
 @media (max-width: 820px) { .two { grid-template-columns: 1fr; } }
+.two > * { min-width: 0; } /* a wide table scrolls in its own box instead of widening the column */
+/* Long tables on a phone: the first rows and a "Show all" button (app.js table()); wider screens show every row. */
+.tbl-more { display: none; }
+@media (max-width: 760px) {
+  .tbl-fold:not(.open) tr.fold { display: none; }
+  .tbl-more { display: inline-block; margin: 8px 0 2px; min-height: 44px; padding: 8px 14px; font: inherit; font-size: 14px;
+    font-weight: 600; color: var(--link); background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    cursor: pointer; }
+  .tbl-more:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+}
+@media print { .tbl-fold:not(.open) tr.fold { display: table-row; } .tbl-more { display: none; } }
 .tbl { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { text-align: left; padding: 5px 6px; border-top: 1px solid var(--soft); vertical-align: top; }
 th { color: var(--muted); font-weight: 600; border-top: 0; }
 td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* A short place name in a table is still a 24 px target (WCAG 2.2 target size). */
+td a { display: inline-block; min-width: 24px; min-height: 24px; padding-block: 2px; }
 .lvl { display: inline-block; min-width: 22px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; padding: 0 4px; }
 .lvl-3 { background: var(--l3); color: #14181f; } .lvl-4 { background: var(--l4); color: #fff; }
 .bars { display: grid; grid-template-columns: minmax(0, 11rem) 1fr 3rem; gap: 6px 10px; align-items: center; font-size: 14px; }
