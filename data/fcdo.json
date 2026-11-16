@@ -897,14 +897,14 @@
   "guatemala": {
    "slug": "guatemala",
    "name": "Guatemala",
-   "updated": "2026-11-05T14:10:49Z",
-   "change": "Updated information about visa requirements when travelling between Guatemala, El Salvador, Honduras and Nicaragua ('Entry requirements' page).",
+   "updated": "2026-11-16T16:17:57Z",
+   "change": "New information about a State of Emergency in Zacapa and Izabal ('Warnings and insurance' page).",
    "link": "https://www.gov.uk/foreign-travel-advice/guatemala",
    "iso": "GT",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-11-05T14:10:49Z"
+   "status_for": "2026-11-16T16:17:57Z"
   },
   "guinea": {
    "slug": "guinea",

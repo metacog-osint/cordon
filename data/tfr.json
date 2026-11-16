@@ -4728,183 +4728,6 @@
     }
    }
   },
-  "6/6928": {
-   "notam_id": "6/6928",
-   "type": "HAZARDS",
-   "facility": "ZHU",
-   "state": "TX",
-   "description": "BROWNSVILLE, TX, Thursday, November 12, 2026 through Friday, December 4, 2026 UTC",
-   "created": "11/10/2026",
-   "first_seen": "2026-11-10T18:22:23Z",
-   "detail": {
-    "name": "6/6928",
-    "issued": "2026-11-10T18:22:23Z",
-    "effective": "2026-11-12T05:00:00Z",
-    "expires": "2026-12-04T05:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "BROWNSVILLE",
-    "floor": "surface",
-    "ceiling": "11000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/6928 ZHU TX..AIRSPACE BROWNSVILLE, TX..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) HIGH ENERGY TESTING GROUND HAZARD WI AN AREA DEFINED AS 3.5NM RADIUS OF 255950N0970921W (BRO061012.6) SFC-11000FT AGL ONLY RELIEF ACFT OPS UNDER DIRECTION OF SPACE X SECURITY, STARBASE ARE AUTH IN THE AIRSPACE. SPACE X SECURITY, STARBASE, KYLE HURN TEL 956-346-8311 OR EMAIL KYLE.HURN@SPACEX.COM IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611120500-2612040500",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -97.15583,
-        26.05573
-       ],
-       [
-        -97.14459,
-        26.05484
-       ],
-       [
-        -97.13368,
-        26.0522
-       ],
-       [
-        -97.12345,
-        26.04789
-       ],
-       [
-        -97.1142,
-        26.04204
-       ],
-       [
-        -97.10622,
-        26.03482
-       ],
-       [
-        -97.09975,
-        26.02647
-       ],
-       [
-        -97.09499,
-        26.01722
-       ],
-       [
-        -97.09207,
-        26.00737
-       ],
-       [
-        -97.09109,
-        25.99721
-       ],
-       [
-        -97.09208,
-        25.98705
-       ],
-       [
-        -97.09501,
-        25.9772
-       ],
-       [
-        -97.09978,
-        25.96796
-       ],
-       [
-        -97.10625,
-        25.95961
-       ],
-       [
-        -97.11423,
-        25.9524
-       ],
-       [
-        -97.12348,
-        25.94655
-       ],
-       [
-        -97.1337,
-        25.94224
-       ],
-       [
-        -97.1446,
-        25.9396
-       ],
-       [
-        -97.15583,
-        25.93871
-       ],
-       [
-        -97.16707,
-        25.9396
-       ],
-       [
-        -97.17797,
-        25.94224
-       ],
-       [
-        -97.18819,
-        25.94655
-       ],
-       [
-        -97.19743,
-        25.9524
-       ],
-       [
-        -97.20541,
-        25.95961
-       ],
-       [
-        -97.21189,
-        25.96796
-       ],
-       [
-        -97.21666,
-        25.9772
-       ],
-       [
-        -97.21959,
-        25.98705
-       ],
-       [
-        -97.22058,
-        25.99721
-       ],
-       [
-        -97.2196,
-        26.00737
-       ],
-       [
-        -97.21668,
-        26.01722
-       ],
-       [
-        -97.21192,
-        26.02647
-       ],
-       [
-        -97.20544,
-        26.03482
-       ],
-       [
-        -97.19746,
-        26.04204
-       ],
-       [
-        -97.18822,
-        26.04789
-       ],
-       [
-        -97.17799,
-        26.0522
-       ],
-       [
-        -97.16708,
-        26.05484
-       ],
-       [
-        -97.15583,
-        26.05573
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7083": {
    "notam_id": "6/7083",
    "type": "SECURITY",
@@ -8536,6 +8359,1088 @@
     }
    }
   },
+  "6/7760": {
+   "notam_id": "6/7760",
+   "type": "VIP",
+   "facility": "ZNY",
+   "state": "NY",
+   "description": "New York, NY, Wednesday, November 18, 2026 Local",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T16:40:32Z",
+   "detail": {
+    "name": "261118 New York NY VIP",
+    "issued": "2026-11-16T16:21:03Z",
+    "effective": "2026-11-18T17:15:00Z",
+    "expires": "2026-11-18T21:30:00Z",
+    "regulation": "91.141",
+    "purpose": null,
+    "city": "New York",
+    "floor": "surface",
+    "ceiling": "4999 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7760 ZNY NY..AIRSPACE NEW YORK, NEW YORK..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 18, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 91.141, ALL ACFT FLT OPS INCLUDING REMOTE CONTROLLED ACFT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 5NM RADIUS OF 404638N0735221W (LGA217000.4) SFC-4999FT AGL EFFECTIVE 2611181715 UTC (1215 LOCAL 11/18/26) UNTIL 2611181845 UTC (1345 LOCAL 11/18/26). WI AN AREA DEFINED AS 5NM RADIUS OF 404605N0735855W (LGA272005.3) SFC-4999FT AGL EFFECTIVE 2611181745 UTC (1245 LOCAL 11/18/26) UNTIL 2611182015 UTC (1515 LOCAL 11/18/26). WI AN AREA DEFINED AS 5NM RADIUS OF 404638N0735221W (LGA217000.4) SFC-4999FT AGL EFFECTIVE 2611181945 UTC (1445 LOCAL 11/18/26) UNTIL 2611182130 UTC (1630 LOCAL 11/18/26). EXC THE FLT OPS LISTED BLW: 1. ACFT MUST BE SQUAWKING AN ATC DISCRETE BEACON CODE AT ALL TIMES WHILE IN THE TFR AND MUST REMAIN IN TWO-WAY RADIO COM WITH ATC. 2. LAW ENFORCEMENT, FIREFIGHTING, AND MEDEVAC/AIR AMBULANCE FLIGHTS ON ACT MISSIONS. 3. TRANSIENT OPS ARE AUTH FOR SAFETY OF FLT OR TO MEET OPERATIONAL DEMANDS. 4. ACFT MAY NOT LOITER. 5. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. 6. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. 7. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611181715-2611182130",
+    "geometry": {
+     "type": "MultiPolygon",
+     "coordinates": [
+      [
+       [
+        [
+         -73.8725,
+         40.86061
+        ],
+        [
+         -73.85343,
+         40.85934
+        ],
+        [
+         -73.83494,
+         40.85557
+        ],
+        [
+         -73.81759,
+         40.84942
+        ],
+        [
+         -73.80192,
+         40.84108
+        ],
+        [
+         -73.7884,
+         40.83079
+        ],
+        [
+         -73.77744,
+         40.81888
+        ],
+        [
+         -73.76938,
+         40.8057
+        ],
+        [
+         -73.76445,
+         40.79165
+        ],
+        [
+         -73.76281,
+         40.77717
+        ],
+        [
+         -73.7645,
+         40.76269
+        ],
+        [
+         -73.76947,
+         40.74866
+        ],
+        [
+         -73.77756,
+         40.73549
+        ],
+        [
+         -73.78854,
+         40.72359
+        ],
+        [
+         -73.80206,
+         40.71332
+        ],
+        [
+         -73.81771,
+         40.70499
+        ],
+        [
+         -73.83503,
+         40.69886
+        ],
+        [
+         -73.85348,
+         40.6951
+        ],
+        [
+         -73.8725,
+         40.69384
+        ],
+        [
+         -73.89152,
+         40.6951
+        ],
+        [
+         -73.90997,
+         40.69886
+        ],
+        [
+         -73.92729,
+         40.70499
+        ],
+        [
+         -73.94294,
+         40.71332
+        ],
+        [
+         -73.95646,
+         40.72359
+        ],
+        [
+         -73.96744,
+         40.73549
+        ],
+        [
+         -73.97553,
+         40.74866
+        ],
+        [
+         -73.9805,
+         40.76269
+        ],
+        [
+         -73.98219,
+         40.77717
+        ],
+        [
+         -73.98055,
+         40.79165
+        ],
+        [
+         -73.97562,
+         40.8057
+        ],
+        [
+         -73.96756,
+         40.81888
+        ],
+        [
+         -73.9566,
+         40.83079
+        ],
+        [
+         -73.94308,
+         40.84108
+        ],
+        [
+         -73.92741,
+         40.84942
+        ],
+        [
+         -73.91006,
+         40.85557
+        ],
+        [
+         -73.89157,
+         40.85934
+        ],
+        [
+         -73.8725,
+         40.86061
+        ]
+       ]
+      ],
+      [
+       [
+        [
+         -73.98194,
+         40.85144
+        ],
+        [
+         -73.96288,
+         40.85017
+        ],
+        [
+         -73.94439,
+         40.84641
+        ],
+        [
+         -73.92705,
+         40.84026
+        ],
+        [
+         -73.91138,
+         40.83191
+        ],
+        [
+         -73.89786,
+         40.82162
+        ],
+        [
+         -73.8869,
+         40.80971
+        ],
+        [
+         -73.87884,
+         40.79653
+        ],
+        [
+         -73.87391,
+         40.78248
+        ],
+        [
+         -73.87227,
+         40.768
+        ],
+        [
+         -73.87396,
+         40.75353
+        ],
+        [
+         -73.87893,
+         40.73949
+        ],
+        [
+         -73.88702,
+         40.72632
+        ],
+        [
+         -73.89799,
+         40.71443
+        ],
+        [
+         -73.91151,
+         40.70416
+        ],
+        [
+         -73.92717,
+         40.69583
+        ],
+        [
+         -73.94448,
+         40.68969
+        ],
+        [
+         -73.96292,
+         40.68593
+        ],
+        [
+         -73.98194,
+         40.68467
+        ],
+        [
+         -74.00097,
+         40.68593
+        ],
+        [
+         -74.01941,
+         40.68969
+        ],
+        [
+         -74.03672,
+         40.69583
+        ],
+        [
+         -74.05238,
+         40.70416
+        ],
+        [
+         -74.06589,
+         40.71443
+        ],
+        [
+         -74.07687,
+         40.72632
+        ],
+        [
+         -74.08496,
+         40.73949
+        ],
+        [
+         -74.08993,
+         40.75353
+        ],
+        [
+         -74.09162,
+         40.768
+        ],
+        [
+         -74.08998,
+         40.78248
+        ],
+        [
+         -74.08505,
+         40.79653
+        ],
+        [
+         -74.07699,
+         40.80971
+        ],
+        [
+         -74.06603,
+         40.82162
+        ],
+        [
+         -74.05251,
+         40.83191
+        ],
+        [
+         -74.03684,
+         40.84026
+        ],
+        [
+         -74.0195,
+         40.84641
+        ],
+        [
+         -74.00101,
+         40.85017
+        ],
+        [
+         -73.98194,
+         40.85144
+        ]
+       ]
+      ],
+      [
+       [
+        [
+         -73.8725,
+         40.86061
+        ],
+        [
+         -73.85343,
+         40.85934
+        ],
+        [
+         -73.83494,
+         40.85557
+        ],
+        [
+         -73.81759,
+         40.84942
+        ],
+        [
+         -73.80192,
+         40.84108
+        ],
+        [
+         -73.7884,
+         40.83079
+        ],
+        [
+         -73.77744,
+         40.81888
+        ],
+        [
+         -73.76938,
+         40.8057
+        ],
+        [
+         -73.76445,
+         40.79165
+        ],
+        [
+         -73.76281,
+         40.77717
+        ],
+        [
+         -73.7645,
+         40.76269
+        ],
+        [
+         -73.76947,
+         40.74866
+        ],
+        [
+         -73.77756,
+         40.73549
+        ],
+        [
+         -73.78854,
+         40.72359
+        ],
+        [
+         -73.80206,
+         40.71332
+        ],
+        [
+         -73.81771,
+         40.70499
+        ],
+        [
+         -73.83503,
+         40.69886
+        ],
+        [
+         -73.85348,
+         40.6951
+        ],
+        [
+         -73.8725,
+         40.69384
+        ],
+        [
+         -73.89152,
+         40.6951
+        ],
+        [
+         -73.90997,
+         40.69886
+        ],
+        [
+         -73.92729,
+         40.70499
+        ],
+        [
+         -73.94294,
+         40.71332
+        ],
+        [
+         -73.95646,
+         40.72359
+        ],
+        [
+         -73.96744,
+         40.73549
+        ],
+        [
+         -73.97553,
+         40.74866
+        ],
+        [
+         -73.9805,
+         40.76269
+        ],
+        [
+         -73.98219,
+         40.77717
+        ],
+        [
+         -73.98055,
+         40.79165
+        ],
+        [
+         -73.97562,
+         40.8057
+        ],
+        [
+         -73.96756,
+         40.81888
+        ],
+        [
+         -73.9566,
+         40.83079
+        ],
+        [
+         -73.94308,
+         40.84108
+        ],
+        [
+         -73.92741,
+         40.84942
+        ],
+        [
+         -73.91006,
+         40.85557
+        ],
+        [
+         -73.89157,
+         40.85934
+        ],
+        [
+         -73.8725,
+         40.86061
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/7761": {
+   "notam_id": "6/7761",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZLA",
+   "state": "CA",
+   "description": "Riverside, CA, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T16:40:32Z",
+   "detail": {
+    "name": "2026-44812-WSA-039 Riverside CA Festival of Lights",
+    "issued": "2026-11-16T16:21:10Z",
+    "effective": "2026-11-21T20:00:00Z",
+    "expires": "2026-11-22T08:00:00Z",
+    "regulation": "44812",
+    "purpose": "Due to the Riverside Festival of Lights under 49 USC 44812 c(2)",
+    "city": "Riverside",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7761 ZLA CA..AIRSPACE RIVERSIDE, CA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 3NM RADIUS OF 335859N1172221W (PDZ049008.8) SFC-400FT AGL DUE TO THE RIVERSIDE FESTIVAL OF LIGHTS UNDER 49 USC 44812 C(2). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE RIVERSIDE POLICE DEPARTMENT, CHAD COLLOPY, TEL 951-415-5566, IS THE POINT OF CONTACT. 2611212000-2611220800",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.3725,
+        34.03328
+       ],
+       [
+        -117.36205,
+        34.03252
+       ],
+       [
+        -117.35192,
+        34.03026
+       ],
+       [
+        -117.34242,
+        34.02657
+       ],
+       [
+        -117.33383,
+        34.02156
+       ],
+       [
+        -117.32642,
+        34.01538
+       ],
+       [
+        -117.32041,
+        34.00823
+       ],
+       [
+        -117.31599,
+        34.00031
+       ],
+       [
+        -117.31328,
+        33.99188
+       ],
+       [
+        -117.31237,
+        33.98318
+       ],
+       [
+        -117.31329,
+        33.97448
+       ],
+       [
+        -117.31601,
+        33.96605
+       ],
+       [
+        -117.32044,
+        33.95814
+       ],
+       [
+        -117.32646,
+        33.95099
+       ],
+       [
+        -117.33387,
+        33.94482
+       ],
+       [
+        -117.34245,
+        33.93981
+       ],
+       [
+        -117.35195,
+        33.93612
+       ],
+       [
+        -117.36206,
+        33.93387
+       ],
+       [
+        -117.3725,
+        33.93311
+       ],
+       [
+        -117.38294,
+        33.93387
+       ],
+       [
+        -117.39305,
+        33.93612
+       ],
+       [
+        -117.40255,
+        33.93981
+       ],
+       [
+        -117.41113,
+        33.94482
+       ],
+       [
+        -117.41854,
+        33.95099
+       ],
+       [
+        -117.42456,
+        33.95814
+       ],
+       [
+        -117.42899,
+        33.96605
+       ],
+       [
+        -117.43171,
+        33.97448
+       ],
+       [
+        -117.43263,
+        33.98318
+       ],
+       [
+        -117.43172,
+        33.99188
+       ],
+       [
+        -117.42901,
+        34.00031
+       ],
+       [
+        -117.42459,
+        34.00823
+       ],
+       [
+        -117.41858,
+        34.01538
+       ],
+       [
+        -117.41117,
+        34.02156
+       ],
+       [
+        -117.40258,
+        34.02657
+       ],
+       [
+        -117.39308,
+        34.03026
+       ],
+       [
+        -117.38295,
+        34.03252
+       ],
+       [
+        -117.3725,
+        34.03328
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/7765": {
+   "notam_id": "6/7765",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZID",
+   "state": "IN",
+   "description": "Indianapolis, IN, Friday, November 20, 2026 through Saturday, November 21, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T16:40:32Z",
+   "detail": {
+    "name": "2026-44812-CSA-0136 IND IU v UK at Lucas Oil",
+    "issued": "2026-11-16T16:33:24Z",
+    "effective": "2026-11-20T22:00:00Z",
+    "expires": "2026-11-21T04:00:00Z",
+    "regulation": "44812",
+    "purpose": "the IU v UK Basketball game at Lucas Oil Stadium under Sec 44812 c(1)",
+    "city": "Indianapolis",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7765 ZID IN..AIRSPACE INDIANAPOLIS, IN..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1NM RADIUS OF 394536N0860950W (VHP108010.0) SFC-400FT AGL DUE TO THE IU V UK BASKETBALL GAME AT LUCAS OIL STADIUM UNDER SEC 44812 C(1). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC LE POC FOR AUTH AND COORDINATION TO OPERATE WITHIN TFR. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C. SECTION 130I AND 6 U.S.C. SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS), OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE INDIANAPOLIS METROPOLITAN POLICE DEPARTMENT , DET MICHAEL MANN, TEL 260-403-7069, IS THE POINT OF CONTACT. 2611202200-2611210400",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -86.16378,
+        39.77674
+       ],
+       [
+        -86.16002,
+        39.77648
+       ],
+       [
+        -86.15638,
+        39.77573
+       ],
+       [
+        -86.15297,
+        39.7745
+       ],
+       [
+        -86.14988,
+        39.77283
+       ],
+       [
+        -86.14722,
+        39.77078
+       ],
+       [
+        -86.14506,
+        39.76839
+       ],
+       [
+        -86.14347,
+        39.76576
+       ],
+       [
+        -86.14249,
+        39.76295
+       ],
+       [
+        -86.14217,
+        39.76005
+       ],
+       [
+        -86.14249,
+        39.75716
+       ],
+       [
+        -86.14347,
+        39.75435
+       ],
+       [
+        -86.14506,
+        39.75171
+       ],
+       [
+        -86.14722,
+        39.74933
+       ],
+       [
+        -86.14989,
+        39.74728
+       ],
+       [
+        -86.15297,
+        39.74561
+       ],
+       [
+        -86.15639,
+        39.74438
+       ],
+       [
+        -86.16003,
+        39.74363
+       ],
+       [
+        -86.16378,
+        39.74338
+       ],
+       [
+        -86.16753,
+        39.74363
+       ],
+       [
+        -86.17117,
+        39.74438
+       ],
+       [
+        -86.17458,
+        39.74561
+       ],
+       [
+        -86.17767,
+        39.74728
+       ],
+       [
+        -86.18033,
+        39.74933
+       ],
+       [
+        -86.18249,
+        39.75171
+       ],
+       [
+        -86.18409,
+        39.75435
+       ],
+       [
+        -86.18506,
+        39.75716
+       ],
+       [
+        -86.18539,
+        39.76005
+       ],
+       [
+        -86.18506,
+        39.76295
+       ],
+       [
+        -86.18409,
+        39.76576
+       ],
+       [
+        -86.1825,
+        39.76839
+       ],
+       [
+        -86.18034,
+        39.77078
+       ],
+       [
+        -86.17767,
+        39.77283
+       ],
+       [
+        -86.17459,
+        39.7745
+       ],
+       [
+        -86.17117,
+        39.77573
+       ],
+       [
+        -86.16753,
+        39.77648
+       ],
+       [
+        -86.16378,
+        39.77674
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/7766": {
+   "notam_id": "6/7766",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZOB",
+   "state": "MI",
+   "description": "Detroit, MI, Friday, November 20, 2026 through Saturday, November 21, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T16:40:32Z",
+   "detail": {
+    "name": "2026-44812-CSA-0137 DET Tree Lighting",
+    "issued": "2026-11-16T16:33:33Z",
+    "effective": "2026-11-20T19:00:00Z",
+    "expires": "2026-11-21T03:00:00Z",
+    "regulation": "44812",
+    "purpose": "the 23d Annual Detroit Tree Lighting under sec 44812 c(2)",
+    "city": "Detroit",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7766 ZOB MI..AIRSPACE DETROIT, MI..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS A 2NM ARC CENTERED ON 422021N0830255W (DXO068016.1) SFC-400FT AGL EFFECTIVE 2611201900 UTC UNTIL 2611210300 UTC. DUE TO THE 23D ANNUAL DETROIT TREE LIGHTING UNDER SEC 44812 C(2). TFR EXCLUDES CANADIAN AIRSPACE. UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE DETROIT POLICE DEPARTMENT, SGT GREGORY SAWMILLER, TEL 313-810-2113, IS THE POINT OF CONTACT. 2611201900-2611210300",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -83.07406,
+        42.31186
+       ],
+       [
+        -83.07729,
+        42.3135
+       ],
+       [
+        -83.0802,
+        42.31545
+       ],
+       [
+        -83.08286,
+        42.31758
+       ],
+       [
+        -83.08527,
+        42.31988
+       ],
+       [
+        -83.0874,
+        42.32232
+       ],
+       [
+        -83.08923,
+        42.32489
+       ],
+       [
+        -83.09075,
+        42.32757
+       ],
+       [
+        -83.09195,
+        42.33034
+       ],
+       [
+        -83.09282,
+        42.33318
+       ],
+       [
+        -83.09336,
+        42.33606
+       ],
+       [
+        -83.09356,
+        42.33897
+       ],
+       [
+        -83.09341,
+        42.34187
+       ],
+       [
+        -83.09292,
+        42.34476
+       ],
+       [
+        -83.0921,
+        42.3476
+       ],
+       [
+        -83.09094,
+        42.35038
+       ],
+       [
+        -83.08946,
+        42.35308
+       ],
+       [
+        -83.08767,
+        42.35567
+       ],
+       [
+        -83.08559,
+        42.35813
+       ],
+       [
+        -83.08322,
+        42.36045
+       ],
+       [
+        -83.08059,
+        42.36261
+       ],
+       [
+        -83.07771,
+        42.36458
+       ],
+       [
+        -83.07461,
+        42.36637
+       ],
+       [
+        -83.07132,
+        42.36795
+       ],
+       [
+        -83.06785,
+        42.3693
+       ],
+       [
+        -83.06423,
+        42.37043
+       ],
+       [
+        -83.0605,
+        42.37133
+       ],
+       [
+        -83.05667,
+        42.37197
+       ],
+       [
+        -83.05279,
+        42.37237
+       ],
+       [
+        -83.04887,
+        42.37251
+       ],
+       [
+        -83.04495,
+        42.3724
+       ],
+       [
+        -83.04106,
+        42.37204
+       ],
+       [
+        -83.03722,
+        42.37142
+       ],
+       [
+        -83.03347,
+        42.37056
+       ],
+       [
+        -83.02984,
+        42.36947
+       ],
+       [
+        -83.02635,
+        42.36814
+       ],
+       [
+        -83.02303,
+        42.36659
+       ],
+       [
+        -83.01991,
+        42.36483
+       ],
+       [
+        -83.017,
+        42.36288
+       ],
+       [
+        -83.01433,
+        42.36074
+       ],
+       [
+        -83.01193,
+        42.35844
+       ],
+       [
+        -83.00981,
+        42.356
+       ],
+       [
+        -83.00798,
+        42.35342
+       ],
+       [
+        -83.00646,
+        42.35074
+       ],
+       [
+        -83.00526,
+        42.34797
+       ],
+       [
+        -83.00439,
+        42.34514
+       ],
+       [
+        -83.00386,
+        42.34225
+       ],
+       [
+        -83.00367,
+        42.33935
+       ],
+       [
+        -83.00382,
+        42.33644
+       ],
+       [
+        -83.00431,
+        42.33356
+       ],
+       [
+        -83.00539,
+        42.331
+       ],
+       [
+        -83.01881,
+        42.32972
+       ],
+       [
+        -83.0635,
+        42.318
+       ],
+       [
+        -83.07406,
+        42.31186
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
@@ -8751,6 +9656,20 @@
    "ceiling_ft": 400,
    "first_seen": "2026-11-09T11:34:31Z",
    "left_at": "2026-11-16T05:10:33Z"
+  },
+  "6/6928": {
+   "type": "HAZARDS",
+   "state": "TX",
+   "bbox": [
+    -97.2206,
+    25.9387,
+    -97.0911,
+    26.0557
+   ],
+   "area_km2": 131.0,
+   "ceiling_ft": 11000,
+   "first_seen": "2026-11-10T18:22:23Z",
+   "left_at": "2026-11-16T16:40:32Z"
   },
   "6/7567": {
    "type": "HAZARDS",
