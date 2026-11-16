@@ -57,15 +57,15 @@
   },
   {
    "kind": "ground_stop",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-16T18:00:00Z",
-   "end": "2026-11-16T19:45:00Z",
-   "updated": "2026-11-16T18:51:39Z",
-   "reason": "airspace volume",
+   "airport": "TEB",
+   "airport_name": "Teterboro",
+   "start": "2026-11-16T19:23:00Z",
+   "end": "2026-11-16T20:45:00Z",
+   "updated": "2026-11-16T19:36:19Z",
+   "reason": "airport volume",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=53&adv_date=11162026&facId=LGA&title=ATCSCC ADVZY 053 LGA/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
-   "included_facilities": 1,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=56&adv_date=11162026&facId=TEB&title=ATCSCC ADVZY 056 TEB/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "included_facilities": 12,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
   }
