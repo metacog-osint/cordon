@@ -8,6 +8,7 @@
    "state": "USA",
    "description": "USA, Wednesday, January 15, 2020 UTC",
    "created": "01/02/2020",
+   "first_seen": "2020-01-02T23:07:00Z",
    "detail": {
     "name": "0/0367",
     "issued": "2020-01-02T23:07:00Z",
@@ -30,6 +31,7 @@
    "state": "USA",
    "description": "USA, Wednesday, September 29, 2021 UTC",
    "created": "01/27/2024",
+   "first_seen": "2024-01-27T08:23:00Z",
    "detail": {
     "name": "1/5060",
     "issued": "2024-01-27T08:23:00Z",
@@ -52,6 +54,7 @@
    "state": "USA",
    "description": "USA, Monday, February 28, 2022 UTC",
    "created": "01/27/2024",
+   "first_seen": "2024-01-27T08:23:00Z",
    "detail": {
     "name": "2/8783",
     "issued": "2024-01-27T08:23:00Z",
@@ -74,6 +77,7 @@
    "state": "USA",
    "description": "USA, Friday, June 21, 2024 UTC",
    "created": "06/21/2024",
+   "first_seen": "2024-06-21T17:30:00Z",
    "detail": {
     "name": "4/1789",
     "issued": "2024-06-21T17:30:00Z",
@@ -96,6 +100,7 @@
    "state": "USA",
    "description": "USA, Monday, June 24, 2024 UTC",
    "created": "06/24/2024",
+   "first_seen": "2024-06-24T15:47:00Z",
    "detail": {
     "name": "4/2565",
     "issued": "2024-06-24T15:47:00Z",
@@ -118,6 +123,7 @@
    "state": "USA",
    "description": "WASHINGTON, DC., USA",
    "created": "09/03/2024",
+   "first_seen": "2024-09-03T21:12:00Z",
    "detail": {
     "name": "4/9383",
     "issued": "2024-09-03T21:12:00Z",
@@ -732,6 +738,7 @@
    "state": "USA",
    "description": "USA, Tuesday, September 3, 2024 UTC",
    "created": "09/03/2024",
+   "first_seen": "2024-09-03T21:22:00Z",
    "detail": {
     "name": "4/9433",
     "issued": "2024-09-03T21:22:00Z",
@@ -754,6 +761,7 @@
    "state": "USA",
    "description": "USA, Thursday, November 6, 2025 UTC",
    "created": "11/06/2025",
+   "first_seen": "2025-11-06T19:46:00Z",
    "detail": {
     "name": "5/3402",
     "issued": "2025-11-06T19:46:00Z",
@@ -776,6 +784,7 @@
    "state": "TX",
    "description": "Brownsville, TX, Thursday, January 1, 2026 through Friday, January 1, 2027 Local",
    "created": "12/30/2025",
+   "first_seen": "2025-12-30T13:36:00Z",
    "detail": {
     "name": "260101-261231 Brownsville Masseys",
     "issued": "2025-12-30T13:36:00Z",
@@ -844,6 +853,7 @@
    "state": "TX",
    "description": "Brownsville, TX, Thursday, January 1, 2026 through Friday, January 1, 2027 Local",
    "created": "12/30/2025",
+   "first_seen": "2025-12-30T13:38:00Z",
    "detail": {
     "name": "260101-251231 SpaceX Brownsville Luanch Site",
     "issued": "2025-12-30T13:38:00Z",
@@ -1020,6 +1030,7 @@
    "state": "USA",
    "description": "USA, Wednesday, October 29, 2025 through Friday, October 29, 2027 UTC",
    "created": "10/25/2025",
+   "first_seen": "2025-10-25T01:39:00Z",
    "detail": {
     "name": "5/6379",
     "issued": "2025-10-25T01:39:00Z",
@@ -1042,6 +1053,7 @@
    "state": "USA",
    "description": "USA, Saturday, March 1, 2025 through Wednesday, March 31, 2027 UTC",
    "created": "02/26/2025",
+   "first_seen": "2025-02-26T01:13:00Z",
    "detail": {
     "name": "5/6874",
     "issued": "2025-02-26T01:13:00Z",
@@ -1064,6 +1076,7 @@
    "state": "TX",
    "description": "South Padre Island, TX, Tuesday, May 6, 2025 Local",
    "created": "05/06/2025",
+   "first_seen": "2025-05-06T23:16:00Z",
    "detail": {
     "name": "250506-UFN CBP South Padre Island",
     "issued": "2025-05-06T23:16:00Z",
@@ -1240,6 +1253,7 @@
    "state": "DC",
    "description": "WASHINGTON, DC, Wednesday, September 3, 2025 UTC",
    "created": "09/03/2025",
+   "first_seen": "2025-09-03T16:06:00Z",
    "detail": {
     "name": "5/7224",
     "issued": "2025-09-03T16:06:00Z",
@@ -1262,6 +1276,7 @@
    "state": "FL",
    "description": "Palm Beach, FL, Tuesday, October 20, 2026 through Wednesday, October 20, 2027 Local",
    "created": "10/18/2026",
+   "first_seen": "2026-10-18T15:33:18Z",
    "detail": {
     "name": "261020-271020 Mar A Lago 99.7 ZMA",
     "issued": "2026-10-18T15:33:18Z",
@@ -1438,6 +1453,7 @@
    "state": "TX",
    "description": "MCGREGOR, TX",
    "created": "01/05/2026",
+   "first_seen": "2026-01-05T16:22:00Z",
    "detail": {
     "name": "6/0543",
     "issued": "2026-01-05T16:22:00Z",
@@ -1510,6 +1526,7 @@
    "state": "TN",
    "description": "Goodlettsville, TN, Saturday, August 1, 2026 through Sunday, August 1, 2027 UTC",
    "created": "07/31/2026",
+   "first_seen": "2026-07-31T22:58:31Z",
    "detail": {
     "name": "260801-270801 Goodlettsville, TN DoW UAS Only",
     "issued": "2026-07-31T22:58:31Z",
@@ -1686,6 +1703,7 @@
    "state": "TX",
    "description": "SAN ANGELO, TX, Sunday, November 1, 2026 through Sunday, March 14, 2027 Local",
    "created": "10/26/2026",
+   "first_seen": "2026-10-26T16:51:52Z",
    "detail": {
     "name": "261101-270314 SJT CBP",
     "issued": "2026-10-26T16:51:52Z",
@@ -1862,6 +1880,7 @@
    "state": "AK",
    "description": "Clear, AK, Sunday, November 1, 2026 through Sunday, March 14, 2027 Local",
    "created": "10/26/2026",
+   "first_seen": "2026-10-26T17:05:13Z",
    "detail": {
     "name": "261101-270314 Clear AK",
     "issued": "2026-10-26T17:05:13Z",
@@ -3076,6 +3095,7 @@
    "state": "GU",
    "description": "S. FINEGAYAN, GU",
    "created": "05/22/2026",
+   "first_seen": "2026-05-22T23:01:52Z",
    "detail": {
     "name": "6/2520",
     "issued": "2026-05-22T23:01:52Z",
@@ -3240,6 +3260,7 @@
    "state": "CA",
    "description": "Beale AFB, CA, Sunday, November 1, 2026 through Sunday, March 14, 2027 Local",
    "created": "10/26/2026",
+   "first_seen": "2026-10-26T21:38:02Z",
    "detail": {
     "name": "261101-270314 Beale AFB",
     "issued": "2026-10-26T21:38:02Z",
@@ -3416,6 +3437,7 @@
    "state": "CA",
    "description": "Coyote Wells, CA, Saturday, July 4, 2026 through Saturday, January 2, 2027 Local",
    "created": "07/02/2026",
+   "first_seen": "2026-07-02T13:45:11Z",
    "detail": {
     "name": "260704-270102 El Centro 1",
     "issued": "2026-07-02T13:45:11Z",
@@ -3464,6 +3486,7 @@
    "state": "CA",
    "description": "Coyote Wells, CA, Saturday, July 4, 2026 through Saturday, January 2, 2027 Local",
    "created": "07/02/2026",
+   "first_seen": "2026-07-02T13:55:56Z",
    "detail": {
     "name": "260704-270102 El Centro 2",
     "issued": "2026-07-02T13:55:56Z",
@@ -3520,6 +3543,7 @@
    "state": "CA",
    "description": "Calexico, CA, Saturday, July 4, 2026 through Saturday, January 2, 2027 Local",
    "created": "07/02/2026",
+   "first_seen": "2026-07-02T14:04:00Z",
    "detail": {
     "name": "260704-270102 El Centro2",
     "issued": "2026-07-02T14:04:00Z",
@@ -3576,6 +3600,7 @@
    "state": "PR",
    "description": "CEIBA, PR, Saturday, October 31, 2026 through Saturday, March 13, 2027 Local",
    "created": "10/27/2026",
+   "first_seen": "2026-10-27T14:08:20Z",
    "detail": {
     "name": "261101-270314 Ceiba, PR",
     "issued": "2026-10-27T14:08:20Z",
@@ -3624,6 +3649,7 @@
    "state": "PR",
    "description": "VIEQUES, PR, Monday, January 19, 2026 through Friday, December 18, 2026 UTC",
    "created": "01/13/2026",
+   "first_seen": "2026-01-13T14:45:00Z",
    "detail": {
     "name": "6/2698",
     "issued": "2026-01-13T14:45:00Z",
@@ -3800,6 +3826,7 @@
    "state": "USA",
    "description": "USA, Thursday, April 16, 2026 through Sunday, April 16, 2028 UTC",
    "created": "04/16/2026",
+   "first_seen": "2026-04-16T17:17:00Z",
    "detail": {
     "name": "6/3366",
     "issued": "2026-04-16T17:17:00Z",
@@ -3822,6 +3849,7 @@
    "state": "ND",
    "description": "GRAND FORKS AFB, ND, Sunday, November 1, 2026 through Sunday, March 14, 2027 Local",
    "created": "10/30/2026",
+   "first_seen": "2026-10-30T22:07:26Z",
    "detail": {
     "name": "261101-270314 GFK CBP ZMP",
     "issued": "2026-10-30T22:07:26Z",
@@ -4028,6 +4056,7 @@
    "state": "GU",
    "description": "ANDERSEN AFB, GU, Monday, March 9, 2026 through Tuesday, March 9, 2027 Local",
    "created": "03/05/2026",
+   "first_seen": "2026-03-05T18:57:00Z",
    "detail": {
     "name": "6/4143",
     "issued": "2026-03-05T18:57:00Z",
@@ -4254,6 +4283,7 @@
    "state": "CA",
    "description": "El Centro, CA, Wednesday, July 15, 2026 through Tuesday, July 13, 2027 Local",
    "created": "07/10/2026",
+   "first_seen": "2026-07-10T17:16:07Z",
    "detail": {
     "name": "260715-270714 El Centro, CA",
     "issued": "2026-07-10T17:16:07Z",
@@ -4302,6 +4332,7 @@
    "state": "FL",
    "description": "Key West, FL",
    "created": "09/28/2026",
+   "first_seen": "2026-09-28T19:52:21Z",
    "detail": {
     "name": "260928-270331 NAS Key West All A/C",
     "issued": "2026-09-28T19:52:21Z",
@@ -4350,6 +4381,7 @@
    "state": "FL",
    "description": "Orlando, FL, Saturday, November 14, 2026 through Monday, November 16, 2026 UTC",
    "created": "11/09/2026",
+   "first_seen": "2026-11-09T11:34:31Z",
    "detail": {
     "name": "26-#148-ESA-Vans Warped Tour Orlando '26 (FL)",
     "issued": "2026-11-09T11:34:31Z",
@@ -4526,6 +4558,7 @@
    "state": "FL",
    "description": "DISNEY WORLD THEME PARK, ORLANDO, FL",
    "created": "11/10/2026",
+   "first_seen": "2026-11-10T17:43:43Z",
    "detail": {
     "name": "2026 Disney World",
     "issued": "2026-11-10T17:43:43Z",
@@ -4702,6 +4735,7 @@
    "state": "CA",
    "description": "disneyland theme park anaheim, CA",
    "created": "11/10/2026",
+   "first_seen": "2026-11-10T18:00:52Z",
    "detail": {
     "name": "2026 Disneyland",
     "issued": "2026-11-10T18:00:52Z",
@@ -4878,6 +4912,7 @@
    "state": "TX",
    "description": "BROWNSVILLE, TX, Thursday, November 12, 2026 through Friday, December 4, 2026 UTC",
    "created": "11/10/2026",
+   "first_seen": "2026-11-10T18:22:23Z",
    "detail": {
     "name": "6/6928",
     "issued": "2026-11-10T18:22:23Z",
@@ -5054,6 +5089,7 @@
    "state": "AL",
    "description": "HUNTSVILLE, AL, Tuesday, November 17, 2026 through Thursday, November 19, 2026 Local",
    "created": "11/10/2026",
+   "first_seen": "2026-11-10T23:51:47Z",
    "detail": {
     "name": "261117-19 NCUTC FBI - UAS Only ZME",
     "issued": "2026-11-10T23:51:47Z",
@@ -5230,6 +5266,7 @@
    "state": "GU",
    "description": "NORTHWEST FIELD, GU, Friday, November 13, 2026 through Sunday, December 20, 2026 Local",
    "created": "11/12/2026",
+   "first_seen": "2026-11-12T00:49:34Z",
    "detail": {
     "name": "261113-261220 Guam MDA REISSUE",
     "issued": "2026-11-12T00:49:34Z",
@@ -5520,6 +5557,7 @@
    "state": "TX",
    "description": "BROWNSVILLE, TX, Thursday, November 19, 2026 through Sunday, November 29, 2026 UTC",
    "created": "11/12/2026",
+   "first_seen": "2026-11-12T12:06:14Z",
    "detail": {
     "name": "6/7165",
     "issued": "2026-11-12T12:06:14Z",
@@ -5696,6 +5734,7 @@
    "state": "IL",
    "description": "GRANITE CITY, IL, Monday, November 16, 2026 UTC",
    "created": "11/12/2026",
+   "first_seen": "2026-11-12T17:49:18Z",
    "detail": {
     "name": "6/7271",
     "issued": "2026-11-12T17:49:18Z",
@@ -5872,6 +5911,7 @@
    "state": "MN",
    "description": "KEEWATIN, MN, Monday, November 16, 2026 UTC",
    "created": "11/13/2026",
+   "first_seen": "2026-11-13T17:30:05Z",
    "detail": {
     "name": "6/7462",
     "issued": "2026-11-13T17:30:05Z",
@@ -6048,6 +6088,7 @@
    "state": "FL",
    "description": "SANTA ROSA ISLAND, FL, Wednesday, November 18, 2026 through Friday, November 20, 2026 Local",
    "created": "11/13/2026",
+   "first_seen": "2026-11-13T22:23:29Z",
    "detail": {
     "name": "261118-20 Gulf of America Munitions Test ZJX",
     "issued": "2026-11-13T22:23:29Z",
@@ -6096,6 +6137,7 @@
    "state": "AK",
    "description": "Anchorage, AK, Monday, November 16, 2026 Local",
    "created": "11/14/2026",
+   "first_seen": "2026-11-14T15:56:23Z",
    "detail": {
     "name": "261116 Anchorage POTUS",
     "issued": "2026-11-14T15:56:23Z",
@@ -6570,6 +6612,7 @@
    "state": "LA",
    "description": "1NM NEW ORLEANS, LA, Saturday, November 14, 2026 through Monday, November 16, 2026 UTC",
    "created": "11/14/2026",
+   "first_seen": "2026-11-14T18:35:16Z",
    "detail": {
     "name": "6/7567",
     "issued": "2026-11-14T18:35:16Z",
@@ -6746,6 +6789,7 @@
    "state": "HI",
    "description": "Kaneohe, HI, Tuesday, November 17, 2026 through Friday, November 20, 2026 Local",
    "created": "11/15/2026",
+   "first_seen": "2026-11-15T12:55:09Z",
    "detail": {
     "name": "261117-20 Skyrange PHNG",
     "issued": "2026-11-15T12:55:09Z",
@@ -6814,6 +6858,7 @@
    "state": "MS",
    "description": "1NM W MCLAIN, MS, Monday, November 16, 2026 through Tuesday, November 17, 2026 UTC",
    "created": "11/15/2026",
+   "first_seen": "2026-11-15T22:49:48Z",
    "detail": {
     "name": "6/7631",
     "issued": "2026-11-15T22:49:48Z",
@@ -6862,6 +6907,7 @@
    "state": "FL",
    "description": "MAYPORT, FL, Monday, November 16, 2026 through Saturday, November 21, 2026 Local",
    "created": "11/15/2026",
+   "first_seen": "2026-11-15T23:27:51Z",
    "detail": {
     "name": "261116-21 NAS Mayport TRITON",
     "issued": "2026-11-15T23:27:51Z",
@@ -7216,6 +7262,7 @@
    "state": "ID",
    "description": "Idaho Falls, ID, Tuesday, November 17, 2026 through Friday, November 20, 2026 Local",
    "created": "11/15/2026",
+   "first_seen": "2026-11-15T23:57:59Z",
    "detail": {
     "name": "261117-20 Idaho Lab",
     "issued": "2026-11-15T23:57:59Z",
@@ -7264,6 +7311,7 @@
    "state": "USA",
    "description": "Special Notice, USA",
    "created": "03/23/2016",
+   "first_seen": "2016-03-23T15:40:00Z",
    "detail": {
     "name": "6/8818",
     "issued": "2016-03-23T15:40:00Z",
@@ -7286,6 +7334,7 @@
    "state": "TX",
    "description": "DALLAS, TX",
    "created": "10/08/2015",
+   "first_seen": "2015-10-08T05:55:00Z",
    "detail": {
     "name": "9/2934",
     "issued": "2015-10-08T05:55:00Z",
@@ -7455,5 +7504,6 @@
     }
    }
   }
- }
+ },
+ "gone": {}
 }
