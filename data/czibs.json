@@ -2,13 +2,13 @@
  "source": "https://www.easa.europa.eu/en/domains/air-operations/czibs/export?page=&_format=csv",
  "bulletins": [
   {
-   "number": "CZIB-2026-09-R1",
+   "number": "CZIB-2026-09-R2",
    "id": "CZIB-2026-09",
    "subject": "Airspace of Saudi Arabia",
    "status": "active",
    "issued": "2026-09-30",
-   "valid_until": "2026-11-16",
-   "revision": "09/10/2026 – The description part was updated and recommendations have been revised to reflect the change in the risk area.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Jeddah (OEJD), all altitudes and flight levels.",
    "countries": [
     "SA"
@@ -16,13 +16,13 @@
    "recommendation": "Air operators should: Not operate, at all flight levels and altitudes, within the portions of the airspace of Saudi Arabia defined by the Jeddah FIR boundary and each of the lines connecting the following navigation points: RIBOK – BOSUT - MIGDA - RAGNO – MIXUG - DEKLO - OBSAM – SILPA; and ULBAM – TOTEB – DURMA – LAKSO - SOLAT. Exercise caution and take potential risks into account when operating in the remainder of the FIR Jeddah. Ensure that an up-to-date risk assessment and a high level of co"
   },
   {
-   "number": "CZIB-2026-08-R3",
+   "number": "CZIB-2026-08-R4",
    "id": "CZIB-2026-08",
    "subject": "Airspace of Jordan",
    "status": "active",
    "issued": "2026-07-22",
-   "valid_until": "2026-11-16",
-   "revision": "14/10/2026 – The validity of the CZIB was extended until 16 November 2026. The content and recommendations have been revised to reflect the change in the risk level.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Amman (OJAC), all altitudes and flight levels.",
    "countries": [
     "JO"
@@ -30,13 +30,13 @@
    "recommendation": "Air operators should: Take potential risks into account when operating in the affected airspace; Ensure that an up-do-date risk assessment is in place together with a high level of contingency planning for their operations and be ready for short notice instructions from State authorities. Closely monitor airspace developments in the region and follow all available aeronautical publications concerning the region, including information shared through the European Information Sharing and Cooperatio"
   },
   {
-   "number": "CZIB-2026-07R3",
+   "number": "CZIB-2026-07R4",
    "id": "CZIB-2026-07",
    "subject": "Airspace of the Persian Gulf and Gulf of Oman",
    "status": "active",
    "issued": "2026-07-14",
-   "valid_until": "2026-11-16",
-   "revision": "30/09/2026 – The validity of the CZIB was extended until 16 November 2026. No changes to the content or recommendations have been made.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "All altitudes and flight levels in the airspace of:- Bahrain (Bahrain FIR – OBBB), - Kuwait (Kuwait FIR – OKAC),- Qatar (Doha FIR – OTDF), - United Arab Emirates (Emirates FIR – OMAE), and - Oman (FIR Muscat - OOMM).",
    "countries": [
     "BH",
@@ -48,13 +48,13 @@
    "recommendation": "Air operators should: Not operate at all altitudes and flight levels within the airspace over the waters of the Persian Gulf within FIR Bahrain (OBBB), FIR Kuwait (OKAC), FIR Doha (OTDF), FIR Emirates (OMAE), except to the extent necessary for arrivals at or departures from aerodromes within the affected FIRs. Not operate within the airspace over the waters of the Gulf of Oman within the FIR Muscat (OOMM) west of longitude 58°E at all altitudes and flight levels. Exercise caution and take potent"
   },
   {
-   "number": "CZIB-2026-06-R2",
+   "number": "CZIB-2026-06-R3",
    "id": "CZIB-2026-06",
    "subject": "Airspace of Lebanon",
    "status": "active",
    "issued": "2026-07-08",
-   "valid_until": "2026-11-16",
-   "revision": "30/09/2026 – The validity of the CZIB was extended until 16 November 2026. No changes to the content or recommendations have been made.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Beirut (OLBB), all altitudes and flight levels.",
    "countries": [
     "LB"
@@ -62,13 +62,13 @@
    "recommendation": "Air operators should: Not operate within the airspace of Lebanon at all altitudes and flight levels, except for operations to / from Beirut International Airport (BEY / OLBA) under the following conditions: approach starting from the sea / departure ending over the sea, based on an up-to-date risk assessment and continuous risk monitoring. Closely monitor airspace developments in the region and follow all available aeronautical publications, in particular airspace closures or restrictions issued"
   },
   {
-   "number": "CZIB-2026-05-R2",
+   "number": "CZIB-2026-05-R3",
    "id": "CZIB-2026-05",
    "subject": "Airspace of Iraq",
    "status": "active",
    "issued": "2026-07-08",
-   "valid_until": "2026-11-16",
-   "revision": "30/09/2026 – The CZIB validity was extended until 16 November 2026. No changes were made to the content or recommendations.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Baghdad (ORBB), all altitudes and flight levels.",
    "countries": [
     "IQ"
@@ -76,13 +76,13 @@
    "recommendation": "Air operators should: Not operate within the airspace of Iraq, FIR Baghdad (ORBB), at all altitudes and flight levels; Closely monitor airspace developments in the region and follow all available aeronautical publications, in particular airspace closures or restrictions issued by State authorities, alongside available guidance or direction from their national authorities including information shared through the European Information Sharing and Cooperation Platform on Conflict Zones."
   },
   {
-   "number": "CZIB-2026-04-R2",
+   "number": "CZIB-2026-04-R3",
    "id": "CZIB-2026-04",
    "subject": "Airspace of Iran",
    "status": "active",
    "issued": "2026-07-08",
-   "valid_until": "2026-11-16",
-   "revision": "30/09/2026 – The CZIB validity was extended until 16 November 2026. No changes were made to the content or recommendations.",
+   "valid_until": "2027-01-31",
+   "revision": "16/11/2026 – The CZIB validity was extended until 31 January 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Tehran (OIIX), all altitudes and flight levels.",
    "countries": [
     "IR"
@@ -451,13 +451,13 @@
    "recommendation": "Air operators should: Not operate within the affected airspace below FL320; Closely monitor airspace developments and ensure that up to date risk assessment is in place, together with high level of contingency planning for operations at all altitudes over Iraqi airspace, taking into consideration available data on time and areas particularly exposed to potential risks; Follow all available aeronautical publications concerning the region issued by or on behalf of Iraq and by the Aviation Authorit"
   },
   {
-   "number": "CZIB-2017-03R20",
+   "number": "CZIB-2017-03R21",
    "id": "CZIB-2017-03",
    "subject": "Airspace of Syria",
    "status": "active",
    "issued": "2017-03-31",
-   "valid_until": "2026-11-30",
-   "revision": "01/10/2026 - The validity of the CZIB was extended until 30 November 2026. The content and recommendations have been revised.",
+   "valid_until": "2027-04-30",
+   "revision": "16/11/2026 – The CZIB validity was extended until 30 April 2027. No changes were made to the content or recommendations.",
    "airspace": "FIR Damascus (OSTT), all altitudes and flight levels.",
    "countries": [
     "SY"
