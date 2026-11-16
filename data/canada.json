@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-16T19:00:17Z",
+ "generated": "2026-11-16T19:20:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1929,9 +1929,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-06T21:44:21Z",
+   "updated": "2026-11-16T19:00:56Z",
    "update_type": "Regular text update",
-   "update": "Safety and security section – added information on the Papal visit",
+   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
    "link": "https://travel.gc.ca/destinations/peru"
   },
   "PF": {
