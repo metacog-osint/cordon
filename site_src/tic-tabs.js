@@ -1,5 +1,5 @@
 /*! tic-tabs.js v1.0 · The Intelligence Company: one section at a time on phones, a section row everywhere ·
- *  canonical copy to be [local path] (copy into each site with
+ *  canonical copy: the hub's site/shared/tic-tabs.js (copy into each site with
  *  tic-tabs.css; keep the version line).
  *
  *  From the suite design review (15 Nov 2026, "C · Shell"): the light program pages stacked every section, so a
