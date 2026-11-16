@@ -9441,6 +9441,360 @@
     }
    }
   },
+  "6/7767": {
+   "notam_id": "6/7767",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZAB",
+   "state": "AZ",
+   "description": "Glendale, AZ, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T17:10:31Z",
+   "detail": {
+    "name": "2026-44812-CSA-0130 GEU Ye Live",
+    "issued": "2026-11-16T16:33:42Z",
+    "effective": "2026-11-21T21:00:00Z",
+    "expires": "2026-11-22T07:00:00Z",
+    "regulation": "44812",
+    "purpose": "Ye Live at State Farm Stadium under sec 44812 c(1)",
+    "city": "Glendale",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7767 ZAB AZ..AIRSPACE GLENDALE, AZ..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1.5NM RADIUS OF 333140N1121543W (PXR279015.7) SFC-400FT AGL EFFECTIVE 2611212100 UTC UNTIL 2611220700 UTC. DUE TO YE LIVE AT STATE FARM STADIUM UNDER SEC 44812 C(1). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE ARIZONA DEPARTMENT OF PUBLIC SAFETY, CAPT BRAD KUDLER, TEL 602-316-0049, IS THE POINT OF CONTACT. 2611212100-2611220700",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -112.26194,
+        33.55282
+       ],
+       [
+        -112.25675,
+        33.55244
+       ],
+       [
+        -112.25171,
+        33.55131
+       ],
+       [
+        -112.24699,
+        33.54947
+       ],
+       [
+        -112.24272,
+        33.54696
+       ],
+       [
+        -112.23903,
+        33.54388
+       ],
+       [
+        -112.23604,
+        33.5403
+       ],
+       [
+        -112.23384,
+        33.53634
+       ],
+       [
+        -112.23249,
+        33.53212
+       ],
+       [
+        -112.23204,
+        33.52777
+       ],
+       [
+        -112.23249,
+        33.52343
+       ],
+       [
+        -112.23385,
+        33.51921
+       ],
+       [
+        -112.23605,
+        33.51525
+       ],
+       [
+        -112.23904,
+        33.51168
+       ],
+       [
+        -112.24273,
+        33.50859
+       ],
+       [
+        -112.247,
+        33.50609
+       ],
+       [
+        -112.25172,
+        33.50424
+       ],
+       [
+        -112.25675,
+        33.50311
+       ],
+       [
+        -112.26194,
+        33.50273
+       ],
+       [
+        -112.26714,
+        33.50311
+       ],
+       [
+        -112.27217,
+        33.50424
+       ],
+       [
+        -112.27689,
+        33.50609
+       ],
+       [
+        -112.28116,
+        33.50859
+       ],
+       [
+        -112.28485,
+        33.51168
+       ],
+       [
+        -112.28784,
+        33.51525
+       ],
+       [
+        -112.29004,
+        33.51921
+       ],
+       [
+        -112.29139,
+        33.52343
+       ],
+       [
+        -112.29185,
+        33.52777
+       ],
+       [
+        -112.2914,
+        33.53212
+       ],
+       [
+        -112.29005,
+        33.53634
+       ],
+       [
+        -112.28785,
+        33.5403
+       ],
+       [
+        -112.28486,
+        33.54388
+       ],
+       [
+        -112.28117,
+        33.54696
+       ],
+       [
+        -112.2769,
+        33.54947
+       ],
+       [
+        -112.27218,
+        33.55131
+       ],
+       [
+        -112.26714,
+        33.55244
+       ],
+       [
+        -112.26194,
+        33.55282
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/7769": {
+   "notam_id": "6/7769",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZAU",
+   "state": "IL",
+   "description": "Chicago, IL, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T17:10:31Z",
+   "detail": {
+    "name": "2026-44812-CSA-0138 MDW Mag Mile Lights",
+    "issued": "2026-11-16T16:39:21Z",
+    "effective": "2026-11-21T16:00:00Z",
+    "expires": "2026-11-22T03:00:00Z",
+    "regulation": "44812",
+    "purpose": "the Magnificent Mile Lights",
+    "city": "Chicago",
+    "floor": "surface",
+    "ceiling": "400 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/7769 ZAU IL..AIRSPACE CHICAGO, IL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1NM RADIUS OF 415339N0873729W (CGT352023.2) SFC-400FT DUE TO THE MAGNIFICENT MILE LIGHTS. UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE CHICAGO POLICE DEPARTMENT, SGT MARCUS BUENROSTRO, TEL 773-949-1198, IS THE POINT OF CONTACT. 2611211600-2611220300",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -87.62472,
+        41.91084
+       ],
+       [
+        -87.62085,
+        41.91059
+       ],
+       [
+        -87.61709,
+        41.90983
+       ],
+       [
+        -87.61356,
+        41.90861
+       ],
+       [
+        -87.61037,
+        41.90694
+       ],
+       [
+        -87.60762,
+        41.90488
+       ],
+       [
+        -87.60539,
+        41.9025
+       ],
+       [
+        -87.60375,
+        41.89987
+       ],
+       [
+        -87.60274,
+        41.89706
+       ],
+       [
+        -87.60241,
+        41.89416
+       ],
+       [
+        -87.60275,
+        41.89127
+       ],
+       [
+        -87.60375,
+        41.88846
+       ],
+       [
+        -87.6054,
+        41.88583
+       ],
+       [
+        -87.60763,
+        41.88345
+       ],
+       [
+        -87.61038,
+        41.88139
+       ],
+       [
+        -87.61357,
+        41.87973
+       ],
+       [
+        -87.61709,
+        41.8785
+       ],
+       [
+        -87.62085,
+        41.87775
+       ],
+       [
+        -87.62472,
+        41.87749
+       ],
+       [
+        -87.6286,
+        41.87775
+       ],
+       [
+        -87.63235,
+        41.8785
+       ],
+       [
+        -87.63588,
+        41.87973
+       ],
+       [
+        -87.63906,
+        41.88139
+       ],
+       [
+        -87.64181,
+        41.88345
+       ],
+       [
+        -87.64405,
+        41.88583
+       ],
+       [
+        -87.64569,
+        41.88846
+       ],
+       [
+        -87.6467,
+        41.89127
+       ],
+       [
+        -87.64704,
+        41.89416
+       ],
+       [
+        -87.6467,
+        41.89706
+       ],
+       [
+        -87.64569,
+        41.89987
+       ],
+       [
+        -87.64405,
+        41.9025
+       ],
+       [
+        -87.64182,
+        41.90488
+       ],
+       [
+        -87.63907,
+        41.90694
+       ],
+       [
+        -87.63588,
+        41.90861
+       ],
+       [
+        -87.63236,
+        41.90983
+       ],
+       [
+        -87.6286,
+        41.91059
+       ],
+       [
+        -87.62472,
+        41.91084
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
