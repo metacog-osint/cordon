@@ -7127,6 +7127,193 @@
     }
    }
   },
+  "6/7659": {
+   "notam_id": "6/7659",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZJX",
+   "state": "FL",
+   "description": "Orlando, FL, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T11:40:33Z",
+   "detail": null
+  },
+  "6/7660": {
+   "notam_id": "6/7660",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZBW",
+   "state": "CT",
+   "description": "Stamford, CT, Sunday, November 22, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T11:40:33Z",
+   "detail": {
+    "name": "6/7660",
+    "issued": "2026-08-25T03:40:55Z",
+    "effective": "2026-08-25T14:00:00Z",
+    "expires": "2026-09-09T03:30:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "34NM S HAMILTON",
+    "floor": "surface",
+    "ceiling": "12500 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/7660 ZLC MT..AIRSPACE 34NM S HAMILTON, MT..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 5NM RADIUS OF 454200N1140300W (LKT349040.8) SFC-12500FT BITTERROOT DISPATCH CENTER TEL 406-829-7070 OR FREQ 125.6750 FALLS POINT FIRE IS IN CHARGE OF THE OPERATION. SALT LAKE CITY/ZLC/ARTCC TEL 801-320-2560 IS THE FAA CDN FAC. DLY 1400-0330 2608251400-2609090330EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -114.05,
+        45.78331
+       ],
+       [
+        -114.02932,
+        45.78205
+       ],
+       [
+        -114.00928,
+        45.77828
+       ],
+       [
+        -113.99047,
+        45.77214
+       ],
+       [
+        -113.97349,
+        45.7638
+       ],
+       [
+        -113.95883,
+        45.75352
+       ],
+       [
+        -113.94695,
+        45.74161
+       ],
+       [
+        -113.93821,
+        45.72844
+       ],
+       [
+        -113.93288,
+        45.71441
+       ],
+       [
+        -113.9311,
+        45.69994
+       ],
+       [
+        -113.93294,
+        45.68547
+       ],
+       [
+        -113.93833,
+        45.67145
+       ],
+       [
+        -113.94711,
+        45.6583
+       ],
+       [
+        -113.959,
+        45.64641
+       ],
+       [
+        -113.97366,
+        45.63615
+       ],
+       [
+        -113.99063,
+        45.62783
+       ],
+       [
+        -114.00939,
+        45.6217
+       ],
+       [
+        -114.02938,
+        45.61795
+       ],
+       [
+        -114.05,
+        45.61669
+       ],
+       [
+        -114.07062,
+        45.61795
+       ],
+       [
+        -114.09061,
+        45.6217
+       ],
+       [
+        -114.10937,
+        45.62783
+       ],
+       [
+        -114.12634,
+        45.63615
+       ],
+       [
+        -114.141,
+        45.64641
+       ],
+       [
+        -114.15289,
+        45.6583
+       ],
+       [
+        -114.16167,
+        45.67145
+       ],
+       [
+        -114.16706,
+        45.68547
+       ],
+       [
+        -114.1689,
+        45.69994
+       ],
+       [
+        -114.16712,
+        45.71441
+       ],
+       [
+        -114.16179,
+        45.72844
+       ],
+       [
+        -114.15305,
+        45.74161
+       ],
+       [
+        -114.14117,
+        45.75352
+       ],
+       [
+        -114.12651,
+        45.7638
+       ],
+       [
+        -114.10953,
+        45.77214
+       ],
+       [
+        -114.09072,
+        45.77828
+       ],
+       [
+        -114.07068,
+        45.78205
+       ],
+       [
+        -114.05,
+        45.78331
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
