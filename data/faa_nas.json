@@ -3,6 +3,16 @@
  "programs": [
   {
    "kind": "closure",
+   "airport": "ARA",
+   "airport_name": "Acadiana Regional",
+   "start": "2026-11-16T17:12:00Z",
+   "end": "2026-11-16T19:00:00Z",
+   "updated": "2026-11-16T17:17:52Z",
+   "notam": "!ARA 11/005 ARA AD AP CLSD 2611161712-2611161900",
+   "issued": "2026-11-16T17:12:00Z"
+  },
+  {
+   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
@@ -61,6 +71,11 @@
    -106.6129,
    35.0432,
    "Albuquerque International Sunport"
+  ],
+  "ARA": [
+   -91.8767,
+   30.0332,
+   "Acadiana Regional"
   ],
   "ASE": [
    -106.8626,
@@ -156,6 +171,11 @@
    -87.9073,
    41.9742,
    "Chicago OHare International"
+  ],
+  "PHX": [
+   -112.0078,
+   33.4373,
+   "Phoenix Sky Harbor International"
   ],
   "PIT": [
    -80.2352,
