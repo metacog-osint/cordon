@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-16T12:40:27Z",
+ "generated": "2026-11-16T13:00:24Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1377,7 +1377,7 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-11-16T12:33:06Z",
+   "updated": "2026-11-16T12:56:50Z",
    "update_type": "Editorial change",
    "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/lebanon"
