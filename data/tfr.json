@@ -9271,6 +9271,183 @@
     }
    }
   },
+  "6/7890": {
+   "notam_id": "6/7890",
+   "type": "HAZARDS",
+   "facility": "ZKC",
+   "state": "IL",
+   "description": "GRANITE CITY, IL, Tuesday, November 17, 2026 through Wednesday, November 18, 2026 UTC",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T21:10:32Z",
+   "detail": {
+    "name": "6/7890",
+    "issued": "2026-11-16T20:40:54Z",
+    "effective": "2026-11-17T18:00:00Z",
+    "expires": "2026-11-18T00:15:00Z",
+    "regulation": "91.137(a)(1)",
+    "purpose": null,
+    "city": "GRANITE CITY",
+    "floor": "surface",
+    "ceiling": "2000 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7890 ZKC IL..AIRSPACE GRANITE CITY, IL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) NATURAL GAS PIPELINE RELEASE WI AN AREA DEFINED AS 1NM RADIUS OF 384057N0900731W (TOY247010.3) SFC-2000FT AGL ONLY RELIEF ACFT OPS UNDER DIRECTION OF ENERGY TRANSFER ARE AUTH IN THE AIRSPACE. ENERGY TRANSFER, TYLER ROSS TEL 618-610-3239 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. KANSAS CITY/ZKC/ARTCC TEL 913-254-8500 IS THE FAA CDN FAC. 2611171800-2611180015",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -90.12528,
+        38.69918
+       ],
+       [
+        -90.12158,
+        38.69893
+       ],
+       [
+        -90.118,
+        38.69818
+       ],
+       [
+        -90.11463,
+        38.69695
+       ],
+       [
+        -90.11159,
+        38.69528
+       ],
+       [
+        -90.10897,
+        38.69322
+       ],
+       [
+        -90.10684,
+        38.69084
+       ],
+       [
+        -90.10528,
+        38.6882
+       ],
+       [
+        -90.10432,
+        38.6854
+       ],
+       [
+        -90.10399,
+        38.6825
+       ],
+       [
+        -90.10432,
+        38.6796
+       ],
+       [
+        -90.10528,
+        38.67679
+       ],
+       [
+        -90.10685,
+        38.67416
+       ],
+       [
+        -90.10898,
+        38.67178
+       ],
+       [
+        -90.1116,
+        38.66972
+       ],
+       [
+        -90.11464,
+        38.66805
+       ],
+       [
+        -90.118,
+        38.66682
+       ],
+       [
+        -90.12158,
+        38.66607
+       ],
+       [
+        -90.12528,
+        38.66582
+       ],
+       [
+        -90.12897,
+        38.66607
+       ],
+       [
+        -90.13256,
+        38.66682
+       ],
+       [
+        -90.13592,
+        38.66805
+       ],
+       [
+        -90.13896,
+        38.66972
+       ],
+       [
+        -90.14158,
+        38.67178
+       ],
+       [
+        -90.14371,
+        38.67416
+       ],
+       [
+        -90.14528,
+        38.67679
+       ],
+       [
+        -90.14624,
+        38.6796
+       ],
+       [
+        -90.14656,
+        38.6825
+       ],
+       [
+        -90.14624,
+        38.6854
+       ],
+       [
+        -90.14528,
+        38.6882
+       ],
+       [
+        -90.14371,
+        38.69084
+       ],
+       [
+        -90.14158,
+        38.69322
+       ],
+       [
+        -90.13896,
+        38.69528
+       ],
+       [
+        -90.13592,
+        38.69695
+       ],
+       [
+        -90.13256,
+        38.69818
+       ],
+       [
+        -90.12897,
+        38.69893
+       ],
+       [
+        -90.12528,
+        38.69918
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
