@@ -3,6 +3,16 @@
  "programs": [
   {
    "kind": "closure",
+   "airport": "SAN",
+   "airport_name": "San Diego-Lindbergh Field",
+   "start": "2026-11-16T09:00:00Z",
+   "end": "2026-11-16T14:00:00Z",
+   "updated": "2026-11-09T15:09:23Z",
+   "notam": "!SAN 11/048 SAN AD AP CLSD 2611160900-2611161400",
+   "issued": "2026-11-09T15:06:00Z"
+  },
+  {
+   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
