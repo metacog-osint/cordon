@@ -45,15 +45,15 @@
    "kind": "ground_stop",
    "airport": "TEB",
    "airport_name": "Teterboro",
-   "start": "2026-11-16T19:23:00Z",
-   "end": "2026-11-16T20:45:00Z",
-   "updated": "2026-11-16T19:36:19Z",
+   "start": "2026-11-16T20:16:00Z",
+   "end": "2026-11-16T21:45:00Z",
+   "updated": "2026-11-16T20:30:51Z",
    "reason": "airport volume",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=56&adv_date=11162026&facId=TEB&title=ATCSCC ADVZY 056 TEB/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
-   "included_facilities": 12,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=63&adv_date=11162026&facId=TEB&title=ATCSCC ADVZY 063 TEB/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "included_facilities": 11,
    "included_flights": null,
-   "probability_of_extension": "MEDIUM"
+   "probability_of_extension": "LOW"
   }
  ],
  "airports": {

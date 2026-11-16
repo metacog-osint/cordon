@@ -5422,481 +5422,6 @@
     }
    }
   },
-  "6/7554": {
-   "notam_id": "6/7554",
-   "type": "VIP",
-   "facility": "ZAN",
-   "state": "AK",
-   "description": "Anchorage, AK, Monday, November 16, 2026 Local",
-   "created": "11/14/2026",
-   "first_seen": "2026-11-14T15:56:23Z",
-   "detail": {
-    "name": "261116 Anchorage POTUS",
-    "issued": "2026-11-14T15:56:23Z",
-    "effective": "2026-11-16T20:30:00Z",
-    "expires": "2026-11-16T23:30:00Z",
-    "regulation": "91.141",
-    "purpose": null,
-    "city": "Anchorage",
-    "floor": "surface",
-    "ceiling": "17999 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7554 ZAN AK..AIRSPACE ANCHORAGE, ALASKA..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 16, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 91.141, ALL ACFT FLT OPS INCLUDING REMOTE CONTROLLED ACFT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 30NM RADIUS OF 611510N1494736W (TED025007.0) SFC-17999FT MSL EFFECTIVE 2611162030 UTC (1130 LOCAL 11/16/26) UNTIL 2611162330 UTC (1430 LOCAL 11/16/26). WI AN AREA DEFINED AS 10NM RADIUS OF 611510N1494736W (TED025007.0) SFC-17999FT MSL EFFECTIVE 2611162030 UTC (1130 LOCAL 11/16/26) UNTIL 2611162330 UTC (1430 LOCAL 11/16/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC IN CONSULTATION WITH THE AIR TFC SECURITY COORDINATOR VIA THE DOMESTIC EVENTS NETWORK (DEN): A. ALL ACFT OPS WI THE 10NM RADIUS AREA(S) LISTED ABV, KNOWN AS THE INNER CORE(S), ARE PROHIBITED EXC FOR: APPROVED LAW ENFORCEMENT, MIL ACFT DIRECTLY SUPPORTING THE UNITED STATES SECRET SERVICE(USSS) AND THE OFFICE OF THE PRESIDENT OF THE UNITED STATES, APPROVED AIR AMBULANCE FLIGHTS, AND REGULARLY SCHEDULED COMMERCIAL PAX AND ALL - CARGO CARRIERS OPR UNDER ONE OF THE FOLLOWING TSA - APPROVED STANDARD SECURITY PROGRAMS / PROC AND ARE ARR INTO AND / OR DEP FM 14 CFR PART 139 AP: ACFT OPR STANDARD SECURITY PROGRAM(AOSSP), FULL ALL - CARGO ACFT OPR STANDARD SECURITY PROGRAM(FACAOSSP), MODEL SECURITY PROGRAM(MSP), TWELVE FIVE STANDARD SECURITY PROGRAM ALL CARGO(TFSSP - ALL CARGO), OR ALL - CARGO INTERNATIONAL SECURITY PROC(ACISP). ALL EMERGENCY / LIFE SAVING FLT(MEDICAL / LAW ENFORCEMENT / FIREFIGHTING) OPS MUST COORDINATE WITH ATC PRIOR TO THEIR DEP AT 907-271-2711 TO AVOID POTENTIAL DELAYS. B. FOR OPS WI THE AIRSPACE BTN THE 10NM RADIUS AND 30NM RADIUS AREA(S) LISTED ABV, KNOWN AS THE OUTER RING(S): ALL ACFT OPR WI THE OUTER RING(S) LISTED ABV ARE LIMITED TO ACFT ARR OR DEP LOCAL AIRFIELDS, AND WORKLOAD PERMITTING, ATC MAY AUTHORIZE TRANSIT OPS. ACFT MAY NOT LOITER. ALL ACFT MUST BE ON AN ACT IFR OR FILED VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BE SQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR AND MUST REMAIN IN TWO-WAY RADIO COM WITH ATC. C. THE FOLLOWING OPS ARE NOT AUTH WI THIS TFR: FLT TRAINING, PRACTICE INSTRUMENT APCH, AEROBATIC FLT, GLIDER OPS, PARACHUTE OPS, ULTRALIGHT, HANG GLIDING, BALLOON OPS, AGRICULTURE/CROP DUSTING, ANIMAL POPULATION CTL FLT OPS, BANNER TOWING OPS, SIGHTSEEING OPS, MAINTENANCE TEST FLIGHTS, MODEL ACFT OPS, MODEL ROCKETRY, UNMANNED ACFT SYSTEMS (UAS), AND UTILITY AND PIPELINE SURVEY OPS. D. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. E. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. F. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611162030-2611162330",
-    "geometry": {
-     "type": "MultiPolygon",
-     "coordinates": [
-      [
-       [
-        [
-         -149.79333,
-         61.75135
-        ],
-        [
-         -149.70167,
-         61.74943
-        ],
-        [
-         -149.61074,
-         61.74366
-        ],
-        [
-         -149.52127,
-         61.7341
-        ],
-        [
-         -149.43396,
-         61.72082
-        ],
-        [
-         -149.34952,
-         61.70393
-        ],
-        [
-         -149.2686,
-         61.68356
-        ],
-        [
-         -149.19184,
-         61.65987
-        ],
-        [
-         -149.11984,
-         61.63306
-        ],
-        [
-         -149.05315,
-         61.60333
-        ],
-        [
-         -148.99229,
-         61.57092
-        ],
-        [
-         -148.93771,
-         61.53608
-        ],
-        [
-         -148.88982,
-         61.49908
-        ],
-        [
-         -148.84897,
-         61.46022
-        ],
-        [
-         -148.81545,
-         61.4198
-        ],
-        [
-         -148.78948,
-         61.37812
-        ],
-        [
-         -148.77125,
-         61.33552
-        ],
-        [
-         -148.76085,
-         61.29231
-        ],
-        [
-         -148.75834,
-         61.24883
-        ],
-        [
-         -148.7637,
-         61.20541
-        ],
-        [
-         -148.77686,
-         61.16238
-        ],
-        [
-         -148.79768,
-         61.12006
-        ],
-        [
-         -148.82598,
-         61.07878
-        ],
-        [
-         -148.86153,
-         61.03884
-        ],
-        [
-         -148.90402,
-         61.00054
-        ],
-        [
-         -148.95312,
-         60.96417
-        ],
-        [
-         -149.00844,
-         60.92999
-        ],
-        [
-         -149.06955,
-         60.89826
-        ],
-        [
-         -149.13598,
-         60.86921
-        ],
-        [
-         -149.20725,
-         60.84306
-        ],
-        [
-         -149.2828,
-         60.82
-        ],
-        [
-         -149.36208,
-         60.80019
-        ],
-        [
-         -149.4445,
-         60.78378
-        ],
-        [
-         -149.52947,
-         60.7709
-        ],
-        [
-         -149.61635,
-         60.76162
-        ],
-        [
-         -149.70452,
-         60.75603
-        ],
-        [
-         -149.79333,
-         60.75417
-        ],
-        [
-         -149.88215,
-         60.75603
-        ],
-        [
-         -149.97032,
-         60.76162
-        ],
-        [
-         -150.0572,
-         60.7709
-        ],
-        [
-         -150.14216,
-         60.78378
-        ],
-        [
-         -150.22459,
-         60.80019
-        ],
-        [
-         -150.30387,
-         60.82
-        ],
-        [
-         -150.37942,
-         60.84306
-        ],
-        [
-         -150.45068,
-         60.86921
-        ],
-        [
-         -150.51712,
-         60.89826
-        ],
-        [
-         -150.57823,
-         60.92999
-        ],
-        [
-         -150.63355,
-         60.96417
-        ],
-        [
-         -150.68265,
-         61.00054
-        ],
-        [
-         -150.72514,
-         61.03884
-        ],
-        [
-         -150.76068,
-         61.07878
-        ],
-        [
-         -150.78899,
-         61.12006
-        ],
-        [
-         -150.80981,
-         61.16238
-        ],
-        [
-         -150.82297,
-         61.20541
-        ],
-        [
-         -150.82833,
-         61.24883
-        ],
-        [
-         -150.82581,
-         61.29231
-        ],
-        [
-         -150.81542,
-         61.33552
-        ],
-        [
-         -150.79718,
-         61.37812
-        ],
-        [
-         -150.77122,
-         61.4198
-        ],
-        [
-         -150.7377,
-         61.46022
-        ],
-        [
-         -150.69684,
-         61.49908
-        ],
-        [
-         -150.64895,
-         61.53608
-        ],
-        [
-         -150.59438,
-         61.57092
-        ],
-        [
-         -150.53351,
-         61.60333
-        ],
-        [
-         -150.46683,
-         61.63306
-        ],
-        [
-         -150.39483,
-         61.65987
-        ],
-        [
-         -150.31807,
-         61.68356
-        ],
-        [
-         -150.23715,
-         61.70393
-        ],
-        [
-         -150.1527,
-         61.72082
-        ],
-        [
-         -150.0654,
-         61.7341
-        ],
-        [
-         -149.97593,
-         61.74366
-        ],
-        [
-         -149.885,
-         61.74943
-        ],
-        [
-         -149.79333,
-         61.75135
-        ]
-       ]
-      ],
-      [
-       [
-        [
-         -149.79333,
-         61.41897
-        ],
-        [
-         -149.73311,
-         61.41644
-        ],
-        [
-         -149.67474,
-         61.4089
-        ],
-        [
-         -149.62003,
-         61.3966
-        ],
-        [
-         -149.57065,
-         61.37991
-        ],
-        [
-         -149.52813,
-         61.35935
-        ],
-        [
-         -149.49374,
-         61.33555
-        ],
-        [
-         -149.46853,
-         61.30923
-        ],
-        [
-         -149.45324,
-         61.28121
-        ],
-        [
-         -149.44831,
-         61.25234
-        ],
-        [
-         -149.45386,
-         61.22349
-        ],
-        [
-         -149.4697,
-         61.19555
-        ],
-        [
-         -149.49532,
-         61.16935
-        ],
-        [
-         -149.52992,
-         61.14569
-        ],
-        [
-         -149.57245,
-         61.12528
-        ],
-        [
-         -149.62161,
-         61.10874
-        ],
-        [
-         -149.67591,
-         61.09655
-        ],
-        [
-         -149.73373,
-         61.08909
-        ],
-        [
-         -149.79333,
-         61.08658
-        ],
-        [
-         -149.85294,
-         61.08909
-        ],
-        [
-         -149.91076,
-         61.09655
-        ],
-        [
-         -149.96506,
-         61.10874
-        ],
-        [
-         -150.01422,
-         61.12528
-        ],
-        [
-         -150.05674,
-         61.14569
-        ],
-        [
-         -150.09135,
-         61.16935
-        ],
-        [
-         -150.11697,
-         61.19555
-        ],
-        [
-         -150.1328,
-         61.22349
-        ],
-        [
-         -150.13836,
-         61.25234
-        ],
-        [
-         -150.13343,
-         61.28121
-        ],
-        [
-         -150.11814,
-         61.30923
-        ],
-        [
-         -150.09292,
-         61.33555
-        ],
-        [
-         -150.05854,
-         61.35935
-        ],
-        [
-         -150.01601,
-         61.37991
-        ],
-        [
-         -149.96664,
-         61.3966
-        ],
-        [
-         -149.91193,
-         61.4089
-        ],
-        [
-         -149.85356,
-         61.41644
-        ],
-        [
-         -149.79333,
-         61.41897
-        ]
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7574": {
    "notam_id": "6/7574",
    "type": "SECURITY",
@@ -6944,55 +6469,6 @@
        [
         -85.03083,
         29.77568
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/7672": {
-   "notam_id": "6/7672",
-   "type": "SECURITY",
-   "facility": "ZLA",
-   "state": "NV",
-   "description": "Las Vegas, NV, Thursday, November 19, 2026 through Saturday, November 21, 2026 Local",
-   "created": "11/16/2026",
-   "first_seen": "2026-11-16T13:10:34Z",
-   "detail": {
-    "name": "261119-21 F1 Las Vegas UAS Only",
-    "issued": "2026-11-16T12:36:13Z",
-    "effective": "2026-11-19T23:25:00Z",
-    "expires": "2026-11-22T07:59:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "Las Vegas",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/7672 ZLA NV..AIRSPACE LAS VEGAS, NV..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 19-21, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 360839N1151049W (LAS331004) TO 360839N1150918W (LAS348003.9) TO 360651N1150918W (LAS351002.1) TO 360651N1151049W (LAS319002.3) TO POINT OF ORIGIN SFC-1000FT AGL EFFECTIVE 2611192325 UTC (1525 LOCAL 11/19/26) UNTIL 2611220759 UTC (2359 LOCAL 11/21/26) DLY 2325-0759 (1525-2359 LOCAL). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA HTTPS://WAIVERS.FAA.GOV. C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY UAS OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611192325-2611220759",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -115.18028,
-        36.14417
-       ],
-       [
-        -115.155,
-        36.14417
-       ],
-       [
-        -115.155,
-        36.11417
-       ],
-       [
-        -115.18028,
-        36.11417
-       ],
-       [
-        -115.18028,
-        36.14417
        ]
       ]
      ]
@@ -9618,6 +9094,183 @@
     }
    }
   },
+  "6/7878": {
+   "notam_id": "6/7878",
+   "type": "SECURITY",
+   "facility": "ZLA",
+   "state": "NV",
+   "description": "Las Vegas, NV, Thursday, November 19, 2026 through Saturday, November 21, 2026 Local",
+   "created": "11/16/2026",
+   "first_seen": "2026-11-16T20:40:32Z",
+   "detail": {
+    "name": "261119-21 F1 Las Vegas UAS Only",
+    "issued": "2026-11-16T20:10:02Z",
+    "effective": "2026-11-19T23:25:00Z",
+    "expires": "2026-11-22T07:59:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Las Vegas",
+    "floor": "surface",
+    "ceiling": "1000 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/7878 ZLA NV..AIRSPACE LAS VEGAS, NV..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 19-21, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 360700N1151008W (LAS334002.3) SFC-1000FT AGL EFFECTIVE 2611192325 UTC (1525 LOCAL 11/19/26) UNTIL 2611220759 UTC (2359 LOCAL 11/21/26) DLY 2325-0759 (1525-2359 LOCAL). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA WAIVERS.FAA.GOV. C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611192325-2611220759",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -115.16878,
+        36.13333
+       ],
+       [
+        -115.1652,
+        36.13308
+       ],
+       [
+        -115.16174,
+        36.13232
+       ],
+       [
+        -115.15849,
+        36.13109
+       ],
+       [
+        -115.15555,
+        36.12942
+       ],
+       [
+        -115.15302,
+        36.12737
+       ],
+       [
+        -115.15096,
+        36.12498
+       ],
+       [
+        -115.14945,
+        36.12235
+       ],
+       [
+        -115.14852,
+        36.11954
+       ],
+       [
+        -115.14821,
+        36.11664
+       ],
+       [
+        -115.14852,
+        36.11374
+       ],
+       [
+        -115.14945,
+        36.11093
+       ],
+       [
+        -115.15096,
+        36.10829
+       ],
+       [
+        -115.15302,
+        36.10591
+       ],
+       [
+        -115.15556,
+        36.10385
+       ],
+       [
+        -115.15849,
+        36.10218
+       ],
+       [
+        -115.16174,
+        36.10095
+       ],
+       [
+        -115.16521,
+        36.1002
+       ],
+       [
+        -115.16878,
+        36.09995
+       ],
+       [
+        -115.17235,
+        36.1002
+       ],
+       [
+        -115.17581,
+        36.10095
+       ],
+       [
+        -115.17906,
+        36.10218
+       ],
+       [
+        -115.182,
+        36.10385
+       ],
+       [
+        -115.18453,
+        36.10591
+       ],
+       [
+        -115.18659,
+        36.10829
+       ],
+       [
+        -115.18811,
+        36.11093
+       ],
+       [
+        -115.18904,
+        36.11374
+       ],
+       [
+        -115.18935,
+        36.11664
+       ],
+       [
+        -115.18904,
+        36.11954
+       ],
+       [
+        -115.18811,
+        36.12235
+       ],
+       [
+        -115.18659,
+        36.12498
+       ],
+       [
+        -115.18454,
+        36.12737
+       ],
+       [
+        -115.182,
+        36.12942
+       ],
+       [
+        -115.17907,
+        36.13109
+       ],
+       [
+        -115.17581,
+        36.13232
+       ],
+       [
+        -115.17235,
+        36.13308
+       ],
+       [
+        -115.16878,
+        36.13333
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
@@ -9876,6 +9529,20 @@
    "first_seen": "2026-11-13T17:30:05Z",
    "left_at": "2026-11-16T19:40:32Z"
   },
+  "6/7554": {
+   "type": "VIP",
+   "state": "AK",
+   "bbox": [
+    -150.8283,
+    60.7542,
+    -148.7583,
+    61.7514
+   ],
+   "area_km2": 10645.5,
+   "ceiling_ft": 17999,
+   "first_seen": "2026-11-14T15:56:23Z",
+   "left_at": "2026-11-16T20:40:32Z"
+  },
   "6/7567": {
    "type": "HAZARDS",
    "state": "LA",
@@ -9889,6 +9556,20 @@
    "ceiling_ft": 1000,
    "first_seen": "2026-11-14T18:35:16Z",
    "left_at": "2026-11-16T14:10:36Z"
+  },
+  "6/7672": {
+   "type": "SECURITY",
+   "state": "NV",
+   "bbox": [
+    -115.1803,
+    36.1142,
+    -115.155,
+    36.1442
+   ],
+   "area_km2": 7.5,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-16T13:10:34Z",
+   "left_at": "2026-11-16T20:40:32Z"
   },
   "6/7758": {
    "type": "VIP",
