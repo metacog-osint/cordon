@@ -64,6 +64,20 @@
    "included_facilities": 3,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-16T18:00:00Z",
+   "end": "2026-11-16T19:00:00Z",
+   "updated": "2026-11-16T18:12:29Z",
+   "reason": "airspace volume",
+   "center": "ZNY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=50&adv_date=11162026&facId=LGA&title=ATCSCC ADVZY 050 LGA/ZNY 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "included_facilities": 1,
+   "included_flights": null,
+   "probability_of_extension": "LOW"
   }
  ],
  "airports": {
