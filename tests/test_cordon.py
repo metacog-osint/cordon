@@ -1001,8 +1001,15 @@ class Tfr(unittest.TestCase):
         self.assertEqual((hub["impact"], hub["impact_basis"]), ("high", ["within 56 km of ORD (Core 30)"]))
         wide = tfr.impact(self.rec("6/3", "VIP", "AK", self.square(-149.9, 61.2, 0.5), "17999 ft MSL"))
         self.assertEqual(wide["impact"], "high")
+        # Tom, 16 Nov 2026 UTC: a small column to unlimited (Santa Rosa Island munitions test, 29 km2) rates low;
+        # reaching Class A counts from 100 km2.
         tall = tfr.impact(self.rec("6/4", "SECURITY", "FL", self.square(-86.6, 30.36, 0.03), "FL999"))
-        self.assertEqual((tall["impact"], tall["ceiling_ft"]), ("moderate", 99900))
+        self.assertEqual((tall["impact"], tall["ceiling_ft"], tall["impact_basis"]), ("low", 99900, []))
+        self.assertLess(tall["area_km2"], 100)
+        tall_wide = tfr.impact(self.rec("6/5", "SECURITY", "FL", self.square(-86.6, 30.36, 0.06), "FL999"))
+        self.assertEqual(tall_wide["impact"], "moderate")
+        self.assertTrue(100 <= tall_wide["area_km2"] < 250, tall_wide["area_km2"])
+        self.assertEqual(tall_wide["impact_basis"], [f"reaches FL180 over {tall_wide['area_km2']:,.0f} km2"])
         self.assertEqual([tfr.feet(h) for h in ("surface", "FL180", "2500 ft AGL", None, "odd")], [0, 18000, 2500, None, None])
 
     def test_reissues_are_not_new_unless_larger(self):

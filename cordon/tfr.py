@@ -232,6 +232,10 @@ CLASS_A_FT = 18000
 WIDE_KM2 = 2500.0
 SIZEABLE_KM2 = 500.0
 MODERATE_KM2 = 250.0
+# Reaching Class A counts only over CLASS_A_MIN_KM2 or more (Tom, 16 Nov 2026 UTC): a 29 km2 surface-to-unlimited
+# munitions test off Santa Rosa Island (6/7507) is a point that jet traffic steps around, not a moderate impact.
+# 100 km2 is about a 5.6 km radius, the size of a VIP TFR's 3 nm inner ring.
+CLASS_A_MIN_KM2 = 100.0
 # A VIP TFR is listed but routine unless its impact is high (a presidential visit's 30 nm ring is).
 IMPACT_ALERT = {"VIP"}
 # Re-issues (item 4 of Tom's list, 15 Nov 2026): the FAA cancels a changed TFR and issues it under a new number,
@@ -296,7 +300,8 @@ def impact(rec: dict) -> dict:
 
     high: within NEAR_CORE_KM of a Core 30 airport with a ceiling of NEAR_CORE_CEILING_FT or more; or WIDE_KM2 or
           more; or reaching Class A (FL180) over SIZEABLE_KM2 or more.
-    moderate: any one of reaching Class A, MODERATE_KM2 or more, or within NEAR_CORE_KM of a Core 30 airport.
+    moderate: any one of reaching Class A over CLASS_A_MIN_KM2 or more, MODERATE_KM2 or more, or within NEAR_CORE_KM
+          of a Core 30 airport.
     low: the rest (small, low and away from the busiest airports, such as most volcano, fire and range TFRs)."""
     d = rec.get("detail") or {}
     g = d.get("geometry")
@@ -309,7 +314,7 @@ def impact(rec: dict) -> dict:
         hours = round((datetime.fromisoformat(d["expires"].replace("Z", "+00:00"))
                        - datetime.fromisoformat(d["effective"].replace("Z", "+00:00"))).total_seconds() / 3600, 1)
     close = bool(near and near[1] <= NEAR_CORE_KM)
-    class_a = ceiling is not None and ceiling >= CLASS_A_FT
+    class_a = ceiling is not None and ceiling >= CLASS_A_FT and area >= CLASS_A_MIN_KM2
     why = []
     if close and (ceiling is None or ceiling >= NEAR_CORE_CEILING_FT):
         why.append(f"within {int(NEAR_CORE_KM)} km of {near[0]} (Core 30)")
@@ -321,7 +326,7 @@ def impact(rec: dict) -> dict:
         level = "high"
     elif class_a or area >= MODERATE_KM2 or close:
         level = "moderate"
-        why = [w for w, on in ((f"reaches FL{CLASS_A_FT // 100}", class_a), (f"{area:,.0f} km2", area >= MODERATE_KM2),
+        why = [w for w, on in ((f"reaches FL{CLASS_A_FT // 100} over {area:,.0f} km2", class_a), (f"{area:,.0f} km2", area >= MODERATE_KM2),
                                (f"within {int(NEAR_CORE_KM)} km of {near[0] if near else ''} (Core 30)", close)) if on]
     else:
         level = "low"
