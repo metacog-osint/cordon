@@ -23,6 +23,11 @@
   }
  ],
  "airports": {
+  "ABQ": [
+   -106.6129,
+   35.0432,
+   "Albuquerque International Sunport"
+  ],
   "ASE": [
    -106.8626,
    39.2236,
@@ -102,6 +107,11 @@
    -80.2871,
    25.7959,
    "Miami International"
+  ],
+  "MSP": [
+   -93.2223,
+   44.8848,
+   "Minneapolis-St Paul International/Wold-Chamberlain"
   ],
   "OPF": [
    -80.27736,
