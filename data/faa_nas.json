@@ -39,6 +39,20 @@
    "included_facilities": 1,
    "included_flights": null,
    "probability_of_extension": "LOW"
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "SFO",
+   "airport_name": "San Francisco International",
+   "start": "2026-11-16T21:57:00Z",
+   "end": "2026-11-16T23:30:00Z",
+   "updated": "2026-11-16T22:12:20Z",
+   "reason": "low ceilings",
+   "center": "ZOA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=72&adv_date=11162026&facId=SFO&title=ATCSCC ADVZY 072 SFO/ZOA 11/16/2026 CDM GROUND STOP&titleDate=11/16/2026",
+   "included_facilities": 3,
+   "included_flights": null,
+   "probability_of_extension": "LOW"
   }
  ],
  "airports": {
