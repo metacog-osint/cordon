@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-16T13:00:24Z",
+ "generated": "2026-11-16T19:00:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -549,9 +549,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-13T16:35:20Z",
+   "updated": "2026-11-16T18:59:53Z",
    "update_type": "Regular text update",
-   "update": "Safety and security section – updated information on swimming and adventure travel",
+   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
    "link": "https://travel.gc.ca/destinations/costa-rica"
   },
   "CU": {
