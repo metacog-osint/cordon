@@ -10375,6 +10375,183 @@
     }
    }
   },
+  "6/8326": {
+   "notam_id": "6/8326",
+   "type": "HAZARDS",
+   "facility": "ZKC",
+   "state": "KS",
+   "description": "ARLINGTON, KS, Thursday, November 19, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T20:40:32Z",
+   "detail": {
+    "name": "6/8326",
+    "issued": "2026-11-17T20:21:21Z",
+    "effective": "2026-11-19T14:00:00Z",
+    "expires": "2026-11-19T17:00:00Z",
+    "regulation": "91.137(a)(1)",
+    "purpose": null,
+    "city": "ARLINGTON",
+    "floor": "surface",
+    "ceiling": "2000 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/8326 ZKC KS..AIRSPACE ARLINGTON, KS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) NATURAL GAS PIPELINE RELEASE WI AN AREA DEFINED AS 1NM RADIUS OF 375313N0980155W (HUT211008.1) SFC-2000FT AGL ONLY RELIEF ACFT OPS UNDER DIRECTION OF PANHANDLE EASTERN PIPELINE COMPANY ARE AUTH IN THE AIRSPACE. PANHANDLE EASTERN PIPELINE COMPANY, LOREN ZIMMERMAN TEL 620-388-4028 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. KANSAS CITY/ZKC/ARTCC TEL 913-254-8500 IS THE FAA CDN FAC. 2611191400-2611191700",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -98.03194,
+        37.90363
+       ],
+       [
+        -98.02829,
+        37.90338
+       ],
+       [
+        -98.02474,
+        37.90262
+       ],
+       [
+        -98.02142,
+        37.90139
+       ],
+       [
+        -98.01841,
+        37.89973
+       ],
+       [
+        -98.01581,
+        37.89767
+       ],
+       [
+        -98.01371,
+        37.89529
+       ],
+       [
+        -98.01216,
+        37.89265
+       ],
+       [
+        -98.01121,
+        37.88984
+       ],
+       [
+        -98.01089,
+        37.88694
+       ],
+       [
+        -98.01121,
+        37.88405
+       ],
+       [
+        -98.01216,
+        37.88124
+       ],
+       [
+        -98.01371,
+        37.8786
+       ],
+       [
+        -98.01582,
+        37.87622
+       ],
+       [
+        -98.01841,
+        37.87416
+       ],
+       [
+        -98.02142,
+        37.87249
+       ],
+       [
+        -98.02475,
+        37.87126
+       ],
+       [
+        -98.02829,
+        37.87051
+       ],
+       [
+        -98.03194,
+        37.87026
+       ],
+       [
+        -98.0356,
+        37.87051
+       ],
+       [
+        -98.03914,
+        37.87126
+       ],
+       [
+        -98.04247,
+        37.87249
+       ],
+       [
+        -98.04547,
+        37.87416
+       ],
+       [
+        -98.04807,
+        37.87622
+       ],
+       [
+        -98.05018,
+        37.8786
+       ],
+       [
+        -98.05173,
+        37.88124
+       ],
+       [
+        -98.05268,
+        37.88405
+       ],
+       [
+        -98.053,
+        37.88694
+       ],
+       [
+        -98.05268,
+        37.88984
+       ],
+       [
+        -98.05173,
+        37.89265
+       ],
+       [
+        -98.05018,
+        37.89529
+       ],
+       [
+        -98.04807,
+        37.89767
+       ],
+       [
+        -98.04548,
+        37.89973
+       ],
+       [
+        -98.04247,
+        37.90139
+       ],
+       [
+        -98.03915,
+        37.90262
+       ],
+       [
+        -98.0356,
+        37.90338
+       ],
+       [
+        -98.03194,
+        37.90363
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
