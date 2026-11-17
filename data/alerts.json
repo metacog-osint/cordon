@@ -147,15 +147,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 18, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcHFLRDFiNUFaTlhWTTdicjRpMGdSQjl6YndxczhqaDA1d0NrNDdzeU9XNFUxQjd1VzZUVTYwc2ZOekRsN016cDZKdVNJckdIZEpqYkZ1aTJtdk9tMDlRNmlPWFhTQ1JvMWpJX1BrZmY5UVRIMzMxR3BvV29fN21JeDlteDh6czViYzZxTjh3b2pfV1k?oc=5",
-    "published_at": "2026-10-18T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
    }
   ],
   "IL": [
@@ -173,15 +164,6 @@
     "title": "Security Alert: U.S. Embassy Jerusalem – October 25, 2026",
     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSUlKQzllZkZyTkJDREtCZzlOWUNlbkE2enRCM2lMTWlvcl8xTDlHaEg2V3hMeHVRZDViM1lvSm1vYk1yX2VNSWdsVTA0ZWw4YWc2NjYzSnB4SDdhelFHOVZFN0xKY0k1NTBkN2VLRE9rY0V0LUZiYm41Y3hZSkQyS05zZEU?oc=5",
     "published_at": "2026-10-25T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://il.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "IL",
-    "title": "Security Alert: U.S. Embassy Jerusalem – October 23, 2026",
-    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZS10bDB2R2FhZXBlWjhkS1dxbklTZWRYOEpfMW5DZlhuYnFsd3QzTmtORWtCZENxR3lsQ256Uzl2S183RXR3REJIVmlSMGh3d3ZfMDQ2ZVhyVkxSczVzVmF3YUtmb2RLeWE2WFM3Z2M4aU4teFQxZ1ItNmkySVI5dUR2N1g?oc=5",
-    "published_at": "2026-10-18T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://il.usembassy.gov/category/alert/"
@@ -223,9 +205,9 @@
   "KW": [
    {
     "iso": "KW",
-    "title": "Security Alert: U.S. Embassy Kuwait – October 18, 2026",
-    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRDZSbk5iaUlzal9VbjJueEdyT01hQ1VrWVVLUEgxVEVsTERldXYxSGIzOTItbXdYbDJGZVRNQ3Axa2VxOUMtNFZrMWpTVVZ6Qkk5cWllQWxnbnZDVDNlalJ4QzlzR2FYbENUeVZJN3o0NGlEdnhpakdiUDJXTXpfbQ?oc=5",
-    "published_at": "2026-10-18T07:00:00Z",
+    "title": "Security Alert: U.S. Embassy Kuwait – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcHQyRG14ZEM3cFVaUUJiSEdMQW1NX3d1MGFLRXFCd2dyMC1CM0tHQThBakxDQ25jSm45TlFoR3I3SzJZUmRsNmc1QjYycGxseGdmd0NmYzhBRHZaS1MtT3ZHNnZGTjE0VW41NEduMHBmRnFhRlY0cVY1RFVuWlBJOA?oc=5",
+    "published_at": "2026-11-06T23:30:12Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://kw.usembassy.gov/category/alert/"
@@ -457,9 +439,9 @@
    },
    {
     "iso": "SA",
-    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
-    "published_at": "2026-11-03T08:00:00Z",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 21, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObUFQcER4RDhSRXcyeUpYUXZXMzJJM1ZEZ2Rrc09QY05veXQ2bXBxRV9pRVVObFd1bEVBODBkNE9RdEdna2pwaHd0VWV2NVNwSERwdGU4TGVLX1BGUXJ5NTFSQVA4aWhfUDNzVWJwWlF4VmNZbzJMcVRVRmp3Z0lFNVpuQmNRMXNTRzZEUg?oc=5",
+    "published_at": "2026-10-21T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
