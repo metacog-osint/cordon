@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-16T19:20:15Z",
+ "generated": "2026-11-17T12:00:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1113,9 +1113,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-06T20:56:22Z",
+   "updated": "2026-11-17T11:57:35Z",
    "update_type": "Regular text update",
-   "update": "Safety and security section - added information on enhanced security measures during high level event",
+   "update": "Safety and security section – removed information on enhanced security measures during high level events",
    "link": "https://travel.gc.ca/destinations/ireland"
   },
   "IL": {
