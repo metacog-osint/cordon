@@ -10,6 +10,20 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "PHX",
+   "airport_name": "Phoenix Sky Harbor International",
+   "start": "2026-11-17T18:06:00Z",
+   "end": "2026-11-17T19:30:00Z",
+   "updated": "2026-11-17T18:23:47Z",
+   "reason": "thunderstorms",
+   "center": "ZAB",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=56&adv_date=11172026&facId=PHX&title=ATCSCC ADVZY 056 PHX/ZAB 11/17/2026 CDM GROUND STOP&titleDate=11/17/2026",
+   "included_facilities": 1,
+   "included_flights": null,
+   "probability_of_extension": "LOW"
   }
  ],
  "airports": {
