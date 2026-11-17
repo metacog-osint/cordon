@@ -304,14 +304,14 @@
   "brazil": {
    "slug": "brazil",
    "name": "Brazil",
-   "updated": "2026-10-28T10:42:46Z",
-   "change": "Removal of information about elections ('Warnings and insurance' and 'Safety and security' pages).",
+   "updated": "2026-11-17T13:27:42Z",
+   "change": "New information about the risk of extreme weather due to the El Niño climate event (‘Safety and security’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/brazil",
    "iso": "BR",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-10-28T10:42:46Z"
+   "status_for": "2026-11-17T13:27:42Z"
   },
   "british-indian-ocean-territory": {
    "slug": "british-indian-ocean-territory",
@@ -773,12 +773,12 @@
   "finland": {
    "slug": "finland",
    "name": "Finland",
-   "updated": "2026-08-11T09:18:13Z",
-   "change": "Updated information on European Entry-Exit System (EES) (‘Entry requirements’ page).",
+   "updated": "2026-11-17T13:27:15Z",
+   "change": "Updated emergency services contacts to include the 112 Suomi App (‘Getting help’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/finland",
    "iso": "FI",
    "alert_status": [],
-   "status_for": "2026-08-11T09:18:13Z"
+   "status_for": "2026-11-17T13:27:15Z"
   },
   "france": {
    "slug": "france",
