@@ -3,16 +3,6 @@
  "programs": [
   {
    "kind": "closure",
-   "airport": "PNS",
-   "airport_name": "Pensacola Regional",
-   "start": "2026-11-17T11:00:00Z",
-   "end": "2026-11-17T11:30:00Z",
-   "updated": "2026-11-17T11:04:10Z",
-   "notam": "!PNS 11/062 PNS AD AP CLSD EXC HEL OPS 2611171100-2611171130",
-   "issued": "2026-11-17T11:01:00Z"
-  },
-  {
-   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
@@ -57,6 +47,11 @@
    -71.0096,
    42.3656,
    "General Edward Lawrence Logan International"
+  ],
+  "CAK": [
+   -81.4364,
+   40.9149,
+   "Akron-Canton Regional"
   ],
   "DAL": [
    -96.8512,
