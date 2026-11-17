@@ -10552,6 +10552,266 @@
     }
    }
   },
+  "6/8333": {
+   "notam_id": "6/8333",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Friday, November 20, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T21:10:32Z",
+   "detail": {
+    "name": "6/8333",
+    "issued": "2026-11-17T20:39:37Z",
+    "effective": "2026-11-20T22:05:00Z",
+    "expires": "2026-11-20T22:25:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "FL910",
+    "statutory": false,
+    "text": "!FDC 6/8333 ZLA CA..AIRSPACE SAN DIEGO, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 324200N1174800W (MZB246029.5) TO 324000N1175100W (MZB243032.4) TO 323100N1175100W (MZB228035.4) TO 322800N1174700W (MZB221034) TO 322800N1174000W (MZB215029.3) TO 323200N1173500W (MZB216023.5) TO 324000N1173500W (MZB234019.4) TO 324200N1173800W (MZB242021.2) TO THE POINT OF ORIGIN SFC-UNL EFFECTIVE 2611202205 UTC (1405 LOCAL 11/20/26) UNTIL 2611202225 UTC (1425 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC TEL 661-265-8205 IS THE CDN FACILITY. 2611202205-2611202225",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.8,
+        32.7
+       ],
+       [
+        -117.85,
+        32.66667
+       ],
+       [
+        -117.85,
+        32.51667
+       ],
+       [
+        -117.78333,
+        32.46667
+       ],
+       [
+        -117.66667,
+        32.46667
+       ],
+       [
+        -117.58333,
+        32.53333
+       ],
+       [
+        -117.58333,
+        32.66667
+       ],
+       [
+        -117.63333,
+        32.7
+       ],
+       [
+        -117.8,
+        32.7
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8350": {
+   "notam_id": "6/8350",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Friday, November 20, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T21:10:32Z",
+   "detail": {
+    "name": "6/8350",
+    "issued": "2026-11-17T20:47:20Z",
+    "effective": "2026-11-20T22:10:00Z",
+    "expires": "2026-11-20T22:30:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "FL910",
+    "statutory": false,
+    "text": "!FDC 6/8350 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611202210 UTC (1410 LOCAL 11/20/26) UNTIL 2611202230 UTC (1430 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611202210-2611202230",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.83333,
+        33.11667
+       ],
+       [
+        -117.9,
+        33.08333
+       ],
+       [
+        -117.9,
+        32.93333
+       ],
+       [
+        -117.83333,
+        32.88333
+       ],
+       [
+        -117.71667,
+        32.88333
+       ],
+       [
+        -117.63333,
+        32.95
+       ],
+       [
+        -117.63333,
+        33.08333
+       ],
+       [
+        -117.68333,
+        33.11667
+       ],
+       [
+        -117.83333,
+        33.11667
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8376": {
+   "notam_id": "6/8376",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Friday, November 20, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T21:10:32Z",
+   "detail": {
+    "name": "6/8376",
+    "issued": "2026-11-17T20:51:39Z",
+    "effective": "2026-11-20T06:40:00Z",
+    "expires": "2026-11-20T08:40:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "5000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/8376 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-5000FT MSL EFFECTIVE 2611200640 UTC (2240 LOCAL 11/19/26) UNTIL 2611200840 UTC (0040 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611200640-2611200840",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.83333,
+        33.11667
+       ],
+       [
+        -117.9,
+        33.08333
+       ],
+       [
+        -117.9,
+        32.93333
+       ],
+       [
+        -117.83333,
+        32.88333
+       ],
+       [
+        -117.71667,
+        32.88333
+       ],
+       [
+        -117.63333,
+        32.95
+       ],
+       [
+        -117.63333,
+        33.08333
+       ],
+       [
+        -117.68333,
+        33.11667
+       ],
+       [
+        -117.83333,
+        33.11667
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8377": {
+   "notam_id": "6/8377",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Friday, November 20, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T21:10:32Z",
+   "detail": {
+    "name": "6/8377",
+    "issued": "2026-11-17T20:51:54Z",
+    "effective": "2026-11-20T22:15:00Z",
+    "expires": "2026-11-20T22:35:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "FL910",
+    "statutory": false,
+    "text": "!FDC 6/8377 ZLA CA..AIRSPACE LOS ANGELES, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY WI AN AREA DEFINED AS 334700N1191500W (VTU192022.2) TO 334500N1191800W (VTU195025.2) TO 333600N1191800W (VTU187033.3) TO 333300N1191400W (VTU180035.1) TO 333300N1190700W (VTU171034) TO 333700N1190200W (VTU163029.9) TO 334500N1190200W (VTU163021.9) TO 334700N1190500W (VTU170019.9) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611202215 UTC (1415 LOCAL 11/20/26) UNTIL 2611202235 UTC (1435 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611202215-2611202235",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -119.25,
+        33.78333
+       ],
+       [
+        -119.3,
+        33.75
+       ],
+       [
+        -119.3,
+        33.6
+       ],
+       [
+        -119.23333,
+        33.55
+       ],
+       [
+        -119.11667,
+        33.55
+       ],
+       [
+        -119.03333,
+        33.61667
+       ],
+       [
+        -119.03333,
+        33.75
+       ],
+       [
+        -119.08333,
+        33.78333
+       ],
+       [
+        -119.25,
+        33.78333
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
