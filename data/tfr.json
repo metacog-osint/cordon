@@ -10617,6 +10617,71 @@
     }
    }
   },
+  "6/8349": {
+   "notam_id": "6/8349",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Friday, November 20, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T22:40:33Z",
+   "detail": {
+    "name": "6/8349",
+    "issued": "2026-11-17T20:45:42Z",
+    "effective": "2026-11-20T06:20:00Z",
+    "expires": "2026-11-20T06:40:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "FL910",
+    "statutory": false,
+    "text": "!FDC 6/8349 ZLA CA..AIRSPACE SAN DIEGO, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 324200N1174800W (MZB246029.5) TO 324000N1175100W (MZB243032.4) TO 323100N1175100W (MZB228035.4) TO 322800N1174700W (MZB221034) TO 322800N1174000W (MZB215029.3) TO 323200N1173500W (MZB216023.5) TO 324000N1173500W (MZB234019.4) TO 324200N1173800W (MZB242021.2) TO THE POINT OF ORIGIN SFC-UNL EFFECTIVE 2611200620 UTC (2220 LOCAL 11/20/26) UNTIL 2611200640 UTC (2240 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC TEL 661-265-8205 IS THE CDN FACILITY. 2611200620-2611200640",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.8,
+        32.7
+       ],
+       [
+        -117.85,
+        32.66667
+       ],
+       [
+        -117.85,
+        32.51667
+       ],
+       [
+        -117.78333,
+        32.46667
+       ],
+       [
+        -117.66667,
+        32.46667
+       ],
+       [
+        -117.58333,
+        32.53333
+       ],
+       [
+        -117.58333,
+        32.66667
+       ],
+       [
+        -117.63333,
+        32.7
+       ],
+       [
+        -117.8,
+        32.7
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8350": {
    "notam_id": "6/8350",
    "type": "SPECIAL",
@@ -10637,6 +10702,136 @@
     "ceiling": "FL910",
     "statutory": false,
     "text": "!FDC 6/8350 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611202210 UTC (1410 LOCAL 11/20/26) UNTIL 2611202230 UTC (1430 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611202210-2611202230",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.83333,
+        33.11667
+       ],
+       [
+        -117.9,
+        33.08333
+       ],
+       [
+        -117.9,
+        32.93333
+       ],
+       [
+        -117.83333,
+        32.88333
+       ],
+       [
+        -117.71667,
+        32.88333
+       ],
+       [
+        -117.63333,
+        32.95
+       ],
+       [
+        -117.63333,
+        33.08333
+       ],
+       [
+        -117.68333,
+        33.11667
+       ],
+       [
+        -117.83333,
+        33.11667
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8351": {
+   "notam_id": "6/8351",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Thursday, November 19, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T22:40:33Z",
+   "detail": {
+    "name": "6/8351",
+    "issued": "2026-11-17T20:48:16Z",
+    "effective": "2026-11-19T07:05:00Z",
+    "expires": "2026-11-19T09:05:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "5000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/8351 ZLA CA..AIRSPACE SAN DIEGO, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 324200N1174800W (MZB246029.5) TO 324000N1175100W (MZB243032.4) TO 323100N1175100W (MZB228035.4) TO 322800N1174700W (MZB221034) TO 322800N1174000W (MZB215029.3) TO 323200N1173500W (MZB216023.5) TO 324000N1173500W (MZB234019.4) TO 324200N1173800W (MZB242021.2) TO THE POINT OF ORIGIN SFC-5000FT MSL EFFECTIVE 2611190705 UTC (2305 LOCAL 11/18/26) UNTIL 2611190905 UTC (0105 LOCAL 11/19/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611190705-2611190905",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -117.8,
+        32.7
+       ],
+       [
+        -117.85,
+        32.66667
+       ],
+       [
+        -117.85,
+        32.51667
+       ],
+       [
+        -117.78333,
+        32.46667
+       ],
+       [
+        -117.66667,
+        32.46667
+       ],
+       [
+        -117.58333,
+        32.53333
+       ],
+       [
+        -117.58333,
+        32.66667
+       ],
+       [
+        -117.63333,
+        32.7
+       ],
+       [
+        -117.8,
+        32.7
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8352": {
+   "notam_id": "6/8352",
+   "type": "SPECIAL",
+   "facility": "ZLA",
+   "state": "USA",
+   "description": "USA, Thursday, November 19, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T22:40:33Z",
+   "detail": {
+    "name": "6/8352",
+    "issued": "2026-11-17T20:48:23Z",
+    "effective": "2026-11-19T06:40:00Z",
+    "expires": "2026-11-19T07:00:00Z",
+    "regulation": "SPECIAL",
+    "purpose": "DUE TO SPACE OPS",
+    "city": null,
+    "floor": "surface",
+    "ceiling": "FL910",
+    "statutory": false,
+    "text": "!FDC 6/8352 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611190640 UTC (2240 LOCAL 11/19/26) UNTIL 2611190700 UTC (2300 LOCAL 11/19/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611190640-2611190700",
     "geometry": {
      "type": "Polygon",
      "coordinates": [
@@ -11503,6 +11698,481 @@
        [
         -71.03333,
         44.41667
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8430": {
+   "notam_id": "6/8430",
+   "type": "VIP",
+   "facility": "ZAN",
+   "state": "AK",
+   "description": "ANCHORAGE, AK, Thursday, November 19, 2026 Local",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T22:40:33Z",
+   "detail": {
+    "name": "261119 Anchorage VIP ZAN",
+    "issued": "2026-11-17T22:27:51Z",
+    "effective": "2026-11-19T16:30:00Z",
+    "expires": "2026-11-19T19:30:00Z",
+    "regulation": "91.141",
+    "purpose": null,
+    "city": "ANCHORAGE",
+    "floor": "surface",
+    "ceiling": "17999 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/8430 ZAN AK..AIRSPACE ANCHORAGE, ALASKA..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 19, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 91.141, ALL ACFT FLT OPS INCLUDING REMOTE CONTROLLED ACFT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 30NM RADIUS OF 611510N1494736W (TED025007.0) SFC-17999FT MSL EFFECTIVE 2611191630 UTC (0730 LOCAL 11/19/26) UNTIL 2611191930 UTC (1030 LOCAL 11/19/26). WI AN AREA DEFINED AS 10NM RADIUS OF 611510N1494736W (TED025007.0) SFC-17999FT MSL EFFECTIVE 2611191630 UTC (0730 LOCAL 11/19/26) UNTIL 2611191930 UTC (1030 LOCAL 11/19/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC IN CONSULTATION WITH THE AIR TFC SECURITY COORDINATOR VIA THE DOMESTIC EVENTS NETWORK (DEN): A. ALL ACFT OPS WI THE 10NM RADIUS AREA(S) LISTED ABV, KNOWN AS THE INNER CORE(S), ARE PROHIBITED EXC FOR: APPROVED LAW ENFORCEMENT, MIL ACFT DIRECTLY SUPPORTING THE UNITED STATES SECRET SERVICE(USSS) AND THE OFFICE OF THE PRESIDENT OF THE UNITED STATES, APPROVED AIR AMBULANCE FLIGHTS, AND REGULARLY SCHEDULED COMMERCIAL PAX AND ALL - CARGO CARRIERS OPR UNDER ONE OF THE FOLLOWING TSA - APPROVED STANDARD SECURITY PROGRAMS / PROC AND ARE ARR INTO AND / OR DEP FM 14 CFR PART 139 AP: ACFT OPR STANDARD SECURITY PROGRAM(AOSSP), FULL ALL - CARGO ACFT OPR STANDARD SECURITY PROGRAM(FACAOSSP), MODEL SECURITY PROGRAM(MSP), TWELVE FIVE STANDARD SECURITY PROGRAM ALL CARGO(TFSSP - ALL CARGO), OR ALL - CARGO INTERNATIONAL SECURITY PROC(ACISP). ALL EMERGENCY / LIFE SAVING FLT(MEDICAL / LAW ENFORCEMENT / FIREFIGHTING) OPS MUST COORDINATE WITH ATC PRIOR TO THEIR DEP AT 907-271-2711 TO AVOID POTENTIAL DELAYS. B. FOR OPS WI THE AIRSPACE BTN THE 10NM RADIUS AND 30NM RADIUS AREA(S) LISTED ABV, KNOWN AS THE OUTER RING(S): ALL ACFT OPR WI THE OUTER RING(S) LISTED ABV ARE LIMITED TO ACFT ARR OR DEP LOCAL AIRFIELDS, AND WORKLOAD PERMITTING, ATC MAY AUTHORIZE TRANSIT OPS. ACFT MAY NOT LOITER. ALL ACFT MUST BE ON AN ACT IFR OR FILED VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BE SQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR AND MUST REMAIN IN TWO-WAY RADIO COM WITH ATC. C. THE FOLLOWING OPS ARE NOT AUTH WI THIS TFR: FLT TRAINING, PRACTICE INSTRUMENT APCH, AEROBATIC FLT, GLIDER OPS, PARACHUTE OPS, ULTRALIGHT, HANG GLIDING, BALLOON OPS, AGRICULTURE/CROP DUSTING, ANIMAL POPULATION CTL FLT OPS, BANNER TOWING OPS, SIGHTSEEING OPS, MAINTENANCE TEST FLIGHTS, MODEL ACFT OPS, MODEL ROCKETRY, UNMANNED ACFT SYSTEMS (UAS), AND UTILITY AND PIPELINE SURVEY OPS. D. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. E. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. F. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611191630-2611191930",
+    "geometry": {
+     "type": "MultiPolygon",
+     "coordinates": [
+      [
+       [
+        [
+         -149.79333,
+         61.75135
+        ],
+        [
+         -149.70167,
+         61.74943
+        ],
+        [
+         -149.61074,
+         61.74366
+        ],
+        [
+         -149.52127,
+         61.7341
+        ],
+        [
+         -149.43396,
+         61.72082
+        ],
+        [
+         -149.34952,
+         61.70393
+        ],
+        [
+         -149.2686,
+         61.68356
+        ],
+        [
+         -149.19184,
+         61.65987
+        ],
+        [
+         -149.11984,
+         61.63306
+        ],
+        [
+         -149.05315,
+         61.60333
+        ],
+        [
+         -148.99229,
+         61.57092
+        ],
+        [
+         -148.93771,
+         61.53608
+        ],
+        [
+         -148.88982,
+         61.49908
+        ],
+        [
+         -148.84897,
+         61.46022
+        ],
+        [
+         -148.81545,
+         61.4198
+        ],
+        [
+         -148.78948,
+         61.37812
+        ],
+        [
+         -148.77125,
+         61.33552
+        ],
+        [
+         -148.76085,
+         61.29231
+        ],
+        [
+         -148.75834,
+         61.24883
+        ],
+        [
+         -148.7637,
+         61.20541
+        ],
+        [
+         -148.77686,
+         61.16238
+        ],
+        [
+         -148.79768,
+         61.12006
+        ],
+        [
+         -148.82598,
+         61.07878
+        ],
+        [
+         -148.86153,
+         61.03884
+        ],
+        [
+         -148.90402,
+         61.00054
+        ],
+        [
+         -148.95312,
+         60.96417
+        ],
+        [
+         -149.00844,
+         60.92999
+        ],
+        [
+         -149.06955,
+         60.89826
+        ],
+        [
+         -149.13598,
+         60.86921
+        ],
+        [
+         -149.20725,
+         60.84306
+        ],
+        [
+         -149.2828,
+         60.82
+        ],
+        [
+         -149.36208,
+         60.80019
+        ],
+        [
+         -149.4445,
+         60.78378
+        ],
+        [
+         -149.52947,
+         60.7709
+        ],
+        [
+         -149.61635,
+         60.76162
+        ],
+        [
+         -149.70452,
+         60.75603
+        ],
+        [
+         -149.79333,
+         60.75417
+        ],
+        [
+         -149.88215,
+         60.75603
+        ],
+        [
+         -149.97032,
+         60.76162
+        ],
+        [
+         -150.0572,
+         60.7709
+        ],
+        [
+         -150.14216,
+         60.78378
+        ],
+        [
+         -150.22459,
+         60.80019
+        ],
+        [
+         -150.30387,
+         60.82
+        ],
+        [
+         -150.37942,
+         60.84306
+        ],
+        [
+         -150.45068,
+         60.86921
+        ],
+        [
+         -150.51712,
+         60.89826
+        ],
+        [
+         -150.57823,
+         60.92999
+        ],
+        [
+         -150.63355,
+         60.96417
+        ],
+        [
+         -150.68265,
+         61.00054
+        ],
+        [
+         -150.72514,
+         61.03884
+        ],
+        [
+         -150.76068,
+         61.07878
+        ],
+        [
+         -150.78899,
+         61.12006
+        ],
+        [
+         -150.80981,
+         61.16238
+        ],
+        [
+         -150.82297,
+         61.20541
+        ],
+        [
+         -150.82833,
+         61.24883
+        ],
+        [
+         -150.82581,
+         61.29231
+        ],
+        [
+         -150.81542,
+         61.33552
+        ],
+        [
+         -150.79718,
+         61.37812
+        ],
+        [
+         -150.77122,
+         61.4198
+        ],
+        [
+         -150.7377,
+         61.46022
+        ],
+        [
+         -150.69684,
+         61.49908
+        ],
+        [
+         -150.64895,
+         61.53608
+        ],
+        [
+         -150.59438,
+         61.57092
+        ],
+        [
+         -150.53351,
+         61.60333
+        ],
+        [
+         -150.46683,
+         61.63306
+        ],
+        [
+         -150.39483,
+         61.65987
+        ],
+        [
+         -150.31807,
+         61.68356
+        ],
+        [
+         -150.23715,
+         61.70393
+        ],
+        [
+         -150.1527,
+         61.72082
+        ],
+        [
+         -150.0654,
+         61.7341
+        ],
+        [
+         -149.97593,
+         61.74366
+        ],
+        [
+         -149.885,
+         61.74943
+        ],
+        [
+         -149.79333,
+         61.75135
+        ]
+       ]
+      ],
+      [
+       [
+        [
+         -149.79333,
+         61.41897
+        ],
+        [
+         -149.73311,
+         61.41644
+        ],
+        [
+         -149.67474,
+         61.4089
+        ],
+        [
+         -149.62003,
+         61.3966
+        ],
+        [
+         -149.57065,
+         61.37991
+        ],
+        [
+         -149.52813,
+         61.35935
+        ],
+        [
+         -149.49374,
+         61.33555
+        ],
+        [
+         -149.46853,
+         61.30923
+        ],
+        [
+         -149.45324,
+         61.28121
+        ],
+        [
+         -149.44831,
+         61.25234
+        ],
+        [
+         -149.45386,
+         61.22349
+        ],
+        [
+         -149.4697,
+         61.19555
+        ],
+        [
+         -149.49532,
+         61.16935
+        ],
+        [
+         -149.52992,
+         61.14569
+        ],
+        [
+         -149.57245,
+         61.12528
+        ],
+        [
+         -149.62161,
+         61.10874
+        ],
+        [
+         -149.67591,
+         61.09655
+        ],
+        [
+         -149.73373,
+         61.08909
+        ],
+        [
+         -149.79333,
+         61.08658
+        ],
+        [
+         -149.85294,
+         61.08909
+        ],
+        [
+         -149.91076,
+         61.09655
+        ],
+        [
+         -149.96506,
+         61.10874
+        ],
+        [
+         -150.01422,
+         61.12528
+        ],
+        [
+         -150.05674,
+         61.14569
+        ],
+        [
+         -150.09135,
+         61.16935
+        ],
+        [
+         -150.11697,
+         61.19555
+        ],
+        [
+         -150.1328,
+         61.22349
+        ],
+        [
+         -150.13836,
+         61.25234
+        ],
+        [
+         -150.13343,
+         61.28121
+        ],
+        [
+         -150.11814,
+         61.30923
+        ],
+        [
+         -150.09292,
+         61.33555
+        ],
+        [
+         -150.05854,
+         61.35935
+        ],
+        [
+         -150.01601,
+         61.37991
+        ],
+        [
+         -149.96664,
+         61.3966
+        ],
+        [
+         -149.91193,
+         61.4089
+        ],
+        [
+         -149.85356,
+         61.41644
+        ],
+        [
+         -149.79333,
+         61.41897
+        ]
        ]
       ]
      ]
