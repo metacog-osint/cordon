@@ -5,11 +5,11 @@
    "kind": "closure",
    "airport": "PNS",
    "airport_name": "Pensacola Regional",
-   "start": "2026-11-17T06:00:00Z",
-   "end": "2026-11-17T11:00:00Z",
-   "updated": "2026-11-10T19:41:53Z",
-   "notam": "!PNS 11/037 PNS AD AP CLSD EXC HEL OPS 2611170600-2611171100",
-   "issued": "2026-11-10T19:36:00Z"
+   "start": "2026-11-17T11:00:00Z",
+   "end": "2026-11-17T11:30:00Z",
+   "updated": "2026-11-17T11:04:10Z",
+   "notam": "!PNS 11/062 PNS AD AP CLSD EXC HEL OPS 2611171100-2611171130",
+   "issued": "2026-11-17T11:01:00Z"
   },
   {
    "kind": "closure",
