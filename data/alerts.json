@@ -245,6 +245,15 @@
   "MX": [
    {
     "iso": "MX",
+    "title": "Demonstration Alert: Multiple Roadblocks in Jalisco",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNa0VwWjJwZWg3Mkc5ajU3NHdXajVOaHlob09XWjRzSDZTNm5qM1ZwMkItVFJfX0ItT0lxM2tGTXpYNTdTM1V6Wjd5M1BYbjgzUUJmYkRoODkxVktrcHNKSWc3bVNvOWNuY1I0aThNcHdfUTZvNlRfYXFJZmpzOEZGMVRn?oc=5",
+    "published_at": "2026-11-17T20:22:44Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
     "title": "Demonstration Alert: Protest in Mexico City, November 15, 2026",
     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUzZZc2tsX3NfRWVtd05SOWtobm5pdWdKZ3poX3I0RzR0RHd1T1hHb21TQ3lreUNQQmg1WVJWWHZxNkYta29lWDR5QWNoVXZva3p0M0pkckhRSzh5ZkI3N2Z0NUt3bFZ2aVdwZWZqYk1kZ0dUWE1QSEpJMGdnNFFqM1NsRHpXOWJXUFdpZnRB?oc=5",
     "published_at": "2026-11-15T08:00:00Z",
@@ -320,15 +329,6 @@
     "title": "Demonstration Alert: Protest in Matamoros",
     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB2MkQ3b00waEdJQTdkUzlQR2JoYzVmYmF1TS1BSGlQR2h2Rl9rUDlHaEZrWl9zb1U0aEwxdEQxZzcyQ2dqd3NMWU93NzFUWlRjNE9hOVhwa2V2SmYyQzFrT283TzZSZnJUbndKMWg3VTdSdUdB?oc=5",
     "published_at": "2026-10-22T07:00:00Z",
-    "type": "demonstration",
-    "via": "google-news",
-    "post_url": "https://mx.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "MX",
-    "title": "Demonstration Alert: Multiple Protests in Mexico City on October 21",
-    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdFBNZ1FCcnZqLTZmQ1dLa0VLREEtUjhhcm8tcVVXLWQ2bjZOV002RUlzSTRBdGlHY2lHcEJEYnotZ2dBcjhxWVJxZ0FSZ3hla3FLUEl1UW9NNFh4bEVIY1hqTEZ0cy1yeU05djlQSmNJMkU0TUs4Tm9La1RVNjBqbGxxRXBtMXpaZUdtRXhvczFHajlpZl9N?oc=5",
-    "published_at": "2026-10-21T07:00:00Z",
     "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
