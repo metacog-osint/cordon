@@ -9,9 +9,11 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-time.css">
 <link rel="stylesheet" href="tic-tabs.css">
+<link rel="stylesheet" href="tic-related.css">
 <script src="tic-tabs.js" defer></script>
 <script src="tic-time.js"></script>
 <script src="tic-area.js"></script>
+<script src="tic-related.js"></script>
 <link rel="stylesheet" href="tic-nav.css">
 <script src="tic-nav.js" defer data-health="on"></script>
 <script src="vendor/leaflet/leaflet.js"></script>
@@ -75,6 +77,8 @@
         <div id="dest-out" aria-live="polite"></div>
         <div id="dest-top"></div>
       </section>
+      <!-- Elsewhere today: the other layers' findings in the chosen destination (tic-related.js from the hub) -->
+      <section class="card" id="dest-related" hidden></section>
       <section class="card" aria-labelledby="posture-h">
         <h2 id="posture-h">US embassy departure status</h2>
         <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>

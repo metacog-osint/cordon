@@ -94,7 +94,9 @@
     }
     function show(iso) {
       var out = document.getElementById("dest-out");
-      if (!iso || !names[iso]) { out.replaceChildren(); return; }
+      var rel = document.getElementById("dest-related");
+      if (!iso || !names[iso]) { out.replaceChildren(); rel.hidden = true; return; }
+      if (window.TicRelated) { var nm = {}; nm[iso] = names[iso]; TicRelated.render(rel, { countries: [iso], here: "cordon", names: nm, level: 2 }); }
       var rows = [];
       function none(key, text) { return fresh(d, key) ? text : "No current data: see Sources."; }
       (src.state[iso] || []).forEach(function (a) {
