@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-17T12:20:16Z",
+ "generated": "2026-11-17T16:40:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1233,9 +1233,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-02T14:41:30Z",
-   "update_type": "Regular text update",
-   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
+   "updated": "2026-11-17T16:26:57Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/kenya"
   },
   "KG": {
@@ -1833,7 +1833,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-10-09T14:18:33Z",
+   "updated": "2026-11-17T16:09:29Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/netherlands"
