@@ -10326,6 +10326,312 @@
     }
    }
   },
+  "6/8284": {
+   "notam_id": "6/8284",
+   "type": "HAZARDS",
+   "facility": "ZHU",
+   "state": "MS",
+   "description": "13NM SE CAMP SHELBY, MS, Tuesday, November 17, 2026 through Thursday, November 19, 2026 UTC",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T17:40:39Z",
+   "detail": {
+    "name": "6/8284",
+    "issued": "2026-11-17T17:08:30Z",
+    "effective": "2026-11-17T17:05:00Z",
+    "expires": "2026-11-19T23:45:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "13NM SE CAMP SHELBY",
+    "floor": "surface",
+    "ceiling": "2000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/8284 ZHU MS..AIRSPACE 13NM SE CAMP SHELBY, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 310930N0885330W (LBY119027.7) TO 310400N0884830W (SJI307030.9) TO 310230N0885030W (SJI302031.3) TO 310630N0885430W (LBY125028.9) TO POINT OF ORIGIN SFC-2000FT MISSISSIPPI INTERAGENCY COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 LITTLE CREEK FIRE IS IN CHARGE OF THE OPS. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611171705-2611192345EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -88.89167,
+        31.15833
+       ],
+       [
+        -88.80833,
+        31.06667
+       ],
+       [
+        -88.84167,
+        31.04167
+       ],
+       [
+        -88.90833,
+        31.10833
+       ],
+       [
+        -88.89167,
+        31.15833
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "6/8286": {
+   "notam_id": "6/8286",
+   "type": "SECURITY",
+   "facility": "ZAB",
+   "state": "NM",
+   "description": "ALAMOGORDO, NM, Thursday, November 19, 2026 Local",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T17:40:39Z",
+   "detail": {
+    "name": "261119 WSMR Debris Prot",
+    "issued": "2026-11-17T17:15:03Z",
+    "effective": "2026-11-19T14:05:00Z",
+    "expires": "2026-11-19T17:30:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "ALAMOGORDO",
+    "floor": "surface",
+    "ceiling": "FL240",
+    "statutory": false,
+    "text": "!FDC 6/8286 ZAB NM..AIRSPACE ALAMOGORDO, NM..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 19, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 325600N1060400W (PIO290045.5) TO 341200N1060400W (CNX230021.8) TO 341200N1054400W (CNX182010.4) TO 335700N1052700W (CNX142027.4) TO 325600N1052700W (PIO331025.3) TO POINT OF ORIGIN SFC-FL240; EXCLUDING AN AREA DEFINED AS 7.1NM RADIUS OF 332800N1053200W (CME268046.5) SFC-14000FT MSL; EXCLUDING AN AREA DEFINED AS 3NM RADIUS OF 340700N1054000W (CNX165015.0) SFC-1500FT AGL EFFECTIVE 2611191405 UTC (0705 LOCAL 11/19/26) UNTIL 2611191730 UTC (1030 LOCAL 11/19/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL ACFT ENTERING OR EXITING THE TFR MUST BE ON AN ACT IFR OR VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BE SQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR. 2. ALL ACFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO - WAY RADIO COM WITH ATC. ALBUQUERQUE /ZAB/ ARTCC TEL 505-856-4500 IS THE FAA CDN FAC. 2611191405-2611191730",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -105.69072,
+        34.1624
+       ],
+       [
+        -105.73333,
+        34.2
+       ],
+       [
+        -106.06667,
+        34.2
+       ],
+       [
+        -106.06667,
+        32.93333
+       ],
+       [
+        -105.45,
+        32.93333
+       ],
+       [
+        -105.45,
+        33.37142
+       ],
+       [
+        -105.46269,
+        33.36397
+       ],
+       [
+        -105.48502,
+        33.35525
+       ],
+       [
+        -105.5088,
+        33.34991
+       ],
+       [
+        -105.53333,
+        33.34811
+       ],
+       [
+        -105.55786,
+        33.34991
+       ],
+       [
+        -105.58165,
+        33.35525
+       ],
+       [
+        -105.60398,
+        33.36397
+       ],
+       [
+        -105.62416,
+        33.37581
+       ],
+       [
+        -105.6416,
+        33.39041
+       ],
+       [
+        -105.65575,
+        33.40733
+       ],
+       [
+        -105.66619,
+        33.42605
+       ],
+       [
+        -105.6726,
+        33.446
+       ],
+       [
+        -105.67479,
+        33.46659
+       ],
+       [
+        -105.67267,
+        33.48718
+       ],
+       [
+        -105.66632,
+        33.50714
+       ],
+       [
+        -105.65592,
+        33.52588
+       ],
+       [
+        -105.64179,
+        33.54282
+       ],
+       [
+        -105.62435,
+        33.55745
+       ],
+       [
+        -105.60414,
+        33.56932
+       ],
+       [
+        -105.58178,
+        33.57806
+       ],
+       [
+        -105.55793,
+        33.58342
+       ],
+       [
+        -105.53333,
+        33.58522
+       ],
+       [
+        -105.50874,
+        33.58342
+       ],
+       [
+        -105.48489,
+        33.57806
+       ],
+       [
+        -105.46252,
+        33.56932
+       ],
+       [
+        -105.45,
+        33.56196
+       ],
+       [
+        -105.45,
+        33.95
+       ],
+       [
+        -105.61319,
+        34.09399
+       ],
+       [
+        -105.61453,
+        34.09161
+       ],
+       [
+        -105.62055,
+        34.08446
+       ],
+       [
+        -105.62797,
+        34.07829
+       ],
+       [
+        -105.63657,
+        34.07329
+       ],
+       [
+        -105.64608,
+        34.0696
+       ],
+       [
+        -105.65622,
+        34.06734
+       ],
+       [
+        -105.66667,
+        34.06658
+       ],
+       [
+        -105.67712,
+        34.06734
+       ],
+       [
+        -105.68725,
+        34.0696
+       ],
+       [
+        -105.69676,
+        34.07329
+       ],
+       [
+        -105.70536,
+        34.07829
+       ],
+       [
+        -105.71278,
+        34.08446
+       ],
+       [
+        -105.71881,
+        34.09161
+       ],
+       [
+        -105.72325,
+        34.09952
+       ],
+       [
+        -105.72597,
+        34.10795
+       ],
+       [
+        -105.72689,
+        34.11665
+       ],
+       [
+        -105.72598,
+        34.12535
+       ],
+       [
+        -105.72327,
+        34.13378
+       ],
+       [
+        -105.71884,
+        34.1417
+       ],
+       [
+        -105.71282,
+        34.14885
+       ],
+       [
+        -105.70539,
+        34.15503
+       ],
+       [
+        -105.69679,
+        34.16004
+       ],
+       [
+        -105.69072,
+        34.1624
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
