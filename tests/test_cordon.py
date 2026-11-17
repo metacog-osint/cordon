@@ -9,7 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import canada, cdc, easa, embassy, faa, faaprn, fcdo, feed, navarea, safetravel, state, tfr  # noqa: E402
+from cordon import (canada, cdc, easa, embassy, faa, faaprn, fcdo, feed, launchwarn, navarea,  # noqa: E402
+                    safetravel, state, tfr)
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -1294,6 +1295,65 @@ CDC_BASE = [
              "Wed, 23 Sep 2026 04:00:00 GMT"),
 ]
 
+
+# Live texts, 17 Nov 2026 (NGA daily memoranda, US public domain), trimmed to a few vertices.
+VSFB_801 = ("NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS, ROCKET LAUNCHING:\n"
+            "   A. 180314Z TO 180737Z NOV, ALTERNATE\n      190300Z TO 190723Z, 200246Z TO 200709Z,\n"
+            "      210232Z TO 210655Z, 220218Z TO 220641Z,\n      230400Z TO 230628Z AND\n"
+            "      240346Z TO 240614Z NOV IN AREA BOUND BY\n      32-05.00N 119-08.00W, 32-30.00N 119-18.00W,\n"
+            "      33-15.00N 119-38.00W, 32-05.00N 119-09.00W.\n"
+            "   B. 180314Z TO 180738Z NOV, ALTERNATE\n      190300Z TO 190724Z, 200246Z TO 200710Z,\n"
+            "      210232Z TO 210656Z, 220218Z TO 220642Z,\n      230400Z TO 230629Z AND\n"
+            "      240346Z TO 240615Z NOV IN AREA BOUND BY\n      30-46.00N 118-15.00W, 31-23.00N 118-47.00W,\n"
+            "      29-48.00N 117-39.00W.\n"
+            "2. CANCEL NAVAREA XII 785/26.\n3. CANCEL THIS MSG 240734Z NOV 26.")
+DEBRIS_1081 = ("GULF OF AMERICA.\nTEXAS.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   142108Z TO 150014Z NOV, ALTERNATE\n"
+               "   2108Z TO 0014Z DAILY 15 THRU 20 NOV\n   IN AREA BOUND BY\n   25-56.00N 097-09.00W, 25-56.00N 097-05.00W,\n"
+               "   26-46.00N 097-28.00W, 25-58.00N 097-12.00W.\n2. CANCEL THIS MSG 210114Z NOV 26.")
+
+
+class LaunchWarn(unittest.TestCase):
+    """Windows, hazard and cancels for Cordon's launch category (ported from Orbit, Tom's decision 17 Nov 2026)."""
+
+    def test_lettered_areas_alternates_and_cancel(self):
+        m = launchwarn.measures(VSFB_801, "2026-11-13T00:14:00Z", "NAVAREA XII")
+        self.assertEqual(m["hazard"], "rocket launching")
+        self.assertEqual(len(m["windows"]), 7, "areas opening together are one window")
+        self.assertEqual(m["windows"][0], {"start": "2026-11-18T03:14:00Z", "end": "2026-11-18T07:38:00Z"},
+                         "the union ends when the last area closes")
+        self.assertEqual(m["window_mode"], "alternates")
+        self.assertEqual([a["label"] for a in m["area_windows"]], ["A", "B"])
+        self.assertEqual(m["area_windows"][0]["windows"][0]["end"], "2026-11-18T07:37:00Z")
+        self.assertEqual(m["cancels"], [{"number": "NAVAREA XII 785/26", "id": "cordon:navwarn:12-785-2026"}])
+
+    def test_daily_alternates_and_bare_cancel(self):
+        m = launchwarn.measures(DEBRIS_1081.replace("2. CANCEL THIS", "2. CANCEL 1070/26.\n3. CANCEL THIS"),
+                                "2026-11-06T22:58:00Z", "NAVAREA IV")
+        self.assertEqual(m["hazard"], "space debris")
+        self.assertEqual(len(m["windows"]), 7)
+        self.assertEqual(m["windows"][-1], {"start": "2026-11-20T21:08:00Z", "end": "2026-11-21T00:14:00Z"})
+        self.assertNotIn("area_windows", m)
+        self.assertEqual(m["cancels"], [{"number": "NAVAREA IV 1070/26", "id": "cordon:navwarn:4-1070-2026"}],
+                         "a cancel naming only a number is in the warning's own series")
+
+    def test_missile_firing_has_no_launch_hazard(self):
+        text = ("AEGEAN SEA.\n1. MISSILE OPERATIONS 0530Z TO SUNSET DAILY IN AREA BOUND BY\n"
+                "   38-00.0N 024-00.0E, 38-10.0N 024-10.0E, 38-00.0N 024-20.0E.")
+        self.assertEqual(launchwarn.measures(text, "2026-11-01T10:00:00Z", "HYDROLANT"), {"hazard": None})
+
+    def test_feed_carries_launch_measures(self):
+        def w(num, text):
+            return {"msgYear": 2026, "msgNumber": num, "navArea": "4", "issueDate": "062258Z NOV 2026",
+                    "authority": "", "text": text}
+        nav = {"warnings": navarea.parse({"broadcast-warn": [
+            w(1081, DEBRIS_1081),
+            w(5, "GULF OF AMERICA.\n1. GUNNERY IN 25-00.0N 090-00.0W.\n2. CANCEL THIS MSG 210114Z NOV 26.")]})}
+        fc = feed.build({}, {}, {}, nav, datetime(2026, 11, 10, 17, tzinfo=timezone.utc))
+        p = {f["properties"]["id"]: f["properties"]["measures"] for f in fc["features"]}
+        m = p["cordon:navwarn:4-1081-2026"]
+        self.assertEqual((m["category"], m["hazard"], len(m["windows"]), m["cancels"]),
+                         ("launch", "space debris", 7, []))
+        self.assertNotIn("windows", p["cordon:navwarn:4-5-2026"], "only the launch category gets the fields")
 
 class Cdc(unittest.TestCase):
     NOW = datetime(2026, 11, 10, 12, 0, tzinfo=timezone.utc)

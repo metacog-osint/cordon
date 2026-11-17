@@ -7,12 +7,12 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 import re
 from datetime import datetime, timedelta, timezone
 
-from . import airports, canada, cdc, faa, faaprn, fcdo, navarea, safetravel, tfr
+from . import airports, canada, cdc, faa, faaprn, fcdo, launchwarn, navarea, safetravel, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, contract, geo, registers, vocab  # noqa: E402
 
 SITE = "https://cordon.theintelligence.company/"
-METHOD = "cordon-feed-1.0"
+METHOD = "cordon-feed-1.1"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 NEW_HOURS = 72  # a navigational warning issued within this long is new
@@ -586,6 +586,8 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                  "measures": {"category": w["category"], "sea": w.get("sea"), "place": w.get("place"),
                               "authority": w.get("authority"), "text": w["text"], "new": is_new,
                               **{k: w[k] for k in ("radius_m", "corridor_half_width_m") if w.get(k)}}}
+        if w["category"] == "launch":  # windows, hazard and cancels in the warning's own words (cordon/launchwarn.py)
+            props["measures"].update(launchwarn.measures(w["text"], issued, w.get("area")))
         if w.get("cancel_at"):
             props["valid_until"] = w["cancel_at"]
         if w["id"] in leads:
