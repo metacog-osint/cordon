@@ -30,30 +30,16 @@
    "kind": "ground_delay",
    "airport": "SFO",
    "airport_name": "San Francisco International",
-   "start": "2026-11-16T23:22:00Z",
-   "end": "2026-11-17T06:59:00Z",
-   "updated": "2026-11-16T23:24:40Z",
+   "start": "2026-11-17T04:30:00Z",
+   "end": "2026-11-17T07:59:00Z",
+   "updated": "2026-11-17T04:51:53Z",
    "reason": "low ceilings",
    "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=78&adv_date=11162026&facId=SFO&title=ATCSCC ADVZY 078 SFO/ZOA 11/16/2026 CDM GROUND DELAY PROGRAM&titleDate=11/16/2026",
-   "included_facilities": 23,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=10&adv_date=11172026&facId=SFO&title=ATCSCC ADVZY 010 SFO/ZOA 11/17/2026 CDM GROUND DELAY PROGRAM&titleDate=11/17/2026",
+   "included_facilities": 3,
    "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 98.0,
-   "max_delay_min": 324.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-17T03:54:00Z",
-   "end": "2026-11-17T05:00:00Z",
-   "updated": "2026-11-17T04:07:10Z",
-   "reason": "low ceilings",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=9&adv_date=11172026&facId=SFO&title=ATCSCC ADVZY 009 SFO/ZOA 11/17/2026 CDM GROUND STOP&titleDate=11/17/2026",
-   "included_facilities": 4,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
+   "avg_delay_min": 144.0,
+   "max_delay_min": 403.0
   }
  ],
  "airports": {
