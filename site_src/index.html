@@ -64,17 +64,28 @@
       </section>
     </div>
     <div id="sec-travel" data-tab-label="Travel">
-      <div class="two">
-        <section class="card" aria-labelledby="levels-h">
-          <h2 id="levels-h">Level 3 and 4 travel advisories</h2>
-          <div id="levels"></div>
-        </section>
-        <section class="card" aria-labelledby="posture-h">
-          <h2 id="posture-h">US embassy departure status</h2>
-          <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>
-          <div id="posture"></div>
-        </section>
-      </div>
+      <section class="card" aria-labelledby="dest-h">
+        <h2 id="dest-h">Travel advice by destination</h2>
+        <p class="muted small">What each government's travel advice says about one place, side by side, with the US
+          embassy's departure status and any CDC travel health notice.</p>
+        <div class="dest-pick">
+          <label for="dest">Destination</label>
+          <select id="dest"><option value="">Choose a destination</option></select>
+        </div>
+        <div id="dest-out" aria-live="polite"></div>
+        <div id="dest-top"></div>
+      </section>
+      <section class="card" aria-labelledby="posture-h">
+        <h2 id="posture-h">US embassy departure status</h2>
+        <p class="muted small">Read from each advisory's text (State publishes no field for it); every change is reviewed by a person.</p>
+        <div id="posture"></div>
+      </section>
+      <details class="fold-lists" id="travel-lists">
+        <summary>Each government's full list: US, UK, Canada, New Zealand and CDC</summary>
+      <section class="card" aria-labelledby="levels-h">
+        <h2 id="levels-h">Level 3 and 4 travel advisories (US)</h2>
+        <div id="levels"></div>
+      </section>
       <section class="card" aria-labelledby="fcdo-h">
         <h2 id="fcdo-h">UK foreign travel advice</h2>
         <p class="muted small">Where the UK Foreign, Commonwealth &amp; Development Office advises against all or all but
@@ -104,6 +115,7 @@
           A notice Cordon saw appear or change level in the last 30 days is marked.</p>
         <div id="cdc"></div>
       </section>
+      </details>
     </div>
     <div id="sec-air" data-tab-label="Air">
       <div class="two">
