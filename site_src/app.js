@@ -67,6 +67,79 @@
     return wrap;
   }
 
+  // Travel advice by destination (16 Nov 2026): one place, every government's advice side by side. The full
+  // lists below fold away (open on wider screens at load); a link to anything inside them opens the fold.
+  var TOP = { state: function (a) { return a.level === 4; },
+    fcdo: function (u) { return (u.alert_status || []).indexOf("avoid_all_travel_to_whole_country") >= 0; },
+    canada: function (c) { return c.level === 3; }, safetravel: function (c) { return c.level === "avoid"; } };
+  function byIso(list) {
+    var m = {};
+    (list || []).forEach(function (x) { (x.iso ? [x.iso] : x.countries || []).forEach(function (c) { (m[c] = m[c] || []).push(x); }); });
+    return m;
+  }
+  function placeName(x, prefix) { return x.name || x.title.replace(prefix, "").split(":")[0]; }
+  function fresh(d, key) { return (d.health[key] || {}).state === "fresh"; }
+  function destination(d) {
+    // Dates only, with the year, in the viewer's zone: the governments update on very different cycles.
+    function date(iso) { return iso ? T.format(iso, { year: true, time: false }) : "—"; }
+    var src = { state: byIso(d.advisories), fcdo: byIso(d.fcdo), canada: byIso(d.canada), safetravel: byIso(d.safetravel), cdc: byIso(d.cdc) };
+    var names = {};
+    [["safetravel", /^New Zealand, /], ["canada", /^Canada, /], ["fcdo", /^UK FCDO, /], ["state", null]].forEach(function (p) {
+      Object.keys(src[p[0]]).forEach(function (iso) { names[iso] = placeName(src[p[0]][iso][0], p[1]); }); });
+    var sel = document.getElementById("dest");
+    if (sel.options.length < 2) {
+      Object.keys(names).sort(function (a, b) { return names[a].localeCompare(names[b]); }).forEach(function (iso) {
+        sel.append(h("option", { value: iso }, [names[iso]])); });
+      sel.addEventListener("change", function () { show(sel.value); });
+    }
+    function show(iso) {
+      var out = document.getElementById("dest-out");
+      if (!iso || !names[iso]) { out.replaceChildren(); return; }
+      var rows = [];
+      function none(key, text) { return fresh(d, key) ? text : "No current data: see Sources."; }
+      (src.state[iso] || []).forEach(function (a) {
+        rows.push(["US State Department", link(a.link, (a.name !== names[iso] ? a.name + ": " : "") + "Level " + a.level + ", " + a.level_text),
+          { td: date(a.updated), cls: "num" }]);
+        if (POSTURE[a.posture]) rows.push(["US embassy", POSTURE[a.posture][1] + (a.sentence ? ": " + a.sentence : ""), "—"]);
+      });
+      if (!src.state[iso]) rows.push(["US State Department", none("state-travel-advisories", "No advisory for this place"), "—"]);
+      (src.fcdo[iso] || []).forEach(function (u) { rows.push(["UK FCDO", link(u.link, ukWords(u.alert_status)), { td: date(u.updated), cls: "num" }]); });
+      if (!src.fcdo[iso]) rows.push(["UK FCDO", none("uk-fcdo-travel-advice", "No advice against travel"), "—"]);
+      (src.canada[iso] || []).forEach(function (c) { rows.push(["Canada", link(c.link, c.advisory), { td: date(c.updated), cls: "num" }]); });
+      if (!src.canada[iso]) rows.push(["Canada", none("gac-travel-advisories", "Nothing above “Exercise normal security precautions”"), "—"]);
+      (src.safetravel[iso] || []).forEach(function (c) {
+        rows.push(["New Zealand", link(c.link, c.advice + (c.regional_note ? " (" + c.regional_note + ")" : "")),
+          { td: c.updated ? day(c.updated) : "—", cls: "num" }]); });
+      if (!src.safetravel[iso]) rows.push(["New Zealand", none("nz-mfat-safetravel", "Nothing above normal safety and security precautions"), "—"]);
+      (src.cdc[iso] || []).forEach(function (n) {
+        rows.push(["CDC health notice", link(n.link, "Level " + n.level + ": " + n.title.replace(/^CDC Level [^:]+: /, "")),
+          { td: n.date ? day(n.date) : date(n.published), cls: "num" }]); });
+      if (!src.cdc[iso]) rows.push(["CDC health notice", none("cdc-travel-notices", "No travel health notice"), "—"]);
+      out.replaceChildren(h("h3", { "class": "dest-name" }, [names[iso]]),
+        table(["Government", "Advice", "Updated"], rows.map(function (r) { return [{ td: r[0], cls: "gov" }, r[1], r[2]]; })));
+    }
+    // Quick picks: places where two or more governments are at their highest level for the whole country.
+    var top = Object.keys(names).filter(function (iso) {
+      return ["state", "fcdo", "canada", "safetravel"].filter(function (k) { return (src[k][iso] || []).some(TOP[k]); }).length >= 2;
+    }).sort(function (a, b) { return names[a].localeCompare(names[b]); });
+    document.getElementById("dest-top").replaceChildren(top.length ? h("div", { "class": "dest-top" }, [
+      h("p", { "class": "small muted" }, ["Where two or more governments advise against all travel to the whole country:"]),
+      h("div", { "class": "chips" }, top.map(function (iso) {
+        var b = h("button", { type: "button", "class": "chip" }, [names[iso]]);
+        b.addEventListener("click", function () { sel.value = iso; show(iso); sel.focus(); });
+        return b; }))]) : null);
+    show(sel.value);
+  }
+  var folds = document.getElementById("travel-lists");
+  if (folds && window.matchMedia("(min-width: 761px)").matches) folds.open = true;
+  function openFold() {
+    var id = decodeURIComponent(location.hash.slice(1)), el = id && document.getElementById(id);
+    var f = el && el.closest("details");
+    if (f && !f.open) { f.open = true; el.scrollIntoView(); }
+  }
+  openFold();
+  window.addEventListener("hashchange", openFold);
+
   // Wheel zoom stays off until the reader clicks the map, so scrolling the page never gets trapped in it.
   var map = L.map("map", { worldCopyJump: true, minZoom: 1, maxZoom: 8, zoomSnap: 0.5, scrollWheelZoom: false })
     .setView([24, 20], 2);
@@ -230,6 +303,7 @@
   }
 
   function lists(d) {
+    destination(d);
     var post = d.advisories.filter(function (a) { return POSTURE[a.posture]; });
     document.getElementById("posture").replaceChildren(post.length ? table(["Country", "Status", "What the advisory says"],
       post.map(function (a) { return [link(a.link, a.name), POSTURE[a.posture][1], a.sentence || "—"]; }))
