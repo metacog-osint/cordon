@@ -10,20 +10,6 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "TEB",
-   "airport_name": "Teterboro",
-   "start": "2026-11-17T18:45:00Z",
-   "end": "2026-11-17T20:00:00Z",
-   "updated": "2026-11-17T18:59:32Z",
-   "reason": "airport volume",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=61&adv_date=11172026&facId=TEB&title=ATCSCC ADVZY 061 TEB/ZNY 11/17/2026 CDM GROUND STOP&titleDate=11/17/2026",
-   "included_facilities": 7,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
