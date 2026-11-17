@@ -104,7 +104,19 @@ matches them on their words: same category, same time groups, and the same posit
 fifth of them more than 0.05 degrees apart (fewer than three positions must match exactly), from different series.
 The hazard is drawn once, under the NAVAREA copy (otherwise the earliest issued); the other copies are listed in
 `measures.rebroadcasts` with every position that differs, as each was written, and counted in the health block's
-`rebroadcasts_merged`. FAA
+`rebroadcasts_merged`.
+
+Warnings in the `launch` category also carry, from method `cordon-feed-1.1` (17 Nov 2026), their times and hazard as the
+warning writes them, for Launch (https://launch.theintelligence.company) to read: `measures.hazard` (rocket launching,
+space debris, space vehicle, spacecraft or reentry; null for a missile firing or other wording with none of those),
+`measures.windows` (UTC start and end pairs, alternates and daily windows written out; areas opening together are one
+window that ends when the last area closes), `measures.window_mode` (single, alternates, daily or list),
+`measures.window_text` (the time words as written), `measures.area_windows` (each lettered area's own windows, when the
+warning gives them), and `measures.cancels` (each warning it cancels, with that warning's Cordon id). A window whose
+date or time does not exist (a typo in the warning) is left out and the rest are kept. The parser was ported from
+Orbit's, so NGA's launch warnings are read and parsed once, here.
+
+FAA
 programs are drawn at the airport coordinates the FAA publishes with them; a program listed against a center or the
 whole system is drawn at the US label point. The FAA's prohibitions and advisories are drawn as the country's outline
 on the map and placed at its label point in the feed; the three sections that name a sea or region (Central America's
