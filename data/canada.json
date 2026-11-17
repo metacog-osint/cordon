@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-17T12:00:15Z",
+ "generated": "2026-11-17T12:20:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -681,7 +681,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-10-15T12:05:00Z",
+   "updated": "2026-11-17T12:14:18Z",
    "update_type": "Editorial change",
    "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/algeria"
