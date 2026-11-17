@@ -258,6 +258,21 @@
    "date": "2026-06-02",
    "link": "https://wwwnc.cdc.gov/travel/notices/level2/malaria-mayotte"
   },
+  "malaria-panama": {
+   "slug": "malaria-panama",
+   "level": 2,
+   "level_text": "Practice Enhanced Precautions",
+   "title": "Level 2 - Malaria in Panama",
+   "disease_place": "Malaria in Panama",
+   "summary": "Increased cases of malaria have been reported in areas of Panama that were previously considered no-risk.",
+   "countries": [
+    "PA"
+   ],
+   "unplaced": [],
+   "published": "2026-11-17T05:00:00Z",
+   "date": "2026-11-17",
+   "link": "https://wwwnc.cdc.gov/travel/notices/level2/malaria-panama"
+  },
   "malaria-yemen": {
    "slug": "malaria-yemen",
    "level": 2,
