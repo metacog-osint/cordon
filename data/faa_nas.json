@@ -10,21 +10,6 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "PHX",
-   "airport_name": "Phoenix Sky Harbor International",
-   "start": "2026-11-17T15:00:00Z",
-   "end": "2026-11-17T18:59:00Z",
-   "updated": "2026-11-17T14:22:02Z",
-   "reason": "low ceilings",
-   "center": "ZAB",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=40&adv_date=11172026&facId=PHX&title=ATCSCC ADVZY 040 PHX/ZAB 11/17/2026 CDM GROUND DELAY PROGRAM&titleDate=11/17/2026",
-   "included_facilities": 5,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 38.0,
-   "max_delay_min": 97.0
   }
  ],
  "airports": {
@@ -162,6 +147,11 @@
    -117.1933,
    32.7338,
    "San Diego-Lindbergh Field"
+  ],
+  "SEA": [
+   -122.3088,
+   47.4502,
+   "Seattle-Tacoma International"
   ],
   "SFO": [
    -122.379,

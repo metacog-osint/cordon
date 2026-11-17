@@ -10149,6 +10149,183 @@
     }
    }
   },
+  "6/8274": {
+   "notam_id": "6/8274",
+   "type": "SECURITY",
+   "facility": "ZOA",
+   "state": "CA",
+   "description": "Morgan Hill, CA, Wednesday, November 18, 2026 Local",
+   "created": "11/17/2026",
+   "first_seen": "2026-11-17T17:10:33Z",
+   "detail": {
+    "name": "261118 Morgan Hill, CA  RTTE",
+    "issued": "2026-11-17T16:43:49Z",
+    "effective": "2026-11-18T17:00:00Z",
+    "expires": "2026-11-18T23:00:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Morgan Hill",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/8274 ZOA CA..AIRSPACE MORGAN HILL, CA..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 18, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 370959N1213830W (SJC115019.1) SFC-400FT AGL EFFECTIVE 2611181700 UTC (0900 LOCAL 11/18/26) UNTIL 2611182300 UTC (1500 LOCAL 11/18/26). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA HTTPS://WAIVERS.FAA.GOV, C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611181700-2611182300",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -121.64167,
+        37.18308
+       ],
+       [
+        -121.63805,
+        37.18282
+       ],
+       [
+        -121.63453,
+        37.18207
+       ],
+       [
+        -121.63124,
+        37.18084
+       ],
+       [
+        -121.62826,
+        37.17917
+       ],
+       [
+        -121.62569,
+        37.17711
+       ],
+       [
+        -121.62361,
+        37.17473
+       ],
+       [
+        -121.62207,
+        37.17209
+       ],
+       [
+        -121.62113,
+        37.16928
+       ],
+       [
+        -121.62081,
+        37.16639
+       ],
+       [
+        -121.62113,
+        37.16349
+       ],
+       [
+        -121.62207,
+        37.16068
+       ],
+       [
+        -121.62361,
+        37.15804
+       ],
+       [
+        -121.6257,
+        37.15566
+       ],
+       [
+        -121.62827,
+        37.1536
+       ],
+       [
+        -121.63124,
+        37.15194
+       ],
+       [
+        -121.63454,
+        37.15071
+       ],
+       [
+        -121.63805,
+        37.14995
+       ],
+       [
+        -121.64167,
+        37.1497
+       ],
+       [
+        -121.64529,
+        37.14995
+       ],
+       [
+        -121.6488,
+        37.15071
+       ],
+       [
+        -121.65209,
+        37.15194
+       ],
+       [
+        -121.65507,
+        37.1536
+       ],
+       [
+        -121.65764,
+        37.15566
+       ],
+       [
+        -121.65972,
+        37.15804
+       ],
+       [
+        -121.66126,
+        37.16068
+       ],
+       [
+        -121.6622,
+        37.16349
+       ],
+       [
+        -121.66252,
+        37.16639
+       ],
+       [
+        -121.6622,
+        37.16928
+       ],
+       [
+        -121.66126,
+        37.17209
+       ],
+       [
+        -121.65973,
+        37.17473
+       ],
+       [
+        -121.65764,
+        37.17711
+       ],
+       [
+        -121.65507,
+        37.17917
+       ],
+       [
+        -121.65209,
+        37.18084
+       ],
+       [
+        -121.6488,
+        37.18207
+       ],
+       [
+        -121.64529,
+        37.18282
+       ],
+       [
+        -121.64167,
+        37.18308
+       ]
+      ]
+     ]
+    }
+   }
+  },
   "6/8818": {
    "notam_id": "6/8818",
    "type": "SECURITY",
