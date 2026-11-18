@@ -380,14 +380,14 @@
   "cambodia": {
    "slug": "cambodia",
    "name": "Cambodia",
-   "updated": "2026-03-19T14:03:23Z",
-   "change": "New information about global travel impacts due to escalation in the Middle East (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T15:21:31Z",
+   "change": "New information about cannabis and drug offences (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/cambodia",
    "iso": "KH",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-03-19T14:03:23Z"
+   "status_for": "2026-11-18T15:21:31Z"
   },
   "cameroon": {
    "slug": "cameroon",
@@ -1166,14 +1166,14 @@
   "laos": {
    "slug": "laos",
    "name": "Laos",
-   "updated": "2026-08-13T11:10:25Z",
-   "change": "Updated information on flooding risks during periods of heavy rain (‘Safety and security’ page).",
+   "updated": "2026-11-18T15:21:37Z",
+   "change": "New information on the risk of attempting to smuggle drugs out of Laos, and updated information about land borders and crossing with Thailand and Cambodia ('Warnings and insurance' page).",
    "link": "https://www.gov.uk/foreign-travel-advice/laos",
    "iso": "LA",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-08-13T11:10:25Z"
+   "status_for": "2026-11-18T15:21:37Z"
   },
   "latvia": {
    "slug": "latvia",
@@ -1294,14 +1294,14 @@
   "malaysia": {
    "slug": "malaysia",
    "name": "Malaysia",
-   "updated": "2026-03-19T14:03:58Z",
-   "change": "Updated information about global travel impacts due to escalation in the Middle East (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T15:21:43Z",
+   "change": "New information about cannabis and drug offences (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/malaysia",
    "iso": "MY",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-03-19T14:03:58Z"
+   "status_for": "2026-11-18T15:21:43Z"
   },
   "maldives": {
    "slug": "maldives",
@@ -2124,12 +2124,12 @@
   "taiwan": {
    "slug": "taiwan",
    "name": "Taiwan",
-   "updated": "2026-08-28T12:31:24Z",
-   "change": "Updated information of the health risks you’ll face in Taiwan (‘Health’ page).",
+   "updated": "2026-11-18T15:21:27Z",
+   "change": "Updated information about illegal drug offences and penalties (‘Warnings and insurance’ and ‘Safety and security’ pages).",
    "link": "https://www.gov.uk/foreign-travel-advice/taiwan",
    "iso": "TW",
    "alert_status": [],
-   "status_for": "2026-08-28T12:31:24Z"
+   "status_for": "2026-11-18T15:21:27Z"
   },
   "tajikistan": {
    "slug": "tajikistan",
