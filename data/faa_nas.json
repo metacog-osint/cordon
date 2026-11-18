@@ -30,13 +30,13 @@
    "kind": "ground_stop",
    "airport": "SFO",
    "airport_name": "San Francisco International",
-   "start": "2026-11-18T17:20:00Z",
-   "end": "2026-11-18T18:45:00Z",
-   "updated": "2026-11-18T17:34:51Z",
+   "start": "2026-11-18T18:14:00Z",
+   "end": "2026-11-18T20:00:00Z",
+   "updated": "2026-11-18T18:27:38Z",
    "reason": "wind",
    "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=51&adv_date=11182026&facId=SFO&title=ATCSCC ADVZY 051 SFO/ZOA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
-   "included_facilities": 4,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=60&adv_date=11182026&facId=SFO&title=ATCSCC ADVZY 060 SFO/ZOA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
+   "included_facilities": 10,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
   }
