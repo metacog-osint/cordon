@@ -43,28 +43,16 @@
   function link(url, text) { return url ? h("a", { href: url, rel: "noopener" }, [text]) : text; }
   // A table wider than a phone scrolls inside its own box (focusable, so the keyboard can scroll it too), so the
   // page itself stays as wide as the screen and the house bar's buttons stay on it.
-  // On a phone a long table shows its first FOLD rows (each table puts flagged and higher-level rows first) and a
-  // "Show all" button; wider screens show every row. The fold is CSS (style.css, .tbl-fold), so nothing is hidden
-  // from a wide screen, a printout or a search engine.
-  var FOLD = 10;
+  // A long table shows its first rows (10 on a phone, 15 wider; each table puts flagged and higher-level rows
+  // first) and "Show all N": the hub's tic-fold.js, at every width since 18 Nov 2026 (it was phones only). A table of
+  // 25 rows or more also gets a find box. Without script, and in print, every row shows.
   function table(head, rows) {
-    var fold = rows.length > FOLD + 2;
-    var box = h("div", { "class": "tbl", tabindex: "0" }, [h("table", null, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
-      h("tbody", null, rows.map(function (r, i) {
-        var cls = [r.cls, fold && i >= FOLD ? "fold" : null].filter(Boolean).join(" ");
-        return h("tr", cls ? { "class": cls } : null, r.map(function (c) {
+    var attrs = { "data-tic-fold": "" };
+    if (rows.length >= 25) attrs["data-tic-fold-find"] = "";
+    return h("div", { "class": "tbl", tabindex: "0" }, [h("table", attrs, [h("thead", null, [h("tr", null, head.map(function (x) { return h("th", null, [x]); }))]),
+      h("tbody", null, rows.map(function (r) {
+        return h("tr", r.cls ? { "class": r.cls } : null, r.map(function (c) {
           return c && c.td ? h("td", { "class": c.cls }, [c.td]) : h("td", null, [c]); })); }))])]);
-    if (!fold) return box;
-    var wrap = h("div", { "class": "tbl-fold" }, [box]);
-    var btn = h("button", { type: "button", "class": "tbl-more", "aria-expanded": "false" }, ["Show all " + rows.length]);
-    btn.addEventListener("click", function () {
-      var open = wrap.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(open));
-      btn.textContent = open ? "Show the first " + FOLD : "Show all " + rows.length;
-      if (!open) box.scrollIntoView({ block: "nearest" });
-    });
-    wrap.appendChild(btn);
-    return wrap;
   }
 
   // Travel advice by destination (16 Nov 2026): one place, every government's advice side by side. The full
