@@ -9,3 +9,5 @@
 {"at":"2026-11-16T07:44:12Z","id":"CZIB-2026-04","number":"CZIB-2026-04-R3","subject":"Airspace of Iran","kind":"revised","from":["CZIB-2026-04-R2","2026-11-16"],"to":["CZIB-2026-04-R3","2027-01-31"],"lane":"easa"}
 {"at":"2026-11-16T07:44:12Z","id":"CZIB-2017-03","number":"CZIB-2017-03R21","subject":"Airspace of Syria","kind":"revised","from":["CZIB-2017-03R20","2026-11-30"],"to":["CZIB-2017-03R21","2027-04-30"],"lane":"easa"}
 {"at":"2026-11-17T18:40:34Z","key":"malaria-panama","name":"Malaria in Panama","link":"https://wwwnc.cdc.gov/travel/notices/level2/malaria-panama","countries":["PA"],"kind":"new","from":null,"to":2,"lane":"cdc"}
+{"at":"2026-11-18T18:40:32Z","key":"mdr-typhoid-senegal","name":"Multidrug-Resistant Typhoid Fever in Senegal","link":"https://wwwnc.cdc.gov/travel/notices/level1/mdr-typhoid-senegal","countries":["SN"],"kind":"new","from":null,"to":1,"lane":"cdc"}
+{"at":"2026-11-18T18:40:32Z","key":"malaria-yemen","name":"Malaria in Yemen","link":"https://wwwnc.cdc.gov/travel/notices/level2/malaria-yemen","countries":["YE"],"kind":"removed","from":2,"to":null,"lane":"cdc"}
