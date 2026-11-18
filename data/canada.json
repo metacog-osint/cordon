@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T18:00:16Z",
+ "generated": "2026-11-18T19:40:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1809,8 +1809,8 @@
    "level": 2,
    "advisory": "Avoid non-essential travel (with regional advisories)",
    "regional": true,
-   "updated": "2026-10-21T13:54:33Z",
-   "update_type": "Regular text update",
+   "updated": "2026-11-18T19:36:35Z",
+   "update_type": "Editorial change",
    "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
    "link": "https://travel.gc.ca/destinations/nigeria"
   },
