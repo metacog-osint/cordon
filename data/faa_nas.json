@@ -25,20 +25,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 186.0,
    "max_delay_min": 658.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "TEB",
-   "airport_name": "Teterboro",
-   "start": "2026-11-18T20:46:00Z",
-   "end": "2026-11-18T22:00:00Z",
-   "updated": "2026-11-18T21:12:55Z",
-   "reason": "airport volume",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=70&adv_date=11182026&facId=TEB&title=ATCSCC ADVZY 070 TEB/ZNY 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
-   "included_facilities": 9,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
