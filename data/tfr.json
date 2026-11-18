@@ -6426,183 +6426,6 @@
     }
    }
   },
-  "6/7689": {
-   "notam_id": "6/7689",
-   "type": "HAZARDS",
-   "facility": "ZBW",
-   "state": "NH",
-   "description": "10NM SE BERLIN, NH, Monday, November 16, 2026 through Wednesday, November 18, 2026 UTC",
-   "created": "11/16/2026",
-   "first_seen": "2026-11-16T14:49:44Z",
-   "detail": {
-    "name": "6/7689",
-    "issued": "2026-11-16T14:35:26Z",
-    "effective": "2026-11-16T15:00:00Z",
-    "expires": "2026-11-18T23:45:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
-    "city": "10NM SE BERLIN",
-    "floor": "surface",
-    "ceiling": "5000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7689 ZBW NH..AIRSPACE 10NM SE BERLIN, NH..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 5NM RADIUS OF 442000N0710200W (CON034070.9) SFC-5000FT NORTHEASTERN INTERAGENCY COORDINATION CENTER TEL 603-536-6208 OR FREQ 122.925 WILD RIVER FIRE IS IN CHARGE OF THE OPERATION. BOSTON/ZBW/ARTCC TEL 603-879-6655 IS THE FAA CDN FAC. 2611161500-2611182345",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -71.03333,
-        44.41667
-       ],
-       [
-        -71.01314,
-        44.4154
-       ],
-       [
-        -70.99357,
-        44.41163
-       ],
-       [
-        -70.97521,
-        44.40549
-       ],
-       [
-        -70.95862,
-        44.39715
-       ],
-       [
-        -70.94431,
-        44.38686
-       ],
-       [
-        -70.93271,
-        44.37496
-       ],
-       [
-        -70.92418,
-        44.36178
-       ],
-       [
-        -70.91896,
-        44.34775
-       ],
-       [
-        -70.91723,
-        44.33327
-       ],
-       [
-        -70.91902,
-        44.31881
-       ],
-       [
-        -70.92428,
-        44.30478
-       ],
-       [
-        -70.93286,
-        44.29162
-       ],
-       [
-        -70.94447,
-        44.27973
-       ],
-       [
-        -70.95878,
-        44.26947
-       ],
-       [
-        -70.97535,
-        44.26115
-       ],
-       [
-        -70.99368,
-        44.25502
-       ],
-       [
-        -71.0132,
-        44.25126
-       ],
-       [
-        -71.03333,
-        44.25
-       ],
-       [
-        -71.05347,
-        44.25126
-       ],
-       [
-        -71.07299,
-        44.25502
-       ],
-       [
-        -71.09131,
-        44.26115
-       ],
-       [
-        -71.10788,
-        44.26947
-       ],
-       [
-        -71.12219,
-        44.27973
-       ],
-       [
-        -71.13381,
-        44.29162
-       ],
-       [
-        -71.14238,
-        44.30478
-       ],
-       [
-        -71.14765,
-        44.31881
-       ],
-       [
-        -71.14944,
-        44.33327
-       ],
-       [
-        -71.1477,
-        44.34775
-       ],
-       [
-        -71.14249,
-        44.36178
-       ],
-       [
-        -71.13395,
-        44.37496
-       ],
-       [
-        -71.12236,
-        44.38686
-       ],
-       [
-        -71.10804,
-        44.39715
-       ],
-       [
-        -71.09146,
-        44.40549
-       ],
-       [
-        -71.0731,
-        44.41163
-       ],
-       [
-        -71.05352,
-        44.4154
-       ],
-       [
-        -71.03333,
-        44.41667
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7761": {
    "notam_id": "6/7761",
    "type": "UAS PUBLIC GATHERING",
@@ -12161,6 +11984,20 @@
    "ceiling_ft": 7000,
    "first_seen": "2026-11-16T14:40:35Z",
    "left_at": "2026-11-17T02:10:33Z"
+  },
+  "6/7689": {
+   "type": "HAZARDS",
+   "state": "NH",
+   "bbox": [
+    -71.1494,
+    44.25,
+    -70.9172,
+    44.4167
+   ],
+   "area_km2": 266.3,
+   "ceiling_ft": 5000,
+   "first_seen": "2026-11-16T14:49:44Z",
+   "left_at": "2026-11-18T16:40:31Z"
   },
   "6/7756": {
    "type": "HAZARDS",
