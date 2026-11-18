@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T19:40:15Z",
+ "generated": "2026-11-18T21:00:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1737,9 +1737,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-18T13:15:36Z",
+   "updated": "2026-11-18T20:56:16Z",
    "update_type": "Regular text update",
-   "update": "Risk levels section – removed advisory to avoid non-essential travel to the west-central coast; Natural disasters and climate section – removed information on Hurricane Trudy",
+   "update": "Laws and culture section – added information on children and travel",
    "link": "https://travel.gc.ca/destinations/mexico"
   },
   "MY": {
