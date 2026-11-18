@@ -2348,15 +2348,15 @@
   "venezuela": {
    "slug": "venezuela",
    "name": "Venezuela",
-   "updated": "2026-10-14T09:31:54Z",
-   "change": "FCDO now advises against all travel to Amazonas state and to within 40km (25 miles) of the border with Colombia. FCDO continues to advise against all travel to the Orinoco Mining Arc (‘Arco Minero’) region to the south of the Orinoco river, and within 40km (25 miles) of the border Brazil and Guyana ",
+   "updated": "2026-11-18T11:13:15Z",
+   "change": "Updated information about documents you must show to immigration authorities upon arrival and the ban on any vaping device, including those that do not contain nicotine (‘Entry requirements’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/venezuela",
    "iso": "VE",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-14T09:31:54Z"
+   "status_for": "2026-11-18T11:13:15Z"
   },
   "vietnam": {
    "slug": "vietnam",
