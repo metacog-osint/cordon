@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-17T16:40:17Z",
+ "generated": "2026-11-18T13:40:25Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1689,7 +1689,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-09T11:11:34Z",
+   "updated": "2026-11-18T13:28:58Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/malta"
@@ -1737,7 +1737,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-12T12:31:31Z",
+   "updated": "2026-11-18T13:15:36Z",
    "update_type": "Regular text update",
    "update": "Risk levels section – removed advisory to avoid non-essential travel to the west-central coast; Natural disasters and climate section – removed information on Hurricane Trudy",
    "link": "https://travel.gc.ca/destinations/mexico"
