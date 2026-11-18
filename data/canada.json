@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T16:20:27Z",
+ "generated": "2026-11-18T18:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2661,9 +2661,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-28T11:18:02Z",
-   "update_type": "Full TAA review",
-   "update": "Thorough review and update of the entire content",
+   "updated": "2026-11-18T17:47:40Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/vietnam"
   },
   "VU": {
