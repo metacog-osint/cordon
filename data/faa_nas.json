@@ -10,6 +10,35 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
+  },
+  {
+   "kind": "ground_delay",
+   "airport": "SFO",
+   "airport_name": "San Francisco International",
+   "start": "2026-11-18T16:00:00Z",
+   "end": "2026-11-19T06:59:00Z",
+   "updated": "2026-11-18T13:27:18Z",
+   "reason": "wind",
+   "center": "ZOA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=30&adv_date=11182026&facId=SFO&title=ATCSCC ADVZY 030 SFO/ZOA 11/18/2026 CDM GROUND DELAY PROGRAM&titleDate=11/18/2026",
+   "included_facilities": 23,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 72.0,
+   "max_delay_min": 130.0
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "FLL",
+   "airport_name": "Fort Lauderdale/Hollywood International",
+   "start": "2026-11-18T13:30:00Z",
+   "end": "2026-11-18T14:45:00Z",
+   "updated": "2026-11-18T13:30:22Z",
+   "reason": "thunderstorms",
+   "center": "ZMA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=31&adv_date=11182026&facId=FLL&title=ATCSCC ADVZY 031 FLL/ZMA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
+   "included_facilities": 7,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
