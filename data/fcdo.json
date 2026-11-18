@@ -165,12 +165,12 @@
   "bahrain": {
    "slug": "bahrain",
    "name": "Bahrain",
-   "updated": "2026-10-27T16:06:21Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page) .",
+   "updated": "2026-11-18T16:31:19Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/bahrain",
    "iso": "BH",
    "alert_status": [],
-   "status_for": "2026-10-27T16:06:21Z"
+   "status_for": "2026-11-18T16:31:19Z"
   },
   "bangladesh": {
    "slug": "bangladesh",
@@ -1013,19 +1013,19 @@
   "iran": {
    "slug": "iran",
    "name": "Iran",
-   "updated": "2026-10-27T16:04:57Z",
-   "change": "Updated information about Regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:30:59Z",
+   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/iran",
    "iso": "IR",
    "alert_status": [
     "avoid_all_travel_to_whole_country"
    ],
-   "status_for": "2026-10-27T16:04:57Z"
+   "status_for": "2026-11-18T16:30:59Z"
   },
   "iraq": {
    "slug": "iraq",
    "name": "Iraq",
-   "updated": "2026-10-27T16:06:23Z",
+   "updated": "2026-11-18T16:31:24Z",
    "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/iraq",
    "iso": "IQ",
@@ -1033,7 +1033,7 @@
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:06:23Z"
+   "status_for": "2026-11-18T16:31:24Z"
   },
   "ireland": {
    "slug": "ireland",
@@ -1048,15 +1048,15 @@
   "israel": {
    "slug": "israel",
    "name": "Israel",
-   "updated": "2026-10-27T16:05:38Z",
-   "change": "Updated information about Regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:31:51Z",
+   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/israel",
    "iso": "IL",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:05:38Z"
+   "status_for": "2026-11-18T16:31:51Z"
   },
   "italy": {
    "slug": "italy",
@@ -1091,14 +1091,14 @@
   "jordan": {
    "slug": "jordan",
    "name": "Jordan",
-   "updated": "2026-10-27T16:06:24Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T16:31:10Z",
+   "change": "Updated information about regional tensions, demonstrations and mass gatherings, and incidents of terrorism (‘Warnings and insurance’ and ‘Safety and security’ pages).",
    "link": "https://www.gov.uk/foreign-travel-advice/jordan",
    "iso": "JO",
    "alert_status": [
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:06:24Z"
+   "status_for": "2026-11-18T16:31:10Z"
   },
   "kazakhstan": {
    "slug": "kazakhstan",
@@ -1146,12 +1146,12 @@
   "kuwait": {
    "slug": "kuwait",
    "name": "Kuwait",
-   "updated": "2026-10-27T16:06:20Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T16:31:45Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/kuwait",
    "iso": "KW",
    "alert_status": [],
-   "status_for": "2026-10-27T16:06:20Z"
+   "status_for": "2026-11-18T16:31:45Z"
   },
   "kyrgyzstan": {
    "slug": "kyrgyzstan",
@@ -1617,25 +1617,25 @@
   "oman": {
    "slug": "oman",
    "name": "Oman",
-   "updated": "2026-10-27T16:01:00Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T16:31:54Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/oman",
    "iso": "OM",
    "alert_status": [],
-   "status_for": "2026-10-27T16:01:00Z"
+   "status_for": "2026-11-18T16:31:54Z"
   },
   "pakistan": {
    "slug": "pakistan",
    "name": "Pakistan",
-   "updated": "2026-10-27T16:05:20Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:36:34Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/pakistan",
    "iso": "PK",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:05:20Z"
+   "status_for": "2026-11-18T16:36:34Z"
   },
   "palau": {
    "slug": "palau",
@@ -1650,15 +1650,15 @@
   "palestine": {
    "slug": "palestine",
    "name": "Palestine",
-   "updated": "2026-10-27T16:06:13Z",
-   "change": "Updated information about Regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:32:19Z",
+   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/palestine",
    "iso": "PS",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:06:13Z"
+   "status_for": "2026-11-18T16:32:19Z"
   },
   "panama": {
    "slug": "panama",
@@ -1749,12 +1749,12 @@
   "qatar": {
    "slug": "qatar",
    "name": "Qatar",
-   "updated": "2026-10-27T16:03:07Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page) .",
+   "updated": "2026-11-18T16:32:02Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/qatar",
    "iso": "QA",
    "alert_status": [],
-   "status_for": "2026-10-27T16:03:07Z"
+   "status_for": "2026-11-18T16:32:02Z"
   },
   "reunion": {
    "slug": "reunion",
@@ -1833,15 +1833,15 @@
   "saudi-arabia": {
    "slug": "saudi-arabia",
    "name": "Saudi Arabia",
-   "updated": "2026-10-27T16:54:07Z",
-   "change": "Updated information about Regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:32:22Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
    "iso": "SA",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:54:07Z"
+   "status_for": "2026-11-18T16:32:22Z"
   },
   "senegal": {
    "slug": "senegal",
@@ -2112,14 +2112,14 @@
   "syria": {
    "slug": "syria",
    "name": "Syria",
-   "updated": "2026-10-27T16:05:05Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T16:36:20Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/syria",
    "iso": "SY",
    "alert_status": [
     "avoid_all_travel_to_whole_country"
    ],
-   "status_for": "2026-10-27T16:05:05Z"
+   "status_for": "2026-11-18T16:36:20Z"
   },
   "taiwan": {
    "slug": "taiwan",
@@ -2233,14 +2233,14 @@
   "turkey": {
    "slug": "turkey",
    "name": "Turkey",
-   "updated": "2026-10-27T16:07:12Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page).",
+   "updated": "2026-11-18T16:36:28Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/turkey",
    "iso": "TR",
    "alert_status": [
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-27T16:07:12Z"
+   "status_for": "2026-11-18T16:36:28Z"
   },
   "turkmenistan": {
    "slug": "turkmenistan",
@@ -2298,12 +2298,12 @@
   "united-arab-emirates": {
    "slug": "united-arab-emirates",
    "name": "United Arab Emirates",
-   "updated": "2026-10-27T16:03:20Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:33:03Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/united-arab-emirates",
    "iso": "AE",
    "alert_status": [],
-   "status_for": "2026-10-27T16:03:20Z"
+   "status_for": "2026-11-18T16:33:03Z"
   },
   "uruguay": {
    "slug": "uruguay",
@@ -2393,14 +2393,14 @@
   "yemen": {
    "slug": "yemen",
    "name": "Yemen",
-   "updated": "2026-10-27T16:06:42Z",
-   "change": "Updated information about regional tensions (‘Warnings and insurance’ page)",
+   "updated": "2026-11-18T16:36:14Z",
+   "change": "Updated information about regional tensions (See ‘Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/yemen",
    "iso": "YE",
    "alert_status": [
     "avoid_all_travel_to_whole_country"
    ],
-   "status_for": "2026-10-27T16:06:42Z"
+   "status_for": "2026-11-18T16:36:14Z"
   },
   "zambia": {
    "slug": "zambia",
