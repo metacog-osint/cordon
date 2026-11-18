@@ -25,20 +25,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 72.0,
    "max_delay_min": 130.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "MIA",
-   "airport_name": "Miami International",
-   "start": "2026-11-18T13:57:00Z",
-   "end": "2026-11-18T15:15:00Z",
-   "updated": "2026-11-18T14:13:28Z",
-   "reason": "low visibility",
-   "center": "ZMA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=32&adv_date=11182026&facId=MIA&title=ATCSCC ADVZY 032 MIA/ZMA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
-   "included_facilities": 7,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
