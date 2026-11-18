@@ -25,6 +25,20 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 92.0,
    "max_delay_min": 341.0
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "SFO",
+   "airport_name": "San Francisco International",
+   "start": "2026-11-18T17:20:00Z",
+   "end": "2026-11-18T18:45:00Z",
+   "updated": "2026-11-18T17:34:51Z",
+   "reason": "wind",
+   "center": "ZOA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=51&adv_date=11182026&facId=SFO&title=ATCSCC ADVZY 051 SFO/ZOA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
+   "included_facilities": 4,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
