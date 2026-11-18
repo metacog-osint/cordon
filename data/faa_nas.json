@@ -10,20 +10,6 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-17T22:40:00Z",
-   "end": "2026-11-18T00:00:00Z",
-   "updated": "2026-11-17T22:40:39Z",
-   "reason": "low ceilings",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=72&adv_date=11172026&facId=SFO&title=ATCSCC ADVZY 072 SFO/ZOA 11/17/2026 CDM GROUND STOP&titleDate=11/17/2026",
-   "included_facilities": 4,
-   "included_flights": null,
-   "probability_of_extension": "LOW"
   }
  ],
  "airports": {
