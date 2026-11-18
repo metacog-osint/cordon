@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T21:00:17Z",
+ "generated": "2026-11-18T21:40:14Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1377,9 +1377,9 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-11-16T12:56:50Z",
-   "update_type": "Editorial change",
-   "update": "Health – editorial change",
+   "updated": "2026-11-18T21:36:54Z",
+   "update_type": "Regular text update",
+   "update": "Need help? section – updated the address and contact information for the Embassy of Canada to Lebanon, in Beirut",
    "link": "https://travel.gc.ca/destinations/lebanon"
   },
   "LC": {
@@ -1737,9 +1737,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-18T20:56:16Z",
-   "update_type": "Regular text update",
-   "update": "Laws and culture section – added information on children and travel",
+   "updated": "2026-11-18T21:05:16Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change.",
    "link": "https://travel.gc.ca/destinations/mexico"
   },
   "MY": {
