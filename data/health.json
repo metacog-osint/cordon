@@ -1,81 +1,81 @@
 {
  "state-travel-advisories": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": "2026-11-17T03:10:31Z",
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "217 advisories"
  },
  "us-embassy-alerts": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": "2026-11-18T04:10:39Z",
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
-  "detail": "26 of 56 posts answered (26 only through Google News search); e.g. HTTP 403; Google News: no alert in the last 30 days"
+  "checked_at": "2026-11-18T15:40:34Z",
+  "detail": "27 of 56 posts answered (27 only through Google News search); e.g. HTTP 403; Google News: no alert in the last 30 days"
  },
  "easa-czib": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "16 active"
  },
  "nga-navwarnings": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": "2026-11-13T04:39:32Z",
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "399 warnings in force",
   "newest_item": "2026-11-18T14:34:00Z",
   "held_areas": {}
  },
  "faa-nas-status": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "0 ground stops, 1 ground delay programs, 1 closures"
  },
  "uk-fcdo-travel-advice": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
-  "detail": "226 countries, 70 with advice against some travel; 0 country pages read"
+  "checked_at": "2026-11-18T15:40:34Z",
+  "detail": "226 countries, 70 with advice against some travel; 4 country pages read"
  },
  "faa-tfr": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": "2026-11-15T10:10:31Z",
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
-  "detail": "85 TFRs listed, 73 with an area; 1 detail files read"
+  "checked_at": "2026-11-18T15:40:34Z",
+  "detail": "85 TFRs listed, 73 with an area; 0 detail files read"
  },
  "gac-travel-advisories": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": "2026-11-15T19:40:30Z",
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
-  "detail": "230 places: 22 avoid all travel, 14 avoid non-essential travel, 90 high degree of caution, 64 with regional advisories; index generated 2026-11-18T13:40:25Z"
+  "checked_at": "2026-11-18T15:40:34Z",
+  "detail": "230 places: 22 avoid all travel, 14 avoid non-essential travel, 90 high degree of caution, 64 with regional advisories; index generated 2026-11-18T15:40:17Z"
  },
  "cdc-travel-notices": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "23 notices: 1 level 4, 1 level 3, 12 level 2, 9 level 1"
  },
  "nz-mfat-safetravel": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "222 destinations: 23 do not travel, 12 avoid non-essential travel, 80 increased caution, 57 with other levels in some areas; 0 country pages read"
  },
  "faa-prohibitions-notices": {
-  "last_ok": "2026-11-18T15:10:36Z",
+  "last_ok": "2026-11-18T15:40:34Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-18T15:10:36Z",
+  "checked_at": "2026-11-18T15:40:34Z",
   "detail": "20 of 24 sections with an SFAR or KICZ NOTAM: 8 SFARs, 22 KICZ NOTAMs; 12 prohibitions, 10 advisories, 8 pointers"
  }
 }
