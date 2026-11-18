@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T21:40:14Z",
+ "generated": "2026-11-18T22:00:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2577,9 +2577,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-14T02:38:48Z",
+   "updated": "2026-11-18T21:43:23Z",
    "update_type": "Regular text update",
-   "update": "Safety and security – updated information on a nationwide ground stop",
+   "update": "Safety and security section – removed information on the nationwide ground stop",
    "link": "https://travel.gc.ca/destinations/united-states"
   },
   "UY": {
