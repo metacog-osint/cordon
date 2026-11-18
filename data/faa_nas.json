@@ -28,20 +28,6 @@
   },
   {
    "kind": "ground_stop",
-   "airport": "DJT",
-   "airport_name": "President Donald J Trump International",
-   "start": "2026-11-18T18:51:00Z",
-   "end": "2026-11-18T20:15:00Z",
-   "updated": "2026-11-18T19:04:37Z",
-   "reason": "airport volume",
-   "center": "ZMA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=64&adv_date=11182026&facId=DJT&title=ATCSCC ADVZY 064 DJT/ZMA 11/18/2026 CDM GROUND STOP&titleDate=11/18/2026",
-   "included_facilities": 3,
-   "included_flights": null,
-   "probability_of_extension": "LOW"
-  },
-  {
-   "kind": "ground_stop",
    "airport": "TEB",
    "airport_name": "Teterboro",
    "start": "2026-11-18T19:48:00Z",
