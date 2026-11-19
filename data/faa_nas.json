@@ -3,6 +3,16 @@
  "programs": [
   {
    "kind": "closure",
+   "airport": "PNS",
+   "airport_name": "Pensacola Regional",
+   "start": "2026-11-19T06:00:00Z",
+   "end": "2026-11-19T11:00:00Z",
+   "updated": "2026-11-12T19:01:25Z",
+   "notam": "!PNS 11/045 PNS AD AP CLSD EXC HEL OPS 2611190600-2611191100",
+   "issued": "2026-11-12T18:56:00Z"
+  },
+  {
+   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
@@ -10,21 +20,6 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-18T19:45:00Z",
-   "end": "2026-11-19T07:59:00Z",
-   "updated": "2026-11-18T19:46:19Z",
-   "reason": "wind",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=66&adv_date=11182026&facId=SFO&title=ATCSCC ADVZY 066 SFO/ZOA 11/18/2026 CDM GROUND DELAY PROGRAM&titleDate=11/18/2026",
-   "included_facilities": 23,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 186.0,
-   "max_delay_min": 658.0
   }
  ],
  "airports": {
