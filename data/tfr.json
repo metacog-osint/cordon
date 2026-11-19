@@ -10757,6 +10757,7 @@
    "description": "Sterling, VA, Saturday, November 21, 2026 Local",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T14:40:36Z",
+   "subject": "6/8982",
    "detail": {
     "name": "261121 Sterling, VA VIP",
     "issued": "2026-11-19T14:26:13Z",
@@ -10924,8 +10925,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/8982"
+   }
   },
   "6/8983": {
    "notam_id": "6/8983",
@@ -10935,6 +10935,7 @@
    "description": "Sterling, VA, Sunday, November 22, 2026 through Sunday, November 22, 2026 Local",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T14:40:36Z",
+   "subject": "6/8983",
    "detail": {
     "name": "261122 Sterling, VA VIP",
     "issued": "2026-11-19T14:27:23Z",
@@ -11102,8 +11103,447 @@
       ]
      ]
     }
+   }
+  },
+  "6/8986": {
+   "notam_id": "6/8986",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZOB",
+   "state": "MI",
+   "description": "Detroit, MI, Thursday, November 26, 2026 UTC",
+   "created": "11/19/2026",
+   "first_seen": "2026-11-19T15:10:37Z",
+   "detail": {
+    "name": "2026-44812-CSA-0139 DET Thanksgiving Parade",
+    "issued": "2026-11-19T14:35:43Z",
+    "effective": "2026-11-26T13:00:00Z",
+    "expires": "2026-11-26T20:00:00Z",
+    "regulation": "44812",
+    "purpose": "America's Thanksgiving Day Parade in Detroit under sec 44812 c(2)",
+    "city": "Detroit",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/8986 ZOB MI..AIRSPACE DETROIT, MI..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 421843N0830426W (DXO 071014.3) THEN CLOCKWISE ON A 2 NM ARC CENTERED ON 422021N0830255W (DXO 068016.1) TO 422021N0830255W (DXO 068016.1) TO 421921N0830515W (DXO 068014.3) TO 422034N0830618W (DXO 062014.0) THEN CLOCKWISE ON A 2 NM ARC CENTERED ON 422135N0830358W (DXO 063016.0) TO 422234N0830137W (DXO 063018.0) TO 422122N0830035W (DXO 068018.1) THEN CLOCKWISE ON A 2 NM ARC CENTERED ON 422021N0830255 (DXO 068016.1) TO 421951N0830020W (DXO 072017.6) TO 421947N0830108W (DXO 072017.8) TO 421905N0830349W (DXO 071014.9) TO THE POINT OF ORIGIN SFC-400FT AGL EFFECTIVE 2611261300 UTC UNTIL 2611262000 UTC. DUE TO AMERICA'S THANKSGIVING DAY PARADE IN DETROIT UNDER SEC 44812 C(2). TFR EXCLUDES CANADIAN AIRSPACE. UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE DETROIT POLICE DEPARTMENT, SGT GREGORY SAWMILLER, TEL 313-810-2113, IS THE POINT OF CONTACT. 2611261300-2611262000",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -83.074,
+        42.31183
+       ],
+       [
+        -83.07722,
+        42.31344
+       ],
+       [
+        -83.08014,
+        42.31539
+       ],
+       [
+        -83.08281,
+        42.31753
+       ],
+       [
+        -83.08522,
+        42.31983
+       ],
+       [
+        -83.08736,
+        42.32228
+       ],
+       [
+        -83.08761,
+        42.32239
+       ],
+       [
+        -83.10511,
+        42.34289
+       ],
+       [
+        -83.10683,
+        42.3455
+       ],
+       [
+        -83.10836,
+        42.34819
+       ],
+       [
+        -83.10953,
+        42.35097
+       ],
+       [
+        -83.11039,
+        42.35381
+       ],
+       [
+        -83.11089,
+        42.35669
+       ],
+       [
+        -83.11108,
+        42.35958
+       ],
+       [
+        -83.11092,
+        42.3625
+       ],
+       [
+        -83.11039,
+        42.36539
+       ],
+       [
+        -83.10956,
+        42.36822
+       ],
+       [
+        -83.10836,
+        42.371
+       ],
+       [
+        -83.10686,
+        42.37369
+       ],
+       [
+        -83.10506,
+        42.37628
+       ],
+       [
+        -83.10297,
+        42.37872
+       ],
+       [
+        -83.10058,
+        42.38103
+       ],
+       [
+        -83.09792,
+        42.38317
+       ],
+       [
+        -83.09503,
+        42.38514
+       ],
+       [
+        -83.09192,
+        42.38692
+       ],
+       [
+        -83.08861,
+        42.38847
+       ],
+       [
+        -83.08514,
+        42.38983
+       ],
+       [
+        -83.0815,
+        42.39094
+       ],
+       [
+        -83.07778,
+        42.39181
+       ],
+       [
+        -83.07394,
+        42.39244
+       ],
+       [
+        -83.07006,
+        42.39283
+       ],
+       [
+        -83.06611,
+        42.39294
+       ],
+       [
+        -83.06219,
+        42.39283
+       ],
+       [
+        -83.05831,
+        42.39244
+       ],
+       [
+        -83.05447,
+        42.39183
+       ],
+       [
+        -83.05075,
+        42.39094
+       ],
+       [
+        -83.04711,
+        42.38983
+       ],
+       [
+        -83.04364,
+        42.3885
+       ],
+       [
+        -83.04033,
+        42.38692
+       ],
+       [
+        -83.03722,
+        42.38517
+       ],
+       [
+        -83.03431,
+        42.38319
+       ],
+       [
+        -83.03167,
+        42.38106
+       ],
+       [
+        -83.02928,
+        42.37875
+       ],
+       [
+        -83.02717,
+        42.37628
+       ],
+       [
+        -83.027,
+        42.37619
+       ],
+       [
+        -83.00981,
+        42.356
+       ],
+       [
+        -83.00797,
+        42.35342
+       ],
+       [
+        -83.00644,
+        42.35075
+       ],
+       [
+        -83.00525,
+        42.34797
+       ],
+       [
+        -83.00439,
+        42.34514
+       ],
+       [
+        -83.00386,
+        42.34225
+       ],
+       [
+        -83.00367,
+        42.33936
+       ],
+       [
+        -83.00381,
+        42.33644
+       ],
+       [
+        -83.00431,
+        42.33356
+       ],
+       [
+        -83.0055,
+        42.33081
+       ],
+       [
+        -83.01889,
+        42.32969
+       ],
+       [
+        -83.06361,
+        42.31792
+       ],
+       [
+        -83.074,
+        42.31183
+       ]
+      ]
+     ]
+    }
    },
-   "subject": "6/8983"
+   "subject": "6/8986"
+  },
+  "6/8989": {
+   "notam_id": "6/8989",
+   "type": "UAS PUBLIC GATHERING",
+   "facility": "ZHU",
+   "state": "TX",
+   "description": "Houston, TX, Thursday, November 26, 2026 UTC",
+   "created": "11/19/2026",
+   "first_seen": "2026-11-19T15:10:37Z",
+   "detail": {
+    "name": "2026-44812-CSA-0105 HOU Thanksgiving Parade",
+    "issued": "2026-11-19T14:36:25Z",
+    "effective": "2026-11-26T14:00:00Z",
+    "expires": "2026-11-26T18:00:00Z",
+    "regulation": "44812",
+    "purpose": "the 77th annual HEB Thanksgiving Day Parade under sec 44812 c(2)",
+    "city": "Houston",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/8989 ZHU TX..AIRSPACE HOUSTON, TX..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1NM RADIUS OF 294543N0952245W (IAH184011.8) SFC-400FT AGL EFFECTIVE 2611261400 UTC UNTIL 2611261800 UTC. DUE TO THE 77TH ANNUAL HEB THANKSGIVING DAY PARADE UNDER SEC 44812 C (2). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C. SECTION 130I AND 6 U.S.C. SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE HOUSTON POLICE DEPT SGT CARL SEDITA TEL 346-577-2775 IS THE POINT OF CONTACT. 2611261400-2611261800",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -95.37917,
+        29.77865
+       ],
+       [
+        -95.37584,
+        29.7784
+       ],
+       [
+        -95.37262,
+        29.77764
+       ],
+       [
+        -95.36959,
+        29.77641
+       ],
+       [
+        -95.36686,
+        29.77474
+       ],
+       [
+        -95.3645,
+        29.77268
+       ],
+       [
+        -95.36258,
+        29.7703
+       ],
+       [
+        -95.36117,
+        29.76766
+       ],
+       [
+        -95.36031,
+        29.76484
+       ],
+       [
+        -95.36002,
+        29.76194
+       ],
+       [
+        -95.36031,
+        29.75904
+       ],
+       [
+        -95.36117,
+        29.75623
+       ],
+       [
+        -95.36258,
+        29.75359
+       ],
+       [
+        -95.3645,
+        29.7512
+       ],
+       [
+        -95.36686,
+        29.74915
+       ],
+       [
+        -95.36959,
+        29.74747
+       ],
+       [
+        -95.37262,
+        29.74624
+       ],
+       [
+        -95.37584,
+        29.74549
+       ],
+       [
+        -95.37917,
+        29.74524
+       ],
+       [
+        -95.38249,
+        29.74549
+       ],
+       [
+        -95.38571,
+        29.74624
+       ],
+       [
+        -95.38874,
+        29.74747
+       ],
+       [
+        -95.39147,
+        29.74915
+       ],
+       [
+        -95.39383,
+        29.7512
+       ],
+       [
+        -95.39575,
+        29.75359
+       ],
+       [
+        -95.39716,
+        29.75623
+       ],
+       [
+        -95.39802,
+        29.75904
+       ],
+       [
+        -95.39832,
+        29.76194
+       ],
+       [
+        -95.39803,
+        29.76484
+       ],
+       [
+        -95.39716,
+        29.76766
+       ],
+       [
+        -95.39575,
+        29.7703
+       ],
+       [
+        -95.39384,
+        29.77268
+       ],
+       [
+        -95.39148,
+        29.77474
+       ],
+       [
+        -95.38874,
+        29.77641
+       ],
+       [
+        -95.38572,
+        29.77764
+       ],
+       [
+        -95.38249,
+        29.7784
+       ],
+       [
+        -95.37917,
+        29.77865
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/8989"
   },
   "9/2934": {
    "notam_id": "9/2934",
