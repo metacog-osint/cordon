@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-18T22:00:15Z",
+ "generated": "2026-11-19T12:20:35Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -621,7 +621,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-18T16:00:55Z",
+   "updated": "2026-11-19T12:10:11Z",
    "update_type": "Editorial change",
    "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/germany"
@@ -1125,9 +1125,9 @@
    "level": 2,
    "advisory": "Avoid non-essential travel (with regional advisories)",
    "regional": true,
-   "updated": "2026-09-24T12:53:34Z",
+   "updated": "2026-11-19T12:09:07Z",
    "update_type": "Editorial change",
-   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
+   "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/israel-and-palestine"
   },
   "IN": {
@@ -2553,7 +2553,7 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-11-18T16:15:23Z",
+   "updated": "2026-11-19T12:13:06Z",
    "update_type": "Editorial change",
    "update": "Minor update",
    "link": "https://travel.gc.ca/destinations/ukraine"
