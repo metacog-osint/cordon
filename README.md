@@ -76,4 +76,4 @@ python tests/test_cordon.py
 Standard-library Python only. `update.yml` runs hourly: collect, commit `data/` when its content changed, build and
 publish to GitHub Pages. `data/changes.jsonl` keeps every level, posture and bulletin change, append-only.
 
-Code under the MIT licence. A project of The Intelligence Company.
+Code under the GNU AGPL-3.0 (`LICENSE`); shared and third-party files keep their own licences, listed in `NOTICE`. A project of The Intelligence Company.
