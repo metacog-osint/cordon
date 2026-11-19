@@ -11317,6 +11317,7 @@
    "description": "13NM SE OF MANCHESTER, KY, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T19:10:34Z",
+   "subject": "6/9062",
    "detail": {
     "name": "6/9062",
     "issued": "2026-11-19T18:37:14Z",
@@ -11356,8 +11357,185 @@
       ]
      ]
     }
+   }
+  },
+  "6/9071": {
+   "notam_id": "6/9071",
+   "type": "HAZARDS",
+   "facility": "ZHU",
+   "state": "LA",
+   "description": "NEW ORLEANS, LA, Thursday, November 19, 2026 through Saturday, November 28, 2026 UTC",
+   "created": "11/19/2026",
+   "first_seen": "2026-11-19T19:40:35Z",
+   "detail": {
+    "name": "6/9071",
+    "issued": "2026-11-19T19:24:13Z",
+    "effective": "2026-11-19T19:20:00Z",
+    "expires": "2026-11-28T19:19:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": null,
+    "city": "NEW ORLEANS",
+    "floor": "surface",
+    "ceiling": "1000 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/9071 ZHU LA..AIRSPACE NEW ORLEANS, LA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT SAFE OPERATIONS FOR SAR ACFT WI AN AREA DEFINED AS 1NM RADIUS OF 295612N0900368W (HRV325006.2) SFC-1000FT AGL US COAST GUARD TEL 855-485-3727 PROVIDE SAFE OPERATIONS FOR SAR IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611191920-2611281919",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -90.06776,
+        29.95376
+       ],
+       [
+        -90.06443,
+        29.95351
+       ],
+       [
+        -90.0612,
+        29.95275
+       ],
+       [
+        -90.05817,
+        29.95152
+       ],
+       [
+        -90.05543,
+        29.94985
+       ],
+       [
+        -90.05306,
+        29.94779
+       ],
+       [
+        -90.05114,
+        29.9454
+       ],
+       [
+        -90.04973,
+        29.94276
+       ],
+       [
+        -90.04887,
+        29.93995
+       ],
+       [
+        -90.04858,
+        29.93705
+       ],
+       [
+        -90.04887,
+        29.93415
+       ],
+       [
+        -90.04973,
+        29.93134
+       ],
+       [
+        -90.05115,
+        29.9287
+       ],
+       [
+        -90.05307,
+        29.92631
+       ],
+       [
+        -90.05543,
+        29.92425
+       ],
+       [
+        -90.05817,
+        29.92258
+       ],
+       [
+        -90.0612,
+        29.92135
+       ],
+       [
+        -90.06443,
+        29.9206
+       ],
+       [
+        -90.06776,
+        29.92034
+       ],
+       [
+        -90.07109,
+        29.9206
+       ],
+       [
+        -90.07432,
+        29.92135
+       ],
+       [
+        -90.07735,
+        29.92258
+       ],
+       [
+        -90.08009,
+        29.92425
+       ],
+       [
+        -90.08245,
+        29.92631
+       ],
+       [
+        -90.08437,
+        29.9287
+       ],
+       [
+        -90.08578,
+        29.93134
+       ],
+       [
+        -90.08665,
+        29.93415
+       ],
+       [
+        -90.08694,
+        29.93705
+       ],
+       [
+        -90.08665,
+        29.93995
+       ],
+       [
+        -90.08578,
+        29.94276
+       ],
+       [
+        -90.08437,
+        29.9454
+       ],
+       [
+        -90.08245,
+        29.94779
+       ],
+       [
+        -90.08009,
+        29.94985
+       ],
+       [
+        -90.07735,
+        29.95152
+       ],
+       [
+        -90.07432,
+        29.95275
+       ],
+       [
+        -90.07109,
+        29.95351
+       ],
+       [
+        -90.06776,
+        29.95376
+       ]
+      ]
+     ]
+    }
    },
-   "subject": "6/9062"
+   "subject": "6/7567"
   },
   "9/2934": {
    "notam_id": "9/2934",
