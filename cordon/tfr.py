@@ -202,6 +202,8 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, paus
         prev = old.get(nid) or {}
         # first read of this field (15 Nov 2026): a TFR already held keeps the FAA's issue time as its first sighting
         rec["first_seen"] = prev.get("first_seen") or (prev.get("detail") or {}).get("issued") or when
+        if prev.get("subject"):
+            rec["subject"] = prev["subject"]  # stamped once by remember(), never changed (feed revision 2.1)
         if prev.get("detail") and prev.get("created") == rec["created"]:
             out[nid] = {**rec, "detail": prev["detail"]}
             continue
@@ -338,20 +340,64 @@ def impact(rec: dict) -> dict:
 
 
 def memory_entry(rec: dict, first_seen: str) -> dict:
-    """What Cordon keeps of a TFR to recognise its re-issue later."""
+    """What Cordon keeps of a TFR to recognise its re-issue later, and the subject it carried (feed revision 2.1)."""
     d = rec.get("detail") or {}
-    return {"type": rec.get("type"), "state": rec.get("state"), "bbox": bbox(d.get("geometry")),
-            "area_km2": area_km2(d.get("geometry")), "ceiling_ft": feet(d.get("ceiling")), "first_seen": first_seen}
+    out = {"type": rec.get("type"), "state": rec.get("state"), "bbox": bbox(d.get("geometry")),
+           "area_km2": area_km2(d.get("geometry")), "ceiling_ft": feet(d.get("ceiling")), "first_seen": first_seen}
+    if rec.get("subject"):
+        out["subject"] = rec["subject"]
+    return out
+
+
+def subject_of(nid: str, rec: dict, held: dict, gone: dict, taken: set | None = None) -> str:
+    """The restriction a TFR is a reading of (feed revision 2.1 subject_id; the NOTAM id it started under), so that a
+    re-issue reads as a change of one restriction and not a new one and an end.
+
+    Stamped once (rec["subject"], kept in data/tfr.json by remember()) and never changed after. Until then: a re-issue
+    whose predecessor has left the FAA's list takes the predecessor's subject, unless a TFR still listed already
+    carries it (the first re-issue of a split takes it). A re-issue listed alongside its predecessor keeps its own
+    subject: two restrictions in force at once are two subjects, and sharing one would cost the history log a false
+    new and end. A TFR with no area yet (detail not read) keeps its own."""
+    if rec.get("subject"):
+        return rec["subject"]
+    again = reissue(nid, rec, held, gone)
+    if not again or again["of"] in held or again["of"] not in (gone or {}):
+        return nid
+    s = gone[again["of"]].get("subject") or again["of"]
+    if taken is None:
+        taken = {r.get("subject") or k for k, r in held.items() if k != nid}
+    return nid if s in taken else s
+
+
+def stamp_subjects(new: dict, gone: dict) -> None:
+    """Give every listed TFR not yet stamped its subject, oldest first, so the first re-issue of a split takes the
+    predecessor's subject and later ones keep their own."""
+    taken = {r["subject"] for r in new.values() if r.get("subject")}
+    for nid in sorted((k for k, r in new.items() if not r.get("subject")),
+                      key=lambda k: (new[k].get("first_seen") or "", k)):
+        s = subject_of(nid, new[nid], new, gone, taken)
+        new[nid]["subject"] = s
+        taken.add(s)
+
+
+def subjects(held: dict, gone: dict) -> dict:
+    """{nid: subject} for the listed TFRs: their stamps, and for any not yet stamped (a data file from before revision
+    2.1) what stamp_subjects() would give them, without changing the data."""
+    copy = {k: dict(r) for k, r in (held or {}).items()}
+    stamp_subjects(copy, gone or {})
+    return {k: r["subject"] for k, r in copy.items()}
 
 
 def remember(old: dict, new: dict, gone: dict | None, when: str) -> dict:
     """The TFRs that left the FAA's list in the last GONE_DAYS, for re-issue checks: the earlier memory, pruned, plus
-    any TFR held before this read and not listed now."""
+    any TFR held before this read and not listed now. Also stamps each listed TFR's subject (stamp_subjects), against
+    the memory including this read's departures, so a TFR re-issued in the hour its predecessor left counts too."""
     cutoff = (datetime.fromisoformat(when.replace("Z", "+00:00")) - timedelta(days=GONE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     out = {k: v for k, v in (gone or {}).items() if (v.get("left_at") or "") >= cutoff and k not in new}
     for nid, rec in (old or {}).items():
         if nid not in new and (rec.get("detail") or {}).get("geometry"):
             out[nid] = {**memory_entry(rec, rec.get("first_seen") or ""), "left_at": when}
+    stamp_subjects(new, out)
     return dict(sorted(out.items()))
 
 
