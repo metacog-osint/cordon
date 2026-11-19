@@ -263,15 +263,6 @@
    },
    {
     "iso": "MX",
-    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
-    "published_at": "2026-10-30T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://mx.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "MX",
     "title": "Security Alert: Active Law Enforcement Activity in the City of Matamoros",
     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRDNUT0QyUm9TNDN6MW5obk5aUl9ybTJmcjBUcm42M2RaMm95NWZEZThSbmtWLWpDU1VUS1lNV2Q4TEJkRG56ZFUtMVZLTzQ3Ukpld3B4LTVMQmhfYXFuaW1SX0xMNTFZeWg4SVljX3BTaEtxOXFLU1ZxUF85QkhRaWNMT1RyYUlBYVgwSVRRaGstN1ZxYVRJSDBLZmRZZw?oc=5",
     "published_at": "2026-10-29T07:00:00Z",
@@ -302,6 +293,15 @@
     "title": "Demonstration Alert: Protest in Matamoros",
     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB2MkQ3b00waEdJQTdkUzlQR2JoYzVmYmF1TS1BSGlQR2h2Rl9rUDlHaEZrWl9zb1U0aEwxdEQxZzcyQ2dqd3NMWU93NzFUWlRjNE9hOVhwa2V2SmYyQzFrT283TzZSZnJUbndKMWg3VTdSdUdB?oc=5",
     "published_at": "2026-10-22T07:00:00Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://mx.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "MX",
+    "title": "Demonstration Alert: Multiple Protests in Mexico City on October 21",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdFBNZ1FCcnZqLTZmQ1dLa0VLREEtUjhhcm8tcVVXLWQ2bjZOV002RUlzSTRBdGlHY2lHcEJEYnotZ2dBcjhxWVJxZ0FSZ3hla3FLUEl1UW9NNFh4bEVIY1hqTEZ0cy1yeU05djlQSmNJMkU0TUs4Tm9La1RVNjBqbGxxRXBtMXpaZUdtRXhvczFHajlpZl9N?oc=5",
+    "published_at": "2026-10-21T07:00:00Z",
     "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
