@@ -25,9 +25,18 @@
   "BH": [
    {
     "iso": "BH",
-    "title": "Security Alert: U.S. Embassy Manama – November 18, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVUZ2SmtWZE5CWU0tVkVxb0xxbVdUU0xEMzlFU090QjlVSUhyd2EyazZsX0FDaXpjSHJNdzI0N251SzVCdHVoTTB2a2Q4bWExcldrcjVFZUU4Mk54c1pWUW9sZ3FnU0FzVGdobnJEajlMVl83Wk5IYUhpanEzWV9XNWlB?oc=5",
-    "published_at": "2026-11-18T14:21:50Z",
+    "title": "Security Alert: U.S. Embassy Manama – November 15, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGlpRHE5a1d1U1JBNXZrT0FUS29IUDVKeE5pUkliYk1MbnhsWVRUYnkyVXVTT3B6UUJQVTF5eF9NZEVLQnBVRVpuREwtSGRabzZYeGlfTGhDVy1paUlwLWZ4dXdpeGN6TDFPbFNfRFVwTzJQX1lOanJmRjNKOUdzajZR?oc=5",
+    "published_at": "2026-11-15T20:33:28Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://bh.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "BH",
+    "title": "Security Alert: U.S. Embassy Manama – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbFBpSFVyclVGRDFPbmZBUlNKS2J0ZUZ5emNDX3prajcxeGNQa0szYVQyRVBPTmU4VmVXWTlaNy03cXJIclppbWxFN2lNY1NGZkRoSWk4THJLU0U3NHJzYnFtU0FwLW9XekltY3FWd3FmZ3A2WTByZ2hUNkRJYVp0Xw?oc=5",
+    "published_at": "2026-11-07T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://bh.usembassy.gov/category/alert/"
@@ -67,9 +76,9 @@
   "ET": [
    {
     "iso": "ET",
-    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 6, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0k3RGEzaWdGS1NYVnhIUjBpeF9fbnViQ3g5OGNzN0hHZHJ1OURYNHNtdFN4SW5lb1ZIRS1Wdk96X0tNcFRRU0d6dTVOSF82ODB2SGdXWkp3cGZ5dEoxTjdYODR6SlRnSzQtRzNzcGhCOEMzaVdBUXU3VE5sRzc1VG8yaThoTlMzSjlZc0gzekRzS3c?oc=5",
-    "published_at": "2026-11-06T08:00:00Z",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
