@@ -8009,264 +8009,6 @@
     }
    }
   },
-  "6/8286": {
-   "notam_id": "6/8286",
-   "type": "SECURITY",
-   "facility": "ZAB",
-   "state": "NM",
-   "description": "ALAMOGORDO, NM, Thursday, November 19, 2026 Local",
-   "created": "11/17/2026",
-   "first_seen": "2026-11-17T17:40:39Z",
-   "subject": "6/8286",
-   "detail": {
-    "name": "261119 WSMR Debris Prot",
-    "issued": "2026-11-17T17:15:03Z",
-    "effective": "2026-11-19T14:05:00Z",
-    "expires": "2026-11-19T17:30:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "ALAMOGORDO",
-    "floor": "surface",
-    "ceiling": "FL240",
-    "statutory": false,
-    "text": "!FDC 6/8286 ZAB NM..AIRSPACE ALAMOGORDO, NM..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 19, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 325600N1060400W (PIO290045.5) TO 341200N1060400W (CNX230021.8) TO 341200N1054400W (CNX182010.4) TO 335700N1052700W (CNX142027.4) TO 325600N1052700W (PIO331025.3) TO POINT OF ORIGIN SFC-FL240; EXCLUDING AN AREA DEFINED AS 7.1NM RADIUS OF 332800N1053200W (CME268046.5) SFC-14000FT MSL; EXCLUDING AN AREA DEFINED AS 3NM RADIUS OF 340700N1054000W (CNX165015.0) SFC-1500FT AGL EFFECTIVE 2611191405 UTC (0705 LOCAL 11/19/26) UNTIL 2611191730 UTC (1030 LOCAL 11/19/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL ACFT ENTERING OR EXITING THE TFR MUST BE ON AN ACT IFR OR VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BE SQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR. 2. ALL ACFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO - WAY RADIO COM WITH ATC. ALBUQUERQUE /ZAB/ ARTCC TEL 505-856-4500 IS THE FAA CDN FAC. 2611191405-2611191730",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -105.69072,
-        34.1624
-       ],
-       [
-        -105.73333,
-        34.2
-       ],
-       [
-        -106.06667,
-        34.2
-       ],
-       [
-        -106.06667,
-        32.93333
-       ],
-       [
-        -105.45,
-        32.93333
-       ],
-       [
-        -105.45,
-        33.37142
-       ],
-       [
-        -105.46269,
-        33.36397
-       ],
-       [
-        -105.48502,
-        33.35525
-       ],
-       [
-        -105.5088,
-        33.34991
-       ],
-       [
-        -105.53333,
-        33.34811
-       ],
-       [
-        -105.55786,
-        33.34991
-       ],
-       [
-        -105.58165,
-        33.35525
-       ],
-       [
-        -105.60398,
-        33.36397
-       ],
-       [
-        -105.62416,
-        33.37581
-       ],
-       [
-        -105.6416,
-        33.39041
-       ],
-       [
-        -105.65575,
-        33.40733
-       ],
-       [
-        -105.66619,
-        33.42605
-       ],
-       [
-        -105.6726,
-        33.446
-       ],
-       [
-        -105.67479,
-        33.46659
-       ],
-       [
-        -105.67267,
-        33.48718
-       ],
-       [
-        -105.66632,
-        33.50714
-       ],
-       [
-        -105.65592,
-        33.52588
-       ],
-       [
-        -105.64179,
-        33.54282
-       ],
-       [
-        -105.62435,
-        33.55745
-       ],
-       [
-        -105.60414,
-        33.56932
-       ],
-       [
-        -105.58178,
-        33.57806
-       ],
-       [
-        -105.55793,
-        33.58342
-       ],
-       [
-        -105.53333,
-        33.58522
-       ],
-       [
-        -105.50874,
-        33.58342
-       ],
-       [
-        -105.48489,
-        33.57806
-       ],
-       [
-        -105.46252,
-        33.56932
-       ],
-       [
-        -105.45,
-        33.56196
-       ],
-       [
-        -105.45,
-        33.95
-       ],
-       [
-        -105.61319,
-        34.09399
-       ],
-       [
-        -105.61453,
-        34.09161
-       ],
-       [
-        -105.62055,
-        34.08446
-       ],
-       [
-        -105.62797,
-        34.07829
-       ],
-       [
-        -105.63657,
-        34.07329
-       ],
-       [
-        -105.64608,
-        34.0696
-       ],
-       [
-        -105.65622,
-        34.06734
-       ],
-       [
-        -105.66667,
-        34.06658
-       ],
-       [
-        -105.67712,
-        34.06734
-       ],
-       [
-        -105.68725,
-        34.0696
-       ],
-       [
-        -105.69676,
-        34.07329
-       ],
-       [
-        -105.70536,
-        34.07829
-       ],
-       [
-        -105.71278,
-        34.08446
-       ],
-       [
-        -105.71881,
-        34.09161
-       ],
-       [
-        -105.72325,
-        34.09952
-       ],
-       [
-        -105.72597,
-        34.10795
-       ],
-       [
-        -105.72689,
-        34.11665
-       ],
-       [
-        -105.72598,
-        34.12535
-       ],
-       [
-        -105.72327,
-        34.13378
-       ],
-       [
-        -105.71884,
-        34.1417
-       ],
-       [
-        -105.71282,
-        34.14885
-       ],
-       [
-        -105.70539,
-        34.15503
-       ],
-       [
-        -105.69679,
-        34.16004
-       ],
-       [
-        -105.69072,
-        34.1624
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8290": {
    "notam_id": "6/8290",
    "type": "HAZARDS",
@@ -10829,6 +10571,184 @@
     "geometry": null
    }
   },
+  "6/8981": {
+   "notam_id": "6/8981",
+   "type": "HAZARDS",
+   "facility": "ZME",
+   "state": "MS",
+   "description": "8NM NE OXFORD, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/19/2026",
+   "first_seen": "2026-11-19T14:10:36Z",
+   "detail": {
+    "name": "6/8981",
+    "issued": "2026-11-19T14:05:02Z",
+    "effective": "2026-11-20T17:00:00Z",
+    "expires": "2026-11-22T02:00:00Z",
+    "regulation": "91.137(a)(1)",
+    "purpose": null,
+    "city": "8NM NE OXFORD",
+    "floor": "surface",
+    "ceiling": "1800 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/8981 ZME MS..AIRSPACE 8NM NE OXFORD, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 2NM RADIUS OF 342930N0892400W (HLI161017.4) SFC-1800FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF MISSISSIPPI COORDINATION CENTER ARE AUTH IN THE AIRSPACE. MISSISSIPPI COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. DLY 1700-0200 2611201700-2611220200EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -89.4,
+        34.52506
+       ],
+       [
+        -89.39299,
+        34.52455
+       ],
+       [
+        -89.3862,
+        34.52304
+       ],
+       [
+        -89.37983,
+        34.52058
+       ],
+       [
+        -89.37407,
+        34.51724
+       ],
+       [
+        -89.3691,
+        34.51313
+       ],
+       [
+        -89.36507,
+        34.50836
+       ],
+       [
+        -89.3621,
+        34.50308
+       ],
+       [
+        -89.36028,
+        34.49746
+       ],
+       [
+        -89.35967,
+        34.49166
+       ],
+       [
+        -89.36029,
+        34.48586
+       ],
+       [
+        -89.36211,
+        34.48024
+       ],
+       [
+        -89.36508,
+        34.47497
+       ],
+       [
+        -89.36912,
+        34.4702
+       ],
+       [
+        -89.37409,
+        34.46609
+       ],
+       [
+        -89.37984,
+        34.46275
+       ],
+       [
+        -89.38621,
+        34.46029
+       ],
+       [
+        -89.393,
+        34.45878
+       ],
+       [
+        -89.4,
+        34.45828
+       ],
+       [
+        -89.407,
+        34.45878
+       ],
+       [
+        -89.41379,
+        34.46029
+       ],
+       [
+        -89.42016,
+        34.46275
+       ],
+       [
+        -89.42591,
+        34.46609
+       ],
+       [
+        -89.43088,
+        34.4702
+       ],
+       [
+        -89.43492,
+        34.47497
+       ],
+       [
+        -89.43789,
+        34.48024
+       ],
+       [
+        -89.43971,
+        34.48586
+       ],
+       [
+        -89.44033,
+        34.49166
+       ],
+       [
+        -89.43972,
+        34.49746
+       ],
+       [
+        -89.4379,
+        34.50308
+       ],
+       [
+        -89.43493,
+        34.50836
+       ],
+       [
+        -89.4309,
+        34.51313
+       ],
+       [
+        -89.42593,
+        34.51724
+       ],
+       [
+        -89.42017,
+        34.52058
+       ],
+       [
+        -89.4138,
+        34.52304
+       ],
+       [
+        -89.40701,
+        34.52455
+       ],
+       [
+        -89.4,
+        34.52506
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/8981"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
@@ -11346,6 +11266,21 @@
    "ceiling_ft": 2000,
    "first_seen": "2026-11-17T17:40:39Z",
    "left_at": "2026-11-18T18:40:32Z"
+  },
+  "6/8286": {
+   "type": "SECURITY",
+   "state": "NM",
+   "bbox": [
+    -106.0667,
+    32.9333,
+    -105.45,
+    34.2
+   ],
+   "area_km2": 7104.7,
+   "ceiling_ft": 24000,
+   "first_seen": "2026-11-17T17:40:39Z",
+   "subject": "6/8286",
+   "left_at": "2026-11-19T14:10:36Z"
   },
   "6/8293": {
    "type": "SPECIAL",
