@@ -11545,6 +11545,60 @@
     }
    }
   },
+  "6/9014": {
+   "notam_id": "6/9014",
+   "type": "HAZARDS",
+   "facility": "ZME",
+   "state": "MS",
+   "description": "2NM NW FOREST, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
+   "created": "11/19/2026",
+   "first_seen": "2026-11-19T16:40:33Z",
+   "detail": {
+    "name": "6/9014",
+    "issued": "2026-11-19T16:27:01Z",
+    "effective": "2026-11-20T16:00:00Z",
+    "expires": "2026-11-22T02:00:00Z",
+    "regulation": "91.137(a)(1)",
+    "purpose": null,
+    "city": "2NM NW FOREST",
+    "floor": "surface",
+    "ceiling": "1800 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9014 ZME MS..AIRSPACE 2NM NW FOREST, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 322300N0893400W (MHZ097027.2) TO 322400N0893330W (MHZ095027.5) TO 322400N0893030W (MHZ095030.0) TO 322100N0893100W (MHZ101030.0) TO 322130N0893430W (MHZ101027.0) TO POINT OF ORIGIN SFC-1800FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF MISSISSIPPI INTERAGENCY COORDINATION CENTER ARE AUTH IN THE AIRSPACE. MISSISSIPPI INTERAGENCY COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. DLY 1600-0200 2611201600-2611220200EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -89.56667,
+        32.38333
+       ],
+       [
+        -89.55833,
+        32.4
+       ],
+       [
+        -89.50833,
+        32.4
+       ],
+       [
+        -89.51667,
+        32.35
+       ],
+       [
+        -89.575,
+        32.35833
+       ],
+       [
+        -89.56667,
+        32.38333
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9014"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
