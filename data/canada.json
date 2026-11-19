@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-19T18:00:57Z",
+ "generated": "2026-11-19T19:00:24Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -105,9 +105,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-12T15:25:47Z",
+   "updated": "2026-11-19T18:56:12Z",
    "update_type": "Editorial change",
-   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/antarctica"
   },
   "AR": {
@@ -1353,9 +1353,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-15T08:33:35Z",
+   "updated": "2026-11-19T18:56:28Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Entry and exit requirements section – updated information on electronic travel authorization and closed zones",
    "link": "https://travel.gc.ca/destinations/kazakhstan"
   },
   "LA": {
