@@ -7,12 +7,12 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 import re
 from datetime import datetime, timedelta, timezone
 
-from . import airports, canada, cdc, faa, faaprn, fcdo, launchwarn, navarea, safetravel, tfr
+from . import airports, canada, cdc, faa, faaprn, fcdo, launchwarn, navarea, rev21, safetravel, tfr
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
-from tic_doctrine import CONTRACT, contract, geo, registers, vocab  # noqa: E402
+from tic_doctrine import CONTRACT, CONTRACT_REV, __version__ as KIT, contract, geo, registers, vocab  # noqa: E402
 
 SITE = "https://cordon.theintelligence.company/"
-METHOD = "cordon-feed-1.1"
+METHOD = "cordon-feed-1.2"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 NEW_HOURS = 72  # a navigational warning issued within this long is new
@@ -181,7 +181,10 @@ def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> 
                 title += f"; average delay {int(p['avg_delay_min'])} min"
         anomaly = kind == "ground_stop" and (many or wide)
         start = (p.get("start") or "").replace("-", "").replace(":", "")[:13]
+        # The id keeps the program's start (a second program at one airport is a second item); the subject is the
+        # airport's program of that kind, whatever its start (rev 2.1).
         props = {**_base(fetched), "id": f"cordon:faa:{kind}:{apt}:{start or 'open'}", "title": title,
+                 "subject_id": f"cordon:faa:{kind}:{apt}",
                  "tier": "anomaly" if anomaly else "routine", "data_as_of": p.get("updated") or fetched,
                  "countries": faa.country(apt, where), "precision_class": "point" if where else "none",
                  "ncf": ["transport_by_air"], "sector": vocab.derive_sectors(["transport_by_air"]),
@@ -193,6 +196,7 @@ def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> 
                                  and v is not None}}}
         if p.get("end"):
             props["valid_until"] = p["end"]
+        rev21.event(props, to_utc(p.get("start")), to_utc(p.get("end")))
         if kind == "ground_stop":
             props["measures"].update({"ground_stops_in_effect": stops, "unusual_at": base["threshold"],
                                       "baseline_basis": base["basis"], "baseline_samples": base["samples"]})
@@ -251,6 +255,11 @@ def fcdo_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
             props["baseline_ref"] = {"id": "previous-fcdo-alert-status", "type": "fixed", "version": "1",
                                      "window": "the FCDO's previous statements for the country"}
             props["measures"].update({"changed_at": ch["at"], "from": ch["from"], "from_advice": fcdo.words(ch["from"])})
+        rev21.event(props, r.get("updated"))
+        if ch:
+            rev21.stamp(props, "changed", ch["at"])  # the FCDO's statements have no order: changed, not raised
+        elif is_new:
+            rev21.stamp(props, "changed", r["updated"])  # updated advice for a country the FCDO already advised on
         geom = _pt(r["iso"], r["iso"]) if r.get("iso") else None
         out.append(_place({"type": "Feature", "geometry": geom, "properties": props}, r["link"]))
     return out
@@ -296,6 +305,14 @@ def canada_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
                                       "from_advice": canada.LEVELS.get(lc["from"])})
         if rc:
             props["measures"].update({"regional_changed_at": rc["at"], "from_regional": rc["from"]})
+        rev21.event(props, r.get("updated"))
+        rev21.signal(props, "Canada risk level 0-3", r["level"], "level 0-3")
+        if lc:
+            rev21.stamp(props, rev21.moved(lc["from"], r["level"]), lc["at"])
+        elif rc:
+            rev21.stamp(props, "changed", rc["at"])
+        elif is_new:
+            rev21.stamp(props, "changed", r["updated"])
         out.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
     return out
 
@@ -338,6 +355,16 @@ def safetravel_items(data: dict, now: datetime, changes: list[dict]) -> list[dic
                                       "from_advice": safetravel.LEVELS.get(lc["from"])})
         if rc:
             props["measures"].update({"regional_changed_at": rc["at"], "from_regional_note": rc["from"]})
+        rev21.event(props, rev21.day(r.get("updated")), precision="day")  # MFAT gives a day, not a time
+        if safetravel.level_rank(r["level"]) >= 0:  # 1 exercise normal precautions ... 4 do not travel; 0 no level
+            rev21.signal(props, "NZ SafeTravel level 1-4", safetravel.level_rank(r["level"]), "level 1-4")
+        if lc:
+            rev21.stamp(props, rev21.moved(safetravel.level_rank(lc["from"]), safetravel.level_rank(r["level"])),
+                        lc["at"])
+        elif rc:
+            rev21.stamp(props, "changed", rc["at"])
+        elif is_new:
+            rev21.stamp(props, "changed", rev21.day(r["updated"]))
         out.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
     return out
 
@@ -365,6 +392,12 @@ def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
             props["baseline_ref"] = {"id": "previous-cdc-notices", "type": "fixed", "version": "1",
                                      "window": "the CDC notices Cordon held before, and each notice's previous level"}
             props["measures"].update({"changed_at": ch["at"], "change": ch["kind"], "from_level": ch["from"]})
+        rev21.event(props, rev21.day(r.get("published")), precision="day")
+        rev21.signal(props, "CDC travel notice level 1-4", r["level"], "level 1-4")
+        if ch:
+            rev21.stamp(props, "new" if ch["kind"] == "new" else rev21.moved(ch["from"], r["level"]), ch["at"])
+        elif is_new:
+            rev21.stamp(props, "new", r["published"])
         pts = [p["coordinates"] for p in (point(c) for c in r["countries"]) if p]
         geom = ({"type": "Point", "coordinates": pts[0]} if len(pts) == 1
                 else {"type": "MultiPoint", "coordinates": pts} if pts else None)
@@ -380,6 +413,7 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
     fetched = data.get("fetched_at") or stamp
     new_from = (now - timedelta(hours=tfr.NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     out, n = [], {"expired": 0, "no_shape": 0, "skipped": 0}
+    subjects = tfr.subjects(data.get("tfrs"), data.get("gone"))
     for nid, r in sorted((data.get("tfrs") or {}).items()):
         d = r.get("detail") or {}
         g = d.get("geometry")
@@ -420,6 +454,12 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
         if again:
             props["measures"]["reissue_of"] = again["of"]
             props["measures"]["enlarged"] = again["enlarged"]
+        subject = subjects[nid]
+        props["subject_id"] = f"cordon:tfr:{subject.replace('/', '-')}"
+        rev21.event(props, d.get("effective") or issued, d.get("expires"))
+        if is_new:
+            # A re-issue that took over its predecessor's subject is a change of that restriction, not a new one.
+            rev21.stamp(props, "changed" if subject != nid else "new", issued)
         subs = us_subdivisions(props["countries"], g, r.get("state"))
         if subs:
             props["subdivisions"] = subs
@@ -474,6 +514,7 @@ def faaprn_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
             props["baseline_ref"] = {"id": "previous-faa-prohibitions", "type": "fixed", "version": "1",
                                      "window": "the SFARs and KICZ NOTAMs the FAA listed for the section before"}
             props["measures"].update({"changed_at": max(c["at"] for c in ch), "added": added, "removed": removed})
+            rev21.stamp(props, "changed", props["measures"]["changed_at"])  # an SFAR or KICZ NOTAM listed or taken off
         feat = {"type": "Feature", "geometry": _pt(iso, iso) if iso else None, "properties": props}
         out.append(_place(feat, link))
     return out
@@ -508,6 +549,9 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             props.update({"baseline_ref": {"id": "previous-advisory-level", "window": "the advisory's previous level",
                                            "type": "fixed", "version": "1"},
                           "measures": {**props["measures"], "changed_at": ch["at"], "from_level": ch["from"]}})
+            rev21.stamp(props, rev21.moved(ch["from"], r["level"]), ch["at"])
+        rev21.event(props, to_utc(r.get("updated")))  # the date the advisory took effect
+        rev21.signal(props, "State Dept advisory level 1-4", r["level"], "level 1-4")
         feats.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
         if r["posture"]["state"] != "normal":
             pc = last_posture.get(key)
@@ -527,9 +571,14 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                 pp["warning_problem_id"] = "CD-WP-1"
                 pp.update({"indicator_id": "CD-IND-1", "hypothesis_id": "CD-WP-1-H1", "direction": "neutral",
                            "indicator_state": "present"})
+                # normal < authorized departure < ordered departure < suspended operations
+                rev21.stamp(pp, rev21.moved(rev21.POSTURE_RANK.get(pc.get("from")),
+                                            rev21.POSTURE_RANK.get(r["posture"]["state"])), pc["at"])
+            rev21.event(pp, to_utc(r.get("updated")))
             feats.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": pp}, r["link"]))
 
     cz_fetched = czibs.get("fetched_at") or fetched
+    czib_revised = {c["id"]: c for c in changes if c.get("lane") == "easa" and c.get("kind") in ("new", "revised", "status")}
     for b in czibs.get("bulletins") or []:
         if b["status"] != "active":
             continue
@@ -544,6 +593,10 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                  "measures": {"airspace": b["airspace"], "recommendation": b["recommendation"], "revision": b["revision"]}}
         if not props["valid_until"]:
             props.pop("valid_until")
+        rev21.event(props, rev21.day(b.get("issued")), rev21.day(b.get("valid_until")), "day")
+        rv = czib_revised.get(b["id"])
+        if rv:
+            rev21.stamp(props, "new" if rv["kind"] == "new" else "changed", rv["at"])  # Cordon's record of it
         geom = {"type": "MultiPoint", "coordinates": pts} if len(pts) > 1 else ({"type": "Point", "coordinates": pts[0]}
                                                                                 if pts else None)
         if geom is None:
@@ -590,6 +643,19 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             props["measures"].update(launchwarn.measures(w["text"], issued, w.get("area")))
         if w.get("cancel_at"):
             props["valid_until"] = w["cancel_at"]
+        # When the hazard is in force: the windows in the warning's own words (Cordon's launch-window reader, used on
+        # every category), else from issue to NGA's own cancel time when it set one.
+        wins = launchwarn.parse_windows(w["text"], datetime.strptime(issued, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=timezone.utc))[0] if issued and w.get("text") else []
+        if wins:
+            rev21.event(props, min(x["start"] for x in wins), max(x["end"] for x in wins))
+        else:
+            rev21.event(props, issued, w.get("cancel_at"))
+        if is_new:
+            rev21.stamp(props, "new", issued)
+        if w["category"] == "security":
+            # NGA relays an incident others report: one origin, corroboration left to COP (Tom, 18 Nov 2026).
+            props["corroboration"] = rev21.corroboration("reported", None, None, issued or nv_fetched)
         if w["id"] in leads:
             props["measures"]["rebroadcasts"] = [{**r, "id": f"cordon:navwarn:{r['id']}"} for r in leads[w["id"]]]
             props["title"] += " (also " + ", ".join(r["number"] for r in leads[w["id"]]) + ")"
@@ -605,7 +671,14 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
 
     al_fetched = alerts.get("fetched_at") or fetched
     for iso, items in sorted((alerts.get("posts") or {}).items()):
+        # One item per alert subject (Tom, 18 Nov 2026): a post re-dated under the same headline is the newest
+        # reading of one alert, with the earlier posts' dates and links in measures.earlier.
+        subjects = {}
         for a in items:
+            subjects.setdefault(rev21.alert_subject(iso, a["title"]), []).append(a)
+        for subject, posts in subjects.items():
+            posts = sorted(posts, key=lambda x: (x.get("published_at") or "", x["link"]), reverse=True)
+            a, earlier = posts[0], posts[1:]
             src = {**EMBASSY_SRC, "id": f"usembassy-{iso.lower()}", "url": a["link"], "accessed_at": al_fetched}
             if a.get("via") == "google-news":
                 # The link is a Google News redirect: cite the post's own alerts page, and say how it was found.
@@ -617,7 +690,17 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                      "data_as_of": a.get("published_at") or al_fetched, "countries": [iso], "precision_class": "country",
                      "requirement_ids": ["CD-PIR-2"], "ie_aspect": ["informational"], "pmesii_pt": ["social"],
                      "ascope": ["events"], "sources": [src],
-                     "link": a["link"], "measures": {"type": a.get("type")}}
+                     "link": a["link"], "measures": {"type": a.get("type")}, "subject_id": subject}
+            if earlier:
+                props["measures"]["earlier"] = [{"title": e["title"], "published_at": e.get("published_at"),
+                                                 "link": e["link"]} for e in earlier]
+            pub = a.get("published_at")
+            rev21.event(props, pub)
+            # A re-dated alert is a change of one alert; the post's own date times it.
+            rev21.stamp(props, "changed" if earlier else "new", pub)
+            # The embassy speaks within its own remit: one official origin (D11).
+            first = min([pub] + [e.get("published_at") for e in earlier if e.get("published_at")]) if pub else None
+            props["corroboration"] = rev21.corroboration("corroborated", "official", src["id"], first or al_fetched)
             feats.append({"type": "Feature", "geometry": point(iso), "properties": props})
 
     if nas is not None:
@@ -673,12 +756,24 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             feats += items
             tf.update({k: v for k, v in counts.items() if v})
 
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    # Published when built (rev 2.1): the history step after the build runs with --now at the feed's generated_at,
+    # so a change it records is never later than the item's publication. Each source's accessed_at keeps its read.
+    for f in feats:
+        f["properties"]["published_at"] = stamp
+    rev21.finish(feats, src_health)
+    for e in src_health.values():  # every lane carries the revision 2.1 health members, read or not
+        e.setdefault("last_ok", None)
+        e.setdefault("last_error", None)
+        e.setdefault("failures", 0)
+        e.setdefault("checked_at", stamp)
     regs = registers.ids(ROOT / "doctrine")
     kept, dropped = [], []
     for f in feats:
-        errs = [m for _, sev, m in contract.check(f, regs) if sev == "error"]
+        errs = [m for _, sev, m in contract.check(f, regs, rev=CONTRACT_REV) if sev == "error"]
         (dropped.append({"id": f["properties"]["id"], "errors": errs}) if errs else kept.append(f))
-    return {"type": "FeatureCollection", "contract": CONTRACT, "program": "cordon", "generated_at": fetched,
+    return {"type": "FeatureCollection", "contract": CONTRACT, "contract_rev": CONTRACT_REV, "kit": KIT,
+            "program": "cordon", "generated_at": stamp,
             "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
                        "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
                        "content under the Open Government Licence - Canada; CDC content US public domain; New Zealand MFAT "

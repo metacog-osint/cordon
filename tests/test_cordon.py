@@ -10,7 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from cordon import (canada, cdc, easa, embassy, faa, faaprn, fcdo, feed, launchwarn, navarea,  # noqa: E402
-                    safetravel, state, tfr)
+                    rev21, safetravel, state, tfr)
+from cordon.common import digest  # noqa: E402
 from tic_doctrine import contract, registers  # noqa: E402
 
 LINK = "https://travel.state.gov/content/travel/en/traveladvisories/x.html"
@@ -456,7 +457,9 @@ class Feed(unittest.TestCase):
         self.assertIn("cordon:czib:CZIB-2026-07", ids)
         self.assertNotIn("cordon:czib:CZIB-2017-06", ids, "withdrawn bulletins stay off the feed")
         self.assertEqual(sum(1 for i in ids if i.startswith("cordon:alert:SA:")), 2)
-        self.assertEqual(fc["health"]["nga-navwarnings"], {"state": "fresh", "newest_item": "2026-10-29T16:10:00Z"})
+        nga = fc["health"]["nga-navwarnings"]
+        self.assertEqual((nga["state"], nga["newest_item"], nga["data_as_of"]), ("fresh",) + ("2026-10-29T16:10:00Z",) * 2)
+        self.assertEqual(contract.check_health(fc["health"], strict=True), [])
 
     def test_a_frozen_warning_list_is_stale_and_withheld(self):
         """What happened from 31 Oct 2026: one good fetch, of a list whose newest warning was from May 2024."""
@@ -1656,6 +1659,142 @@ class Review(unittest.TestCase):
         self.assertEqual(r[0]["title"], "Review: Lebanon embassy status normal operations to ordered departure (2026-11-01, LB)")
         self.assertIn("> The Department ordered the departure of family members.", r[0]["body"])
         self.assertIn(LINK, r[0]["body"])
+
+
+class Rev21(unittest.TestCase):
+    """Feed contract revision 2.1 (kit 0.6.2): subjects, change flags, event times and the rest (18 Nov 2026)."""
+    NOW = datetime(2026, 11, 18, 21, 40, tzinfo=timezone.utc)
+    STAMP = "2026-11-18T21:40:00Z"
+
+    def test_the_date_is_cut_from_alert_titles_in_every_form_seen(self):
+        cut = rev21.cut_date
+        self.assertEqual(cut("Security Alert – U.S. Embassy Jerusalem – November 18, 2026"),
+                         "Security Alert – U.S. Embassy Jerusalem")
+        self.assertEqual(cut("Health Alert: U.S. Embassy Abuja, Nigeria (October 27, 2026)"),
+                         "Health Alert: U.S. Embassy Abuja, Nigeria")
+        self.assertEqual(cut("Security Alert: U.S. Embassy Beirut: October 28, 2026"), "Security Alert: U.S. Embassy Beirut")
+        self.assertEqual(cut("Demonstration Alert (November 11–16, 2026)"), "Demonstration Alert")
+        self.assertEqual(cut("Security Alert (November 4, 2026"), "Security Alert")  # the unclosed bracket seen live
+        self.assertEqual(cut("Security Alert - U.S. Embassy Abu Dhabi - https://ae.usembassy.gov/"),
+                         "Security Alert - U.S. Embassy Abu Dhabi")
+        self.assertEqual(cut("Security Alert: October 28, 2026 – Mission Nigeria"), "Security Alert: Mission Nigeria")
+        # Kept: a date inside the headline. A month with no day in brackets at the end is the post's date.
+        self.assertEqual(cut("Security Alert: Protests on Friday, October 30 in Mexico City"),
+                         "Security Alert: Protests on Friday, October 30 in Mexico City")
+        self.assertEqual(cut("ASEAN Summit Disruptions in Metro Manila (November 2026)"),
+                         "ASEAN Summit Disruptions in Metro Manila")
+        # Punctuation folded: a dash or a colon after "Alert" is one subject; the country keeps them apart.
+        a = rev21.alert_subject("ET", "Security Alert – U.S. Embassy Addis Ababa, Ethiopia (November 12, 2026)")
+        b = rev21.alert_subject("ET", "Security Alert: U.S. Embassy Addis Ababa, Ethiopia – November 17, 2026")
+        self.assertEqual(a, b)
+        self.assertRegex(a, r"^cordon:alert:ET:[0-9a-f]{12}$")
+        self.assertNotEqual(a, rev21.alert_subject("KE", "Security Alert: U.S. Embassy Addis Ababa, Ethiopia"))
+
+    def alerts(self, posts):
+        return feed.build({"advisories": {}, "fetched_at": self.STAMP}, {"posts": posts, "fetched_at": self.STAMP},
+                          {"bulletins": [], "fetched_at": self.STAMP}, {"warnings": [], "fetched_at": self.STAMP},
+                          self.NOW)
+
+    def post(self, title, day, n):
+        return {"iso": "IL", "title": title, "link": f"https://il.usembassy.gov/alert-{n}/",
+                "published_at": f"2026-11-{day:02d}T12:00:00Z", "type": "security"}
+
+    def test_one_item_per_alert_subject_the_newest_post_with_the_earlier_ones(self):
+        posts = {"IL": [self.post("Security Alert – U.S. Embassy Jerusalem – November 6, 2026", 6, 1),
+                        self.post("Security Alert: U.S. Embassy Jerusalem (November 12, 2026)", 12, 2),
+                        self.post("Security Alert – U.S. Embassy Jerusalem – November 9, 2026", 9, 3),
+                        self.post("Demonstration Alert: Tel Aviv", 10, 4)]}
+        fc = self.alerts(posts)
+        items = [f["properties"] for f in fc["features"] if f["properties"]["id"].startswith("cordon:alert:")]
+        self.assertEqual(len(items), 2)
+        p = next(i for i in items if "Jerusalem" in i["title"])
+        self.assertEqual(p["id"], f"cordon:alert:IL:{digest('https://il.usembassy.gov/alert-2/')[7:19]}")
+        self.assertEqual(p["subject_id"], rev21.alert_subject("IL", "Security Alert – U.S. Embassy Jerusalem"))
+        self.assertEqual([e["link"] for e in p["measures"]["earlier"]],
+                         ["https://il.usembassy.gov/alert-3/", "https://il.usembassy.gov/alert-1/"])
+        self.assertEqual((p["last_change"], p["last_change_at"], p["event_start"]),
+                         ("changed", "2026-11-12T12:00:00Z", "2026-11-12T12:00:00Z"))
+        c = p["corroboration"]
+        self.assertEqual((c["state"], c["basis"], c["official"], c["origins"], c["first_reported_at"]),
+                         ("corroborated", "official", "usembassy-il", 1, "2026-11-06T12:00:00Z"))
+        self.assertEqual((p["place_basis"], p["sources"][0]["lane"], p["sources"][0]["grade"]),
+                         ("location", "us-embassy-alerts", "A2"))
+        lone = next(i for i in items if "Tel Aviv" in i["title"])
+        self.assertEqual((lone["last_change"], "earlier" in lone["measures"]), ("new", False))
+        regs = registers.ids(ROOT / "doctrine")
+        for f in fc["features"]:
+            self.assertEqual([x for x in contract.check(f, regs, rev="2.1") if x[1] == "error"], [])
+
+    def test_a_reissue_takes_the_subject_of_the_tfr_it_replaced_once_that_one_has_left(self):
+        t = Tfr()
+        geom = Tfr.square(-157.77, 21.45, 0.1)
+        old = t.rec("6/10", "SECURITY", "HI", geom, issued="2026-11-10T00:00:00Z")
+        new = t.rec("6/11", "SECURITY", "HI", geom, issued="2026-11-14T10:00:00Z")
+        split = t.rec("6/12", "SECURITY", "HI", geom, issued="2026-11-14T10:30:00Z")
+        gone = tfr.remember({"6/10": old}, {"6/11": new, "6/12": split}, {}, "2026-11-14T11:00:00Z")
+        # The first re-issue of a split takes the subject; the second keeps its own; both are stamped for good.
+        self.assertEqual((new["subject"], split["subject"]), ("6/10", "6/12"))
+        self.assertIsNone(gone["6/10"].get("subject"))
+        # A chain: a re-issue follows the newest TFR it matches. After 6/11 and 6/12 both leave, 6/13 follows 6/12
+        # (the newer) and its subject; when 6/11 is the newer match, 6/13 carries 6/11's subject on, 6/10's.
+        nxt = t.rec("6/13", "SECURITY", "HI", geom, issued="2026-11-15T10:00:00Z")
+        gone = tfr.remember({"6/11": new, "6/12": split}, {"6/13": nxt}, gone, "2026-11-15T11:00:00Z")
+        self.assertEqual(nxt["subject"], "6/12")
+        nxt = t.rec("6/13", "SECURITY", "HI", geom, issued="2026-11-15T10:00:00Z")
+        split_gone = {**gone, "6/12": {**gone["6/12"], "first_seen": "2026-11-13T00:00:00Z"}}
+        gone = tfr.remember({"6/11": new}, {"6/13": nxt}, split_gone, "2026-11-15T11:00:00Z")
+        self.assertEqual((gone["6/11"]["subject"], nxt["subject"]), ("6/10", "6/10"))
+        # Listed alongside its predecessor: two restrictions in force, two subjects.
+        twin = t.rec("6/14", "SECURITY", "HI", geom, issued="2026-11-15T12:00:00Z")
+        tfr.remember({"6/13": nxt}, {"6/13": nxt, "6/14": twin}, gone, "2026-11-15T13:00:00Z")
+        self.assertEqual(twin["subject"], "6/14")
+        # Stamps survive the next read of the FAA's list.
+        self.assertEqual(tfr.memory_entry(nxt, "x")["subject"], "6/10")
+        # A data file from before 2.1 (nothing stamped) gets what the stamp would give, without being changed.
+        bare = {"6/13": {k: v for k, v in nxt.items() if k != "subject"}}
+        bare_gone = {k: {x: v for x, v in r.items() if x != "subject"} for k, r in gone.items()}
+        self.assertEqual(tfr.subjects(bare, bare_gone), {"6/13": "6/11"})
+        self.assertNotIn("subject", bare["6/13"])
+        data = {"tfrs": {"6/13": nxt, "6/14": twin}, "gone": gone, "fetched_at": "2026-11-15T13:00:00Z"}
+        items = {f["properties"]["id"]: f["properties"]
+                 for f in feed.tfr_items(data, datetime(2026, 11, 15, 13, tzinfo=timezone.utc))[0]}
+        p = items["cordon:tfr:6-13"]
+        self.assertEqual((p["subject_id"], p["last_change"], p["last_change_at"]),
+                         ("cordon:tfr:6-10", "changed", "2026-11-15T10:00:00Z"))
+        self.assertEqual((p["event_start"], p["event_end"]), ("2026-11-14T10:00:00Z", "2026-11-16T10:00:00Z"))
+        self.assertEqual((items["cordon:tfr:6-14"]["subject_id"], items["cordon:tfr:6-14"]["last_change"]),
+                         ("cordon:tfr:6-14", "new"))
+
+    def test_an_airport_program_is_one_subject_whatever_its_start(self):
+        f = Faa()
+        a = f.items(f.build([gs("ORD", 41.98, -87.90)]))
+        b = f.items(f.build([gs("ORD", 41.98, -87.90, start="2026-11-13T22:00:00Z")]))
+        (ia, pa), (ib, pb) = next(iter(a.items())), next(iter(b.items()))
+        self.assertNotEqual(ia, ib)
+        self.assertEqual(pa["properties"]["subject_id"], "cordon:faa:ground_stop:ORD")
+        self.assertEqual(pa["properties"]["subject_id"], pb["properties"]["subject_id"])
+        self.assertEqual((pa["properties"]["event_start"], pa["properties"]["event_end"]),
+                         ("2026-11-13T21:00:00Z", "2026-11-13T23:00:00Z"))
+        self.assertEqual(pa["properties"]["place_basis"], "location")
+
+    def test_the_built_feed_states_revision_2_1_and_lints_clean(self):
+        recs = state.parse(STATE)
+        fc = feed.build({"advisories": recs, "fetched_at": "2026-10-31T21:00:00Z"},
+                        {"posts": {"SA": embassy.parse_rss(RSS, "SA")}, "fetched_at": "2026-10-31T21:00:00Z"},
+                        {"bulletins": easa.parse(EASA_CSV), "fetched_at": "2026-10-31T21:00:00Z"},
+                        {"warnings": navarea.parse(NGA), "fetched_at": "2026-10-31T20:55:00Z"},
+                        datetime(2026, 10, 31, 21, 1, tzinfo=timezone.utc))
+        self.assertEqual((fc["contract_rev"], fc["kit"], fc["generated_at"]), ("2.1", "0.6.2", "2026-10-31T21:01:00Z"))
+        self.assertEqual([p for p in contract.check_header({k: v for k, v in fc.items() if k != "features"})
+                          if p[1] == "error"], [])
+        props = [f["properties"] for f in fc["features"]]
+        self.assertTrue(all(p["published_at"] == fc["generated_at"] and p["subject_id"] for p in props))
+        self.assertTrue(all(s["grade"] == "A2" for p in props for s in p["sources"]))
+        adv = next(p for p in props if p["id"] == "cordon:advisory:SA")
+        self.assertEqual((adv["place_basis"], adv["signal"]["name"], adv["sea_areas"]),
+                         ("subject", "State Dept advisory level 1-4", []))
+        nav = [p for p in props if p["id"].startswith("cordon:navwarn:")]
+        self.assertTrue(nav and all("sea_areas" in p and "event_start" in p and "place_basis" not in p for p in nav))
 
 
 if __name__ == "__main__":
