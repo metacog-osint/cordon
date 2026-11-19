@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-19T19:40:15Z",
+ "generated": "2026-11-19T20:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -177,7 +177,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-10-14T11:50:03Z",
+   "updated": "2026-11-19T19:49:53Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/azerbaijan"
