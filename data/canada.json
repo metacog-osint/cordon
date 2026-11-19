@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-19T12:20:35Z",
+ "generated": "2026-11-19T14:40:51Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1137,7 +1137,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-06T13:24:44Z",
+   "updated": "2026-11-19T14:25:14Z",
    "update_type": "Regular text update",
    "update": "Natural disasters and climate section – removed information on Cyclone Murasu",
    "link": "https://travel.gc.ca/destinations/india"
@@ -1377,7 +1377,7 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-11-18T21:36:54Z",
+   "updated": "2026-11-19T14:24:42Z",
    "update_type": "Regular text update",
    "update": "Need help? section – updated the address and contact information for the Embassy of Canada to Lebanon, in Beirut",
    "link": "https://travel.gc.ca/destinations/lebanon"
