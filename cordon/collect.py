@@ -1,7 +1,7 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import canada, cdc, easa, embassy, faa, faaprn, fcdo, navarea, safetravel, state, tfr
+from . import canada, cdc, easa, embassy, faa, faaprn, fcdo, navarea, nms, safetravel, state, tfr
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -135,4 +135,14 @@ def run(when: str | None = None) -> dict:
         append_jsonl("changes.jsonl", [{**c, "lane": "faaprn"} for c in prn_changes])
         health("faa-prohibitions-notices", True, faaprn.summary(sections), when)
     summary["faaprn"] = err or f"{len(sections)} sections, {len(prn_changes)} changes"
+
+    # FAA NMS-API: the suite's one NOTAM reader (cordon/nms.py). No feed items of its own yet: it publishes subset
+    # files for other programs. Health is written only when a request was made, so "waiting" (no keys) and the
+    # bulk-window wait leave the feed's health block untouched.
+    st, asked = nms.collect()
+    if asked:
+        health("faa-nms", st.get("status") == "ok", st.get("error") or
+               f"{st.get('mode')}; {(st.get('counts') or {}).get('held', 0)} held; subsets {st.get('subsets')}", when)
+    summary["nms"] = (f"{st.get('status')} ({st.get('mode') or '-'}): " +
+                      (st.get("error") or st.get("note") or f"subsets {st.get('subsets')}, {st.get('requests')} requests"))
     return summary
