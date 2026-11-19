@@ -4761,184 +4761,6 @@
     }
    }
   },
-  "6/7083": {
-   "notam_id": "6/7083",
-   "type": "SECURITY",
-   "facility": "ZME",
-   "state": "AL",
-   "description": "HUNTSVILLE, AL, Tuesday, November 17, 2026 through Thursday, November 19, 2026 Local",
-   "created": "11/10/2026",
-   "first_seen": "2026-11-10T23:51:47Z",
-   "subject": "6/7083",
-   "detail": {
-    "name": "261117-19 NCUTC FBI - UAS Only ZME",
-    "issued": "2026-11-10T23:51:47Z",
-    "effective": "2026-11-17T14:00:00Z",
-    "expires": "2026-11-19T23:00:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "HUNTSVILLE",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/7083 ZME AL..AIRSPACE HUNTSVILLE, AL..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 17-19, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 344159N0863519W (RQZ157006.3) SFC-1000FT AGL EFFECTIVE 2611171400 UTC (0800 LOCAL 11/17/26) UNTIL 2611192300 UTC (1700 LOCAL 11/19/26) DLY 1400-2300 (0800-1700 LOCAL). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA HTTPS://WAIVERS.FAA.GOV. C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611171400-2611192300",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -86.58861,
-        34.71642
-       ],
-       [
-        -86.5851,
-        34.71616
-       ],
-       [
-        -86.5817,
-        34.71541
-       ],
-       [
-        -86.5785,
-        34.71418
-       ],
-       [
-        -86.57562,
-        34.71251
-       ],
-       [
-        -86.57312,
-        34.71045
-       ],
-       [
-        -86.5711,
-        34.70807
-       ],
-       [
-        -86.56962,
-        34.70543
-       ],
-       [
-        -86.5687,
-        34.70262
-       ],
-       [
-        -86.5684,
-        34.69972
-       ],
-       [
-        -86.56871,
-        34.69682
-       ],
-       [
-        -86.56962,
-        34.69401
-       ],
-       [
-        -86.57111,
-        34.69137
-       ],
-       [
-        -86.57313,
-        34.68899
-       ],
-       [
-        -86.57562,
-        34.68693
-       ],
-       [
-        -86.57851,
-        34.68526
-       ],
-       [
-        -86.5817,
-        34.68403
-       ],
-       [
-        -86.5851,
-        34.68328
-       ],
-       [
-        -86.58861,
-        34.68303
-       ],
-       [
-        -86.59212,
-        34.68328
-       ],
-       [
-        -86.59552,
-        34.68403
-       ],
-       [
-        -86.59872,
-        34.68526
-       ],
-       [
-        -86.6016,
-        34.68693
-       ],
-       [
-        -86.60409,
-        34.68899
-       ],
-       [
-        -86.60612,
-        34.69137
-       ],
-       [
-        -86.6076,
-        34.69401
-       ],
-       [
-        -86.60852,
-        34.69682
-       ],
-       [
-        -86.60882,
-        34.69972
-       ],
-       [
-        -86.60852,
-        34.70262
-       ],
-       [
-        -86.60761,
-        34.70543
-       ],
-       [
-        -86.60612,
-        34.70807
-       ],
-       [
-        -86.6041,
-        34.71045
-       ],
-       [
-        -86.60161,
-        34.71251
-       ],
-       [
-        -86.59872,
-        34.71418
-       ],
-       [
-        -86.59553,
-        34.71541
-       ],
-       [
-        -86.59212,
-        34.71616
-       ],
-       [
-        -86.58861,
-        34.71642
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7165": {
    "notam_id": "6/7165",
    "type": "HAZARDS",
@@ -5111,76 +4933,6 @@
        [
         -97.24972,
         25.97535
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/7574": {
-   "notam_id": "6/7574",
-   "type": "SECURITY",
-   "facility": "ZHN",
-   "state": "HI",
-   "description": "Kaneohe, HI, Tuesday, November 17, 2026 through Friday, November 20, 2026 Local",
-   "created": "11/15/2026",
-   "first_seen": "2026-11-15T12:55:09Z",
-   "subject": "6/7574",
-   "detail": {
-    "name": "261117-20 Skyrange PHNG",
-    "issued": "2026-11-15T12:55:09Z",
-    "effective": "2026-11-17T22:00:00Z",
-    "expires": "2026-11-20T22:00:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "Kaneohe",
-    "floor": "surface",
-    "ceiling": "17999 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7574 ZHN HI..AIRSPACE KANEOHE, HI..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 17-20, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 213517N1573229W (CKH014021.3) TO 212516N1574735W (HNL038010.2) TO 212520N1574906W (HNL032009.3) TO 212544N1575032W (HNL023008.7) TO 212732N1575059W (HNL016010.1) TO 212905N1575041W (HNL013011.6) TO 213216N1574720W (HNL019015.8) TO 214334N1574810W (HNL005026) TO 215003N1574736W (HNL003032.4) TO POINT OF ORIGIN SFC-17999FT MSL EFFECTIVE 2611172200 UTC (1200 LOCAL 11/17/26) UNTIL 2611202200 UTC (1200 LOCAL 11/20/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL ACFT ENTERING OR EXITING THE TFR MUST BE ONAN ACT IFR OR VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BESQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR. 2. ALL ACFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO - WAY RADIO COM WITH ATC. 3. HONOLULU ARTCC, TEL 808-840-6201 IS THE FAA COORDINATION FACILITY. 2611172200-2611202200",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -157.54139,
-        21.58806
-       ],
-       [
-        -157.79306,
-        21.42111
-       ],
-       [
-        -157.81833,
-        21.42222
-       ],
-       [
-        -157.84222,
-        21.42889
-       ],
-       [
-        -157.84972,
-        21.45889
-       ],
-       [
-        -157.84472,
-        21.48472
-       ],
-       [
-        -157.78889,
-        21.53778
-       ],
-       [
-        -157.80278,
-        21.72611
-       ],
-       [
-        -157.79333,
-        21.83417
-       ],
-       [
-        -157.54139,
-        21.58806
        ]
       ]
      ]
@@ -8247,146 +7999,6 @@
        [
         -71.03333,
         44.41667
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/8555": {
-   "notam_id": "6/8555",
-   "type": "SECURITY",
-   "facility": "ZHN",
-   "state": "HI",
-   "description": "Kaneohe, HI, Saturday, November 21, 2026 Local",
-   "created": "11/18/2026",
-   "first_seen": "2026-11-18T12:40:32Z",
-   "subject": "6/8555",
-   "detail": {
-    "name": "261121 Skyrange PHNG",
-    "issued": "2026-11-18T12:17:03Z",
-    "effective": "2026-11-21T18:00:00Z",
-    "expires": "2026-11-21T22:00:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "Kaneohe",
-    "floor": "surface",
-    "ceiling": "17999 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/8555 ZHN HI..AIRSPACE KANEOHE, HI..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 21, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 213517N1573229W (CKH014021.3) TO 212516N1574735W (HNL038010.2) TO 212520N1574906W (HNL032009.3) TO 212544N1575032W (HNL023008.7) TO 212732N1575059W (HNL016010.1) TO 212905N1575041W (HNL013011.6) TO 213216N1574720W (HNL019015.8) TO 214334N1574810W (HNL005026) TO 215003N1574736W (HNL003032.4) TO POINT OF ORIGIN SFC-17999FT MSL EFFECTIVE 2611211800 UTC (0800 LOCAL 11/21/26) UNTIL 2611212200 UTC (1200 LOCAL 11/21/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL ACFT ENTERING OR EXITING THE TFR MUST BE ONAN ACT IFR OR VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BESQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR. 2. ALL ACFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO - WAY RADIO COM WITH ATC. 3. HONOLULU /ZHN/ APP, TEL 808-840-6201 IS THE FAA COORDINATION FACILITY. 2611211800-2611212200",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -157.54139,
-        21.58806
-       ],
-       [
-        -157.79306,
-        21.42111
-       ],
-       [
-        -157.81833,
-        21.42222
-       ],
-       [
-        -157.84222,
-        21.42889
-       ],
-       [
-        -157.84972,
-        21.45889
-       ],
-       [
-        -157.84472,
-        21.48472
-       ],
-       [
-        -157.78889,
-        21.53778
-       ],
-       [
-        -157.80278,
-        21.72611
-       ],
-       [
-        -157.79333,
-        21.83417
-       ],
-       [
-        -157.54139,
-        21.58806
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/8556": {
-   "notam_id": "6/8556",
-   "type": "SECURITY",
-   "facility": "ZHN",
-   "state": "HI",
-   "description": "Kaneohe, HI, Monday, November 23, 2026 Local",
-   "created": "11/18/2026",
-   "first_seen": "2026-11-18T12:40:32Z",
-   "subject": "6/8556",
-   "detail": {
-    "name": "261123 Skyrange PHNG",
-    "issued": "2026-11-18T12:17:24Z",
-    "effective": "2026-11-23T18:00:00Z",
-    "expires": "2026-11-23T22:00:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "Kaneohe",
-    "floor": "surface",
-    "ceiling": "17999 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/8556 ZHN HI..AIRSPACE KANEOHE, HI..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 23, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 213517N1573229W (CKH014021.3) TO 212516N1574735W (HNL038010.2) TO 212520N1574906W (HNL032009.3) TO 212544N1575032W (HNL023008.7) TO 212732N1575059W (HNL016010.1) TO 212905N1575041W (HNL013011.6) TO 213216N1574720W (HNL019015.8) TO 214334N1574810W (HNL005026) TO 215003N1574736W (HNL003032.4) TO POINT OF ORIGIN SFC-17999FT MSL EFFECTIVE 2611231800 UTC (0800 LOCAL 11/23/26) UNTIL 2611232200 UTC (1200 LOCAL 11/23/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL ACFT ENTERING OR EXITING THE TFR MUST BE ONAN ACT IFR OR VFR FLT PLAN WITH A DISCRETE CODE ASSIGNED BY AN AIR TFC CTL (ATC) FAC. ACFT MUST BESQUAWKING THE DISCRETE CODE PRIOR TO DEP AND AT ALL TIMES WHILE IN THE TFR. 2. ALL ACFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO - WAY RADIO COM WITH ATC. 3. HONOLULU ARTCC, TEL 808-840-6201 IS THE FAA COORDINATION FACILITY. 2611231800-2611232200",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -157.54139,
-        21.58806
-       ],
-       [
-        -157.79306,
-        21.42111
-       ],
-       [
-        -157.81833,
-        21.42222
-       ],
-       [
-        -157.84222,
-        21.42889
-       ],
-       [
-        -157.84972,
-        21.45889
-       ],
-       [
-        -157.84472,
-        21.48472
-       ],
-       [
-        -157.78889,
-        21.53778
-       ],
-       [
-        -157.80278,
-        21.72611
-       ],
-       [
-        -157.79333,
-        21.83417
-       ],
-       [
-        -157.54139,
-        21.58806
        ]
       ]
      ]
@@ -11745,6 +11357,21 @@
    "first_seen": "2026-11-10T18:22:23Z",
    "left_at": "2026-11-16T16:40:32Z"
   },
+  "6/7083": {
+   "type": "SECURITY",
+   "state": "AL",
+   "bbox": [
+    -86.6088,
+    34.683,
+    -86.5684,
+    34.7164
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-10T23:51:47Z",
+   "subject": "6/7083",
+   "left_at": "2026-11-19T21:10:31Z"
+  },
   "6/7150": {
    "type": "SECURITY",
    "state": "GU",
@@ -11829,6 +11456,21 @@
    "ceiling_ft": 1000,
    "first_seen": "2026-11-14T18:35:16Z",
    "left_at": "2026-11-16T14:10:36Z"
+  },
+  "6/7574": {
+   "type": "SECURITY",
+   "state": "HI",
+   "bbox": [
+    -157.8497,
+    21.4211,
+    -157.5414,
+    21.8342
+   ],
+   "area_km2": 658.4,
+   "ceiling_ft": 17999,
+   "first_seen": "2026-11-15T12:55:09Z",
+   "subject": "6/7574",
+   "left_at": "2026-11-19T21:10:31Z"
   },
   "6/7631": {
    "type": "HAZARDS",
@@ -12323,6 +11965,36 @@
    "ceiling_ft": 17999,
    "first_seen": "2026-11-17T22:40:33Z",
    "left_at": "2026-11-18T19:40:31Z"
+  },
+  "6/8555": {
+   "type": "SECURITY",
+   "state": "HI",
+   "bbox": [
+    -157.8497,
+    21.4211,
+    -157.5414,
+    21.8342
+   ],
+   "area_km2": 658.4,
+   "ceiling_ft": 17999,
+   "first_seen": "2026-11-18T12:40:32Z",
+   "subject": "6/8555",
+   "left_at": "2026-11-19T21:10:31Z"
+  },
+  "6/8556": {
+   "type": "SECURITY",
+   "state": "HI",
+   "bbox": [
+    -157.8497,
+    21.4211,
+    -157.5414,
+    21.8342
+   ],
+   "area_km2": 658.4,
+   "ceiling_ft": 17999,
+   "first_seen": "2026-11-18T12:40:32Z",
+   "subject": "6/8556",
+   "left_at": "2026-11-19T21:10:31Z"
   },
   "6/8654": {
    "type": "SPECIAL",
