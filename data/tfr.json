@@ -11375,6 +11375,7 @@
    "description": "8NM NW OF FOREST, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T17:10:38Z",
+   "subject": "6/9013",
    "detail": {
     "name": "6/9013",
     "issued": "2026-11-19T16:26:46Z",
@@ -11414,8 +11415,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9013"
+   }
   },
   "6/9014": {
    "notam_id": "6/9014",
