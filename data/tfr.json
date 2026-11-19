@@ -11113,6 +11113,7 @@
    "description": "Detroit, MI, Thursday, November 26, 2026 UTC",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T15:10:37Z",
+   "subject": "6/8986",
    "detail": {
     "name": "2026-44812-CSA-0139 DET Thanksgiving Parade",
     "issued": "2026-11-19T14:35:43Z",
@@ -11364,8 +11365,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/8986"
+   }
   },
   "6/8989": {
    "notam_id": "6/8989",
@@ -11375,6 +11375,7 @@
    "description": "Houston, TX, Thursday, November 26, 2026 UTC",
    "created": "11/19/2026",
    "first_seen": "2026-11-19T15:10:37Z",
+   "subject": "6/8989",
    "detail": {
     "name": "2026-44812-CSA-0105 HOU Thanksgiving Parade",
     "issued": "2026-11-19T14:36:25Z",
@@ -11542,8 +11543,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/8989"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
