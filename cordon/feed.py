@@ -450,7 +450,8 @@ def tfr_items(data: dict, now: datetime) -> tuple[list[dict], dict]:
                  "measures": {"notam_id": nid, "type": r["type"], "new": is_new,
                               **{k: r[k] for k in ("facility", "state", "description", "created") if r.get(k)},
                               **{k: d[k] for k in ("effective", "issued", "regulation", "purpose", "floor", "ceiling",
-                                                   "statutory", "text") if d.get(k)}, **imp}}
+                                                   "statutory") if d.get(k)},
+                              **({"text": tfr.display_text(d["text"])} if d.get("text") else {}), **imp}}
         if again:
             props["measures"]["reissue_of"] = again["of"]
             props["measures"]["enlarged"] = again["enlarged"]
@@ -523,7 +524,9 @@ def faaprn_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
           uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
-          health_notices: dict | None = None, nz: dict | None = None, prn: dict | None = None) -> dict:
+          health_notices: dict | None = None, nz: dict | None = None, prn: dict | None = None,
+          dropped_log=None) -> dict:
+    """`dropped_log`: a path; the items the linter drops are appended there whole (cordon/dropped.py, C5)."""
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -637,10 +640,10 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                  "ie_aspect": ["physical"], "pmesii_pt": ["infrastructure"], "ascope": ["areas"],
                  "sources": [{**NGA_SRC, "accessed_at": nv_fetched}],
                  "measures": {"category": w["category"], "sea": w.get("sea"), "place": w.get("place"),
-                              "authority": w.get("authority"), "text": w["text"], "new": is_new,
+                              "authority": w.get("authority"), "text": navarea.display_text(w["text"]), "new": is_new,
                               **{k: w[k] for k in ("radius_m", "corridor_half_width_m") if w.get(k)}}}
         if w["category"] == "launch":  # windows, hazard and cancels in the warning's own words (cordon/launchwarn.py)
-            props["measures"].update(launchwarn.measures(w["text"], issued, w.get("area")))
+            props["measures"].update(launchwarn.measures(navarea.display_text(w["text"]), issued, w.get("area")))
         if w.get("cancel_at"):
             props["valid_until"] = w["cancel_at"]
         # When the hazard is in force: the windows in the warning's own words (Cordon's launch-window reader, used on
@@ -772,6 +775,10 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
     for f in feats:
         errs = [m for _, sev, m in contract.check(f, regs, rev=CONTRACT_REV) if sev == "error"]
         (dropped.append({"id": f["properties"]["id"], "errors": errs}) if errs else kept.append(f))
+    if dropped_log is not None and dropped:
+        from . import dropped as dropped_store
+        dropped_store.append(dropped_log, dropped, {f["properties"]["id"]: f for f in feats},
+                             now.strftime("%Y-%m-%dT%H:%M:%SZ"))
     return {"type": "FeatureCollection", "contract": CONTRACT, "contract_rev": CONTRACT_REV, "kit": KIT,
             "program": "cordon", "generated_at": stamp,
             "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
