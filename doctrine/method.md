@@ -134,6 +134,46 @@ US state they are in (kit 0.5.7): the FAA's state field for a TFR, else the stat
 Natural Earth's 1:10m outlines (right to about 1 km at a state line). An item placed at a country's label point gets
 none, so a notice for the whole country is never read as one for Kansas.
 
+## Feed contract revision 2.1 (method `cordon-feed-1.2`, 18 Nov 2026)
+The feed states `contract_rev: "2.1"` and the kit it was built with (0.6.2), and each item carries the revision's
+fields (`cordon/rev21.py`):
+
+- **Subject** (`subject_id`): the thing an item is a reading of, the same on every run. Most ids are already that (an
+  advisory, a notice, a warning, a bulletin), so the subject is the id. An FAA airport program is
+  `cordon:faa:<kind>:<airport>`, whatever its start. A TFR re-issued under a new number takes the subject of the TFR it
+  replaced once that one has left the FAA's list (the first re-issue of a split takes it; a re-issue listed alongside its
+  predecessor is a second restriction and keeps its own); the subject is stamped once in `data/tfr.json` and never
+  changed. An embassy alert's subject is its title with the post's own date cut (trailing, in brackets, or after
+  "Alert:") and punctuation folded, so a re-dated alert under the same headline is one alert (Tom, 18 Nov 2026). Only
+  the newest post of a subject is an item; the earlier posts' titles, dates and links are in `measures.earlier`.
+- **Last change** (`last_change`, `last_change_at`), stated where Cordon's own record knows it: a level raised or
+  lowered on the issuer's ladder (State and CDC 1-4, Canada 0-3, New Zealand 1-4; an embassy's status from normal to
+  authorized departure, ordered departure, suspended operations), at the time Cordon saw it; a changed statement,
+  regional advice, bulletin revision or FAA prohibition list, `changed`; an updated FCDO, Canadian or New Zealand page,
+  `changed` at the page's own date; a newly issued TFR, warning or CDC notice, `new` at its issue time; a re-dated
+  alert or a re-issued TFR, `changed`. The rest are filled from the history log (`--fill-last-change`).
+- **Event time** (`event_start`, `event_end`): when what the notice announces takes effect and ends. An advisory or
+  advice page, its date of effect; a CDC notice, a New Zealand page and an EASA bulletin, the day only; a TFR, its
+  effective and expiry times; an FAA program, its start and end; a navigational warning, the windows in its own words
+  (the launch-window reader, used on every category), else from issue to NGA's cancel time; an alert, its post time.
+  The FAA's prohibitions page gives no dates, so those items have none.
+- **Place basis**: `subject` for advisories and advice (about the country wherever you are), `location` for TFRs,
+  FAA programs and prohibitions, CDC notices, EASA bulletins and embassy alerts. **Sea areas** from the geometry and
+  the kit's gazetteer (Natural Earth names no Strait of Hormuz: those warnings fall in the Persian Gulf or the Gulf of
+  Oman); `[]` for an item placed at a country's label point, which stands for the country, not a place at sea.
+- **Signal**: the level on its own ladder, named with the ladder ("State Dept advisory level 1-4", "Canada risk level
+  0-3", "NZ SafeTravel level 1-4", "CDC travel notice level 1-4"), so the ladders never share one scale. NGA and TFR
+  anomalies rest on a new warning of a category, not a number, and carry none.
+- **Corroboration** (kit D11): an embassy alert is its issuer speaking within its remit, `corroborated` on one
+  official origin; an NGA security warning relays an incident others report, `reported` on one origin, and its
+  corroboration is left to COP (Tom, 18 Nov 2026). Advisories, levels and TFRs are notices, not event reports, and
+  carry none.
+- **Grades**: every source is A2, a reliable source that nothing else has confirmed (kit 0.6.2: credibility 1 needs a
+  second independence group).
+- **Times**: every item's `published_at` and the feed's `generated_at` are the build time, and the history step runs at
+  that time, so no change it records is later than publication. Each source keeps the time it was read
+  (`accessed_at`); each health lane gives the newest item it holds (`data_as_of`; NGA, its newest warning).
+
 ## Gaps and no data
 A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. NGA
 serves one daily file per area: when one fails and the others answer, that area keeps its earlier warnings, the

@@ -98,10 +98,14 @@ jobs:
       # tic-history/1, doctrine/kit/docs/history-log.md). The feed's own health block says which sources were read, so a
       # failed source, or a stale one whose items are withheld, ends nothing; embassy posts read as us-embassy-alerts.
       # Kept in data/history/ (data/** never starts a run) and committed; the items that ended in the last 7 days are
-      # served at /data/ended.geojson. A failure here is a gap in the history, never a missed deploy.
+      # served at /data/ended.geojson. --fill-last-change writes last_change (feed revision 2.1) into the feed on items
+      # that do not state it, from the log's record, and rewrites site/data/feed.geojson (compact) before the deploy.
+      # A failure here is a gap in the history, never a missed deploy.
       - name: History (data/history/, and site/data/ended.geojson)
         run: |
-          python doctrine/kit/tic.py history site/data/feed.geojson --dir data/history --ended site/data/ended.geojson             --lane-map "usembassy-*=us-embassy-alerts"             || { echo "::warning::history step failed; this run is missing from data/history/"; exit 0; }
+          # The run's time is the feed's own build time, so no change is logged after the items' published_at.
+          built=$(python -c "import json; print(json.load(open('site/data/feed.geojson', encoding='utf-8'))['generated_at'])")
+          python doctrine/kit/tic.py history site/data/feed.geojson --now "$built" --dir data/history --ended site/data/ended.geojson             --lane-map "usembassy-*=us-embassy-alerts" --fill-last-change             || { echo "::warning::history step failed; this run is missing from data/history/"; exit 0; }
           [ -n "$(git status --porcelain -- data/history)" ] || exit 0
           git config user.name "cordon-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
