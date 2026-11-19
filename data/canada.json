@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-19T17:00:15Z",
+ "generated": "2026-11-19T18:00:57Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2733,7 +2733,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-10T12:47:23Z",
+   "updated": "2026-11-19T17:55:54Z",
    "update_type": "Regular text update",
    "update": "Safety and security section – removed information on municipal elections",
    "link": "https://travel.gc.ca/destinations/south-africa"
