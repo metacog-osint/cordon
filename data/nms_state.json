@@ -3,29 +3,29 @@
  "bulk_at": "2026-11-18T23:26:20Z",
  "pulled_to": null,
  "mode": "archive-delta",
- "delta_from": "2026-11-19T05:11:09Z",
+ "delta_from": "2026-11-19T05:41:06Z",
  "counts": {
-  "features": 180
+  "features": 266
  },
  "note": "no store yet: this delta goes to the archive only; the bulk pull is allowed from 2026-11-19T23:26:20Z",
  "requests": 2,
  "status": "ok",
- "checked_at": "2026-11-19T05:41:06Z",
+ "checked_at": "2026-11-19T06:11:04Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
   "error": null,
   "note": null,
   "day": "2026-11-19",
-  "added": 177,
+  "added": 258,
   "uploaded": [
    "nms-2026-11-19.jsonl.gz"
   ],
   "pending": [],
-  "archived_to": "2026-11-19T05:41:06Z",
-  "day_bytes": 1973563,
-  "seen": 2792,
+  "archived_to": "2026-11-19T06:11:04Z",
+  "day_bytes": 2309655,
+  "seen": 3050,
   "seen_from": "cache"
  },
- "archived_to": "2026-11-19T05:41:06Z"
+ "archived_to": "2026-11-19T06:11:04Z"
 }
