@@ -36,7 +36,7 @@ PAGE_URL = "https://tfr.faa.gov/tfr3/?page=detail_{id}"
 SITE_URL = "https://tfr.faa.gov/"
 MAX_DETAILS = 80
 PAUSE_S = 0.2  # between detail fetches, to be gentle with the FAA's server
-TEXT_MAX = 6000
+TEXT_MAX = 6000  # characters of TFR text SHOWN in the feed; data/tfr.json keeps the whole text (C4, 18 Nov 2026)
 STALE_HOURS = 6  # launch and VIP TFRs last hours; with no good list for this long the held set is withheld
 NEW_HOURS = 72
 # A TFR of these types issued within NEW_HOURS is an anomaly (as for NGA's launch, military and security warnings).
@@ -53,6 +53,14 @@ STATUTORY_RE = re.compile(r"SECTION 352 OF PUBLIC LAW 108-7", re.I)
 NOTAM_RE = re.compile(r"^\d{1,2}/\d{1,5}$")
 COORD_RE = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*([NSEW])\s*$")
 NM = 1852.0
+
+
+def display_text(text: str) -> str:
+    """The text as the feed shows it: cut at TEXT_MAX with a note saying so. Stored text is whole; text an earlier
+    version of Cordon already cut (it carries the note) is left as it is."""
+    if len(text) <= TEXT_MAX or "[Cut by Cordon" in text:
+        return text
+    return text[:TEXT_MAX] + f" [Cut by Cordon: {len(text) - TEXT_MAX} more characters in the FAA's text]"
 
 
 def file_id(notam_id: str) -> str:
@@ -143,8 +151,6 @@ def parse_detail(body: bytes) -> dict:
         ceiling = _height(_first(area, "valDistVerUpper"), _first(area, "uomDistVerUpper"), _first(area, "codeDistVerUpper"))
     text = re.sub(r"\s+", " ", _first(root, "txtDescrUSNS"))
     statutory = bool(STATUTORY_RE.search(text))
-    if len(text) > TEXT_MAX:
-        text = text[:TEXT_MAX] + f" [Cut by Cordon: {len(text) - TEXT_MAX} more characters in the FAA's text]"
     tfr = next((e for e in root.iter() if _local(e.tag) == "TfrNot"), None)
     regulation = next((((c.text or "").strip()) for c in (tfr if tfr is not None else []) if _local(c.tag) == "codeType"), "")
     return {"name": _first(root, "txtLocalName"), "issued": to_utc(_first(root, "dateIssued")),

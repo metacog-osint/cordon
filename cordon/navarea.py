@@ -26,9 +26,18 @@ PAGE_URL = "https://msi.nga.mil/NavWarnings"
 TEXT_URL = "https://msi.nga.mil/apology_objects/DailyMem{}.txt"
 TEXT_FILES = {"4": "IV", "12": "XII", "A": "LAN", "P": "PAC", "C": "ARC"}
 STALE_DAYS = 7
-TEXT_MAX = 6000  # characters of warning text kept; longer text is cut with a note saying so (TEXT_CUT)
+TEXT_MAX = 6000  # characters of warning text SHOWN in the feed; data/navarea.json keeps the whole text (C4, 18 Nov 2026)
 TEXT_CUT = "\n[Cut by Cordon: {} more characters. Full text: NGA, msi.nga.mil/NavWarnings]"
 CIRCLE_SIDES = 32
+
+
+def display_text(text: str) -> str:
+    """The text as the feed shows it: cut at TEXT_MAX with a note saying so. Stored text is whole; text an earlier
+    version of Cordon already cut (it carries the note) is left as it is."""
+    if len(text) <= TEXT_MAX or "[Cut by Cordon" in text:
+        return text
+    return text[:TEXT_MAX] + TEXT_CUT.format(len(text) - TEXT_MAX)
+
 EARTH_M = 6371008.8
 MONTHS = {m: i for i, m in enumerate(["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"], 1)}
 AREAS = {"4": "NAVAREA IV", "12": "NAVAREA XII", "A": "HYDROLANT", "P": "HYDROPAC", "C": "HYDROARC"}
@@ -272,7 +281,7 @@ def _record(area: str, number, year, subregion, issued, authority: str, text: st
         "id": f"{area}-{number}-{year}", "area": AREAS.get(area, area), "subregion": subregion,
         "number": f"{AREAS.get(area, area)} {number}/{year}", "issued": issued,
         "authority": (authority or "").strip()[:160], "category": category(text), "sea": sea, "place": place,
-        "headline": head, "text": text if len(text) <= TEXT_MAX else text[:TEXT_MAX] + TEXT_CUT.format(len(text) - TEXT_MAX),
+        "headline": head, "text": text,
         "geometry": geometry(text, positions(text)), "cancel_at": cancel_time(text),
     }
     if s["circles"]:

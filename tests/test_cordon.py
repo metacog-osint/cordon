@@ -301,8 +301,11 @@ class Navarea(unittest.TestCase):
         self.assertEqual(rec["text"], body.strip(), "4,000 characters are kept whole")
         long_ = body * 3
         rec = navarea._record("4", 1, 2026, None, "121000Z NOV 2026", "", long_)
-        self.assertTrue(rec["text"].endswith(f"[Cut by Cordon: {len(long_.strip()) - navarea.TEXT_MAX} more characters. "
-                                             "Full text: NGA, msi.nga.mil/NavWarnings]"))
+        self.assertEqual(rec["text"], long_.strip(), "C4: stored text is whole, however long")
+        shown = navarea.display_text(rec["text"])   # the feed's short form keeps its 6,000-character cut and note
+        self.assertTrue(shown.endswith(f"[Cut by Cordon: {len(long_.strip()) - navarea.TEXT_MAX} more characters. "
+                                       "Full text: NGA, msi.nga.mil/NavWarnings]"))
+        self.assertEqual(navarea.display_text(shown), shown, "text an older version already cut is not cut twice")
 
     def test_cancel_time(self):
         self.assertEqual(navarea.cancel_time("1. X.\n2. CANCEL THIS MSG 220300Z NOV 26."), "2026-11-22T03:00:00Z")
@@ -1795,6 +1798,53 @@ class Rev21(unittest.TestCase):
                          ("subject", "State Dept advisory level 1-4", []))
         nav = [p for p in props if p["id"].startswith("cordon:navwarn:")]
         self.assertTrue(nav and all("sea_areas" in p and "event_start" in p and "place_basis" not in p for p in nav))
+
+
+class RetentionC4C5(unittest.TestCase):
+    def test_tfr_text_is_stored_whole_and_shown_cut(self):
+        text = "TEMPORARY FLIGHT RESTRICTIONS. " * 400
+        d = tfr.parse_detail(tfr_xml(text=text))
+        self.assertEqual(d["text"], text.strip())
+        shown = tfr.display_text(d["text"])
+        self.assertEqual(len(shown) - len(shown.split(" [Cut by Cordon")[0]), len(f" [Cut by Cordon: {len(d['text']) - tfr.TEXT_MAX} more characters in the FAA's text]"))
+        self.assertEqual(tfr.display_text("short"), "short")
+
+    def test_dropped_items_are_appended_once(self):
+        import tempfile
+        from cordon import dropped as dropped_store
+        path = Path(tempfile.mkdtemp()) / "history" / "dropped.jsonl"
+        item = {"type": "Feature", "properties": {"id": "cordon:x:1", "title": "a body"}}
+        drop = [{"id": "cordon:x:1", "errors": ["bad"]}]
+        first = dropped_store.append(path, drop, {"cordon:x:1": item}, "2026-11-18T10:00:00Z")
+        self.assertEqual(len(first), 1)
+        self.assertEqual(dropped_store.append(path, drop, {"cordon:x:1": item}, "2026-11-18T11:00:00Z"), [])
+        changed = {"type": "Feature", "properties": {"id": "cordon:x:1", "title": "edited"}}
+        self.assertEqual(len(dropped_store.append(path, drop, {"cordon:x:1": changed}, "2026-11-18T12:00:00Z")), 1)
+        rows = [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines()]
+        self.assertEqual([r["item"]["properties"]["title"] for r in rows], ["a body", "edited"])
+        self.assertEqual(rows[0]["errors"], ["bad"])
+
+    def test_feed_build_logs_what_the_linter_drops_and_the_feed_is_unchanged(self):
+        import tempfile
+        args = ({"advisories": state.parse(STATE), "fetched_at": "2026-10-31T21:00:00Z"},
+                {"posts": {"SA": embassy.parse_rss(RSS, "SA")}, "fetched_at": "2026-10-31T21:00:00Z"},
+                {"bulletins": easa.parse(EASA_CSV), "fetched_at": "2026-10-31T21:00:00Z"},
+                {"warnings": navarea.parse(NGA), "fetched_at": "2026-10-31T21:00:00Z"},
+                datetime(2026, 10, 31, 21, tzinfo=timezone.utc))
+        plain = feed.build(*args)
+        victim = plain["features"][0]["properties"]["id"]
+        real = contract.check
+        fake = lambda f, regs, **kw: ([("x", "error", "forced")] if f["properties"]["id"] == victim else real(f, regs, **kw))
+        path = Path(tempfile.mkdtemp()) / "dropped.jsonl"
+        with unittest.mock.patch.object(contract, "check", fake):
+            fc = feed.build(*args, dropped_log=path)
+            feed.build(*args, dropped_log=path)   # a second run writes nothing new
+        self.assertEqual([x["id"] for x in fc["dropped"]], [victim])
+        rows = [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines()]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["item"]["properties"]["id"], victim)
+        self.assertEqual(len(plain["features"]), len(fc["features"]) + 1)
+        self.assertEqual(plain["features"][1:], fc["features"])
 
 
 if __name__ == "__main__":

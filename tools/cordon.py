@@ -128,7 +128,7 @@ def build() -> dict:
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
                     datetime.now(timezone.utc), d["health"], d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"],
                     ca=d["canada.json"], health_notices=d["cdc.json"], nz=d["safetravel.json"],
-                    prn=d["faa_prn.json"])
+                    prn=d["faa_prn.json"], dropped_log=ROOT / "data" / "history" / "dropped.jsonl")
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
