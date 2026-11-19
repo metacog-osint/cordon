@@ -781,7 +781,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                              now.strftime("%Y-%m-%dT%H:%M:%SZ"))
     return {"type": "FeatureCollection", "contract": CONTRACT, "contract_rev": CONTRACT_REV, "kit": KIT,
             "program": "cordon", "generated_at": stamp,
-            "licence": "Cordon code MIT; State Department, NGA and FAA content US public domain; EASA content with "
+            "licence": "Cordon code GNU AGPL-3.0; State Department, NGA and FAA content US public domain; EASA content with "
                        "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
                        "content under the Open Government Licence - Canada; CDC content US public domain; New Zealand MFAT "
                        "content Crown copyright under CC BY 4.0",
