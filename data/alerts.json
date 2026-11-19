@@ -25,9 +25,18 @@
   "BH": [
    {
     "iso": "BH",
-    "title": "Security Alert: U.S. Embassy Manama – November 18, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVUZ2SmtWZE5CWU0tVkVxb0xxbVdUU0xEMzlFU090QjlVSUhyd2EyazZsX0FDaXpjSHJNdzI0N251SzVCdHVoTTB2a2Q4bWExcldrcjVFZUU4Mk54c1pWUW9sZ3FnU0FzVGdobnJEajlMVl83Wk5IYUhpanEzWV9XNWlB?oc=5",
-    "published_at": "2026-11-18T14:21:50Z",
+    "title": "Security Alert: U.S. Embassy Manama – November 15, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWGlpRHE5a1d1U1JBNXZrT0FUS29IUDVKeE5pUkliYk1MbnhsWVRUYnkyVXVTT3B6UUJQVTF5eF9NZEVLQnBVRVpuREwtSGRabzZYeGlfTGhDVy1paUlwLWZ4dXdpeGN6TDFPbFNfRFVwTzJQX1lOanJmRjNKOUdzajZR?oc=5",
+    "published_at": "2026-11-15T20:33:28Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://bh.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "BH",
+    "title": "Security Alert: U.S. Embassy Manama – November 7, 2026",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbFBpSFVyclVGRDFPbmZBUlNKS2J0ZUZ5emNDX3prajcxeGNQa0szYVQyRVBPTmU4VmVXWTlaNy03cXJIclppbWxFN2lNY1NGZkRoSWk4THJLU0U3NHJzYnFtU0FwLW9XekltY3FWd3FmZ3A2WTByZ2hUNkRJYVp0Xw?oc=5",
+    "published_at": "2026-11-07T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://bh.usembassy.gov/category/alert/"
