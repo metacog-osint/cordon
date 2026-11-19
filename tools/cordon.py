@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from cordon import collect, events, feed, navarea  # noqa: E402
+from cordon import collect, events, feed, navarea, nms  # noqa: E402
 from cordon.common import load, read_jsonl  # noqa: E402
 from tic_doctrine import contract, geo, registers  # noqa: E402
 
@@ -147,6 +147,9 @@ def build() -> dict:
                       canada=d["canada.json"].get("countries") or {})
     (OUT / "data" / "events.json").write_text(json.dumps(ev, indent=1, ensure_ascii=False) + "\n",
                                               encoding="utf-8", newline="\n")
+    # NOTAM subsets from the NMS lane (cordon/nms.py), written by collect into the cached cache/nms/out/.
+    if (nms.OUT / "index.json").exists():
+        shutil.copytree(nms.OUT, OUT / "data" / "notams")
     return fc
 
 

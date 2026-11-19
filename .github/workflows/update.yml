@@ -2,7 +2,7 @@ name: update
 # Hourly: collect every source, commit data/ when its content changed, build site/, log what changed in data/history/
 # (new, changed and ended items, kept after they leave the feed) and publish site/ to GitHub Pages
 # (https://cordon.theintelligence.company/). A failing source keeps its last good data; nothing here fails the run
-# except a broken build. Free: public repo, no secrets.
+# except a broken build. Free: public repo. Secrets: NMS_CLIENT_ID and NMS_CLIENT_SECRET (FAA NMS-API, set by hand).
 #
 # GitHub delays and drops scheduled runs under load: from 1 to 4 Nov 2026 a single hourly trigger ran about once every
 # six hours. So the schedule fires four times an hour and the gate job skips the run when the site was deployed less
@@ -56,24 +56,56 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
+      # FAA NMS-API store (cordon/nms.py): the NOTAMs the subsets keep, in the private Actions cache, never committed.
+      # Each run restores the newest copy and saves its own; a lost cache is rebuilt from the published files.
+      # cache/nms/archive/ is the working copy of the permanent archive (cordon/nmsarchive.py): every NMS feature of
+      # every pull, kept for good as release assets (nms-archive-YYYY-MM); the cache only speeds it up.
+      - name: Restore the NMS store
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            cache/nms/store.json.gz
+            cache/nms/archive
+          key: nms-store-${{ github.run_id }}
+          restore-keys: nms-store-
       - name: Collect
+        env:
+          # FAA NMS-API keys (production), set by hand; without them the nms lane waits and makes no request.
+          NMS_CLIENT_ID: ${{ secrets.NMS_CLIENT_ID }}
+          NMS_CLIENT_SECRET: ${{ secrets.NMS_CLIENT_SECRET }}
+          NMS_ENV: ${{ vars.NMS_ENV || 'prod' }}
+          # the workflow's own token (contents: write): uploads the NMS archive's day assets to this repo's releases
+          GITHUB_TOKEN: ${{ github.token }}
         run: python tools/cordon.py collect
+      - name: Save the NMS store
+        if: always() && (hashFiles('cache/nms/store.json.gz') != '' || hashFiles('cache/nms/archive/meta.json') != '')
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            cache/nms/store.json.gz
+            cache/nms/archive
+          key: nms-store-${{ github.run_id }}
       - name: Commit data when its content changed
+        id: commit
         run: |
-          if [ -n "$(git status --porcelain -- data ':!data/health.json')" ]; then
+          if [ -n "$(git status --porcelain -- data ':!data/health.json' ':!data/nms_state.json')" ]; then
             git config user.name "cordon-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
             git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
-            # GitHub sometimes refuses a push (Elements saw an error 500 on 4 Nov 2026). Retry; if it still fails, carry
-            # on so this run's data is still built and deployed, and the next run commits it.
+            # GitHub sometimes refuses a push (Elements saw an error 500 on 4 Nov 2026). Retry; if it still fails, keep
+            # going so the site is still deployed, upload data/ (history included) as an artifact after the history
+            # step, and fail the run at the end, so nothing this run collected is discarded unseen.
             pushed=no
             for i in 1 2 3; do
               if git push -q origin HEAD:main; then pushed=yes; break; fi
               echo "::warning::data push attempt $i failed"
               sleep $((i * 15)); git pull -q --rebase origin main || true
             done
-            [ "$pushed" = yes ] || echo "::warning::data not committed this run; the site is still deployed"
+            if [ "$pushed" != yes ]; then
+              echo "::error::data not committed this run (all pushes failed); data/ is uploaded as an artifact"
+              echo "unpushed=yes" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "no content change"
           fi
@@ -100,12 +132,13 @@ jobs:
       # Kept in data/history/ (data/** never starts a run) and committed; the items that ended in the last 7 days are
       # served at /data/ended.geojson. --fill-last-change writes last_change (feed revision 2.1) into the feed on items
       # that do not state it, from the log's record, and rewrites site/data/feed.geojson (compact) before the deploy.
-      # A failure here is a gap in the history, never a missed deploy.
+      # A failure here never stops the deploy; the run fails at the end instead, so the gap is seen.
       - name: History (data/history/, and site/data/ended.geojson)
+        id: history
         run: |
           # The run's time is the feed's own build time, so no change is logged after the items' published_at.
           built=$(python -c "import json; print(json.load(open('site/data/feed.geojson', encoding='utf-8'))['generated_at'])")
-          python doctrine/kit/tic.py history site/data/feed.geojson --now "$built" --dir data/history --ended site/data/ended.geojson             --lane-map "usembassy-*=us-embassy-alerts" --fill-last-change             || { echo "::warning::history step failed; this run is missing from data/history/"; exit 0; }
+          python doctrine/kit/tic.py history site/data/feed.geojson --now "$built" --dir data/history --ended site/data/ended.geojson             --lane-map "usembassy-*=us-embassy-alerts" --fill-last-change             || { echo "::error::history step failed; this run is missing from data/history/"; echo "failed=yes" >> "$GITHUB_OUTPUT"; exit 0; }
           [ -n "$(git status --porcelain -- data/history)" ] || exit 0
           git config user.name "cordon-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -116,7 +149,16 @@ jobs:
             echo "::warning::history push attempt $i failed"
             sleep $((i * 15)); git pull -q --rebase origin main || true
           done
-          echo "::warning::history not committed this run; the next run logs these changes again from the last state"
+          echo "::error::history not committed this run (all pushes failed); data/ is uploaded as an artifact"
+          echo "unpushed=yes" >> "$GITHUB_OUTPUT"
+      - name: Keep this run's data and history when a push failed
+        if: steps.commit.outputs.unpushed == 'yes' || steps.history.outputs.unpushed == 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: unpushed-data-${{ github.run_id }}
+          path: data
+          retention-days: 30
+          if-no-files-found: error
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
@@ -134,3 +176,10 @@ jobs:
       - id: deployment_retry
         if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
+      # After the deploy (audit C2): a failed history step or an unpushed commit fails the run, so it is seen, while
+      # the site was still deployed and the data kept as the unpushed-data artifact.
+      - name: Fail the run when history or a push failed
+        if: always() && (steps.history.outputs.failed == 'yes' || steps.history.outputs.unpushed == 'yes' || steps.commit.outputs.unpushed == 'yes')
+        run: |
+          echo "::error::history failed: ${{ steps.history.outputs.failed == 'yes' }}; data push failed: ${{ steps.commit.outputs.unpushed == 'yes' }}; history push failed: ${{ steps.history.outputs.unpushed == 'yes' }}. The site was still deployed; see the unpushed-data artifact."
+          exit 1
