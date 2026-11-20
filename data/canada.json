@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T17:00:16Z",
+ "generated": "2026-11-20T17:40:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2205,9 +2205,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-05T12:27:56Z",
+   "updated": "2026-11-20T17:30:28Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Natural disasters and climate section – updated information on air pollution",
    "link": "https://travel.gc.ca/destinations/singapore"
   },
   "SI": {
