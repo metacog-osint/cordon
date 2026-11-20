@@ -11435,6 +11435,7 @@
    "description": "Willoughby Hills, OH",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T04:10:49Z",
+   "subject": "6/9125",
    "detail": {
     "name": "261119-20 Willoughby Hills OH",
     "issued": "2026-11-20T03:45:52Z",
@@ -11602,8 +11603,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9125"
+   }
   },
   "6/9128": {
    "notam_id": "6/9128",
@@ -11613,6 +11613,7 @@
    "description": "Libby AAF, AZ, Friday, November 20, 2026 through Sunday, November 22, 2026 Local",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T04:10:49Z",
+   "subject": "6/9128",
    "detail": {
     "name": "261120-22 Libby CBP",
     "issued": "2026-11-20T04:03:54Z",
@@ -11784,8 +11785,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9128"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",

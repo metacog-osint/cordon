@@ -40,20 +40,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 139.0,
    "max_delay_min": 286.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "LAS",
-   "airport_name": "Harry Reid International",
-   "start": "2026-11-20T03:22:00Z",
-   "end": "2026-11-20T04:30:00Z",
-   "updated": "2026-11-20T03:39:12Z",
-   "reason": "low ceilings",
-   "center": "ZLA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=18&adv_date=11202026&facId=LAS&title=ATCSCC ADVZY 018 LAS/ZLA 11/20/2026 CDM GROUND STOP&titleDate=11/20/2026",
-   "included_facilities": 5,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
