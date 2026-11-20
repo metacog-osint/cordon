@@ -2318,12 +2318,12 @@
   "usa": {
    "slug": "usa",
    "name": "USA",
-   "updated": "2026-11-14T02:26:03Z",
-   "change": "Updated information on air traffic disruptions across the US",
+   "updated": "2026-11-20T19:57:12Z",
+   "change": "Removal of information about air traffic disruptions across the US",
    "link": "https://www.gov.uk/foreign-travel-advice/usa",
    "iso": "US",
    "alert_status": [],
-   "status_for": "2026-11-14T02:26:03Z"
+   "status_for": "2026-11-20T19:57:12Z"
   },
   "uzbekistan": {
    "slug": "uzbekistan",
