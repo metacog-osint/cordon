@@ -7761,72 +7761,6 @@
     }
    }
   },
-  "6/8364": {
-   "notam_id": "6/8364",
-   "type": "SPECIAL",
-   "facility": "ZLA",
-   "state": "USA",
-   "description": "USA, Friday, November 20, 2026 UTC",
-   "created": "11/17/2026",
-   "first_seen": "2026-11-17T21:40:30Z",
-   "subject": "6/8350",
-   "detail": {
-    "name": "6/8364",
-    "issued": "2026-11-17T20:50:28Z",
-    "effective": "2026-11-20T06:20:00Z",
-    "expires": "2026-11-20T06:40:00Z",
-    "regulation": "SPECIAL",
-    "purpose": "DUE TO SPACE OPS",
-    "city": null,
-    "floor": "surface",
-    "ceiling": "FL910",
-    "statutory": false,
-    "text": "!FDC 6/8364 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611200620 UTC (2220 LOCAL 11/20/26) UNTIL 261120640 UTC (2240 LOCAL 11/20/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611200620-2611200640",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -117.83333,
-        33.11667
-       ],
-       [
-        -117.9,
-        33.08333
-       ],
-       [
-        -117.9,
-        32.93333
-       ],
-       [
-        -117.83333,
-        32.88333
-       ],
-       [
-        -117.71667,
-        32.88333
-       ],
-       [
-        -117.63333,
-        32.95
-       ],
-       [
-        -117.63333,
-        33.08333
-       ],
-       [
-        -117.68333,
-        33.11667
-       ],
-       [
-        -117.83333,
-        33.11667
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8422": {
    "notam_id": "6/8422",
    "type": "HAZARDS",
@@ -12533,6 +12467,21 @@
    "ceiling_ft": 5000,
    "first_seen": "2026-11-17T21:40:30Z",
    "left_at": "2026-11-18T20:10:33Z"
+  },
+  "6/8364": {
+   "type": "SPECIAL",
+   "state": "USA",
+   "bbox": [
+    -117.9,
+    32.8833,
+    -117.6333,
+    33.1167
+   ],
+   "area_km2": 576.3,
+   "ceiling_ft": 91000,
+   "first_seen": "2026-11-17T21:40:30Z",
+   "subject": "6/8350",
+   "left_at": "2026-11-20T07:10:41Z"
   },
   "6/8368": {
    "type": "SPECIAL",
