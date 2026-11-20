@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-19T20:00:16Z",
+ "generated": "2026-11-20T11:00:18Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -621,7 +621,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-19T12:10:11Z",
+   "updated": "2026-11-20T10:52:01Z",
    "update_type": "Editorial change",
    "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/germany"
