@@ -9627,56 +9627,6 @@
     }
    }
   },
-  "6/9062": {
-   "notam_id": "6/9062",
-   "type": "HAZARDS",
-   "facility": "ZID",
-   "state": "KY",
-   "description": "13NM SE OF MANCHESTER, KY, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T19:10:34Z",
-   "subject": "6/9062",
-   "detail": {
-    "name": "6/9062",
-    "issued": "2026-11-19T18:37:14Z",
-    "effective": "2026-11-20T13:00:00Z",
-    "expires": "2026-11-22T01:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "13NM SE OF MANCHESTER",
-    "floor": "surface",
-    "ceiling": "3500 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9062 ZID KY..AIRSPACE 13NM SE OF MANCHESTER, KY..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 370530N0833130W (LOZ086028.3) TO 370530N0832830W (LOZ086030.6) TO 370400N0832830W (LOZ089030.5) TO 370400N0833130W (LOZ089028.1) TO POINT OF ORIGIN SFC-3500FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF KENTUCKY INTERAGENCY COORDINATION CENTER ARE AUTH IN THE AIRSPACE. KENTUCKY INTERAGENCY COORDINATION CENTER TEL 859-745-3171 OR FREQ 167.2250 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. INDIANAPOLIS/ZID/ARTCC TEL 317-247-2242 IS THE FAA CDN FAC. DLY 1300-0100 2611201300-2611220100EST",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -83.525,
-        37.09167
-       ],
-       [
-        -83.475,
-        37.09167
-       ],
-       [
-        -83.475,
-        37.06667
-       ],
-       [
-        -83.525,
-        37.06667
-       ],
-       [
-        -83.525,
-        37.09167
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9071": {
    "notam_id": "6/9071",
    "type": "HAZARDS",
@@ -10935,6 +10885,7 @@
    "description": "BOLLINGER-CRASS MEML, MO, Friday, November 20, 2026 through Saturday, November 21, 2026 UTC",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T23:10:32Z",
+   "subject": "6/9262",
    "detail": {
     "name": "6/9262",
     "issued": "2026-11-20T22:47:06Z",
@@ -11102,8 +11053,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9262"
+   }
   },
   "6/9267": {
    "notam_id": "6/9267",
@@ -11113,6 +11063,7 @@
    "description": "13NM SE OF MANCHESTER, KY, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T23:10:32Z",
+   "subject": "6/9267",
    "detail": {
     "name": "6/9267",
     "issued": "2026-11-20T23:04:23Z",
@@ -11152,8 +11103,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9267"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
@@ -12225,6 +12175,21 @@
    "first_seen": "2026-11-18T21:40:33Z",
    "subject": "6/8739",
    "left_at": "2026-11-20T18:40:48Z"
+  },
+  "6/9062": {
+   "type": "HAZARDS",
+   "state": "KY",
+   "bbox": [
+    -83.525,
+    37.0667,
+    -83.475,
+    37.0917
+   ],
+   "area_km2": 12.3,
+   "ceiling_ft": 3500,
+   "first_seen": "2026-11-19T19:10:34Z",
+   "subject": "6/9062",
+   "left_at": "2026-11-20T23:40:35Z"
   },
   "6/9115": {
    "type": "HAZARDS",
