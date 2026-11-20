@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T16:00:15Z",
+ "generated": "2026-11-20T17:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2061,9 +2061,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-05T21:51:04Z",
+   "updated": "2026-11-20T16:41:01Z",
    "update_type": "Regular text update",
-   "update": "Safety and security section – added information on demonstrations",
+   "update": "Safety and security section – updated information on demonstrations",
    "link": "https://travel.gc.ca/destinations/paraguay"
   },
   "QA": {
