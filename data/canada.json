@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T15:00:26Z",
+ "generated": "2026-11-20T16:00:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2133,9 +2133,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-19T16:53:42Z",
-   "update_type": "Regular text update",
-   "update": "Entry and exit requirements section – updated information on visas",
+   "updated": "2026-11-20T15:43:21Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/rwanda"
   },
   "SA": {
