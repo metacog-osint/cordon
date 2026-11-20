@@ -11157,6 +11157,7 @@
    "description": "15 ZAN AIRSPACEANCHORAGE, AK, Friday, November 20, 2026 UTC",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T02:40:35Z",
+   "subject": "6/9115",
    "detail": {
     "name": "6/9115",
     "issued": "2026-11-20T02:07:14Z",
@@ -11196,8 +11197,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9115"
+   }
   },
   "6/9117": {
    "notam_id": "6/9117",
@@ -11207,6 +11207,7 @@
    "description": "17 ZAN AIRSPACEANCHORAGE, AK, Friday, November 20, 2026 UTC",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T02:40:35Z",
+   "subject": "6/9117",
    "detail": {
     "name": "6/9117",
     "issued": "2026-11-20T02:07:56Z",
@@ -11246,8 +11247,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9117"
+   }
   },
   "6/9119": {
    "notam_id": "6/9119",
@@ -11257,6 +11257,7 @@
    "description": "ANCHORAGE, AK, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/20/2026",
    "first_seen": "2026-11-20T02:40:35Z",
+   "subject": "6/9119",
    "detail": {
     "name": "6/9119",
     "issued": "2026-11-20T02:08:02Z",
@@ -11424,8 +11425,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9119"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
