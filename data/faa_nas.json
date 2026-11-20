@@ -28,20 +28,6 @@
   },
   {
    "kind": "ground_stop",
-   "airport": "BFI",
-   "airport_name": "Boeing Field/King County International",
-   "start": "2026-11-20T19:02:00Z",
-   "end": "2026-11-20T21:00:00Z",
-   "updated": "2026-11-20T19:51:05Z",
-   "reason": "other",
-   "center": "ZSE",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=87&adv_date=11202026&facId=BFI&title=ATCSCC ADVZY 087 BFI/ZSE 11/20/2026 CDM GROUND STOP&titleDate=11/20/2026",
-   "included_facilities": 7,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
-  },
-  {
-   "kind": "ground_stop",
    "airport": "TEB",
    "airport_name": "Teterboro",
    "start": "2026-11-20T20:11:00Z",
