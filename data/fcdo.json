@@ -652,14 +652,14 @@
   "ecuador": {
    "slug": "ecuador",
    "name": "Ecuador",
-   "updated": "2026-11-01T19:30:00Z",
-   "change": "Updated information about heavy rain and flooding on Santa Cruz Island, Galapagos. (Warnings and insurance)",
+   "updated": "2026-11-20T13:14:04Z",
+   "change": "Updated information following the Ecuadorean government extending the state of emergency for a further 30 days, and updated information about drug-assisted robbery ('Warnings and insurance' and 'Safety and security' pages).",
    "link": "https://www.gov.uk/foreign-travel-advice/ecuador",
    "iso": "EC",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-11-01T19:30:00Z"
+   "status_for": "2026-11-20T13:14:04Z"
   },
   "egypt": {
    "slug": "egypt",
