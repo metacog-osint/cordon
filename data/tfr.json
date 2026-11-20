@@ -9855,56 +9855,6 @@
     }
    }
   },
-  "6/9117": {
-   "notam_id": "6/9117",
-   "type": "HAZARDS",
-   "facility": "ZAN",
-   "state": "AK",
-   "description": "17 ZAN AIRSPACEANCHORAGE, AK, Friday, November 20, 2026 UTC",
-   "created": "11/20/2026",
-   "first_seen": "2026-11-20T02:40:35Z",
-   "subject": "6/9117",
-   "detail": {
-    "name": "6/9117",
-    "issued": "2026-11-20T02:07:56Z",
-    "effective": "2026-11-20T19:30:00Z",
-    "expires": "2026-11-20T21:30:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "17 ZAN AIRSPACEANCHORAGE",
-    "floor": "surface",
-    "ceiling": "6000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9117 ZAN AIRSPACE..ANCHORAGE, AK..TEMPORARY FLIGHT RESTRICTIONS PURSUANT TO 14 CFR SECTION 91.137(A)(1), AVALANCHE CONTROL, WI AN AREA DEFINED AS 605726N1490709W (TED099028) TO 605842N1490456W (TED096028) TO 605740N1490249W (TED097029) TO 605634N1490541W (TED100029) TO POINT OF ORIGIN SFC-6000FT. ONLY RELIEF ACFT OPS ARE AUTH IN THE AIRSPACE. ALYESKA RESORT AVALANCHE CONTROL IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. ANCHORAGE /ZAN/ ARTCC TEL 907-269-1103 IS THE FAA CDN FAC. 2611201930-2611202130",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -149.11917,
-        60.95722
-       ],
-       [
-        -149.08222,
-        60.97833
-       ],
-       [
-        -149.04694,
-        60.96111
-       ],
-       [
-        -149.09472,
-        60.94278
-       ],
-       [
-        -149.11917,
-        60.95722
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9119": {
    "notam_id": "6/9119",
    "type": "HAZARDS",
@@ -12062,6 +12012,21 @@
    "first_seen": "2026-11-20T02:40:35Z",
    "subject": "6/9115",
    "left_at": "2026-11-20T18:10:33Z"
+  },
+  "6/9117": {
+   "type": "HAZARDS",
+   "state": "AK",
+   "bbox": [
+    -149.1192,
+    60.9428,
+    -149.0469,
+    60.9783
+   ],
+   "area_km2": 7.5,
+   "ceiling_ft": 6000,
+   "first_seen": "2026-11-20T02:40:35Z",
+   "subject": "6/9117",
+   "left_at": "2026-11-20T21:40:31Z"
   },
   "6/9125": {
    "type": "HAZARDS",
