@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T11:00:18Z",
+ "generated": "2026-11-20T13:01:43Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -621,7 +621,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-20T10:52:01Z",
+   "updated": "2026-11-20T12:22:14Z",
    "update_type": "Editorial change",
    "update": "Health – editorial change",
    "link": "https://travel.gc.ca/destinations/germany"
@@ -813,7 +813,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-06T20:55:58Z",
+   "updated": "2026-11-20T12:53:20Z",
    "update_type": "Regular text update",
    "update": "Safety and security section – updated information on demonstrations and strikes",
    "link": "https://travel.gc.ca/destinations/france"
