@@ -1,6 +1,8 @@
 /*! tic-fold.js v1.1 · The Intelligence Company: a long table or list shows its first rows and "Show all N" ·
  *  canonical copy: the hub's site/shared/tic-fold.js (copy into each site with
  *  tic-fold.css; keep the version line).
+ *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
+ *  copied into, whatever that repository's own licence.
  *
  *  From the 18 Nov 2026 page-length survey: with the sections row in place, tables of 40 to 85 rows still made the
  *  light pages 14,000-18,000 px tall on a desktop (Relief 31,000 px on a phone). Cordon folded its long tables on
