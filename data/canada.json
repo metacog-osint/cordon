@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T13:01:43Z",
+ "generated": "2026-11-20T15:00:26Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1245,9 +1245,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-19T19:29:21Z",
-   "update_type": "Regular text update",
-   "update": "Entry and exit requirements section – updated information on regional travel",
+   "updated": "2026-11-20T14:50:17Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/kyrgyzstan"
   },
   "KH": {
@@ -1353,9 +1353,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-19T18:56:28Z",
-   "update_type": "Regular text update",
-   "update": "Entry and exit requirements section – updated information on electronic travel authorization and closed zones",
+   "updated": "2026-11-20T14:56:08Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/kazakhstan"
   },
   "LA": {
