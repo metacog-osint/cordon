@@ -11361,184 +11361,6 @@
     }
    }
   },
-  "6/9125": {
-   "notam_id": "6/9125",
-   "type": "HAZARDS",
-   "facility": "ZOB",
-   "state": "OH",
-   "description": "Willoughby Hills, OH",
-   "created": "11/20/2026",
-   "first_seen": "2026-11-20T04:10:49Z",
-   "subject": "6/9125",
-   "detail": {
-    "name": "261119-20 Willoughby Hills OH",
-    "issued": "2026-11-20T03:45:52Z",
-    "effective": null,
-    "expires": "2026-11-20T09:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": "Due to police activity and hazards to aircraft in the air.",
-    "city": "Willoughby Hills",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9125 ZOB OH..AIRSPACE WILLOUGHBY HILLS, OH..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1), TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT WI AN AREA DEFINED AS 0.5NM RADIUS OF 413515N0812728W (ACO342031.0) SFC-1000FT AGL EFFECTIVE IMMEDIATELY UNTIL 2611200900 UTC (0400 LOCAL 11/20/26). DUE TO POLICE ACTIVITY AND HAZARDS TO AIRCRAFT IN THE AIR. ONLY RELIEF ACFT OPS UNDER THE DIRECTION OF THE WILLOUGHBY HILLS POLICE DEPARTMENT ARE AUTH IN THE AIRSPACE. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE WILLOUGHBY HILLS POLICE DEPARTMENT, ROB GRANDEE, TEL 440-479-2882, IS IN CHARGE OF THE OPS. THE CLEVELAND /ZOB/ ARTCC, TEL 440-774-0426, IS THE CDN FAC. 2611200343-2611200900",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -81.45778,
-        41.59584
-       ],
-       [
-        -81.45585,
-        41.59571
-       ],
-       [
-        -81.45398,
-        41.59533
-       ],
-       [
-        -81.45222,
-        41.59472
-       ],
-       [
-        -81.45064,
-        41.59389
-       ],
-       [
-        -81.44927,
-        41.59286
-       ],
-       [
-        -81.44816,
-        41.59167
-       ],
-       [
-        -81.44734,
-        41.59035
-       ],
-       [
-        -81.44684,
-        41.58895
-       ],
-       [
-        -81.44667,
-        41.5875
-       ],
-       [
-        -81.44684,
-        41.58605
-       ],
-       [
-        -81.44734,
-        41.58465
-       ],
-       [
-        -81.44816,
-        41.58333
-       ],
-       [
-        -81.44927,
-        41.58214
-       ],
-       [
-        -81.45064,
-        41.58111
-       ],
-       [
-        -81.45223,
-        41.58028
-       ],
-       [
-        -81.45398,
-        41.57967
-       ],
-       [
-        -81.45585,
-        41.57929
-       ],
-       [
-        -81.45778,
-        41.57916
-       ],
-       [
-        -81.45971,
-        41.57929
-       ],
-       [
-        -81.46158,
-        41.57967
-       ],
-       [
-        -81.46333,
-        41.58028
-       ],
-       [
-        -81.46492,
-        41.58111
-       ],
-       [
-        -81.46628,
-        41.58214
-       ],
-       [
-        -81.46739,
-        41.58333
-       ],
-       [
-        -81.46821,
-        41.58465
-       ],
-       [
-        -81.46871,
-        41.58605
-       ],
-       [
-        -81.46888,
-        41.5875
-       ],
-       [
-        -81.46871,
-        41.58895
-       ],
-       [
-        -81.46821,
-        41.59035
-       ],
-       [
-        -81.4674,
-        41.59167
-       ],
-       [
-        -81.46629,
-        41.59286
-       ],
-       [
-        -81.46492,
-        41.59389
-       ],
-       [
-        -81.46333,
-        41.59472
-       ],
-       [
-        -81.46158,
-        41.59533
-       ],
-       [
-        -81.45971,
-        41.59571
-       ],
-       [
-        -81.45778,
-        41.59584
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9128": {
    "notam_id": "6/9128",
    "type": "SECURITY",
@@ -12596,6 +12418,21 @@
    "ceiling_ft": 91000,
    "first_seen": "2026-11-18T19:10:35Z",
    "left_at": "2026-11-18T19:40:31Z"
+  },
+  "6/9125": {
+   "type": "HAZARDS",
+   "state": "OH",
+   "bbox": [
+    -81.4689,
+    41.5792,
+    -81.4467,
+    41.5958
+   ],
+   "area_km2": 2.7,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-20T04:10:49Z",
+   "subject": "6/9125",
+   "left_at": "2026-11-20T08:40:38Z"
   }
  }
 }
