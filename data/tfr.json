@@ -6317,72 +6317,6 @@
     }
    }
   },
-  "6/8675": {
-   "notam_id": "6/8675",
-   "type": "SPECIAL",
-   "facility": "ZLA",
-   "state": "USA",
-   "description": "USA, Saturday, November 21, 2026 UTC",
-   "created": "11/18/2026",
-   "first_seen": "2026-11-18T19:40:31Z",
-   "subject": "6/8654",
-   "detail": {
-    "name": "6/8675",
-    "issued": "2026-11-18T19:30:44Z",
-    "effective": "2026-11-21T21:55:00Z",
-    "expires": "2026-11-21T22:15:00Z",
-    "regulation": "SPECIAL",
-    "purpose": "DUE TO SPACE OPS",
-    "city": null,
-    "floor": "surface",
-    "ceiling": "FL910",
-    "statutory": false,
-    "text": "!FDC 6/8675 ZLA CA..AIRSPACE LOS ANGELES, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY WI AN AREA DEFINED AS 334700N1191500W (VTU192022.2) TO 334500N1191800W (VTU195025.2) TO 333600N1191800W (VTU187033.3) TO 333300N1191400W (VTU180035.1) TO 333300N1190700W (VTU171034) TO 333700N1190200W (VTU163029.9) TO 334500N1190200W (VTU163021.9) TO 334700N1190500W (VTU170019.9) TO POINT OF ORIGIN SFC-UNL EFFECTIVE 2611212155 UTC (1355 LOCAL 11/21/26) UNTIL 2611212215 UTC (1415 LOCAL 11/21/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611212155-2611212215",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -119.25,
-        33.78333
-       ],
-       [
-        -119.3,
-        33.75
-       ],
-       [
-        -119.3,
-        33.6
-       ],
-       [
-        -119.23333,
-        33.55
-       ],
-       [
-        -119.11667,
-        33.55
-       ],
-       [
-        -119.03333,
-        33.61667
-       ],
-       [
-        -119.03333,
-        33.75
-       ],
-       [
-        -119.08333,
-        33.78333
-       ],
-       [
-        -119.25,
-        33.78333
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8702": {
    "notam_id": "6/8702",
    "type": "SPACE OPERATIONS",
@@ -10695,6 +10629,21 @@
    "first_seen": "2026-11-18T19:10:35Z",
    "subject": "6/8671",
    "left_at": "2026-11-20T18:40:48Z"
+  },
+  "6/8675": {
+   "type": "SPECIAL",
+   "state": "USA",
+   "bbox": [
+    -119.3,
+    33.55,
+    -119.0333,
+    33.7833
+   ],
+   "area_km2": 574.7,
+   "ceiling_ft": 91000,
+   "first_seen": "2026-11-18T19:40:31Z",
+   "subject": "6/8654",
+   "left_at": "2026-11-21T22:40:31Z"
   },
   "6/8694": {
    "type": "SPACE OPERATIONS",
