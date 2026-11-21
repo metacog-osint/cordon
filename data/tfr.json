@@ -9633,6 +9633,7 @@
    "description": "13NM SE OF MANCHESTER, KY, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/21/2026",
    "first_seen": "2026-11-21T14:10:30Z",
+   "subject": "6/9267",
    "detail": {
     "name": "6/9275",
     "issued": "2026-11-21T13:40:03Z",
@@ -9672,8 +9673,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9267"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
