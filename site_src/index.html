@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-tic-layer="air">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
 <meta name="description" content="US, UK and Canadian travel advice, CDC travel health notices, US embassy departure status, EASA conflict-zone bulletins, NGA navigational warnings and FAA flight restrictions on one map. A project of The Intelligence Company.">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tic-shell.css">
 <link rel="stylesheet" href="tic-time.css">
 <link rel="stylesheet" href="tic-tabs.css">
 <link rel="stylesheet" href="tic-fold.css">
@@ -23,7 +24,7 @@
 <body>
 <header class="top">
   <div class="wrap top-row">
-    <div class="brand"><strong>Cordon</strong><span class="muted">The Intelligence Company</span></div>
+    <div class="brand"><strong>Cordon</strong><a class="tic-layer" href="https://theintelligence.company/#layers">Air layer</a><span class="muted">The Intelligence Company</span></div>
     <nav class="top-nav">
       <a href="https://theintelligence.company/">All programs</a>
       <a href="data/feed.geojson">Feed</a>
@@ -40,6 +41,8 @@
     <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's, Canada's and New Zealand's travel advice, CDC travel health notices, European
       aviation conflict-zone bulletins, the FAA's flight prohibitions and advisories for foreign airspace, US navigational warnings to mariners, and the FAA's ground stops, ground delay
       programs, airport closures and temporary flight restrictions, collected every hour from the issuing authorities.</p>
+    <p class="tic-reading" id="reading" aria-live="polite"></p>
+    <div class="tiles tic-tiles" id="tiles"></div>
   </section>
 
   <section class="mapcard" aria-label="Map">

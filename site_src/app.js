@@ -292,7 +292,36 @@
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new restriction of some impact"]));
   }
 
+  // Header row (tic-shell): counts from this build. A source that is not fresh is withheld from the map, so its tile
+  // says "no current data" rather than showing a zero that would read as nothing in force.
+  function header(d) {
+    var level4 = d.advisories.filter(function (a) { return a.level === 4; }).length;
+    var posts = d.advisories.filter(function (a) { return POSTURE[a.posture]; }).length;
+    var us = fresh(d, "state-travel-advisories");
+    var tiles = [
+      ["US Level 4 (Do Not Travel)", us ? level4 : null],
+      ["US embassies on departure or suspended", us ? posts : null],
+      ["EASA conflict-zone bulletins", fresh(d, "easa-czib") ? d.czibs.length : null],
+      ["FAA prohibitions and advisories abroad", fresh(d, "faa-prohibitions-notices") ? d.faaprn.length : null],
+      ["Warnings to mariners", fresh(d, "nga-navwarnings") ? d.warnings.length : null],
+      ["Changes in the last 30 days", d.changes.length]
+    ];
+    document.getElementById("tiles").replaceChildren.apply(document.getElementById("tiles"), tiles.map(function (t) {
+      return h("div", { "class": "tile" }, [h("span", { "class": "k" }, [t[0]]),
+        h("span", { "class": "v" }, [t[1] === null ? "\u2014" : String(t[1])]),
+        t[1] === null ? h("span", { "class": "k" }, ["No current data"]) : ""]);
+    }));
+    var kids = [h("span", { "class": "tic-reading-k" }, ["Today\u2019s reading"])];
+    if (us) {
+      kids.push(h("b", {}, [String(level4)]), (level4 === 1 ? " place is" : " places are") + " at US Level 4 (Do Not Travel) and ",
+        h("b", {}, [String(posts)]), (posts === 1 ? " US embassy is" : " US embassies are") + " on departure status or suspended. ");
+    }
+    kids.push(h("b", {}, [String(d.changes.length)]), (d.changes.length === 1 ? " change" : " changes") + " in the last 30 days.");
+    document.getElementById("reading").replaceChildren.apply(document.getElementById("reading"), kids);
+  }
+
   function lists(d) {
+    header(d);
     destination(d);
     var post = d.advisories.filter(function (a) { return POSTURE[a.posture]; });
     document.getElementById("posture").replaceChildren(post.length ? table(["Country", "Status", "What the advisory says"],
