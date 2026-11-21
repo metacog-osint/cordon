@@ -5295,184 +5295,6 @@
     }
    }
   },
-  "6/7665": {
-   "notam_id": "6/7665",
-   "type": "AIR SHOWS/SPORTS",
-   "facility": "ZJX",
-   "state": "FL",
-   "description": "Apalachicola, FL, Saturday, November 21, 2026 UTC",
-   "created": "11/16/2026",
-   "first_seen": "2026-11-16T12:10:33Z",
-   "subject": "6/7665",
-   "detail": {
-    "name": "2026 Apalachicola Airshow",
-    "issued": "2026-11-16T12:01:33Z",
-    "effective": "2026-11-21T17:30:00Z",
-    "expires": "2026-11-21T20:30:00Z",
-    "regulation": "91.145",
-    "purpose": "Forgotten Coast Freedom Festival Airshow Aerial Demonstration",
-    "city": "Apalachicola",
-    "floor": "surface",
-    "ceiling": "5500 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/7665 ZJX FL..AIRSPACE APALACHICOLA, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.145, MANAGEMENT OF ACFT OPS IN THE VICINITY OF AERIAL DEMONSTRATIONS AND MAJOR SPORTING EVENTS, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 3NM RADIUS OF 294332N0850151W (SZW213060.3) SFC-5500FT DUE TO FORGOTTEN COAST FREEDOM FESTIVAL AIRSHOW AERIAL DEMONSTRATION. UNLESS AUTHORIZED BY ATC. THE AIRBOSS, JIM CRUM, TEL 229-834-2599, IS THE POINT OF CONTACT. THE TYNDALL /PAM/ APP, TEL 850-283-2900, IS THE CDN FAC. 2611211730-2611212030",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -85.03083,
-        29.77568
-       ],
-       [
-        -85.02086,
-        29.77492
-       ],
-       [
-        -85.01118,
-        29.77265
-       ],
-       [
-        -85.00211,
-        29.76896
-       ],
-       [
-        -84.99391,
-        29.76395
-       ],
-       [
-        -84.98683,
-        29.75777
-       ],
-       [
-        -84.98109,
-        29.75061
-       ],
-       [
-        -84.97686,
-        29.74269
-       ],
-       [
-        -84.97427,
-        29.73425
-       ],
-       [
-        -84.97341,
-        29.72554
-       ],
-       [
-        -84.97428,
-        29.71684
-       ],
-       [
-        -84.97688,
-        29.7084
-       ],
-       [
-        -84.98111,
-        29.70048
-       ],
-       [
-        -84.98686,
-        29.69333
-       ],
-       [
-        -84.99393,
-        29.68715
-       ],
-       [
-        -85.00213,
-        29.68214
-       ],
-       [
-        -85.0112,
-        29.67845
-       ],
-       [
-        -85.02087,
-        29.67619
-       ],
-       [
-        -85.03083,
-        29.67543
-       ],
-       [
-        -85.0408,
-        29.67619
-       ],
-       [
-        -85.05047,
-        29.67845
-       ],
-       [
-        -85.05953,
-        29.68214
-       ],
-       [
-        -85.06773,
-        29.68715
-       ],
-       [
-        -85.07481,
-        29.69333
-       ],
-       [
-        -85.08055,
-        29.70048
-       ],
-       [
-        -85.08479,
-        29.7084
-       ],
-       [
-        -85.08738,
-        29.71684
-       ],
-       [
-        -85.08826,
-        29.72554
-       ],
-       [
-        -85.08739,
-        29.73425
-       ],
-       [
-        -85.08481,
-        29.74269
-       ],
-       [
-        -85.08058,
-        29.75061
-       ],
-       [
-        -85.07484,
-        29.75777
-       ],
-       [
-        -85.06776,
-        29.76395
-       ],
-       [
-        -85.05956,
-        29.76896
-       ],
-       [
-        -85.05048,
-        29.77265
-       ],
-       [
-        -85.04081,
-        29.77492
-       ],
-       [
-        -85.03083,
-        29.77568
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7761": {
    "notam_id": "6/7761",
    "type": "UAS PUBLIC GATHERING",
@@ -10525,6 +10347,21 @@
    "first_seen": "2026-11-15T23:57:59Z",
    "subject": "6/7641",
    "left_at": "2026-11-21T02:10:31Z"
+  },
+  "6/7665": {
+   "type": "AIR SHOWS/SPORTS",
+   "state": "FL",
+   "bbox": [
+    -85.0883,
+    29.6754,
+    -84.9734,
+    29.7757
+   ],
+   "area_km2": 96.2,
+   "ceiling_ft": 5500,
+   "first_seen": "2026-11-16T12:10:33Z",
+   "subject": "6/7665",
+   "left_at": "2026-11-21T20:40:33Z"
   },
   "6/7672": {
    "type": "SECURITY",
