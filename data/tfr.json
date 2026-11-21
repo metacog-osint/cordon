@@ -6007,184 +6007,6 @@
     }
    }
   },
-  "6/7765": {
-   "notam_id": "6/7765",
-   "type": "UAS PUBLIC GATHERING",
-   "facility": "ZID",
-   "state": "IN",
-   "description": "Indianapolis, IN, Friday, November 20, 2026 through Saturday, November 21, 2026 UTC",
-   "created": "11/16/2026",
-   "first_seen": "2026-11-16T16:40:32Z",
-   "subject": "6/7765",
-   "detail": {
-    "name": "2026-44812-CSA-0136 IND IU v UK at Lucas Oil",
-    "issued": "2026-11-16T16:33:24Z",
-    "effective": "2026-11-20T22:00:00Z",
-    "expires": "2026-11-21T04:00:00Z",
-    "regulation": "44812",
-    "purpose": "the IU v UK Basketball game at Lucas Oil Stadium under Sec 44812 c(1)",
-    "city": "Indianapolis",
-    "floor": "surface",
-    "ceiling": "400 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/7765 ZID IN..AIRSPACE INDIANAPOLIS, IN..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1NM RADIUS OF 394536N0860950W (VHP108010.0) SFC-400FT AGL DUE TO THE IU V UK BASKETBALL GAME AT LUCAS OIL STADIUM UNDER SEC 44812 C(1). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC LE POC FOR AUTH AND COORDINATION TO OPERATE WITHIN TFR. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C. SECTION 130I AND 6 U.S.C. SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS), OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE INDIANAPOLIS METROPOLITAN POLICE DEPARTMENT , DET MICHAEL MANN, TEL 260-403-7069, IS THE POINT OF CONTACT. 2611202200-2611210400",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -86.16378,
-        39.77674
-       ],
-       [
-        -86.16002,
-        39.77648
-       ],
-       [
-        -86.15638,
-        39.77573
-       ],
-       [
-        -86.15297,
-        39.7745
-       ],
-       [
-        -86.14988,
-        39.77283
-       ],
-       [
-        -86.14722,
-        39.77078
-       ],
-       [
-        -86.14506,
-        39.76839
-       ],
-       [
-        -86.14347,
-        39.76576
-       ],
-       [
-        -86.14249,
-        39.76295
-       ],
-       [
-        -86.14217,
-        39.76005
-       ],
-       [
-        -86.14249,
-        39.75716
-       ],
-       [
-        -86.14347,
-        39.75435
-       ],
-       [
-        -86.14506,
-        39.75171
-       ],
-       [
-        -86.14722,
-        39.74933
-       ],
-       [
-        -86.14989,
-        39.74728
-       ],
-       [
-        -86.15297,
-        39.74561
-       ],
-       [
-        -86.15639,
-        39.74438
-       ],
-       [
-        -86.16003,
-        39.74363
-       ],
-       [
-        -86.16378,
-        39.74338
-       ],
-       [
-        -86.16753,
-        39.74363
-       ],
-       [
-        -86.17117,
-        39.74438
-       ],
-       [
-        -86.17458,
-        39.74561
-       ],
-       [
-        -86.17767,
-        39.74728
-       ],
-       [
-        -86.18033,
-        39.74933
-       ],
-       [
-        -86.18249,
-        39.75171
-       ],
-       [
-        -86.18409,
-        39.75435
-       ],
-       [
-        -86.18506,
-        39.75716
-       ],
-       [
-        -86.18539,
-        39.76005
-       ],
-       [
-        -86.18506,
-        39.76295
-       ],
-       [
-        -86.18409,
-        39.76576
-       ],
-       [
-        -86.1825,
-        39.76839
-       ],
-       [
-        -86.18034,
-        39.77078
-       ],
-       [
-        -86.17767,
-        39.77283
-       ],
-       [
-        -86.17459,
-        39.7745
-       ],
-       [
-        -86.17117,
-        39.77573
-       ],
-       [
-        -86.16753,
-        39.77648
-       ],
-       [
-        -86.16378,
-        39.77674
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/7767": {
    "notam_id": "6/7767",
    "type": "UAS PUBLIC GATHERING",
@@ -11066,6 +10888,21 @@
    "ceiling_ft": 4999,
    "first_seen": "2026-11-16T16:40:32Z",
    "left_at": "2026-11-18T14:40:36Z"
+  },
+  "6/7765": {
+   "type": "UAS PUBLIC GATHERING",
+   "state": "IN",
+   "bbox": [
+    -86.1854,
+    39.7434,
+    -86.1422,
+    39.7767
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 400,
+   "first_seen": "2026-11-16T16:40:32Z",
+   "subject": "6/7765",
+   "left_at": "2026-11-21T04:10:31Z"
   },
   "6/7766": {
    "type": "UAS PUBLIC GATHERING",
