@@ -10,21 +10,6 @@
    "updated": "2026-11-13T23:29:10Z",
    "notam": "!SNA 11/020 SNA AD AP CLSD DLY 0730-1415 2611150730-2611211415",
    "issued": "2026-11-13T23:25:00Z"
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "SEA",
-   "airport_name": "Seattle-Tacoma International",
-   "start": "2026-11-21T04:00:00Z",
-   "end": "2026-11-21T05:59:00Z",
-   "updated": "2026-11-21T01:56:36Z",
-   "reason": "runway construction",
-   "center": "ZSE",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=13&adv_date=11212026&facId=SEA&title=ATCSCC ADVZY 013 SEA/ZSE 11/21/2026 CDM GROUND DELAY PROGRAM&titleDate=11/21/2026",
-   "included_facilities": 5,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 57.0,
-   "max_delay_min": 88.0
   }
  ],
  "airports": {
