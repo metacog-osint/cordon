@@ -120,6 +120,15 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "HT",
+    "title": "Weather Alert: U.S. Embassy Port-au-Prince, Haiti (October 23, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNmlFS25kZVJDNnIyTEVidExhdGtZVE9Kb21jUkVrRWJFUThOSHlBWERXLWNrbDRRZ2Q2OHFwdGkweXpFZGlza2Q4Z0dsUEl1QnV0TE5CVjdyY1NVRlBiVmV2NHBsUmhYUzlURHc5d2ZEUlhob0prNFM1RTliMDFwR3hfaXMwRzlJWFgwZWRkZFpiQQ?oc=5",
+    "published_at": "2026-10-23T07:00:00Z",
+    "type": "weather",
+    "via": "google-news",
+    "post_url": "https://ht.usembassy.gov/category/alert/"
    }
   ],
   "IL": [
