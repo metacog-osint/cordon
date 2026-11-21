@@ -54,6 +54,20 @@
    "included_facilities": 10,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "YYZ",
+   "airport_name": "Toronto Pearson International Airport",
+   "start": "2026-11-21T14:30:00Z",
+   "end": "2026-11-21T16:00:00Z",
+   "updated": "2026-11-21T15:01:56Z",
+   "reason": "low visibility",
+   "center": "CZY",
+   "advisory_url": null,
+   "included_facilities": 10,
+   "included_flights": null,
+   "probability_of_extension": null
   }
  ],
  "airports": {
@@ -121,6 +135,11 @@
    -80.0928,
    26.6857,
    "President Donald J Trump International"
+  ],
+  "EWR": [
+   -74.1745,
+   40.6895,
+   "Newark International"
   ],
   "FLL": [
    -80.1506,
