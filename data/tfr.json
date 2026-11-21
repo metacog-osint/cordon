@@ -6607,72 +6607,6 @@
     }
    }
   },
-  "6/8635": {
-   "notam_id": "6/8635",
-   "type": "SPECIAL",
-   "facility": "ZLA",
-   "state": "USA",
-   "description": "USA, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
-   "created": "11/18/2026",
-   "first_seen": "2026-11-18T18:40:32Z",
-   "subject": "6/8352",
-   "detail": {
-    "name": "6/8635",
-    "issued": "2026-11-18T18:07:15Z",
-    "effective": "2026-11-21T22:05:00Z",
-    "expires": "2026-11-22T00:05:00Z",
-    "regulation": "SPECIAL",
-    "purpose": "DUE TO SPACE OPS",
-    "city": null,
-    "floor": "surface",
-    "ceiling": "5000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/8635 ZLA CA..AIRSPACE OCEANSIDE, CA.. AIRSPACE SPACE REENTRY/RECOVERY OPS ADVISORY. WI AN AREA DEFINED AS 330700N1175000W (OCN236022.2) TO 330500N1175400W (OCN234026.1) TO 325600N1175400W (OCN218030.5) TO 325300N1175000W (OCN210030) TO 325300N1174300W (MZB269025.6) TO 325700N1173800W (OCN197020.5) TO 330500N1173800W (OCN214014.4) TO 330700N1174100W (OCN226015.3) TO POINT OF ORIGIN SFC-5000FT MSL EFFECTIVE 2611212205 UTC (1405 LOCAL 11/21/26) UNTIL 2611220005 UTC (1605 LOCAL 11/21/26). SPACE OPS AREA: ACFT ADVISED TO AVOID DEFINED AREA DUE TO SPACE OPS. A. FLT LIMITATION IN THE PROXIMITY OF SPACE FLT OPS, OPS BY FAA CERT PILOTS OR U.S. REG ACFT ARE PROHIBITED WI THE DEFINED AIRSPACE. B. ACFT SUPPORTING THE RECOVERY OF THE SPACE VEHICLE ARE EXEMPT FM THIS ADVISORY. C. PILOTS MUST CONSULT ALL NOTAMS REGARDING THIS OPS AND MAY CONTACT ZLA FOR CURRENT AIRSPACE STATUS. LOS ANGELES /ZLA/ ARTCC, TEL 661-265-8205, IS THE FAA CDN FACILITY. 2611212205-2611220005",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -117.83333,
-        33.11667
-       ],
-       [
-        -117.9,
-        33.08333
-       ],
-       [
-        -117.9,
-        32.93333
-       ],
-       [
-        -117.83333,
-        32.88333
-       ],
-       [
-        -117.71667,
-        32.88333
-       ],
-       [
-        -117.63333,
-        32.95
-       ],
-       [
-        -117.63333,
-        33.08333
-       ],
-       [
-        -117.68333,
-        33.11667
-       ],
-       [
-        -117.83333,
-        33.11667
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8638": {
    "notam_id": "6/8638",
    "type": "SPECIAL",
@@ -10900,6 +10834,21 @@
    "first_seen": "2026-11-18T15:10:36Z",
    "subject": "6/8596",
    "left_at": "2026-11-20T19:10:40Z"
+  },
+  "6/8635": {
+   "type": "SPECIAL",
+   "state": "USA",
+   "bbox": [
+    -117.9,
+    32.8833,
+    -117.6333,
+    33.1167
+   ],
+   "area_km2": 576.3,
+   "ceiling_ft": 5000,
+   "first_seen": "2026-11-18T18:40:32Z",
+   "subject": "6/8352",
+   "left_at": "2026-11-21T12:10:32Z"
   },
   "6/8654": {
    "type": "SPECIAL",
