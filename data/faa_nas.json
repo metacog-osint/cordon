@@ -3,6 +3,16 @@
  "programs": [
   {
    "kind": "closure",
+   "airport": "PNS",
+   "airport_name": "Pensacola Regional",
+   "start": "2026-11-21T06:00:00Z",
+   "end": "2026-11-21T11:00:00Z",
+   "updated": "2026-11-19T22:43:07Z",
+   "notam": "!PNS 11/069 PNS AD AP CLSD EXC HEL OPS 2611210600-2611211100",
+   "issued": "2026-11-19T22:40:00Z"
+  },
+  {
+   "kind": "closure",
    "airport": "SNA",
    "airport_name": "John Wayne Airport-Orange County",
    "start": "2026-11-15T07:30:00Z",
