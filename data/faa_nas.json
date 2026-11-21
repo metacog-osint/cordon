@@ -13,6 +13,21 @@
   },
   {
    "kind": "ground_delay",
+   "airport": "ORD",
+   "airport_name": "Chicago OHare International",
+   "start": "2026-11-21T01:00:00Z",
+   "end": "2026-11-21T05:59:00Z",
+   "updated": "2026-11-21T00:10:46Z",
+   "reason": "other",
+   "center": "ZAU",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=6&adv_date=11212026&facId=ORD&title=ATCSCC ADVZY 006 ORD/ZAU 11/21/2026 CDM GROUND DELAY PROGRAM&titleDate=11/21/2026",
+   "included_facilities": 4,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 51.0,
+   "max_delay_min": 100.0
+  },
+  {
+   "kind": "ground_delay",
    "airport": "SAN",
    "airport_name": "San Diego-Lindbergh Field",
    "start": "2026-11-20T17:00:00Z",
