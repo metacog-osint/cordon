@@ -1,17 +1,6 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [
-  {
-   "kind": "closure",
-   "airport": "HTS",
-   "airport_name": "Tri-State/Milton J Ferguson Field",
-   "start": "2026-11-21T12:00:00Z",
-   "end": "2026-11-21T22:00:00Z",
-   "updated": "2026-11-20T12:56:50Z",
-   "notam": "!HTS 11/044 HTS AD AP CLSD EXC 20MIN PPR 122.950/304-453-6165 2611211200-2611212200",
-   "issued": "2026-11-20T12:56:00Z"
-  }
- ],
+ "programs": [],
  "airports": {
   "ABQ": [
    -106.6129,
