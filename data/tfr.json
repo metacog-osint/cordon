@@ -9683,6 +9683,7 @@
    "description": "MAYPORT, FL, Monday, November 23, 2026 through Thursday, November 26, 2026 Local",
    "created": "11/21/2026",
    "first_seen": "2026-11-21T16:40:34Z",
+   "subject": "6/9276",
    "detail": {
     "name": "261123-26 Mayport Triton ZJX",
     "issued": "2026-11-21T16:12:47Z",
@@ -10028,8 +10029,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9276"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
