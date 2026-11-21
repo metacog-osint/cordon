@@ -43,20 +43,6 @@
   },
   {
    "kind": "ground_stop",
-   "airport": "YOW",
-   "airport_name": "Ottawa International Airport",
-   "start": "2026-11-21T15:09:00Z",
-   "end": "2026-11-21T16:30:00Z",
-   "updated": "2026-11-21T15:22:50Z",
-   "reason": "low visibility",
-   "center": "CZU",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=6011&adv_date=11212026&facId=YOW&title=ATCSCC ADVZY 011 CYOW/CZU 11/21/2026 CDM GROUND STOP&titleDate=11/21/2026",
-   "included_facilities": 10,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
-  },
-  {
-   "kind": "ground_stop",
    "airport": "YYZ",
    "airport_name": "Toronto Pearson International Airport",
    "start": "2026-11-21T14:30:00Z",
