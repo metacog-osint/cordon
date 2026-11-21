@@ -9559,6 +9559,56 @@
     }
    }
   },
+  "6/9306": {
+   "notam_id": "6/9306",
+   "type": "HAZARDS",
+   "facility": "ZDC",
+   "state": "VA",
+   "description": "20NM W LEXINGTON, VA, Sunday, November 22, 2026 through Sunday, November 29, 2026 UTC",
+   "created": "11/21/2026",
+   "first_seen": "2026-11-21T23:40:40Z",
+   "detail": {
+    "name": "6/9306",
+    "issued": "2026-11-21T23:27:01Z",
+    "effective": "2026-11-22T12:00:00Z",
+    "expires": "2026-11-29T23:00:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "20NM W LEXINGTON",
+    "floor": "surface",
+    "ceiling": "4000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9306 ZDC VA..AIRSPACE 20NM W LEXINGTON, VA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 375200N0795230W (MOL272036.5) TO 375100N0795000W (MOL270034.6) TO 374830N0795200W (MOL266036.4) TO 374900N0795400W (MOL268037.9) TO POINT OF ORIGIN SFC-4000FT VIRGINIA INTERAGENCY COORDINATION CENTER TEL 434-423-2002 OR FREQ 123.1250 WHITE OAK FLAT FIRE IS IN CHARGE OF THE OPERATION. WASHINGTON/ZDC/ARTCC TEL 703-771-3470 IS THE FAA CDN FAC. DLY 1200-2300 2611221200-2611292300EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -79.875,
+        37.86667
+       ],
+       [
+        -79.83333,
+        37.85
+       ],
+       [
+        -79.86667,
+        37.80833
+       ],
+       [
+        -79.9,
+        37.81667
+       ],
+       [
+        -79.875,
+        37.86667
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9306"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
