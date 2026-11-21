@@ -10039,6 +10039,7 @@
    "description": "ATIGUN PASS, AK, Saturday, November 21, 2026 through Sunday, November 22, 2026 UTC",
    "created": "11/21/2026",
    "first_seen": "2026-11-21T18:40:36Z",
+   "subject": "6/9287",
    "detail": {
     "name": "6/9287",
     "issued": "2026-11-21T18:28:38Z",
@@ -10206,8 +10207,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9287"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
