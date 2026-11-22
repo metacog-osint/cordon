@@ -3,6 +3,20 @@
  "programs": [
   {
    "kind": "ground_stop",
+   "airport": "ATL",
+   "airport_name": "Hartsfield-Jackson Atlanta International",
+   "start": "2026-11-22T12:46:00Z",
+   "end": "2026-11-22T14:00:00Z",
+   "updated": "2026-11-22T12:59:11Z",
+   "reason": "other",
+   "center": "ZTL",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=42&adv_date=11222026&facId=ATL&title=ATCSCC ADVZY 042 ATL/ZTL 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
+   "included_facilities": 14,
+   "included_flights": "CARRIER DAL ONLY",
+   "probability_of_extension": "MEDIUM"
+  },
+  {
+   "kind": "ground_stop",
    "airport": "HOU",
    "airport_name": "Houston William P Hobby",
    "start": "2026-11-22T12:18:00Z",
@@ -20,11 +34,11 @@
    "airport": "LGA",
    "airport_name": "La Guardia",
    "start": "2026-11-22T11:34:00Z",
-   "end": "2026-11-22T12:45:00Z",
-   "updated": "2026-11-22T11:46:04Z",
+   "end": "2026-11-22T13:15:00Z",
+   "updated": "2026-11-22T12:44:00Z",
    "reason": "low visibility",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=30&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 030 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=39&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 039 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
    "included_facilities": 4,
    "included_flights": null,
    "probability_of_extension": "MEDIUM"
