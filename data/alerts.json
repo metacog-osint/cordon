@@ -140,15 +140,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://il.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "IL",
-    "title": "Security Alert: U.S. Embassy Jerusalem – October 23, 2026",
-    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNblJHRDVKQVpubl9rVlplMTlWYjlJS3pTRnA3d000X1llekIzeWFZOW9ZT09nSU1GemtQNVVYb0pRc2p4NFg1M3dneEM2ZEU1UlVrMjViMUZzUUF4czRNVUY5VmF1VFVqMjhmNGc5Y0gyaUlWN2hJSnlnTEtEaHE3OHAxakg?oc=5",
-    "published_at": "2026-10-23T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://il.usembassy.gov/category/alert/"
    }
   ],
   "IN": [
@@ -293,15 +284,6 @@
     "title": "Demonstration Alert: Protests to Cause Traffic Disruptions on Monday (October 26, 2026)",
     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWDlyNEJzbXBuTGs0T3MyVWZQTFZFRVpkZVFyd3BjODNCenBFblNUM2ZNanpwcUduWnNGeEJuUVd4WFJISm5tclg5MVoyM05LdlphNlVub1pDa1dsVUprbFJ2TXpOX1VIVnBOOGNNeXVSYWpQdm5Sck1XOHpkMU41eTdXM1BzYUFWRWlsRW5CUW5aYmxZUFMwcUlkcHZtQVV3enoyendyTnF3RVNJQWc?oc=5",
     "published_at": "2026-10-26T07:00:00Z",
-    "type": "demonstration",
-    "via": "google-news",
-    "post_url": "https://mx.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "MX",
-    "title": "Demonstration Alert: Demonstrations in Guadalajara Area on October 23 and 25, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUVFpV0kwdzc4cnJEZXQtbFdzU2RnX1NyOTNJcEQ2TW5DUjRyeXZmOFg4ZDNrMEhDTGcyck9PeEd5cERqRVVvVlRsUF82SjNiZW9pYUdXUUgwZFAyRTB1cjBZSC1kOHdCYWpzeEd6cHJlSy1sNzRTX1pPTVR4Y2FKRlhTaWJlaElIZkszTzFoaU55V1R1Z0k3YmtPdmNjWFV6MlJNZFlvdGd2dw?oc=5",
-    "published_at": "2026-10-23T07:00:00Z",
     "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
