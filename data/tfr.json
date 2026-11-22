@@ -6387,184 +6387,6 @@
     "geometry": null
    }
   },
-  "6/8981": {
-   "notam_id": "6/8981",
-   "type": "HAZARDS",
-   "facility": "ZME",
-   "state": "MS",
-   "description": "8NM NE OXFORD, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T14:10:36Z",
-   "subject": "6/8981",
-   "detail": {
-    "name": "6/8981",
-    "issued": "2026-11-19T14:05:02Z",
-    "effective": "2026-11-20T17:00:00Z",
-    "expires": "2026-11-22T02:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "8NM NE OXFORD",
-    "floor": "surface",
-    "ceiling": "1800 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/8981 ZME MS..AIRSPACE 8NM NE OXFORD, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 2NM RADIUS OF 342930N0892400W (HLI161017.4) SFC-1800FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF MISSISSIPPI COORDINATION CENTER ARE AUTH IN THE AIRSPACE. MISSISSIPPI COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. DLY 1700-0200 2611201700-2611220200EST",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -89.4,
-        34.52506
-       ],
-       [
-        -89.39299,
-        34.52455
-       ],
-       [
-        -89.3862,
-        34.52304
-       ],
-       [
-        -89.37983,
-        34.52058
-       ],
-       [
-        -89.37407,
-        34.51724
-       ],
-       [
-        -89.3691,
-        34.51313
-       ],
-       [
-        -89.36507,
-        34.50836
-       ],
-       [
-        -89.3621,
-        34.50308
-       ],
-       [
-        -89.36028,
-        34.49746
-       ],
-       [
-        -89.35967,
-        34.49166
-       ],
-       [
-        -89.36029,
-        34.48586
-       ],
-       [
-        -89.36211,
-        34.48024
-       ],
-       [
-        -89.36508,
-        34.47497
-       ],
-       [
-        -89.36912,
-        34.4702
-       ],
-       [
-        -89.37409,
-        34.46609
-       ],
-       [
-        -89.37984,
-        34.46275
-       ],
-       [
-        -89.38621,
-        34.46029
-       ],
-       [
-        -89.393,
-        34.45878
-       ],
-       [
-        -89.4,
-        34.45828
-       ],
-       [
-        -89.407,
-        34.45878
-       ],
-       [
-        -89.41379,
-        34.46029
-       ],
-       [
-        -89.42016,
-        34.46275
-       ],
-       [
-        -89.42591,
-        34.46609
-       ],
-       [
-        -89.43088,
-        34.4702
-       ],
-       [
-        -89.43492,
-        34.47497
-       ],
-       [
-        -89.43789,
-        34.48024
-       ],
-       [
-        -89.43971,
-        34.48586
-       ],
-       [
-        -89.44033,
-        34.49166
-       ],
-       [
-        -89.43972,
-        34.49746
-       ],
-       [
-        -89.4379,
-        34.50308
-       ],
-       [
-        -89.43493,
-        34.50836
-       ],
-       [
-        -89.4309,
-        34.51313
-       ],
-       [
-        -89.42593,
-        34.51724
-       ],
-       [
-        -89.42017,
-        34.52058
-       ],
-       [
-        -89.4138,
-        34.52304
-       ],
-       [
-        -89.40701,
-        34.52455
-       ],
-       [
-        -89.4,
-        34.52506
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8983": {
    "notam_id": "6/8983",
    "type": "VIP",
@@ -7177,110 +6999,6 @@
        [
         -95.37917,
         29.77865
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/9013": {
-   "notam_id": "6/9013",
-   "type": "HAZARDS",
-   "facility": "ZME",
-   "state": "MS",
-   "description": "8NM NW OF FOREST, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T17:10:38Z",
-   "subject": "6/9013",
-   "detail": {
-    "name": "6/9013",
-    "issued": "2026-11-19T16:26:46Z",
-    "effective": "2026-11-20T16:00:00Z",
-    "expires": "2026-11-22T02:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "8NM NW OF FOREST",
-    "floor": "surface",
-    "ceiling": "1800 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9013 ZME MS..AIRSPACE 8NM NW OF FOREST, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 322400N0893330W (MHZ095027.5) TO 322730N0893330W (MHZ088027.5) TO 322730N0893900W (MHZ087022.8) TO 322500N0893830W (MHZ093023.2) TO POINT OF ORIGIN SFC-1800FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF MISSISSIPPI INTERAGENCY COORDINATION CENTER ARE AUTH IN THE AIRSPACE. MISSISSIPPI INTERAGENCY COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. DLY 1600-0200 2611201600-2611220200EST",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -89.55833,
-        32.4
-       ],
-       [
-        -89.55833,
-        32.45833
-       ],
-       [
-        -89.65,
-        32.45833
-       ],
-       [
-        -89.64167,
-        32.41667
-       ],
-       [
-        -89.55833,
-        32.4
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/9014": {
-   "notam_id": "6/9014",
-   "type": "HAZARDS",
-   "facility": "ZME",
-   "state": "MS",
-   "description": "2NM NW FOREST, MS, Friday, November 20, 2026 through Sunday, November 22, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T16:40:33Z",
-   "subject": "6/9014",
-   "detail": {
-    "name": "6/9014",
-    "issued": "2026-11-19T16:27:01Z",
-    "effective": "2026-11-20T16:00:00Z",
-    "expires": "2026-11-22T02:00:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "2NM NW FOREST",
-    "floor": "surface",
-    "ceiling": "1800 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9014 ZME MS..AIRSPACE 2NM NW FOREST, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) TO PROTECT PERSONS AND PROPERTY ON THE SFC OR IN THE AIR FM A HAZARD ASSOCIATED WITH AN INCIDENT ON THE SFC WI AN AREA DEFINED AS 322300N0893400W (MHZ097027.2) TO 322400N0893330W (MHZ095027.5) TO 322400N0893030W (MHZ095030.0) TO 322100N0893100W (MHZ101030.0) TO 322130N0893430W (MHZ101027.0) TO POINT OF ORIGIN SFC-1800FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF MISSISSIPPI INTERAGENCY COORDINATION CENTER ARE AUTH IN THE AIRSPACE. MISSISSIPPI INTERAGENCY COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. DLY 1600-0200 2611201600-2611220200EST",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -89.56667,
-        32.38333
-       ],
-       [
-        -89.55833,
-        32.4
-       ],
-       [
-        -89.50833,
-        32.4
-       ],
-       [
-        -89.51667,
-        32.35
-       ],
-       [
-        -89.575,
-        32.35833
-       ],
-       [
-        -89.56667,
-        32.38333
        ]
       ]
      ]
@@ -10224,6 +9942,21 @@
    "subject": "6/8739",
    "left_at": "2026-11-20T18:40:48Z"
   },
+  "6/8981": {
+   "type": "HAZARDS",
+   "state": "MS",
+   "bbox": [
+    -89.4403,
+    34.4583,
+    -89.3597,
+    34.5251
+   ],
+   "area_km2": 42.7,
+   "ceiling_ft": 1800,
+   "first_seen": "2026-11-19T14:10:36Z",
+   "subject": "6/8981",
+   "left_at": "2026-11-22T02:10:35Z"
+  },
   "6/8982": {
    "type": "VIP",
    "state": "VA",
@@ -10238,6 +9971,36 @@
    "first_seen": "2026-11-19T14:40:36Z",
    "subject": "6/8982",
    "left_at": "2026-11-21T21:40:38Z"
+  },
+  "6/9013": {
+   "type": "HAZARDS",
+   "state": "MS",
+   "bbox": [
+    -89.65,
+    32.4,
+    -89.5583,
+    32.4583
+   ],
+   "area_km2": 45.1,
+   "ceiling_ft": 1800,
+   "first_seen": "2026-11-19T17:10:38Z",
+   "subject": "6/9013",
+   "left_at": "2026-11-22T02:10:35Z"
+  },
+  "6/9014": {
+   "type": "HAZARDS",
+   "state": "MS",
+   "bbox": [
+    -89.575,
+    32.35,
+    -89.5083,
+    32.4
+   ],
+   "area_km2": 26.7,
+   "ceiling_ft": 1800,
+   "first_seen": "2026-11-19T16:40:33Z",
+   "subject": "6/9014",
+   "left_at": "2026-11-22T02:10:35Z"
   },
   "6/9062": {
    "type": "HAZARDS",
