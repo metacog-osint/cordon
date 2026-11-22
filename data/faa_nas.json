@@ -20,16 +20,16 @@
    "kind": "ground_delay",
    "airport": "LGA",
    "airport_name": "La Guardia",
-   "start": "2026-11-22T17:00:00Z",
-   "end": "2026-11-23T04:59:00Z",
-   "updated": "2026-11-22T17:09:41Z",
+   "start": "2026-11-22T20:30:00Z",
+   "end": "2026-11-23T07:59:00Z",
+   "updated": "2026-11-22T20:34:21Z",
    "reason": "low visibility",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=87&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 087 LGA/ZNY 11/22/2026 CDM GROUND DELAY PROGRAM&titleDate=11/22/2026",
-   "included_facilities": 26,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=113&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 113 LGA/ZNY 11/22/2026 CDM GROUND DELAY PROGRAM&titleDate=11/22/2026",
+   "included_facilities": 6,
    "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 148.0,
-   "max_delay_min": 362.0
+   "avg_delay_min": 199.0,
+   "max_delay_min": 419.0
   },
   {
    "kind": "ground_delay",
@@ -63,31 +63,17 @@
   },
   {
    "kind": "ground_stop",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-22T18:49:00Z",
-   "end": "2026-11-22T21:00:00Z",
-   "updated": "2026-11-22T19:48:47Z",
-   "reason": "low visibility",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=106&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 106 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
-   "included_facilities": 15,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
-  },
-  {
-   "kind": "ground_stop",
    "airport": "TEB",
    "airport_name": "Teterboro",
-   "start": "2026-11-22T18:59:00Z",
-   "end": "2026-11-22T20:30:00Z",
-   "updated": "2026-11-22T19:13:36Z",
+   "start": "2026-11-22T20:00:00Z",
+   "end": "2026-11-22T21:30:00Z",
+   "updated": "2026-11-22T20:13:45Z",
    "reason": "low ceilings",
    "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=101&adv_date=11222026&facId=TEB&title=ATCSCC ADVZY 101 TEB/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
-   "included_facilities": 15,
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=110&adv_date=11222026&facId=TEB&title=ATCSCC ADVZY 110 TEB/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
+   "included_facilities": 16,
    "included_flights": null,
-   "probability_of_extension": "MEDIUM"
+   "probability_of_extension": "HIGH"
   }
  ],
  "airports": {
