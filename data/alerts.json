@@ -111,15 +111,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, October 25, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVXJ1X1AxeWluYXNwNlZVWXdoYmVOd3A3WTk3d2R6RGtRcFRwQmdPSmlWUHNTanVFWXlPVFV0c2lLT3FKbEEzOGNRTE9DVDgzaXZ0T0dYSC1GS1JMN1dtRFVHajBKajlERjI5Wlk3OXJaMldTdFZ3NGdBV3RTcjFucWVsQnpLMGNncmlpTUJJMll6N2s?oc=5",
-    "published_at": "2026-10-25T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
    }
   ],
   "IL": [
@@ -502,6 +493,17 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://az.usembassy.gov/category/alert/"
+   }
+  ],
+  "BY": [
+   {
+    "iso": "BY",
+    "title": "Security Alert: Holiday Travel, November 13, 2026",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1xd2lRbk5wVzRvd3BqVVFocFlwVGlWeTBpMzBTNklwX3M0RFozeXRNYi1DNHZ4Tk5yUmVmX2Utb0tSQ09lNmdtS0RyX2VJWjR1S1NWQk8ySHRMR0tPTWRRd3lLWWtoMGd2UE5DR0hSbDFvUzFsRXp4c2ZwZ18?oc=5",
+    "published_at": "2026-11-13T08:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://by.usembassy.gov/category/alert/"
    }
   ]
  }
