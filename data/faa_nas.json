@@ -3,6 +3,20 @@
  "programs": [
   {
    "kind": "ground_stop",
+   "airport": "HOU",
+   "airport_name": "Houston William P Hobby",
+   "start": "2026-11-22T12:18:00Z",
+   "end": "2026-11-22T13:30:00Z",
+   "updated": "2026-11-22T12:35:30Z",
+   "reason": "low visibility",
+   "center": "ZHU",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=35&adv_date=11222026&facId=HOU&title=ATCSCC ADVZY 035 HOU/ZHU 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
+   "included_facilities": 2,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
+  },
+  {
+   "kind": "ground_stop",
    "airport": "LGA",
    "airport_name": "La Guardia",
    "start": "2026-11-22T11:34:00Z",
@@ -101,6 +115,11 @@
    -81.8637,
    26.5851,
    "Page Field"
+  ],
+  "HOU": [
+   -95.27667,
+   29.64591,
+   "Houston William P Hobby"
   ],
   "HTS": [
    -82.5558,
