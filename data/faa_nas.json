@@ -15,20 +15,6 @@
    "included_flights": "CONTIGUOUS US DEP CARRIER DAL ONLY",
    "avg_delay_min": 57.0,
    "max_delay_min": 111.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-22T13:06:00Z",
-   "end": "2026-11-22T14:00:00Z",
-   "updated": "2026-11-22T13:21:11Z",
-   "reason": "low visibility",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=48&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 048 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
-   "included_facilities": 3,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
