@@ -18,6 +18,21 @@
   },
   {
    "kind": "ground_delay",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-22T15:07:00Z",
+   "end": "2026-11-23T03:59:00Z",
+   "updated": "2026-11-22T15:39:36Z",
+   "reason": "low visibility",
+   "center": "ZNY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=73&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 073 LGA/ZNY 11/22/2026 CDM GROUND DELAY PROGRAM&titleDate=11/22/2026",
+   "included_facilities": 26,
+   "included_flights": "ALL CONTIGUOUS US DEP",
+   "avg_delay_min": 61.0,
+   "max_delay_min": 123.0
+  },
+  {
+   "kind": "ground_delay",
    "airport": "SAN",
    "airport_name": "San Diego-Lindbergh Field",
    "start": "2026-11-22T18:00:00Z",
@@ -30,20 +45,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 33.0,
    "max_delay_min": 75.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-22T14:50:00Z",
-   "end": "2026-11-22T16:15:00Z",
-   "updated": "2026-11-22T15:07:04Z",
-   "reason": "low visibility",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=69&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 069 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
-   "included_facilities": 10,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
