@@ -3,21 +3,6 @@
  "programs": [
   {
    "kind": "ground_delay",
-   "airport": "EWR",
-   "airport_name": "Newark International",
-   "start": "2026-11-22T18:00:00Z",
-   "end": "2026-11-23T04:59:00Z",
-   "updated": "2026-11-22T17:54:44Z",
-   "reason": "low ceilings",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=94&adv_date=11222026&facId=EWR&title=ATCSCC ADVZY 094 EWR/ZNY 11/22/2026 CDM GROUND DELAY PROGRAM&titleDate=11/22/2026",
-   "included_facilities": 26,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 105.0,
-   "max_delay_min": 355.0
-  },
-  {
-   "kind": "ground_delay",
    "airport": "LGA",
    "airport_name": "La Guardia",
    "start": "2026-11-23T00:00:00Z",
@@ -30,20 +15,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 139.0,
    "max_delay_min": 361.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "TEB",
-   "airport_name": "Teterboro",
-   "start": "2026-11-22T21:58:00Z",
-   "end": "2026-11-22T23:30:00Z",
-   "updated": "2026-11-22T22:16:37Z",
-   "reason": "low ceilings",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=126&adv_date=11222026&facId=TEB&title=ATCSCC ADVZY 126 TEB/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
-   "included_facilities": 16,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
