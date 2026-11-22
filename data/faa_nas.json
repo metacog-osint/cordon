@@ -1,17 +1,6 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [
-  {
-   "kind": "closure",
-   "airport": "PNS",
-   "airport_name": "Pensacola Regional",
-   "start": "2026-11-22T06:00:00Z",
-   "end": "2026-11-22T11:00:00Z",
-   "updated": "2026-11-19T22:43:07Z",
-   "notam": "!PNS 11/070 PNS AD AP CLSD EXC HEL OPS 2611220600-2611221100",
-   "issued": "2026-11-19T22:41:00Z"
-  }
- ],
+ "programs": [],
  "airports": {
   "ABQ": [
    -106.6129,
