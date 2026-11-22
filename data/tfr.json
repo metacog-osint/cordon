@@ -5651,184 +5651,6 @@
     }
    }
   },
-  "6/8034": {
-   "notam_id": "6/8034",
-   "type": "SECURITY",
-   "facility": "ZDC",
-   "state": "VA",
-   "description": "NORFOLK, VA, Saturday, November 21, 2026 through Saturday, November 21, 2026 Local",
-   "created": "11/17/2026",
-   "first_seen": "2026-11-17T01:10:34Z",
-   "subject": "6/8034",
-   "detail": {
-    "name": "261121 Grand Illumination Parade Norfolk, VA DHS - UAS Only",
-    "issued": "2026-11-17T00:55:28Z",
-    "effective": "2026-11-21T21:00:00Z",
-    "expires": "2026-11-22T04:59:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "NORFOLK",
-    "floor": "surface",
-    "ceiling": "400 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/8034 ZDC VA..AIRSPACE NORFOLK, VA..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 21, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 365055N0761728W (ORF246005.1) SFC-400FT AGL EFFECTIVE 2611212100 UTC (1600 LOCAL 11/21/26) UNTIL 2611220459 UTC (2359 LOCAL 11/21/26). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA HTTPS://WAIVERS.FAA.GOV. C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611212100-2611220459",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -76.29111,
-        36.8653
-       ],
-       [
-        -76.2875,
-        36.86505
-       ],
-       [
-        -76.28401,
-        36.86429
-       ],
-       [
-        -76.28073,
-        36.86306
-       ],
-       [
-        -76.27776,
-        36.86139
-       ],
-       [
-        -76.2752,
-        36.85934
-       ],
-       [
-        -76.27313,
-        36.85695
-       ],
-       [
-        -76.2716,
-        36.85432
-       ],
-       [
-        -76.27066,
-        36.85151
-       ],
-       [
-        -76.27035,
-        36.84861
-       ],
-       [
-        -76.27066,
-        36.84571
-       ],
-       [
-        -76.2716,
-        36.8429
-       ],
-       [
-        -76.27313,
-        36.84027
-       ],
-       [
-        -76.27521,
-        36.83788
-       ],
-       [
-        -76.27777,
-        36.83583
-       ],
-       [
-        -76.28073,
-        36.83416
-       ],
-       [
-        -76.28401,
-        36.83293
-       ],
-       [
-        -76.28751,
-        36.83218
-       ],
-       [
-        -76.29111,
-        36.83192
-       ],
-       [
-        -76.29472,
-        36.83218
-       ],
-       [
-        -76.29821,
-        36.83293
-       ],
-       [
-        -76.30149,
-        36.83416
-       ],
-       [
-        -76.30446,
-        36.83583
-       ],
-       [
-        -76.30702,
-        36.83788
-       ],
-       [
-        -76.30909,
-        36.84027
-       ],
-       [
-        -76.31062,
-        36.8429
-       ],
-       [
-        -76.31156,
-        36.84571
-       ],
-       [
-        -76.31188,
-        36.84861
-       ],
-       [
-        -76.31156,
-        36.85151
-       ],
-       [
-        -76.31063,
-        36.85432
-       ],
-       [
-        -76.3091,
-        36.85695
-       ],
-       [
-        -76.30702,
-        36.85934
-       ],
-       [
-        -76.30446,
-        36.86139
-       ],
-       [
-        -76.3015,
-        36.86306
-       ],
-       [
-        -76.29821,
-        36.86429
-       ],
-       [
-        -76.29472,
-        36.86505
-       ],
-       [
-        -76.29111,
-        36.8653
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/8702": {
    "notam_id": "6/8702",
    "type": "SPACE OPERATIONS",
@@ -8929,6 +8751,21 @@
    "ceiling_ft": 3500,
    "first_seen": "2026-11-17T01:10:34Z",
    "left_at": "2026-11-18T18:10:32Z"
+  },
+  "6/8034": {
+   "type": "SECURITY",
+   "state": "VA",
+   "bbox": [
+    -76.3119,
+    36.8319,
+    -76.2703,
+    36.8653
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 400,
+   "first_seen": "2026-11-17T01:10:34Z",
+   "subject": "6/8034",
+   "left_at": "2026-11-22T05:10:32Z"
   },
   "6/8064": {
    "type": "SECURITY",
