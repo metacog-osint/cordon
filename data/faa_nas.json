@@ -1,6 +1,21 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [],
+ "programs": [
+  {
+   "kind": "ground_stop",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-22T11:34:00Z",
+   "end": "2026-11-22T12:45:00Z",
+   "updated": "2026-11-22T11:46:04Z",
+   "reason": "low visibility",
+   "center": "ZNY",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=30&adv_date=11222026&facId=LGA&title=ATCSCC ADVZY 030 LGA/ZNY 11/22/2026 CDM GROUND STOP&titleDate=11/22/2026",
+   "included_facilities": 4,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
+  }
+ ],
  "airports": {
   "ABQ": [
    -106.6129,
