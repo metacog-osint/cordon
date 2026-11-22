@@ -7845,6 +7845,7 @@
    "description": "New Bern, NC, Saturday, November 28, 2026 UTC",
    "created": "11/22/2026",
    "first_seen": "2026-11-22T18:40:38Z",
+   "subject": "6/9338",
    "detail": {
     "name": "2026 New Bern, NC Airshow",
     "issued": "2026-11-22T18:20:07Z",
@@ -8012,8 +8013,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9338"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
