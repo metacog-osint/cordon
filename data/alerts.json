@@ -36,6 +36,15 @@
   "CO": [
    {
     "iso": "CO",
+    "title": "Demonstration Alert: Planned Demonstration on Carrera Séptima, Bogotá – November 23",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNEVacUNqM3ZDM0RZdHBGNUJ4TWtjQUpfNFMzZm1Qb2xBRVdKejNjcndScXViWkUyYXVjTHJQUG9PaW01dlcxUFByTzhZTnZIM1VFVTR5cWdVY2FwejFDLW1JLVdEWXQ5LWtleUtlYzh6ZFY3ajFpRG00VDhTZ0V1Vk5LVUtLb3FmSV9zNDg2SzNzYnh1bEZ4QzR6cHVvX1EwZXlKWWNmRUU?oc=5",
+    "published_at": "2026-11-23T16:05:03Z",
+    "type": "demonstration",
+    "via": "google-news",
+    "post_url": "https://co.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "CO",
     "title": "Security Alert: National Strike and Demonstrations – November 19, 2026",
     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOV1ZQNEx0MzE3bDYtWk1pc2syQzB1TnpQWlR5UzU1NHhmcTVBYlBOU1hmMC1CQVZtb21XaWxZTlZrRDFRNUhzTFQ0dS1SV0loWWpUZXc5alNQa2F4V1V2Rm1uYUZXZGZ5U0ZhUy1Eb3pKc0hkUHpkVk5zeWFDNEhGemVIREgxN1ZISDFSYVhxNmx4NGVfdDY0?oc=5",
     "published_at": "2026-11-19T08:00:00Z",
@@ -99,15 +108,6 @@
     "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 7, 2026",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOF9sQ3RRcWVOTVB6MV80VUxqWUktN1RQRjItTEpHY0x6LVVWaHg5QWl2RGphcUw3QkgyNTd1Q3BSN0hFT0xsRFdKSURDTVFWZ2tXN3ItNHJ2RVEtSnB6SUFkOW8wdWpMY2pTUmwtem41ZEhzVFFJM09XR0kyNlFRSjN5cnVyaUZudHR0dmVRUkNkVmc?oc=5",
     "published_at": "2026-11-07T08:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 2, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWGY3bjF4U25iU29nMnNnb1hhSjI5a0lNLUNLYUU5RUN4X2VPejhrM3FxRDlHaW9BMFFXcFlqZ3V2NS1OVmZCejZGUmpSMHl2UnZpOTE0WHlRV3dNeTdjdmsxNHhQVG5HSVU2NzlleDk5Y003UG5MQnA4N3JZUE1KRVktLUdOUGdYWVZhRjRsRmJKaHc?oc=5",
-    "published_at": "2026-11-02T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
