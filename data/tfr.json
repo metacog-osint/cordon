@@ -8371,6 +8371,56 @@
     }
    }
   },
+  "6/9576": {
+   "notam_id": "6/9576",
+   "type": "HAZARDS",
+   "facility": "ZAN",
+   "state": "AK",
+   "description": "76 ZAN AIRSPACETHOMPSON PASS, AK, Monday, November 23, 2026 through Tuesday, November 24, 2026 UTC",
+   "created": "11/23/2026",
+   "first_seen": "2026-11-23T19:40:33Z",
+   "detail": {
+    "name": "6/9576",
+    "issued": "2026-11-23T19:34:09Z",
+    "effective": "2026-11-23T21:00:00Z",
+    "expires": "2026-11-24T00:30:00Z",
+    "regulation": "91.137(a)(1)",
+    "purpose": null,
+    "city": "76 ZAN AIRSPACETHOMPSON PASS",
+    "floor": "surface",
+    "ceiling": "12180 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9576 ZAN AIRSPACE..THOMPSON PASS, AK..TEMPORARY FLIGHT RESTRICTIONS PURSUANT TO 14 CFR 91.137(A)(1), AVALANCHE CONTROL, WI AN AREA DEFINED AS 611901N1451751W (JOH019063) TO 611700N1453000W (JOH015058) TO 612100N1453600W (JOH011060) TO 612600N1452200W (JOH014068) TO POINT OF ORIGIN. SFC-12180FT. ONLY RELIEF ACFT OPS UNDER DIRECTION OF ANCHORAGE CENTER ARE AUTH IN THE AIRSPACE. AK DEPARTMENT OF TRANSPORTATION, ROBERT DUNNING, TEL 907-200-2100 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. JUNEAU /JNU/ AFSS TEL 907-586-7382 IS THE FAA CDN FAC. 2611232100-2611240030",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -145.2975,
+        61.31694
+       ],
+       [
+        -145.5,
+        61.28333
+       ],
+       [
+        -145.6,
+        61.35
+       ],
+       [
+        -145.36667,
+        61.43333
+       ],
+       [
+        -145.2975,
+        61.31694
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9576"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
