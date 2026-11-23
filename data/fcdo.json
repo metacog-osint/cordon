@@ -730,15 +730,15 @@
   "ethiopia": {
    "slug": "ethiopia",
    "name": "Ethiopia",
-   "updated": "2026-10-30T21:20:19Z",
-   "change": "Update on areas that the FCDO advise against all travel to within 10km of the border with Kenya (Warnings and Insurance page)",
+   "updated": "2026-11-23T15:19:06Z",
+   "change": "FCDO now advises against all but essential travel to East Borena and Arsi in Oromia Region. FCDO continues to advise against all travel and all but essential travel to other parts of Ethiopia (‘Warnings and insurance’ and ‘Regional risks’ pages).",
    "link": "https://www.gov.uk/foreign-travel-advice/ethiopia",
    "iso": "ET",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts",
     "avoid_all_travel_to_parts"
    ],
-   "status_for": "2026-10-30T21:20:19Z"
+   "status_for": "2026-11-23T15:19:06Z"
   },
   "falkland-islands": {
    "slug": "falkland-islands",
