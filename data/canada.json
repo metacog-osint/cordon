@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-23T12:20:16Z",
+ "generated": "2026-11-23T15:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1821,9 +1821,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-02T15:16:40Z",
-   "update_type": "Regular text update",
-   "update": "The Need help? section was updated.",
+   "updated": "2026-11-23T14:44:04Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/nicaragua"
   },
   "NL": {
