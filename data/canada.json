@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-20T17:40:15Z",
+ "generated": "2026-11-23T09:40:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -813,9 +813,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-20T12:53:20Z",
-   "update_type": "Regular text update",
-   "update": "Safety and security section – updated information on demonstrations and strikes",
+   "updated": "2026-11-23T09:35:52Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/france"
   },
   "GA": {
