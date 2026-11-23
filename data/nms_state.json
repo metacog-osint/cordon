@@ -10,9 +10,9 @@
   "removed": 8,
   "held": 7482
  },
- "requests": 2,
- "status": "ok",
- "checked_at": "2026-11-23T11:11:04Z",
+ "requests": 1,
+ "status": "failing",
+ "checked_at": "2026-11-23T11:41:00Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
@@ -33,5 +33,6 @@
  "subsets": {
   "launch-areas": 3693,
   "gnss": 3805
- }
+ },
+ "error": "HTTP 403"
 }
