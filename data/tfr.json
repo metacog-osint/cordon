@@ -8379,6 +8379,7 @@
    "description": "Laurel, MD, Tuesday, November 24, 2026 Local",
    "created": "11/23/2026",
    "first_seen": "2026-11-23T22:10:36Z",
+   "subject": "6/9591",
    "detail": {
     "name": "261124 Laurel, MD UAS Only",
     "issued": "2026-11-23T21:36:32Z",
@@ -8546,8 +8547,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9591"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
