@@ -1,6 +1,23 @@
 {
  "source": "https://cadataapi.state.gov/api/TravelAdvisories",
  "advisories": {
+  "DK": {
+   "key": "DK",
+   "iso": "DK",
+   "fips": "DA",
+   "name": "Denmark",
+   "title": "Denmark - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dnk.html",
+   "updated": "2026-11-22T19:00:00-05:00",
+   "text_hash": "sha256:4c01ac82649af58a50539bae6fdc917294e846fbadb99db6ff3fded6918ac74e",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 71
+  },
   "IR": {
    "key": "IR",
    "iso": "IR",
@@ -3604,23 +3621,6 @@
     "sentence": null
    },
    "words": 75
-  },
-  "DK": {
-   "key": "DK",
-   "iso": "DK",
-   "fips": "DA",
-   "name": "Denmark",
-   "title": "Denmark - Level 2: Exercise Increased Caution",
-   "level": 2,
-   "level_text": "Exercise Increased Caution",
-   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.dnk.html",
-   "updated": "2024-09-16T20:00:00-04:00",
-   "text_hash": "sha256:6dda43bd85a72adb253b141c2bc27f6cd1c6b5bd788b27eedfef3a6fc3dad781",
-   "posture": {
-    "state": "normal",
-    "sentence": null
-   },
-   "words": 92
   },
   "FR-WI": {
    "key": "FR-WI",

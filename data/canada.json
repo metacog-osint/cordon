@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-23T20:40:17Z",
+ "generated": "2026-11-23T21:20:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2145,8 +2145,8 @@
    "level": 2,
    "advisory": "Avoid non-essential travel (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-23T19:37:17Z",
-   "update_type": "Regional advisory added",
+   "updated": "2026-11-23T21:02:05Z",
+   "update_type": "Regular text update",
    "update": "Risk level section – Avoid all travel to King Abdullah Financial District, in Riyadh",
    "link": "https://travel.gc.ca/destinations/saudi-arabia"
   },
