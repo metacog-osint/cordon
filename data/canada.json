@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-23T11:40:17Z",
+ "generated": "2026-11-23T12:20:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -525,7 +525,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-23T11:28:00Z",
+   "updated": "2026-11-23T12:01:06Z",
    "update_type": "Regional advisory modified",
    "update": "Risk level section – avoid non-essential travel to parts of Gyirong County; Natural disasters and climate section – updated information on severe flash flooding and mudslides in the China-Nepal border area",
    "link": "https://travel.gc.ca/destinations/china"
