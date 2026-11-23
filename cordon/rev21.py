@@ -16,7 +16,7 @@ from tic_doctrine import geo  # noqa: E402  (common puts the kit on sys.path)
 GRADE = "A2"
 RULE = "corroborate-1: two independent origins, or one official source within its remit"
 
-# Embassy alert subject ([local path], tested on the 55 alerts of
+# Embassy alert subject (the private planning notes, tested on the 55 alerts of
 # 18 Nov 2026 21:40 UTC: 45 subjects).
 MONTH = r"(?:January|February|March|April|May|June|July|August|September|October|November|December)"
 DAY = r"\d{1,2}(?:\s*[–-]\s*\d{1,2})?"                      # 7, or a range 11–16
