@@ -479,14 +479,14 @@
   "colombia": {
    "slug": "colombia",
    "name": "Colombia",
-   "updated": "2026-10-30T00:40:46Z",
-   "change": "New information about the the temporary deployment of security forces in the city of Cucuta (‘Warnings and Insurance’ page).",
+   "updated": "2026-11-23T10:55:23Z",
+   "change": "Removal of information about the the temporary deployment of security forces in the city of Cucuta (‘Warnings and Insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/colombia",
    "iso": "CO",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-10-30T00:40:46Z"
+   "status_for": "2026-11-23T10:55:23Z"
   },
   "comoros": {
    "slug": "comoros",
