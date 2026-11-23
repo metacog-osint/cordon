@@ -15,20 +15,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 30.0,
    "max_delay_min": 80.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "ORD",
-   "airport_name": "Chicago OHare International",
-   "start": "2026-11-23T16:40:00Z",
-   "end": "2026-11-23T18:15:00Z",
-   "updated": "2026-11-23T17:01:34Z",
-   "reason": "STAFFING",
-   "center": "ZAU",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=38&adv_date=11232026&facId=ORD&title=ATCSCC ADVZY 038 ORD/ZAU 11/23/2026 CDM GROUND STOP&titleDate=11/23/2026",
-   "included_facilities": 9,
-   "included_flights": null,
-   "probability_of_extension": "LOW"
   }
  ],
  "airports": {

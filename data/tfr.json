@@ -8023,6 +8023,7 @@
    "description": "HIBBING, MN, Tuesday, November 24, 2026 UTC",
    "created": "11/23/2026",
    "first_seen": "2026-11-23T17:40:34Z",
+   "subject": "6/9517",
    "detail": {
     "name": "6/9517",
     "issued": "2026-11-23T17:04:45Z",
@@ -8190,8 +8191,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9517"
+   }
   },
   "6/9522": {
    "notam_id": "6/9522",
@@ -8201,6 +8201,7 @@
    "description": "PALM BEACH, FL, Tuesday, November 24, 2026 through Tuesday, November 24, 2026 Local",
    "created": "11/23/2026",
    "first_seen": "2026-11-23T17:40:34Z",
+   "subject": "6/9522",
    "detail": {
     "name": "261124 Palm Beach DJT UAS Only ZMA",
     "issued": "2026-11-23T17:28:27Z",
@@ -8368,8 +8369,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9522"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
