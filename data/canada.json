@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-23T20:00:16Z",
+ "generated": "2026-11-23T20:40:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -777,9 +777,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-10T12:17:03Z",
+   "updated": "2026-11-23T20:04:50Z",
    "update_type": "Regular text update",
-   "update": "Health – Outbreak Monitoring Alert for HIV added.",
+   "update": "Natural disasters and climate section – added information on drought and water shortages",
    "link": "https://travel.gc.ca/destinations/fiji"
   },
   "FK": {
@@ -2481,9 +2481,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-13T20:06:01Z",
+   "updated": "2026-11-23T20:30:24Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Natural disasters and climate section – added information on drought",
    "link": "https://travel.gc.ca/destinations/tonga"
   },
   "TR": {
