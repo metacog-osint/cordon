@@ -6947,6 +6947,362 @@
     }
    }
   },
+  "6/9432": {
+   "notam_id": "6/9432",
+   "type": "AIR SHOWS/SPORTS",
+   "facility": "ZDC",
+   "state": "NC",
+   "description": "New Bern, NC, Sunday, November 29, 2026 UTC",
+   "created": "11/23/2026",
+   "first_seen": "2026-11-23T14:10:34Z",
+   "detail": {
+    "name": "2026 New Bern, NC Raindate Airshow",
+    "issued": "2026-11-23T13:34:59Z",
+    "effective": "2026-11-29T20:00:00Z",
+    "expires": "2026-11-29T23:59:00Z",
+    "regulation": "91.145",
+    "purpose": "2026 Downtown New Bern Airshow Aerial Demonstration",
+    "city": "New Bern",
+    "floor": "surface",
+    "ceiling": "5000 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9432 ZDC NC..AIRSPACE NEW BERN, NC..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.145, MANAGEMENT OF ACFT OPS IN THE VICINITY OF AERIAL DEMONSTRATIONS AND MAJOR SPORTING EVENTS, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 2NM RADIUS OF 350634N0770155W (EWN025002.3) SFC-5000FT DUE TO 2026 DOWNTOWN NEW BERN AIRSHOW AERIAL DEMONSTRATION. UNLESS AUTHORIZED BY ATC. THE AIRBOSS, ANTHONY SVIHLIK, TEL 757-567-7740, IS THE POINT OF CONTACT. THE NEW BERN /EWN/ ATCT, TEL 252-514-6973, IS THE CDN FAC. 2611292000-2611292359",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -77.03194,
+        35.14283
+       ],
+       [
+        -77.02489,
+        35.14232
+       ],
+       [
+        -77.01804,
+        35.14082
+       ],
+       [
+        -77.01162,
+        35.13836
+       ],
+       [
+        -77.00582,
+        35.13502
+       ],
+       [
+        -77.00081,
+        35.1309
+       ],
+       [
+        -76.99675,
+        35.12613
+       ],
+       [
+        -76.99376,
+        35.12086
+       ],
+       [
+        -76.99193,
+        35.11524
+       ],
+       [
+        -76.99132,
+        35.10944
+       ],
+       [
+        -76.99194,
+        35.10364
+       ],
+       [
+        -76.99377,
+        35.09802
+       ],
+       [
+        -76.99677,
+        35.09275
+       ],
+       [
+        -77.00083,
+        35.08798
+       ],
+       [
+        -77.00584,
+        35.08387
+       ],
+       [
+        -77.01164,
+        35.08053
+       ],
+       [
+        -77.01805,
+        35.07807
+       ],
+       [
+        -77.02489,
+        35.07656
+       ],
+       [
+        -77.03194,
+        35.07606
+       ],
+       [
+        -77.039,
+        35.07656
+       ],
+       [
+        -77.04584,
+        35.07807
+       ],
+       [
+        -77.05225,
+        35.08053
+       ],
+       [
+        -77.05805,
+        35.08387
+       ],
+       [
+        -77.06306,
+        35.08798
+       ],
+       [
+        -77.06712,
+        35.09275
+       ],
+       [
+        -77.07012,
+        35.09802
+       ],
+       [
+        -77.07195,
+        35.10364
+       ],
+       [
+        -77.07257,
+        35.10944
+       ],
+       [
+        -77.07196,
+        35.11524
+       ],
+       [
+        -77.07013,
+        35.12086
+       ],
+       [
+        -77.06714,
+        35.12613
+       ],
+       [
+        -77.06308,
+        35.1309
+       ],
+       [
+        -77.05807,
+        35.13502
+       ],
+       [
+        -77.05227,
+        35.13836
+       ],
+       [
+        -77.04585,
+        35.14082
+       ],
+       [
+        -77.039,
+        35.14232
+       ],
+       [
+        -77.03194,
+        35.14283
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9432"
+  },
+  "6/9435": {
+   "notam_id": "6/9435",
+   "type": "HAZARDS",
+   "facility": "ZDC",
+   "state": "VA",
+   "description": "69NM NW LYNCHBURG, VA, Monday, November 23, 2026 through Monday, November 30, 2026 UTC",
+   "created": "11/23/2026",
+   "first_seen": "2026-11-23T14:10:34Z",
+   "detail": {
+    "name": "6/9435",
+    "issued": "2026-11-23T14:03:54Z",
+    "effective": "2026-11-23T14:00:00Z",
+    "expires": "2026-11-30T23:00:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "69NM NW LYNCHBURG",
+    "floor": "surface",
+    "ceiling": "5200 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9435 ZDC VA..AIRSPACE 69NM NW LYNCHBURG, VA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 1NM RADIUS OF 381800N0794730W (EKN166039.6) SFC-5200FT VIRGINIA INTERAGENCY COORDINATION CENTER TEL 434-423-2002 OR FREQ 123.125 LITTLE RIDGE IS IN CHARGE OF THE OPERATION. WASHINGTON/ZDC/ARTCC TEL 703-771-3470 IS THE FAA CDN FAC. DLY 1400-2300 2611231400-2611302300",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -79.79167,
+        38.31668
+       ],
+       [
+        -79.78799,
+        38.31643
+       ],
+       [
+        -79.78442,
+        38.31568
+       ],
+       [
+        -79.78108,
+        38.31445
+       ],
+       [
+        -79.77806,
+        38.31278
+       ],
+       [
+        -79.77545,
+        38.31072
+       ],
+       [
+        -79.77333,
+        38.30834
+       ],
+       [
+        -79.77177,
+        38.3057
+       ],
+       [
+        -79.77082,
+        38.3029
+       ],
+       [
+        -79.77049,
+        38.3
+       ],
+       [
+        -79.77082,
+        38.2971
+       ],
+       [
+        -79.77177,
+        38.29429
+       ],
+       [
+        -79.77333,
+        38.29166
+       ],
+       [
+        -79.77545,
+        38.28927
+       ],
+       [
+        -79.77806,
+        38.28722
+       ],
+       [
+        -79.78108,
+        38.28555
+       ],
+       [
+        -79.78443,
+        38.28432
+       ],
+       [
+        -79.78799,
+        38.28357
+       ],
+       [
+        -79.79167,
+        38.28332
+       ],
+       [
+        -79.79534,
+        38.28357
+       ],
+       [
+        -79.79891,
+        38.28432
+       ],
+       [
+        -79.80225,
+        38.28555
+       ],
+       [
+        -79.80527,
+        38.28722
+       ],
+       [
+        -79.80788,
+        38.28927
+       ],
+       [
+        -79.81,
+        38.29166
+       ],
+       [
+        -79.81156,
+        38.29429
+       ],
+       [
+        -79.81252,
+        38.2971
+       ],
+       [
+        -79.81284,
+        38.3
+       ],
+       [
+        -79.81252,
+        38.3029
+       ],
+       [
+        -79.81156,
+        38.3057
+       ],
+       [
+        -79.81,
+        38.30834
+       ],
+       [
+        -79.80789,
+        38.31072
+       ],
+       [
+        -79.80528,
+        38.31278
+       ],
+       [
+        -79.80225,
+        38.31445
+       ],
+       [
+        -79.79891,
+        38.31568
+       ],
+       [
+        -79.79534,
+        38.31643
+       ],
+       [
+        -79.79167,
+        38.31668
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9435"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
