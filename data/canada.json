@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-23T19:20:55Z",
+ "generated": "2026-11-23T20:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2145,9 +2145,9 @@
    "level": 2,
    "advisory": "Avoid non-essential travel (with regional advisories)",
    "regional": true,
-   "updated": "2026-10-29T20:57:51Z",
-   "update_type": "Regular text update",
-   "update": "Safety and security – removed information on the closure of King Khalid International Airport",
+   "updated": "2026-11-23T19:37:17Z",
+   "update_type": "Regional advisory added",
+   "update": "Risk level section – Avoid all travel to King Abdullah Financial District, in Riyadh",
    "link": "https://travel.gc.ca/destinations/saudi-arabia"
   },
   "SB": {
@@ -2577,9 +2577,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-23T19:11:17Z",
+   "updated": "2026-11-23T19:47:01Z",
    "update_type": "Regular text update",
-   "update": "Safety and security section – removed information on the nationwide ground stop",
+   "update": "Need help? section – updated the address and contact information for the Consulate General of Canada in Denver, United States",
    "link": "https://travel.gc.ca/destinations/united-states"
   },
   "UY": {
