@@ -99,6 +99,11 @@ The log's first run is `since` in the state; for a log begun before 0.6.0 the co
 line. Items a program states itself are kept as they are. Run the fill before the feed is published, and lint after
 it. From Python: `fill_last_change(feed, state)` after `update()`, or `run(..., fill=True)`.
 
+**The run's time (kit 0.6.3).** `--now` sets it. Without `--now` it is the feed's own `generated_at` (the wall
+clock when the feed has none, or when that is later than the clock), so nothing the run stamps is later than the items'
+`published_at` and the lint after the fill passes. Before 0.6.3 the default was the wall clock, and a program running
+`--fill-last-change` had to pass `--now` with the feed's `generated_at` itself.
+
 **From Python.** `tic_doctrine.history.update(state, feed, health, now, caught)` is pure and returns the new state and
 the lines; `run()` does the same against files. `caught` takes items from a program's own catch-up query (Elements
 asks NWS for Severe and Extreme alerts issued since the last good read). `ok=` and `lane_of=` let a caller name the
