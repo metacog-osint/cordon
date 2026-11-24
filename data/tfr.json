@@ -9169,6 +9169,7 @@
    "description": "Manhattan, NY, Wednesday, November 25, 2026 through Wednesday, November 25, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T15:20:25Z",
+   "subject": "6/9684",
    "detail": {
     "name": "261125 Macy's balloon area FBI UAS Only",
     "issued": "2026-11-24T15:14:49Z",
@@ -9336,8 +9337,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9684"
+   }
   },
   "6/9689": {
    "notam_id": "6/9689",
@@ -9347,6 +9347,7 @@
    "description": "Manhattan, NY, Thursday, November 26, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T15:20:25Z",
+   "subject": "6/9689",
    "detail": {
     "name": "261126 Macy's Parade FBI UAS Only",
     "issued": "2026-11-24T15:16:29Z",
@@ -9668,8 +9669,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9689"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
