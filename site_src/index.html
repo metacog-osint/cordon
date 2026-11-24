@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="tic-shell.css">
 <link rel="stylesheet" href="tic-time.css">
+<link rel="stylesheet" href="tic-shell.css">
+<link rel="alternate" type="application/geo+json" title="Cordon feed (GeoJSON)" href="data/feed.geojson">
 <link rel="stylesheet" href="tic-tabs.css">
 <link rel="stylesheet" href="tic-fold.css">
 <link rel="stylesheet" href="tic-related.css">
@@ -27,8 +29,6 @@
     <div class="brand"><strong>Cordon</strong><a class="tic-layer" href="https://theintelligence.company/#layers">Air layer</a><span class="muted">The Intelligence Company</span></div>
     <nav class="top-nav">
       <a href="https://theintelligence.company/">All programs</a>
-      <a href="data/feed.geojson">Feed</a>
-      <a href="https://github.com/metacog-osint/cordon">Code and data</a>
       <span id="area-settings"></span>
       <span id="time-settings"></span>
     </nav>
@@ -191,6 +191,9 @@
 <footer class="wrap foot small muted">
   <p>A project of The Intelligence Company. Collected <time id="asof" data-tic="datetime"></time>. Cordon reports what each
     authority published; it adds no judgment of its own. Places are drawn at a point inside each country, not at the capital.</p>
+  <nav class="tic-data" aria-label="Data and downloads"><span class="tic-data-k">Data and downloads</span>
+    <a href="data/feed.geojson">Feed (GeoJSON)</a>
+    <a href="https://github.com/metacog-osint/cordon">Source code</a></nav>
 </footer>
 <script src="app.js"></script>
 </body>
