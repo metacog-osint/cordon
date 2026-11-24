@@ -9323,6 +9323,7 @@
    "description": "MIDDLETOWN, IA, Tuesday, November 24, 2026 through Wednesday, November 25, 2026 UTC",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T19:10:33Z",
+   "subject": "6/8596",
    "detail": {
     "name": "6/9722",
     "issued": "2026-11-24T18:55:36Z",
@@ -9490,8 +9491,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/8596"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
