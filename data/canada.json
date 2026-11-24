@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-24T20:00:15Z",
+ "generated": "2026-11-24T21:00:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2469,7 +2469,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-10-14T19:47:29Z",
+   "updated": "2026-11-24T20:52:29Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/tunisia"

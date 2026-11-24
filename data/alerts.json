@@ -25,6 +25,15 @@
   "BH": [
    {
     "iso": "BH",
+    "title": "Security Alert: U.S. Embassy Manama – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUGRfdklkQWNaTzRhLURzamQweHR3ZkN5TzBmeEg1cFkwT1lFb2V0YXBBM2JKdXB4MFYtZTNjTzVPcmk0VUZLZFZYQ1JXQ2ljN0ZLaG4zSkF1WGdCNXFWUFB2elA1WEgtVFM5QjFaTDJMV2dGNElBWWFyYXFTOXdCNUFn?oc=5",
+    "published_at": "2026-11-24T21:03:59Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://bh.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "BH",
     "title": "Security Alert: U.S. Embassy Manama – November 22, 2026",
     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPajJqcWdnYldrOGtrdy0yRXNEdWl2WF9sc0s4Njg5UGZFTmlBNWYxaHpsVnlnbUF0MnIxYkV6elV3Z2dtYzBxZHJCWF93RzJZYm1oam0zTnpZYUtKZXZ0R09kazVsRnNJOThpb2JDbndPbEV4WjZKRnhoSWxFc0NGV01B?oc=5",
     "published_at": "2026-11-22T16:00:10Z",
@@ -114,6 +123,15 @@
    }
   ],
   "IL": [
+   {
+    "iso": "IL",
+    "title": "Security Alert: U.S. Embassy Jerusalem – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOU5MOW9mMDhsc1llenpYdG1LM2NxMlQxSy1ZQ181MWdoUGJ6X3d6M0wzcjVMbWJSSWtQMDl3TGwtQ0dJWnVLajdYT05xM1UxQ3Z4WC12Mm1VbUM1dElRS093YnpnZXZseGdnZlhnMTFJeGp0NDQ4anlEZ2czZmVMMTRYYUdPUQ?oc=5",
+    "published_at": "2026-11-24T21:07:08Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://il.usembassy.gov/category/alert/"
+   },
    {
     "iso": "IL",
     "title": "Security Alert: U.S. Embassy Jerusalem – November 6, 2026",
@@ -367,9 +385,9 @@
    },
    {
     "iso": "SA",
-    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
-    "published_at": "2026-11-03T08:00:00Z",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 27, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORnBhQ1VISVgwaGo2ZV9MWkhVcklPNTNxa1NvN0NseVpoNkFWQ19xeUF1Wl91YS02UnNlSnc1TUhVQk5TQTM3YWJkSDdIUnRqM3Y4Z0lBX1A2ODlzaTZiUHk5Z3VmTGsxTjE2UllMRDFJRHhDMW9kRTBabnV4ZHlpWVpGa2VXNkRYcXVMUg?oc=5",
+    "published_at": "2026-10-27T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
