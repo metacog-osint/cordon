@@ -14,6 +14,15 @@
   "AE": [
    {
     "iso": "AE",
+    "title": "Security Alert: U.S. Mission United Arab Emirates – November 24, 2026 - https://ae.usembassy.gov/",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaDhDTi1BWHJrMHJvMWt5cy1uUnpNR0Q4TGRuV3BtWmxxNk5ObWVfdHRIVW0zOHMyY2tZZUFuNGpSNGo1MFRxVFQ2WGZjOUM5VFM1amxEN1N1YjRub0Q1QmdRLUdIYS1nN3FfUTE2bEQ2M1daY0V1aVpMR3E2SG1OamlnNFpWdW1pRTZBazVVTW5id2J6?oc=5",
+    "published_at": "2026-11-24T21:37:45Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ae.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "AE",
     "title": "Security Alert: U.S. Mission United Arab Emirates – November 7, 2026 - https://ae.usembassy.gov/",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWUo4WWVtR1dycHI0cFlaTzZkeklhRGNPZU9qTlNYV2RGZE5oTzdINHdmb0tlS3pPbUdJOWxmNjVEVy1rVWltcXhsRXZ3NXMtTV9MLTQwVjJpbEhSZnd3ekN1VGlZVTdsMVlQaWFQMkFkdE4wbGdyMjh1ZFQ5dUNlRDNKS1A5Y1NKREFqUEVVMXIwTnc?oc=5",
     "published_at": "2026-11-07T08:00:00Z",
@@ -156,6 +165,15 @@
   "IQ": [
    {
     "iso": "IQ",
+    "title": "Security Alert: U.S. Mission Iraq – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1jc2d1bmpSRTNaeHlhVjRPUmE0Mms0SW10MkVHTWpUVjZDbi16cFI1U3ZiZDQtNVFtYVhTbWJzOWk4MmpWakoyakJJNGYteWZackpzMHBva0UtbkpFZGJBdUVweHVtWXM5dVlwOC1oWGhlYzViempxRHJjSzNEUEk?oc=5",
+    "published_at": "2026-11-24T21:20:39Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://iq.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "IQ",
     "title": "Security Alert: U.S. Mission Iraq – November 6, 2026",
     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5CZVcxMzJhaHVwbGpOMkpBam5tdEZ0SWRmT3NOSGRYUUhsQkEtWll1b2tpNThUNFRhMzNXR19WcjRPMkhDQzFmYjMxSnlxM19jcnFJVGwxTTdqUGJ4c2JPdjMzQnIyQ0xHeXJ1TExjQnZjYkRIN0FadHdtME1ZQQ?oc=5",
     "published_at": "2026-11-06T08:00:00Z",
@@ -200,10 +218,10 @@
   "MX": [
    {
     "iso": "MX",
-    "title": "Security Alert: Ongoing Security Operations & Violence in Ahome, Guamúchil, Guasave, Navolato – U.S. Consulate General Hermosillo (November 21)",
-    "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOamhwUHJVbmVxUno0VXV3WTFNbGI1YjBiUlpDeU5WZ1N4c1d2dXduNXJIaHJkUUpMOFBEdjg2bGtxdjNNcENqVmlRbVVvMmRsRkRzTTl4Mm9xaElUOGN0SmFlU0ZWZGJENmtYQzZ5SEdzYVdUWTVORUg0d0hpWmxCbTdKVHplQkJWaEpxb05NU1VqVkd5SU1CbjVGU0dBajA3U1B2OTlwR3FZZ2NLZXF3TzE4NmpFbUtXMFpjMno4YnZDcU43bHM5Yy15MWVkSldmUlpiUF95cU1XVXFtWV9ucjR0bHg5Q19oM0ZUTnFnd28zWjRz?oc=5",
-    "published_at": "2026-11-21T21:52:42Z",
-    "type": "security",
+    "title": "Demonstration Alert: Protests expected in Mexico City on Wednesday, November 25",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWjh6dG41UGlYMHVGMmpjWV9OMlZfS1lVenlNcm90ZmZ5OW1EMm5xc3RpQjJtdFlSdVIxN21vTkc3dUdhTGRRTl9ra1pyOVVkdmp2YjBvYXI0a1p1Y2ZZdmVuMDNya0JZdGJPa2hzT0JPM3U2dlhhNHB0QlBMZ254MjhxVDBsVGR1YzhFWmVWeTQ0eGNCci1aNEF4SkI4MkpBRW1QbTBn?oc=5",
+    "published_at": "2026-11-24T21:28:25Z",
+    "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
@@ -314,6 +332,15 @@
   "OM": [
    {
     "iso": "OM",
+    "title": "Security Alert: U.S. Embassy Muscat – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMU40RE9xNVo2V0VJZ0hxaXdHd3VZaHRrUFI2WjhtUDEtb0V6SEphZmhYSkcyeklFdUdzVFB3b0lJVm1qWHV6MVpjVF9pVFdLeW4zQTI5bGlsQkotQ2E1UVBCeC1iOWVoWjVPeVhYSmJfYXpGbUREX2RIb0dJNWN3N1Zn?oc=5",
+    "published_at": "2026-11-24T21:34:01Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://om.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "OM",
     "title": "Security Alert: U.S. Embassy Muscat – November 7, 2026",
     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdjNGSHhwR1c0UkltSFVGeGoyQmVGaFNTWWdleFlZSUgtVXhaN1EyMUVlcGluME5ZV3FCb0V3SkhEWWY4UGpsbWdjQkRhXzZ0OVVTdEloVFpqcW9NMUFNOHlnUGNyVWJJYUl0X2ZMckhhdy1VenNPcWhfM0M0NDd2RA?oc=5",
     "published_at": "2026-11-07T08:00:00Z",
@@ -385,9 +412,9 @@
    },
    {
     "iso": "SA",
-    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 27, 2026",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORnBhQ1VISVgwaGo2ZV9MWkhVcklPNTNxa1NvN0NseVpoNkFWQ19xeUF1Wl91YS02UnNlSnc1TUhVQk5TQTM3YWJkSDdIUnRqM3Y4Z0lBX1A2ODlzaTZiUHk5Z3VmTGsxTjE2UllMRDFJRHhDMW9kRTBabnV4ZHlpWVpGa2VXNkRYcXVMUg?oc=5",
-    "published_at": "2026-10-27T07:00:00Z",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
+    "published_at": "2026-11-03T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
