@@ -1800,7 +1800,7 @@ class Rev21(unittest.TestCase):
                         {"bulletins": easa.parse(EASA_CSV), "fetched_at": "2026-10-31T21:00:00Z"},
                         {"warnings": navarea.parse(NGA), "fetched_at": "2026-10-31T20:55:00Z"},
                         datetime(2026, 10, 31, 21, 1, tzinfo=timezone.utc))
-        self.assertEqual((fc["contract_rev"], fc["kit"], fc["generated_at"]), ("2.1", "0.6.2", "2026-10-31T21:01:00Z"))
+        self.assertEqual((fc["contract_rev"], fc["kit"], fc["generated_at"]), ("2.1", "0.6.9", "2026-10-31T21:01:00Z"))
         self.assertEqual([p for p in contract.check_header({k: v for k, v in fc.items() if k != "features"})
                           if p[1] == "error"], [])
         props = [f["properties"] for f in fc["features"]]
