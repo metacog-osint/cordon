@@ -12,6 +12,16 @@
    "issued": "2026-11-24T05:14:00Z"
   },
   {
+   "kind": "closure",
+   "airport": "PNS",
+   "airport_name": "Pensacola Regional",
+   "start": "2026-11-24T06:00:00Z",
+   "end": "2026-11-24T11:00:00Z",
+   "updated": "2026-11-19T22:45:53Z",
+   "notam": "!PNS 11/072 PNS AD AP CLSD EXC HEL OPS 2611240600-2611241100",
+   "issued": "2026-11-19T22:43:00Z"
+  },
+  {
    "kind": "ground_delay",
    "airport": "LAS",
    "airport_name": "Harry Reid International",
@@ -25,6 +35,20 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 35.0,
    "max_delay_min": 90.0
+  },
+  {
+   "kind": "ground_stop",
+   "airport": "LAS",
+   "airport_name": "Harry Reid International",
+   "start": "2026-11-24T05:30:00Z",
+   "end": "2026-11-24T06:30:00Z",
+   "updated": "2026-11-24T05:46:11Z",
+   "reason": "STAFFING",
+   "center": "ZLA",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=15&adv_date=11242026&facId=LAS&title=ATCSCC ADVZY 015 LAS/ZLA 11/24/2026 CDM GROUND STOP&titleDate=11/24/2026",
+   "included_facilities": 5,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
