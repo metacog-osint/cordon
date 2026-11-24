@@ -1,6 +1,23 @@
 {
  "source": "https://cadataapi.state.gov/api/TravelAdvisories",
  "advisories": {
+  "EG": {
+   "key": "EG",
+   "iso": "EG",
+   "fips": "EG",
+   "name": "Egypt",
+   "title": "Egypt - Level 2: Exercise Increased Caution",
+   "level": 2,
+   "level_text": "Exercise Increased Caution",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.egy.html",
+   "updated": "2026-11-23T19:00:00-05:00",
+   "text_hash": "sha256:948666971a73dbf18c1dc1de9cb976f3c1d5490a46f8bd00d2da1333d48bf72f",
+   "posture": {
+    "state": "normal",
+    "sentence": null
+   },
+   "words": 326
+  },
   "DK": {
    "key": "DK",
    "iso": "DK",
@@ -3230,23 +3247,6 @@
     "sentence": null
    },
    "words": 107
-  },
-  "EG": {
-   "key": "EG",
-   "iso": "EG",
-   "fips": "EG",
-   "name": "Egypt",
-   "title": "Egypt - Level 2: Exercise Increased Caution",
-   "level": 2,
-   "level_text": "Exercise Increased Caution",
-   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.egy.html",
-   "updated": "2025-07-14T20:00:00-04:00",
-   "text_hash": "sha256:dafbc0526145dc2d2b9b67c67e02aaebb701d1be4d2230cbeb8880179250b547",
-   "posture": {
-    "state": "normal",
-    "sentence": null
-   },
-   "words": 373
   },
   "IN": {
    "key": "IN",
