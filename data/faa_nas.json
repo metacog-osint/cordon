@@ -1,6 +1,21 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [],
+ "programs": [
+  {
+   "kind": "ground_stop",
+   "airport": "ORD",
+   "airport_name": "Chicago OHare International",
+   "start": "2026-11-24T21:06:00Z",
+   "end": "2026-11-24T22:15:00Z",
+   "updated": "2026-11-24T21:38:35Z",
+   "reason": "equipment outage",
+   "center": "ZAU",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=54&adv_date=11242026&facId=ORD&title=ATCSCC ADVZY 054 ORD/ZAU 11/24/2026 CDM GROUND STOP&titleDate=11/24/2026",
+   "included_facilities": 5,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
+  }
+ ],
  "airports": {
   "ABQ": [
    -106.6129,
