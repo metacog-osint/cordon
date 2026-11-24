@@ -1419,6 +1419,19 @@ class Cdc(unittest.TestCase):
             self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
         self.assertIn("does not imply endorsement by CDC", fc["attribution"])
 
+    def test_a_change_older_than_72_hours_is_routine_but_kept(self):
+        def tier(at):
+            ch = [{"at": at, "lane": "cdc", "kind": "level", "key": "ebola-drc-provinces", "from": 3, "to": 4}]
+            items = {f["properties"]["id"]: f["properties"] for f in self.build(ch)["features"]}
+            return items["cordon:cdc:ebola-drc-provinces"]
+        # NOW is 2026-11-10T12:00Z: exactly 72 h earlier still counts, one second older does not
+        edge = tier("2026-11-07T12:00:00Z")
+        self.assertEqual(edge["tier"], "anomaly")
+        old = tier("2026-11-07T11:59:59Z")
+        self.assertEqual(old["tier"], "routine")
+        self.assertEqual((old["measures"]["from_level"], old["measures"]["changed_at"], old["last_change_at"]),
+                         (3, "2026-11-07T11:59:59Z", "2026-11-07T11:59:59Z"))
+
     def test_a_stale_feed_is_withheld(self):
         fc = self.build(last_ok="2026-11-07T00:00:00Z")
         self.assertEqual(fc["features"], [])
