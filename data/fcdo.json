@@ -1390,14 +1390,14 @@
   "mexico": {
    "slug": "mexico",
    "name": "Mexico",
-   "updated": "2026-10-20T13:20:31Z",
-   "change": "Removal of information about Hurricane Trudy ('Warnings and insurance' page).",
+   "updated": "2026-11-24T10:36:16Z",
+   "change": "Updated information about travelling with children (‘Entry requirements’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/mexico",
    "iso": "MX",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-10-20T13:20:31Z"
+   "status_for": "2026-11-24T10:36:16Z"
   },
   "moldova": {
    "slug": "moldova",
