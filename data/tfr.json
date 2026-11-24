@@ -9687,6 +9687,7 @@
    "description": "DELAWARE, OH, Thursday, November 26, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T23:40:34Z",
+   "subject": "6/9740",
    "detail": {
     "name": "261126 DELAWARE OH VIP ZID",
     "issued": "2026-11-24T23:29:52Z",
@@ -9854,8 +9855,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9740"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
