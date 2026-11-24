@@ -371,7 +371,7 @@ def safetravel_items(data: dict, now: datetime, changes: list[dict]) -> list[dic
 
 def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     """Every CDC travel health notice in force, in CDC's words. A notice Cordon saw appear, or whose level it saw
-    change, in the last RECENT_DAYS is an anomaly; one CDC published or updated in the last NEW_HOURS is marked new."""
+    change, in the last NEW_HOURS (72 h) is an anomaly; an older change is kept on the item as routine; one CDC published or updated in the last NEW_HOURS is marked new."""
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     fetched = data.get("fetched_at") or stamp
     new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -380,9 +380,12 @@ def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     for slug, r in sorted((data.get("notices") or {}).items()):
         ch = last.get(slug)
         is_new = bool(r.get("published") and r["published"] >= new_from)
+        # Ranking only: a change older than NEW_HOURS stays on the item (measures, baseline_ref, last_change) but the
+        # item is routine, so it stops ranking as a pick (Tom, 23 Nov 2026).
+        fresh = bool(ch and ch["at"] >= new_from)
         props = {**_base(fetched), "id": f"cordon:cdc:{slug}",
                  "title": f"CDC Level {r['level']} ({r['level_text']}): {r['disease_place']}",
-                 "tier": "anomaly" if ch else "routine", "data_as_of": r.get("published") or fetched,
+                 "tier": "anomaly" if fresh else "routine", "data_as_of": r.get("published") or fetched,
                  "countries": r["countries"], "precision_class": "country", "requirement_ids": ["CD-PIR-9"],
                  "ie_aspect": ["physical"], "pmesii_pt": ["social"], "ascope": ["events"],
                  "sources": [{**CDC_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
