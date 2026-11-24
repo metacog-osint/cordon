@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-24T13:20:15Z",
+ "generated": "2026-11-24T14:40:32Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -837,7 +837,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-10-05T18:33:12Z",
+   "updated": "2026-11-24T14:31:14Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/united-kingdom"
