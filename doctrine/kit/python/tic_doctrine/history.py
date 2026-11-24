@@ -426,6 +426,15 @@ def run(feed: dict, root: Path, now: datetime, health: dict | None = None, caugh
     return lines
 
 
+def run_time(feed: dict, wall: datetime | None = None) -> datetime:
+    """The run's time when --now is not given (kit 0.6.3): the feed's own generated_at, so nothing the run stamps
+    (first_seen, last_change_at) is later than the items' published_at, which the build set seconds before; the wall
+    clock when the feed has no generated_at, or when generated_at is later than the wall clock."""
+    wall = wall or datetime.now(timezone.utc)
+    gen = _t(feed.get("generated_at"))
+    return min(gen, wall) if gen else wall
+
+
 def main(argv: list | None = None) -> int:
     ap = argparse.ArgumentParser(prog="tic.py history", description="Log what changed in a feed since the last run.")
     ap.add_argument("feed", help="the feed just built (a tic-feed/2 FeatureCollection)")
@@ -437,7 +446,7 @@ def main(argv: list | None = None) -> int:
                          "usembassy-*=us-embassy-alerts; repeat as needed")
     ap.add_argument("--ended", help="also write the items that ended in the last --days days to this file")
     ap.add_argument("--days", type=int, default=ENDED_DAYS)
-    ap.add_argument("--now", help="the run's time, ISO 8601 UTC (default: now)")
+    ap.add_argument("--now", help="the run's time, ISO 8601 UTC (default: the feed's generated_at, else now)")
     ap.add_argument("--reading-key", metavar="PROPERTY",
                     help="also log a changed line when this item property moves, e.g. data_as_of for a program "
                          "whose ids stay the same from one reading of a series to the next")
@@ -446,7 +455,7 @@ def main(argv: list | None = None) -> int:
                          "not state them, and rewrite the feed file with them")
     a = ap.parse_args(argv)
     feed = json.loads(Path(a.feed).read_text(encoding="utf-8"))
-    now = _t(a.now) if a.now else datetime.now(timezone.utc)
+    now = _t(a.now) if a.now else run_time(feed)
     if now is None:
         print(f"history: --now {a.now!r} is not a time")
         return 2
