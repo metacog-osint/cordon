@@ -76,6 +76,15 @@
   "ET": [
    {
     "iso": "ET",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 19, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZVF3Smo3ZHgzQjRMVllQNTM3REpFelphUVNGeXctbzlPU2d3ZXduVnNSZkpTTTcyRWR2TVdaQjl3cl9udGgxUk5KZkp4Z1dvOE9ROHNUVVJKei1zMG5OeGxKVVZ2LVY2UkotelcyV0E4UUpZcWI0bGVzdWN3VTcyeGRKZVhsZy1JSVZQakY3d0tYdDk1?oc=5",
+    "published_at": "2026-11-19T23:14:03Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://et.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "ET",
     "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 13, 2026)",
     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOTVxNTNCblZ5RVJWVVdQb2pEbUVCSzY3MWtDVjI5dGhqbmlTeDdDRjFiZVlxdTlyX1dOV1FsYkRWdklrV2tSYzZLZ05sOWVsNll6d2U4Wjh1WE1oMGwxSzBza0RVN3AtUVpYYm8xaFNZMllwRDhRdHJqV00zVzBIVjFjaWUxTWhVMVFRd3Vvd3h1amhl?oc=5",
     "published_at": "2026-11-13T08:00:00Z",
@@ -99,15 +108,6 @@
     "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 20, 2026",
     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMU9UMVJQendObm9mMncxT2JSLVJaZ2VLM2xWR2hJUGpIQmtZYzRZaUczS1BqV2RIMzBBVkxzU01tNG02eXQtbzB6R29QS1dEQjBmNVg5RW1vYkJPU250c2NUTXlMcnBQRDVWaDRsTU1TZ0RBVUdjVlpuMFBoVTJPbVNvMFJVME1oUXFLQThZOWFES3lq?oc=5",
     "published_at": "2026-11-20T12:34:24Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ht.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "HT",
-    "title": "Security Alert: U.S. Embassy Port-au-Prince, Haiti, November 7, 2026",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOF9sQ3RRcWVOTVB6MV80VUxqWUktN1RQRjItTEpHY0x6LVVWaHg5QWl2RGphcUw3QkgyNTd1Q3BSN0hFT0xsRFdKSURDTVFWZ2tXN3ItNHJ2RVEtSnB6SUFkOW8wdWpMY2pTUmwtem41ZEhzVFFJM09XR0kyNlFRSjN5cnVyaUZudHR0dmVRUkNkVmc?oc=5",
-    "published_at": "2026-11-07T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://ht.usembassy.gov/category/alert/"
@@ -367,9 +367,9 @@
    },
    {
     "iso": "SA",
-    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
-    "published_at": "2026-11-03T08:00:00Z",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 27, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORnBhQ1VISVgwaGo2ZV9MWkhVcklPNTNxa1NvN0NseVpoNkFWQ19xeUF1Wl91YS02UnNlSnc1TUhVQk5TQTM3YWJkSDdIUnRqM3Y4Z0lBX1A2ODlzaTZiUHk5Z3VmTGsxTjE2UllMRDFJRHhDMW9kRTBabnV4ZHlpWVpGa2VXNkRYcXVMUg?oc=5",
+    "published_at": "2026-10-27T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
