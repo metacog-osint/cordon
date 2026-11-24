@@ -380,6 +380,15 @@
   "UA": [
    {
     "iso": "UA",
+    "title": "Security Alert: U.S. Embassy Kyiv, Ukraine (November 24, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQR3QyamRBNTBzQXBUMXBFZnFXTjU2bU02SU1hd0hWYWtwSnRpY2Z5dldiY3ZFcXd6d2ZJZ0tYeG01THpSLXFVSElPdF92VWRoUXJfQV9Rd2RKTHktd2VTUVBhblhNa09hS21UVEJpNzdGdDhWYWtkdkZ4cU5xbGJQUXM2OWhwMG5HVmc?oc=5",
+    "published_at": "2026-11-24T15:16:20Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ua.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "UA",
     "title": "Security Alert: U.S. Embassy Kyiv, Ukraine (November 17, 2026)",
     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMml1cVZPU2l1RHM4bVFsNUNlcXZJRUVwSllUcUs2VE5uNlA0R1I0Y2lST2RURHZQODB6czJMcFhQSmpBcUNrdXh1M09vcGFWYUdpamZXcTI3Y05hVUw0OE5zQm5vcVRxa0lwYlk2RlNkUDM1ZjZSc3QtZG9POXdUbU5JTlZjbEdORWc?oc=5",
     "published_at": "2026-11-17T15:39:20Z",
