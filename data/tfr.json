@@ -8507,6 +8507,7 @@
    "description": "Cincinnati, OH, Tuesday, November 24, 2026 through Sunday, November 29, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T03:40:32Z",
+   "subject": "6/9661",
    "detail": {
     "name": "261124-29 Cincinnati VIP Reissue",
     "issued": "2026-11-24T03:18:57Z",
@@ -8980,8 +8981,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9661"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
