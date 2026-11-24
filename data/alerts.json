@@ -122,15 +122,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://il.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "IL",
-    "title": "Security Alert: U.S. Embassy Jerusalem – October 25, 2026",
-    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSUlKQzllZkZyTkJDREtCZzlOWUNlbkE2enRCM2lMTWlvcl8xTDlHaEg2V3hMeHVRZDViM1lvSm1vYk1yX2VNSWdsVTA0ZWw4YWc2NjYzSnB4SDdhelFHOVZFN0xKY0k1NTBkN2VLRE9rY0V0LUZiYm41Y3hZSkQyS05zZEU?oc=5",
-    "published_at": "2026-10-25T07:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://il.usembassy.gov/category/alert/"
    }
   ],
   "IN": [
@@ -469,7 +460,7 @@
     "iso": "GT",
     "title": "Message for U.S. Citizens:",
     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9FNnJTWEI0S21CS0JTWllXdHNYbldrdS1JRkxJdmpPMncyWHlQTlFRWGc4MFpLZEMxSkIyU3M0bFFuOC00d2NLMEhVN3U3aTMyXzBIem54YUNBcm9ORVZpQXR3?oc=5",
-    "published_at": "2026-11-12T22:52:04Z",
+    "published_at": "2026-11-12T08:00:00Z",
     "type": "alert",
     "via": "google-news",
     "post_url": "https://gt.usembassy.gov/category/alert/"
