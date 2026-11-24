@@ -185,6 +185,15 @@
   "JO": [
    {
     "iso": "JO",
+    "title": "Security Alert: U.S. Embassy Amman – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1aaFRtR2VaLVpFcmpZbjVydUlyUzk2ZDM3SExPaUptN3BIOHpWNllkYkFhcm5xNm9CUFVoa1VocmxQNzRxa0xKcmtLbV9XRHhUUmtxRTRzc3JpcUZWcWVQRm4wTDNrZXhGZHpCMVY1WQ?oc=5",
+    "published_at": "2026-11-24T21:37:45Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://jo.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "JO",
     "title": "Security Alert: U.S. Embassy Amman – November 7, 2026",
     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sQnZBYVZJeXlYa2liZkFXN3VqWE9WZGhhaXp6Ym15NnBnbVViZzNydlVMMEFXVkFiTjVpT0JXUDZGYWQzeWpPS2FCbmZxSGJ3eWpBZjY1aFJVdlNKODQzeUphLTVHSndiYjZJaGpqeXBVQTctNVpWcDRuOXhoWFk?oc=5",
     "published_at": "2026-11-07T08:00:00Z",
@@ -205,6 +214,15 @@
    }
   ],
   "LB": [
+   {
+    "iso": "LB",
+    "title": "Security Alert: U.S. Embassy Beirut – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbEU3Y2JJdEdlTy12eVBHLUt4c1ZTR01uRnFFaEg1dHhmdTVnRHA3eUxmMHktY005M19SZUZSejBvX3JqcXZscmEyelBuMkZjRXRHYTNnSVlxeXlWYjZpWmplaDlEb0JMdHRfdTRKU2JUR2lGVnFnRWsxbVktSDJ5NEdB?oc=5",
+    "published_at": "2026-11-24T22:00:52Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://lb.usembassy.gov/category/alert/"
+   },
    {
     "iso": "LB",
     "title": "Security Alert: U.S. Embassy Beirut – November 7, 2026",
@@ -361,6 +379,15 @@
    }
   ],
   "QA": [
+   {
+    "iso": "QA",
+    "title": "Security Alert: U.S. Embassy Doha – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBRTzdKLXAxemIyV3FvLW9BdTdKQTVBMnYzSXRFSVFXR2trblNkRzZTYXcwMDRmVElzOUkxNGZlLVpDVVVKUjN0YWJHT0pHc2xNcDZsVkQwZWpvVFUtVmNNS0U1ZVdBVFRUeG0ydk12SW1BQ3Q5X0J2V2JFSlNGbHc?oc=5",
+    "published_at": "2026-11-24T21:44:53Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://qa.usembassy.gov/category/alert/"
+   },
    {
     "iso": "QA",
     "title": "Security Alert: U.S. Embassy Doha – November 7, 2026",
