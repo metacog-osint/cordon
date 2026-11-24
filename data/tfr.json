@@ -9671,6 +9671,184 @@
     }
    }
   },
+  "6/9716": {
+   "notam_id": "6/9716",
+   "type": "HAZARDS",
+   "facility": "ZME",
+   "state": "MS",
+   "description": "8NM NE OXFORD, MS, Tuesday, November 24, 2026 through Thursday, November 26, 2026 UTC",
+   "created": "11/24/2026",
+   "first_seen": "2026-11-24T16:10:39Z",
+   "detail": {
+    "name": "6/9716",
+    "issued": "2026-11-24T16:02:16Z",
+    "effective": "2026-11-24T15:55:00Z",
+    "expires": "2026-11-26T23:45:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "8NM NE OXFORD",
+    "floor": "surface",
+    "ceiling": "1800 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9716 ZME MS..AIRSPACE 8NM NE OXFORD, MS..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 2NM RADIUS OF 342830N0892430W (HLI163018.3) SFC-1800FT MISSISSIPPI INTERANGECY COORDINATION CENTER TEL 601-420-6005 OR FREQ 122.925 BAGLEY FIRE IS IN CHARGE OF THE OPS. MEMPHIS/ZME/ARTCC TEL 901-368-8234 IS THE FAA CDN FAC. 2611241555-2611262345EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -89.40833,
+        34.50839
+       ],
+       [
+        -89.40133,
+        34.50788
+       ],
+       [
+        -89.39454,
+        34.50638
+       ],
+       [
+        -89.38817,
+        34.50391
+       ],
+       [
+        -89.38241,
+        34.50058
+       ],
+       [
+        -89.37744,
+        34.49646
+       ],
+       [
+        -89.37341,
+        34.49169
+       ],
+       [
+        -89.37044,
+        34.48641
+       ],
+       [
+        -89.36862,
+        34.48079
+       ],
+       [
+        -89.36801,
+        34.47499
+       ],
+       [
+        -89.36863,
+        34.4692
+       ],
+       [
+        -89.37045,
+        34.46357
+       ],
+       [
+        -89.37342,
+        34.4583
+       ],
+       [
+        -89.37746,
+        34.45353
+       ],
+       [
+        -89.38242,
+        34.44942
+       ],
+       [
+        -89.38818,
+        34.44608
+       ],
+       [
+        -89.39455,
+        34.44362
+       ],
+       [
+        -89.40133,
+        34.44212
+       ],
+       [
+        -89.40833,
+        34.44161
+       ],
+       [
+        -89.41533,
+        34.44212
+       ],
+       [
+        -89.42212,
+        34.44362
+       ],
+       [
+        -89.42849,
+        34.44608
+       ],
+       [
+        -89.43424,
+        34.44942
+       ],
+       [
+        -89.43921,
+        34.45353
+       ],
+       [
+        -89.44324,
+        34.4583
+       ],
+       [
+        -89.44622,
+        34.46357
+       ],
+       [
+        -89.44804,
+        34.4692
+       ],
+       [
+        -89.44865,
+        34.47499
+       ],
+       [
+        -89.44804,
+        34.48079
+       ],
+       [
+        -89.44623,
+        34.48641
+       ],
+       [
+        -89.44326,
+        34.49169
+       ],
+       [
+        -89.43923,
+        34.49646
+       ],
+       [
+        -89.43426,
+        34.50058
+       ],
+       [
+        -89.4285,
+        34.50391
+       ],
+       [
+        -89.42213,
+        34.50638
+       ],
+       [
+        -89.41534,
+        34.50788
+       ],
+       [
+        -89.40833,
+        34.50839
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/8981"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
