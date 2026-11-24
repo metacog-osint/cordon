@@ -9493,6 +9493,370 @@
     }
    }
   },
+  "6/9735": {
+   "notam_id": "6/9735",
+   "type": "SECURITY",
+   "facility": "ZAB",
+   "state": "AZ",
+   "description": "Libby AAF, AZ, Wednesday, November 25, 2026 Local",
+   "created": "11/24/2026",
+   "first_seen": "2026-11-24T22:10:36Z",
+   "detail": {
+    "name": "261125-26 Libby AAF",
+    "issued": "2026-11-24T21:36:45Z",
+    "effective": "2026-11-26T06:00:00Z",
+    "expires": "2026-11-26T13:00:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Libby AAF",
+    "floor": "9000 ft MSL",
+    "ceiling": "17999 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9735 ZAB AZ..AIRSPACE LIBBY AAF, AZ..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 25-26, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 313405N1101136W (FHU086008.4) TO 313513N1103020W (FHU256007.7) THEN CLOCKWISE ON A 8NM ARC CENTERED ON 313439N1102058W (FHU146000.8) TO THE POINT OF ORIGIN 9000FT MSL-17999FT MSL EFFECTIVE 2611260600 UTC (2300 LOCAL 11/25/26) UNTIL 2611261300 UTC (0600 LOCAL 11/26/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL AIRCRAFT ENTERING OR EXITING THE TFR MUST BE ON A DISCRETE CODE ASSIGNED BY AN AIR TRAFFIC CONTROL (ATC) FACILITY. 2. AIRCRAFT MUST BE SQUAWKING THE DISCRETE CODE AT ALL TIMES WHILE IN THE TFR. 3. ALL AIRCRAFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO-WAY RADIO COMMUNICATIONS WITH ATC. 4. ALBUQUERQUE ARTCC, TELEPHONE 505-856-4500, IS THE FAA COORDINATION FACILITY. THE ALBUQUERQUE /ZAB/ ARTCC, TEL 505-856-4500, IS THE CDN FAC. 2611260600-2611261300",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -110.19333,
+        31.56806
+       ],
+       [
+        -110.50556,
+        31.58694
+       ],
+       [
+        -110.5036,
+        31.5985
+       ],
+       [
+        -110.50089,
+        31.60992
+       ],
+       [
+        -110.49702,
+        31.6211
+       ],
+       [
+        -110.49202,
+        31.63195
+       ],
+       [
+        -110.48594,
+        31.64238
+       ],
+       [
+        -110.47882,
+        31.65232
+       ],
+       [
+        -110.47071,
+        31.66168
+       ],
+       [
+        -110.46167,
+        31.67041
+       ],
+       [
+        -110.45178,
+        31.67843
+       ],
+       [
+        -110.44111,
+        31.68568
+       ],
+       [
+        -110.42974,
+        31.69211
+       ],
+       [
+        -110.41775,
+        31.69766
+       ],
+       [
+        -110.40524,
+        31.7023
+       ],
+       [
+        -110.39231,
+        31.70599
+       ],
+       [
+        -110.37905,
+        31.7087
+       ],
+       [
+        -110.36556,
+        31.71041
+       ],
+       [
+        -110.35195,
+        31.7111
+       ],
+       [
+        -110.33831,
+        31.71078
+       ],
+       [
+        -110.32477,
+        31.70944
+       ],
+       [
+        -110.31141,
+        31.7071
+       ],
+       [
+        -110.29835,
+        31.70377
+       ],
+       [
+        -110.28567,
+        31.69947
+       ],
+       [
+        -110.27348,
+        31.69425
+       ],
+       [
+        -110.26187,
+        31.68814
+       ],
+       [
+        -110.25093,
+        31.68118
+       ],
+       [
+        -110.24075,
+        31.67344
+       ],
+       [
+        -110.23139,
+        31.66496
+       ],
+       [
+        -110.22293,
+        31.65582
+       ],
+       [
+        -110.21544,
+        31.64608
+       ],
+       [
+        -110.20897,
+        31.63582
+       ],
+       [
+        -110.20357,
+        31.62512
+       ],
+       [
+        -110.19929,
+        31.61406
+       ],
+       [
+        -110.19614,
+        31.60271
+       ],
+       [
+        -110.19417,
+        31.59118
+       ],
+       [
+        -110.19338,
+        31.57954
+       ],
+       [
+        -110.19333,
+        31.56806
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9128"
+  },
+  "6/9736": {
+   "notam_id": "6/9736",
+   "type": "SECURITY",
+   "facility": "ZAB",
+   "state": "AZ",
+   "description": "Libby AAF, AZ, Sunday, November 29, 2026 through Sunday, November 29, 2026 Local",
+   "created": "11/24/2026",
+   "first_seen": "2026-11-24T22:10:36Z",
+   "detail": {
+    "name": "261128-29 Libby AAF",
+    "issued": "2026-11-24T21:38:34Z",
+    "effective": "2026-11-29T13:00:00Z",
+    "expires": "2026-11-30T06:00:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Libby AAF",
+    "floor": "9000 ft MSL",
+    "ceiling": "17999 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9736 ZAB AZ..AIRSPACE LIBBY AAF, AZ..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 29, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. ANY PERSON WHO KNOWINGLY OR WILLFULLY VIOLATES THE RULES CONCERNING OPS IN THIS AIRSPACE MAY BE SUBJECT TO CERTAIN CRIMINAL PENALTIES UNDER 49 USC SECTION 46307. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 313405N1101136W (FHU086008.4) TO 313513N1103020W (FHU256007.7) THEN CLOCKWISE ON A 8NM ARC CENTERED ON 313439N1102058W (FHU146000.8) TO THE POINT OF ORIGIN 9000FT MSL-17999FT MSL EFFECTIVE 2611291300 UTC (0600 LOCAL 11/29/26) UNTIL 2611300600 UTC (2300 LOCAL 11/29/26). EXC AS SPECIFIED BLW AND/OR UNLESS AUTH BY ATC: 1. ALL AIRCRAFT ENTERING OR EXITING THE TFR MUST BE ON A DISCRETE CODE ASSIGNED BY AN AIR TRAFFIC CONTROL (ATC) FACILITY. 2. AIRCRAFT MUST BE SQUAWKING THE DISCRETE CODE AT ALL TIMES WHILE IN THE TFR. 3. ALL AIRCRAFT ENTERING OR EXITING THE TFR MUST REMAIN IN TWO-WAY RADIO COMMUNICATIONS WITH ATC. 4. ALBUQUERQUE ARTCC, TELEPHONE 505-856-4500, IS THE FAA COORDINATION FACILITY. THE ALBUQUERQUE /ZAB/ ARTCC, TEL 505-856-4500, IS THE CDN FAC. 2611291300-2611300600",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -110.19333,
+        31.56806
+       ],
+       [
+        -110.50556,
+        31.58694
+       ],
+       [
+        -110.5036,
+        31.5985
+       ],
+       [
+        -110.50089,
+        31.60992
+       ],
+       [
+        -110.49702,
+        31.6211
+       ],
+       [
+        -110.49202,
+        31.63195
+       ],
+       [
+        -110.48594,
+        31.64238
+       ],
+       [
+        -110.47882,
+        31.65232
+       ],
+       [
+        -110.47071,
+        31.66168
+       ],
+       [
+        -110.46167,
+        31.67041
+       ],
+       [
+        -110.45178,
+        31.67843
+       ],
+       [
+        -110.44111,
+        31.68568
+       ],
+       [
+        -110.42974,
+        31.69211
+       ],
+       [
+        -110.41775,
+        31.69766
+       ],
+       [
+        -110.40524,
+        31.7023
+       ],
+       [
+        -110.39231,
+        31.70599
+       ],
+       [
+        -110.37905,
+        31.7087
+       ],
+       [
+        -110.36556,
+        31.71041
+       ],
+       [
+        -110.35195,
+        31.7111
+       ],
+       [
+        -110.33831,
+        31.71078
+       ],
+       [
+        -110.32477,
+        31.70944
+       ],
+       [
+        -110.31141,
+        31.7071
+       ],
+       [
+        -110.29835,
+        31.70377
+       ],
+       [
+        -110.28567,
+        31.69947
+       ],
+       [
+        -110.27348,
+        31.69425
+       ],
+       [
+        -110.26187,
+        31.68814
+       ],
+       [
+        -110.25093,
+        31.68118
+       ],
+       [
+        -110.24075,
+        31.67344
+       ],
+       [
+        -110.23139,
+        31.66496
+       ],
+       [
+        -110.22293,
+        31.65582
+       ],
+       [
+        -110.21544,
+        31.64608
+       ],
+       [
+        -110.20897,
+        31.63582
+       ],
+       [
+        -110.20357,
+        31.62512
+       ],
+       [
+        -110.19929,
+        31.61406
+       ],
+       [
+        -110.19614,
+        31.60271
+       ],
+       [
+        -110.19417,
+        31.59118
+       ],
+       [
+        -110.19338,
+        31.57954
+       ],
+       [
+        -110.19333,
+        31.56806
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9736"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
