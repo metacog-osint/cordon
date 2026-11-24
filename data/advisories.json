@@ -1,6 +1,23 @@
 {
  "source": "https://cadataapi.state.gov/api/TravelAdvisories",
  "advisories": {
+  "AF": {
+   "key": "AF",
+   "iso": "AF",
+   "fips": "AF",
+   "name": "Afghanistan",
+   "title": "Afghanistan - Level 4: Do Not Travel",
+   "level": 4,
+   "level_text": "Do Not Travel",
+   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.afg.html",
+   "updated": "2026-11-23T19:00:00-05:00",
+   "text_hash": "sha256:69e734bec2049320c54f9a1c27299884757d07849833c8cd2a769f60708d4af8",
+   "posture": {
+    "state": "suspended_operations",
+    "sentence": "The US Embassy in Kabul suspended operations in 2021."
+   },
+   "words": 630
+  },
   "EG": {
    "key": "EG",
    "iso": "EG",
@@ -2703,23 +2720,6 @@
     "sentence": null
    },
    "words": 55
-  },
-  "AF": {
-   "key": "AF",
-   "iso": "AF",
-   "fips": "AF",
-   "name": "Afghanistan",
-   "title": "Afghanistan - Level 4: Do Not Travel",
-   "level": 4,
-   "level_text": "Do Not Travel",
-   "link": "https://travel.state.gov/content/tsg_aem/us/en/home/international-travel/travel-advisories/destination.afg.html",
-   "updated": "2026-02-19T19:00:00-05:00",
-   "text_hash": "sha256:f29fdefd20930d2660d95ee325b488d0a9883b1518bfd99ea22fa2d50e0fe40e",
-   "posture": {
-    "state": "suspended_operations",
-    "sentence": "The US Embassy in Kabul suspended operations in 2021."
-   },
-   "words": 453
   },
   "CI": {
    "key": "CI",
