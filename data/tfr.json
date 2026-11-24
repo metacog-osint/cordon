@@ -9679,6 +9679,7 @@
    "description": "8NM NE OXFORD, MS, Tuesday, November 24, 2026 through Thursday, November 26, 2026 UTC",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T16:10:39Z",
+   "subject": "6/8981",
    "detail": {
     "name": "6/9716",
     "issued": "2026-11-24T16:02:16Z",
@@ -9846,8 +9847,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/8981"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
