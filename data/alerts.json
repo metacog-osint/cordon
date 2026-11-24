@@ -218,7 +218,7 @@
     "iso": "LB",
     "title": "Security Alert: U.S. Embassy Beirut – November 24, 2026",
     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbEU3Y2JJdEdlTy12eVBHLUt4c1ZTR01uRnFFaEg1dHhmdTVnRHA3eUxmMHktY005M19SZUZSejBvX3JqcXZscmEyelBuMkZjRXRHYTNnSVlxeXlWYjZpWmplaDlEb0JMdHRfdTRKU2JUR2lGVnFnRWsxbVktSDJ5NEdB?oc=5",
-    "published_at": "2026-11-24T22:00:52Z",
+    "published_at": "2026-11-24T22:00:31Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://lb.usembassy.gov/category/alert/"
@@ -419,6 +419,15 @@
    }
   ],
   "SA": [
+   {
+    "iso": "SA",
+    "title": "Security Alert: U.S. Mission Saudi Arabia – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNenhZUnJuYTY3QnRZTTFnOTVDZUpKWUc5Y0M4V2hBQmNYZlp4QXphMnRjanItRmFzUFlSRHZwZjBUaVlqel9jTUQtdFVSajBha0R6R1BUQldMRUx6V2YtWFFmZHVPdVdQWV9KM1lIaTZUYTdDYnJmMzRDVXVLdEEzMV9RX2ZRc1oxZEE?oc=5",
+    "published_at": "2026-11-24T22:14:53Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://sa.usembassy.gov/category/alert/"
+   },
    {
     "iso": "SA",
     "title": "Security Alert: U.S. Mission to Saudi Arabia – November 17, 2026",

@@ -9501,6 +9501,7 @@
    "description": "Libby AAF, AZ, Wednesday, November 25, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T22:10:36Z",
+   "subject": "6/9128",
    "detail": {
     "name": "261125-26 Libby AAF",
     "issued": "2026-11-24T21:36:45Z",
@@ -9672,8 +9673,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9128"
+   }
   },
   "6/9736": {
    "notam_id": "6/9736",
@@ -9683,6 +9683,7 @@
    "description": "Libby AAF, AZ, Sunday, November 29, 2026 through Sunday, November 29, 2026 Local",
    "created": "11/24/2026",
    "first_seen": "2026-11-24T22:10:36Z",
+   "subject": "6/9736",
    "detail": {
     "name": "261128-29 Libby AAF",
     "issued": "2026-11-24T21:38:34Z",
@@ -9854,8 +9855,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9736"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
