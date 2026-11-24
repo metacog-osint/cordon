@@ -2,6 +2,16 @@
  "source": "https://nasstatus.faa.gov/api/airport-events",
  "programs": [
   {
+   "kind": "closure",
+   "airport": "LGA",
+   "airport_name": "La Guardia",
+   "start": "2026-11-24T05:14:00Z",
+   "end": "2026-11-24T11:00:00Z",
+   "updated": "2026-11-24T05:17:18Z",
+   "notam": "!LGA 11/413 LGA AD AP CLSD EXC HEL 30MIN PPR 718-533-3700 2611240514-2611241100",
+   "issued": "2026-11-24T05:14:00Z"
+  },
+  {
    "kind": "ground_delay",
    "airport": "LAS",
    "airport_name": "Harry Reid International",
