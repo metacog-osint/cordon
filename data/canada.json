@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-24T14:40:32Z",
+ "generated": "2026-11-24T17:40:15Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1317,9 +1317,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-15T12:53:15Z",
+   "updated": "2026-11-24T17:38:04Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Entry and exit requirements section – updated information on exemption from the Korea Electronic Travel Authority (K-ETA)",
    "link": "https://travel.gc.ca/destinations/south-korea"
   },
   "KW": {
