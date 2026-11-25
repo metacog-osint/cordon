@@ -6947,184 +6947,6 @@
     }
    }
   },
-  "6/9639": {
-   "notam_id": "6/9639",
-   "type": "VIP",
-   "facility": "ZID",
-   "state": "OH",
-   "description": "FAIRBORN, OH, Wednesday, November 25, 2026 Local",
-   "created": "11/24/2026",
-   "first_seen": "2026-11-24T01:10:39Z",
-   "subject": "6/9639",
-   "detail": {
-    "name": "261125 Fairborn OH VIP ZID",
-    "issued": "2026-11-24T00:42:45Z",
-    "effective": "2026-11-25T16:00:00Z",
-    "expires": "2026-11-25T19:30:00Z",
-    "regulation": "91.141",
-    "purpose": null,
-    "city": "FAIRBORN",
-    "floor": "surface",
-    "ceiling": "4999 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9639 ZID OH..AIRSPACE FAIRBORN, OHIO..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 25, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 91.141, ALL ACFT FLT OPS INCLUDING REMOTE CONTROLLED ACFT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 5NM RADIUS OF 394937N0840249W (DQN126019.7) SFC-4999FT AGL EFFECTIVE 2611251600 UTC (1100 LOCAL 11/25/26) UNTIL 2611251930 UTC (1430 LOCAL 11/25/26). EXC THE FLT OPS LISTED BLW: 1. ACFT MUST BE SQUAWKING AN ATC DISCRETE BEACON CODE AT ALL TIMES WHILE IN THE TFR AND MUST REMAIN IN TWO-WAY RADIO COM WITH ATC. 2. LAW ENFORCEMENT, FIREFIGHTING, AND MEDEVAC/AIR AMBULANCE FLIGHTS ON ACT MISSIONS. 3. TRANSIENT OPS ARE AUTH FOR SAFETY OF FLT OR TO MEET OPERATIONAL DEMANDS. 4. ACFT MAY NOT LOITER. 5. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. 6. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. 7. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611251600-2611251930",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -84.04694,
-        39.91034
-       ],
-       [
-        -84.02814,
-        39.90908
-       ],
-       [
-        -84.00991,
-        39.90531
-       ],
-       [
-        -83.9928,
-        39.89916
-       ],
-       [
-        -83.97735,
-        39.89081
-       ],
-       [
-        -83.96402,
-        39.88052
-       ],
-       [
-        -83.95321,
-        39.86861
-       ],
-       [
-        -83.94526,
-        39.85542
-       ],
-       [
-        -83.9404,
-        39.84138
-       ],
-       [
-        -83.93878,
-        39.82689
-       ],
-       [
-        -83.94044,
-        39.81241
-       ],
-       [
-        -83.94534,
-        39.79838
-       ],
-       [
-        -83.95333,
-        39.78521
-       ],
-       [
-        -83.96415,
-        39.77331
-       ],
-       [
-        -83.97748,
-        39.76304
-       ],
-       [
-        -83.99292,
-        39.7547
-       ],
-       [
-        -84.00999,
-        39.74857
-       ],
-       [
-        -84.02818,
-        39.74481
-       ],
-       [
-        -84.04694,
-        39.74354
-       ],
-       [
-        -84.0657,
-        39.74481
-       ],
-       [
-        -84.0839,
-        39.74857
-       ],
-       [
-        -84.10097,
-        39.7547
-       ],
-       [
-        -84.11641,
-        39.76304
-       ],
-       [
-        -84.12974,
-        39.77331
-       ],
-       [
-        -84.14056,
-        39.78521
-       ],
-       [
-        -84.14855,
-        39.79838
-       ],
-       [
-        -84.15344,
-        39.81241
-       ],
-       [
-        -84.15511,
-        39.82689
-       ],
-       [
-        -84.15349,
-        39.84138
-       ],
-       [
-        -84.14863,
-        39.85542
-       ],
-       [
-        -84.14068,
-        39.86861
-       ],
-       [
-        -84.12987,
-        39.88052
-       ],
-       [
-        -84.11654,
-        39.89081
-       ],
-       [
-        -84.10108,
-        39.89916
-       ],
-       [
-        -84.08398,
-        39.90531
-       ],
-       [
-        -84.06575,
-        39.90908
-       ],
-       [
-        -84.04694,
-        39.91034
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9661": {
    "notam_id": "6/9661",
    "type": "VIP",
@@ -7603,184 +7425,6 @@
          -84.66778,
          39.13202
         ]
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/9674": {
-   "notam_id": "6/9674",
-   "type": "HAZARDS",
-   "facility": "ZMP",
-   "state": "MN",
-   "description": "KEEWATIN, MN, Wednesday, November 25, 2026 UTC",
-   "created": "11/24/2026",
-   "first_seen": "2026-11-24T14:10:35Z",
-   "subject": "6/7462",
-   "detail": {
-    "name": "6/9674",
-    "issued": "2026-11-24T14:01:06Z",
-    "effective": "2026-11-25T17:30:00Z",
-    "expires": "2026-11-25T19:30:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "KEEWATIN",
-    "floor": "surface",
-    "ceiling": "4500 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9674 ZMP MN..AIRSPACE KEEWATIN, MN..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) BLASTING WI AN AREA DEFINED AS 2NM RADIUS OF 472535N0930247W (HIB296015.8) SFC-4500FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF KEETAC MINE CONTROL ARE AUTH IN THE AIRSPACE. KEETAC MINE CONTROL TEL 218-778-8730 IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. MINNEAPOLIS/ZMP/ARTCC TEL 651-463-5580 IS THE FAA CDN FAC. 2611251730-2611251930",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -93.04639,
-        47.4597
-       ],
-       [
-        -93.03786,
-        47.4592
-       ],
-       [
-        -93.02959,
-        47.45769
-       ],
-       [
-        -93.02183,
-        47.45524
-       ],
-       [
-        -93.01482,
-        47.45191
-       ],
-       [
-        -93.00877,
-        47.4478
-       ],
-       [
-        -93.00386,
-        47.44304
-       ],
-       [
-        -93.00025,
-        47.43777
-       ],
-       [
-        -92.99804,
-        47.43216
-       ],
-       [
-        -92.9973,
-        47.42638
-       ],
-       [
-        -92.99805,
-        47.42059
-       ],
-       [
-        -93.00027,
-        47.41498
-       ],
-       [
-        -93.00389,
-        47.40972
-       ],
-       [
-        -93.0088,
-        47.40497
-       ],
-       [
-        -93.01485,
-        47.40086
-       ],
-       [
-        -93.02186,
-        47.39753
-       ],
-       [
-        -93.02961,
-        47.39508
-       ],
-       [
-        -93.03787,
-        47.39358
-       ],
-       [
-        -93.04639,
-        47.39307
-       ],
-       [
-        -93.05491,
-        47.39358
-       ],
-       [
-        -93.06317,
-        47.39508
-       ],
-       [
-        -93.07092,
-        47.39753
-       ],
-       [
-        -93.07793,
-        47.40086
-       ],
-       [
-        -93.08398,
-        47.40497
-       ],
-       [
-        -93.08889,
-        47.40972
-       ],
-       [
-        -93.09251,
-        47.41498
-       ],
-       [
-        -93.09473,
-        47.42059
-       ],
-       [
-        -93.09548,
-        47.42638
-       ],
-       [
-        -93.09474,
-        47.43216
-       ],
-       [
-        -93.09253,
-        47.43777
-       ],
-       [
-        -93.08892,
-        47.44304
-       ],
-       [
-        -93.08401,
-        47.4478
-       ],
-       [
-        -93.07796,
-        47.45191
-       ],
-       [
-        -93.07095,
-        47.45524
-       ],
-       [
-        -93.06319,
-        47.45769
-       ],
-       [
-        -93.05492,
-        47.4592
-       ],
-       [
-        -93.04639,
-        47.4597
        ]
       ]
      ]
@@ -9016,6 +8660,184 @@
      ]
     }
    }
+  },
+  "6/9784": {
+   "notam_id": "6/9784",
+   "type": "SECURITY",
+   "facility": "ZDC",
+   "state": "NC",
+   "description": "Goldsboro, NC",
+   "created": "11/25/2026",
+   "first_seen": "2026-11-25T19:40:32Z",
+   "detail": {
+    "name": "261125 Goldsboro NC FBI JAMZ",
+    "issued": "2026-11-25T19:13:28Z",
+    "effective": null,
+    "expires": "2026-11-25T23:30:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Goldsboro",
+    "floor": "surface",
+    "ceiling": "1000 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/9784 ZDC NC..AIRSPACE GOLDSBORO, NC..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 352442N0780323W (ISO281024.6) SFC-1000FT AGL EFFECTIVE IMMEDIATELY UNTIL 2611252330 UTC (1830 LOCAL 11/25/26). UNLESS AUTH BY ATC IN CONSULTATION WITH THE AIR TRAFFIC SECURITY COORDINATOR VIA THE DOMESTIC EVENTS NETWORK (DEN). SABT JOHN TYLER, TEL 202-558-5560, IS THE POINT OF CONTACT. THE DOMESTIC EVENTS NETWORK /DEN/ ARTCC, TEL 540-422-4423, IS THE FAA CDN FAC. 2611251911-2611252330",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -78.05639,
+        35.42836
+       ],
+       [
+        -78.05285,
+        35.42811
+       ],
+       [
+        -78.04941,
+        35.42735
+       ],
+       [
+        -78.04619,
+        35.42612
+       ],
+       [
+        -78.04328,
+        35.42445
+       ],
+       [
+        -78.04077,
+        35.4224
+       ],
+       [
+        -78.03873,
+        35.42001
+       ],
+       [
+        -78.03723,
+        35.41737
+       ],
+       [
+        -78.03631,
+        35.41456
+       ],
+       [
+        -78.036,
+        35.41166
+       ],
+       [
+        -78.03631,
+        35.40877
+       ],
+       [
+        -78.03723,
+        35.40596
+       ],
+       [
+        -78.03873,
+        35.40332
+       ],
+       [
+        -78.04077,
+        35.40094
+       ],
+       [
+        -78.04328,
+        35.39888
+       ],
+       [
+        -78.0462,
+        35.39721
+       ],
+       [
+        -78.04942,
+        35.39598
+       ],
+       [
+        -78.05285,
+        35.39523
+       ],
+       [
+        -78.05639,
+        35.39497
+       ],
+       [
+        -78.05993,
+        35.39523
+       ],
+       [
+        -78.06336,
+        35.39598
+       ],
+       [
+        -78.06658,
+        35.39721
+       ],
+       [
+        -78.06949,
+        35.39888
+       ],
+       [
+        -78.07201,
+        35.40094
+       ],
+       [
+        -78.07405,
+        35.40332
+       ],
+       [
+        -78.07555,
+        35.40596
+       ],
+       [
+        -78.07647,
+        35.40877
+       ],
+       [
+        -78.07678,
+        35.41166
+       ],
+       [
+        -78.07647,
+        35.41456
+       ],
+       [
+        -78.07555,
+        35.41737
+       ],
+       [
+        -78.07405,
+        35.42001
+       ],
+       [
+        -78.07201,
+        35.4224
+       ],
+       [
+        -78.0695,
+        35.42445
+       ],
+       [
+        -78.06659,
+        35.42612
+       ],
+       [
+        -78.06336,
+        35.42735
+       ],
+       [
+        -78.05993,
+        35.42811
+       ],
+       [
+        -78.05639,
+        35.42836
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9784"
   },
   "9/2934": {
    "notam_id": "9/2934",
@@ -10837,6 +10659,36 @@
    "first_seen": "2026-11-23T22:10:36Z",
    "subject": "6/9591",
    "left_at": "2026-11-24T19:10:33Z"
+  },
+  "6/9639": {
+   "type": "VIP",
+   "state": "OH",
+   "bbox": [
+    -84.1551,
+    39.7435,
+    -83.9388,
+    39.9103
+   ],
+   "area_km2": 266.5,
+   "ceiling_ft": 4999,
+   "first_seen": "2026-11-24T01:10:39Z",
+   "subject": "6/9639",
+   "left_at": "2026-11-25T19:40:32Z"
+  },
+  "6/9674": {
+   "type": "HAZARDS",
+   "state": "MN",
+   "bbox": [
+    -93.0955,
+    47.3931,
+    -92.9973,
+    47.4597
+   ],
+   "area_km2": 42.6,
+   "ceiling_ft": 4500,
+   "first_seen": "2026-11-24T14:10:35Z",
+   "subject": "6/7462",
+   "left_at": "2026-11-25T19:40:32Z"
   },
   "6/9716": {
    "type": "HAZARDS",

@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T19:00:17Z",
+ "generated": "2026-11-25T19:20:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -33,9 +33,9 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-10-14T11:01:50Z",
-   "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "updated": "2026-11-25T19:19:24Z",
+   "update_type": "Editorial change",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/afghanistan"
   },
   "AG": {

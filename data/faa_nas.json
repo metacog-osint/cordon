@@ -15,21 +15,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 27.0,
    "max_delay_min": 70.0
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-25T16:00:00Z",
-   "end": "2026-11-25T22:59:00Z",
-   "updated": "2026-11-25T15:01:30Z",
-   "reason": "low ceilings",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=53&adv_date=11252026&facId=SFO&title=ATCSCC ADVZY 053 SFO/ZOA 11/25/2026 CDM GROUND DELAY PROGRAM&titleDate=11/25/2026",
-   "included_facilities": 3,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 54.0,
-   "max_delay_min": 123.0
   }
  ],
  "airports": {
