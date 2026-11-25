@@ -9857,6 +9857,184 @@
     }
    }
   },
+  "6/9741": {
+   "notam_id": "6/9741",
+   "type": "HAZARDS",
+   "facility": "ZDC",
+   "state": "VA",
+   "description": "41NM SW HARRISONBURG, VA, Wednesday, November 25, 2026 through Monday, November 30, 2026 UTC",
+   "created": "11/25/2026",
+   "first_seen": "2026-11-25T00:40:34Z",
+   "detail": {
+    "name": "6/9741",
+    "issued": "2026-11-25T00:18:39Z",
+    "effective": "2026-11-25T14:00:00Z",
+    "expires": "2026-11-30T23:00:00Z",
+    "regulation": "91.137(a)(2)",
+    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
+    "city": "41NM SW HARRISONBURG",
+    "floor": "surface",
+    "ceiling": "5200 ft MSL",
+    "statutory": false,
+    "text": "!FDC 6/9741 ZDC VA..AIRSPACE 41NM SW HARRISONBURG, VA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 2NM RADIUS OF 381800N0794730W (EKN166039.6) SFC-5200FT VIRGINIA INTERAGENCY COORDINATION CENTER TEL 434-423-2002 OR FREQ 123.125 LITTLE RIDGE FIRE IS IN CHARGE OF THE OPERATION. WASHINGTON/ZDC/ARTCC TEL 703-771-3470 IS THE FAA CDN FAC. DLY 1400-2300 2611251400-2611302300EST",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -79.79167,
+        38.33337
+       ],
+       [
+        -79.78431,
+        38.33286
+       ],
+       [
+        -79.77718,
+        38.33136
+       ],
+       [
+        -79.77049,
+        38.3289
+       ],
+       [
+        -79.76444,
+        38.32556
+       ],
+       [
+        -79.75922,
+        38.32144
+       ],
+       [
+        -79.75499,
+        38.31668
+       ],
+       [
+        -79.75187,
+        38.31141
+       ],
+       [
+        -79.74996,
+        38.30579
+       ],
+       [
+        -79.74932,
+        38.29999
+       ],
+       [
+        -79.74997,
+        38.2942
+       ],
+       [
+        -79.75188,
+        38.28858
+       ],
+       [
+        -79.755,
+        38.28331
+       ],
+       [
+        -79.75924,
+        38.27855
+       ],
+       [
+        -79.76446,
+        38.27443
+       ],
+       [
+        -79.7705,
+        38.2711
+       ],
+       [
+        -79.77719,
+        38.26864
+       ],
+       [
+        -79.78432,
+        38.26714
+       ],
+       [
+        -79.79167,
+        38.26663
+       ],
+       [
+        -79.79902,
+        38.26714
+       ],
+       [
+        -79.80614,
+        38.26864
+       ],
+       [
+        -79.81283,
+        38.2711
+       ],
+       [
+        -79.81888,
+        38.27443
+       ],
+       [
+        -79.82409,
+        38.27855
+       ],
+       [
+        -79.82833,
+        38.28331
+       ],
+       [
+        -79.83145,
+        38.28858
+       ],
+       [
+        -79.83336,
+        38.2942
+       ],
+       [
+        -79.83401,
+        38.29999
+       ],
+       [
+        -79.83337,
+        38.30579
+       ],
+       [
+        -79.83146,
+        38.31141
+       ],
+       [
+        -79.82835,
+        38.31668
+       ],
+       [
+        -79.82411,
+        38.32144
+       ],
+       [
+        -79.81889,
+        38.32556
+       ],
+       [
+        -79.81285,
+        38.3289
+       ],
+       [
+        -79.80616,
+        38.33136
+       ],
+       [
+        -79.79902,
+        38.33286
+       ],
+       [
+        -79.79167,
+        38.33337
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9741"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
