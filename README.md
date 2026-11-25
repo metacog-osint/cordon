@@ -87,3 +87,7 @@ Standard-library Python only. `update.yml` runs hourly: collect, commit `data/` 
 publish to GitHub Pages. `data/changes.jsonl` keeps every level, posture and bulletin change, append-only.
 
 Code under the GNU AGPL-3.0 (`LICENSE`); shared and third-party files keep their own licences, listed in `NOTICE`. A project of The Intelligence Company.
+
+## AI assistance
+
+This repository is built with AI coding assistance (Anthropic's Claude Code). The Intelligence Company is responsible for everything published here.
