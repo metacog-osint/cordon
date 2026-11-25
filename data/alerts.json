@@ -20,6 +20,15 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ae.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "AE",
+    "title": "Security Alert: U.S. Mission United Arab Emirates – November 7, 2026 - https://ae.usembassy.gov/",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWUo4WWVtR1dycHI0cFlaTzZkeklhRGNPZU9qTlNYV2RGZE5oTzdINHdmb0tlS3pPbUdJOWxmNjVEVy1rVWltcXhsRXZ3NXMtTV9MLTQwVjJpbEhSZnd3ekN1VGlZVTdsMVlQaWFQMkFkdE4wbGdyMjh1ZFQ5dUNlRDNKS1A5Y1NKREFqUEVVMXIwTnc?oc=5",
+    "published_at": "2026-11-07T08:00:00Z",
+    "type": "security",
+    "via": "google-news",
+    "post_url": "https://ae.usembassy.gov/category/alert/"
    }
   ],
   "BH": [
@@ -34,9 +43,9 @@
    },
    {
     "iso": "BH",
-    "title": "Security Alert: U.S. Embassy Manama – November 22, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPajJqcWdnYldrOGtrdy0yRXNEdWl2WF9sc0s4Njg5UGZFTmlBNWYxaHpsVnlnbUF0MnIxYkV6elV3Z2dtYzBxZHJCWF93RzJZYm1oam0zTnpZYUtKZXZ0R09kazVsRnNJOThpb2JDbndPbEV4WjZKRnhoSWxFc0NGV01B?oc=5",
-    "published_at": "2026-11-22T16:00:10Z",
+    "title": "Security Alert: U.S. Embassy Manama – November 18, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVUZ2SmtWZE5CWU0tVkVxb0xxbVdUU0xEMzlFU090QjlVSUhyd2EyazZsX0FDaXpjSHJNdzI0N251SzVCdHVoTTB2a2Q4bWExcldrcjVFZUU4Mk54c1pWUW9sZ3FnU0FzVGdobnJEajlMVl83Wk5IYUhpanEzWV9XNWlB?oc=5",
+    "published_at": "2026-11-18T14:21:50Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://bh.usembassy.gov/category/alert/"
