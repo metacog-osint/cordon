@@ -172,31 +172,24 @@ def check() -> list[str]:
 
 
 def archive_pulls(paths):
-    """(pulled_at, features) for each pull in the NMS archive's day files, in time order (a day file's records are
-    sorted by pulled_at)."""
-    import gzip
-    import itertools
+    """(pulled_at, features) for each pull in the NMS archive's day files, in time order."""
     for p in sorted(paths, key=lambda x: x.name):
-        with gzip.open(p, "rt", encoding="utf-8") as fh:
-            recs = (json.loads(line) for line in fh if line.strip())
-            for t, grp in itertools.groupby(recs, key=lambda r: r["pulled_at"]):
-                yield t, [r["feature"] for r in grp]
+        yield from nms.archive_pulls(p.read_bytes())
 
 
 def significance_backfill(directory: Path):
-    """The one-off backfill: the baseline and chains replayed from every archive day file in directory, saved where
-    the lane keeps them (data/nms_significance.json, the chains' working copy under cache/nms/archive/)."""
-    import gzip
+    """The manual backfill (the lane backfills itself from the releases; this is for a local run): the baseline and
+    chains replayed from every archive day file in directory, which must hold every day from the archive's first,
+    saved where the lane keeps them (data/nms_significance.json, the chains' working copy under cache/nms/archive/)
+    and marked done, so the lane does not rebuild it."""
     from cordon import significance
     paths = sorted(directory.glob("nms-????-??-??.jsonl.gz"))
     if not paths:
         raise SystemExit(f"no nms-YYYY-MM-DD.jsonl.gz files in {directory}")
     b, chains, total = significance.replay(archive_pulls(paths))
-    nms.common.DATA.mkdir(parents=True, exist_ok=True)
-    (nms.common.DATA / nms.SIG_BASELINE).write_text(significance.dumps(b), encoding="utf-8", newline="\n")
-    cp = nms.chains_path()
-    cp.parent.mkdir(parents=True, exist_ok=True)
-    cp.write_bytes(gzip.compress(json.dumps(chains, separators=(",", ":")).encode("utf-8"), 6))
+    b["backfill"] = {"from": paths[0].name[4:14], "to": paths[-1].name[4:14], "done": True,
+                     "at": b["updated_at"]}
+    nms.save_significance(b, chains)
     return b, chains, total, len(paths)
 
 

@@ -10,25 +10,29 @@ Which NOTAMs: international ones whose ICAO Q-code subject (letters 2-3 of NMS's
 is a restriction or warning in SUBJECTS. Everything else is out of scope and never ranked.
 
 Steps, each writing its reasons:
-  - cause(): from the Q-code subject first (CODE_CAUSE: WH, WD, WR hazard to people; WM, WE, RD, RA military and test),
-    then the NOTAM's own words (WORDS, in order; RT, RR, RP and WU take their cause from the words alone). Fireworks
-    under WD or WH are scheduled and routine. Space words (nms.LAUNCH_WORDS, see space()) make it space operations,
-    which Launch owns, and a GNSS subject (G) is Noisefloor's and Launch's: both are excluded from the ranking.
-  - the baseline (new_baseline(), update(); small, committed): counts of new NOTAMs per (region, subject) per day,
-    where the region is the FIR (affectedFir, else location) and the wider scope its ICAO prefix (first two letters;
-    a prefix, not a country; its count is the sum of its regions'); each scope's first day (its history starts the
-    first day any international NOTAM is seen there); half-octave histograms of area and duration per (region,
-    subject) for "large for region".
-  - the chains (working state, beside the baseline): one entry per ranked NOTAM held, keyed as the store keys it
-    (number, FIR, location). A NOTAM counts once, when its chain starts: the same version seen again, a later
-    version, or a replacement of a NOTAM already chained does not count again.
-  - rarity(): rare (none), uncommon (at most two) or common against the 365 days before the NOTAM was first seen (or
-    the whole history, if shorter), at the narrowest scope with at least MIN_HISTORY_DAYS of history; before that,
-    history_short with the count and the days held.
+  - cause(): from the Q-code subject first (CODE_CAUSE: WM, WE, RD, RA military and test; WH, WD, WR a hazard to
+    people only with ordnance, structure-demolition, evacuation or release words, else quarry, mine and avalanche
+    blasting or spraying (scheduled and routine), training (military and test), or CODE_DEFAULT), then the NOTAM's
+    own words (WORDS, in order; RT, RR, RP and WU take their cause from the words alone). Fireworks under WD or WH
+    are scheduled and routine. Space words (nms.LAUNCH_WORDS, see space()) make it space operations, which Launch
+    owns, and a GNSS subject (G) is Noisefloor's and Launch's: both are excluded from the ranking.
+  - the baseline (new_baseline(), update(); small, committed, never pruned): counts of new NOTAMs per (region,
+    subject, cause group) per day, where the region is the FIR (affectedFir, else location) and the wider scope its
+    ICAO prefix (first two letters; a prefix, not a country; its count is the sum of its regions'); each scope's
+    first day (its history starts the first day any international NOTAM is seen there); half-octave histograms of
+    area and duration per (region, subject).
+  - the chains (working state, beside the baseline, pruned CHAIN_KEEP_DAYS after a chain ends; rebuildable from the
+    permanent archive): one entry per ranked NOTAM held, keyed as the store keys it (number, FIR, location). A NOTAM
+    counts once, when its chain starts: the same version seen again, a later version, a copy for another location,
+    or a replacement of a NOTAM already chained does not count again.
+  - rarity(): rare (none), uncommon (at most two) or common, for the same subject and cause group, against the 365
+    days before the NOTAM was first seen (or the whole history, if shorter), at the narrowest scope with at least
+    MIN_HISTORY_DAYS of history; before that, history_short with the count and the days held.
   - dynamics along a chain: a replacing NOTAM (type R, naming the one it replaces) or a cancel (type C): date_slips
-    (start moved later), extended (end moved later), enlarged (radius grew or ceiling rose), cancelled_early.
-  - large(): area (the Q) line circle) or duration above the (region, subject)'s 95th percentile, once MIN_SIZE_N are
-    held.
+    (start moved later before the earlier start was reached: a postponement, not a day-by-day re-activation),
+    extended (end moved later), enlarged (radius grew or ceiling rose), cancelled_early.
+  - large(): area (the Q) line circle) above the (region, subject)'s 95th percentile, once the region has
+    MIN_HISTORY_DAYS of history and MIN_SIZE_N are held.
   - tier(): significant only for a hazard-to-people or disaster cause that is rare; notable for rare, a hazard-to-
     people cause, two or more date slips or enlarged, or large for region on an RT, RP or RD area; scheduled and
     unknown causes never above notable; the rest routine.
@@ -48,12 +52,12 @@ from datetime import datetime, timedelta
 from . import nms
 
 METHOD = "tic-significance-0.1"
-FORMAT = "cordon-significance-baseline/1"
+FORMAT = "cordon-significance-baseline/2"
 MIN_HISTORY_DAYS = 90      # a scope's rarity label needs this much history (the note's rule)
 WINDOW_DAYS = 365          # rarity counts over the year before (or the whole history, if shorter)
-KEEP_COUNT_DAYS = 400      # daily counts older than this leave the baseline (outside every window)
-MIN_SIZE_N = 30            # "large for region" needs this many NOTAMs of the subject held in the region
-LARGE_PCT = 0.95           # ... and means above their 95th percentile (area or duration)
+MIN_SIZE_N = 30            # "large for region" needs this many NOTAMs of the subject held in the region (and the
+                           # region MIN_HISTORY_DAYS of history)
+LARGE_PCT = 0.95           # ... and means an area above their 95th percentile
 CHAIN_KEEP_DAYS = 16     # an ended chain is kept as long as the store keeps an ended NOTAM (nms.ENDED_KEEP_DAYS)
 NM_KM = 1.852
 
@@ -95,6 +99,25 @@ WORDS = [
                 r"MANOEUVRES?|MANEUVERS?|AIR DEFEN[CS]E|SHOOTING|BOMBING)\b"), "military operation",
      "military_and_test"),
 ]
+# WH (blasting), WD (demolition of explosives) and WR (radioactive or toxic materials) are a hazard to people only
+# with words for ordnance, the demolition of a structure, an evacuation or a release; without them most are quarry,
+# mine and avalanche-control blasting, explosives training, or forest and crop spraying (measured 19-25 Nov 2026:
+# 102 of 111 such notices). Then, in order: routine work words (scheduled and routine), military words (military and
+# test), else CODE_DEFAULT.
+CODE_HAZARD = re.compile(r"\b(?:DETONAT\w*|UXO|UXB|UNEXPLODED|ORDNANCE|BOMBS?|MUNITIONS?|AMMUNITIONS?|EOD|"
+                         r"DEMOLITION OF (?:THE|A|AN)\b|DEMOLISH\w*|CHIMNEYS?|COOLING TOWERS?|BUILDINGS?|BRIDGES?|"
+                         r"STRUCTURES?|EVACUAT\w*|SHELTER IN PLACE|LEAK\w*|PLUME|SPILL\w*|HAZMAT)\b")
+CODE_ROUTINE = [
+    (re.compile(r"\b(?:QUARR\w*|MINES?|MINING|OPEN PIT|OPENCAST)\b"), "quarry or mine blasting"),
+    (re.compile(r"\bAVALANCHE\b"), "avalanche control"),
+    (re.compile(r"\b(?:ROADS?|CONSTRUCTION|TUNNEL\w*|SEISMIC|SURVEY)\b"), "construction or survey blasting"),
+    (re.compile(r"\b(?:FOREST TREATMENT|AERIAL TREATMENT|TREATMENT|SPRAY\w*|AGRICULTUR\w*|PLANTATIONS?|CROPS?|"
+                r"PESTICIDE\w*|LOCUST\w*)\b"), "forest or crop spraying"),
+]
+CODE_MILITARY = re.compile(r"\b(?:MILITARY|MIL|TRG|TRAINING|FIRING|FRNG|EXERCISES?|EXER|RANGE)\b")
+CODE_DEFAULT = {"WH": ("blasting, no hazard words", "scheduled_and_routine"),
+                "WD": ("demolition of explosives, no hazard words", "military_and_test"),
+                "WR": ("radioactive or toxic materials, no hazard words", "unknown")}
 # nms.LAUNCH_WORDS (Launch's candidate words) also catch military firing ("MISSILE", "ROCKET"), model rockets, the
 # "SPACE FLT" inside "AIRSPACE FLT" and "STAGE". A launch-word hit makes a NOTAM space operations only when it is
 # one of the space phrases themselves, or a rocket launch, or a rocket with a stage.
@@ -161,11 +184,31 @@ def cause(f: dict) -> dict:
         if subj in ("WD", "WH") and words and words[0] == "fireworks":
             return {"cause": "fireworks", "cause_group": "scheduled_and_routine", "cause_basis": [code, words[2]],
                     "excluded": None}
+        if subj in CODE_DEFAULT:
+            return dict(_hazard_code(subj, c, code, text), excluded=None)
         basis = [code] + ([words[2]] if words and words[1] == g else [])   # words never override the code's group
         return {"cause": c, "cause_group": g, "cause_basis": basis, "excluded": None}
     if words:
         return {"cause": words[0], "cause_group": words[1], "cause_basis": [code, words[2]], "excluded": None}
     return {"cause": "unknown", "cause_group": "unknown", "cause_basis": [code, "no cause words"], "excluded": None}
+
+
+def _hazard_code(subj: str, c: str, code: str, text: str) -> dict:
+    """WH, WD, WR: a hazard to people only with hazard words and no routine work or training words (see
+    CODE_HAZARD); else routine work, military, or CODE_DEFAULT."""
+    hz = CODE_HAZARD.search(text)
+    routine = next(((pat.search(text), name) for pat, name in CODE_ROUTINE if pat.search(text)), None)
+    mil = CODE_MILITARY.search(text)
+    if hz and not routine and not (mil and mil.group(0) in ("TRG", "TRAINING")):
+        return {"cause": c, "cause_group": "hazard_to_people", "cause_basis": [code, "text: " + hz.group(0)]}
+    if routine:
+        return {"cause": routine[1], "cause_group": "scheduled_and_routine",
+                "cause_basis": [code, "text: " + routine[0].group(0)]}
+    if mil:
+        return {"cause": c + " (military)", "cause_group": "military_and_test", "cause_basis": [code, "text: " +
+                                                                                               mil.group(0)]}
+    dc, dg = CODE_DEFAULT[subj]
+    return {"cause": dc, "cause_group": dg, "cause_basis": [code, "no hazard words"]}
 
 
 def region(m: dict) -> str:
@@ -266,69 +309,72 @@ def _p95_bin(hist: dict) -> tuple[int, int]:
     return 0, n
 
 
-def large(b: dict, reg: str, subj: str, area: float | None, hrs: float | None) -> tuple[bool | None, list]:
-    """Whether the area or the duration is above the (region, subject)'s 95th percentile among the NOTAMs held
-    before this one (None while fewer than MIN_SIZE_N are held), and the numbers: [[measure, value, p95, n], ...]
-    for each measure above it, else [[n]]."""
-    s = b["sizes"].get(f"{reg}|{subj}") or {}
-    flags, above, most = [], [], 0
-    for name, v in (("area", area), ("duration", hrs)):
-        hist = s.get(name[0]) or {}
-        n = sum(hist.values())
-        most = max(most, n)
-        if v is None or n < MIN_SIZE_N:
-            continue
-        k, n = _p95_bin(hist)
-        flags.append(_bin(v) > k)
-        if flags[-1]:
-            above.append([name, v, _edge(k), n])
-    return (any(flags) if flags else None), (above or [[most]])
+def _history(b: dict, scope: str, day: int) -> int | None:
+    first = b["first"].get(scope)
+    return day - first if first is not None else None
+
+
+def large(b: dict, reg: str, subj: str, area: float | None, day: int) -> tuple[bool | None, list]:
+    """Whether the area (the Q) line circle) is above the (region, subject)'s 95th percentile among the NOTAMs held
+    before this one: None until the region has MIN_HISTORY_DAYS of history (as rarity) and MIN_SIZE_N are held. The
+    numbers: [[p95, n]] when above, else [[n, days held]]."""
+    hist = (b["sizes"].get(f"{reg}|{subj}") or {}).get("a") or {}
+    n, held = sum(hist.values()), _history(b, reg, day) or 0
+    if area is None or n < MIN_SIZE_N or held < MIN_HISTORY_DAYS:
+        return None, [[n, held]]
+    k, n = _p95_bin(hist)
+    return (True, [[_edge(k), n, area]]) if _bin(area) > k else (False, [[n, held]])
 
 
 def large_text(flag: bool | None, nums: list, subj: str, reg: str) -> str:
     if flag is None:
-        return f"{nums[0][0]} {subj} NOTAMs held in {reg}; size is judged from {MIN_SIZE_N}"
+        n, held = nums[0][:2]
+        return (f"{n} {subj} NOTAMs held in {reg} over {held} days; size is judged from {MIN_SIZE_N} and "
+                f"{MIN_HISTORY_DAYS} days")
     if not flag:
-        return f"not above the 95th percentile of {subj} NOTAMs in {reg} (area or duration)"
-    unit = {"area": "km2", "duration": "h"}
-    return "; ".join(f"{w} {v:g} {unit[w]}, above the 95th percentile (about {p:g} {unit[w]}) of {n} {subj} "
-                     f"NOTAMs in {reg}" for w, v, p, n in nums)
+        return f"area not above the 95th percentile of {subj} NOTAMs in {reg}"
+    p, n, area = nums[0]
+    return f"area {area:g} km2, above the 95th percentile (about {p:g} km2) of {n} {subj} NOTAMs in {reg}"
 
 
-def _count(b: dict, scope: str, subj: str, lo: int, hi: int) -> int:
-    """New NOTAMs of a subject in a scope from day lo to day hi. Counts are kept per region only; a prefix's count is
-    the sum of its regions'."""
+def _key(scope: str, subj: str, group: str) -> str:
+    return f"{scope}|{subj}|{group}"
+
+
+def _count(b: dict, scope: str, subj: str, group: str, lo: int, hi: int) -> int:
+    """New NOTAMs of a subject and cause group in a scope from day lo to day hi. Counts are kept per region only; a
+    prefix's count is the sum of its regions'."""
     if len(scope) == 2:
-        keys = [k for k in b["counts"] if k.startswith(scope) and k.endswith("|" + subj)]
+        tail = f"|{subj}|{group}"
+        keys = [k for k in b["counts"] if k.startswith(scope) and k.endswith(tail)]
     else:
-        keys = [f"{scope}|{subj}"]
+        keys = [_key(scope, subj, group)]
     return sum(v for k in keys for d, v in (b["counts"].get(k) or {}).items() if lo <= int(d) <= hi)
 
 
-def rarity(b: dict, reg: str, subj: str, day: int) -> tuple[str, list]:
-    """(label, [scope, count, days]) for a NOTAM of this subject first seen in this region on this day, against what
-    the baseline held before it (the same day's earlier ones included): the region if it has MIN_HISTORY_DAYS of
-    history, else its ICAO prefix if that has, else history_short with the region's count and days held. A scope's
-    history starts the first day an international NOTAM of any subject was seen there."""
+def rarity(b: dict, reg: str, subj: str, group: str, day: int) -> tuple[str, list]:
+    """(label, [scope, count, days]) for a NOTAM of this subject and cause group first seen in this region on this
+    day, against what the baseline held before it (the same day's earlier ones included): the region if it has
+    MIN_HISTORY_DAYS of history, else its ICAO prefix if that has, else history_short with the region's count and days
+    held. A scope's history starts the first day an international NOTAM of any subject was seen there."""
     for scope in (reg, prefix(reg)):
-        first = b["first"].get(scope)
-        if first is None or day - first < MIN_HISTORY_DAYS:
+        held = _history(b, scope, day)
+        if held is None or held < MIN_HISTORY_DAYS:
             continue
-        win = min(WINDOW_DAYS, day - first)
-        n = _count(b, scope, subj, day - win, day)
+        win = min(WINDOW_DAYS, held)
+        n = _count(b, scope, subj, group, day - win, day)
         return ("rare" if n == 0 else "uncommon" if n <= 2 else "common"), [scope, n, win]
-    first = b["first"].get(reg)
-    held = day - first if first is not None else 0
-    return "history_short", [reg, _count(b, reg, subj, day - held, day), held]
+    held = _history(b, reg, day) or 0
+    return "history_short", [reg, _count(b, reg, subj, group, day - held, day), held]
 
 
-def rarity_text(label: str, nums: list, subj: str, reg: str) -> str:
+def rarity_text(label: str, nums: list, subj: str, reg: str, group: str = "") -> str:
     scope, n, days = nums
     where = scope if scope == reg else f"ICAO prefix {scope}"
+    what = f"{subj} NOTAMs" + (f" ({group.replace('_', ' ')})" if group else "")
     if label == "history_short":
-        return (f"{n} earlier {subj} NOTAMs in {where} in the {days} days held; rarity needs {MIN_HISTORY_DAYS} days "
-                "of history")
-    return f"{n} earlier {subj} NOTAMs in {where} in {days} days"
+        return f"{n} earlier {what} in {where} in the {days} days held; rarity needs {MIN_HISTORY_DAYS} days of history"
+    return f"{n} earlier {what} in {where} in {days} days"
 
 
 def _note_first(b: dict, reg: str, day: int) -> None:
@@ -337,8 +383,8 @@ def _note_first(b: dict, reg: str, day: int) -> None:
             b["first"][scope] = day
 
 
-def _add(b: dict, reg: str, subj: str, day: int, area: float | None, hrs: float | None) -> None:
-    c = b["counts"].setdefault(f"{reg}|{subj}", {})
+def _add(b: dict, reg: str, subj: str, group: str, day: int, area: float | None, hrs: float | None) -> None:
+    c = b["counts"].setdefault(_key(reg, subj, group), {})
     c[str(day)] = c.get(str(day), 0) + 1
     s = b["sizes"].setdefault(f"{reg}|{subj}", {})
     for name, v in (("a", area), ("d", hrs)):
@@ -359,15 +405,20 @@ def _permanent(m: dict) -> bool:
 
 def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_before: str | None = None) -> dict:
     """One pull's features into the baseline and the chains (sorted by lastUpdated here). Every international NOTAM
-    starts its scopes' history; a ranked one starts or continues a chain and counts once, when its chain starts.
-    A NOTAM already chained (the same version again, or a later version) is not counted again; a replacing one
-    continues the chain it names (its dynamics) and is not counted; a cancel closes its chain.
+    starts its scopes' history; a ranked one starts or continues a chain and counts once, when its chain starts,
+    under its cause group. A NOTAM already chained (the same version again, or a later version) is not counted
+    again; a replacing one continues the chain it names (its dynamics) and is not counted; a cancel closes its chain.
+    Space and GNSS NOTAMs (other programs') are neither chained nor counted.
+
+    A date slip is a start moved later while the earlier NOTAM had not yet started (a postponement); a replacement
+    issued after the earlier start (a standing area re-activated day by day) is not a slip.
 
     counted_before: when the chains were lost (an Actions cache miss), the baseline's last update time; a NOTAM
     issued before it was counted then, so it is chained without counting again. A NOTAM NMS lists once per location
     (one number and FIR, several locations) is one chain per location and counts once. Returns counts."""
     day = day_of(b, now)
-    out = {"seen": 0, "new": 0, "replaced": 0, "cancelled": 0, "repeat": 0, "rechained": 0, "other_location": 0}
+    out = {"seen": 0, "new": 0, "replaced": 0, "cancelled": 0, "repeat": 0, "rechained": 0, "other_location": 0,
+           "excluded": 0}
     held = {k.rsplit("|", 1)[0] for k in chains}       # number|FIR of every chain
     for f in sorted(feats, key=_order):
         m = nms.meta(f)
@@ -395,12 +446,18 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
             chains[k]["id"] = m.get("id")
             out["repeat"] += 1
             continue
+        c = cause(f)
+        if c["excluded"]:
+            out["excluded"] += 1
+            continue
         a, h = area_km2(f), hours(m)
         s, e, fl = _min(m.get("effectiveStart")), _min(m.get("effectiveEnd")), _fl(m)
         old = chains.get(ref) if typ == "R" and ref else None
         if old is not None:
+            issued = _min(m.get("issued")) or int(now.timestamp() // 60)
+            slip = bool(s is not None and old.get("s") is not None and s > old["s"] and issued < old["s"])
             ch = {**old, "id": m.get("id"), "s": s, "e": e, "a": a, "fl": fl, "n": old.get("n", 1) + 1,
-                  "sl": old.get("sl", 0) + (1 if s is not None and old.get("s") is not None and s > old["s"] else 0),
+                  "sl": old.get("sl", 0) + (1 if slip else 0),
                   "ex": bool(old.get("ex") or (e is not None and old.get("e") is not None and e > old["e"])
                              or (_permanent(m) and old.get("e") is not None)),
                   "en": bool(old.get("en") or (a is not None and old.get("a") is not None and a > old["a"])
@@ -414,10 +471,11 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
             out["replaced"] += 1
             continue
         # a new chain, judged against the history before it
-        lab, rn = rarity(b, reg, subj, day)
-        big, ln = large(b, reg, subj, a, h)
-        chains[k] = {"id": m.get("id"), "r": reg, "q": subj, "d": day, "s": s, "e": e, "a": a, "fl": fl, "n": 1,
-                     "sl": 0, "ex": False, "en": False, "ra": lab, "rn": rn, "lg": big, "ln": ln}
+        g = c["cause_group"]
+        lab, rn = rarity(b, reg, subj, g, day)
+        big, ln = large(b, reg, subj, a, day)
+        chains[k] = {"id": m.get("id"), "r": reg, "q": subj, "g": g, "d": day, "s": s, "e": e, "a": a, "fl": fl,
+                     "n": 1, "sl": 0, "ex": False, "en": False, "ra": lab, "rn": rn, "lg": big, "ln": ln}
         if k.rsplit("|", 1)[0] in held:
             out["other_location"] += 1                  # counted under its first location
             continue
@@ -425,35 +483,28 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
         if counted_before and (m.get("issued") or m.get("lastUpdated") or "9") < counted_before:
             out["rechained"] += 1                       # counted before the chains were lost
             continue
-        _add(b, reg, subj, day, a, h)
+        _add(b, reg, subj, g, day, a, h)
         out["new"] += 1
     b["updated_at"] = nms.iso(now)
     return out
 
 
-def prune(b: dict, chains: dict, now: datetime) -> dict:
-    """Drop daily counts older than KEEP_COUNT_DAYS and chains ended (or closed) over CHAIN_KEEP_DAYS ago."""
-    day = day_of(b, now)
-    dropped = 0
-    for c in b["counts"].values():
-        for k in [k for k in c if int(k) < day - KEEP_COUNT_DAYS]:
-            del c[k]
-            dropped += 1
-    for k in [k for k, v in b["counts"].items() if not v]:
-        del b["counts"][k]
+def prune(chains: dict, now: datetime) -> dict:
+    """Drop chains ended (or closed) over CHAIN_KEEP_DAYS ago. Only the chains are pruned: they are working state,
+    rebuildable from the permanent archive. The baseline's daily counts are never pruned (all data is kept)."""
     cut = int((now - timedelta(days=CHAIN_KEEP_DAYS)).timestamp() // 60)
     gone = [k for k, ch in chains.items()
             if (ch["x"] if ch.get("x") is not None else ch.get("e")) is not None
             and (ch["x"] if ch.get("x") is not None else ch["e"]) < cut]
     for k in gone:
         del chains[k]
-    return {"count_days_dropped": dropped, "chains_dropped": len(gone), "chains": len(chains)}
+    return {"chains_dropped": len(gone), "chains": len(chains)}
 
 
-def replay(pulls, b: dict | None = None, chains: dict | None = None) -> tuple[dict | None, dict, dict]:
+def replay(pulls, b: dict | None = None, chains: dict | None = None, deadline: float | None = None
+           ) -> tuple[dict | None, dict, dict]:
     """The baseline and chains from archived pulls: an iterable of (pulled_at, features) in time order (each
-    archive day file, grouped by its records' pulled_at). For the one-off backfill. Returns (baseline, chains,
-    counts)."""
+    archive day file, grouped by its records' pulled_at). For the backfill. Returns (baseline, chains, counts)."""
     chains = {} if chains is None else chains
     total: dict = {}
     now = last_prune = None
@@ -464,10 +515,10 @@ def replay(pulls, b: dict | None = None, chains: dict | None = None) -> tuple[di
         for k, v in update(b, chains, feats, now).items():
             total[k] = total.get(k, 0) + v
         if last_prune is None or now - last_prune > timedelta(days=1):
-            prune(b, chains, now)
+            prune(chains, now)
             last_prune = now
     if b is not None and now is not None:
-        prune(b, chains, now)
+        prune(chains, now)
     return b, chains, total
 
 
@@ -554,14 +605,15 @@ def assess(f: dict, b: dict, chains: dict, now: datetime, country=country_of) ->
     ch = chains.get(nms.key(f))
     if ch is None:
         # not seen through the chains (a store rebuilt from the published files): judged now
-        lab, rn = rarity(b, reg, subj, day_of(b, now))
-        big, ln = large(b, reg, subj, area_km2(f), hours(m))
+        lab, rn = rarity(b, reg, subj, c["cause_group"], day_of(b, now))
+        big, ln = large(b, reg, subj, area_km2(f), day_of(b, now))
         ch = {"ra": lab, "rn": rn, "lg": big, "ln": ln}
     dyn = dynamics(ch)
     t, reasons = tier(c["cause_group"], ch["ra"], dyn, ch.get("lg"), subj)
     return {"tier": t, "method": METHOD, "cause": c["cause"], "cause_group": c["cause_group"],
             "cause_basis": c["cause_basis"], "rarity": ch["ra"],
-            "rarity_basis": rarity_text(ch["ra"], ch["rn"], subj, reg), "dynamics": dyn,
+            "rarity_basis": rarity_text(ch["ra"], ch["rn"], subj, reg, ch.get("g") or c["cause_group"]),
+            "dynamics": dyn,
             "large_for_region": ch.get("lg"), "large_basis": large_text(ch.get("lg"), ch["ln"], subj, reg),
             "reasons": reasons,
             "basis": basis(c, subj, reg, country(f) if country and t != "routine" else None, ch["ra"], ch["rn"],
