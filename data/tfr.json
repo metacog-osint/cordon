@@ -6947,184 +6947,6 @@
     }
    }
   },
-  "6/9435": {
-   "notam_id": "6/9435",
-   "type": "HAZARDS",
-   "facility": "ZDC",
-   "state": "VA",
-   "description": "69NM NW LYNCHBURG, VA, Monday, November 23, 2026 through Monday, November 30, 2026 UTC",
-   "created": "11/23/2026",
-   "first_seen": "2026-11-23T14:10:34Z",
-   "subject": "6/9435",
-   "detail": {
-    "name": "6/9435",
-    "issued": "2026-11-23T14:03:54Z",
-    "effective": "2026-11-23T14:00:00Z",
-    "expires": "2026-11-30T23:00:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": "TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS",
-    "city": "69NM NW LYNCHBURG",
-    "floor": "surface",
-    "ceiling": "5200 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9435 ZDC VA..AIRSPACE 69NM NW LYNCHBURG, VA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT TO PROVIDE A SAFE ENVIRONMENT FOR FIRE FIGHTING ACFT OPS. WI AN AREA DEFINED AS 1NM RADIUS OF 381800N0794730W (EKN166039.6) SFC-5200FT VIRGINIA INTERAGENCY COORDINATION CENTER TEL 434-423-2002 OR FREQ 123.125 LITTLE RIDGE IS IN CHARGE OF THE OPERATION. WASHINGTON/ZDC/ARTCC TEL 703-771-3470 IS THE FAA CDN FAC. DLY 1400-2300 2611231400-2611302300",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -79.79167,
-        38.31668
-       ],
-       [
-        -79.78799,
-        38.31643
-       ],
-       [
-        -79.78442,
-        38.31568
-       ],
-       [
-        -79.78108,
-        38.31445
-       ],
-       [
-        -79.77806,
-        38.31278
-       ],
-       [
-        -79.77545,
-        38.31072
-       ],
-       [
-        -79.77333,
-        38.30834
-       ],
-       [
-        -79.77177,
-        38.3057
-       ],
-       [
-        -79.77082,
-        38.3029
-       ],
-       [
-        -79.77049,
-        38.3
-       ],
-       [
-        -79.77082,
-        38.2971
-       ],
-       [
-        -79.77177,
-        38.29429
-       ],
-       [
-        -79.77333,
-        38.29166
-       ],
-       [
-        -79.77545,
-        38.28927
-       ],
-       [
-        -79.77806,
-        38.28722
-       ],
-       [
-        -79.78108,
-        38.28555
-       ],
-       [
-        -79.78443,
-        38.28432
-       ],
-       [
-        -79.78799,
-        38.28357
-       ],
-       [
-        -79.79167,
-        38.28332
-       ],
-       [
-        -79.79534,
-        38.28357
-       ],
-       [
-        -79.79891,
-        38.28432
-       ],
-       [
-        -79.80225,
-        38.28555
-       ],
-       [
-        -79.80527,
-        38.28722
-       ],
-       [
-        -79.80788,
-        38.28927
-       ],
-       [
-        -79.81,
-        38.29166
-       ],
-       [
-        -79.81156,
-        38.29429
-       ],
-       [
-        -79.81252,
-        38.2971
-       ],
-       [
-        -79.81284,
-        38.3
-       ],
-       [
-        -79.81252,
-        38.3029
-       ],
-       [
-        -79.81156,
-        38.3057
-       ],
-       [
-        -79.81,
-        38.30834
-       ],
-       [
-        -79.80789,
-        38.31072
-       ],
-       [
-        -79.80528,
-        38.31278
-       ],
-       [
-        -79.80225,
-        38.31445
-       ],
-       [
-        -79.79891,
-        38.31568
-       ],
-       [
-        -79.79534,
-        38.31643
-       ],
-       [
-        -79.79167,
-        38.31668
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9446": {
    "notam_id": "6/9446",
    "type": "VIP",
@@ -11542,6 +11364,21 @@
    "first_seen": "2026-11-22T18:10:41Z",
    "subject": "6/9287",
    "left_at": "2026-11-23T01:10:33Z"
+  },
+  "6/9435": {
+   "type": "HAZARDS",
+   "state": "VA",
+   "bbox": [
+    -79.8128,
+    38.2833,
+    -79.7705,
+    38.3167
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 5200,
+   "first_seen": "2026-11-23T14:10:34Z",
+   "subject": "6/9435",
+   "left_at": "2026-11-25T13:40:33Z"
   },
   "6/9472": {
    "type": "HAZARDS",
