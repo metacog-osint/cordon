@@ -5403,184 +5403,6 @@
     }
    }
   },
-  "6/9071": {
-   "notam_id": "6/9071",
-   "type": "HAZARDS",
-   "facility": "ZHU",
-   "state": "LA",
-   "description": "NEW ORLEANS, LA, Thursday, November 19, 2026 through Saturday, November 28, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T19:40:35Z",
-   "subject": "6/7567",
-   "detail": {
-    "name": "6/9071",
-    "issued": "2026-11-19T19:24:13Z",
-    "effective": "2026-11-19T19:20:00Z",
-    "expires": "2026-11-28T19:19:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": null,
-    "city": "NEW ORLEANS",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9071 ZHU LA..AIRSPACE NEW ORLEANS, LA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT SAFE OPERATIONS FOR SAR ACFT WI AN AREA DEFINED AS 1NM RADIUS OF 295612N0900368W (HRV325006.2) SFC-1000FT AGL US COAST GUARD TEL 855-485-3727 PROVIDE SAFE OPERATIONS FOR SAR IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611191920-2611281919",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -90.06776,
-        29.95376
-       ],
-       [
-        -90.06443,
-        29.95351
-       ],
-       [
-        -90.0612,
-        29.95275
-       ],
-       [
-        -90.05817,
-        29.95152
-       ],
-       [
-        -90.05543,
-        29.94985
-       ],
-       [
-        -90.05306,
-        29.94779
-       ],
-       [
-        -90.05114,
-        29.9454
-       ],
-       [
-        -90.04973,
-        29.94276
-       ],
-       [
-        -90.04887,
-        29.93995
-       ],
-       [
-        -90.04858,
-        29.93705
-       ],
-       [
-        -90.04887,
-        29.93415
-       ],
-       [
-        -90.04973,
-        29.93134
-       ],
-       [
-        -90.05115,
-        29.9287
-       ],
-       [
-        -90.05307,
-        29.92631
-       ],
-       [
-        -90.05543,
-        29.92425
-       ],
-       [
-        -90.05817,
-        29.92258
-       ],
-       [
-        -90.0612,
-        29.92135
-       ],
-       [
-        -90.06443,
-        29.9206
-       ],
-       [
-        -90.06776,
-        29.92034
-       ],
-       [
-        -90.07109,
-        29.9206
-       ],
-       [
-        -90.07432,
-        29.92135
-       ],
-       [
-        -90.07735,
-        29.92258
-       ],
-       [
-        -90.08009,
-        29.92425
-       ],
-       [
-        -90.08245,
-        29.92631
-       ],
-       [
-        -90.08437,
-        29.9287
-       ],
-       [
-        -90.08578,
-        29.93134
-       ],
-       [
-        -90.08665,
-        29.93415
-       ],
-       [
-        -90.08694,
-        29.93705
-       ],
-       [
-        -90.08665,
-        29.93995
-       ],
-       [
-        -90.08578,
-        29.94276
-       ],
-       [
-        -90.08437,
-        29.9454
-       ],
-       [
-        -90.08245,
-        29.94779
-       ],
-       [
-        -90.08009,
-        29.94985
-       ],
-       [
-        -90.07735,
-        29.95152
-       ],
-       [
-        -90.07432,
-        29.95275
-       ],
-       [
-        -90.07109,
-        29.95351
-       ],
-       [
-        -90.06776,
-        29.95376
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9276": {
    "notam_id": "6/9276",
    "type": "SECURITY",
@@ -8661,19 +8483,18 @@
     }
    }
   },
-  "6/9791": {
-   "notam_id": "6/9791",
+  "6/9797": {
+   "notam_id": "6/9797",
    "type": "HAZARDS",
    "facility": "ZHU",
    "state": "LA",
    "description": "NEW ORLEANS, LA, Wednesday, November 25, 2026 through Monday, January 18, 2027 UTC",
    "created": "11/25/2026",
-   "first_seen": "2026-11-25T20:39:17Z",
-   "subject": "6/9791",
+   "first_seen": "2026-11-25T22:10:37Z",
    "detail": {
-    "name": "6/9791",
-    "issued": "2026-11-25T20:10:14Z",
-    "effective": "2026-11-25T20:00:00Z",
+    "name": "6/9797",
+    "issued": "2026-11-25T21:51:10Z",
+    "effective": "2026-11-25T21:45:00Z",
     "expires": "2027-01-18T20:00:00Z",
     "regulation": "91.137(a)(2)",
     "purpose": null,
@@ -8681,185 +8502,7 @@
     "floor": "surface",
     "ceiling": "1000 ft AGL",
     "statutory": false,
-    "text": "!FDC 6/9791 ZHU LA..AIRSPACE NEW ORLEANS, LA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT SAFE OPERATIONS FOR SAR ACFT. WI AN AREA DEFINED AS 0.3NM RADIUS OF 295618N0900362W (HRV326006.3) SFC-1000FT AGL US COAST GUARD TEL 855-485-3727 PROVIDE SAFE OPERATIONS FOR SAR IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611252000-2701182000",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -90.06703,
-        29.94445
-       ],
-       [
-        -90.06603,
-        29.94438
-       ],
-       [
-        -90.06506,
-        29.94415
-       ],
-       [
-        -90.06415,
-        29.94378
-       ],
-       [
-        -90.06333,
-        29.94328
-       ],
-       [
-        -90.06262,
-        29.94266
-       ],
-       [
-        -90.06204,
-        29.94195
-       ],
-       [
-        -90.06162,
-        29.94115
-       ],
-       [
-        -90.06136,
-        29.94031
-       ],
-       [
-        -90.06127,
-        29.93944
-       ],
-       [
-        -90.06136,
-        29.93857
-       ],
-       [
-        -90.06162,
-        29.93773
-       ],
-       [
-        -90.06204,
-        29.93693
-       ],
-       [
-        -90.06262,
-        29.93622
-       ],
-       [
-        -90.06333,
-        29.9356
-       ],
-       [
-        -90.06415,
-        29.9351
-       ],
-       [
-        -90.06506,
-        29.93473
-       ],
-       [
-        -90.06603,
-        29.9345
-       ],
-       [
-        -90.06703,
-        29.93443
-       ],
-       [
-        -90.06803,
-        29.9345
-       ],
-       [
-        -90.06899,
-        29.93473
-       ],
-       [
-        -90.0699,
-        29.9351
-       ],
-       [
-        -90.07072,
-        29.9356
-       ],
-       [
-        -90.07143,
-        29.93622
-       ],
-       [
-        -90.07201,
-        29.93693
-       ],
-       [
-        -90.07243,
-        29.93773
-       ],
-       [
-        -90.07269,
-        29.93857
-       ],
-       [
-        -90.07278,
-        29.93944
-       ],
-       [
-        -90.07269,
-        29.94031
-       ],
-       [
-        -90.07243,
-        29.94115
-       ],
-       [
-        -90.07201,
-        29.94195
-       ],
-       [
-        -90.07143,
-        29.94266
-       ],
-       [
-        -90.07073,
-        29.94328
-       ],
-       [
-        -90.0699,
-        29.94378
-       ],
-       [
-        -90.06899,
-        29.94415
-       ],
-       [
-        -90.06803,
-        29.94438
-       ],
-       [
-        -90.06703,
-        29.94445
-       ]
-      ]
-     ]
-    }
-   }
-  },
-  "6/9794": {
-   "notam_id": "6/9794",
-   "type": "HAZARDS",
-   "facility": "ZHU",
-   "state": "LA",
-   "description": "NEW ORLEANS, LA, Wednesday, November 25, 2026 through Thursday, November 26, 2026 UTC",
-   "created": "11/25/2026",
-   "first_seen": "2026-11-25T20:39:17Z",
-   "subject": "6/9794",
-   "detail": {
-    "name": "6/9794",
-    "issued": "2026-11-25T20:17:26Z",
-    "effective": "2026-11-25T20:15:00Z",
-    "expires": "2026-11-26T20:14:00Z",
-    "regulation": "91.137(a)(2)",
-    "purpose": null,
-    "city": "NEW ORLEANS",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9794 ZHU LA..AIRSPACE NEW ORLEANS, LA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT SAFE OPERATIONS FOR SAR ACFT. WI AN AREA DEFINED AS 0.3NM RADIUS OF 295610N0900337W (HRV328006.0) SFC-1000FT AGL US COAST GUARD TEL 855-485-3727 PROVIDE SAFE OPERATIONS FOR SAR IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611252015-2611262014",
+    "text": "!FDC 6/9797 ZHU LA..AIRSPACE NEW ORLEANS, LA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(2) TEMPORARY FLIGHT RESTRICTIONS ARE IN EFFECT SAFE OPERATIONS FOR SAR ACFT. WI AN AREA DEFINED AS 0.3NM RADIUS OF 295610N0900337W (HRV328006.0) SFC-1000FT AGL US COAST GUARD TEL 855-485-3727 PROVIDE SAFE OPERATIONS FOR SAR IS IN CHARGE OF THE OPERATION. HOUSTON/ZHU/ARTCC TEL 281-230-5560 IS THE FAA CDN FAC. 2611252145-2701182000",
     "geometry": {
      "type": "Polygon",
      "coordinates": [
@@ -9015,7 +8658,8 @@
       ]
      ]
     }
-   }
+   },
+   "subject": "6/9794"
   },
   "9/2934": {
    "notam_id": "9/2934",
@@ -10508,6 +10152,21 @@
    "subject": "6/9062",
    "left_at": "2026-11-20T23:40:35Z"
   },
+  "6/9071": {
+   "type": "HAZARDS",
+   "state": "LA",
+   "bbox": [
+    -90.0869,
+    29.9203,
+    -90.0486,
+    29.9538
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-19T19:40:35Z",
+   "subject": "6/7567",
+   "left_at": "2026-11-25T22:10:37Z"
+  },
   "6/9115": {
    "type": "HAZARDS",
    "state": "AK",
@@ -10912,6 +10571,36 @@
    "first_seen": "2026-11-25T19:40:32Z",
    "subject": "6/9784",
    "left_at": "2026-11-25T21:10:33Z"
+  },
+  "6/9791": {
+   "type": "HAZARDS",
+   "state": "LA",
+   "bbox": [
+    -90.0728,
+    29.9344,
+    -90.0613,
+    29.9444
+   ],
+   "area_km2": 1.0,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-25T20:39:17Z",
+   "subject": "6/9791",
+   "left_at": "2026-11-25T22:10:37Z"
+  },
+  "6/9794": {
+   "type": "HAZARDS",
+   "state": "LA",
+   "bbox": [
+    -90.066,
+    29.9311,
+    -90.0545,
+    29.9411
+   ],
+   "area_km2": 1.0,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-25T20:39:17Z",
+   "subject": "6/9794",
+   "left_at": "2026-11-25T22:10:37Z"
   }
  }
 }
