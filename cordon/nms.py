@@ -20,9 +20,17 @@ published index, and SEED_BULK_AT (Launch's last bulk on the same account), so a
 bulk inside a day.
 
 The store (cache/nms/store.json.gz, the private Actions cache, never committed) holds only NOTAMs some subset
-keeps, keyed by number and FIR: a replacing (NOTAMR) or cancelling (NOTAMC) notice removes the one it names; a
+keeps, and the international NOTAMs cordon/significance.py ranks, keyed by number and FIR: a replacing (NOTAMR) or
+cancelling (NOTAMC) notice removes the one it names; a
 notice ended over ENDED_KEEP_DAYS ago is dropped. Lost cache: the store is rebuilt from Cordon's own published subset files,
-then a delta from the time those files were pulled to.
+then a delta from the time those files were pulled to (the ranked NOTAMs come back with the next bulk).
+
+Significance (method tic-significance-0.1, cordon/significance.py): each pull's features update the baseline
+(data/nms_significance.json, committed, never pruned: daily counts of new NOTAMs per FIR, Q-code subject and
+cause group, and size histograms; built by the lane from the archive's release day files when missing)
+and the chains (one entry per ranked NOTAM held, for dedupe and dynamics: working state, in the Actions cache beside
+the archive's working copy, cache/nms/archive/, so the cache's path list is unchanged). significant.json holds the
+active international NOTAMs ranked notable or significant.
 
 Every feature of every pull is also kept for good in cordon/nmsarchive.py (GitHub release assets, one per UTC day;
 the store and subsets are the live view only). Subsets are the active set at the last pull, each a GeoJSON FeatureCollection of NMS's own features, trimmed to
@@ -47,7 +55,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import nmsarchive
+from . import common, nmsarchive, significance
 from .common import DATA, ROOT, describe, load, save
 
 HOSTS = {"staging": "https://api-staging.cgifederal-aim.com", "prod": "https://api-nms.aim.faa.gov"}
@@ -262,7 +270,7 @@ def apply(store: dict, feats: list[dict], now: datetime, replace_all: bool = Fal
         ref = refers(f)
         if ref and store.pop(ref, None) is not None:
             counts["removed"] += 1
-        if wanted(f):
+        if wanted(f) or significance.candidate(f):
             store[key(f)] = trim(f)
             counts["added"] += 1
     cut = now - timedelta(days=ENDED_KEEP_DAYS)
@@ -375,13 +383,173 @@ def write_out(store: dict, state: dict, now: datetime) -> dict:
              "terms": TERMS, "env": state.get("env"), "lane_status": state.get("status"),
              "lane_note": state.get("note") or state.get("error"), "mode": state.get("mode"),
              "bulk_at": state.get("bulk_at"), "pulled_to": state.get("pulled_to"), "generated_at": iso(now),
-             "held": len(store), "subsets": subsets, "archive": {**nmsarchive.about(), **{
+             "held": len(store), "subsets": subsets, "significance": write_significant(store, state, now),
+             "archive": {**nmsarchive.about(), **{
                  k: (state.get("archive") or {}).get(k) for k in ("status", "archived_to", "pending")}},
              "about": "The active set at the last pull. Read these files, never the FAA: Cordon holds the suite's "
                       "only NMS keys, and the FAA allows one bulk pull a day."}
     (OUT / "index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8",
                                     newline="\n")
     return index
+
+
+# ---------- significance (cordon/significance.py) ----------
+
+SIG_BASELINE = "nms_significance.json"   # in data/, committed
+SIG_FILE = "significant.json"
+BACKFILL_BUDGET_S = 240   # a run spends at most this on the backfill, then carries on next run
+ARCHIVE_FIRST_MONTH = "2026-11"   # the archive's first release (nms-archive-2026-11)
+SIG_ABOUT = ("International NOTAMs (classification INTL) of the restriction and warning Q-code subjects, ranked by "
+             "what Cordon alone knows: cause (Q-code subject, then the NOTAM's own words), rarity against Cordon's own "
+             "history of new NOTAMs per FIR, subject and cause group (labels need 90 days of history; before that, history_short), "
+             "the chain's dynamics, and size against the FIR's own. Not a warning and not a prediction. Coincidence "
+             "and consequence come later from COP. Space operations (Launch's) and GNSS (Noisefloor's) are left out.")
+
+
+def chains_path() -> Path:
+    """The chains' working copy: inside the archive's cached directory, so the cache's path list is unchanged."""
+    return CACHE / "archive" / "significance-chains.json.gz"
+
+
+def load_significance() -> tuple[dict | None, dict | None]:
+    """(baseline or None, chains or None) from data/ and the cache."""
+    b = load(SIG_BASELINE, None)
+    chains = None
+    p = chains_path()
+    if p.exists():
+        try:
+            chains = json.loads(gzip.decompress(p.read_bytes()))
+        except (OSError, ValueError):
+            chains = None
+    return b, chains
+
+
+def save_significance(b: dict, chains: dict) -> None:
+    common.DATA.mkdir(parents=True, exist_ok=True)
+    (common.DATA / SIG_BASELINE).write_text(significance.dumps(b), encoding="utf-8", newline="\n")
+    p = chains_path()
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_bytes(gzip.compress(json.dumps(chains, separators=(",", ":")).encode("utf-8"), 6))
+
+
+def archive_pulls(data: bytes):
+    """(pulled_at, features) for each pull in one archive day file's bytes, in time order (its records are sorted by
+    pulled_at), streamed."""
+    import io
+    import itertools
+    with gzip.GzipFile(fileobj=io.BytesIO(data)) as gz:
+        recs = (json.loads(line) for line in io.TextIOWrapper(gz, encoding="utf-8") if line.strip())
+        for t, grp in itertools.groupby(recs, key=lambda r: r["pulled_at"]):
+            yield t, [r["feature"] for r in grp]
+
+
+def archive_days(gh, now: datetime) -> list[tuple[str, dict]]:
+    """(day, asset) for every day file in the archive's releases, oldest first, from ARCHIVE_FIRST_MONTH to now's
+    month (a NAME.part a stopped run left stands in for a missing NAME, as nmsarchive.current() reads it)."""
+    out, mo = [], datetime.fromisoformat(ARCHIVE_FIRST_MONTH + "-01")
+    while mo.strftime("%Y-%m") <= now.strftime("%Y-%m"):
+        rel = gh.release(nmsarchive.tag(mo.strftime("%Y-%m-%d")))
+        names = {a["name"] for a in (rel or {}).get("assets") or []}
+        for name in sorted(names):
+            hit = re.fullmatch(r"nms-(\d{4}-\d{2}-\d{2})\.jsonl\.gz(\.part)?", name)
+            if hit and not (hit.group(2) and name[:-5] in names):
+                out.append((hit.group(1), nmsarchive.current(rel, nmsarchive.asset(hit.group(1)))))
+        mo = (mo + timedelta(days=32)).replace(day=1)
+    return out
+
+
+def backfill(b: dict | None, chains: dict | None, now: datetime, gh, budget_s: float = BACKFILL_BUDGET_S
+             ) -> tuple[dict | None, dict, dict]:
+    """The baseline built from the archive's release day files, oldest first, resumable: each run processes days
+    until budget_s is spent and records how far it got (baseline backfill.to); the next run carries on. A baseline
+    that does not start at the archive's first day, or lost chains mid-way, starts over. Returns (baseline,
+    chains, report)."""
+    t0 = time.monotonic()
+    days = archive_days(gh, now)
+    if not days:
+        return b, chains or {}, {"status": "no archive days"}
+    first = days[0][0]
+    bf = (b or {}).get("backfill") or {}
+    if b is None or bf.get("from") != first or chains is None:
+        b, chains, bf = None, {}, {"from": first, "to": None, "done": False}
+    done_days = 0
+    for day, a in days:
+        if bf.get("to") and day <= bf["to"]:
+            continue
+        if done_days and time.monotonic() - t0 > budget_s:
+            break                                       # at least one day a run, so it always moves on
+        b, chains, _ = significance.replay(archive_pulls(gh.download(a)), b, chains)
+        bf["to"] = day
+        done_days += 1
+    bf["done"] = bf.get("to") == days[-1][0]
+    if b is not None:
+        b["backfill"] = {**bf, "at": iso(now)}
+    return b, chains, {"status": "done" if bf["done"] else "partial", "days": done_days, "from": first,
+                       "to": bf.get("to"), "of": len(days), "seconds": round(time.monotonic() - t0, 1)}
+
+
+def update_significance(feats: list[dict], now: datetime, env: dict | None = None, gh=None) -> dict:
+    """This pull's features into the baseline and the chains; saves both. Never raises.
+
+    Until the baseline holds the whole archive (its backfill block done), the lane builds it from the archive's
+    release day files itself (backfill(), bounded by BACKFILL_BUDGET_S a run, resumed next run), with the workflow's
+    GITHUB_TOKEN; this pull is already in today's day file, so it is counted there. Without a token a missing
+    baseline starts today, and a later run with one rebuilds it. Missing chains (a lost cache) after the backfill
+    are rebuilt without counting again what the baseline already counted."""
+    try:
+        env = os.environ if env is None else env
+        b, chains = load_significance()
+        out = {"status": "ok"}
+        if gh is None and env.get("GITHUB_TOKEN"):
+            gh = nmsarchive.GitHub(env["GITHUB_TOKEN"])
+        if not ((b or {}).get("backfill") or {}).get("done") and gh is not None:
+            b, chains, out["backfill"] = backfill(b, chains, now, gh)
+            if b is None:
+                return {"status": "waiting", "backfill": out["backfill"]}
+            if not b["backfill"]["done"]:
+                save_significance(b, chains)
+                out.update(status="backfilling", start=b["start"], updated_at=b["updated_at"], chains=len(chains))
+                return out
+        if b is None:
+            b = significance.new_baseline(now.strftime("%Y-%m-%d"))
+            out["note"] = "baseline started " + b["start"] + " without a GITHUB_TOKEN; a run with one backfills it"
+        counted_before = None
+        if chains is None:
+            chains = {}
+            counted_before = b.get("updated_at")
+            out["chains_rebuilt"] = True
+        if feats:
+            out["counts"] = significance.update(b, chains, feats, now, counted_before=counted_before)
+        out["pruned"] = significance.prune(chains, now)
+        save_significance(b, chains)
+        out.update(start=b["start"], updated_at=b["updated_at"], chains=len(chains))
+        return out
+    except Exception as e:  # noqa: BLE001 - significance never fails the lane; nothing half-built is saved
+        return {"status": "failing", "error": describe(e)}
+
+
+def write_significant(store: dict, state: dict, now: datetime) -> dict:
+    """significant.json into cache/nms/out/: the active international NOTAMs ranked notable or significant. Returns
+    its index entry."""
+    entry = {"name": "significant", "file": SIG_FILE, "url": PUBLISHED + SIG_FILE, "method": significance.METHOD,
+             "rule": "International NOTAMs ranked by tic-significance-0.1 (cause, rarity, dynamics; no coincidence or "
+                     "consequence yet): notable and significant only, active or still to come."}
+    try:
+        b, chains = load_significance()
+        if b is None:
+            return {**entry, "status": "no baseline"}
+        feats, tiers = significance.ranked(store, b, chains or {}, now)
+        body = json.dumps({"type": "FeatureCollection", "dataset": "significant", "method": significance.METHOD,
+                           "source_note": SOURCE_NOTE, "pulled_to": state.get("pulled_to"), "generated_at": iso(now),
+                           "baseline": {"start": b.get("start"), "updated_at": b.get("updated_at"),
+                                        "history_days": significance.day_of(b, now),
+                                        "min_history_days": significance.MIN_HISTORY_DAYS},
+                           "tiers": tiers, "about": SIG_ABOUT, "features": feats},
+                          ensure_ascii=False, separators=(",", ":")) + "\n"
+        (OUT / SIG_FILE).write_text(body, encoding="utf-8", newline="\n")
+        return {**entry, "n": len(feats), "bytes": len(body.encode("utf-8")), "tiers": tiers, "status": "ok"}
+    except Exception as e:  # noqa: BLE001 - never fails the lane; the index says why
+        return {**entry, "status": "failing", "error": describe(e)}
 
 
 def collect(now: datetime | None = None, env: dict | None = None, opener=None, fetch=None) -> tuple[dict, bool]:
@@ -426,10 +594,12 @@ def collect(now: datetime | None = None, env: dict | None = None, opener=None, f
     state["archive"] = {k: arch.get(k) for k in ("status", "error", "note", "day", "added", "uploaded", "pending",
                                                  "archived_to", "day_bytes", "seen", "seen_from")}
     state["archived_to"] = arch.get("archived_to") or prev.get("archived_to")
+    state["significance"] = update_significance(feats, now, env)
     if res["mode"] in ("bulk", "delta"):
         save_store(store)
     if store is not None:
         index = write_out(store, state, now)
         state["subsets"] = {s["name"]: s["n"] for s in index["subsets"]}
+        state["significance"]["tiers"] = index["significance"].get("tiers")
     save(STATE, state)
     return state, client.requests > 0

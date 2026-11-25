@@ -174,6 +174,41 @@ fields (`cordon/rev21.py`):
   that time, so no change it records is later than publication. Each source keeps the time it was read
   (`accessed_at`); each health lane gives the newest item it holds (`data_as_of`; NGA, its newest warning).
 
+## Significance of international NOTAMs (`tic-significance-0.1`, draft)
+Cordon ranks the international NOTAMs it reads through the FAA's NMS-API by the event behind them, not their shape,
+following tic-doctrine's `docs/significance.md` (cause, rarity and dynamics, tier). Only what Cordon alone knows is
+used: coincidence with other sources and consequence (people and sites inside) come later from COP, so nothing here
+is ranked on them. Code: `cordon/significance.py`.
+
+- **Which:** classification INTL, ICAO Q-code subject RT, WU, RD, RR, RA, WE, WM, WH, RP, WD or WR (restrictions and
+  warnings). Space operations (Launch's) and GNSS (Noisefloor's) are left out.
+- **Cause:** the Q-code subject first: WM, WE, RD and RA are military and test. WH blasting, WD demolition of
+  explosives and WR radioactive or toxic materials are a hazard to people only when the text names ordnance, the
+  demolition of a structure, an evacuation or a release (a leak, a spill); quarry, mine and avalanche-control blasting
+  and forest or crop spraying are scheduled and routine, explosives training is military (in the week from 19 Nov
+  2026, 102 of 111 such notices had no hazard words). RT, RR, RP and WU take their cause from the NOTAM's own words
+  (hazard, disaster response, VIP movements and public events, security, military), else `unknown`. Fireworks are
+  scheduled and routine, under WD and WH too. Launch's launch words make a NOTAM space operations, except a bare
+  missile, rocket or stage (military firing, model rockets) and the "space" inside "airspace".
+- **Rarity:** counted against Cordon's own record of new NOTAMs per flight information region (FIR; the location when
+  there is none), Q-code subject and cause group per day, `data/nms_significance.json`, which starts with the archive
+  (19 Nov 2026; the lane builds it from the archive's day files itself when it is missing, a few minutes a run, and
+  the record is never pruned). A NOTAM counts once, when first seen, however many versions or locations NMS lists.
+  `rare` is none of its subject and cause group in the region in the year before (or the whole history, if shorter),
+  `uncommon` at most two, `common` the rest; the FIR's ICAO prefix (its first two letters, not a country) is used
+  when the FIR's own history is short. A label needs 90 days of history; until then the rarity is `history_short`,
+  with the count and the days held. Rarity and size are judged when a NOTAM is first seen.
+- **Dynamics,** along a chain of replacing NOTAMs: `date_slips` (the start moved later before the earlier start was
+  reached: a postponement, not a standing area re-activated day by day), `extended` (end moved later), `enlarged`
+  (the Q-line radius grew or the ceiling rose), `cancelled_early`.
+- **Large for the region:** the Q-line circle's area above the 95th percentile of that FIR and subject, once the FIR
+  has 90 days of history and 30 are held.
+- **Tier:** `significant` only for a hazard-to-people or disaster-response cause that is rare; `notable` for a rare
+  one, a hazard-to-people cause, two or more date slips, an enlarged chain, or an RT, RP or RD area large for its
+  region; scheduled and unknown causes never above notable; the rest `routine`. Each item says why, in `basis`.
+- **Published** as `/data/notams/significant.json` (notable and significant, active or still to come), listed in
+  `index.json` under `significance`. No feed items yet.
+
 ## Gaps and no data
 A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. NGA
 serves one daily file per area: when one fails and the others answer, that area keeps its earlier warnings, the
