@@ -4,6 +4,11 @@
     python tools/cordon.py build            write site/ (the map page, feed.geojson, map.json) from data/
     python tools/cordon.py check            lint the feed with the doctrine kit; check the registers
     python tools/cordon.py reviews <dir>    write one file per departure-status change to review (title, then body)
+    python tools/cordon.py significance-backfill <dir>
+                                            one-off: rebuild data/nms_significance.json (and the chains' working
+                                            copy) from the NMS archive's day files in <dir>, every one from the first
+                                            (gh release download nms-archive-YYYY-MM -R metacog-osint/cordon
+                                            -p "nms-*.jsonl.gz" -D <dir>, for each month)
 """
 import json
 import shutil
@@ -166,6 +171,35 @@ def check() -> list[str]:
     return errs
 
 
+def archive_pulls(paths):
+    """(pulled_at, features) for each pull in the NMS archive's day files, in time order (a day file's records are
+    sorted by pulled_at)."""
+    import gzip
+    import itertools
+    for p in sorted(paths, key=lambda x: x.name):
+        with gzip.open(p, "rt", encoding="utf-8") as fh:
+            recs = (json.loads(line) for line in fh if line.strip())
+            for t, grp in itertools.groupby(recs, key=lambda r: r["pulled_at"]):
+                yield t, [r["feature"] for r in grp]
+
+
+def significance_backfill(directory: Path):
+    """The one-off backfill: the baseline and chains replayed from every archive day file in directory, saved where
+    the lane keeps them (data/nms_significance.json, the chains' working copy under cache/nms/archive/)."""
+    import gzip
+    from cordon import significance
+    paths = sorted(directory.glob("nms-????-??-??.jsonl.gz"))
+    if not paths:
+        raise SystemExit(f"no nms-YYYY-MM-DD.jsonl.gz files in {directory}")
+    b, chains, total = significance.replay(archive_pulls(paths))
+    nms.common.DATA.mkdir(parents=True, exist_ok=True)
+    (nms.common.DATA / nms.SIG_BASELINE).write_text(significance.dumps(b), encoding="utf-8", newline="\n")
+    cp = nms.chains_path()
+    cp.parent.mkdir(parents=True, exist_ok=True)
+    cp.write_bytes(gzip.compress(json.dumps(chains, separators=(",", ":")).encode("utf-8"), 6))
+    return b, chains, total, len(paths)
+
+
 def main(argv=None) -> int:
     cmd = (argv or sys.argv[1:] or ["help"])[0]
     if cmd == "collect":
@@ -184,6 +218,15 @@ def main(argv=None) -> int:
         for i, r in enumerate(items):
             (out / f"{i:03d}.md").write_text(r["title"] + "\n" + r["body"], encoding="utf-8", newline="\n")
         print(f"{len(items)} review(s) written to {out}")
+        return 0
+    if cmd == "significance-backfill":
+        args = (argv or sys.argv[1:])[1:]
+        if not args:
+            print("usage: python tools/cordon.py significance-backfill <dir with nms-YYYY-MM-DD.jsonl.gz files>")
+            return 2
+        b, chains, total, files = significance_backfill(Path(args[0]))
+        print(f"{files} day files: {total}; baseline from {b['start']} to {b['updated_at']}, "
+              f"{(nms.common.DATA / nms.SIG_BASELINE).stat().st_size} bytes; {len(chains)} chains")
         return 0
     if cmd == "check":
         errs = check()

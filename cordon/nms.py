@@ -20,9 +20,16 @@ published index, and SEED_BULK_AT (Launch's last bulk on the same account), so a
 bulk inside a day.
 
 The store (cache/nms/store.json.gz, the private Actions cache, never committed) holds only NOTAMs some subset
-keeps, keyed by number and FIR: a replacing (NOTAMR) or cancelling (NOTAMC) notice removes the one it names; a
+keeps, and the international NOTAMs cordon/significance.py ranks, keyed by number and FIR: a replacing (NOTAMR) or
+cancelling (NOTAMC) notice removes the one it names; a
 notice ended over ENDED_KEEP_DAYS ago is dropped. Lost cache: the store is rebuilt from Cordon's own published subset files,
-then a delta from the time those files were pulled to.
+then a delta from the time those files were pulled to (the ranked NOTAMs come back with the next bulk).
+
+Significance (method tic-significance-0.1, cordon/significance.py): each pull's features update the baseline
+(data/nms_significance.json, committed: daily counts of new NOTAMs per FIR and Q-code subject, and size histograms)
+and the chains (one entry per ranked NOTAM held, for dedupe and dynamics: working state, in the Actions cache beside
+the archive's working copy, cache/nms/archive/, so the cache's path list is unchanged). significant.json holds the
+active international NOTAMs ranked notable or significant.
 
 Every feature of every pull is also kept for good in cordon/nmsarchive.py (GitHub release assets, one per UTC day;
 the store and subsets are the live view only). Subsets are the active set at the last pull, each a GeoJSON FeatureCollection of NMS's own features, trimmed to
@@ -47,7 +54,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import nmsarchive
+from . import common, nmsarchive, significance
 from .common import DATA, ROOT, describe, load, save
 
 HOSTS = {"staging": "https://api-staging.cgifederal-aim.com", "prod": "https://api-nms.aim.faa.gov"}
@@ -262,7 +269,7 @@ def apply(store: dict, feats: list[dict], now: datetime, replace_all: bool = Fal
         ref = refers(f)
         if ref and store.pop(ref, None) is not None:
             counts["removed"] += 1
-        if wanted(f):
+        if wanted(f) or significance.candidate(f):
             store[key(f)] = trim(f)
             counts["added"] += 1
     cut = now - timedelta(days=ENDED_KEEP_DAYS)
@@ -375,13 +382,97 @@ def write_out(store: dict, state: dict, now: datetime) -> dict:
              "terms": TERMS, "env": state.get("env"), "lane_status": state.get("status"),
              "lane_note": state.get("note") or state.get("error"), "mode": state.get("mode"),
              "bulk_at": state.get("bulk_at"), "pulled_to": state.get("pulled_to"), "generated_at": iso(now),
-             "held": len(store), "subsets": subsets, "archive": {**nmsarchive.about(), **{
+             "held": len(store), "subsets": subsets, "significance": write_significant(store, state, now),
+             "archive": {**nmsarchive.about(), **{
                  k: (state.get("archive") or {}).get(k) for k in ("status", "archived_to", "pending")}},
              "about": "The active set at the last pull. Read these files, never the FAA: Cordon holds the suite's "
                       "only NMS keys, and the FAA allows one bulk pull a day."}
     (OUT / "index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False) + "\n", encoding="utf-8",
                                     newline="\n")
     return index
+
+
+# ---------- significance (cordon/significance.py) ----------
+
+SIG_BASELINE = "nms_significance.json"   # in data/, committed
+SIG_FILE = "significant.json"
+SIG_ABOUT = ("International NOTAMs (classification INTL) of the restriction and warning Q-code subjects, ranked by "
+             "what Cordon alone knows: cause (Q-code subject, then the NOTAM's own words), rarity against Cordon's own "
+             "history of new NOTAMs per FIR and subject (labels need 90 days of history; before that, history_short), "
+             "the chain's dynamics, and size against the FIR's own. Not a warning and not a prediction. Coincidence "
+             "and consequence come later from COP. Space operations (Launch's) and GNSS (Noisefloor's) are left out.")
+
+
+def chains_path() -> Path:
+    """The chains' working copy: inside the archive's cached directory, so the cache's path list is unchanged."""
+    return CACHE / "archive" / "significance-chains.json.gz"
+
+
+def load_significance() -> tuple[dict | None, dict | None]:
+    """(baseline or None, chains or None) from data/ and the cache."""
+    b = load(SIG_BASELINE, None)
+    chains = None
+    p = chains_path()
+    if p.exists():
+        try:
+            chains = json.loads(gzip.decompress(p.read_bytes()))
+        except (OSError, ValueError):
+            chains = None
+    return b, chains
+
+
+def update_significance(feats: list[dict], now: datetime) -> dict:
+    """This pull's features into the baseline and the chains; saves both. A missing baseline starts today (the
+    one-off backfill, tools/cordon.py significance-backfill, counts the archive's earlier days); missing chains (a
+    lost cache) are rebuilt without counting again what the baseline already counted. Never raises."""
+    try:
+        b, chains = load_significance()
+        out = {"status": "ok"}
+        if b is None:
+            b = significance.new_baseline(now.strftime("%Y-%m-%d"))
+            out["note"] = ("baseline started " + b["start"] + "; python tools/cordon.py significance-backfill counts "
+                           "the archive's earlier days")
+        counted_before = None
+        if chains is None:
+            chains = {}
+            counted_before = b.get("updated_at")
+            out["chains_rebuilt"] = True
+        if feats:
+            out["counts"] = significance.update(b, chains, feats, now, counted_before=counted_before)
+        out["pruned"] = significance.prune(b, chains, now)
+        common.DATA.mkdir(parents=True, exist_ok=True)
+        (common.DATA / SIG_BASELINE).write_text(significance.dumps(b), encoding="utf-8", newline="\n")
+        p = chains_path()
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(gzip.compress(json.dumps(chains, separators=(",", ":")).encode("utf-8"), 6))
+        out.update(start=b["start"], updated_at=b["updated_at"], chains=len(chains))
+        return out
+    except Exception as e:  # noqa: BLE001 - significance never fails the lane
+        return {"status": "failing", "error": describe(e)}
+
+
+def write_significant(store: dict, state: dict, now: datetime) -> dict:
+    """significant.json into cache/nms/out/: the active international NOTAMs ranked notable or significant. Returns
+    its index entry."""
+    entry = {"name": "significant", "file": SIG_FILE, "url": PUBLISHED + SIG_FILE, "method": significance.METHOD,
+             "rule": "International NOTAMs ranked by tic-significance-0.1 (cause, rarity, dynamics; no coincidence or "
+                     "consequence yet): notable and significant only, active or still to come."}
+    try:
+        b, chains = load_significance()
+        if b is None:
+            return {**entry, "status": "no baseline"}
+        feats, tiers = significance.ranked(store, b, chains or {}, now)
+        body = json.dumps({"type": "FeatureCollection", "dataset": "significant", "method": significance.METHOD,
+                           "source_note": SOURCE_NOTE, "pulled_to": state.get("pulled_to"), "generated_at": iso(now),
+                           "baseline": {"start": b.get("start"), "updated_at": b.get("updated_at"),
+                                        "history_days": significance.day_of(b, now),
+                                        "min_history_days": significance.MIN_HISTORY_DAYS},
+                           "tiers": tiers, "about": SIG_ABOUT, "features": feats},
+                          ensure_ascii=False, separators=(",", ":")) + "\n"
+        (OUT / SIG_FILE).write_text(body, encoding="utf-8", newline="\n")
+        return {**entry, "n": len(feats), "bytes": len(body.encode("utf-8")), "tiers": tiers, "status": "ok"}
+    except Exception as e:  # noqa: BLE001 - never fails the lane; the index says why
+        return {**entry, "status": "failing", "error": describe(e)}
 
 
 def collect(now: datetime | None = None, env: dict | None = None, opener=None, fetch=None) -> tuple[dict, bool]:
@@ -426,10 +517,12 @@ def collect(now: datetime | None = None, env: dict | None = None, opener=None, f
     state["archive"] = {k: arch.get(k) for k in ("status", "error", "note", "day", "added", "uploaded", "pending",
                                                  "archived_to", "day_bytes", "seen", "seen_from")}
     state["archived_to"] = arch.get("archived_to") or prev.get("archived_to")
+    state["significance"] = update_significance(feats, now)
     if res["mode"] in ("bulk", "delta"):
         save_store(store)
     if store is not None:
         index = write_out(store, state, now)
         state["subsets"] = {s["name"]: s["n"] for s in index["subsets"]}
+        state["significance"]["tiers"] = index["significance"].get("tiers")
     save(STATE, state)
     return state, client.requests > 0
