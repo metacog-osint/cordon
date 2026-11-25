@@ -20,15 +20,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ae.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "AE",
-    "title": "Security Alert: U.S. Mission United Arab Emirates – November 7, 2026 - https://ae.usembassy.gov/",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWUo4WWVtR1dycHI0cFlaTzZkeklhRGNPZU9qTlNYV2RGZE5oTzdINHdmb0tlS3pPbUdJOWxmNjVEVy1rVWltcXhsRXZ3NXMtTV9MLTQwVjJpbEhSZnd3ekN1VGlZVTdsMVlQaWFQMkFkdE4wbGdyMjh1ZFQ5dUNlRDNKS1A5Y1NKREFqUEVVMXIwTnc?oc=5",
-    "published_at": "2026-11-07T08:00:00Z",
-    "type": "security",
-    "via": "google-news",
-    "post_url": "https://ae.usembassy.gov/category/alert/"
    }
   ],
   "BH": [
@@ -94,9 +85,9 @@
   "ET": [
    {
     "iso": "ET",
-    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 13, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOTVxNTNCblZ5RVJWVVdQb2pEbUVCSzY3MWtDVjI5dGhqbmlTeDdDRjFiZVlxdTlyX1dOV1FsYkRWdklrV2tSYzZLZ05sOWVsNll6d2U4Wjh1WE1oMGwxSzBza0RVN3AtUVpYYm8xaFNZMllwRDhRdHJqV00zVzBIVjFjaWUxTWhVMVFRd3Vvd3h1amhl?oc=5",
-    "published_at": "2026-11-13T08:00:00Z",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
@@ -354,15 +345,6 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://ng.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "NG",
-    "title": "Health Alert: U.S. Embassy Abuja, Nigeria (October 27, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTC10RGc4akFDUjRabG84Q3ZJSjg2cmR6NnlfOFlPNTNFMmY5WUxMMkl2Z1pBTU9wWTNLRW1PYWlzUmZDTmZrLWxsbkhuTjZ3NnkzZ0w4aEFVR3ZkYnJ6TmYzbFZ2SVJvQXctYWd1U0hSTEc5anFHcl9sQTV0Q0JhMGpUOUNld0U?oc=5",
-    "published_at": "2026-10-27T07:00:00Z",
-    "type": "health",
-    "via": "google-news",
-    "post_url": "https://ng.usembassy.gov/category/alert/"
    }
   ],
   "OM": [
@@ -401,7 +383,7 @@
     "iso": "QA",
     "title": "Security Alert: U.S. Embassy Doha – November 24, 2026",
     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBRTzdKLXAxemIyV3FvLW9BdTdKQTVBMnYzSXRFSVFXR2trblNkRzZTYXcwMDRmVElzOUkxNGZlLVpDVVVKUjN0YWJHT0pHc2xNcDZsVkQwZWpvVFUtVmNNS0U1ZVdBVFRUeG0ydk12SW1BQ3Q5X0J2V2JFSlNGbHc?oc=5",
-    "published_at": "2026-11-24T21:44:53Z",
+    "published_at": "2026-11-25T04:54:34Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://qa.usembassy.gov/category/alert/"

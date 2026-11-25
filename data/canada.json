@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T15:21:58Z",
+ "generated": "2026-11-25T17:20:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -609,9 +609,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-10-14T13:05:55Z",
-   "update_type": "Editorial change",
-   "update": "The Health section was updated - travel health information (Public Health Agency of Canada)",
+   "updated": "2026-11-25T16:39:02Z",
+   "update_type": "Regular text update",
+   "update": "Safety and security section – updated information on crime",
    "link": "https://travel.gc.ca/destinations/czechia"
   },
   "DE": {
@@ -813,9 +813,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-25T15:18:42Z",
-   "update_type": "Editorial change",
-   "update": "Editorial change",
+   "updated": "2026-11-25T17:03:46Z",
+   "update_type": "Regular text update",
+   "update": "Need help? section – updated mission coordinates",
    "link": "https://travel.gc.ca/destinations/france"
   },
   "GA": {
@@ -1017,7 +1017,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-25T13:48:17Z",
+   "updated": "2026-11-25T16:01:08Z",
    "update_type": "Regular text update",
    "update": "Need help? section – updated mission coordinates",
    "link": "https://travel.gc.ca/destinations/guyana"
