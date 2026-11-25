@@ -1,42 +1,37 @@
 {
  "env": "prod",
  "bulk_at": "2026-11-25T00:11:08Z",
- "pulled_to": "2026-11-25T00:11:08Z",
- "mode": "bulk",
+ "pulled_to": "2026-11-25T00:41:17Z",
+ "mode": "delta",
+ "delta_from": "2026-11-25T00:11:08Z",
  "counts": {
-  "features": 72375,
-  "added": 7199,
-  "removed": 46,
-  "held": 7151,
-  "by_class": {
-   "INTERNATIONAL": 41801,
-   "FDC": 4434,
-   "MILITARY": 6161,
-   "DOMESTIC": 19979
-  }
+  "features": 233,
+  "added": 13,
+  "removed": 0,
+  "held": 7162
  },
- "requests": 9,
+ "requests": 2,
  "status": "ok",
- "checked_at": "2026-11-25T00:11:08Z",
+ "checked_at": "2026-11-25T00:41:17Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
   "error": null,
   "note": null,
   "day": "2026-11-25",
-  "added": 25,
+  "added": 233,
   "uploaded": [
    "nms-2026-11-25.jsonl.gz"
   ],
   "pending": [],
-  "archived_to": "2026-11-25T00:11:08Z",
-  "day_bytes": 37220,
-  "seen": 107748,
+  "archived_to": "2026-11-25T00:41:17Z",
+  "day_bytes": 191026,
+  "seen": 107981,
   "seen_from": "cache"
  },
- "archived_to": "2026-11-25T00:11:08Z",
+ "archived_to": "2026-11-25T00:41:17Z",
  "subsets": {
-  "launch-areas": 3449,
+  "launch-areas": 3460,
   "gnss": 3714
  }
 }
