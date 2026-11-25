@@ -8297,184 +8297,6 @@
     }
    }
   },
-  "6/9722": {
-   "notam_id": "6/9722",
-   "type": "HAZARDS",
-   "facility": "ZAU",
-   "state": "IA",
-   "description": "MIDDLETOWN, IA, Tuesday, November 24, 2026 through Wednesday, November 25, 2026 UTC",
-   "created": "11/24/2026",
-   "first_seen": "2026-11-24T19:10:33Z",
-   "subject": "6/8596",
-   "detail": {
-    "name": "6/9722",
-    "issued": "2026-11-24T18:55:36Z",
-    "effective": "2026-11-24T18:54:00Z",
-    "expires": "2026-11-25T18:52:00Z",
-    "regulation": "91.137(a)(1)",
-    "purpose": null,
-    "city": "MIDDLETOWN",
-    "floor": "surface",
-    "ceiling": "4000 ft MSL",
-    "statutory": false,
-    "text": "!FDC 6/9722 ZAU IA..AIRSPACE MIDDLETOWN, IA..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.137(A)(1) CONTROLLED DETONATION UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. WI AN AREA DEFINED AS 4.0NM RADIUS OF 404742N0911453W (BRL281015.3) SFC-4000FT ONLY RELIEF ACFT OPS UNDER DIRECTION OF DEPT OF ARMY ARE AUTH IN THE AIRSPACE. DEPT OF ARMY, WILLIAM VANCE TEL 309-756-9203 OR EMAIL WILLIAM.A.VANCE6.CIV@ARMY.MIL IS IN CHARGE OF ON SCENE EMERG RESPONSE ACTIVITY. CHICAGO/ZAU/ARTCC TEL 630-906-8341 IS THE FAA CDN FAC. 2611241854-2611251852",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -91.24806,
-        40.86171
-       ],
-       [
-        -91.2328,
-        40.86069
-       ],
-       [
-        -91.21801,
-        40.85768
-       ],
-       [
-        -91.20413,
-        40.85276
-       ],
-       [
-        -91.19159,
-        40.84609
-       ],
-       [
-        -91.18077,
-        40.83786
-       ],
-       [
-        -91.172,
-        40.82833
-       ],
-       [
-        -91.16554,
-        40.81779
-       ],
-       [
-        -91.1616,
-        40.80655
-       ],
-       [
-        -91.16028,
-        40.79497
-       ],
-       [
-        -91.16163,
-        40.78338
-       ],
-       [
-        -91.1656,
-        40.77215
-       ],
-       [
-        -91.17208,
-        40.76162
-       ],
-       [
-        -91.18086,
-        40.7521
-       ],
-       [
-        -91.19168,
-        40.74388
-       ],
-       [
-        -91.2042,
-        40.73722
-       ],
-       [
-        -91.21806,
-        40.73231
-       ],
-       [
-        -91.23283,
-        40.7293
-       ],
-       [
-        -91.24806,
-        40.72829
-       ],
-       [
-        -91.26328,
-        40.7293
-       ],
-       [
-        -91.27805,
-        40.73231
-       ],
-       [
-        -91.29191,
-        40.73722
-       ],
-       [
-        -91.30443,
-        40.74388
-       ],
-       [
-        -91.31525,
-        40.7521
-       ],
-       [
-        -91.32403,
-        40.76162
-       ],
-       [
-        -91.33051,
-        40.77215
-       ],
-       [
-        -91.33448,
-        40.78338
-       ],
-       [
-        -91.33583,
-        40.79497
-       ],
-       [
-        -91.33451,
-        40.80655
-       ],
-       [
-        -91.33057,
-        40.81779
-       ],
-       [
-        -91.32411,
-        40.82833
-       ],
-       [
-        -91.31534,
-        40.83786
-       ],
-       [
-        -91.30452,
-        40.84609
-       ],
-       [
-        -91.29198,
-        40.85276
-       ],
-       [
-        -91.27811,
-        40.85768
-       ],
-       [
-        -91.26331,
-        40.86069
-       ],
-       [
-        -91.24806,
-        40.86171
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9735": {
    "notam_id": "6/9735",
    "type": "SECURITY",
@@ -11030,6 +10852,21 @@
    "first_seen": "2026-11-24T16:10:39Z",
    "subject": "6/8981",
    "left_at": "2026-11-24T23:40:34Z"
+  },
+  "6/9722": {
+   "type": "HAZARDS",
+   "state": "IA",
+   "bbox": [
+    -91.3358,
+    40.7283,
+    -91.1603,
+    40.8617
+   ],
+   "area_km2": 170.5,
+   "ceiling_ft": 4000,
+   "first_seen": "2026-11-24T19:10:33Z",
+   "subject": "6/8596",
+   "left_at": "2026-11-25T19:10:32Z"
   }
  }
 }

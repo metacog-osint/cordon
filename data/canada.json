@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T18:40:16Z",
+ "generated": "2026-11-25T19:00:17Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -921,9 +921,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-10-13T20:13:03Z",
+   "updated": "2026-11-25T18:47:09Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – added information on El Niño",
+   "update": "Safety and security section – added information on general elections",
    "link": "https://travel.gc.ca/destinations/gambia-the"
   },
   "GN": {

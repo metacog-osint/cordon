@@ -31,6 +31,21 @@
    "date": "2026-06-04",
    "link": "https://wwwnc.cdc.gov/travel/notices/level2/chikungunya-french-guiana"
   },
+  "chikungunya-honduras": {
+   "slug": "chikungunya-honduras",
+   "level": 2,
+   "level_text": "Practice Enhanced Precautions",
+   "title": "Level 2 - Chikungunya in Honduras",
+   "disease_place": "Chikungunya in Honduras",
+   "summary": "There is an outbreak of chikungunya in El Paraíso, Honduras. You can protect yourself by preventing mosquito bites.",
+   "countries": [
+    "HN"
+   ],
+   "unplaced": [],
+   "published": "2026-11-25T05:00:00Z",
+   "date": "2026-11-25",
+   "link": "https://wwwnc.cdc.gov/travel/notices/level2/chikungunya-honduras"
+  },
   "chikungunya-nicaragua": {
    "slug": "chikungunya-nicaragua",
    "level": 2,
@@ -613,6 +628,21 @@
    "published": "2026-11-09T05:00:00Z",
    "date": "2026-11-09",
    "link": "https://wwwnc.cdc.gov/travel/notices/level2/yellow-fever-ghana"
+  },
+  "yellow-fever-south-sudan": {
+   "slug": "yellow-fever-south-sudan",
+   "level": 2,
+   "level_text": "Practice Enhanced Precautions",
+   "title": "Level 2 - Yellow Fever in the Republic of South Sudan",
+   "disease_place": "Yellow Fever in the Republic of South Sudan",
+   "summary": "There is an outbreak of yellow fever in Yei and Morobo Counties of South Sudan.",
+   "countries": [
+    "SS"
+   ],
+   "unplaced": [],
+   "published": "2026-11-25T05:00:00Z",
+   "date": "2026-11-25",
+   "link": "https://wwwnc.cdc.gov/travel/notices/level2/yellow-fever-south-sudan"
   },
   "zika-indonesia": {
    "slug": "zika-indonesia",
