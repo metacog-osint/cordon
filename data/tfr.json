@@ -9865,6 +9865,7 @@
    "description": "41NM SW HARRISONBURG, VA, Wednesday, November 25, 2026 through Monday, November 30, 2026 UTC",
    "created": "11/25/2026",
    "first_seen": "2026-11-25T00:40:34Z",
+   "subject": "6/9741",
    "detail": {
     "name": "6/9741",
     "issued": "2026-11-25T00:18:39Z",
@@ -10032,8 +10033,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9741"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
