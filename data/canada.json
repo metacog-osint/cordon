@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T14:00:29Z",
+ "generated": "2026-11-25T14:40:18Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2301,9 +2301,9 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-10-02T18:02:37Z",
+   "updated": "2026-11-25T14:39:16Z",
    "update_type": "Regular text update",
-   "update": null,
+   "update": "Safety and security section – updated information on the political situation",
    "link": "https://travel.gc.ca/destinations/south-sudan"
   },
   "ST": {
