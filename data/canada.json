@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T14:40:18Z",
+ "generated": "2026-11-25T15:21:58Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -813,7 +813,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-23T09:35:52Z",
+   "updated": "2026-11-25T15:18:42Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/france"

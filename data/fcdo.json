@@ -1856,12 +1856,12 @@
   "serbia": {
    "slug": "serbia",
    "name": "Serbia",
-   "updated": "2026-10-22T09:20:25Z",
-   "change": "New information about Serbian parliamentary elections taking place on 25 October (‘Warnings and insurance’ and ‘Safety and security’ pages).",
+   "updated": "2026-11-25T15:24:11Z",
+   "change": "Removal of information about Serbian parliamentary elections ('Warnings and insurance’ page).",
    "link": "https://www.gov.uk/foreign-travel-advice/serbia",
    "iso": "RS",
    "alert_status": [],
-   "status_for": "2026-10-22T09:20:25Z"
+   "status_for": "2026-11-25T15:24:11Z"
   },
   "seychelles": {
    "slug": "seychelles",
