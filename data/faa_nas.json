@@ -10,21 +10,6 @@
    "updated": "2026-11-25T06:18:46Z",
    "notam": "!LGA 11/416 LGA AD AP CLSD EXC HEL 30MIN PPR 718-533-3700 2611250615-2611251100",
    "issued": "2026-11-25T06:15:00Z"
-  },
-  {
-   "kind": "ground_delay",
-   "airport": "SFO",
-   "airport_name": "San Francisco International",
-   "start": "2026-11-25T02:20:00Z",
-   "end": "2026-11-25T08:59:00Z",
-   "updated": "2026-11-25T02:20:25Z",
-   "reason": "wind",
-   "center": "ZOA",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=17&adv_date=11252026&facId=SFO&title=ATCSCC ADVZY 017 SFO/ZOA 11/25/2026 CDM GROUND DELAY PROGRAM&titleDate=11/25/2026",
-   "included_facilities": 23,
-   "included_flights": "ALL CONTIGUOUS US DEP",
-   "avg_delay_min": 124.0,
-   "max_delay_min": 202.0
   }
  ],
  "airports": {
