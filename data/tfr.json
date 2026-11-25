@@ -8661,184 +8661,6 @@
     }
    }
   },
-  "6/9784": {
-   "notam_id": "6/9784",
-   "type": "SECURITY",
-   "facility": "ZDC",
-   "state": "NC",
-   "description": "Goldsboro, NC",
-   "created": "11/25/2026",
-   "first_seen": "2026-11-25T19:40:32Z",
-   "subject": "6/9784",
-   "detail": {
-    "name": "261125 Goldsboro NC FBI JAMZ",
-    "issued": "2026-11-25T19:13:28Z",
-    "effective": null,
-    "expires": "2026-11-25T23:30:00Z",
-    "regulation": "99.7",
-    "purpose": null,
-    "city": "Goldsboro",
-    "floor": "surface",
-    "ceiling": "1000 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9784 ZDC NC..AIRSPACE GOLDSBORO, NC..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS, ALL ACFT FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 1NM RADIUS OF 352442N0780323W (ISO281024.6) SFC-1000FT AGL EFFECTIVE IMMEDIATELY UNTIL 2611252330 UTC (1830 LOCAL 11/25/26). UNLESS AUTH BY ATC IN CONSULTATION WITH THE AIR TRAFFIC SECURITY COORDINATOR VIA THE DOMESTIC EVENTS NETWORK (DEN). SABT JOHN TYLER, TEL 202-558-5560, IS THE POINT OF CONTACT. THE DOMESTIC EVENTS NETWORK /DEN/ ARTCC, TEL 540-422-4423, IS THE FAA CDN FAC. 2611251911-2611252330",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -78.05639,
-        35.42836
-       ],
-       [
-        -78.05285,
-        35.42811
-       ],
-       [
-        -78.04941,
-        35.42735
-       ],
-       [
-        -78.04619,
-        35.42612
-       ],
-       [
-        -78.04328,
-        35.42445
-       ],
-       [
-        -78.04077,
-        35.4224
-       ],
-       [
-        -78.03873,
-        35.42001
-       ],
-       [
-        -78.03723,
-        35.41737
-       ],
-       [
-        -78.03631,
-        35.41456
-       ],
-       [
-        -78.036,
-        35.41166
-       ],
-       [
-        -78.03631,
-        35.40877
-       ],
-       [
-        -78.03723,
-        35.40596
-       ],
-       [
-        -78.03873,
-        35.40332
-       ],
-       [
-        -78.04077,
-        35.40094
-       ],
-       [
-        -78.04328,
-        35.39888
-       ],
-       [
-        -78.0462,
-        35.39721
-       ],
-       [
-        -78.04942,
-        35.39598
-       ],
-       [
-        -78.05285,
-        35.39523
-       ],
-       [
-        -78.05639,
-        35.39497
-       ],
-       [
-        -78.05993,
-        35.39523
-       ],
-       [
-        -78.06336,
-        35.39598
-       ],
-       [
-        -78.06658,
-        35.39721
-       ],
-       [
-        -78.06949,
-        35.39888
-       ],
-       [
-        -78.07201,
-        35.40094
-       ],
-       [
-        -78.07405,
-        35.40332
-       ],
-       [
-        -78.07555,
-        35.40596
-       ],
-       [
-        -78.07647,
-        35.40877
-       ],
-       [
-        -78.07678,
-        35.41166
-       ],
-       [
-        -78.07647,
-        35.41456
-       ],
-       [
-        -78.07555,
-        35.41737
-       ],
-       [
-        -78.07405,
-        35.42001
-       ],
-       [
-        -78.07201,
-        35.4224
-       ],
-       [
-        -78.0695,
-        35.42445
-       ],
-       [
-        -78.06659,
-        35.42612
-       ],
-       [
-        -78.06336,
-        35.42735
-       ],
-       [
-        -78.05993,
-        35.42811
-       ],
-       [
-        -78.05639,
-        35.42836
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9791": {
    "notam_id": "6/9791",
    "type": "HAZARDS",
@@ -11075,6 +10897,21 @@
    "first_seen": "2026-11-24T19:10:33Z",
    "subject": "6/8596",
    "left_at": "2026-11-25T19:10:32Z"
+  },
+  "6/9784": {
+   "type": "SECURITY",
+   "state": "NC",
+   "bbox": [
+    -78.0768,
+    35.395,
+    -78.036,
+    35.4284
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 1000,
+   "first_seen": "2026-11-25T19:40:32Z",
+   "subject": "6/9784",
+   "left_at": "2026-11-25T21:10:33Z"
   }
  }
 }
