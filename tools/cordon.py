@@ -27,7 +27,8 @@ LANES = {"advisories.json": "state-travel-advisories", "alerts.json": "us-embass
          "czibs.json": "easa-czib", "navarea.json": "nga-navwarnings", "faa_nas.json": "faa-nas-status",
          "fcdo.json": "uk-fcdo-travel-advice", "tfr.json": "faa-tfr", "canada.json": "gac-travel-advisories",
          "cdc.json": "cdc-travel-notices", "safetravel.json": "nz-mfat-safetravel",
-         "faa_prn.json": "faa-prohibitions-notices"}
+         "faa_prn.json": "faa-prohibitions-notices", "japan.json": "jp-mofa-overseas-safety",
+         "netherlands.json": "nl-minbuza-travel-advice"}
 
 
 def data() -> dict:
@@ -104,6 +105,19 @@ def map_data(d: dict, fc: dict) -> dict:
                         **{k: f["properties"]["measures"].get(k) for k in ("level", "advice", "regional_note", "updated",
                                                                            "new", "from_advice", "from_regional_note")}}
                        for f in fc["features"] if f["properties"]["id"].startswith("cordon:safetravel:")],
+        # Japan's danger levels and notices, and the Netherlands' colour codes, as published in the feed.
+        "japan": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                   "link": f["properties"]["link"], "countries": f["properties"]["countries"],
+                   **{k: f["properties"]["measures"].get(k) for k in ("level", "levels", "advice", "advice_ja", "title_ja",
+                                                                      "updated", "updated_day", "new", "declared_move", "from_advice",
+                                                                      "from_levels", "type_en", "lead_ja", "issued")}}
+                  for f in fc["features"] if f["properties"]["id"].startswith(("cordon:japan:", "cordon:japannotice:"))],
+        "netherlands": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                         "link": f["properties"]["link"], "countries": f["properties"]["countries"],
+                         **{k: f["properties"]["measures"].get(k) for k in ("colour", "colour_nl", "colours", "advice",
+                                                                            "regional", "intro_nl", "updated", "new",
+                                                                            "from_advice", "from_colours")}}
+                        for f in fc["features"] if f["properties"]["id"].startswith("cordon:netherlands:")],
         # The FAA's prohibitions and advisories as published in the feed (withheld there when stale).
         "faaprn": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
                     "link": f["properties"]["link"], "countries": f["properties"]["countries"],
@@ -133,7 +147,7 @@ def build() -> dict:
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
                     datetime.now(timezone.utc), d["health"], d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"],
                     ca=d["canada.json"], health_notices=d["cdc.json"], nz=d["safetravel.json"],
-                    prn=d["faa_prn.json"], dropped_log=ROOT / "data" / "history" / "dropped.jsonl")
+                    prn=d["faa_prn.json"], jp=d["japan.json"], nl=d["netherlands.json"], dropped_log=ROOT / "data" / "history" / "dropped.jsonl")
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -163,7 +177,8 @@ def check() -> list[str]:
     d = data()
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"],
                     nas=d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"], ca=d["canada.json"],
-                    health_notices=d["cdc.json"], nz=d["safetravel.json"], prn=d["faa_prn.json"])
+                    health_notices=d["cdc.json"], nz=d["safetravel.json"], prn=d["faa_prn.json"], jp=d["japan.json"],
+                    nl=d["netherlands.json"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:

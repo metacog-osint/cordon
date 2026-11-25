@@ -1,8 +1,15 @@
 """One collection run: every source independently. A failing source keeps its last good data and is recorded in
 data/health.json; nothing here stops the others. Data files hold content only (fetch times live in health.json),
 so the hourly workflow commits only when something changed."""
-from . import canada, cdc, easa, embassy, faa, faaprn, fcdo, navarea, nms, safetravel, state, tfr
+from datetime import datetime, timedelta
+
+from . import (canada, cdc, easa, embassy, faa, faaprn, fcdo, japan, navarea, netherlands, nms, safetravel,
+               state, tfr)
 from .common import append_jsonl, health, load, now_utc, save
+
+
+def recent_cut(when: str, hours: int) -> str:
+    return (datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ") - timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def run(when: str | None = None) -> dict:
@@ -103,6 +110,37 @@ def run(when: str | None = None) -> dict:
                f"{read} country pages read" + (f", {failed} failed" if failed else "")
                + (f", {unread} not yet read" if unread else ""), when)
     summary["safetravel"] = err or f"{len(dests)} destinations, {len(nz_changes)} changes, {read} pages read"
+
+    held_jp = load("japan.json", {})
+    jp, jp_changes, err, read, failed = japan.collect(held_jp, when)
+    if err:
+        health("jp-mofa-overseas-safety", False, err, when)
+    else:
+        save("japan.json", {"source": japan.NEW_URL, **jp})
+        append_jsonl("changes.jsonl", [{**c, "lane": "japan"} for c in jp_changes])
+        cs = jp["countries"]
+        recent = sum(1 for n in jp["notices"].values() if n["at"] >= recent_cut(when, 72))
+        unplaced = sum(1 for n in jp["notices"].values() if not n.get("iso"))
+        health("jp-mofa-overseas-safety", True,
+               f"{len(jp['notices'])} notices held ({recent} in the last 72 hours" +
+               (f", {unplaced} naming no country" if unplaced else "") + f"); danger levels for {len(cs)} of "
+               f"{japan.READABLE} countries: {sum(1 for r in cs.values() if r['max_level'] >= 4)} at level 4, "
+               f"{sum(1 for r in cs.values() if r['max_level'] == 3)} at level 3, "
+               f"{sum(1 for r in cs.values() if r['max_level'] == 2)} at level 2; {read} country files read"
+               + (f", {failed} failed" if failed else ""), when)
+    summary["japan"] = err or f"{len(jp['notices'])} notices, {len(jp['countries'])} countries, {len(jp_changes)} changes, {read} files read"
+
+    nl_docs, nl_changes, err = netherlands.collect(load("netherlands.json", {}).get("countries"), when)
+    if err:
+        health("nl-minbuza-travel-advice", False, err, when)
+    else:
+        save("netherlands.json", {"source": netherlands.API, "countries": nl_docs})
+        append_jsonl("changes.jsonl", [{**c, "lane": "netherlands"} for c in nl_changes])
+        n = {c: sum(1 for r in nl_docs.values() if r["colour"] == c) for c in netherlands.ORDER}
+        regional = sum(1 for r in nl_docs.values() if r["regional"])
+        health("nl-minbuza-travel-advice", True, f"{len(nl_docs)} destinations: {n['rood']} red, {n['oranje']} orange, "
+               f"{n['geel']} yellow, {n['groen']} green; {regional} with more than one colour", when)
+    summary["netherlands"] = err or f"{len(nl_docs)} destinations, {len(nl_changes)} changes"
 
     notices, cdc_changes, err = cdc.collect(load("cdc.json", {}).get("notices"), when)
     if err:

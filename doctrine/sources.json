@@ -1,7 +1,7 @@
 {
   "program": "cordon",
   "register": "this file",
-  "note": "Cordon's eleven sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
+  "note": "Cordon's thirteen sources, all official. OSAC is excluded: its terms bar publishing or harvesting without authorization.",
   "sources": [
     {"id": "state-travel-advisories", "name": "US Department of State travel advisories (JSON)", "licence": "US public domain (seals and logos restricted)", "use": "ingest"},
     {"id": "us-embassy-alerts", "name": "US embassy alert RSS feeds (per post)", "licence": "US public domain", "use": "ingest"},
@@ -13,6 +13,8 @@
     {"id": "gac-travel-advisories", "name": "Government of Canada travel advice and advisories (open.canada.ca dataset bef2ebb3-ca9a-485f-aaff-5dc36eb89426, data.international.gc.ca JSON index)", "licence": "Open Government Licence - Canada", "use": "ingest"},
     {"id": "cdc-travel-notices", "name": "CDC Travelers' Health travel notices (RSS)", "licence": "US public domain; CDC asks for credit (Source: CDC), a no-endorsement disclaimer and unaltered substance", "use": "ingest"},
     {"id": "nz-mfat-safetravel", "name": "New Zealand SafeTravel travel advice (MFAT; destination list embedded in safetravel.govt.nz/destinations, and country pages)", "licence": "Crown copyright, Creative Commons Attribution 4.0 International (attribute the Ministry of Foreign Affairs and Trade; no logos; design and imagery excluded)", "use": "ingest"},
+    {"id": "jp-mofa-overseas-safety", "name": "Japan Ministry of Foreign Affairs overseas safety information open data (外務省 海外安全情報オープンデータ: newest notices, and one country file for danger levels 1-4)", "licence": "Government Standard Terms 2.0 (terms page of 25 Nov 2026: free to copy, publicly transmit and adapt, commercial use allowed; state the source '出典：外務省 海外安全情報オープンデータ' with the page URL; say when the content was edited or processed and never present it as made by the State; compatible with CC BY 4.0; logos and symbol marks excluded)", "use": "ingest"},
+    {"id": "nl-minbuza-travel-advice", "name": "Netherlands travel advice (reisadvies) with colour codes, Nederland Wereldwijd open data API (Ministry of Foreign Affairs)", "licence": "CC0 1.0 (data.overheid.nl dataset 'Reisadviezen op nederlandwereldwijd.nl', read 25 Nov 2026; the API states no licence line)", "use": "ingest"},
     {"id": "faa-prohibitions-notices", "name": "FAA Prohibitions, Restrictions and Notices (faa.gov/air_traffic/publications/us_restrictions: SFARs and KICZ NOTAMs for foreign airspace)", "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on the page", "use": "ingest"},
     {"id": "faa-nms", "name": "FAA NOTAM Management Service API (NMS-API): every active NOTAM, one bulk pull a day and deltas; the suite's one NOTAM reader, published as subset files under /data/notams/; every feature of every pull kept for good as daily release assets (nms-archive-YYYY-MM)", "licence": "FAA NMS-API terms of service (7 Oct 2026): redistribution allowed; not to be called FAA data; not authoritative for NOTAMs issued outside the United States. Access by FAA approval: production granted 18 Nov 2026 (keys moved here from Launch)", "use": "ingest"},
     {"id": "osac", "name": "Overseas Security Advisory Council reports", "licence": "Terms bar publishing or harvesting without authorization", "use": "exclude"}
@@ -38,6 +40,10 @@
       "descriptor": "Travel health notices, level 1-4, with disease, places and publication date (22 on 14 Nov 2026); keyless, checked live 14 Nov 2026", "probe": {"url": "https://wwwnc.cdc.gov/travel/rss/notices.xml", "expect": "any"}},
     "nz-mfat-safetravel": {"grade": "A1", "independence_group": "nz-mfat", "ease_of_faking": "low", "cadence_s": 3600,
       "descriptor": "222 destinations with New Zealand's advice level and update date in one page, and each country page's note of other levels in some areas; keyless, checked live 14 Nov 2026", "probe": {"url": "https://www.safetravel.govt.nz/destinations", "expect": "any"}},
+    "jp-mofa-overseas-safety": {"grade": "A1", "independence_group": "jp-mofa", "ease_of_faking": "low", "cadence_s": 3600,
+      "descriptor": "The ministry's 24 newest notices (consular mail, spot and wide-area information, danger information) and, per country, the danger levels 1-4 in force and its latest danger headline, in Japanese; keyless XML, listing refreshed every 5 minutes, checked live 25 Nov 2026", "probe": {"url": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml", "expect": "any"}},
+    "nl-minbuza-travel-advice": {"grade": "A1", "independence_group": "nl-minbuza", "ease_of_faking": "low", "cadence_s": 3600,
+      "descriptor": "226 destinations with the Netherlands' colour code (green, yellow, orange, red; more than one where it differs by area) in the page introduction, in Dutch, and the page's last-modified time; keyless XML, 200 documents a request; checked live 25 Nov 2026", "probe": {"url": "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/traveladvice?rows=1", "expect": "any"}},
     "faa-prohibitions-notices": {"grade": "A1", "independence_group": "faa", "ease_of_faking": "low", "cadence_s": 3600,
       "descriptor": "SFARs and KICZ NOTAMs for US operators in foreign airspace, by country or region (20 sections, 8 SFARs, 22 KICZ NOTAMs on 15 Nov 2026); one page, keyless, checked live 15 Nov 2026", "probe": {"url": "https://www.faa.gov/air_traffic/publications/us_restrictions", "expect": "any"}}
   }

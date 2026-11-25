@@ -20,6 +20,10 @@
   var NZ_LEVEL = { normal: "No advice level at this time", low: "Exercise normal safety and security precautions",
     medium: "Exercise increased caution", high: "Avoid non-essential travel", avoid: "Do not travel" };
   var NZ_RANK = { normal: 0, low: 1, medium: 2, high: 3, avoid: 4 };
+  var JP_LEVEL = { 0: "no danger level in force", 1: "Level 1: Exercise caution", 2: "Level 2: Avoid non-essential travel",
+    3: "Level 3: Do not travel", 4: "Level 4: Evacuate, do not travel" };
+  var NL_COLOUR = { groen: "Green", geel: "Yellow", oranje: "Orange", rood: "Red" };
+  var NL_RANK = { green: 0, yellow: 1, orange: 2, red: 3 };
   var CA_LEVEL = { 0: "Exercise normal security precautions", 1: "Exercise a high degree of caution",
     2: "Avoid non-essential travel", 3: "Avoid all travel" };
   function ukWords(list) {
@@ -70,9 +74,10 @@
   function destination(d) {
     // Dates only, with the year, in the viewer's zone: the governments update on very different cycles.
     function date(iso) { return iso ? T.format(iso, { year: true, time: false }) : "—"; }
-    var src = { state: byIso(d.advisories), fcdo: byIso(d.fcdo), canada: byIso(d.canada), safetravel: byIso(d.safetravel), cdc: byIso(d.cdc) };
+    var src = { state: byIso(d.advisories), fcdo: byIso(d.fcdo), canada: byIso(d.canada), safetravel: byIso(d.safetravel), cdc: byIso(d.cdc),
+      japan: byIso((d.japan || []).filter(function (c) { return !c.type_en; })), netherlands: byIso(d.netherlands) };
     var names = {};
-    [["safetravel", /^New Zealand, /], ["canada", /^Canada, /], ["fcdo", /^UK FCDO, /], ["state", null]].forEach(function (p) {
+    [["netherlands", /^Netherlands, /], ["japan", /^Japan, /], ["safetravel", /^New Zealand, /], ["canada", /^Canada, /], ["fcdo", /^UK FCDO, /], ["state", null]].forEach(function (p) {
       Object.keys(src[p[0]]).forEach(function (iso) { names[iso] = placeName(src[p[0]][iso][0], p[1]); }); });
     var sel = document.getElementById("dest");
     if (sel.options.length < 2) {
@@ -101,6 +106,14 @@
         rows.push(["New Zealand", link(c.link, c.advice + (c.regional_note ? " (" + c.regional_note + ")" : "")),
           { td: c.updated ? day(c.updated) : "—", cls: "num" }]); });
       if (!src.safetravel[iso]) rows.push(["New Zealand", none("nz-mfat-safetravel", "Nothing above normal safety and security precautions"), "—"]);
+      (src.japan[iso] || []).forEach(function (c) {
+        rows.push(["Japan", link(c.link, c.advice + (c.levels && c.levels.length > 1 ? " (other levels in some areas)" : "")),
+          { td: day(c.updated_day), cls: "num" }]); });
+      if (!src.japan[iso]) rows.push(["Japan", none("jp-mofa-overseas-safety", "Nothing above Level 1 (exercise caution)"), "—"]);
+      (src.netherlands[iso] || []).forEach(function (c) {
+        rows.push(["Netherlands", link(c.link, c.advice + (c.regional ? " (the colour differs by area)" : "")),
+          { td: c.updated ? date(c.updated) : "—", cls: "num" }]); });
+      if (!src.netherlands[iso]) rows.push(["Netherlands", none("nl-minbuza-travel-advice", "Green, or not listed"), "—"]);
       (src.cdc[iso] || []).forEach(function (n) {
         rows.push(["CDC health notice", link(n.link, "Level " + n.level + ": " + n.title.replace(/^CDC Level [^:]+: /, "")),
           { td: n.date ? day(n.date) : date(n.published), cls: "num" }]); });
@@ -339,6 +352,11 @@
         : c.lane === "cdc" ? (c.kind === "new" ? "New CDC health notice, level " + c.to
           : c.kind === "level" ? "CDC health notice level " + c.from + " to " + c.to
           : c.kind === "removed" ? "CDC health notice removed (was level " + c.from + ")" : c.kind)
+        : c.lane === "japan" ? (c.kind === "level" ? "Japan's danger level: " + (JP_LEVEL[c.from] || c.from) + " to " + (JP_LEVEL[c.to] || c.to)
+          : "Japan: levels in force in some areas changed (" + (c.from || []).join(", ") + " to " + (c.to || []).join(", ") + ")")
+        : c.lane === "netherlands" ? (c.kind === "level" ? "Netherlands' colour: " + (NL_COLOUR[c.from] || c.from) + " to " + (NL_COLOUR[c.to] || c.to)
+          : "Netherlands: colours in force in some areas changed (" + (c.from || []).map(function (x) { return NL_COLOUR[x] || x; }).join(", ")
+            + " to " + (c.to || []).map(function (x) { return NL_COLOUR[x] || x; }).join(", ") + ")")
         : c.lane === "safetravel" ? (c.kind === "level" ? "New Zealand's advice: " + (NZ_LEVEL[c.from] || c.from) + " to " + (NZ_LEVEL[c.to] || c.to)
           : c.kind === "regional" ? "New Zealand: " + (c.to ? (c.from ? "note changed to \u201c" + c.to + "\u201d" : "now " + c.to) : "other levels in some areas removed") : c.kind)
         : c.lane === "canada" ? (c.kind === "level" ? "Canada's advisory: " + (CA_LEVEL[c.from] || c.from) + " to " + (CA_LEVEL[c.to] || c.to)
@@ -422,6 +440,41 @@
       : h("p", { "class": "empty" }, [(d.health["nz-mfat-safetravel"] || {}).state === "fresh"
           ? "New Zealand advises against travel nowhere and lists no change." : "No current New Zealand data: see Sources below."]));
 
+    // Japan: levels 3 and 4, changes and fresh danger updates; the feed carries level 2 as well.
+    var jl = (d.japan || []).filter(function (c) { return !c.type_en && (c.level >= 3 || c.tier === "anomaly" || c.new); })
+      .sort(function (x, y) { return (y.tier === "anomaly") - (x.tier === "anomaly") || y.level - x.level
+        || (y.updated || "").localeCompare(x.updated || ""); });
+    document.getElementById("japan").replaceChildren(jl.length ? table(["Place", "Japan's advice", "Latest danger notice (Japanese)", "Updated"],
+      jl.map(function (c) {
+        var name = c.title.replace(/^Japan, /, "").split(":")[0];
+        var was = c.tier !== "anomaly" ? "" : c.from_advice ? " (changed; was: " + c.from_advice + ")"
+          : c.declared_move ? " (Japan's notice: levels " + c.declared_move + ")" : " (levels in some areas changed)";
+        return [link(c.link, name), c.advice + (c.levels && c.levels.length > 1 ? " (other levels in some areas)" : "") + was,
+          h("span", { lang: "ja" }, [c.title_ja || "—"]), { td: day(c.updated_day), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [fresh(d, "jp-mofa-overseas-safety")
+          ? "Japan advises against travel nowhere and lists no change." : "No current Japanese data: see Sources below."]));
+    var jn = (d.japan || []).filter(function (c) { return c.type_en; })
+      .sort(function (x, y) { return (y.issued || "").localeCompare(x.issued || ""); });
+    document.getElementById("japan-notices").replaceChildren(jn.length ? table(["Place", "Kind", "Headline (Japanese, as published)", "Issued"],
+      jn.map(function (c) {
+        var name = c.title.replace(/^Japan, /, "").split(":")[0];
+        return [link(c.link, name), c.type_en.charAt(0).toUpperCase() + c.type_en.slice(1), h("span", { lang: "ja" }, [c.title_ja || ""]),
+          { td: when(c.issued), cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [fresh(d, "jp-mofa-overseas-safety")
+          ? "Japan's embassies and consulates have posted no notice in the last 72 hours." : "No current Japanese data: see Sources below."]));
+
+    var nlr = (d.netherlands || []).filter(function (c) { return NL_RANK[c.colour] >= 2 || c.tier === "anomaly" || c.new; })
+      .sort(function (x, y) { return (y.tier === "anomaly") - (x.tier === "anomaly") || NL_RANK[y.colour] - NL_RANK[x.colour]
+        || x.title.localeCompare(y.title); });
+    document.getElementById("netherlands").replaceChildren(nlr.length ? table(["Place", "Netherlands' advice", "Updated"],
+      nlr.map(function (c) {
+        var name = c.title.replace(/^Netherlands, /, "").split(":")[0];
+        var was = c.tier !== "anomaly" ? "" : c.from_advice ? " (changed; was: " + c.from_advice + ")" : " (colours in some areas changed)";
+        return [link(c.link, name), c.advice + (c.regional ? " (the colour differs by area)" : "") + was,
+          { td: c.updated ? T.format(c.updated, { year: true, time: false }) : "—", cls: "num" }]; }))
+      : h("p", { "class": "empty" }, [fresh(d, "nl-minbuza-travel-advice")
+          ? "The Netherlands advises against travel nowhere and lists no change." : "No current Dutch data: see Sources below."]));
+
     var PRN_RANK = { prohibition: 0, advisory: 1, pointer: 2, notice: 3 };
     var pr = (d.faaprn || []).slice().sort(function (x, y) {
       return (y.tier === "anomaly") - (x.tier === "anomaly") || PRN_RANK[x.strongest] - PRN_RANK[y.strongest]
@@ -462,6 +515,8 @@
       "faa-prohibitions-notices": "FAA prohibitions and advisories for foreign airspace", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
       "gac-travel-advisories": "Government of Canada travel advisories",
       "nz-mfat-safetravel": "New Zealand SafeTravel advice",
+      "jp-mofa-overseas-safety": "Japan overseas safety information (MOFA)",
+      "nl-minbuza-travel-advice": "Netherlands travel advice",
       "cdc-travel-notices": "CDC travel health notices" };
     document.getElementById("health").replaceChildren(table(["Source", "Last good", "Status"], Object.keys(names).map(function (k) {
       var s = d.health[k] || {};

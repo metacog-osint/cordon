@@ -40,6 +40,34 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   areas (MFAT words it four ways; the feed title says "other levels apply in some areas" and keeps MFAT's words in
   `measures.regional_note`). A country page is read only when its update day
   moves.
+- **Japan's overseas safety information** (Ministry of Foreign Affairs open data, `ezairyu.mofa.go.jp/opendata/`, keyless
+  XML; Government Standard Terms 2.0, compatible with CC BY 4.0, which ask for the source line "外務省 海外安全情報オープンデータ"
+  with the page address and a note that the content was edited or processed: Cordon gives both in the feed's
+  attribution and on the page). Two kinds of file. The list of the 24 newest notices carries the consular mail from
+  Japan's embassies and consulates (general and urgent: demonstrations, shootings, strikes, a named city), spot and
+  wide-area information, and danger information, each with the ministry's Japanese headline and lead, the issuing
+  mission and a country code; a notice with no country code (some consular mail for the United States) is held and
+  counted but not placed. A country's own file gives the danger levels 1 to 4 (危険レベル: exercise caution, avoid
+  non-essential travel, do not travel, evacuate) in force somewhere in the country and its latest danger headline.
+  Cordon reads a country file (183 exist; Aruba and the US Virgin Islands have none) the first time, when the list shows a
+  danger notice newer than the one held for the country, and for the next eight in a fixed hourly rotation, so every
+  country is read about once a day. A country's level is its highest in
+  force; more than one level means the levels differ by area. **Language:** the ministry publishes no English in these
+  files. Cordon keeps the Japanese headline and lead as published (`measures.title_ja`, `lead_ja`) and writes its
+  own English title from a fixed glossary only (the info type, the four level names, the country's English name from
+  the kit): no machine translation and no paid service, so the headline's subject is not translated. The level
+  names are Cordon's rendering with the ministry's Japanese in `measures.advice_ja`. Times are Japan time in the
+  source (checked against the file's HTTP Last-Modified) and stored here in UTC. A listing dated more than six hours
+  before the run is treated as frozen and the lane fails. Stale after 12 hours (the lists refresh every 5 minutes).
+- **Netherlands travel advice** (Nederland Wereldwijd open data API, `opendata.nederlandwereldwijd.nl`, keyless XML,
+  200 documents a request; listed as CC0 1.0 on data.overheid.nl, the API itself stating no licence line; Cordon
+  credits the ministry anyway): for 226 destinations the page's introduction (in Dutch), its address and its
+  last-modified time. The colour code (groen, geel, oranje, rood: no special security risks; special security risks;
+  travel only if essential; do not travel) is read from the sentences of the introduction that say "kleurcode"; the
+  highest is the destination's colour, and more than one means the colour differs by area. English words are a
+  fixed glossary beside the Dutch (`measures.colour_nl`, `intro_nl`). The ministry's last-modified time moves on
+  any edit of the page, so a destination updated in the last 72 hours is listed as routine; only a colour or regional
+  colour change Cordon sees is an anomaly.
 - **CDC travel health notices** (`wwwnc.cdc.gov/travel/rss/notices.xml`, keyless, US public domain; CDC asks for
   credit, a no-endorsement disclaimer and unaltered substance): every notice in force, at CDC's level (1 Practice Usual
   Precautions to 4 Avoid All Travel), with the disease, CDC's summary, the places it names and CDC's date.
@@ -54,6 +82,10 @@ more ground stops are in effect at once than Cordon's own counts make normal (`f
 than the 99th percentile, never under 3; a prior of 4 until 72 counts exist), or when the FAA lists it against a
 center or the whole system instead of one airport. A single ground stop on a normal day, every ground delay program
 and every closure is routine. Cordon reports the reason the FAA lists ("wind", "other") and never infers a cause.
+A change of Japan's highest danger level, or of the set of levels in force, or of the Netherlands' colour or the colours
+in force, in the last 30 days is an anomaly against the previous value, as is a danger notice Japan tags as raising or
+lowering levels in the last 72 hours; Japan's embassy and consulate notices are routine, listed for 72 hours. Cordon
+does not rank either government's levels against the other governments'.
 A change of the FCDO's statements for a country in the last 30 days is an anomaly against its previous statements;
 countries where the FCDO advises against some travel, or that it updated in the last 72 hours, are listed as routine.
 Cordon does not rank the FCDO's statements against the State Department's levels. A TFR for security or a

@@ -118,6 +118,14 @@ def fips_to_iso(code: str) -> str | None:
     return (_FIPS.get(code) or {}).get("iso")
 
 
+def country_name(iso: str | None, fallback: str = "") -> str:
+    """The kit's English name for an ISO 3166-1 alpha-2 code, else the fallback (a source's own name), else the code."""
+    try:
+        return geo.name(iso) or fallback or iso or ""
+    except Exception:  # noqa: BLE001 - the kit raises for a code it has no outline for
+        return fallback or iso or ""
+
+
 def point(iso: str):
     """GeoJSON Point at the kit's label point for a country, or None."""
     p = geo.point(iso)
