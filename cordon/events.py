@@ -17,8 +17,8 @@ replaced before Verdict's daily sync is missed.
 import re
 from datetime import datetime, timedelta, timezone
 
-from . import canada as ca, cdc, fcdo, safetravel
-from .feed import CANADA_SRC, CDC_SRC, FAAPRN_SRC, FCDO_SRC, SAFETRAVEL_SRC, STATE_SRC
+from . import canada as ca, cdc, fcdo, japan, netherlands, safetravel
+from .feed import (CANADA_SRC, CDC_SRC, FAAPRN_SRC, FCDO_SRC, JAPAN_SRC, NL_SRC, SAFETRAVEL_SRC, STATE_SRC)
 
 EASA_PAGE = "https://www.easa.europa.eu/en/domains/air-operations/czibs"
 POSTURE_WORDS = {"normal": "normal operations", "authorized_departure": "authorized departure",
@@ -27,10 +27,12 @@ RECENT_DAYS = 30
 COVER_DAYS = 2  # a Canada change Cordon saw within this long after Canada's own update is that update
 # The change kinds each lane turns into events (State's text-only edits, new and removed advisories stay out).
 KINDS = {"state": {"level", "posture"}, "fcdo": {"alert"}, "canada": {"level", "regional"},
-         "safetravel": {"level", "regional"}, "cdc": {"new", "level", "removed"}, "faaprn": {"new", "removed"}}
+         "safetravel": {"level", "regional"}, "japan": {"level", "regional"},
+         "netherlands": {"level", "regional"}, "cdc": {"new", "level", "removed"}, "faaprn": {"new", "removed"}}
 PUBLISHERS = {"state": STATE_SRC["publisher"], "fcdo": FCDO_SRC["publisher"], "canada": CANADA_SRC["publisher"],
               "safetravel": SAFETRAVEL_SRC["publisher"], "cdc": CDC_SRC["publisher"],
-              "faaprn": FAAPRN_SRC["publisher"]}
+              "faaprn": FAAPRN_SRC["publisher"], "japan": JAPAN_SRC["publisher"],
+              "netherlands": NL_SRC["publisher"]}
 
 
 def _slug(key: str) -> str:
@@ -70,6 +72,18 @@ def _what(c: dict) -> str:
         if not b:
             return f'New Zealand SafeTravel removed its note on other levels in some areas (was: "{a}")'
         return f'New Zealand SafeTravel reworded its note on other levels in some areas: "{b}"'
+    if lane == "japan":
+        if kind == "level":
+            return (f"Japan's danger level {_moved(a, b)} from "
+                    f'"{japan.LEVELS.get(a, "no danger level in force")}" to "{japan.LEVELS.get(b, "no danger level in force")}"')
+        return (f"Japan changed the danger levels in force in some areas (levels {', '.join(map(str, a or [])) or 'none'}"
+                f" to {', '.join(map(str, b or [])) or 'none'})")
+    if lane == "netherlands":
+        if kind == "level":
+            return (f'Netherlands travel advice {_moved(a, b, netherlands.ORDER)} from '
+                    f'"{netherlands.LEVELS.get(a, a)}" to "{netherlands.LEVELS.get(b, b)}"')
+        return (f"Netherlands changed the colours in force in some areas ({', '.join(netherlands.COLOURS_EN.get(c, c) for c in a or [])}"
+                f" to {', '.join(netherlands.COLOURS_EN.get(c, c) for c in b or [])})")
     if lane == "faaprn":
         what = "listed" if kind == "new" else "withdrew"
         return f"FAA {what} {c.get('label') or c['key']} ({c.get('entry_kind') or 'notice'}) for US operators"

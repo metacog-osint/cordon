@@ -7,7 +7,8 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 import re
 from datetime import datetime, timedelta, timezone
 
-from . import airports, canada, cdc, faa, faaprn, fcdo, launchwarn, navarea, rev21, safetravel, tfr
+from . import (airports, canada, cdc, faa, faaprn, fcdo, japan, launchwarn, navarea, netherlands, rev21,
+               safetravel, tfr)
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, CONTRACT_REV, __version__ as KIT, contract, geo, registers, vocab  # noqa: E402
 
@@ -51,6 +52,15 @@ SAFETRAVEL_SRC = {"id": "nz-mfat-safetravel", "publisher": "New Zealand Ministry
                   "licence": "Crown copyright, Creative Commons Attribution 4.0 International", "grade": "A1",
                   "independence_group": "nz-mfat", "source_type": "official notice",
                   "descriptor": "Travel advice (safetravel.govt.nz)"}
+JAPAN_SRC = {"id": "jp-mofa-overseas-safety", "publisher": "Ministry of Foreign Affairs of Japan (外務省)",
+             "licence": "Government Standard Terms 2.0, compatible with CC BY 4.0 (出典：外務省 海外安全情報オープンデータ, "
+             "with the page URL; edited and processed by Cordon)", "grade": "A1", "independence_group": "jp-mofa", "source_type": "official notice",
+             "descriptor": "Overseas safety information open data (外務省 海外安全情報オープンデータ): danger levels and "
+                           "notices from Japan's embassies and consulates"}
+NL_SRC = {"id": "nl-minbuza-travel-advice", "publisher": "Ministry of Foreign Affairs of the Netherlands "
+          "(Nederland Wereldwijd)", "licence": "CC0 1.0 (as listed on data.overheid.nl)", "grade": "A1",
+          "independence_group": "nl-minbuza", "source_type": "official notice",
+          "descriptor": "Travel advice (reisadvies) with colour code, from the Nederland Wereldwijd open data API"}
 CDC_SRC = {"id": "cdc-travel-notices", "publisher": "US Centers for Disease Control and Prevention (CDC), Travelers' Health",
            "licence": "US public domain (CDC asks for credit and a no-endorsement disclaimer)", "grade": "A1",
            "independence_group": "cdc", "source_type": "official notice",
@@ -66,7 +76,8 @@ FAAPRN_SRC = {"id": "faa-prohibitions-notices", "publisher": "US Federal Aviatio
               "source_type": "official notice",
               "descriptor": "Prohibitions, Restrictions and Notices: US flight prohibitions (SFARs) and security "
                             "NOTAMs (KICZ) for foreign airspace"}
-STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS, TFR_SRC["id"]: tfr.STALE_HOURS}
+STALE_BY_SOURCE = {FAA_SRC["id"]: faa.STALE_HOURS, TFR_SRC["id"]: tfr.STALE_HOURS,
+                   JAPAN_SRC["id"]: japan.STALE_HOURS}
 # Lines are tracklines as published; a GeometryCollection is areas or circles with tracklines; MultiPoint is a set of
 # positions with no shape given, so its extent is approximate.
 PRECISION = {"Point": "point", "LineString": "point", "MultiLineString": "point", "Polygon": "area",
@@ -369,6 +380,134 @@ def safetravel_items(data: dict, now: datetime, changes: list[dict]) -> list[dic
     return out
 
 
+def japan_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """Japan's danger levels (危険レベル 1-4) for every country at level 2 or above, whose levels changed in the last
+    RECENT_DAYS, or whose latest danger information is under NEW_HOURS old; and the notices from Japan's embassies and
+    consulates (consular mail, spot and wide-area information) of the last NEW_HOURS that name a country. The ministry's
+    Japanese is kept in measures; the English is a fixed glossary (cordon/japan.py)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    mine = [c for c in changes if c.get("lane") == "japan"]
+    lvl = {c["key"]: c for c in mine if c.get("kind") == "level"}
+    reg = {c["key"]: c for c in mine if c.get("kind") == "regional"}
+    out = []
+    for iso, r in sorted((data.get("countries") or {}).items()):
+        top = r.get("max_level") or 0
+        is_new = bool(r.get("risk_at") and r["risk_at"] >= new_from)
+        move = japan.declared_move(r) if is_new else None
+        lc, rc = lvl.get(iso), reg.get(iso)
+        if not (top >= 2 or lc or rc or (is_new and top >= 1)):
+            continue
+        name = japan.english_title(r)
+        advice = japan.LEVELS.get(top, "No danger level in force")
+        title = f"Japan, {name}: {advice}"
+        if len(r.get("levels") or []) > 1:
+            title += " (other levels apply in some areas)"
+        if move:
+            title += f" (Japan's notice: levels {move} in all or part of the country)"
+        props = {**_base(fetched), "id": f"cordon:japan:{iso}", "title": title,
+                 "tier": "anomaly" if (lc or rc or move) else "routine", "data_as_of": r.get("risk_at") or fetched,
+                 "countries": [iso], "precision_class": "country", "requirement_ids": ["CD-PIR-12"],
+                 "ie_aspect": ["informational"], "pmesii_pt": ["political"], "ascope": ["areas"],
+                 "sources": [{**JAPAN_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
+                 "measures": {"level": top, "levels": r.get("levels") or [], "advice": advice,
+                              "advice_ja": japan.LEVELS_JA.get(top), "title_ja": r.get("risk_title_ja"),
+                              "lead_ja": r.get("risk_lead_ja"), "updated": r.get("risk_at"), "new": is_new,
+                              "updated_day": japan.jst_date(r["risk_at"]) if r.get("risk_at") else None,
+                              "declared_move": move, "infection_levels": r.get("infection_levels") or []}}
+        if lc or rc:
+            props["baseline_ref"] = {"id": "previous-mofa-levels", "type": "fixed", "version": "1",
+                                     "window": "Japan's previous danger levels for the country"}
+        elif move:
+            props["baseline_ref"] = {"id": "mofa-declared-level-move", "type": "fixed", "version": "1",
+                                     "window": f"the ministry's own tag on its latest danger notice, published in the "
+                                               f"last {NEW_HOURS} hours"}
+        if lc:
+            props["measures"].update({"changed_at": lc["at"], "from_level": lc["from"],
+                                      "from_advice": japan.LEVELS.get(lc["from"], "No danger level in force")})
+        if rc:
+            props["measures"].update({"regional_changed_at": rc["at"], "from_levels": rc["from"]})
+        if r.get("risk_at"):  # the ministry dates a danger notice by its Japan-time day
+            rev21.event(props, rev21.day(japan.jst_date(r["risk_at"])), precision="day")
+        if top >= 1:
+            rev21.signal(props, "Japan MOFA danger level 1-4", top, "level 1-4")
+        if lc:
+            rev21.stamp(props, rev21.moved(lc["from"], top), lc["at"])
+        elif rc:
+            rev21.stamp(props, "changed", rc["at"])
+        elif move:
+            rev21.stamp(props, move, r["risk_at"])
+        elif is_new:
+            rev21.stamp(props, "changed", r["risk_at"])
+        out.append(_place({"type": "Feature", "geometry": _pt(iso, iso), "properties": props}, r["link"]))
+    for key, n in sorted((data.get("notices") or {}).items()):
+        if n["type"] in japan.DANGER_TYPES or not n.get("iso") or n["at"] < new_from:
+            continue  # danger notices are the levels above; a notice naming no country has nowhere to go
+        name = japan.english_title(n)
+        kind = japan.INFO_TYPES.get(n["type"], n["type"])
+        props = {**_base(fetched), "id": f"cordon:japannotice:{key}", "title": f"Japan, {name}: {kind}: {n['title_ja']}",
+                 "tier": "routine", "data_as_of": n["at"], "countries": [n["iso"]], "precision_class": "country",
+                 "requirement_ids": ["CD-PIR-12"], "ie_aspect": ["informational"], "pmesii_pt": ["political"],
+                 "ascope": ["events"], "sources": [{**JAPAN_SRC, "url": n["link"], "accessed_at": fetched}],
+                 "link": n["link"],
+                 "measures": {"type": n["type"], "type_en": kind, "title_ja": n["title_ja"], "lead_ja": n["lead_ja"],
+                              "mission_ja": n.get("mission_ja"), "issued": n["at"]}}
+        rev21.event(props, n["at"])
+        rev21.stamp(props, "new", n["at"])
+        out.append(_place({"type": "Feature", "geometry": _pt(n["iso"], n["iso"]), "properties": props}, n["link"]))
+    return out
+
+
+def netherlands_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
+    """The Netherlands' advice for every destination at orange (travel only if essential) or red, whose colour changed
+    in the last RECENT_DAYS, or that the ministry updated in the last NEW_HOURS (any edit of the page counts)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = data.get("fetched_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    mine = [c for c in changes if c.get("lane") == "netherlands"]
+    lvl = {c["key"]: c for c in mine if c.get("kind") == "level"}
+    reg = {c["key"]: c for c in mine if c.get("kind") == "regional"}
+    out = []
+    for key, r in sorted((data.get("countries") or {}).items()):
+        rank = netherlands.level_rank(r["colour"])
+        is_new = bool(r.get("updated") and r["updated"] >= new_from)
+        lc, rc = lvl.get(key), reg.get(key)
+        if not (rank >= 2 or lc or rc or is_new):
+            continue
+        title = f"Netherlands, {r['name']}: {r['advice']}"
+        if r.get("regional"):
+            title += " (other colours apply in some areas)"
+        props = {**_base(fetched), "id": f"cordon:netherlands:{key}", "title": title,
+                 "tier": "anomaly" if (lc or rc) else "routine", "data_as_of": r.get("updated") or fetched,
+                 "countries": [r["iso"]], "precision_class": "country", "requirement_ids": ["CD-PIR-13"],
+                 "ie_aspect": ["informational"], "pmesii_pt": ["political"], "ascope": ["areas"],
+                 "sources": [{**NL_SRC, "url": r["link"], "accessed_at": fetched}], "link": r["link"],
+                 "measures": {"colour": netherlands.COLOURS_EN.get(r["colour"]), "colour_nl": r["colour"],
+                              "colours": [netherlands.COLOURS_EN.get(c) for c in r.get("colours") or []],
+                              "advice": r["advice"], "regional": bool(r.get("regional")), "intro_nl": r.get("intro_nl"),
+                              "updated": r.get("updated"), "new": is_new}}
+        if lc or rc:
+            props["baseline_ref"] = {"id": "previous-minbuza-colour", "type": "fixed", "version": "1",
+                                     "window": "the Netherlands' previous colour code for the destination"}
+        if lc:
+            props["measures"].update({"changed_at": lc["at"], "from_colour": netherlands.COLOURS_EN.get(lc["from"]),
+                                      "from_advice": netherlands.LEVELS.get(lc["from"])})
+        if rc:
+            props["measures"].update({"regional_changed_at": rc["at"],
+                                      "from_colours": [netherlands.COLOURS_EN.get(c) for c in rc["from"]]})
+        rev21.event(props, r.get("updated"))
+        rev21.signal(props, "Netherlands colour code 1-4", rank + 1, "colour 1-4")
+        if lc:
+            rev21.stamp(props, rev21.moved(netherlands.level_rank(lc["from"]), rank), lc["at"])
+        elif rc:
+            rev21.stamp(props, "changed", rc["at"])
+        elif is_new:
+            rev21.stamp(props, "changed", r["updated"])
+        out.append(_place({"type": "Feature", "geometry": _pt(r["iso"], r["iso"]), "properties": props}, r["link"]))
+    return out
+
+
 def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     """Every CDC travel health notice in force, in CDC's words. A notice Cordon saw appear, or whose level it saw
     change, in the last NEW_HOURS (72 h) is an anomaly; an older change is kept on the item as routine; one CDC published or updated in the last NEW_HOURS is marked new."""
@@ -528,7 +667,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
           uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
           health_notices: dict | None = None, nz: dict | None = None, prn: dict | None = None,
-          dropped_log=None) -> dict:
+          jp: dict | None = None, nl: dict | None = None, dropped_log=None) -> dict:
     """`dropped_log`: a path; the items the linter drops are appended there whole (cordon/dropped.py, C5)."""
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
@@ -739,6 +878,22 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         else:
             feats += safetravel_items(nz, now, changes)
 
+    if jp is not None:
+        js = src_health.setdefault(JAPAN_SRC["id"], {"state": "never"})
+        if js["state"] in ("stale", "never"):
+            js["withheld"] = (sum(1 for r in (jp.get("countries") or {}).values() if (r.get("max_level") or 0) >= 2)
+                              + sum(1 for n in (jp.get("notices") or {}).values() if n.get("iso")))
+        else:
+            feats += japan_items(jp, now, changes)
+
+    if nl is not None:
+        ls = src_health.setdefault(NL_SRC["id"], {"state": "never"})
+        if ls["state"] in ("stale", "never"):
+            ls["withheld"] = sum(1 for r in (nl.get("countries") or {}).values()
+                                 if netherlands.level_rank(r["colour"]) >= 2)
+        else:
+            feats += netherlands_items(nl, now, changes)
+
     if health_notices is not None:
         cd = src_health.setdefault(CDC_SRC["id"], {"state": "never"})
         if cd["state"] in ("stale", "never"):
@@ -787,13 +942,18 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             "licence": "Cordon code GNU AGPL-3.0; State Department, NGA and FAA content US public domain; EASA content with "
                        "acknowledgement; UK FCDO content under the Open Government Licence v3.0; Government of Canada "
                        "content under the Open Government Licence - Canada; CDC content US public domain; New Zealand MFAT "
-                       "content Crown copyright under CC BY 4.0",
+                       "content Crown copyright under CC BY 4.0; Japan Ministry of Foreign Affairs overseas safety open data under its "
+                       "terms (Government Standard Terms 2.0, compatible with CC BY 4.0), edited and processed by Cordon; "
+                       "Netherlands travel advice from Nederland Wereldwijd, CC0 1.0",
             "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO, "
                            "Global Affairs Canada. Contains public sector information licensed under the Open "
                            "Government Licence v3.0. Contains information licensed under the Open Government "
                            "Licence - Canada. Health notices: Source: CDC; available free at "
                            "wwwnc.cdc.gov/travel/notices; their use here does not imply endorsement by CDC, HHS or the "
                            "US Government. New Zealand travel advice: Ministry of Foreign Affairs and Trade, "
-                           "SafeTravel (safetravel.govt.nz), licensed under CC BY 4.0.",
+                           "SafeTravel (safetravel.govt.nz), licensed under CC BY 4.0. Japan: 外務省 海外安全情報オープンデータ "
+                           "(https://www.ezairyu.mofa.go.jp/html/opendata/index.html), edited and processed by Cordon; "
+                           "not produced by the Government of Japan. Netherlands: Ministerie van Buitenlandse Zaken, "
+                           "Nederland Wereldwijd (CC0).",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}

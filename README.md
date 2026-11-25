@@ -22,6 +22,8 @@ Cordon collects official warnings every hour, straight from the issuing authorit
 | CDC travel health notices (Travelers' Health RSS) | Disease outbreak notices at CDC's four levels, with the places each names | US public domain; Source: CDC, available free at wwwnc.cdc.gov/travel/notices; no endorsement by CDC, HHS or the US Government is implied |
 | New Zealand SafeTravel travel advice (MFAT; the destination list in safetravel.govt.nz/destinations, and country pages) | New Zealand's level for about 222 destinations, the date of each update, and each country page's note of other levels in some areas | Crown copyright, CC BY 4.0 (Ministry of Foreign Affairs and Trade) |
 | Government of Canada travel advice and advisories (open data index) | Canada's level for about 230 places, its regional advisories, and its note of each update | Open Government Licence - Canada |
+| Japan's overseas safety information (Ministry of Foreign Affairs open data: the newest notices, and one file per country) | Japan's danger level (1 to 4) for 183 countries, and the warnings its embassies and consulates post (demonstrations, shootings, strikes in a named city), in Japanese as published with an English title from a fixed glossary | Government Standard Terms 2.0, compatible with CC BY 4.0: 出典：外務省 海外安全情報オープンデータ (https://www.ezairyu.mofa.go.jp/html/opendata/index.html); edited and processed by Cordon, not produced by the Government of Japan |
+| Netherlands travel advice (Nederland Wereldwijd open data API) | The Netherlands' colour code (green, yellow, orange, red) for 226 destinations, and where it differs by area | CC0 1.0 (as listed on data.overheid.nl); credited to the Ministerie van Buitenlandse Zaken |
 | UK FCDO foreign travel advice (GOV.UK Content API) | Where the UK advises against all or all but essential travel, and the FCDO's note of each update, for about 226 countries | Open Government Licence v3.0 |
 
 OSAC is not used: its terms bar republishing.
@@ -54,6 +56,14 @@ OSAC is not used: its terms bar republishing.
 - New Zealand's levels are reported in MFAT's words; a level change, or a change to its note of other levels in
   some areas, in the last 30 days is an anomaly. MFAT dates updates by day, with no note of what changed. A country
   page is read only when MFAT updates the destination.
+- Japan's levels and notices are reported as the ministry publishes them, in Japanese; the English title comes from a
+  fixed glossary of the ministry's info types and four levels, never a machine translation. A change of a country's
+  highest level, or of the levels in force in some areas, in the last 30 days, or a danger notice the ministry tags
+  as raising or lowering levels, is an anomaly; embassy and consulate notices are listed for 72 hours. A country's
+  file is read when the ministry posts a new danger notice for it and otherwise about once a day.
+- The Netherlands' colours are read from the sentences of each page's introduction that say "kleurcode"; the highest
+  is shown, and a destination with more than one is marked as differing by area. A colour change in the last 30 days
+  is an anomaly.
 - CDC's health notices are listed in CDC's words and levels; a notice that appears or changes level in the last 30
   days is an anomaly. Cordon does not compare CDC's health levels with any travel advisory level.
 - A source that stops answering, or whose list has stopped moving, is marked stale in the feed's `health` block and
