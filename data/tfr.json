@@ -8847,6 +8847,7 @@
    "description": "NEW ORLEANS, LA, Wednesday, November 25, 2026 through Monday, January 18, 2027 UTC",
    "created": "11/25/2026",
    "first_seen": "2026-11-25T20:39:17Z",
+   "subject": "6/9791",
    "detail": {
     "name": "6/9791",
     "issued": "2026-11-25T20:10:14Z",
@@ -9014,8 +9015,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9791"
+   }
   },
   "6/9794": {
    "notam_id": "6/9794",
@@ -9025,6 +9025,7 @@
    "description": "NEW ORLEANS, LA, Wednesday, November 25, 2026 through Thursday, November 26, 2026 UTC",
    "created": "11/25/2026",
    "first_seen": "2026-11-25T20:39:17Z",
+   "subject": "6/9794",
    "detail": {
     "name": "6/9794",
     "issued": "2026-11-25T20:17:26Z",
@@ -9192,8 +9193,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9794"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
