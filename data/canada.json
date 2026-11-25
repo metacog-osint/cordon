@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T13:01:18Z",
+ "generated": "2026-11-25T14:00:29Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -1017,7 +1017,7 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution",
    "regional": false,
-   "updated": "2026-11-24T19:53:16Z",
+   "updated": "2026-11-25T13:48:17Z",
    "update_type": "Regular text update",
    "update": "Need help? section – updated mission coordinates",
    "link": "https://travel.gc.ca/destinations/guyana"
