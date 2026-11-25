@@ -1,0 +1,3046 @@
+{
+ "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
+ "notices": {
+  "169222": {
+   "key": "169222",
+   "type": "R10",
+   "at": "2026-11-25T19:16:13Z",
+   "code": null,
+   "iso": null,
+   "name_ja": null,
+   "title_ja": "【注意喚起】ホリデーシーズンにおける安全対策等",
+   "lead_ja": "● 11月末の感謝祭（サンクスギビングデー）から新年にかけてのホリデーシーズンは、人出の増加に伴い、一般犯罪のほかテロ等の不測の事態が発生するリスクが高まります。外出の際は周囲の状況に十分注意し、安全対策を徹底してください。\n● 旅行や会食等で飲酒の機会も増えることから、飲酒運転による交通事故の発生が懸念されます。周囲の車両の動きにも十分注意し、事故に巻き込まれないよう安全運転を心掛けてください。\n● 年末年始の旅行や日本への一時帰国等を予定されている方は、パスポートの有効期限を今一度ご確認の上、更新が必要な方は早めに当館へご相談ください。\n● 当館は、2026年12月29日（火）から2027年1月3日（日）まで休館いたします。各種領事手続は、時間に余裕をもってお済ませください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169222",
+   "mission_ja": "在マイアミ日本国総領事館"
+  },
+  "169220": {
+   "key": "169220",
+   "type": "R10",
+   "at": "2026-11-25T17:51:05Z",
+   "code": "0033",
+   "iso": "FR",
+   "name_ja": "フランス",
+   "title_ja": "11月26日のデモ等に関する注意喚起",
+   "lead_ja": "● 11月26日（木）、学生及び教職員団体により、デモ・集会等の動員が呼びかけられています。また、労働組合はフランス全土でのストライキを呼びかけています。\n● 10月17日（土）及びその後に行われた抗議行動において、一部の集団による放火、破壊、略奪等の違法行為が行われたことを受け、フランス当局は警戒を強めています。\n● 急を要する用件がある場合を除き市街地への外出を控えることを含め、慎重に行動してください。外出する場合には、デモ等が実施される場所には近づかない、デモ等の現場に遭遇した場合は直ちにその場を離れる等、自身の安全確保を優先してください。\n● デモに伴う交通規制により公共の交通機関の減便等が予想されるため、当日は時間に余裕をもった移動を心がけてください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169220",
+   "mission_ja": "在リヨン領事事務所"
+  },
+  "169219": {
+   "key": "169219",
+   "type": "R10",
+   "at": "2026-11-25T16:26:01Z",
+   "code": "0504",
+   "iso": "HN",
+   "name_ja": "ホンジュラス",
+   "title_ja": "緊急メンテナンスに伴うパスポートのオンライン申請等の一時停止について",
+   "lead_ja": "● システムの緊急メンテナンスに伴い、11月25日（水）午前5時から午後4時まで（ホンジュラス時間）、パスポートのオンライン申請ができなくなります。\n● 同期間中、戸籍電子証明書を利用した各種証明書の発給手続にも影響が生じます。\n● お急ぎの場合は、戸籍謄本を持参の上、当館領事窓口にて申請してください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169219",
+   "mission_ja": "在ホンジュラス日本国大使館"
+  },
+  "169218": {
+   "key": "169218",
+   "type": "R10",
+   "at": "2026-11-25T16:16:29Z",
+   "code": "0033",
+   "iso": "FR",
+   "name_ja": "フランス",
+   "title_ja": "11月26日のデモ等に関する注意喚起",
+   "lead_ja": "● 11月26日（木）、学生及び教職員団体により、デモ・集会等の動員が呼びかけられています。また、労働組合はフランス全土でのストライキを呼びかけています。\n\n● 10月17日（土）及びその後に行われた抗議行動において、一部の集団による放火、破壊、略奪等の違法行為が行われたことを受け、フランス当局は警戒を強めています。\n\n● 急を要する用件がある場合を除き市街地への外出を控えることを含め、慎重に行動してください。外出する場合には、デモ等が実施される場所には近づかない、デモ等の現場に遭遇した場合は直ちにその場を離れる等、自身の安全確保を優先してください。\n\n● デモに伴う交通規制により公共の交通機関の減便等が予想されるため、当日は時間に余裕をもった移動を心がけてください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169218",
+   "mission_ja": "在フランス日本国大使館"
+  },
+  "169214": {
+   "key": "169214",
+   "type": "R10",
+   "at": "2026-11-25T15:01:15Z",
+   "code": null,
+   "iso": null,
+   "name_ja": null,
+   "title_ja": "（注意喚起）マサチューセッツ州ノーウッドにおける発砲事件の発生について",
+   "lead_ja": "●11月25日（水）午前8時30分過ぎ、マサチューセッツ州ノーウッド（Norwood）のナハタン通り（Nahatan Street）とプレザント通り（Pleasant Street）の交差点付近において発砲事件が発生しました。\n●容疑者は車で現場から逃走しており、現在も現地警察による捜査が続いています。付近への立ち入りは控え、最新情報の入手に努めてください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169214",
+   "mission_ja": "在ボストン日本国総領事館"
+  },
+  "169210": {
+   "key": "169210",
+   "type": "R10",
+   "at": "2026-11-25T12:11:00Z",
+   "code": "0225",
+   "iso": "CI",
+   "name_ja": "コートジボワール",
+   "title_ja": "イベントに伴う交通規制（１１月２９日）：アビジャン国際マラソン",
+   "lead_ja": "○１１月２９日（日）、第２２回アビジャン自治区国際マラソンが開催されます。交通規制や交通渋滞が見込まれますので、ご注意ください。\n○コースなど同イベントの詳細については、以下のサイトをご参照ください。\n大会公式サイト（トップページ）: https://www.midaa.net/\n公式コース案内ページ（Parcours officiels）: https://www.midaa.net/parcours/",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169210",
+   "mission_ja": "在コートジボワール日本国大使館"
+  },
+  "169201": {
+   "key": "169201",
+   "type": "R10",
+   "at": "2026-11-25T08:46:11Z",
+   "code": "0971",
+   "iso": "AE",
+   "name_ja": "アラブ首長国連邦",
+   "title_ja": "UAE当局による警備訓練「Exercise Etihad 55」の開催について",
+   "lead_ja": "UAE内務省は、UAE国内の全首長国の関係当局部隊が参加する警備訓練「Exercise Etihad 55」を本日中に開催する旨を発表しました。具体的な訓練実施時間・場所等は発表されておりません。\n\n同省は、移動中等の参加部隊に対する写真撮影や訓練場所への立入りを控え、移動中の参加部隊の車列に遭遇した際は進路を譲るよう呼び掛けておりますので、ご注意ください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169201",
+   "mission_ja": "在ドバイ日本国総領事館"
+  },
+  "169200": {
+   "key": "169200",
+   "type": "R10",
+   "at": "2026-11-25T06:51:03Z",
+   "code": "0966",
+   "iso": "SA",
+   "name_ja": "サウジアラビア",
+   "title_ja": "ホーシー派の攻撃予告（紅海沿岸の港）に関する注意喚起",
+   "lead_ja": "１　本２５日未明、ホーシー派軍報道官は、以下のとおりジッダ港及び紅海沿岸の港に対する攻撃を予告しています。\n－　敵がホデイダ港（イエメン）への爆撃を実行した場合、ジッダ港及び紅海沿岸のサウジアラビアの全ての港が我々の攻撃対象となると発表する。港湾職員、従業員及びその近隣にいる人々に対し、直ちに避難し、港から離れるよう警告するとともに、全ての海運会社に対し、自社の船舶を直ちにこれらの港から退避させるよう呼びかける。\n※ホーシー派が攻撃対象として指定した港\n－　ジッダ港\n－　ヤンブー港\n－　キング・ファハド工業港（ヤンブー）\n－　ジャザーン港\n\n２　なお、同日早朝、サウジ主導有志連合軍報道官は、ホデイダ港（及びサアダ県、アムラン県）での軍事作戦を実施した旨発表しております。\n\n３　ホーシー派の攻撃目標として指定された地域には、当面の間、近づかないようにしてください。\n\n４　引き続き、在留邦人の皆様におかれましては、\n－　軍事関連施設、石油関連施設、空港関連施設、金融関連施設等、攻撃の対象となる可能性のある施設には近づかない（写真撮影も厳禁）\n－　米国関連施設には近づかない\n－　ミサイル・ドローン、着弾状況等の写真撮影、SNSへの投稿・共有を行わない\n－　信頼できる公式の情報源からの最新情報を確認し、状況によっては不要不急の外出を控える\n－　万が一の事態に備えて、余裕を持って水や食料品な",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169200",
+   "mission_ja": "在サウジアラビア日本国大使館"
+  },
+  "169199": {
+   "key": "169199",
+   "type": "R10",
+   "at": "2026-11-25T05:51:07Z",
+   "code": "0966",
+   "iso": "SA",
+   "name_ja": "サウジアラビア",
+   "title_ja": "ホーシー派の攻撃予告に対する注意喚起",
+   "lead_ja": "ホーシー派の攻撃予告に対する注意喚起",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169199",
+   "mission_ja": "在ジッダ日本国総領事館"
+  },
+  "169193": {
+   "key": "169193",
+   "type": "R10",
+   "at": "2026-11-25T02:46:12Z",
+   "code": "0062",
+   "iso": "ID",
+   "name_ja": "インドネシア",
+   "title_ja": "デモ情報（ジャカルタ：１１月２５日）",
+   "lead_ja": "●　本２５日、ジャカルタ中心部の独立記念塔（モナス）周辺、国会周辺（中央ジャカルタ・スナヤン地区）及び選挙監視庁（BAWASLU、タムリン通り）等においてデモ活動が予定されています。\n●　デモ活動は、予期せぬ出来事によって過激化する恐れもあります。邦人の皆様におかれては、デモに関する最新の情報に注意するとともに、デモが行われている場所やその周囲には近付かないでください。\n●　デモの周辺道路では交通規制が行われ、交通状況に影響が生じる可能性があります。外出の際にはご注意ください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169193",
+   "mission_ja": "在インドネシア日本国大使館"
+  },
+  "169191": {
+   "key": "169191",
+   "type": "R10",
+   "at": "2026-11-25T00:01:18Z",
+   "code": null,
+   "iso": null,
+   "name_ja": null,
+   "title_ja": "カリフォルニア沿岸部の浸水・高波への警戒",
+   "lead_ja": "● 米国立気象局（NWS）は、24日（火）から週末にかけて、南カリフォルニア沿岸地域において、記録的な高潮による浸水や高波のおそれがあるとして、洪水警報や高波警報等を発表しています。\n●特に、11月25日（水）、26日（木）は潮位が著しく高くなるとともに、高波により、沿岸部の低地で洪水や、道路の冠水、通行止め等が発生する可能性が高まります。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169191",
+   "mission_ja": "在ロサンゼルス日本国総領事館"
+  },
+  "169189": {
+   "key": "169189",
+   "type": "R10",
+   "at": "2026-11-24T19:46:24Z",
+   "code": null,
+   "iso": null,
+   "name_ja": null,
+   "title_ja": "【注意喚起】ホリデーシーズンの安全対策等",
+   "lead_ja": "●１１月末の感謝祭（サンクスギビングデー）から新年に至るホリデーシーズンは、各地でイベントが行われ、観光客等の多くの人で賑わいます。人流の拡大に伴い、各種犯罪やテロのリスクも高まりますので、外出の際は周囲の状況に注意を払うなど安全対策を徹底してください。\n●飲酒運転や不法就労等の法令違反は、逮捕・罰金のみならず、滞在資格の取り消しにつながる可能性がありますので、米国滞在中は米国の法令を遵守してください。\n●渡航先の国が求めるパスポートの残存有効期間が足りず、米国を出国できないといった相談が毎年寄せられていますので、お手元のパスポートの有効期限を今一度ご確認の上、更新が必要な方は早めに当総領事館にご相談ください。\n●当総領事館の年内の最終開館日は１２月２８日（月）となっております。１２月２９日（火）から１月３日（日）の間は休館となりますので、必要な領事関係手続は早めに済ませておくようお願いいたします。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169189",
+   "mission_ja": "在ニューヨーク日本国総領事館"
+  },
+  "169188": {
+   "key": "169188",
+   "type": "R10",
+   "at": "2026-11-24T19:06:44Z",
+   "code": null,
+   "iso": null,
+   "name_ja": null,
+   "title_ja": "カリフォルニア沿岸部の高潮・高波と悪天候への警戒",
+   "lead_ja": "● 米国立気象局（NWS）は、カリフォルニア北部の広い沿岸地域において、高潮による浸水や高波のおそれがあるとして、沿岸浸水警報や高波警報等を発表しています。特に11月25日（水）は潮位が著しく高くなり、沿岸部の低地で浸水のおそれがあります。\n● 24日（火）から25日（水）にかけて、地域によっては雨や強風も予想されており、道路の冠水や通行止め、公共交通機関への影響のほか、航空便の遅延・欠航等が発生する可能性があります。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169188",
+   "mission_ja": "在サンフランシスコ日本国総領事館"
+  },
+  "169187": {
+   "key": "169187",
+   "type": "R10",
+   "at": "2026-11-24T18:46:08Z",
+   "code": "0054",
+   "iso": "AR",
+   "name_ja": "アルゼンチン",
+   "title_ja": "【邦人被害】ブエノスアイレス市内レティーロ地区での盗難被害",
+   "lead_ja": "【ポイント】\n●邦人が、ブエノスアイレス市レティーロ駅周辺を移動中のところ、ケチャップ等液体を使用した窃盗被害を受け、貴重品を入れたバッグを盗難されました。\n●同地区近傍に大規模スラム街（通称：ビジャ３１）があるため、同周辺では、強盗・窃盗などの事件が多く発生しています。このため同周辺での徒歩移動、鉄道やバスを利用する際は注意が必要です。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169187",
+   "mission_ja": "在アルゼンチン日本国大使館"
+  },
+  "169185": {
+   "key": "169185",
+   "type": "R10",
+   "at": "2026-11-24T15:21:03Z",
+   "code": "0359",
+   "iso": "BG",
+   "name_ja": "ブルガリア",
+   "title_ja": "クリスマス及び年末年始における注意喚起",
+   "lead_ja": "【ポイント】\n●クリスマスや年末年始にかけては、各地でイベントや人の移動が増えるため、スリなどの盗難被害やテロへの警戒が必要です。\n●人が密集する場所では、常に周囲に気を配り、不審な人物や置き去りの荷物など「少しでもおかしい」と感じたら、すぐにその場を離れて安全を確保してください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169185",
+   "mission_ja": "在ブルガリア日本国大使館"
+  },
+  "169184": {
+   "key": "169184",
+   "type": "R10",
+   "at": "2026-11-24T15:06:02Z",
+   "code": "0030",
+   "iso": "GR",
+   "name_ja": "ギリシャ",
+   "title_ja": "ゼネラル・ストライキ及び集会情報（11月25日）",
+   "lead_ja": "○明日11月25日（水）、公務員労働組合等による24時間のゼネラル・ストライキが予定されています。これにより、アテネ等の主要都市では、交通機関や公共サービスに影響が出ることが予想されます。\n○各地で抗議集会も予定されています。デモ隊と警察の衝突に発展する可能性もあるため、不測の事態に巻き込まれることのないよう、デモや集会には不用意に近づかない、遭遇した場合は速やかにその場から離れるなど、十分に注意を払ってください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169184",
+   "mission_ja": "在ギリシャ日本国大使館"
+  },
+  "169183": {
+   "key": "169183",
+   "type": "R10",
+   "at": "2026-11-24T14:51:06Z",
+   "code": "0966",
+   "iso": "SA",
+   "name_ja": "サウジアラビア",
+   "title_ja": "キング・アブドゥッラー金融地区（ＫＡＦＤ）に対する攻撃に関する注意喚起",
+   "lead_ja": "１　本２４日午後、サウジ主導連合軍報道官は、リヤド市内金融センター（※ＫＡＦＤ）のビルが攻撃を受け、調査を行っている旨発表しました。\n\n２　一部メディアの報道によれば、ＰＩＦタワーが再び攻撃を受けた可能性があります。現時点、負傷者等に関する公式発表はありません。\n\n３　ＫＡＦＤ地区が攻撃されたのは、８日のアラムコタワー、１９日のＰＩＦタワーに続き、今回で３回目となります。当面の間、ＫＡＦＤ地区には、近づかないようにしてください。\n\n４　引き続き、在留邦人の皆様におかれましては、\n－　軍事関連施設、石油関連施設、空港関連施設、金融関連施設等、攻撃の対象となる可能性のある施設には近づかない（写真撮影も厳禁）\n－　米国関連施設には近づかない\n－　ミサイル・ドローン、着弾状況等の写真撮影、SNSへの投稿・共有を行わない\n－　信頼できる公式の情報源からの最新情報を確認し、状況によっては不要不急の外出を控える\n－　万が一の事態に備えて、余裕を持って水や食料品などを備える\nなど、ご自身の安全確保に努めてください。\n　　万が一、被害に遭われた場合や邦人の被害情報に接した場合には、大使館まですぐにお知らせください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169183",
+   "mission_ja": "在サウジアラビア日本国大使館"
+  },
+  "169182": {
+   "key": "169182",
+   "type": "R10",
+   "at": "2026-11-24T13:31:08Z",
+   "code": "0090",
+   "iso": "TR",
+   "name_ja": "トルコ",
+   "title_ja": "「女性に対する暴力撤廃の国際デー」に合わせたデモの実施",
+   "lead_ja": "【ポイント】\n●１１月２５日（水）、イスタンブール市内において「女性に対する暴力撤廃の国際デー」に合わせたデモが呼びかけられています。\n●周辺地域においては、デモ当日に一部公共交通機関が運行停止する可能性があります。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169182",
+   "mission_ja": "在イスタンブール日本国総領事館"
+  },
+  "169181": {
+   "key": "169181",
+   "type": "R10",
+   "at": "2026-11-24T11:36:01Z",
+   "code": "0055",
+   "iso": "BR",
+   "name_ja": "ブラジル",
+   "title_ja": "治安情報：マナウス市中西部ドン・ペドロ地区サンボドロモで発生した銃撃殺人事件",
+   "lead_ja": "1　発生日時\n2026年11月22日（日）午後（具体的時刻未詳）\n\n2　事件発生場所\nマナウス市中西部ドン・ペドロ地区サンボドロモ\n（在マナウス総領事館から北西へ約3.6キロメートル）\n\n【参考：事件発生現場周辺地図 ※Google Maps】\nhttps://maps.app.goo.gl/tveBJweEL1MCrBRMA",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169181",
+   "mission_ja": "在マナウス日本国総領事館"
+  },
+  "169180": {
+   "key": "169180",
+   "type": "R10",
+   "at": "2026-11-24T11:31:07Z",
+   "code": "0974",
+   "iso": "QA",
+   "name_ja": "カタール",
+   "title_ja": "カタールにおける新交通法の施行について",
+   "lead_ja": "2026年12月19日から、改正交通法（2026年法律第19号）が施行されます。今回の改正では、運転者のみならず同乗者、歩行者、電動キックボード利用者に対する罰則も大幅に厳格化されます。つきましては、邦人の皆様が思わぬ法令違反やトラブルに巻き込まれないよう、特にご注意いただきたい主な変更点をお知らせいたします。\n本メールの内容は、当館ホームページにも同様に掲載する予定ですので、併せてご参照ください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169180",
+   "mission_ja": "在カタール日本国大使館"
+  },
+  "169179": {
+   "key": "169179",
+   "type": "R10",
+   "at": "2026-11-24T11:26:03Z",
+   "code": "0041",
+   "iso": "CH",
+   "name_ja": "スイス",
+   "title_ja": "１１月２４日（火）ローザンヌにおける大規模デモに関する注意喚起",
+   "lead_ja": "○11月24日（火）18時頃から、ローザンヌ市内において大規模デモ行進が予定されています。報道によれば、約１万人規模の参加が見込まれており、周辺道路では警察による警備強化や交通規制が実施される予定です。\n○現在ローザンヌ市内において開催中のクリスマスマーケットの影響による混雑も予想されます。不測の事態に巻き込まれないよう、デモや集会には近づかないでください。万が一、遭遇した場合は速やかにその場から離れ、安全を確保してください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169179",
+   "mission_ja": "在ジュネーブ領事事務所"
+  },
+  "169178": {
+   "key": "169178",
+   "type": "R10",
+   "at": "2026-11-24T07:46:09Z",
+   "code": "0371",
+   "iso": "LV",
+   "name_ja": "ラトビア",
+   "title_ja": "全国一斉警報テスト実施（１１／２５）のお知らせ",
+   "lead_ja": "１　１１月２５日（水）午前１０時０分から午前１０時１０分までの間、ラトビア国家消防救助庁が全国各地で一斉警報テストを行います。\n２　全国各地で警報サイレンが３分間鳴動し、同時に携帯電話にテスト実施を知らせる通知が送信される予定です。\n３　これは政府による事前の告知に基づいた「テスト」です。実際の災害や緊急事態ではございませんので、慌てず落ち着いて行動してください。\n\n（参考）国家消防救助庁からの事前告知\nhttps://www.vugd.gov.lv/lv/jaunums/25-novembri-visa-latvija-iedarbinas-trauksmes-sirenas-un-nosutis-sunu-apraides-pazinojumu\n\n＜安全対策に関する情報＞\n非常時の通報先（警察、消防、救急共通）：１１２\nリーガ市警察ツーリストポリス連絡先：６７１８－１８１８\n大使館安全対策情報ページ：https://www.lv.emb-japan.go.jp/itpr_ja/index_00251.html",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169178",
+   "mission_ja": "在ラトビア日本国大使館"
+  },
+  "169174": {
+   "key": "169174",
+   "type": "R10",
+   "at": "2026-11-24T04:46:06Z",
+   "code": "0679",
+   "iso": "FJ",
+   "name_ja": "フィジー",
+   "title_ja": "（安全情報）注意喚起：クリスマスシーズンに伴う治安悪化の傾向について",
+   "lead_ja": "●最近、フィジー国内において「外国人観光客を狙った窃盗犯罪」および「子どもを狙った注射針による襲撃事件」が各種メディアで報じられており、治安への懸念が高まっています。\n●また、フィジーでは１１月下旬から１２月のクリスマスにかけて、スリ、窃盗、置き引き、強盗などの一般犯罪が増加する傾向にあると言われています。\n●在留邦人、旅行客の皆様におかれましては、以下の情報を参考にご自身やご家族の安全確保に万全を期すようお願いいたします。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169174",
+   "mission_ja": "在フィジー日本国大使館"
+  },
+  "169173": {
+   "key": "169173",
+   "type": "R10",
+   "at": "2026-11-24T02:26:03Z",
+   "code": "0678",
+   "iso": "VU",
+   "name_ja": "バヌアツ",
+   "title_ja": "【重要なお知らせ】当館の事務所移転及び領事サービスの取扱いについて",
+   "lead_ja": "○当館は、2026年12月14日以降、段階的に仮事務所へ移転します。\n○移転に伴い、2026年12月1日以降、当面の間、各種領事サービスの取扱いが変更となります。\n○仮事務所の所在地、移転スケジュール及び各種領事サービスの取扱いについては、当館ホームページにて随時更新いたします。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169173",
+   "mission_ja": "在バヌアツ日本国大使館"
+  },
+  "169171": {
+   "key": "169171",
+   "type": "R10",
+   "at": "2026-11-24T01:46:10Z",
+   "code": "0062",
+   "iso": "ID",
+   "name_ja": "インドネシア",
+   "title_ja": "デモ情報　マカッサル市：１１月２４日（火）",
+   "lead_ja": "●１１月２４日（火）マカッサル市内で、デモ団体等による以下の抗議デモおよび集会が行われる予定との情報があります。\n●デモの周辺箇所では交通規制が行われ、混乱や渋滞が生じる可能性があります。外出の際には十分にご注意ください。\n●同様のデモは、今後も継続する可能性があります。引き続き警戒をお願いします。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169171",
+   "mission_ja": "在マカッサル領事事務所"
+  }
+ },
+ "countries": {
+  "AE": {
+   "code": "0971",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "アラブ首長国連邦の危険情報【危険レベルの引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、アラブ首長国連邦の全土について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T066",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T066.html",
+   "iso": "AE",
+   "name_ja": "アラブ首長国連邦"
+  },
+  "AF": {
+   "code": "0093",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "アフガニスタンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険レベル４（退避勧告）を継続します。アフガニスタンへの渡航は、どのような目的であれ止めてください。既に滞在されている方は、速やかに在アフガニスタン日本国大使館まで連絡するとともに、直ちに退避してください。",
+   "risk_key": "2026T098",
+   "risk_at": "2026-11-10T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T098.html",
+   "iso": "AF",
+   "name_ja": null
+  },
+  "AL": {
+   "code": "0355",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=196",
+   "iso": "AL",
+   "name_ja": null
+  },
+  "AM": {
+   "code": "0374",
+   "levels": [
+    1,
+    2,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "アルメニアの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "●治安に一定の安定が見られるため、アゼルバイジャン及びナヒチェバン共和国と国境を接する州（アララト州、ゲガルクニク州、ヴァヨツ・ゾル州、タヴシュ州） のうち、国境周辺以外の地域をレベル２からレベル１に引き下げます。同地域においても、状況に応じて十分な安全対策を講じるように心掛けてください。",
+   "risk_key": "2025T061",
+   "risk_at": "2025-07-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T061.html",
+   "iso": "AM",
+   "name_ja": null
+  },
+  "AO": {
+   "code": "0244",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "アンゴラの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T048",
+   "risk_at": "2025-06-10T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T048.html",
+   "iso": "AO",
+   "name_ja": null
+  },
+  "AR": {
+   "code": "0054",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "アルゼンチンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●首都ブエノスアイレス市及び周辺都市では、銃器を使用した殺人、強盗、誘拐等の凶悪犯罪が発生しているため、十分な注意が必要です。\n●サンタフェ州ロサリオ市では、麻薬組織間抗争が継続し、銃器を使用した殺人等の凶悪犯罪が多発しています。治安当局は重点的に同市に治安部隊を配置して改善にあたっていますが、十分な注意が必要です。",
+   "risk_key": "2025T085",
+   "risk_at": "2025-09-07T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T085.html",
+   "iso": "AR",
+   "name_ja": "アルゼンチン"
+  },
+  "AT": {
+   "code": "0043",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=156",
+   "iso": "AT",
+   "name_ja": null
+  },
+  "AU": {
+   "code": "0061",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=071",
+   "iso": "AU",
+   "name_ja": null
+  },
+  "AZ": {
+   "code": "0994",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "アゼルバイジャンの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "アゼルバイジャンの危険情報を更新しました。（【一部地域の危険レベル引き下げ】）\n\n※本メールは危険情報についてのお知らせです。新型コロナウイルス感染症に関しては、別途発出されている感染症危険情報をご参照ください。\n外務省海外安全ホームページ「各国・地域における新型コロナウイルスの感染状況」（https://www.anzen.mofa.go.jp/covid19/country_count.html ）",
+   "risk_key": "2021T106",
+   "risk_at": "2021-12-06T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2021T106.html",
+   "iso": "AZ",
+   "name_ja": null
+  },
+  "BA": {
+   "code": "0387",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ボスニア・ヘルツェゴビナの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ボスニア・ヘルツェゴビナの危険情報を更新しました。（【危険レベル継続】（内容の更新））",
+   "risk_key": "2025T010",
+   "risk_at": "2025-02-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T010.html",
+   "iso": "BA",
+   "name_ja": null
+  },
+  "BD": {
+   "code": "0880",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "バングラデシュの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●2026年２月に実施予定の総選挙を見据え、ダッカを含むバングラデシュ各地で、様々な政治勢力による示威・妨害行為やそれに対する抗議活動を含め、政治的要因による突発的な衝突や襲撃事件等が発生する可能性があるため、引き続き注意が必要です。\n●ダッカを中心に粗製爆弾（注：火薬をビニールテープで巻いたもの）の爆発が教会、病院及び主要道路等で発生し、負傷者が出ています。今後、高い殺傷能力をもった爆弾が使用され被害が拡大する可能性も排除されません。また、公共交通バスへの放火事案が数多く発生し、死傷者が出ています。これらの事案に巻き込まれないよう、注意が必要です。",
+   "risk_key": "2025T120",
+   "risk_at": "2025-12-25T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T120.html",
+   "iso": "BD",
+   "name_ja": null
+  },
+  "BE": {
+   "code": "0032",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=172",
+   "iso": "BE",
+   "name_ja": null
+  },
+  "BF": {
+   "code": "0226",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ブルキナファソの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ブルキナファソの危険情報について、危険レベル（レベル3及び4）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T043",
+   "risk_at": "2026-04-19T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T043.html",
+   "iso": "BF",
+   "name_ja": null
+  },
+  "BG": {
+   "code": "0359",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=171",
+   "iso": "BG",
+   "name_ja": "ブルガリア"
+  },
+  "BH": {
+   "code": "0973",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "バーレーンの危険情報【危険レベルの引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、バーレーンの全土について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T072",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T072.html",
+   "iso": "BH",
+   "name_ja": null
+  },
+  "BI": {
+   "code": "0257",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ブルンジの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "ブルンジの危険情報を更新しました。（【一部地域の危険レベル引き下げ】）\n\n※本メールは危険情報についてのお知らせです。新型コロナウイルス感染症に関しては、別途発出されている感染症危険情報をご参照ください。\n外務省海外安全ホームページ「各国・地域における新型コロナウイルスの感染状況」（https://www.anzen.mofa.go.jp/covid19/country_count.html ）",
+   "risk_key": "2022T078",
+   "risk_at": "2022-09-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2022T078.html",
+   "iso": "BI",
+   "name_ja": null
+  },
+  "BJ": {
+   "code": "0229",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ベナンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●各地域に発出している危険レベル（１～３）を継続します。\n●北部のブルキナファソ及びニジェールとの国境地帯、及びナイジェリアとの国境地帯については、イスラム過激派テロ組織やナイジェリアから侵入するテロ組織及び武装集団によるテロや誘拐が頻発しています。今後、更にテロの範囲が拡大し、組織の活動範囲が南下する可能性がありますので、関連情報に十分注意して下さい。",
+   "risk_key": "2026T097",
+   "risk_at": "2026-10-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T097.html",
+   "iso": "BJ",
+   "name_ja": null
+  },
+  "BN": {
+   "code": "0673",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=014",
+   "iso": "BN",
+   "name_ja": null
+  },
+  "BO": {
+   "code": "0591",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ボリビアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ボリビアの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T062",
+   "risk_at": "2026-06-10T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T062.html",
+   "iso": "BO",
+   "name_ja": null
+  },
+  "BR": {
+   "code": "0055",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ブラジルの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●大都市に限らず、殺人、強盗等の凶悪犯罪が発生しているので、渡航時には十分注意してください。",
+   "risk_key": "2026T015",
+   "risk_at": "2026-02-19T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T015.html",
+   "iso": "BR",
+   "name_ja": "ブラジル"
+  },
+  "BT": {
+   "code": "0975",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ブータンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ブータンの危険情報を更新しました。（【危険レベル継続】（内容の更新））\n\n※本メールは危険情報についてのお知らせです。新型コロナウイルス感染症に関しては、別途発出されている感染症危険情報をご参照ください。\n外務省海外安全ホームページ「各国・地域における新型コロナウイルスの感染状況」（https://www.anzen.mofa.go.jp/covid19/country_count.html ）",
+   "risk_key": "2022T045",
+   "risk_at": "2022-04-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2022T045.html",
+   "iso": "BT",
+   "name_ja": null
+  },
+  "BW": {
+   "code": "0267",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=296",
+   "iso": "BW",
+   "name_ja": null
+  },
+  "BY": {
+   "code": "0375",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ベラルーシの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ベラルーシの危険情報を更新しました。",
+   "risk_key": "2024T111",
+   "risk_at": "2024-12-11T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T111.html",
+   "iso": "BY",
+   "name_ja": null
+  },
+  "BZ": {
+   "code": "0501",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ベリーズの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ベリーズの危険情報を更新しました。",
+   "risk_key": "2024T072",
+   "risk_at": "2024-08-08T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T072.html",
+   "iso": "BZ",
+   "name_ja": null
+  },
+  "CA": {
+   "code": "9001",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=222",
+   "iso": "CA",
+   "name_ja": null
+  },
+  "CD": {
+   "code": "0243",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [
+    1
+   ],
+   "risk_title_ja": "コンゴ民主共和国の危険情報【一部地域の危険レベル引上げ・引下げ】",
+   "risk_lead_ja": "●マイ＝ンドンベ州クワムート地域で部族間の衝突が激しくなっており、武装集団による凶悪犯罪が多数報告されていることから、危険レベルを3（渡航中止勧告）に引き上げます。既に危険レベル3を発出している地域と同様に、同州への渡航はどのような目的であれ止めてください。\n●オー＝カタンガ州ルブンバシ市中心部及びルアラバ州コルウェジ市中心部は、治安機関による警戒態勢が敷かれており、良好な治安状態が確保されていることから危険レベルを１（十分注意してください）に引き下げます。",
+   "risk_key": "2025T118",
+   "risk_at": "2026-04-07T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T118.html",
+   "iso": "CD",
+   "name_ja": null
+  },
+  "CF": {
+   "code": "0236",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "中央アフリカの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T076",
+   "risk_at": "2025-08-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T076.html",
+   "iso": "CF",
+   "name_ja": null
+  },
+  "CG": {
+   "code": "0242",
+   "levels": [
+    1,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "コンゴ共和国の危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T040",
+   "risk_at": "2025-04-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T040.html",
+   "iso": "CG",
+   "name_ja": null
+  },
+  "CH": {
+   "code": "0041",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=159",
+   "iso": "CH",
+   "name_ja": "スイス"
+  },
+  "CI": {
+   "code": "0225",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "コートジボワールの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "コートジボワールの危険情報を更新しました。",
+   "risk_key": "2024T065",
+   "risk_at": "2024-07-25T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T065.html",
+   "iso": "CI",
+   "name_ja": "コートジボワール"
+  },
+  "CK": {
+   "code": "0682",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=300",
+   "iso": "CK",
+   "name_ja": null
+  },
+  "CL": {
+   "code": "0056",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "チリの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "チリの危険情報を更新しました。",
+   "risk_key": "2025T037",
+   "risk_at": "2025-04-20T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T037.html",
+   "iso": "CL",
+   "name_ja": null
+  },
+  "CM": {
+   "code": "0237",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "カメルーンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T075",
+   "risk_at": "2025-08-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T075.html",
+   "iso": "CM",
+   "name_ja": null
+  },
+  "CN": {
+   "code": "0086",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "中華人民共和国（中国）の危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "中華人民共和国（中国）の危険情報【危険レベル継続】の内容を更新しました。",
+   "risk_key": "2024T086",
+   "risk_at": "2024-09-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T086.html",
+   "iso": "CN",
+   "name_ja": null
+  },
+  "CO": {
+   "code": "0057",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "コロンビアの危険情報【一部地域の危険レベル引き上げ・引き下げ】",
+   "risk_lead_ja": "コロンビアの危険情報を更新しました。",
+   "risk_key": "2024T091",
+   "risk_at": "2024-10-07T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T091.html",
+   "iso": "CO",
+   "name_ja": null
+  },
+  "CR": {
+   "code": "0506",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "コスタリカ危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "コスタリカの危険情報を更新します。",
+   "risk_key": "2025T011",
+   "risk_at": "2025-02-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T011.html",
+   "iso": "CR",
+   "name_ja": null
+  },
+  "CU": {
+   "code": "0053",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "キューバの危険情報【一部地域の危険レベル引上げ】",
+   "risk_lead_ja": "●キューバは現在、深刻な燃料・エネルギー不足に直面しており、長時間の停電が全土で頻繁に発生しています。\n●一部航空会社ではフライトの減便や欠航が発生しており、国内ではガソリン、ディーゼル、医薬品等の必需品も不足しています。また、国内経済情勢に連動して一般治安が悪化傾向にあり、特にハバナ旧市街地や市街地中心部では、強盗や強盗致傷事件が夜間のみならず日中も発生しています。\n●こうした最近のキューバの状況を踏まえ、キューバ全土の危険レベルをレベル１（十分注意してください）とします（危険情報なしであった地域はレベル１に引上げ、危険レベル１であった地域は継続）。",
+   "risk_key": "2026T068",
+   "risk_at": "2026-06-23T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T068.html",
+   "iso": "CU",
+   "name_ja": null
+  },
+  "CV": {
+   "code": "0238",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=275",
+   "iso": "CV",
+   "name_ja": null
+  },
+  "CY": {
+   "code": "0357",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=193",
+   "iso": "CY",
+   "name_ja": null
+  },
+  "CZ": {
+   "code": "0420",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=163",
+   "iso": "CZ",
+   "name_ja": null
+  },
+  "DE": {
+   "code": "0049",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=165",
+   "iso": "DE",
+   "name_ja": null
+  },
+  "DJ": {
+   "code": "0253",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ジブチの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ジブチの危険情報を更新しました。",
+   "risk_key": "2024T123",
+   "risk_at": "2024-12-25T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T123.html",
+   "iso": "DJ",
+   "name_ja": null
+  },
+  "DK": {
+   "code": "0045",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=164",
+   "iso": "DK",
+   "name_ja": null
+  },
+  "DO": {
+   "code": "0809",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ドミニカ共和国の危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ドミニカ共和国の危険情報を更新しました。",
+   "risk_key": "2025T012",
+   "risk_at": "2025-02-11T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T012.html",
+   "iso": "DO",
+   "name_ja": null
+  },
+  "DZ": {
+   "code": "0213",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "アルジェリアの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "アルジェリアの危険情報を更新しました。",
+   "risk_key": "2025T032",
+   "risk_at": "2025-03-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T032.html",
+   "iso": "DZ",
+   "name_ja": null
+  },
+  "EC": {
+   "code": "0593",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "エクアドルの危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "エクアドルの危険情報を更新しました",
+   "risk_key": "2024T045",
+   "risk_at": "2024-06-02T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T045.html",
+   "iso": "EC",
+   "name_ja": null
+  },
+  "EE": {
+   "code": "0372",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=155",
+   "iso": "EE",
+   "name_ja": null
+  },
+  "EG": {
+   "code": "0020",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "エジプトの危険情報【一部地域の危険情報のレベル引き下げ】",
+   "risk_lead_ja": "●治安情勢の安定を踏まえ、南シナイ県の危険情報のレベルを引き下げます。",
+   "risk_key": "2026T082",
+   "risk_at": "2026-09-10T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T082.html",
+   "iso": "EG",
+   "name_ja": null
+  },
+  "EH": {
+   "code": "9212",
+   "levels": [
+    1,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "西サハラ地域の危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "西サハラ地域の危険情報を更新しました（【危険レベル継続】（内容の更新））。\n以下のリンクで最新情報を御確認ください。",
+   "risk_key": "2025T019",
+   "risk_at": "2025-02-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T019.html",
+   "iso": "EH",
+   "name_ja": null
+  },
+  "ER": {
+   "code": "0291",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "エリトリアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "エリトリアの危険情報を更新しました。",
+   "risk_key": "2024T028",
+   "risk_at": "2024-04-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T028.html",
+   "iso": "ER",
+   "name_ja": null
+  },
+  "ES": {
+   "code": "0034",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=161",
+   "iso": "ES",
+   "name_ja": null
+  },
+  "ET": {
+   "code": "0251",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "エチオピアの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "エチオピアの危険情報を更新しました。",
+   "risk_key": "2025T027",
+   "risk_at": "2025-03-20T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T027.html",
+   "iso": "ET",
+   "name_ja": null
+  },
+  "FI": {
+   "code": "0358",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=169",
+   "iso": "FI",
+   "name_ja": null
+  },
+  "FJ": {
+   "code": "0679",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "フィジーの危険情報 【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "フィジーの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T059",
+   "risk_at": "2026-05-25T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T059.html",
+   "iso": "FJ",
+   "name_ja": "フィジー"
+  },
+  "FM": {
+   "code": "0691",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=270",
+   "iso": "FM",
+   "name_ja": null
+  },
+  "FR": {
+   "code": "0033",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=170",
+   "iso": "FR",
+   "name_ja": "フランス"
+  },
+  "GA": {
+   "code": "0241",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ガボンの危険情報（内容の更新）《危険レベル継続》",
+   "risk_lead_ja": "ガボンの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2025T112",
+   "risk_at": "2025-12-11T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T112.html",
+   "iso": "GA",
+   "name_ja": null
+  },
+  "GB": {
+   "code": "0044",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=154",
+   "iso": "GB",
+   "name_ja": null
+  },
+  "GE": {
+   "code": "0995",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ジョージアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ジョージアの危険情報を更新しました（【危険レベル継続】（内容の更新））。",
+   "risk_key": "2025T009",
+   "risk_at": "2025-02-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T009.html",
+   "iso": "GE",
+   "name_ja": null
+  },
+  "GH": {
+   "code": "0233",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ガーナの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "ガーナの危険情報を更新しました。",
+   "risk_key": "2024T090",
+   "risk_at": "2024-09-30T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T090.html",
+   "iso": "GH",
+   "name_ja": null
+  },
+  "GM": {
+   "code": "0220",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ガンビアの危険情報【危険レベル継続】《内容の更新》",
+   "risk_lead_ja": "●ガンビア全土の危険情報について、レベル1（十分注意）を継続しています。",
+   "risk_key": "2026T014",
+   "risk_at": "2026-02-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T014.html",
+   "iso": "GM",
+   "name_ja": null
+  },
+  "GN": {
+   "code": "0224",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ギニアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T057",
+   "risk_at": "2025-06-30T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T057.html",
+   "iso": "GN",
+   "name_ja": null
+  },
+  "GQ": {
+   "code": "0240",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "赤道ギニア【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "赤道ギニアの危険情報を更新しました。",
+   "risk_key": "2024T078",
+   "risk_at": "2024-08-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T078.html",
+   "iso": "GQ",
+   "name_ja": null
+  },
+  "GR": {
+   "code": "0030",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=158",
+   "iso": "GR",
+   "name_ja": "ギリシャ"
+  },
+  "GT": {
+   "code": "0502",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "グアテマラの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "グアテマラの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T044",
+   "risk_at": "2026-04-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T044.html",
+   "iso": "GT",
+   "name_ja": null
+  },
+  "GW": {
+   "code": "0245",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ギニアビサウの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ギニアビサウの危険情報について、カシェウ州のレベル３（渡航中止勧告）及びその他全土のレベル２（不要不急の渡航は止めてください）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T035",
+   "risk_at": "2026-03-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T035.html",
+   "iso": "GW",
+   "name_ja": null
+  },
+  "GY": {
+   "code": "0592",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ガイアナの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ガイアナの危険情報について、全土に対するレベル1（十分注意）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T058",
+   "risk_at": "2026-05-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T058.html",
+   "iso": "GY",
+   "name_ja": null
+  },
+  "HK": {
+   "code": "0852",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "香港の危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "香港の危険情報を更新しました。（【危険レベル継続】（内容の更新））\n\n※本メールは危険情報についてのお知らせです。新型コロナウイルス感染症に関しては、別途発出されている感染症危険情報をご参照ください。\n外務省海外安全ホームページ「各国・地域における新型コロナウイルスの感染状況」（https://www.anzen.mofa.go.jp/covid19/country_count.html ）",
+   "risk_key": "2021T079",
+   "risk_at": "2021-08-26T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2021T079.html",
+   "iso": "HK",
+   "name_ja": null
+  },
+  "HN": {
+   "code": "0504",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ホンジュラスの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "ホンジュラスの危険情報を更新しました。（一部地域の危険レベル引き下げ）",
+   "risk_key": "2024T003",
+   "risk_at": "2024-01-14T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T003.html",
+   "iso": "HN",
+   "name_ja": "ホンジュラス"
+  },
+  "HR": {
+   "code": "0385",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": "クロアチアの危険情報【危険レベル解除】",
+   "risk_lead_ja": "2026年２月、クロアチア政府が、クロアチア全土における地雷除去の完了を発表したことから、これまで地雷の残存を理由に危険レベル１としていた地域（シサク・モスラヴィナ県、カルロヴァツ県、リカ・セニ県、及びスプリット・ダルマチア県の一部）の危険レベルを解除します。これにより、クロアチアに対する危険情報は全て解除されます。",
+   "risk_key": "2026T089",
+   "risk_at": "2026-09-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T089.html",
+   "iso": "HR",
+   "name_ja": null
+  },
+  "HT": {
+   "code": "0509",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ハイチの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●特に首都ポルトープランス及びその周辺地域において、ギャングによる無差別発砲や警察署、病院、住宅街、港湾・道路等への攻撃、誘拐が頻発しており、治安が著しく悪い状況です。\n●地方でもギャングによる発砲や攻撃が頻発しており、全国的に極めて不安定な治安情勢が続いています。\n●以上から、全土に危険レベル4《退避勧告》を発出しています。ハイチへの渡航はどのような目的であれ止めてください。既に滞在されている方は直ちに退避してください。",
+   "risk_key": "2026T088",
+   "risk_at": "2026-09-13T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T088.html",
+   "iso": "HT",
+   "name_ja": null
+  },
+  "HU": {
+   "code": "0036",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=168",
+   "iso": "HU",
+   "name_ja": null
+  },
+  "ID": {
+   "code": "0062",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "インドネシアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "インドネシアの危険情報を更新しました。",
+   "risk_key": "2025T028",
+   "risk_at": "2025-03-23T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T028.html",
+   "iso": "ID",
+   "name_ja": "インドネシア"
+  },
+  "IE": {
+   "code": "0353",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=151",
+   "iso": "IE",
+   "name_ja": null
+  },
+  "IL": {
+   "code": "0972",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "イスラエル、パレスチナの危険情報【一部地域の危険情報のレベル引き下げ】",
+   "risk_lead_ja": "●２月末以降の中東情勢を受けて危険情報をレベル３（渡航中止勧告）としていた地域について、６月以降、攻撃が発生していないことを踏まえ、危険情報をレベル２（不要不急の渡航は止めてください）に引き下げます。\n●今後も不測の事態が発生する可能性は排除されないため、イスラエル、パレスチナへの不要不急の渡航は止めてください。また、危険情報のレベル３あるいはレベル４が継続して発出されている地域への渡航は止めてください。",
+   "risk_key": "2026T085",
+   "risk_at": "2026-09-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T085.html",
+   "iso": "IL",
+   "name_ja": null
+  },
+  "IN": {
+   "code": "0091",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "インドの危険情報【一部地域の危険レベル引下げ】",
+   "risk_lead_ja": "●インド北東部のメガラヤ州では、現在危険情報がレベル１（十分注意）の４県以外でも武装勢力の活動が低下し、治安情勢の改善が見られることから、同４県以外の地域をレベル２（不要不急の渡航中止）からレベル１に引き下げます。\n●インドには、同国からの分離独立を主張する過激派組織等が複数存在し、各地でテロを行っています。不測の事態に巻き込まれないよう、複数の情報源から最新の治安情報を収集し、周囲の状況に注意を払う等の安全対策を講じてください。",
+   "risk_key": "2026T099",
+   "risk_at": "2026-11-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T099.html",
+   "iso": "IN",
+   "name_ja": null
+  },
+  "IQ": {
+   "code": "0964",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "イラクの危険情報【一部地域の危険情報のレベル引き下げ】",
+   "risk_lead_ja": "●８月以降、南東部８県においては攻撃が発生していないことを踏まえ、これらの地域の危険情報をレベル４（退避勧告）からレベル３（渡航中止勧告）に引き下げます。\n●今後も不測の事態が発生する可能性は排除されないため、イラクへの渡航は止めてください。",
+   "risk_key": "2026T087",
+   "risk_at": "2026-09-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T087.html",
+   "iso": "IQ",
+   "name_ja": null
+  },
+  "IR": {
+   "code": "0098",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "イランの危険情報【危険レベル引上げ】",
+   "risk_lead_ja": "●2025年12月末以来のイラン国内での抗議活動に端を発し、軍事的緊張を含む中東地域の情勢が更に緊迫化する可能性があります。\n●現在、イランではインターネット及び国際電話が使えない又はつながりにくい状況です。また、国際線のフライトは便数の減少や急な運航の停止が発生しています。\n●以上を受け、首都テヘランを含む、イラン全土の危険情報をレベル4（退避勧告）とします。イランへの渡航はどのような目的であれ止めてください。既に滞在中の方は、自らの安全確保に努めつつ、安全に出国可能と判断される場合は速やかに国外に退避してください。",
+   "risk_key": "2026T007",
+   "risk_at": "2026-01-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T007.html",
+   "iso": "IR",
+   "name_ja": null
+  },
+  "IS": {
+   "code": "0354",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=282",
+   "iso": "IS",
+   "name_ja": null
+  },
+  "IT": {
+   "code": "0039",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=153",
+   "iso": "IT",
+   "name_ja": null
+  },
+  "JM": {
+   "code": "0876",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ジャマイカの危険情報【一部地域の危険レベル引下げ】",
+   "risk_lead_ja": "●クラレンドン県は、集中的な治安対策により主要ギャングの首謀者複数の逮捕や武器押収が行われた結果、殺人件数が減少する等の治安の改善が見られるため、危険レベルを2から1に引き下げます。\n●セント・アンドリュー県（首都キングストン市を含む）、セント・キャサリン県、セント・ジェームズ県、ウェスト・モアランド県の危険レベル2は継続します。\n●犯罪の発生は危険レベル2の地域に限らず、ジャマイカ全土に及んでいますの\nで、滞在中は十分な安全対策を講じる必要があります。",
+   "risk_key": "2026T055",
+   "risk_at": "2026-05-21T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T055.html",
+   "iso": "JM",
+   "name_ja": null
+  },
+  "JO": {
+   "code": "0962",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ヨルダンの危険情報【一部地域の危険レベル引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、ヨルダンの一部地域について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T073",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T073.html",
+   "iso": "JO",
+   "name_ja": null
+  },
+  "KE": {
+   "code": "0254",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ケニアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T046",
+   "risk_at": "2025-05-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T046.html",
+   "iso": "KE",
+   "name_ja": null
+  },
+  "KG": {
+   "code": "0996",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "キルギスの危険情報（一部地域の危険レベル引下げ）",
+   "risk_lead_ja": "●ウズベキスタン及びタジキスタンとの国境問題について、国境の境界に関する条約への署名および国境画定の完了にかかる確認がなされたため、両国との国境地帯を危険レベル２に引き下げます。しかし、同地帯における偶発的な衝突の可能性は完全には排除できないので、同地帯への不要不急の渡航は止めてください。\n●国境地帯を除く全土の治安情勢は治安機関による犯罪取締り等により安定しているため、オシュ州（オシュ市を含む）、ジャララバード州、バトケン州（いずれも国境地帯を除く）を危険レベル１に引き下げます。",
+   "risk_key": "2026T041",
+   "risk_at": "2026-04-08T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T041.html",
+   "iso": "KG",
+   "name_ja": null
+  },
+  "KH": {
+   "code": "0855",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "カンボジアの危険情報【一部地域の危険レベル引下げ】",
+   "risk_lead_ja": "●カンボジア・タイ国境地帯では重火器の撤収が進んでおらず、全域にわたって緊張した状況が続いているため、国境から30km以内の地域について危険レベル3《渡航中止勧告》を継続します。どのような目的であってもこれら地域への渡航は止めてください。\n●タイ国境から30kmを越えて50km以内の地域について、引き続き不測の事態が発生する可能性は排除されませんが、停戦発効後６か月以上にわたって軍事衝突の発生はなく、一時期に比べて安定した状況にあることから、同地域の危険レベルを2に引き下げます。",
+   "risk_key": "2026T075",
+   "risk_at": "2026-07-01T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T075.html",
+   "iso": "KH",
+   "name_ja": null
+  },
+  "KI": {
+   "code": "0686",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=268",
+   "iso": "KI",
+   "name_ja": null
+  },
+  "KM": {
+   "code": "0269",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "コモロの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "コモロの危険情報について、レベル１（十分注意してください）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2025T113",
+   "risk_at": "2025-12-14T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T113.html",
+   "iso": "KM",
+   "name_ja": null
+  },
+  "KR": {
+   "code": "0082",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=003",
+   "iso": "KR",
+   "name_ja": null
+  },
+  "KW": {
+   "code": "0965",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "クウェートの危険情報【危険レベルの引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、クウェートの全土について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T070",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T070.html",
+   "iso": "KW",
+   "name_ja": null
+  },
+  "KZ": {
+   "code": "0007",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "カザフスタンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●カザフスタンの治安は概ね安定していますが、2022年1月の騒擾中に強奪された銃器の多くが未だ発見されておらず、治安上の大きな懸念となっています。\n●近年、国内でテロ事件は発生していませんが、準備・未遂段階での摘発は継続的に報告されています。アフガニスタン情勢を受けてテロリストがカザフスタンに流入する可能性も指摘されており注意が必要です。\n●一般犯罪の件数は近年減少傾向にありますが、大都市での窃盗は依然として多いほか、薬物犯罪も多発しており引き続き十分な注意が必要です。",
+   "risk_key": "2026T013",
+   "risk_at": "2026-02-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T013.html",
+   "iso": "KZ",
+   "name_ja": null
+  },
+  "LA": {
+   "code": "0856",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ラオスの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ラオスの危険情報を更新しました。【危険レベル継続】（内容の更新）\n以下のリンクで最新情報をご確認ください。",
+   "risk_key": "2024T117",
+   "risk_at": "2024-12-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T117.html",
+   "iso": "LA",
+   "name_ja": null
+  },
+  "LB": {
+   "code": "0961",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "レバノンの危険情報【一部地域の危険情報のレベル引き下げ】",
+   "risk_lead_ja": "●４月１７日の停戦合意以降、ベイルート県を含む北西部４県においては攻撃が発生していないことを踏まえ、これらの地域の危険情報をレベル４（退避勧告）からレベル３（渡航中止勧告）に引き下げます。\n●今後も不測の事態が発生する可能性は排除されないため、レバノンへの渡航は止めてください。",
+   "risk_key": "2026T086",
+   "risk_at": "2026-09-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T086.html",
+   "iso": "LB",
+   "name_ja": null
+  },
+  "LK": {
+   "code": "0094",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "スリランカの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "スリランカの危険情報を更新しました。",
+   "risk_key": "2024T118",
+   "risk_at": "2024-12-19T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T118.html",
+   "iso": "LK",
+   "name_ja": null
+  },
+  "LR": {
+   "code": "0231",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "リベリアの危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "リベリアの危険情報を更新しました。",
+   "risk_key": "2024T088",
+   "risk_at": "2024-09-29T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T088.html",
+   "iso": "LR",
+   "name_ja": null
+  },
+  "LS": {
+   "code": "0266",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=130",
+   "iso": "LS",
+   "name_ja": null
+  },
+  "LT": {
+   "code": "0370",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=192",
+   "iso": "LT",
+   "name_ja": null
+  },
+  "LU": {
+   "code": "0352",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=176",
+   "iso": "LU",
+   "name_ja": null
+  },
+  "LV": {
+   "code": "0371",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=186",
+   "iso": "LV",
+   "name_ja": "ラトビア"
+  },
+  "LY": {
+   "code": "0218",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "リビアの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "●リビアの西部沿岸のミスラタ県ミスラタ市は、他地域・都市と比べ、長期間にわたって治安状況が安定していることから、「レベル３：渡航中止勧告」に引き下げます。\n●リビアのその他の地域には「レベル４：退避勧告」を引き続き発出しており、どのような目的であれ渡航は止めてください。既に滞在中の方は、直ちに安全な地域に避難してください。",
+   "risk_key": "2025T092",
+   "risk_at": "2025-10-22T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T092.html",
+   "iso": "LY",
+   "name_ja": null
+  },
+  "MA": {
+   "code": "0212",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "モロッコの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "モロッコの危険情報について、レベル１（十分注意してください）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T009",
+   "risk_at": "2026-01-22T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T009.html",
+   "iso": "MA",
+   "name_ja": null
+  },
+  "MD": {
+   "code": "0373",
+   "levels": [
+    1,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "モルドバの危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "モルドバの危険情報を更新しました。（内容の更新）",
+   "risk_key": "2023T071",
+   "risk_at": "2023-08-28T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2023T071.html",
+   "iso": "MD",
+   "name_ja": null
+  },
+  "MG": {
+   "code": "0261",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "マダガスカルの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "マダガスカルの危険情報について、レベル１（十分注意してください）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2025T106",
+   "risk_at": "2025-11-25T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T106.html",
+   "iso": "MG",
+   "name_ja": null
+  },
+  "MH": {
+   "code": "0692",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=269",
+   "iso": "MH",
+   "name_ja": null
+  },
+  "MK": {
+   "code": "0389",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": "北マケドニアの危険情報【危険レベル解除】",
+   "risk_lead_ja": "北マケドニアの北部（首都スコピエ除く）、北西部及び西部について、民族間対立（マケドニア系・アルバニア系）に関する情勢の安定化が見られることを踏まえ、現在の危険レベル１から危険情報なしに引き下げます。これにより、北マケドニアに対する危険情報は全て解除されます。",
+   "risk_key": "2026T090",
+   "risk_at": "2026-09-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T090.html",
+   "iso": "MK",
+   "name_ja": null
+  },
+  "ML": {
+   "code": "0223",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "マリの危険情報（内容の更新）",
+   "risk_lead_ja": "●2026年4月25日、首都バマコのバマコ国際空港近くや首都近郊のカティ、地方都市のセバレ、ガオ、キダルのマリ国軍施設等に対して同時多発的にテロが発生しました。イスラム過激派組織によるテロの脅威が拡大しています。\n●マリ全土に危険レベル4（退避勧告）を発出しています。どのような目的であれ、マリへの渡航は止めてください。既に滞在されている方は直ちに退避してください。",
+   "risk_key": "2026T045",
+   "risk_at": "2026-04-29T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T045.html",
+   "iso": "ML",
+   "name_ja": null
+  },
+  "MM": {
+   "code": "0095",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ミャンマーの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "●連邦選挙管理委員会は、2025年12月から2026年1月にかけ三回に分け選挙を実施する旨発表しており、選挙に向け当局の取締りや規制の強化及び国軍と民主派勢力との衝突事案が発生する可能性があります。\n●国防治安評議会は全国330地区のうち計63地区に戒厳令を発し、民主派勢力や少数民族武装組織による抵抗活動の取締りや空爆を含む攻撃を激化しています。\n●タイ国境のカレン州ミヤワディ地区は、国軍と少数民族武装組織の衝突が断続的に発生しており、治安が不安定です。また、この様な状況の中、同地区に点在する大規模な特殊詐欺拠点では、日本人を含む外国人が特殊詐欺に加担させられる事案が発生しています。",
+   "risk_key": "2025T116",
+   "risk_at": "2025-12-15T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T116.html",
+   "iso": "MM",
+   "name_ja": null
+  },
+  "MN": {
+   "code": "0976",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=019",
+   "iso": "MN",
+   "name_ja": null
+  },
+  "MP": {
+   "code": "1001",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=223",
+   "iso": "MP",
+   "name_ja": null
+  },
+  "MR": {
+   "code": "0222",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "モーリタニアの危険情報【危険レベル継続】（内容の更新）《継続》",
+   "risk_lead_ja": "モーリタニアの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2025T110",
+   "risk_at": "2025-12-08T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T110.html",
+   "iso": "MR",
+   "name_ja": null
+  },
+  "MT": {
+   "code": "0356",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=195",
+   "iso": "MT",
+   "name_ja": null
+  },
+  "MU": {
+   "code": "0230",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=279",
+   "iso": "MU",
+   "name_ja": null
+  },
+  "MV": {
+   "code": "0960",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=024",
+   "iso": "MV",
+   "name_ja": null
+  },
+  "MW": {
+   "code": "0265",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "マラウイの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●「危険情報レベル1：十分注意してください。」を継続します。渡航・滞在される方は、周囲の状況に注意し、特に夜間の外出を避け、犯罪に巻き込まれないように十分注意してください。",
+   "risk_key": "2026T091",
+   "risk_at": "2026-10-05T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T091.html",
+   "iso": "MW",
+   "name_ja": null
+  },
+  "MX": {
+   "code": "0052",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "メキシコの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "●タマウリパス州は犯罪組織の活動が活発で、治安が非常に不安定となっていることから、危険レベルをレベル2に引き上げます。\n●ハリスコ州トマトラン市とチャパラ湖等を含む南部地域は、2026年2月に犯罪組織の最高幹部が殺害されたのを機に州内外で犯罪組織による報復が発生しました。犯罪組織内の派閥や犯罪組織間の勢力争い等により治安が悪化していることから、危険レベルをレベル2に引き上げます。",
+   "risk_key": "2026T040",
+   "risk_at": "2026-04-07T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T040.html",
+   "iso": "MX",
+   "name_ja": null
+  },
+  "MY": {
+   "code": "0060",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "マレーシアの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "●サバ州東側沿岸及びバンジ島・バラムバンガン島では、近年治安情勢が安定しており、暴力事件数も低いレベルを維持しているので、危険レベルをレベル1（十分注意してください）に引き下げます。\n●サバ州東側島嶼（バンジ島・バラムバンガン島等を除く）では、2014年頃多発していた身代金目的の誘拐事件が2020年1月以降発生しておらず、治安も回復しているので、危険レベルをレベル2（不要不急の渡航は止めてください）に引き下げます（注：危険情報地図上でレベル2発出箇所の海域に所在する島嶼が対象） 。",
+   "risk_key": "2026T065",
+   "risk_at": "2026-06-14T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T065.html",
+   "iso": "MY",
+   "name_ja": null
+  },
+  "MZ": {
+   "code": "0258",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "モザンビークの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "●北部のカーボデルガード州（ペンバ市を除く）及びナンプラ州の一部地域では、依然として武装勢力による襲撃事件が発生していますので、危険レベル3を継続します。\n●カーボデルガード州ペンバ市及びニアッサ州メクーラ郡では、武装勢力による襲撃事件が発生する恐れがありますので、危険レベル2を継続します。\n●一方、2024年10月の総選挙後の抗議活動が沈静化したとみられることから、マプト州、ガザ州、イニャンバネ州、ソファラ州、マニカ州、テテ州、ザンベジア州、ナンプラ州の一部、ニアッサ州の一部を危険レベル1に引き下げます。",
+   "risk_key": "2025T062",
+   "risk_at": "2025-07-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T062.html",
+   "iso": "MZ",
+   "name_ja": null
+  },
+  "NA": {
+   "code": "0264",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ナミビアの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "ナミビアの危険情報を更新しました。",
+   "risk_key": "2024T017",
+   "risk_at": "2024-02-21T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T017.html",
+   "iso": "NA",
+   "name_ja": null
+  },
+  "NC": {
+   "code": "0687",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ニューカレドニアの危険情報（危険レベルの一部引き下げ）",
+   "risk_lead_ja": "●治安状況の一定の改善が認められるので、ニューカレドニア全域の危険情報をレベル１（十分注意してください）に引き下げます。（既にレベル１であった地域は継続。）\n●依然として独立派と反独立派の対立等を背景とした一定の緊張が続いているので、十分注意してください。",
+   "risk_key": "2025T102",
+   "risk_at": "2025-11-17T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T102.html",
+   "iso": "NC",
+   "name_ja": null
+  },
+  "NE": {
+   "code": "0227",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ニジェールの危険情報【一部地域の危険レベル引上げ】",
+   "risk_lead_ja": "●2026年１月29日、首都ニアメのディオリ・ハマニ国際空港及び隣接する空軍基地において武装集団による襲撃事件が発生しました。これに対し、「大サハラのイスラム国」（ISGS）が犯行声明を発表しました。\n●また、2026年６月18日、同国際空港において武装集団による襲撃事件が発生し、民間人を含む13名が殺害されました。これに対し、「イスラムとムスリムの支援団」（JNIM）が犯行声明を発表しました。\n●これらの事件を受けて、首都ニアメの危険レベルを４（退避勧告）に引き上げます。これによりニジェール全土が危険レベル４となります。",
+   "risk_key": "2026T078",
+   "risk_at": "2026-07-09T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T078.html",
+   "iso": "NE",
+   "name_ja": null
+  },
+  "NG": {
+   "code": "0234",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ナイジェリアの危険情報【一部地域のレベル引き上げ】",
+   "risk_lead_ja": "○ナイジェリアでは治安情勢が極めて劣悪な地域に危険レベル４を発出していますが、新たに、北西部（ザムファラ州、ケビ州、ソコト州、カツィナ州）、また、ナイジャー州西部について、武装集団の集落襲撃、大規模誘拐事件等が頻発しているため危険レベルを4に引き上げます。これらの地域への渡航はどのような目的であれ止めてください。既に滞在されている方は、直ちに退避してください。\n○クワラ州は、大規模な誘拐事件が連続発生し、テロ組織の活動が深刻化しているため、危険レベルを２から３に引き上げます。既に危険レベル３を発出している地域と同様に、同州への渡航はどのような目的であれ止めてください。",
+   "risk_key": "2025T109",
+   "risk_at": "2025-12-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T109.html",
+   "iso": "NG",
+   "name_ja": null
+  },
+  "NI": {
+   "code": "0505",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ニカラグアの危険情報【危険レベル継続）】（内容の更新）",
+   "risk_lead_ja": "ニカラグアの危険情報を更新しました。",
+   "risk_key": "2024T120",
+   "risk_at": "2024-12-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T120.html",
+   "iso": "NI",
+   "name_ja": null
+  },
+  "NL": {
+   "code": "0031",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=157",
+   "iso": "NL",
+   "name_ja": null
+  },
+  "NO": {
+   "code": "0047",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=166",
+   "iso": "NO",
+   "name_ja": null
+  },
+  "NP": {
+   "code": "0977",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ネパールの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●2025年9月、当局による一部のSNS閉鎖を発端とした大規模な抗議活動が発生し、これに伴う警察の発砲等を含む警察当局と抗議活動参加者との激しい衝突や政府機関、政党事務所、警察署等への放火等があり、76人が死亡しました。\n●その後、当時の首相が辞任したことで事態は沈静化、暫定政府が発足し、2026年3月に暫定政府による総選挙が実施された結果、国民独立党(RSP)による新政権が発足しました。現在、治安情勢は落ち着いています。\n●一方、今後も何らかのきっかけでデモが発生する可能性は排除されないことから、集会や抗議活動には近づかず、不測の事態に巻き込まれることのないよう十分注意してください。",
+   "risk_key": "2026T077",
+   "risk_at": "2026-07-08T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T077.html",
+   "iso": "NP",
+   "name_ja": null
+  },
+  "NU": {
+   "code": "0683",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=777",
+   "iso": "NU",
+   "name_ja": null
+  },
+  "NZ": {
+   "code": "0064",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=074",
+   "iso": "NZ",
+   "name_ja": null
+  },
+  "OM": {
+   "code": "0968",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "オマーンの危険情報【危険レベルの引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、オマーンの全土について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T067",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T067.html",
+   "iso": "OM",
+   "name_ja": null
+  },
+  "PA": {
+   "code": "0507",
+   "levels": [
+    1,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "パナマの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "パナマの危険情報を更新しました。",
+   "risk_key": "2024T095",
+   "risk_at": "2024-10-17T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T095.html",
+   "iso": "PA",
+   "name_ja": null
+  },
+  "PE": {
+   "code": "0051",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ペルーの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●最近の状況を踏まえ、ペルーの危険情報を更新します。今回の更新で、危険レベル発出地域やレベルの変更はありません。\n●リマ市、カヤオ憲法特別市、山間部地域、国境地帯、ラ・リベルタ州の一部では、非常事態宣言が発出されています。ペルー情勢は依然として流動的です。抗議活動の影響により、道路・空港の閉鎖に加え、観光地のマチュピチュ遺跡を往来する鉄道が運行停止する場合もあります。最新の治安関連情報の収集に努めてください。\n●主要な観光地では、外国人の旅行者を標的とする銃器を使用した強盗、スリ・ひったくり、置き引き等の一般犯罪が頻発しています。十分注意してください。",
+   "risk_key": "2026T039",
+   "risk_at": "2026-03-30T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T039.html",
+   "iso": "PE",
+   "name_ja": null
+  },
+  "PG": {
+   "code": "0675",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "パプアニューギニアの危険情報【危険レベル継続】",
+   "risk_lead_ja": "●山岳部のヘラ州、南ハイランド州では部族間闘争が頻発し、行政サービスが行き渡っておらず、治安は劣悪な状態となっています。両州について不要不急の渡航は中止してください。\n●首都ポートモレスビー、モロベ州レイ（ラエ）市等の都市部では部族間闘争、各種犯罪等が頻発しています。警察機構は人員・予算不足等で十分機能せず、治安情勢が不安定です。\n●2025年、ニューブリテン島近傍の太平洋側で大きな地震(M6.0程度)が頻発しました。十分注意してください。",
+   "risk_key": "2026T003",
+   "risk_at": "2026-01-12T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T003.html",
+   "iso": "PG",
+   "name_ja": null
+  },
+  "PH": {
+   "code": "0063",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "フィリピンの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "フィリピンの危険情報を更新しました。",
+   "risk_key": "2024T098",
+   "risk_at": "2024-12-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T098.html",
+   "iso": "PH",
+   "name_ja": null
+  },
+  "PK": {
+   "code": "0092",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "パキスタンの危険情報【一部地域の危険レベル引上げ】",
+   "risk_lead_ja": "●バロチスタン州は不安定かつ危険な情勢が続いています。バローチ解放軍（BLA）やバローチ解放戦線（BLF）等のパキスタンからの独立や同州の自治拡大を目的とするバローチ分離主義勢力によるテロが激化しています。\n●2026年１月31日から２月初旬には、BLAが同州内の複数の都市において、警察署、軍施設、市庁舎、銀行等を標的にしたテロを同時多発的に行い、民間人を含む約50人が死傷しました。\n●上記を踏まえ、既にレベル４（退避勧告）またはレベル３（渡航中止勧告）の地域を除く、バロチスタン州全域をレベル３（渡航中止勧告）に引き上げます。これらの地域への渡航は、どのような目的であれ止めてください。",
+   "risk_key": "2026T037",
+   "risk_at": "2026-05-26T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T037.html",
+   "iso": "PK",
+   "name_ja": null
+  },
+  "PL": {
+   "code": "0048",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=173",
+   "iso": "PL",
+   "name_ja": null
+  },
+  "PT": {
+   "code": "0351",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=174",
+   "iso": "PT",
+   "name_ja": null
+  },
+  "PW": {
+   "code": "0680",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=272",
+   "iso": "PW",
+   "name_ja": null
+  },
+  "PY": {
+   "code": "0595",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "パラグアイの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "パラグアイの危険情報を更新しました。",
+   "risk_key": "2024T121",
+   "risk_at": "2024-12-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T121.html",
+   "iso": "PY",
+   "name_ja": null
+  },
+  "QA": {
+   "code": "0974",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "カタールの危険情報【危険レベルの引下げ】",
+   "risk_lead_ja": "●６月18日（日本時間）の米国・イラン間の戦闘終結等に関する覚書署名及びその後の情勢を踏まえ、今般、カタールの全土について、危険レベルを２（不要不急の渡航は止めてください）に引き下げます。\n●詳細については、危険情報本文をご確認ください。",
+   "risk_key": "2026T069",
+   "risk_at": "2026-06-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T069.html",
+   "iso": "QA",
+   "name_ja": "カタール"
+  },
+  "RO": {
+   "code": "0040",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=177",
+   "iso": "RO",
+   "name_ja": null
+  },
+  "RS": {
+   "code": "0381",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=175",
+   "iso": "RS",
+   "name_ja": null
+  },
+  "RU": {
+   "code": "9007",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ロシアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ロシアの危険情報を更新しました。",
+   "risk_key": "2025T089",
+   "risk_at": "2025-09-11T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T089.html",
+   "iso": "RU",
+   "name_ja": null
+  },
+  "RW": {
+   "code": "0250",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ルワンダの危険情報【一部地域の危険レベル引き上げ】",
+   "risk_lead_ja": "ルワンダの危険情報を更新しました。",
+   "risk_key": "2025T007",
+   "risk_at": "2025-02-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T007.html",
+   "iso": "RW",
+   "name_ja": null
+  },
+  "SA": {
+   "code": "0966",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "サウジアラビアの危険情報【一部地域の危険レベル引上げ】",
+   "risk_lead_ja": "●情勢を踏まえ、リヤド州、東部州、マッカ州、マディーナ州と南部４州の全てを危険レベル３（渡航中止勧告）とします。\nただし、リヤド州、東部州、マッカ州、マディーナ州について、企業・団体の取組等、真にやむを得ない事情がある場合には、滞在することを妨げません。その場合は、危険情報や現地当局等の注意喚起を踏まえて、危険な施設や地域へ近づくことは避けるとともに、現地の日本国大使館や日本国総領事館と緊密に連絡を取り、必要かつ十分な安全対策をとってください。\n●本危険情報は、急な出国を勧めるものではありません。必要に応じて現地の大使館、総領事館にご相談ください。",
+   "risk_key": "2026T096",
+   "risk_at": "2026-10-21T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T096.html",
+   "iso": "SA",
+   "name_ja": "サウジアラビア"
+  },
+  "SB": {
+   "code": "0677",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ソロモンの危険情報 【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "首都ホニアラ市内を中心に置き引きやひったくりなど、日本人を含む外国人は、犯罪のターゲットとなりやすい傾向があるため、十分注意が必要です。",
+   "risk_key": "2025T079",
+   "risk_at": "2025-08-19T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T079.html",
+   "iso": "SB",
+   "name_ja": null
+  },
+  "SC": {
+   "code": "0248",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=108",
+   "iso": "SC",
+   "name_ja": null
+  },
+  "SD": {
+   "code": "0249",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "スーダンの危険情報【危険レベル引き上げ】",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T045",
+   "risk_at": "2025-05-13T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T045.html",
+   "iso": "SD",
+   "name_ja": null
+  },
+  "SE": {
+   "code": "0046",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=160",
+   "iso": "SE",
+   "name_ja": null
+  },
+  "SG": {
+   "code": "0065",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=005",
+   "iso": "SG",
+   "name_ja": null
+  },
+  "SK": {
+   "code": "0421",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=184",
+   "iso": "SK",
+   "name_ja": null
+  },
+  "SL": {
+   "code": "0232",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "シエラレオネの危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "シエラレオネの危険情報を更新しました。",
+   "risk_key": "2024T089",
+   "risk_at": "2024-09-29T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T089.html",
+   "iso": "SL",
+   "name_ja": null
+  },
+  "SN": {
+   "code": "0221",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "セネガルの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●2021年から、政府軍がカザマンス地方で反政府武装組織「カザマンス民主勢力運動」（MFDC）の制圧に力を入れており、MFDCによる反発の可能性があります。2025年にMFDC内の一部派閥との間で和平合意に至りましたが、残る派閥との間では合意に至っておらず引き続き不透明な状況です。\n●周辺国のマリ、ブルキナファソ、ニジェール等では、イスラム過激派によるテロ事件が頻発しています。マリのイスラム過激派組織は、セネガルを攻撃対象とすると明言しており、加えて、セネガル国内でも過激主義に傾倒する人物が確認されています。以上から、セネガルでテロが発生する可能性は排除できません。",
+   "risk_key": "2026T011",
+   "risk_at": "2026-01-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T011.html",
+   "iso": "SN",
+   "name_ja": null
+  },
+  "SO": {
+   "code": "0252",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ソマリアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T039",
+   "risk_at": "2025-04-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T039.html",
+   "iso": "SO",
+   "name_ja": null
+  },
+  "SS": {
+   "code": "0211",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "南スーダンの危険情報【危険レベル引き上げ】",
+   "risk_lead_ja": "南スーダンの危険レベルを全土レベル４に引き上げました。",
+   "risk_key": "2025T031",
+   "risk_at": "2025-03-26T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T031.html",
+   "iso": "SS",
+   "name_ja": null
+  },
+  "ST": {
+   "code": "0239",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "サントメ・プリンシペ【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "サントメ・プリンシペの危険情報を更新しました。",
+   "risk_key": "2024T079",
+   "risk_at": "2024-08-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T079.html",
+   "iso": "ST",
+   "name_ja": null
+  },
+  "SV": {
+   "code": "0503",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "エルサルバドルの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●危険レベル（２または１）を維持の上、記載内容の更新を行いました。\n●危険レベル2を発出しているサンサルバドル県、ラ・リベルタ県及びラ・パス県所在の6区でのギャングの活動は沈静化しているものの、各種犯罪は依然として多発していることから、引き続きこれらの6区への不要不急の立ち入りは控えてください。",
+   "risk_key": "2026T038",
+   "risk_at": "2026-03-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T038.html",
+   "iso": "SV",
+   "name_ja": null
+  },
+  "SY": {
+   "code": "0963",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "シリアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "シリアの危険情報を更新しました。",
+   "risk_key": "2025T035",
+   "risk_at": "2025-04-10T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T035.html",
+   "iso": "SY",
+   "name_ja": null
+  },
+  "SZ": {
+   "code": "0268",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=281",
+   "iso": "SZ",
+   "name_ja": null
+  },
+  "TD": {
+   "code": "0235",
+   "levels": [
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "チャドの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T064",
+   "risk_at": "2025-07-06T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T064.html",
+   "iso": "TD",
+   "name_ja": null
+  },
+  "TG": {
+   "code": "0228",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "トーゴの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "トーゴの危険情報を更新しました。",
+   "risk_key": "2024T031",
+   "risk_at": "2024-04-07T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T031.html",
+   "iso": "TG",
+   "name_ja": null
+  },
+  "TH": {
+   "code": "0066",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "タイの危険情報【一部地域の危険レベル引下げ】",
+   "risk_lead_ja": "●タイ・カンボジア国境付近では重火器の撤去が進んでおらず、国境に近い地域（カンボジア国境から30km以内）では、今後も不測の事態が発生する可能性が否定できないことから、危険レベル３を継続します。どのような目的であってもこれら地域への渡航は止めてください。\n●一方、国境から30kmを越えて50km以内の地域については、緊張状態は継続しているものの、約６か月にわたり大規模な軍事衝突は発生しておらず、状況が一時期に比べて安定していることから危険レベルを２に引き下げます。",
+   "risk_key": "2026T076",
+   "risk_at": "2026-07-01T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T076.html",
+   "iso": "TH",
+   "name_ja": null
+  },
+  "TJ": {
+   "code": "0992",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "タジキスタンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "●アフガニスタンとの国境付近の治安情勢は、イスラム過激派組織や麻薬密輸グループの勢力が強い隣国アフガニスタンからの影響を受けて非常に緊迫しており、治安上の大きな懸念となっています。どのような目的であれ同地域への渡航は止めてください。\n●ソグド州イスファラ市ボルフ地区（キルギス領に囲まれた飛び地）は、イスラム過激派組織の侵入ルートとされ、治安上の問題が払拭できていません。どのような目的であれ同地域への渡航は止めてください。",
+   "risk_key": "2025T060",
+   "risk_at": "2025-07-03T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T060.html",
+   "iso": "TJ",
+   "name_ja": null
+  },
+  "TL": {
+   "code": "0670",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "東ティモールの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "東ティモールの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T060",
+   "risk_at": "2026-05-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T060.html",
+   "iso": "TL",
+   "name_ja": null
+  },
+  "TM": {
+   "code": "0993",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "トルクメニスタンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "トルクメニスタンの危険情報を更新しました。（【危険レベル継続】（内容の更新））",
+   "risk_key": "2025T036",
+   "risk_at": "2025-04-16T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T036.html",
+   "iso": "TM",
+   "name_ja": null
+  },
+  "TN": {
+   "code": "0216",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "チュニジアの危険情報【一部地域の危険レベル改訂】",
+   "risk_lead_ja": "チュニジアの危険情報を更新しました【一部地域の危険レベル一部改訂】\n以下のリンクで最新情報をご確認ください。",
+   "risk_key": "2024T063",
+   "risk_at": "2024-07-22T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T063.html",
+   "iso": "TN",
+   "name_ja": null
+  },
+  "TO": {
+   "code": "0676",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=273",
+   "iso": "TO",
+   "name_ja": null
+  },
+  "TR": {
+   "code": "0090",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "トルコの危険情報【一部地域の危険レベル引き下げ】",
+   "risk_lead_ja": "トルコの危険情報を更新しました。",
+   "risk_key": "2024T042",
+   "risk_at": "2024-05-14T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T042.html",
+   "iso": "TR",
+   "name_ja": "トルコ"
+  },
+  "TT": {
+   "code": "0868",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "トリニダード・トバゴ【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "トリニダード・トバゴの危険情報について、全土に対するレベル1（十分注意）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T057",
+   "risk_at": "2026-05-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T057.html",
+   "iso": "TT",
+   "name_ja": null
+  },
+  "TV": {
+   "code": "0688",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=274",
+   "iso": "TV",
+   "name_ja": null
+  },
+  "TW": {
+   "code": "0886",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=008",
+   "iso": "TW",
+   "name_ja": null
+  },
+  "TZ": {
+   "code": "0255",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "タンザニアの危険情報【危険レベル１の新規発出】",
+   "risk_lead_ja": "2025年10月末実施の大統領選等に関して、ダルエスサラームを中心に各地で抗議活動が発生し、同参加者と治安機関の間での衝突で死傷者が出ました。今後、抗議活動がさらに激化・長期化する可能性も排除できないため、これまで危険レベルが発出されていなかった地域にレベル１（十分注意してください）を発出します。\n　なお、11月1日付スポット情報「タンザニアにおける抗議活動に関する注意喚起」記載のとおり、同国への渡航を検討されている方には、不要不急の渡航を延期することをお勧めしています。また、滞在中の方は、不要不急の外出を控えるとともに最新情報を入手して自らの安全確保に努めてください。",
+   "risk_key": "2025T100",
+   "risk_at": "2025-11-02T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T100.html",
+   "iso": "TZ",
+   "name_ja": null
+  },
+  "UA": {
+   "code": "0380",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "ウクライナの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ウクライナ全土に対して引き続き危険レベル４の退避勧告を発出していますので、ウクライナへの渡航は止めてください。また、既に滞在されている方は、安全を確保した上で、直ちに退避してください。ただし書きの内容を更新しているところ、本文の内容をご確認ください。",
+   "risk_key": "2026T008",
+   "risk_at": "2026-01-18T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T008.html",
+   "iso": "UA",
+   "name_ja": null
+  },
+  "UG": {
+   "code": "0256",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [
+    1
+   ],
+   "risk_title_ja": "ウガンダの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T078",
+   "risk_at": "2025-08-17T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T078.html",
+   "iso": "UG",
+   "name_ja": null
+  },
+  "US": {
+   "code": "1000",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=221",
+   "iso": "US",
+   "name_ja": null
+  },
+  "UY": {
+   "code": "0598",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ウルグアイの危険情報【一部地域の危険レベル新規発出】",
+   "risk_lead_ja": "ウルグアイの危険情報を発出致しました。",
+   "risk_key": "2025T029",
+   "risk_at": "2025-03-24T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T029.html",
+   "iso": "UY",
+   "name_ja": null
+  },
+  "UZ": {
+   "code": "0998",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ウズベキスタンの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ウズベキスタンの危険情報について、危険レベルを継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T046",
+   "risk_at": "2026-05-12T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T046.html",
+   "iso": "UZ",
+   "name_ja": null
+  },
+  "VE": {
+   "code": "0058",
+   "levels": [
+    2,
+    3
+   ],
+   "max_level": 3,
+   "infection_levels": [],
+   "risk_title_ja": "ベネズエラの危険情報【一部地域の危険レベルを引下げ】",
+   "risk_lead_ja": "●2026年1月3日、米軍により首都カラカス周辺の軍事施設に対する攻撃が行われ、マドゥーロ大統領が米国に連行される事案が発生しました。その後、米国との緊張状態は緩和され、政治面・実務面における関係改善が進んでいます。\n●ベネズエラと外国との間の航空便は、2025年11月22日以降、外国航空会社の欠航または一時運航停止が続いていましたが、その間、ベネズエラの航空会社が隣国への航空便を増便した他、外国航空会社も順次運航を再開しています。\n●これらの状況を踏まえ、2025年12月4日にレベル3に引き上げた地域をレベル2（不要不急の渡航はやめてください。）に引き下げます。",
+   "risk_key": "2026T056",
+   "risk_at": "2026-05-21T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T056.html",
+   "iso": "VE",
+   "name_ja": null
+  },
+  "VN": {
+   "code": "0084",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=015",
+   "iso": "VN",
+   "name_ja": null
+  },
+  "VU": {
+   "code": "0678",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=078",
+   "iso": "VU",
+   "name_ja": "バヌアツ"
+  },
+  "WS": {
+   "code": "0685",
+   "levels": [],
+   "max_level": 0,
+   "infection_levels": [],
+   "risk_title_ja": null,
+   "risk_lead_ja": null,
+   "risk_key": "",
+   "risk_at": null,
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMail.html?countryCd=073",
+   "iso": "WS",
+   "name_ja": null
+  },
+  "XK": {
+   "code": "9381",
+   "levels": [
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "コソボの危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "コソボの危険情報を更新しました。",
+   "risk_key": "2024T096",
+   "risk_at": "2024-10-17T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T096.html",
+   "iso": "XK",
+   "name_ja": null
+  },
+  "YE": {
+   "code": "0967",
+   "levels": [
+    4
+   ],
+   "max_level": 4,
+   "infection_levels": [],
+   "risk_title_ja": "イエメンの危険情報【危険レベル継続】（内容更新）",
+   "risk_lead_ja": "イエメン全土（ソコトラ島を含む）の危険情報について、レベル4（退避勧告）を継続しています。",
+   "risk_key": "2026T010",
+   "risk_at": "2026-01-22T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T010.html",
+   "iso": "YE",
+   "name_ja": null
+  },
+  "ZA": {
+   "code": "0027",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "南アフリカ共和国の危険情報【危険レベルの継続】（内容の更新）",
+   "risk_lead_ja": "危険情報を更新しました。",
+   "risk_key": "2025T042",
+   "risk_at": "2025-04-27T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2025T042.html",
+   "iso": "ZA",
+   "name_ja": null
+  },
+  "ZM": {
+   "code": "0260",
+   "levels": [
+    1,
+    2
+   ],
+   "max_level": 2,
+   "infection_levels": [],
+   "risk_title_ja": "ザンビアの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ザンビアの危険情報について、コンゴ民主共和国及びアンゴラとの国境地帯（コッパーベルト州ンドラ市を除く）のレベル2（不要不急の渡航を止めてください）及びその他の地域のレベル1（十分注意）を継続しつつ、記載内容を更新しました。",
+   "risk_key": "2026T042",
+   "risk_at": "2026-04-14T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2026T042.html",
+   "iso": "ZM",
+   "name_ja": null
+  },
+  "ZW": {
+   "code": "0263",
+   "levels": [
+    1
+   ],
+   "max_level": 1,
+   "infection_levels": [],
+   "risk_title_ja": "ジンバブエの危険情報【危険レベル継続】（内容の更新）",
+   "risk_lead_ja": "ジンバブエの危険情報を更新しました。",
+   "risk_key": "2024T116",
+   "risk_at": "2024-12-17T15:00:00Z",
+   "link": "https://www.anzen.mofa.go.jp/info/pchazardspecificinfo_2024T116.html",
+   "iso": "ZW",
+   "name_ja": null
+  }
+ }
+}

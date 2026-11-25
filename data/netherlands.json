@@ -1,0 +1,3492 @@
+{
+ "source": "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/traveladvice",
+ "countries": {
+  "ABW": {
+   "key": "ABW",
+   "iso": "AW",
+   "name_nl": "Aruba",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/aruba",
+   "updated": "2026-10-07T06:57:56.847Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Aruba is groen.",
+   "name": "Aruba",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "AFG": {
+   "key": "AFG",
+   "iso": "AF",
+   "name_nl": "Afghanistan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/afghanistan",
+   "updated": "2026-10-23T13:51:49.217Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Afghanistan is rood.",
+   "name": "Afghanistan",
+   "advice": "Red: do not travel"
+  },
+  "AGO": {
+   "key": "AGO",
+   "iso": "AO",
+   "name_nl": "Angola",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/angola",
+   "updated": "2026-11-18T14:02:45.355Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor de provincie Cabinda.",
+   "name": "Angola",
+   "advice": "Orange: travel only if essential"
+  },
+  "AIA": {
+   "key": "AIA",
+   "iso": "AI",
+   "name_nl": "Anguilla",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/anguilla",
+   "updated": "2026-11-04T15:48:17.046Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Anguilla is groen.",
+   "name": "Anguilla",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "ALB": {
+   "key": "ALB",
+   "iso": "AL",
+   "name_nl": "Albanië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/albanie",
+   "updated": "2026-11-02T13:46:37.772Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Albanië is groen.",
+   "name": "Albania",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "AND": {
+   "key": "AND",
+   "iso": "AD",
+   "name_nl": "Andorra",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/andorra",
+   "updated": "2026-07-07T15:33:36.571Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Andorra is groen.",
+   "name": "Andorra",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "ARE": {
+   "key": "ARE",
+   "iso": "AE",
+   "name_nl": "Verenigde Arabische Emiraten",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/verenigde-arabische-emiraten",
+   "updated": "2026-10-19T09:55:58.304Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de eilanden Abu Musa en Tunb.",
+   "name": "United Arab Emirates",
+   "advice": "Red: do not travel"
+  },
+  "ARG": {
+   "key": "ARG",
+   "iso": "AR",
+   "name_nl": "Argentinië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/argentinie",
+   "updated": "2026-11-25T07:46:44.714Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Argentinië is geel.",
+   "name": "Argentina",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "ARM": {
+   "key": "ARM",
+   "iso": "AM",
+   "name_nl": "Armenië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/armenie",
+   "updated": "2026-08-12T14:58:08.401Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het grensgebied tussen Armenië en Azerbeidzjan.",
+   "name": "Armenia",
+   "advice": "Red: do not travel"
+  },
+  "ASM": {
+   "key": "ASM",
+   "iso": "AS",
+   "name_nl": "Amerikaans-Samoa",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/amerikaans-samoa",
+   "updated": "2026-04-22T14:31:52.582Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Amerikaans-Samoa is groen.",
+   "name": "American Samoa",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "ATA": {
+   "key": "ATA",
+   "iso": "AQ",
+   "name_nl": "Antarctica",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/antarctica",
+   "updated": "2026-08-25T10:33:34.238Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Antarctica is geel.",
+   "name": "Antarctica",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "ATG": {
+   "key": "ATG",
+   "iso": "AG",
+   "name_nl": "Antigua en Barbuda",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/antigua-en-barbuda",
+   "updated": "2026-03-19T09:35:03.520Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Antigua en Barbuda is groen.",
+   "name": "Antigua and Barbuda",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "AUS": {
+   "key": "AUS",
+   "iso": "AU",
+   "name_nl": "Australië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/australie",
+   "updated": "2026-09-09T11:31:07.590Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Australië is groen.",
+   "name": "Australia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "AUT": {
+   "key": "AUT",
+   "iso": "AT",
+   "name_nl": "Oostenrijk",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/oostenrijk",
+   "updated": "2026-07-30T11:31:38.650Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Oostenrijk is groen.",
+   "name": "Austria",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "AZE": {
+   "key": "AZE",
+   "iso": "AZ",
+   "name_nl": "Azerbeidzjan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/azerbeidzjan",
+   "updated": "2026-10-06T13:18:38.502Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de regio Karabach en omringende districten, en de grensgebieden met Armenië.",
+   "name": "Azerbaijan",
+   "advice": "Red: do not travel"
+  },
+  "BDI": {
+   "key": "BDI",
+   "iso": "BI",
+   "name_nl": "Burundi",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/burundi",
+   "updated": "2026-10-13T13:47:14.818Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het grensgebied tussen Burundi en de Democratische Republiek Congo (DRC).",
+   "name": "Burundi",
+   "advice": "Red: do not travel"
+  },
+  "BEL": {
+   "key": "BEL",
+   "iso": "BE",
+   "name_nl": "België",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/belgie",
+   "updated": "2026-11-02T13:48:06.025Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor België is groen.",
+   "name": "Belgium",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BEN": {
+   "key": "BEN",
+   "iso": "BJ",
+   "name_nl": "Benin",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/benin",
+   "updated": "2026-10-15T15:08:25.035Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de noordelijke regio’s van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria.",
+   "name": "Benin",
+   "advice": "Red: do not travel"
+  },
+  "BFA": {
+   "key": "BFA",
+   "iso": "BF",
+   "name_nl": "Burkina Faso",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/burkina-faso",
+   "updated": "2026-11-19T12:46:13.926Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood.",
+   "name": "Burkina Faso",
+   "advice": "Red: do not travel"
+  },
+  "BGD": {
+   "key": "BGD",
+   "iso": "BD",
+   "name_nl": "Bangladesh",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bangladesh",
+   "updated": "2026-11-20T15:40:50.240Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor de regio Chittagong Hill Tracts (inclusief de gebieden die grenzen aan Myanmar en India).",
+   "name": "Bangladesh",
+   "advice": "Orange: travel only if essential"
+  },
+  "BGR": {
+   "key": "BGR",
+   "iso": "BG",
+   "name_nl": "Bulgarije",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bulgarije",
+   "updated": "2026-10-19T10:29:06.088Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Bulgarije is groen.",
+   "name": "Bulgaria",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BHR": {
+   "key": "BHR",
+   "iso": "BH",
+   "name_nl": "Bahrein",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bahrein",
+   "updated": "2026-07-24T10:00:22.600Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Bahrein is rood.",
+   "name": "Bahrain",
+   "advice": "Red: do not travel"
+  },
+  "BHS": {
+   "key": "BHS",
+   "iso": "BS",
+   "name_nl": "Bahama's",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bahamas",
+   "updated": "2026-10-07T07:19:15.348Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Bahama’s is geel.",
+   "name": "Bahamas",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "BIH": {
+   "key": "BIH",
+   "iso": "BA",
+   "name_nl": "Bosnië en Herzegovina",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bosnie-en-herzegovina",
+   "updated": "2026-11-25T14:38:44.137Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Bosnië en Herzegovina is groen.",
+   "name": "Bosnia and Herzegovina",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BLR": {
+   "key": "BLR",
+   "iso": "BY",
+   "name_nl": "Belarus (Wit-Rusland)",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/belarus-wit-rusland",
+   "updated": "2026-08-17T12:39:39.417Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het grensgebied tussen Belarus en Oekraïne.",
+   "name": "Belarus",
+   "advice": "Red: do not travel"
+  },
+  "BLZ": {
+   "key": "BLZ",
+   "iso": "BZ",
+   "name_nl": "Belize",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/belize",
+   "updated": "2026-11-12T08:38:37.191Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Belize is geel.",
+   "name": "Belize",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "BOL": {
+   "key": "BOL",
+   "iso": "BO",
+   "name_nl": "Bolivia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bolivia",
+   "updated": "2026-10-27T13:09:57.455Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor sommige gebieden in de provincie Chapare ten oosten van de stad Cochabamba.",
+   "name": "Bolivia",
+   "advice": "Orange: travel only if essential"
+  },
+  "BQ-BO": {
+   "key": "BQ-BO",
+   "iso": "BQ",
+   "name_nl": "Bonaire",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bonaire",
+   "updated": "2026-06-17T14:44:55.082Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Bonaire is groen.",
+   "name": "Bonaire",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BQ-SA": {
+   "key": "BQ-SA",
+   "iso": "BQ",
+   "name_nl": "Saba",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/saba",
+   "updated": "2026-05-11T10:50:48.107Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Saba is groen.",
+   "name": "Saba",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BQ-SE": {
+   "key": "BQ-SE",
+   "iso": "BQ",
+   "name_nl": "Sint Eustatius",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sint-eustatius",
+   "updated": "2026-05-11T11:10:26.984Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Sint Eustatius is groen.",
+   "name": "Sint Eustatius",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BRA": {
+   "key": "BRA",
+   "iso": "BR",
+   "name_nl": "Brazilië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/brazilie",
+   "updated": "2026-09-18T12:41:41.414Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Brazilië is geel.",
+   "name": "Brazil",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "BRB": {
+   "key": "BRB",
+   "iso": "BB",
+   "name_nl": "Barbados",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/barbados",
+   "updated": "2026-10-15T11:22:20.017Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Barbados is groen.",
+   "name": "Barbados",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BRN": {
+   "key": "BRN",
+   "iso": "BN",
+   "name_nl": "Brunei Darussalam",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/brunei-darussalam",
+   "updated": "2026-07-10T12:24:54.660Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Brunei Darussalam is geel.",
+   "name": "Brunei",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "BTN": {
+   "key": "BTN",
+   "iso": "BT",
+   "name_nl": "Bhutan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/bhutan",
+   "updated": "2026-06-04T10:16:27.217Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Bhutan is groen.",
+   "name": "Bhutan",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "BWA": {
+   "key": "BWA",
+   "iso": "BW",
+   "name_nl": "Botswana",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/botswana",
+   "updated": "2026-07-01T12:01:11.917Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Botswana is geel.",
+   "name": "Botswana",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CAF": {
+   "key": "CAF",
+   "iso": "CF",
+   "name_nl": "Centraal-Afrikaanse Republiek",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/centraal-afrikaanse-republiek",
+   "updated": "2026-09-22T15:09:39.794Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor de Centraal-Afrikaanse Republiek is rood.",
+   "name": "Central African Republic",
+   "advice": "Red: do not travel"
+  },
+  "CAN": {
+   "key": "CAN",
+   "iso": "CA",
+   "name_nl": "Canada",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/canada",
+   "updated": "2026-10-06T13:20:47.369Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Canada is groen.",
+   "name": "Canada",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "CHE": {
+   "key": "CHE",
+   "iso": "CH",
+   "name_nl": "Zwitserland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zwitserland",
+   "updated": "2026-11-24T10:43:22.493Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Zwitserland is groen.",
+   "name": "Switzerland",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "CHL": {
+   "key": "CHL",
+   "iso": "CL",
+   "name_nl": "Chili",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/chili",
+   "updated": "2026-10-27T13:12:49.902Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Chili is geel.",
+   "name": "Chile",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CHN": {
+   "key": "CHN",
+   "iso": "CN",
+   "name_nl": "China",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/china",
+   "updated": "2026-08-28T14:26:49.613Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor China is geel.",
+   "name": "China",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CIV": {
+   "key": "CIV",
+   "iso": "CI",
+   "name_nl": "Ivoorkust",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ivoorkust",
+   "updated": "2026-06-17T10:42:42.267Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de noordelijke gebieden van Ivoorkust die grenzen aan Mali en Burkina Faso.",
+   "name": "Côte d'Ivoire",
+   "advice": "Red: do not travel"
+  },
+  "CMR": {
+   "key": "CMR",
+   "iso": "CM",
+   "name_nl": "Kameroen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kameroen",
+   "updated": "2026-10-06T13:32:00.564Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de noordelijke punt van Kameroen en de grensgebieden met Nigeria en de Centraal-Afrikaanse Republiek.",
+   "name": "Cameroon",
+   "advice": "Red: do not travel"
+  },
+  "COD": {
+   "key": "COD",
+   "iso": "CD",
+   "name_nl": "Congo, Democratische Republiek",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/congo-democratische-republiek",
+   "updated": "2026-11-12T11:52:25.934Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het noorden en oosten van de DRC en voor de provincie Maï-Ndombe.",
+   "name": "Democratic Republic of the Congo",
+   "advice": "Red: do not travel"
+  },
+  "COG": {
+   "key": "COG",
+   "iso": "CG",
+   "name_nl": "Congo, de Republiek",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/congo-de-republiek",
+   "updated": "2026-11-04T12:02:44.729Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor het noordelijke grensgebied met de Centraal-Afrikaanse Republiek en voor gebieden in het zuiden van de Republiek Congo.",
+   "name": "Republic of the Congo",
+   "advice": "Orange: travel only if essential"
+  },
+  "COK": {
+   "key": "COK",
+   "iso": "CK",
+   "name_nl": "Cookeilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/cookeilanden",
+   "updated": "2026-04-24T15:00:42.271Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Cookeilanden is groen.",
+   "name": "Cook Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "COL": {
+   "key": "COL",
+   "iso": "CO",
+   "name_nl": "Colombia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/colombia",
+   "updated": "2026-09-25T19:55:54.294Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor verschillende gebieden in het westen, oosten en zuiden van Colombia.",
+   "name": "Colombia",
+   "advice": "Red: do not travel"
+  },
+  "COM": {
+   "key": "COM",
+   "iso": "KM",
+   "name_nl": "Comoren",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/comoren",
+   "updated": "2026-11-12T13:24:22.865Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Comoren is geel.",
+   "name": "Comoros",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CPV": {
+   "key": "CPV",
+   "iso": "CV",
+   "name_nl": "Kaapverdië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kaapverdie",
+   "updated": "2026-07-06T11:23:34.384Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kaapverdië is geel.",
+   "name": "Cabo Verde",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CRI": {
+   "key": "CRI",
+   "iso": "CR",
+   "name_nl": "Costa Rica",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/costa-rica",
+   "updated": "2026-11-06T14:16:09.425Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Costa Rica is geel.",
+   "name": "Costa Rica",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "CUB": {
+   "key": "CUB",
+   "iso": "CU",
+   "name_nl": "Cuba",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/cuba",
+   "updated": "2026-10-06T13:23:05.070Z",
+   "colours": [
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Cuba is oranje.",
+   "name": "Cuba",
+   "advice": "Orange: travel only if essential"
+  },
+  "CUW": {
+   "key": "CUW",
+   "iso": "CW",
+   "name_nl": "Curaçao",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/curacao",
+   "updated": "2026-06-17T15:21:59.720Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Curaçao is groen.",
+   "name": "Curaçao",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "CYM": {
+   "key": "CYM",
+   "iso": "KY",
+   "name_nl": "Kaaimaneilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kaaimaneilanden",
+   "updated": "2026-05-07T07:22:13.784Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Kaaimaneilanden is groen.",
+   "name": "Cayman Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "CYP": {
+   "key": "CYP",
+   "iso": "CY",
+   "name_nl": "Cyprus",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/cyprus",
+   "updated": "2026-09-18T13:41:42.961Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Cyprus is groen.",
+   "name": "Cyprus",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "CZE": {
+   "key": "CZE",
+   "iso": "CZ",
+   "name_nl": "Tsjechië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tsjechie",
+   "updated": "2026-10-12T13:19:30.247Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Tsjechië is groen.",
+   "name": "Czechia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "DEU": {
+   "key": "DEU",
+   "iso": "DE",
+   "name_nl": "Duitsland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/duitsland",
+   "updated": "2026-08-27T10:09:18.343Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Duitsland is groen.",
+   "name": "Germany",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "DJI": {
+   "key": "DJI",
+   "iso": "DJ",
+   "name_nl": "Djibouti",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/djibouti",
+   "updated": "2026-06-25T12:04:02.252Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de grensgebieden met Eritrea en Somalië.",
+   "name": "Djibouti",
+   "advice": "Red: do not travel"
+  },
+  "DMA": {
+   "key": "DMA",
+   "iso": "DM",
+   "name_nl": "Dominica",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/dominica",
+   "updated": "2026-09-11T13:17:27.407Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Dominica is groen.",
+   "name": "Dominica",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "DNK": {
+   "key": "DNK",
+   "iso": "DK",
+   "name_nl": "Denemarken",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/denemarken",
+   "updated": "2026-11-02T13:52:52.241Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Denemarken is groen.",
+   "name": "Denmark",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "DOM": {
+   "key": "DOM",
+   "iso": "DO",
+   "name_nl": "Dominicaanse Republiek",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/dominicaanse-republiek",
+   "updated": "2026-10-27T13:16:19.827Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Dominicaanse Republiek is geel.",
+   "name": "Dominican Republic",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "DZA": {
+   "key": "DZA",
+   "iso": "DZ",
+   "name_nl": "Algerije",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/algerije",
+   "updated": "2026-07-31T06:37:11.865Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de grensgebieden met Mauritanië, Mali, Niger en Libië en voor delen van de grensstrook met Marokko.",
+   "name": "Algeria",
+   "advice": "Red: do not travel"
+  },
+  "ECU": {
+   "key": "ECU",
+   "iso": "EC",
+   "name_nl": "Ecuador",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ecuador",
+   "updated": "2026-11-12T12:09:41.790Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Ecuador en Colombia.",
+   "name": "Ecuador",
+   "advice": "Red: do not travel"
+  },
+  "EGY": {
+   "key": "EGY",
+   "iso": "EG",
+   "name_nl": "Egypte",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/egypte",
+   "updated": "2026-06-25T12:04:36.079Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor Noord-Sinaï, de grenzen met Libië en Sudan, de Hala’ib-driehoek en Bir Tawil.",
+   "name": "Egypt",
+   "advice": "Red: do not travel"
+  },
+  "ERI": {
+   "key": "ERI",
+   "iso": "ER",
+   "name_nl": "Eritrea",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/eritrea",
+   "updated": "2026-10-13T12:39:34.106Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor grensgebieden van Eritrea met de buurlanden.",
+   "name": "Eritrea",
+   "advice": "Red: do not travel"
+  },
+  "ESP": {
+   "key": "ESP",
+   "iso": "ES",
+   "name_nl": "Spanje",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/spanje",
+   "updated": "2026-11-17T11:40:25.499Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Spanje is groen.",
+   "name": "Spain",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "EST": {
+   "key": "EST",
+   "iso": "EE",
+   "name_nl": "Estland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/estland",
+   "updated": "2026-11-24T14:06:53.590Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Estland is groen.",
+   "name": "Estonia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "ETH": {
+   "key": "ETH",
+   "iso": "ET",
+   "name_nl": "Ethiopië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ethiopie",
+   "updated": "2026-11-05T11:45:46.922Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor grote delen van het noorden en westen van Ethiopië en de zone Guji in het zuiden.",
+   "name": "Ethiopia",
+   "advice": "Red: do not travel"
+  },
+  "FIN": {
+   "key": "FIN",
+   "iso": "FI",
+   "name_nl": "Finland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/finland",
+   "updated": "2026-08-17T12:50:01.095Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Finland is groen.",
+   "name": "Finland",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "FJI": {
+   "key": "FJI",
+   "iso": "FJ",
+   "name_nl": "Fiji",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/fiji",
+   "updated": "2026-09-28T08:59:01.281Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Fiji is groen.",
+   "name": "Fiji",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "FRA": {
+   "key": "FRA",
+   "iso": "FR",
+   "name_nl": "Frankrijk",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/frankrijk",
+   "updated": "2026-10-26T10:23:40.482Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Frankrijk is geel.",
+   "name": "France",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "FRO": {
+   "key": "FRO",
+   "iso": "FO",
+   "name_nl": "Faeröer",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/faeroer",
+   "updated": "2026-07-02T08:58:20.599Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Faeröer is groen.",
+   "name": "Faroe Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "FSM": {
+   "key": "FSM",
+   "iso": "FM",
+   "name_nl": "Micronesië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/micronesie",
+   "updated": "2026-09-18T10:24:09.637Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Micronesië is groen.",
+   "name": "Micronesia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "GAB": {
+   "key": "GAB",
+   "iso": "GA",
+   "name_nl": "Gabon",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/gabon",
+   "updated": "2026-07-28T07:34:57.442Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Gabon is geel.",
+   "name": "Gabon",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GBR": {
+   "key": "GBR",
+   "iso": "GB",
+   "name_nl": "Verenigd Koninkrijk",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/verenigd-koninkrijk",
+   "updated": "2026-10-12T13:20:14.707Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor het VK is groen.",
+   "name": "United Kingdom",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "GEO": {
+   "key": "GEO",
+   "iso": "GE",
+   "name_nl": "Georgië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/georgie",
+   "updated": "2026-06-24T13:35:20.152Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de regio’s Abchazië en Zuid-Ossetië.",
+   "name": "Georgia",
+   "advice": "Red: do not travel"
+  },
+  "GHA": {
+   "key": "GHA",
+   "iso": "GH",
+   "name_nl": "Ghana",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ghana",
+   "updated": "2026-11-25T08:24:10.105Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor de gebieden in het noorden en noordwesten van Ghana die grenzen aan Burkina Faso.",
+   "name": "Ghana",
+   "advice": "Orange: travel only if essential"
+  },
+  "GIN": {
+   "key": "GIN",
+   "iso": "GN",
+   "name_nl": "Guinee",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/guinee",
+   "updated": "2026-11-13T15:06:21.264Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor de gebieden die grenzen aan Mali en Ivoorkust.",
+   "name": "Guinea",
+   "advice": "Orange: travel only if essential"
+  },
+  "GLP": {
+   "key": "GLP",
+   "iso": "GP",
+   "name_nl": "Guadeloupe",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/guadeloupe",
+   "updated": "2026-06-19T10:13:14.486Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Guadeloupe is geel.",
+   "name": "Guadeloupe",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GMB": {
+   "key": "GMB",
+   "iso": "GM",
+   "name_nl": "Gambia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/gambia",
+   "updated": "2026-05-20T10:52:02.853Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Gambia is geel.",
+   "name": "Gambia",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GNB": {
+   "key": "GNB",
+   "iso": "GW",
+   "name_nl": "Guinee-Bissau",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/guinee-bissau",
+   "updated": "2026-06-12T12:05:47.451Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Guinee-Bissau en Senegal.",
+   "name": "Guinea-Bissau",
+   "advice": "Orange: travel only if essential"
+  },
+  "GNQ": {
+   "key": "GNQ",
+   "iso": "GQ",
+   "name_nl": "Equatoriaal-Guinea",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/equatoriaal-guinea",
+   "updated": "2026-06-12T13:24:28.268Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Equatoriaal-Guinea is geel.",
+   "name": "Equatorial Guinea",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GRC": {
+   "key": "GRC",
+   "iso": "GR",
+   "name_nl": "Griekenland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/griekenland",
+   "updated": "2026-11-02T16:14:19.721Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Griekenland is groen.",
+   "name": "Greece",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "GRD": {
+   "key": "GRD",
+   "iso": "GD",
+   "name_nl": "Grenada",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/grenada",
+   "updated": "2026-10-21T09:37:30.909Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Grenada is groen.",
+   "name": "Grenada",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "GRL": {
+   "key": "GRL",
+   "iso": "GL",
+   "name_nl": "Groenland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/groenland",
+   "updated": "2026-09-18T13:39:22.352Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Groenland is groen.",
+   "name": "Greenland",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "GTM": {
+   "key": "GTM",
+   "iso": "GT",
+   "name_nl": "Guatemala",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/guatemala",
+   "updated": "2026-11-18T15:51:17.962Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Guatemala is geel.",
+   "name": "Guatemala",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GUF": {
+   "key": "GUF",
+   "iso": "GF",
+   "name_nl": "Frans-Guyana",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/frans-guyana",
+   "updated": "2026-06-01T14:56:20.981Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Frans-Guyana is geel.",
+   "name": "Frans-Guyana",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "GUY": {
+   "key": "GUY",
+   "iso": "GY",
+   "name_nl": "Guyana",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/guyana",
+   "updated": "2026-11-25T10:28:13.626Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Guyana is geel.",
+   "name": "Guyana",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "HKG": {
+   "key": "HKG",
+   "iso": "HK",
+   "name_nl": "Hongkong SAR",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/hongkong",
+   "updated": "2026-09-15T09:54:37.898Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Hongkong SAR is geel.",
+   "name": "Hong Kong",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "HND": {
+   "key": "HND",
+   "iso": "HN",
+   "name_nl": "Honduras",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/honduras",
+   "updated": "2026-08-07T10:13:50.269Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor het noorden en midden van Honduras.",
+   "name": "Honduras",
+   "advice": "Orange: travel only if essential"
+  },
+  "HRV": {
+   "key": "HRV",
+   "iso": "HR",
+   "name_nl": "Kroatië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kroatie",
+   "updated": "2026-08-27T13:37:09.575Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kroatië is groen.",
+   "name": "Croatia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "HTI": {
+   "key": "HTI",
+   "iso": "HT",
+   "name_nl": "Haïti",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/haiti",
+   "updated": "2026-06-17T10:42:00.535Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Haïti is rood.",
+   "name": "Haiti",
+   "advice": "Red: do not travel"
+  },
+  "HUN": {
+   "key": "HUN",
+   "iso": "HU",
+   "name_nl": "Hongarije",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/hongarije",
+   "updated": "2026-08-31T13:12:35.569Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Hongarije is groen.",
+   "name": "Hungary",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "IDN": {
+   "key": "IDN",
+   "iso": "ID",
+   "name_nl": "Indonesië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/indonesie",
+   "updated": "2026-11-23T11:23:55.161Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor de provincies Papoea, Papoea-Hooglanden, Centraal- en Zuid-Papoea.",
+   "name": "Indonesia",
+   "advice": "Orange: travel only if essential"
+  },
+  "IND": {
+   "key": "IND",
+   "iso": "IN",
+   "name_nl": "India",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/india",
+   "updated": "2026-10-27T11:23:50.436Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies van India is rood voor de regio’s Jammu en Kasjmir, Aksai Chin, voor de deelstaat Manipur en voor de grensstrook tussen India en Pakistan.",
+   "name": "India",
+   "advice": "Red: do not travel"
+  },
+  "IRL": {
+   "key": "IRL",
+   "iso": "IE",
+   "name_nl": "Ierland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ierland",
+   "updated": "2026-10-29T08:38:37.147Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Ierland is groen.",
+   "name": "Ireland",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "IRN": {
+   "key": "IRN",
+   "iso": "IR",
+   "name_nl": "Iran",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/iran",
+   "updated": "2026-09-25T15:15:17.168Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Iran is rood.",
+   "name": "Iran",
+   "advice": "Red: do not travel"
+  },
+  "IRQ": {
+   "key": "IRQ",
+   "iso": "IQ",
+   "name_nl": "Irak",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/irak",
+   "updated": "2026-10-27T09:41:05.402Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor grote delen van het westen en midden van Irak.",
+   "name": "Iraq",
+   "advice": "Red: do not travel"
+  },
+  "ISL": {
+   "key": "ISL",
+   "iso": "IS",
+   "name_nl": "IJsland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/ijsland",
+   "updated": "2026-10-21T13:31:04.918Z",
+   "colours": [
+    "groen",
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is geel voor het schiereiland Reykjanes.",
+   "name": "Iceland",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "ISR": {
+   "key": "ISR",
+   "iso": "IL",
+   "name_nl": "Israël",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/israel",
+   "updated": "2026-09-24T13:48:13.403Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de grensgebieden tussen Israël en Gaza, Libanon en Egypte.",
+   "name": "Israel",
+   "advice": "Red: do not travel"
+  },
+  "ITA": {
+   "key": "ITA",
+   "iso": "IT",
+   "name_nl": "Italië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/italie",
+   "updated": "2026-10-23T08:27:04.423Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Italië is groen.",
+   "name": "Italy",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "JAM": {
+   "key": "JAM",
+   "iso": "JM",
+   "name_nl": "Jamaica",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/jamaica",
+   "updated": "2026-09-02T09:09:07.240Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Jamaica is geel.",
+   "name": "Jamaica",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "JOR": {
+   "key": "JOR",
+   "iso": "JO",
+   "name_nl": "Jordanië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/jordanie",
+   "updated": "2026-09-08T09:15:08.321Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "Voor het grensgebied van Jordanië met Irak en Syrië (met uitzondering van Umm Qais), de provincie Mafraq, de steden Aqaba en Azraq en de omliggende gebieden geldt kleurcode oranje.",
+   "name": "Jordan",
+   "advice": "Orange: travel only if essential"
+  },
+  "JPN": {
+   "key": "JPN",
+   "iso": "JP",
+   "name_nl": "Japan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/japan",
+   "updated": "2026-11-16T13:45:03.099Z",
+   "colours": [
+    "groen",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor een klein gebied in het zuidoosten van Fukushima is rood.",
+   "name": "Japan",
+   "advice": "Red: do not travel"
+  },
+  "KAZ": {
+   "key": "KAZ",
+   "iso": "KZ",
+   "name_nl": "Kazachstan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kazachstan",
+   "updated": "2026-11-18T14:14:07.473Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kazachstan is geel.",
+   "name": "Kazakhstan",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "KEN": {
+   "key": "KEN",
+   "iso": "KE",
+   "name_nl": "Kenia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kenia",
+   "updated": "2026-10-20T07:53:17.038Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het oosten van Kenia dat grenst aan Somalië en Ethiopië.",
+   "name": "Kenya",
+   "advice": "Red: do not travel"
+  },
+  "KGZ": {
+   "key": "KGZ",
+   "iso": "KG",
+   "name_nl": "Kirgizië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kirgizie",
+   "updated": "2026-07-20T15:45:21.386Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kirgizië is geel.",
+   "name": "Kyrgyzstan",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "KHM": {
+   "key": "KHM",
+   "iso": "KH",
+   "name_nl": "Cambodja",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/cambodja",
+   "updated": "2026-09-10T11:13:06.097Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Thailand.",
+   "name": "Cambodia",
+   "advice": "Red: do not travel"
+  },
+  "KIR": {
+   "key": "KIR",
+   "iso": "KI",
+   "name_nl": "Kiribati",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kiribati",
+   "updated": "2026-10-13T14:52:13.247Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kiribati is groen.",
+   "name": "Kiribati",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "KNA": {
+   "key": "KNA",
+   "iso": "KN",
+   "name_nl": "Saint Kitts en Nevis",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/saint-kitts-en-nevis",
+   "updated": "2026-06-22T13:33:22.825Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Saint Kitts en Nevis is groen.",
+   "name": "Saint Kitts and Nevis",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "KOR": {
+   "key": "KOR",
+   "iso": "KR",
+   "name_nl": "Zuid-Korea",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zuid-korea",
+   "updated": "2026-06-03T13:11:33.536Z",
+   "colours": [
+    "groen",
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het grensgebied tussen Noord- en Zuid-Korea.",
+   "name": "South Korea",
+   "advice": "Red: do not travel"
+  },
+  "KWT": {
+   "key": "KWT",
+   "iso": "KW",
+   "name_nl": "Koeweit",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/koeweit",
+   "updated": "2026-09-17T14:24:53.481Z",
+   "colours": [
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Koeweit is oranje.",
+   "name": "Kuwait",
+   "advice": "Orange: travel only if essential"
+  },
+  "LAO": {
+   "key": "LAO",
+   "iso": "LA",
+   "name_nl": "Laos",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/laos",
+   "updated": "2026-09-09T11:25:56.643Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor de provincie Xaysomboune en het grensgebied tussen Laos en Myanmar.",
+   "name": "Laos",
+   "advice": "Orange: travel only if essential"
+  },
+  "LBN": {
+   "key": "LBN",
+   "iso": "LB",
+   "name_nl": "Libanon",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/libanon",
+   "updated": "2026-10-30T10:51:46.387Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Libanon is rood.",
+   "name": "Lebanon",
+   "advice": "Red: do not travel"
+  },
+  "LBR": {
+   "key": "LBR",
+   "iso": "LR",
+   "name_nl": "Liberia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/liberia",
+   "updated": "2026-10-23T14:03:19.488Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor het grensgebied tussen Liberia en Ivoorkust.",
+   "name": "Liberia",
+   "advice": "Orange: travel only if essential"
+  },
+  "LBY": {
+   "key": "LBY",
+   "iso": "LY",
+   "name_nl": "Libië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/libie",
+   "updated": "2026-07-24T12:28:06.082Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Libië is rood.",
+   "name": "Libya",
+   "advice": "Red: do not travel"
+  },
+  "LCA": {
+   "key": "LCA",
+   "iso": "LC",
+   "name_nl": "Saint Lucia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/saint-lucia",
+   "updated": "2026-07-28T12:16:57.249Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Saint Lucia is groen.",
+   "name": "Saint Lucia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "LIE": {
+   "key": "LIE",
+   "iso": "LI",
+   "name_nl": "Liechtenstein",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/liechtenstein",
+   "updated": "2026-11-24T11:16:27.038Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Liechtenstein is groen.",
+   "name": "Liechtenstein",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "LKA": {
+   "key": "LKA",
+   "iso": "LK",
+   "name_nl": "Sri Lanka",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sri-lanka",
+   "updated": "2026-09-14T14:51:33.682Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Sri Lanka is geel.",
+   "name": "Sri Lanka",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "LSO": {
+   "key": "LSO",
+   "iso": "LS",
+   "name_nl": "Lesotho",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/lesotho",
+   "updated": "2026-07-08T10:01:43.429Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Lesotho is geel.",
+   "name": "Lesotho",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "LTU": {
+   "key": "LTU",
+   "iso": "LT",
+   "name_nl": "Litouwen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/litouwen",
+   "updated": "2026-11-11T10:04:53.101Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Litouwen is groen.",
+   "name": "Lithuania",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "LUX": {
+   "key": "LUX",
+   "iso": "LU",
+   "name_nl": "Luxemburg",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/luxemburg",
+   "updated": "2026-06-22T11:07:08.944Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Luxemburg is groen.",
+   "name": "Luxembourg",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "LVA": {
+   "key": "LVA",
+   "iso": "LV",
+   "name_nl": "Letland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/letland",
+   "updated": "2026-06-26T15:45:21.696Z",
+   "colours": [
+    "groen",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Letland en Belarus.",
+   "name": "Latvia",
+   "advice": "Orange: travel only if essential"
+  },
+  "MAC": {
+   "key": "MAC",
+   "iso": "MO",
+   "name_nl": "Macau SAR",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/macau-sar",
+   "updated": "2026-07-22T09:10:16.704Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Macau SAR is geel.",
+   "name": "Macao",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MAR": {
+   "key": "MAR",
+   "iso": "MA",
+   "name_nl": "Marokko",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/marokko",
+   "updated": "2026-11-12T10:42:09.248Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Marokko en Mauritanië.",
+   "name": "Morocco",
+   "advice": "Red: do not travel"
+  },
+  "MCO": {
+   "key": "MCO",
+   "iso": "MC",
+   "name_nl": "Monaco",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/monaco",
+   "updated": "2026-10-06T13:48:53.755Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Monaco is groen.",
+   "name": "Monaco",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "MDA": {
+   "key": "MDA",
+   "iso": "MD",
+   "name_nl": "Moldavië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/moldavie",
+   "updated": "2026-09-23T08:06:13.649Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de regio Transnistrië.",
+   "name": "Moldova",
+   "advice": "Red: do not travel"
+  },
+  "MDG": {
+   "key": "MDG",
+   "iso": "MG",
+   "name_nl": "Madagaskar",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/madagaskar",
+   "updated": "2026-10-28T11:19:07.555Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Madagaskar is geel.",
+   "name": "Madagascar",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MDV": {
+   "key": "MDV",
+   "iso": "MV",
+   "name_nl": "Maldiven",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/maldiven",
+   "updated": "2026-09-09T11:04:33.629Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Maldiven is geel.",
+   "name": "Maldives",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MEX": {
+   "key": "MEX",
+   "iso": "MX",
+   "name_nl": "Mexico",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mexico",
+   "updated": "2026-10-16T12:00:56.340Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de actieve vulkanen Popocatépetl en Colima.",
+   "name": "Mexico",
+   "advice": "Red: do not travel"
+  },
+  "MHL": {
+   "key": "MHL",
+   "iso": "MH",
+   "name_nl": "Marshalleilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/marshalleilanden",
+   "updated": "2026-11-12T10:21:02.797Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Marshalleilanden is groen.",
+   "name": "Marshall Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "MKD": {
+   "key": "MKD",
+   "iso": "MK",
+   "name_nl": "Noord-Macedonië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/noord-macedonie",
+   "updated": "2026-11-13T14:01:38.978Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Noord-Macedonië is groen.",
+   "name": "North Macedonia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "MLI": {
+   "key": "MLI",
+   "iso": "ML",
+   "name_nl": "Mali",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mali",
+   "updated": "2026-11-12T10:21:34.409Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Mali is rood (behalve voor de hoofdstad Bamako).",
+   "name": "Mali",
+   "advice": "Red: do not travel"
+  },
+  "MLT": {
+   "key": "MLT",
+   "iso": "MT",
+   "name_nl": "Malta",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/malta",
+   "updated": "2026-06-25T10:59:13.342Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Malta is groen.",
+   "name": "Malta",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "MMR": {
+   "key": "MMR",
+   "iso": "MM",
+   "name_nl": "Myanmar",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/myanmar",
+   "updated": "2026-08-11T07:37:43.535Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor grote delen van het noorden, westen en oosten van Myanmar (inclusief de Gouden Driehoek).",
+   "name": "Myanmar",
+   "advice": "Red: do not travel"
+  },
+  "MNE": {
+   "key": "MNE",
+   "iso": "ME",
+   "name_nl": "Montenegro",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/montenegro",
+   "updated": "2026-07-20T11:32:16.605Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Montenegro is groen.",
+   "name": "Montenegro",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "MNG": {
+   "key": "MNG",
+   "iso": "MN",
+   "name_nl": "Mongolië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mongolie",
+   "updated": "2026-08-28T10:21:37.194Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Mongolië is geel.",
+   "name": "Mongolia",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MOZ": {
+   "key": "MOZ",
+   "iso": "MZ",
+   "name_nl": "Mozambique",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mozambique",
+   "updated": "2026-10-06T13:50:26.249Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het noordoosten van de provincie Cabo Delgado.",
+   "name": "Mozambique",
+   "advice": "Red: do not travel"
+  },
+  "MRT": {
+   "key": "MRT",
+   "iso": "MR",
+   "name_nl": "Mauritanië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mauritanie",
+   "updated": "2026-10-06T13:39:24.447Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor een groot deel van het (noord)oosten van Mauritanië.",
+   "name": "Mauritania",
+   "advice": "Red: do not travel"
+  },
+  "MSR": {
+   "key": "MSR",
+   "iso": "MS",
+   "name_nl": "Montserrat",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/montserrat",
+   "updated": "2026-10-21T09:55:49.133Z",
+   "colours": [
+    "groen",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor het zuiden van Montserrat.",
+   "name": "Montserrat",
+   "advice": "Orange: travel only if essential"
+  },
+  "MTQ": {
+   "key": "MTQ",
+   "iso": "MQ",
+   "name_nl": "Martinique",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/martinique",
+   "updated": "2026-10-08T08:41:17.304Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Martinique is geel.",
+   "name": "Martinique",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MUS": {
+   "key": "MUS",
+   "iso": "MU",
+   "name_nl": "Mauritius",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/mauritius",
+   "updated": "2026-10-06T13:40:48.743Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Mauritius is geel.",
+   "name": "Mauritius",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MWI": {
+   "key": "MWI",
+   "iso": "MW",
+   "name_nl": "Malawi",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/malawi",
+   "updated": "2026-07-29T12:45:54.382Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Malawi is geel.",
+   "name": "Malawi",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "MYS": {
+   "key": "MYS",
+   "iso": "MY",
+   "name_nl": "Maleisië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/maleisie",
+   "updated": "2026-09-09T10:51:05.648Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor een aantal eilanden rondom Sabah.",
+   "name": "Malaysia",
+   "advice": "Orange: travel only if essential"
+  },
+  "NAM": {
+   "key": "NAM",
+   "iso": "NA",
+   "name_nl": "Namibië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/namibie",
+   "updated": "2026-10-01T15:30:54.796Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Namibië is geel.",
+   "name": "Namibia",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "NCL": {
+   "key": "NCL",
+   "iso": "NC",
+   "name_nl": "Nieuw-Caledonië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nieuw-caledonie",
+   "updated": "2026-10-15T14:09:03.312Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Nieuw-Caledonië is geel.",
+   "name": "New Caledonia",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "NER": {
+   "key": "NER",
+   "iso": "NE",
+   "name_nl": "Niger",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/niger",
+   "updated": "2026-07-09T13:26:08.758Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Niger is rood.",
+   "name": "Niger",
+   "advice": "Red: do not travel"
+  },
+  "NGA": {
+   "key": "NGA",
+   "iso": "NG",
+   "name_nl": "Nigeria",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nigeria",
+   "updated": "2026-10-13T13:55:34.302Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor grote delen van het noorden en het zuidoosten van Nigeria.",
+   "name": "Nigeria",
+   "advice": "Red: do not travel"
+  },
+  "NIC": {
+   "key": "NIC",
+   "iso": "NI",
+   "name_nl": "Nicaragua",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nicaragua",
+   "updated": "2026-09-15T14:01:40.195Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Nicaragua is geel.",
+   "name": "Nicaragua",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "NIU": {
+   "key": "NIU",
+   "iso": "NU",
+   "name_nl": "Niue",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/niue",
+   "updated": "2026-06-25T10:56:54.347Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Niue is groen.",
+   "name": "Niue",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "NOR": {
+   "key": "NOR",
+   "iso": "NO",
+   "name_nl": "Noorwegen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/noorwegen",
+   "updated": "2026-07-02T12:35:12.916Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Noorwegen is groen.",
+   "name": "Norway",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "NPL": {
+   "key": "NPL",
+   "iso": "NP",
+   "name_nl": "Nepal",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nepal",
+   "updated": "2026-11-05T16:07:43.492Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Nepal is geel.",
+   "name": "Nepal",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "NRU": {
+   "key": "NRU",
+   "iso": "NR",
+   "name_nl": "Nauru",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nauru",
+   "updated": "2026-07-22T15:26:10.389Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Naoero is groen.",
+   "name": "Nauru",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "NZL": {
+   "key": "NZL",
+   "iso": "NZ",
+   "name_nl": "Nieuw-Zeeland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/nieuw-zeeland",
+   "updated": "2026-09-09T11:33:19.769Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Nieuw-Zeeland is groen.",
+   "name": "New Zealand",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "OMN": {
+   "key": "OMN",
+   "iso": "OM",
+   "name_nl": "Oman",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/oman",
+   "updated": "2026-09-08T09:10:15.539Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor de provincie Musandam en het grensgebied van Oman met Jemen.",
+   "name": "Oman",
+   "advice": "Orange: travel only if essential"
+  },
+  "PAK": {
+   "key": "PAK",
+   "iso": "PK",
+   "name_nl": "Pakistan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/pakistan",
+   "updated": "2026-10-12T13:33:59.065Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het westen van Pakistan, het grensgebied met India, het gebied rond de bestandslijn tussen Pakistan en India, en een deel van het grensgebied met China.",
+   "name": "Pakistan",
+   "advice": "Red: do not travel"
+  },
+  "PAN": {
+   "key": "PAN",
+   "iso": "PA",
+   "name_nl": "Panama",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/panama",
+   "updated": "2026-10-15T12:03:49.312Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Panama en Colombia.",
+   "name": "Panama",
+   "advice": "Orange: travel only if essential"
+  },
+  "PCN": {
+   "key": "PCN",
+   "iso": "PN",
+   "name_nl": "Pitcairneilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/pitcairneilanden",
+   "updated": "2026-04-24T07:56:05.606Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Pitcairneilanden is groen.",
+   "name": "Pitcairn Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "PER": {
+   "key": "PER",
+   "iso": "PE",
+   "name_nl": "Peru",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/peru",
+   "updated": "2026-11-12T10:09:55.446Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het gebied in de VRAEM (de Vallei van de rivieren Apurimac, de Ene en de Mantaro).",
+   "name": "Peru",
+   "advice": "Red: do not travel"
+  },
+  "PHL": {
+   "key": "PHL",
+   "iso": "PH",
+   "name_nl": "Filipijnen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/filipijnen",
+   "updated": "2026-10-15T08:38:12.413Z",
+   "colours": [
+    "geel",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het westelijke deel van het eiland Mindanao en de Sulu-eilanden.",
+   "name": "Philippines",
+   "advice": "Red: do not travel"
+  },
+  "PLW": {
+   "key": "PLW",
+   "iso": "PW",
+   "name_nl": "Palau",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/palau",
+   "updated": "2026-06-25T10:57:07.752Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Palau is groen.",
+   "name": "Palau",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "PNG": {
+   "key": "PNG",
+   "iso": "PG",
+   "name_nl": "Papoea-Nieuw-Guinea",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/papoea-nieuw-guinea",
+   "updated": "2026-09-08T09:48:27.922Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor het gebied rond de Panguna-mijn op het eiland Bougainville.",
+   "name": "Papua New Guinea",
+   "advice": "Red: do not travel"
+  },
+  "POL": {
+   "key": "POL",
+   "iso": "PL",
+   "name_nl": "Polen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/polen",
+   "updated": "2026-11-25T16:09:36.837Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Polen is groen.",
+   "name": "Poland",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "PRI": {
+   "key": "PRI",
+   "iso": "PR",
+   "name_nl": "Puerto Rico",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/puerto-rico",
+   "updated": "2026-10-27T13:20:31.473Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Puerto Rico is geel.",
+   "name": "Puerto Rico",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "PRK": {
+   "key": "PRK",
+   "iso": "KP",
+   "name_nl": "Noord-Korea",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/noord-korea",
+   "updated": "2026-08-17T09:29:35.485Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Noord-Korea is rood.",
+   "name": "North Korea",
+   "advice": "Red: do not travel"
+  },
+  "PRT": {
+   "key": "PRT",
+   "iso": "PT",
+   "name_nl": "Portugal",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/portugal",
+   "updated": "2026-10-27T14:54:37.495Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Portugal is groen.",
+   "name": "Portugal",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "PRY": {
+   "key": "PRY",
+   "iso": "PY",
+   "name_nl": "Paraguay",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/paraguay",
+   "updated": "2026-11-25T12:09:42.314Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Paraguay is geel.",
+   "name": "Paraguay",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "PSE": {
+   "key": "PSE",
+   "iso": "PS",
+   "name_nl": "Palestijnse Gebieden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/palestijnse-gebieden",
+   "updated": "2026-10-27T09:42:32.157Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor Gaza en delen van de Westelijke Jordaanoever.",
+   "name": "Palestine",
+   "advice": "Red: do not travel"
+  },
+  "PYF": {
+   "key": "PYF",
+   "iso": "PF",
+   "name_nl": "Frans-Polynesië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/frans-polynesie",
+   "updated": "2026-06-19T15:03:40.428Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Frans-Polynesië is groen.",
+   "name": "French Polynesia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "QAT": {
+   "key": "QAT",
+   "iso": "QA",
+   "name_nl": "Qatar",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/qatar",
+   "updated": "2026-09-08T09:52:44.247Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Qatar is geel.",
+   "name": "Qatar",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "REU": {
+   "key": "REU",
+   "iso": "RE",
+   "name_nl": "Réunion",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/reunion",
+   "updated": "2026-03-19T09:21:11.246Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Réunion is groen.",
+   "name": "Réunion",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "ROU": {
+   "key": "ROU",
+   "iso": "RO",
+   "name_nl": "Roemenië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/roemenie",
+   "updated": "2026-09-16T09:01:43.214Z",
+   "colours": [
+    "groen",
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is geel voor een deel van het grensgebied tussen Roemenië en Oekraïne.",
+   "name": "Romania",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "RUS": {
+   "key": "RUS",
+   "iso": "RU",
+   "name_nl": "Rusland",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/rusland",
+   "updated": "2026-10-12T13:17:47.803Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de regio’s rondom Oekraïne, en voor de Noordelijke Kaukasus.",
+   "name": "Russia",
+   "advice": "Red: do not travel"
+  },
+  "RWA": {
+   "key": "RWA",
+   "iso": "RW",
+   "name_nl": "Rwanda",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/rwanda",
+   "updated": "2026-09-15T13:47:41.409Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor het grensgebied met de DRC.",
+   "name": "Rwanda",
+   "advice": "Orange: travel only if essential"
+  },
+  "SAU": {
+   "key": "SAU",
+   "iso": "SA",
+   "name_nl": "Saoedi-Arabië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/saoedi-arabie",
+   "updated": "2026-10-23T06:17:02.803Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de strook van 10 kilometer vanaf de grens met Jemen.",
+   "name": "Saudi Arabia",
+   "advice": "Red: do not travel"
+  },
+  "SDN": {
+   "key": "SDN",
+   "iso": "SD",
+   "name_nl": "Sudan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sudan",
+   "updated": "2026-09-22T08:06:26.995Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Sudan is rood.",
+   "name": "Sudan",
+   "advice": "Red: do not travel"
+  },
+  "SEN": {
+   "key": "SEN",
+   "iso": "SN",
+   "name_nl": "Senegal",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/senegal",
+   "updated": "2026-09-01T13:49:29.012Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor de grensgebieden tussen Senegal en Gambia, Guinee-Bissau, Mali en een deel van de grens met Mauritanië.",
+   "name": "Senegal",
+   "advice": "Orange: travel only if essential"
+  },
+  "SGP": {
+   "key": "SGP",
+   "iso": "SG",
+   "name_nl": "Singapore",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/singapore",
+   "updated": "2026-10-08T12:48:24.198Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Singapore is groen.",
+   "name": "Singapore",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SJM": {
+   "key": "SJM",
+   "iso": "SJ",
+   "name_nl": "Spitsbergen (Svalbard)",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/spitsbergen",
+   "updated": "2026-11-04T16:40:44.166Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Spitsbergen is groen.",
+   "name": "Spitsbergen (Svalbard)",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SLB": {
+   "key": "SLB",
+   "iso": "SB",
+   "name_nl": "Salomonseilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/salomonseilanden",
+   "updated": "2026-09-21T12:37:34.847Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Salomonseilanden is geel.",
+   "name": "Solomon Islands",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SLE": {
+   "key": "SLE",
+   "iso": "SL",
+   "name_nl": "Sierra Leone",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sierra-leone",
+   "updated": "2026-11-18T11:00:36.265Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Sierra Leone is geel.",
+   "name": "Sierra Leone",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SLV": {
+   "key": "SLV",
+   "iso": "SV",
+   "name_nl": "El Salvador",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/el-salvador",
+   "updated": "2026-11-19T10:37:07.229Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor El Salvador is geel.",
+   "name": "El Salvador",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SMR": {
+   "key": "SMR",
+   "iso": "SM",
+   "name_nl": "San Marino",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/san-marino",
+   "updated": "2026-06-11T13:09:12.233Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor San Marino is groen.",
+   "name": "San Marino",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SOM": {
+   "key": "SOM",
+   "iso": "SO",
+   "name_nl": "Somalië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/somalie",
+   "updated": "2026-08-04T08:38:16.756Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Somalië is rood (behalve voor de steden Hargeisa en Berbera).",
+   "name": "Somalia",
+   "advice": "Red: do not travel"
+  },
+  "SRB": {
+   "key": "SRB",
+   "iso": "RS",
+   "name_nl": "Servië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/servie",
+   "updated": "2026-07-14T10:14:41.595Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Servië is groen.",
+   "name": "Serbia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SSD": {
+   "key": "SSD",
+   "iso": "SS",
+   "name_nl": "Zuid-Sudan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zuid-sudan",
+   "updated": "2026-07-31T12:40:07.347Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Zuid-Sudan is rood.",
+   "name": "South Sudan",
+   "advice": "Red: do not travel"
+  },
+  "STP": {
+   "key": "STP",
+   "iso": "ST",
+   "name_nl": "Sao Tomé en Principe",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sao-tome-en-principe",
+   "updated": "2026-08-28T10:37:27.042Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Sao Tomé en Principe is geel.",
+   "name": "São Tomé and Principe",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SUR": {
+   "key": "SUR",
+   "iso": "SR",
+   "name_nl": "Suriname",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/suriname",
+   "updated": "2026-10-16T13:15:36.175Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Suriname is geel.",
+   "name": "Suriname",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SVK": {
+   "key": "SVK",
+   "iso": "SK",
+   "name_nl": "Slowakije",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/slowakije",
+   "updated": "2026-09-04T08:36:13.434Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Slowakije is groen.",
+   "name": "Slovakia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SVN": {
+   "key": "SVN",
+   "iso": "SI",
+   "name_nl": "Slovenië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/slovenie",
+   "updated": "2026-07-15T09:34:10.005Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Slovenië is groen.",
+   "name": "Slovenia",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SWE": {
+   "key": "SWE",
+   "iso": "SE",
+   "name_nl": "Zweden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zweden",
+   "updated": "2026-10-02T15:39:00.606Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Zweden is groen.",
+   "name": "Sweden",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SWZ": {
+   "key": "SWZ",
+   "iso": "SZ",
+   "name_nl": "Eswatini (Swaziland)",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/eswatini",
+   "updated": "2026-07-08T08:22:26.817Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Eswatini is geel.",
+   "name": "Eswatini",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SXM": {
+   "key": "SXM",
+   "iso": "SX",
+   "name_nl": "Sint Maarten",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/sint-maarten",
+   "updated": "2026-08-13T14:52:15.078Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Sint Maarten is groen.",
+   "name": "Sint Maarten",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "SYC": {
+   "key": "SYC",
+   "iso": "SC",
+   "name_nl": "Seychellen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/seychellen",
+   "updated": "2026-09-09T11:40:35.459Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Seychellen is geel.",
+   "name": "Seychelles",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "SYR": {
+   "key": "SYR",
+   "iso": "SY",
+   "name_nl": "Syrië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/syrie",
+   "updated": "2026-09-24T13:47:51.521Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Syrië is rood.",
+   "name": "Syria",
+   "advice": "Red: do not travel"
+  },
+  "TCA": {
+   "key": "TCA",
+   "iso": "TC",
+   "name_nl": "Turks- en Caicoseilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/turks-en-caicoseilanden",
+   "updated": "2026-06-25T10:55:20.935Z",
+   "colours": [
+    "groen",
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is geel voor het eiland Providenciales.",
+   "name": "Turks and Caicos Islands",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "TCD": {
+   "key": "TCD",
+   "iso": "TD",
+   "name_nl": "Tsjaad",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tsjaad",
+   "updated": "2026-10-15T14:19:39.920Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio’s Kanem, Ouaddaï, Tibesti, Borkou en Ennedi of delen daarvan.",
+   "name": "Chad",
+   "advice": "Red: do not travel"
+  },
+  "TGO": {
+   "key": "TGO",
+   "iso": "TG",
+   "name_nl": "Togo",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/togo",
+   "updated": "2026-06-19T09:24:10.629Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het noordelijke deel van de regio Savanes dat grenst aan Burkina Faso.",
+   "name": "Togo",
+   "advice": "Red: do not travel"
+  },
+  "THA": {
+   "key": "THA",
+   "iso": "TH",
+   "name_nl": "Thailand",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/thailand",
+   "updated": "2026-11-09T14:58:19.028Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Cambodja.",
+   "name": "Thailand",
+   "advice": "Red: do not travel"
+  },
+  "TJK": {
+   "key": "TJK",
+   "iso": "TJ",
+   "name_nl": "Tadzjikistan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tadzjikistan",
+   "updated": "2026-11-25T16:26:31.168Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Tadzjikistan is geel.",
+   "name": "Tajikistan",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "TKL": {
+   "key": "TKL",
+   "iso": "TK",
+   "name_nl": "Tokelau-eilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tokelau-eilanden",
+   "updated": "2026-06-17T11:25:43.433Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Tokelau-eilanden is groen.",
+   "name": "Tokelau-eilanden",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "TKM": {
+   "key": "TKM",
+   "iso": "TM",
+   "name_nl": "Turkmenistan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/turkmenistan",
+   "updated": "2026-07-06T12:58:13.613Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Turkmenistan is geel.",
+   "name": "Turkmenistan",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "TLS": {
+   "key": "TLS",
+   "iso": "TL",
+   "name_nl": "Oost-Timor",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/oost-timor",
+   "updated": "2026-06-25T10:45:27.103Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Oost-Timor is geel.",
+   "name": "Timor-Leste",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "TON": {
+   "key": "TON",
+   "iso": "TO",
+   "name_nl": "Tonga",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tonga",
+   "updated": "2026-04-24T11:13:12.380Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Tonga is groen.",
+   "name": "Tonga",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "TTO": {
+   "key": "TTO",
+   "iso": "TT",
+   "name_nl": "Trinidad en Tobago",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/trinidad-en-tobago",
+   "updated": "2026-10-27T13:22:51.669Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Trinidad en Tobago is geel.",
+   "name": "Trinidad and Tobago",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "TUN": {
+   "key": "TUN",
+   "iso": "TN",
+   "name_nl": "Tunesië",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tunesie",
+   "updated": "2026-10-27T09:43:26.927Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor de grensgebieden met Libië en Algerije (inclusief het Chaambi-gebergte).",
+   "name": "Tunisia",
+   "advice": "Red: do not travel"
+  },
+  "TUR": {
+   "key": "TUR",
+   "iso": "TR",
+   "name_nl": "Turkije",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/turkije",
+   "updated": "2026-10-16T11:04:57.342Z",
+   "colours": [
+    "geel",
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is rood voor het grensgebied tussen Turkije en Syrië, en Turkije en Irak.",
+   "name": "Turkey",
+   "advice": "Red: do not travel"
+  },
+  "TUV": {
+   "key": "TUV",
+   "iso": "TV",
+   "name_nl": "Tuvalu",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tuvalu",
+   "updated": "2026-06-17T11:25:47.382Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Tuvalu is groen.",
+   "name": "Tuvalu",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "TWN": {
+   "key": "TWN",
+   "iso": "TW",
+   "name_nl": "Taiwan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/taiwan",
+   "updated": "2026-10-20T09:53:54.261Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Taiwan is groen.",
+   "name": "Taiwan",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "TZA": {
+   "key": "TZA",
+   "iso": "TZ",
+   "name_nl": "Tanzania",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/tanzania",
+   "updated": "2026-10-19T11:24:40.529Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Tanzania en Mozambique, in de regio Mtwara.",
+   "name": "Tanzania",
+   "advice": "Orange: travel only if essential"
+  },
+  "UGA": {
+   "key": "UGA",
+   "iso": "UG",
+   "name_nl": "Uganda",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/uganda",
+   "updated": "2026-10-15T15:05:36.416Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Uganda is geel.",
+   "name": "Uganda",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "UKR": {
+   "key": "UKR",
+   "iso": "UA",
+   "name_nl": "Oekraïne",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/oekraine",
+   "updated": "2026-10-20T11:11:07.672Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Oekraïne is rood.",
+   "name": "Ukraine",
+   "advice": "Red: do not travel"
+  },
+  "URY": {
+   "key": "URY",
+   "iso": "UY",
+   "name_nl": "Uruguay",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/uruguay",
+   "updated": "2026-11-25T11:50:34.070Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Uruguay is geel.",
+   "name": "Uruguay",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "USA": {
+   "key": "USA",
+   "iso": "US",
+   "name_nl": "Verenigde Staten van Amerika",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/verenigde-staten-van-amerika",
+   "updated": "2026-11-04T08:29:55.752Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor de VS is groen.",
+   "name": "United States of America",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "UZB": {
+   "key": "UZB",
+   "iso": "UZ",
+   "name_nl": "Oezbekistan",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/oezbekistan",
+   "updated": "2026-10-06T13:53:57.127Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor de regio Termiz en de grens van Oezbekistan met Afghanistan.",
+   "name": "Uzbekistan",
+   "advice": "Orange: travel only if essential"
+  },
+  "VCT": {
+   "key": "VCT",
+   "iso": "VC",
+   "name_nl": "Saint Vincent en de Grenadines",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/saint-vincent-en-de-grenadines",
+   "updated": "2026-10-08T08:39:32.694Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Saint Vincent en de Grenadines is groen.",
+   "name": "Saint Vincent and the Grenadines",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "VEN": {
+   "key": "VEN",
+   "iso": "VE",
+   "name_nl": "Venezuela",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/venezuela",
+   "updated": "2026-10-27T13:24:15.966Z",
+   "colours": [
+    "oranje",
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": true,
+   "intro_nl": "De kleurcode van het reisadvies is rood voor de meeste grensgebieden en grote delen van het noordwesten, noordoosten en zuiden van Venezuela.",
+   "name": "Venezuela",
+   "advice": "Red: do not travel"
+  },
+  "VGB": {
+   "key": "VGB",
+   "iso": "VG",
+   "name_nl": "Britse Maagdeneilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/britse-maagdeneilanden",
+   "updated": "2026-10-27T14:44:07.511Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Britse Maagdeneilanden is groen.",
+   "name": "British Virgin Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "VIR": {
+   "key": "VIR",
+   "iso": "VI",
+   "name_nl": "Amerikaanse Maagdeneilanden",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/amerikaanse-maagdeneilanden",
+   "updated": "2026-06-12T14:37:01.179Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor de Amerikaanse Maagdeneilanden is groen.",
+   "name": "US Virgin Islands",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "VNM": {
+   "key": "VNM",
+   "iso": "VN",
+   "name_nl": "Vietnam",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/vietnam",
+   "updated": "2026-09-09T10:44:11.096Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Vietnam is geel.",
+   "name": "Vietnam",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "VUT": {
+   "key": "VUT",
+   "iso": "VU",
+   "name_nl": "Vanuatu",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/vanuatu",
+   "updated": "2026-03-31T07:46:04.368Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Vanuatu is groen.",
+   "name": "Vanuatu",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "WLF": {
+   "key": "WLF",
+   "iso": "WF",
+   "name_nl": "Wallis en Futuna",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/wallis-en-futuna",
+   "updated": "2026-04-24T12:02:34.368Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Wallis en Futuna is groen.",
+   "name": "Wallis and Futuna",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "WSM": {
+   "key": "WSM",
+   "iso": "WS",
+   "name_nl": "Samoa",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/samoa",
+   "updated": "2026-06-25T10:56:56.668Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Samoa is groen.",
+   "name": "Samoa",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "XKX": {
+   "key": "XKX",
+   "iso": "XK",
+   "name_nl": "Kosovo",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/kosovo",
+   "updated": "2026-09-18T15:07:32.466Z",
+   "colours": [
+    "groen"
+   ],
+   "colour": "groen",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Kosovo is groen.",
+   "name": "Kosovo",
+   "advice": "Green: no special security risks (travel there)"
+  },
+  "YEM": {
+   "key": "YEM",
+   "iso": "YE",
+   "name_nl": "Jemen",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/jemen",
+   "updated": "2026-10-19T09:37:57.550Z",
+   "colours": [
+    "rood"
+   ],
+   "colour": "rood",
+   "regional": false,
+   "intro_nl": "De kleurcode van het reisadvies voor Jemen is rood.",
+   "name": "Yemen",
+   "advice": "Red: do not travel"
+  },
+  "ZAF": {
+   "key": "ZAF",
+   "iso": "ZA",
+   "name_nl": "Zuid-Afrika",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zuid-afrika",
+   "updated": "2026-07-07T14:00:59.863Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode voor het reisadvies voor Zuid-Afrika is geel.",
+   "name": "South Africa",
+   "advice": "Yellow: special security risks, travel with care"
+  },
+  "ZMB": {
+   "key": "ZMB",
+   "iso": "ZM",
+   "name_nl": "Zambia",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zambia",
+   "updated": "2026-05-29T07:49:44.816Z",
+   "colours": [
+    "geel",
+    "oranje"
+   ],
+   "colour": "oranje",
+   "regional": true,
+   "intro_nl": "In het kort De kleurcode van het reisadvies is oranje voor het grensgebied tussen Zambia en de Democratische Republiek Congo (DRC), Angola en Mozambique.",
+   "name": "Zambia",
+   "advice": "Orange: travel only if essential"
+  },
+  "ZWE": {
+   "key": "ZWE",
+   "iso": "ZW",
+   "name_nl": "Zimbabwe",
+   "link": "https://www.nederlandwereldwijd.nl/reisadvies/zimbabwe",
+   "updated": "2026-06-30T07:37:36.322Z",
+   "colours": [
+    "geel"
+   ],
+   "colour": "geel",
+   "regional": false,
+   "intro_nl": "In het kort De kleurcode van het reisadvies voor Zimbabwe is geel.",
+   "name": "Zimbabwe",
+   "advice": "Yellow: special security risks, travel with care"
+  }
+ }
+}

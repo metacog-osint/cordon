@@ -8669,6 +8669,7 @@
    "description": "Goldsboro, NC",
    "created": "11/25/2026",
    "first_seen": "2026-11-25T19:40:32Z",
+   "subject": "6/9784",
    "detail": {
     "name": "261125 Goldsboro NC FBI JAMZ",
     "issued": "2026-11-25T19:13:28Z",
@@ -8836,8 +8837,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9784"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
