@@ -1,37 +1,37 @@
 {
  "env": "prod",
  "bulk_at": "2026-11-25T00:11:08Z",
- "pulled_to": "2026-11-25T14:40:55Z",
+ "pulled_to": "2026-11-25T15:11:03Z",
  "mode": "delta",
- "delta_from": "2026-11-25T14:11:13Z",
+ "delta_from": "2026-11-25T14:40:55Z",
  "counts": {
-  "features": 519,
-  "added": 41,
-  "removed": 5,
-  "held": 7754
+  "features": 417,
+  "added": 38,
+  "removed": 11,
+  "held": 7761
  },
  "requests": 2,
  "status": "ok",
- "checked_at": "2026-11-25T14:40:55Z",
+ "checked_at": "2026-11-25T15:11:03Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
   "error": null,
   "note": null,
   "day": "2026-11-25",
-  "added": 507,
+  "added": 402,
   "uploaded": [
    "nms-2026-11-25.jsonl.gz"
   ],
   "pending": [],
-  "archived_to": "2026-11-25T14:40:55Z",
-  "day_bytes": 8288043,
-  "seen": 116464,
+  "archived_to": "2026-11-25T15:11:03Z",
+  "day_bytes": 8586982,
+  "seen": 116866,
   "seen_from": "cache"
  },
- "archived_to": "2026-11-25T14:40:55Z",
+ "archived_to": "2026-11-25T15:11:03Z",
  "subsets": {
-  "launch-areas": 4024,
-  "gnss": 3744
+  "launch-areas": 4030,
+  "gnss": 3745
  }
 }
