@@ -53,8 +53,8 @@ SAFETRAVEL_SRC = {"id": "nz-mfat-safetravel", "publisher": "New Zealand Ministry
                   "independence_group": "nz-mfat", "source_type": "official notice",
                   "descriptor": "Travel advice (safetravel.govt.nz)"}
 JAPAN_SRC = {"id": "jp-mofa-overseas-safety", "publisher": "Ministry of Foreign Affairs of Japan (外務省)",
-             "licence": "Government Standard Terms 2.0, compatible with CC BY 4.0 (source line and a note of processing "
-             "required)", "grade": "A1", "independence_group": "jp-mofa", "source_type": "official notice",
+             "licence": "Government Standard Terms 2.0, compatible with CC BY 4.0 (出典：外務省 海外安全情報オープンデータ, "
+             "with the page URL; edited and processed by Cordon)", "grade": "A1", "independence_group": "jp-mofa", "source_type": "official notice",
              "descriptor": "Overseas safety information open data (外務省 海外安全情報オープンデータ): danger levels and "
                            "notices from Japan's embassies and consulates"}
 NL_SRC = {"id": "nl-minbuza-travel-advice", "publisher": "Ministry of Foreign Affairs of the Netherlands "
