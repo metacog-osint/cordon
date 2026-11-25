@@ -220,6 +220,15 @@
     "type": "security",
     "via": "google-news",
     "post_url": "https://kw.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "KW",
+    "title": "Routine Message: November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTVJMRW5yc0FpUlRJajNjMnNScnVPc1hHX3kwekZ6dHZ1U2F3RENVT2I2bmtGVWdod2tMM3JKWWFpVzhzeFV4UTkyZ0FMemZsM25UTW1IWlZrdEFhV0p6azQ3RWE3RGdnbmlBTlVRNFZOWUF3QzJ2N3RKSjFZX2JZdmxQSlE1d3Q0aFY0?oc=5",
+    "published_at": "2026-11-24T08:00:00Z",
+    "type": "routine",
+    "via": "google-news",
+    "post_url": "https://kw.usembassy.gov/category/alert/"
    }
   ],
   "LB": [

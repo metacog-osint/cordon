@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-24T21:00:16Z",
+ "generated": "2026-11-25T13:01:18Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -153,7 +153,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-02T11:56:00Z",
+   "updated": "2026-11-25T12:47:43Z",
    "update_type": "Regular text update",
    "update": "Natural disasters and climate section – added information on El Niño",
    "link": "https://travel.gc.ca/destinations/australia"
