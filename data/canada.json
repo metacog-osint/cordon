@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-25T17:20:16Z",
+ "generated": "2026-11-25T18:40:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -129,7 +129,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-23T17:57:58Z",
+   "updated": "2026-11-25T18:35:03Z",
    "update_type": "Editorial change",
    "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/american-samoa"

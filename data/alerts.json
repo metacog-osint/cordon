@@ -85,9 +85,9 @@
   "ET": [
    {
     "iso": "ET",
-    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
-    "published_at": "2026-10-30T07:00:00Z",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 13, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOTVxNTNCblZ5RVJWVVdQb2pEbUVCSzY3MWtDVjI5dGhqbmlTeDdDRjFiZVlxdTlyX1dOV1FsYkRWdklrV2tSYzZLZ05sOWVsNll6d2U4Wjh1WE1oMGwxSzBza0RVN3AtUVpYYm8xaFNZMllwRDhRdHJqV00zVzBIVjFjaWUxTWhVMVFRd3Vvd3h1amhl?oc=5",
+    "published_at": "2026-11-13T08:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
@@ -194,15 +194,6 @@
    }
   ],
   "KW": [
-   {
-    "iso": "KW",
-    "title": "Routine Message: November 24, 2026: Message for U.S. Citizens: Embassy Closure November 26-29",
-    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVm5odjBYOXMtODJyMF9pQlFqR0w0VnpEWFZVdnIwSmVJTDlUUXM2NDl3Z2x4LW5hZERxTlR2bU1nQkRzQTJ4LU4yRUExd3VkcHdQZXFqS1NxdTZONVFKUlJkaVRzRlFkM0dfNkp5YVN0YVk1NjFpcmwzQV84cWFLSUs0SE80NUhOcUlIT1ZVeUNzSGF2Q2JaZjhyTmtad1FraGRuVVpYQjNqZTY3dEREVkxYUlo?oc=5",
-    "published_at": "2026-11-25T07:17:49Z",
-    "type": "routine",
-    "via": "google-news",
-    "post_url": "https://kw.usembassy.gov/category/alert/"
-   },
    {
     "iso": "KW",
     "title": "Security Alert: U.S. Embassy Kuwait – November 24, 2026",
@@ -343,6 +334,15 @@
     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmUVFOa2lueWdUTFViU3BxUWxGLVlvdEc1R0wyZF92bVRULUdUMGV1d2lsN1V3ckdDYW9SY3VIMW1IWEZBcmZRcXdfOFd3QzNfNXI4OXNHZWtLdFlMUnlOMVo1T1gxdDRaRllCeG1udnBJSUZKcjJTU2EwVHY?oc=5",
     "published_at": "2026-10-28T07:00:00Z",
     "type": "security",
+    "via": "google-news",
+    "post_url": "https://ng.usembassy.gov/category/alert/"
+   },
+   {
+    "iso": "NG",
+    "title": "Health Alert: U.S. Embassy Abuja, Nigeria (October 27, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTC10RGc4akFDUjRabG84Q3ZJSjg2cmR6NnlfOFlPNTNFMmY5WUxMMkl2Z1pBTU9wWTNLRW1PYWlzUmZDTmZrLWxsbkhuTjZ3NnkzZ0w4aEFVR3ZkYnJ6TmYzbFZ2SVJvQXctYWd1U0hSTEc5anFHcl9sQTV0Q0JhMGpUOUNld0U?oc=5",
+    "published_at": "2026-10-27T07:00:00Z",
+    "type": "health",
     "via": "google-news",
     "post_url": "https://ng.usembassy.gov/category/alert/"
    }
