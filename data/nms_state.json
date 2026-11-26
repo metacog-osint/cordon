@@ -1,64 +1,68 @@
 {
  "env": "prod",
- "bulk_at": "2026-11-25T00:11:08Z",
- "pulled_to": "2026-11-26T00:10:59Z",
- "mode": "delta",
- "delta_from": "2026-11-25T23:41:03Z",
+ "bulk_at": "2026-11-26T01:11:26Z",
+ "pulled_to": "2026-11-26T01:11:26Z",
+ "mode": "bulk",
  "counts": {
-  "features": 224,
-  "added": 17,
-  "removed": 3,
-  "held": 8219
+  "features": 72822,
+  "added": 14357,
+  "removed": 55,
+  "held": 14300,
+  "by_class": {
+   "INTERNATIONAL": 42112,
+   "FDC": 4433,
+   "MILITARY": 6308,
+   "DOMESTIC": 19969
+  }
  },
- "requests": 1,
- "status": "failing",
- "checked_at": "2026-11-26T00:41:26Z",
+ "requests": 9,
+ "status": "ok",
+ "checked_at": "2026-11-26T01:11:26Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
   "error": null,
   "note": null,
   "day": "2026-11-26",
-  "added": 221,
+  "added": 358,
   "uploaded": [
    "nms-2026-11-26.jsonl.gz"
   ],
   "pending": [],
-  "archived_to": "2026-11-26T00:10:59Z",
-  "day_bytes": 82593,
-  "seen": 123233,
+  "archived_to": "2026-11-26T01:11:26Z",
+  "day_bytes": 696340,
+  "seen": 103919,
   "seen_from": "cache"
  },
- "archived_to": "2026-11-26T00:10:59Z",
+ "archived_to": "2026-11-26T01:11:26Z",
  "significance": {
   "status": "ok",
   "counts": {
-   "seen": 5,
-   "new": 3,
+   "seen": 8970,
+   "new": 47,
    "replaced": 0,
-   "cancelled": 2,
-   "repeat": 2,
+   "cancelled": 6,
+   "repeat": 8891,
    "rechained": 0,
    "other_location": 0,
-   "excluded": 0
+   "excluded": 32
   },
   "pruned": {
-   "chains_dropped": 0,
-   "chains": 15985
+   "chains_dropped": 11,
+   "chains": 16021
   },
   "start": "2026-11-19",
-  "updated_at": "2026-11-26T00:10:59Z",
-  "chains": 15985,
+  "updated_at": "2026-11-26T01:11:26Z",
+  "chains": 16021,
   "tiers": {
    "significant": 0,
-   "notable": 1,
-   "routine": 1673,
-   "excluded": 28
+   "notable": 5,
+   "routine": 8777,
+   "excluded": 30
   }
  },
  "subsets": {
-  "launch-areas": 4421,
-  "gnss": 3771
- },
- "error": "HTTP 403"
+  "launch-areas": 3410,
+  "gnss": 3712
+ }
 }
