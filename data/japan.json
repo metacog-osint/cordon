@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169225": {
+   "key": "169225",
+   "type": "R10",
+   "at": "2026-11-26T06:26:02Z",
+   "code": "0966",
+   "iso": "SA",
+   "name_ja": "サウジアラビア",
+   "title_ja": "ジッダ・イスラム港に対する攻撃に関する注意喚起",
+   "lead_ja": "ジッダ・イスラム港に対する攻撃に関する注意喚起",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169225",
+   "mission_ja": "在ジッダ日本国総領事館"
+  },
   "169223": {
    "key": "169223",
    "type": "R10",
