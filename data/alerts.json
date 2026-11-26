@@ -290,19 +290,19 @@
    },
    {
     "iso": "MX",
-    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
+    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
     "published_at": "2026-10-30T07:00:00Z",
-    "type": "security",
+    "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
    {
     "iso": "MX",
-    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
+    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
     "published_at": "2026-10-30T07:00:00Z",
-    "type": "demonstration",
+    "type": "security",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
@@ -519,9 +519,9 @@
   "YE": [
    {
     "iso": "YE",
-    "title": "Security Alert: Yemen – November 7, 2026",
-    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBka3dDeGFGYWxfTGt0Q1FTMzRfMzJPU1dKUzdMMEJBb1cybFJTWVNfLWZ3UUxoMlNvdlg1VEtnaTBldmVfVlhnaDlHVVpIeHRHSHNkbm13MXdIdTBVWGRxSGlYbDhDSGtCc2NscWJLUQ?oc=5",
-    "published_at": "2026-11-07T08:00:00Z",
+    "title": "Security Alert: Yemen – November 24, 2026",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Vdk50SjhnSzN4UjhMSUw0SGFhNmdCOE9Ha2xrWFhUNFcwb19EVW1aRjJ5aHBaOTU2cUFYbHZFRnI5WVF3SGE4WVg2LUJtVUpHOHdCS3g2UnA1aU10aWZTLTBnWHkwaGlRVFA3VTJkLWs?oc=5",
+    "published_at": "2026-11-25T08:05:28Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://ye.usembassy.gov/category/alert/"
