@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169230": {
+   "key": "169230",
+   "type": "R10",
+   "at": "2026-11-26T14:06:02Z",
+   "code": "0033",
+   "iso": "FR",
+   "name_ja": "フランス",
+   "title_ja": "クリスマス・シーズン等を控えた安全上の注意喚起",
+   "lead_ja": "● クリスマスや年末年始等の祝祭日・イベントシーズンには、観光地周辺、繁華街、ショッピング・モール等に集まる不特定多数の人を標的とした一般犯罪やテロ等の被害が懸念されます。\n\n● 「たびレジ」又は「在留届」に登録する等、常に最新情報の入手に努め、安全確保に十分注意してください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169230",
+   "mission_ja": "在リヨン領事事務所"
+  },
   "169229": {
    "key": "169229",
    "type": "R10",
