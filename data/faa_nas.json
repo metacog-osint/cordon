@@ -15,20 +15,6 @@
    "included_flights": "ALL CONTIGUOUS US DEP",
    "avg_delay_min": 214.0,
    "max_delay_min": 352.0
-  },
-  {
-   "kind": "ground_stop",
-   "airport": "SEA",
-   "airport_name": "Seattle-Tacoma International",
-   "start": "2026-11-26T02:46:00Z",
-   "end": "2026-11-26T04:30:00Z",
-   "updated": "2026-11-26T02:59:50Z",
-   "reason": "wind",
-   "center": "ZSE",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=26&adv_date=11262026&facId=SEA&title=ATCSCC ADVZY 026 SEA/ZSE 11/26/2026 CDM GROUND STOP&titleDate=11/26/2026",
-   "included_facilities": 10,
-   "included_flights": null,
-   "probability_of_extension": "MEDIUM"
   }
  ],
  "airports": {
