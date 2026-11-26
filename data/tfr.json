@@ -7799,6 +7799,7 @@
    "description": "LOUISIANA, MO, Monday, November 30, 2026 UTC",
    "created": "11/26/2026",
    "first_seen": "2026-11-26T16:40:38Z",
+   "subject": "6/9837",
    "detail": {
     "name": "6/9837",
     "issued": "2026-11-26T16:20:24Z",
@@ -7966,8 +7967,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9837"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
