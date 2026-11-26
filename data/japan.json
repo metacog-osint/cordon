@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169233": {
+   "key": "169233",
+   "type": "R10",
+   "at": "2026-11-26T14:51:07Z",
+   "code": "0055",
+   "iso": "BR",
+   "name_ja": "ブラジル",
+   "title_ja": "邦人被害（ひったくり事件の発生）",
+   "lead_ja": "邦人が被害者となるひったくり事件が発生しましたので、お知らせします。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169233",
+   "mission_ja": "在サンパウロ日本国総領事館"
+  },
   "169231": {
    "key": "169231",
    "type": "R10",
