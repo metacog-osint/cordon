@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-26T13:20:24Z",
+ "generated": "2026-11-26T16:40:16Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2505,9 +2505,9 @@
    "level": 1,
    "advisory": "Exercise a high degree of caution (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-13T20:27:11Z",
+   "updated": "2026-11-26T16:27:32Z",
    "update_type": "Regular text update",
-   "update": "Need help? section – updated mission coordinates",
+   "update": "Safety and Security section – updated information on 2SLGBTQI+ persons",
    "link": "https://travel.gc.ca/destinations/trinidad-and-tobago"
   },
   "TV": {
