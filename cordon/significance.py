@@ -22,7 +22,8 @@ Steps, each writing its reasons:
     first day (its history starts the first day any international NOTAM is seen there); half-octave histograms of
     area and duration per (region, subject).
   - the chains (working state, beside the baseline, pruned CHAIN_KEEP_DAYS after a chain ends; rebuildable from the
-    permanent archive): one entry per ranked NOTAM held, keyed as the store keys it (number, FIR, location). A NOTAM
+    permanent archive): one entry per ranked NOTAM held, keyed as the store keys it (number, FIR, location), with
+    the number of the chain's first NOTAM ("o"; assess() gives it as chain_first, the feed's subject). A NOTAM
     counts once, when its chain starts: the same version seen again, a later version, a copy for another location,
     or a replacement of a NOTAM already chained does not count again.
   - rarity(): rare (none), uncommon (at most two) or common, for the same subject and cause group, against the 365
@@ -456,7 +457,8 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
         if old is not None:
             issued = _min(m.get("issued")) or int(now.timestamp() // 60)
             slip = bool(s is not None and old.get("s") is not None and s > old["s"] and issued < old["s"])
-            ch = {**old, "id": m.get("id"), "s": s, "e": e, "a": a, "fl": fl, "n": old.get("n", 1) + 1,
+            ch = {**old, "id": m.get("id"), "o": old.get("o") or ref.split("|", 1)[0],
+                  "s": s, "e": e, "a": a, "fl": fl, "n": old.get("n", 1) + 1,
                   "sl": old.get("sl", 0) + (1 if slip else 0),
                   "ex": bool(old.get("ex") or (e is not None and old.get("e") is not None and e > old["e"])
                              or (_permanent(m) and old.get("e") is not None)),
@@ -474,7 +476,8 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
         g = c["cause_group"]
         lab, rn = rarity(b, reg, subj, g, day)
         big, ln = large(b, reg, subj, a, day)
-        chains[k] = {"id": m.get("id"), "r": reg, "q": subj, "g": g, "d": day, "s": s, "e": e, "a": a, "fl": fl,
+        chains[k] = {"id": m.get("id"), "o": m.get("number"), "r": reg, "q": subj, "g": g, "d": day,
+                     "s": s, "e": e, "a": a, "fl": fl,
                      "n": 1, "sl": 0, "ex": False, "en": False, "ra": lab, "rn": rn, "lg": big, "ln": ln}
         if k.rsplit("|", 1)[0] in held:
             out["other_location"] += 1                  # counted under its first location
@@ -609,11 +612,13 @@ def assess(f: dict, b: dict, chains: dict, now: datetime, country=country_of) ->
         big, ln = large(b, reg, subj, area_km2(f), day_of(b, now))
         ch = {"ra": lab, "rn": rn, "lg": big, "ln": ln}
     dyn = dynamics(ch)
+    first = ch.get("o") or (nms.refers(f) or "").split("|", 1)[0] or m.get("number")
     t, reasons = tier(c["cause_group"], ch["ra"], dyn, ch.get("lg"), subj)
     return {"tier": t, "method": METHOD, "cause": c["cause"], "cause_group": c["cause_group"],
             "cause_basis": c["cause_basis"], "rarity": ch["ra"],
             "rarity_basis": rarity_text(ch["ra"], ch["rn"], subj, reg, ch.get("g") or c["cause_group"]),
-            "dynamics": dyn,
+            "rarity_counts": {"scope": ch["rn"][0], "earlier": ch["rn"][1], "days": ch["rn"][2]},
+            "dynamics": dyn, "chain_first": first,
             "large_for_region": ch.get("lg"), "large_basis": large_text(ch.get("lg"), ch["ln"], subj, reg),
             "reasons": reasons,
             "basis": basis(c, subj, reg, country(f) if country and t != "routine" else None, ch["ra"], ch["rn"],
