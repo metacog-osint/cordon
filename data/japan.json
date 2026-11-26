@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169234": {
+   "key": "169234",
+   "type": "R10",
+   "at": "2026-11-26T15:31:12Z",
+   "code": "0212",
+   "iso": "MA",
+   "name_ja": "モロッコ",
+   "title_ja": "デモ活動の実施に関する注意喚起（モロッコ国内全土）",
+   "lead_ja": "１１月２９日（日）の「パレスチナ人民連帯国際デー」にあわせて、モロッコ国内全土において、親パレスチナ団体によるデモ活動が行われる可能性があります。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169234",
+   "mission_ja": "在モロッコ日本国大使館"
+  },
   "169233": {
    "key": "169233",
    "type": "R10",
