@@ -39,6 +39,13 @@ def data() -> dict:
         d = dict(load(name, {}) or {})
         d["fetched_at"] = (health.get(src) or {}).get("last_ok")
         out[name] = d
+    # The NMS lane's ranked NOTAMs and index, written by collect into the cached cache/nms/out/ (absent elsewhere).
+    for name, key in ((nms.SIG_FILE, "notams"), ("index.json", "notam_index")):
+        p = nms.OUT / name
+        try:
+            out[key] = json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+        except ValueError:
+            out[key] = None
     return out
 
 
@@ -124,6 +131,17 @@ def map_data(d: dict, fc: dict) -> dict:
                     **{k: f["properties"]["measures"].get(k) for k in ("strongest", "entries", "firs", "new", "added",
                                                                        "removed")}}
                    for f in fc["features"] if f["properties"]["id"].startswith("cordon:faaprn:")],
+        # International NOTAMs ranked notable or significant, as published in the feed (withheld there when stale).
+        "notams": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
+                    "until": f["properties"].get("valid_until"), "start": f["properties"].get("event_start"),
+                    "geometry": f["geometry"], "precision": f["properties"]["precision_class"],
+                    "countries": f["properties"]["countries"],
+                    **{k: f["properties"]["measures"].get(k) for k in ("number", "fir", "location", "subject", "q_code",
+                                                                       "lower", "upper", "window_mode",
+                                                                       "geometry_basis", "text", "new")},
+                    "significance": {k: (f["properties"]["measures"].get("significance") or {}).get(k)
+                                     for k in ("tier", "cause", "cause_group", "rarity", "reasons", "basis")}}
+                   for f in fc["features"] if f["properties"]["id"].startswith("cordon:notam:")],
         "points": {f["properties"]["id"]: f["geometry"]["coordinates"] for f in fc["features"]
                    if f["geometry"] and f["geometry"]["type"] == "Point" and f["properties"]["id"].startswith("cordon:advisory:")},
     }
@@ -147,7 +165,8 @@ def build() -> dict:
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"],
                     datetime.now(timezone.utc), d["health"], d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"],
                     ca=d["canada.json"], health_notices=d["cdc.json"], nz=d["safetravel.json"],
-                    prn=d["faa_prn.json"], jp=d["japan.json"], nl=d["netherlands.json"], dropped_log=ROOT / "data" / "history" / "dropped.jsonl")
+                    prn=d["faa_prn.json"], jp=d["japan.json"], nl=d["netherlands.json"], notams=d["notams"],
+                    notam_index=d["notam_index"], dropped_log=ROOT / "data" / "history" / "dropped.jsonl")
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC, OUT)
@@ -178,7 +197,7 @@ def check() -> list[str]:
     fc = feed.build(d["advisories.json"], d["alerts.json"], d["czibs.json"], d["navarea.json"], health=d["health"],
                     nas=d["faa_nas.json"], uk=d["fcdo.json"], tfrs=d["tfr.json"], ca=d["canada.json"],
                     health_notices=d["cdc.json"], nz=d["safetravel.json"], prn=d["faa_prn.json"], jp=d["japan.json"],
-                    nl=d["netherlands.json"])
+                    nl=d["netherlands.json"], notams=d["notams"], notam_index=d["notam_index"])
     errs += [f"dropped {x['id']}: {x['errors']}" for x in fc["dropped"]]
     regs = registers.ids(ROOT / "doctrine")
     for f in fc["features"]:
