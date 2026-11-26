@@ -55,7 +55,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import common, nmsarchive, significance
+from . import common, nmsarchive, notamlaunch, significance
 from .common import DATA, ROOT, describe, load, save
 
 HOSTS = {"staging": "https://api-staging.cgifederal-aim.com", "prod": "https://api-nms.aim.faa.gov"}
@@ -384,6 +384,7 @@ def write_out(store: dict, state: dict, now: datetime) -> dict:
              "lane_note": state.get("note") or state.get("error"), "mode": state.get("mode"),
              "bulk_at": state.get("bulk_at"), "pulled_to": state.get("pulled_to"), "generated_at": iso(now),
              "held": len(store), "subsets": subsets, "significance": write_significant(store, state, now),
+             "launch": write_launch(store, state, now),
              "archive": {**nmsarchive.about(), **{
                  k: (state.get("archive") or {}).get(k) for k in ("status", "archived_to", "pending")}},
              "about": "The active set at the last pull. Read these files, never the FAA: Cordon holds the suite's "
@@ -552,6 +553,25 @@ def write_significant(store: dict, state: dict, now: datetime) -> dict:
         return {**entry, "status": "failing", "error": describe(e)}
 
 
+def write_launch(store: dict, state: dict, now: datetime) -> dict:
+    """launch.json into cache/nms/out/: the space-operations NOTAMs, read for Launch (cordon/notamlaunch.py). Not a
+    subset (the subsets are NMS's features as NMS gives them; this one carries Cordon's reading). Returns its index
+    entry."""
+    entry = {"name": "launch", "file": notamlaunch.FILE, "url": PUBLISHED + notamlaunch.FILE,
+             "method": notamlaunch.METHOD, "rule": " ".join((notamlaunch.selected.__doc__ or "").split())}
+    try:
+        feats = notamlaunch.collection(store, now)
+        body = json.dumps({"type": "FeatureCollection", "dataset": "launch", "method": notamlaunch.METHOD,
+                           "source_note": SOURCE_NOTE, "terms": TERMS, "pulled_to": state.get("pulled_to"),
+                           "generated_at": iso(now), "rule": entry["rule"], "about": notamlaunch.ABOUT,
+                           "features": feats},
+                          ensure_ascii=False, separators=(",", ":")) + "\n"
+        (OUT / notamlaunch.FILE).write_text(body, encoding="utf-8", newline="\n")
+        return {**entry, "n": len(feats), "bytes": len(body.encode("utf-8")), "status": "ok"}
+    except Exception as e:  # noqa: BLE001 - never fails the lane; the index says why
+        return {**entry, "status": "failing", "error": describe(e)}
+
+
 def collect(now: datetime | None = None, env: dict | None = None, opener=None, fetch=None) -> tuple[dict, bool]:
     """The lane: (state saved to data/nms_state.json, whether a request was made). Never raises."""
     now = now or datetime.now(timezone.utc)
@@ -601,5 +621,6 @@ def collect(now: datetime | None = None, env: dict | None = None, opener=None, f
         index = write_out(store, state, now)
         state["subsets"] = {s["name"]: s["n"] for s in index["subsets"]}
         state["significance"]["tiers"] = index["significance"].get("tiers")
+        state["launch"] = index["launch"].get("n")
     save(STATE, state)
     return state, client.requests > 0
