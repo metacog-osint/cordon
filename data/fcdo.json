@@ -1695,14 +1695,14 @@
   "peru": {
    "slug": "peru",
    "name": "Peru",
-   "updated": "2026-11-06T16:13:51Z",
-   "change": "New information about Pope Leo XIV’s visit to Peru from 11-16 November, including increased security measures and travel disruption (’Warnings and insurance’ page).",
+   "updated": "2026-11-26T10:26:20Z",
+   "change": "Removal of information about Pope Leo XIV’s visit to Peru.",
    "link": "https://www.gov.uk/foreign-travel-advice/peru",
    "iso": "PE",
    "alert_status": [
     "avoid_all_but_essential_travel_to_parts"
    ],
-   "status_for": "2026-11-06T16:13:51Z"
+   "status_for": "2026-11-26T10:26:20Z"
   },
   "philippines": {
    "slug": "philippines",
