@@ -1,6 +1,21 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [],
+ "programs": [
+  {
+   "kind": "ground_stop",
+   "airport": "DCA",
+   "airport_name": "Ronald Reagan Washington National",
+   "start": "2026-11-26T19:55:00Z",
+   "end": "2026-11-26T21:15:00Z",
+   "updated": "2026-11-26T20:10:56Z",
+   "reason": "thunderstorms",
+   "center": "ZDC",
+   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=83&adv_date=11262026&facId=DCA&title=ATCSCC ADVZY 083 DCA/ZDC 11/26/2026 CDM GROUND STOP&titleDate=11/26/2026",
+   "included_facilities": 9,
+   "included_flights": null,
+   "probability_of_extension": "MEDIUM"
+  }
+ ],
  "airports": {
   "ABQ": [
    -106.6129,
