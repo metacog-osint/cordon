@@ -2,7 +2,8 @@
 
 Cordon collects official warnings that tell people to stay away: US travel advisories and embassy departure status,
 the UK's, Canada's and New Zealand's travel advice, CDC's travel health notices, EASA conflict-zone bulletins and the FAA's flight prohibitions and advisories for foreign airspace for aircraft, NGA's navigational warnings for ships, and
-the FAA's ground stops, ground delay programs, airport closures and temporary flight restrictions. It states them in the terms of
+the FAA's ground stops, ground delay programs, airport closures and temporary flight restrictions, and international NOTAMs it
+ranks notable or significant. It states them in the terms of
 The Intelligence Company's doctrine kit (`doctrine/kit/`).
 
 ## What it collects (hourly, GitHub Actions)
@@ -239,7 +240,54 @@ is ranked on them. Code: `cordon/significance.py`.
   one, a hazard-to-people cause, two or more date slips, an enlarged chain, or an RT, RP or RD area large for its
   region; scheduled and unknown causes never above notable; the rest `routine`. Each item says why, in `basis`.
 - **Published** as `/data/notams/significant.json` (notable and significant, active or still to come), listed in
-  `index.json` under `significance`. No feed items yet.
+  `index.json` under `significance`, and as feed items from method `cordon-feed-1.3` (below).
+
+## NOTAM feed items and launch areas (method `cordon-feed-1.3`, 26 Nov 2026)
+Each international NOTAM ranked notable or significant is a feed item (`cordon:notam:<FIR>:<number>`), built from
+the lane's `significant.json` in the same run (`feed.notam_items`). Cordon reads each NOTAM's own words
+(`cordon/notamtext.py`) and adds no cause: the cause and its basis are the ranking's, from the Q-code and the text.
+
+- **Text and title:** the E) item as the issuing state wrote it, in `measures.text`; the title is the number, the
+  location and FIR, the Q-code subject and the start of that text.
+- **Subject:** `cordon:notam:<FIR>:<first number>`, the first NOTAM of its chain of replacements (`chain_first`), so a
+  NOTAMR keeps the subject of the NOTAM it replaced. A NOTAM ranked before the chains recorded their first number (26
+  Nov 2026) falls back to the number it names, then to its own.
+- **Tier:** `anomaly` only for a NOTAM ranked `significant` and issued (new, or replacing another) within 72 hours,
+  against Cordon's own record of new NOTAMs of its subject and cause group in the FIR (`baseline_ref`
+  `cordon-notam-history`); a notable NOTAM, or an older significant one, is `routine`. Significance is a ranking,
+  not a change, so a notable NOTAM is never an anomaly. Until the record holds 90 days (from 19 Nov 2026), rarity is
+  `history_short`, nothing is significant and every NOTAM item is routine. There is no `response_stage`: a NOTAM
+  has no ladder in the kit's grading register.
+- **Last change:** `new` at the issue time for a NOTAMN issued within 72 hours, `changed` for a NOTAMR. **Event
+  time:** B) to C); C) marked EST says so in `measures.estimated`. **Signal:** the count of earlier NOTAMs of the
+  same subject and cause group in the FIR (or ICAO prefix) over the rarity window, once rarity has its 90 days; none
+  before. **Place basis** `location`; countries are those the footprint overlaps. **Source** `faa-nms`, graded A2
+  like every source, independence group `faa`: the relay, since one origin per NOTAM is read (the issuing state is its
+  author; whether that should be its own group is open).
+- **Footprint** (`notamtext.geometry`), first that applies: the shape the E) text draws (polygons from runs of three
+  or more positions; circles from "RADIUS n CENTRE <position>", "n NM RADIUS OF <position>" and "CENTRE <position>
+  RADIUS n"; an excluded circle, a line, a route or an arc is not drawn), `area`; NMS's own polygon when it is not the
+  Q-line circle and sits where the Q line puts the NOTAM, `area` (on 26 Nov 2026, 562 of 855 international NOTAMs with
+  an NMS polygon had it elsewhere, often round the A) aerodrome); the Q-line circle, `approximate` (an envelope; the
+  map draws it dashed); the Q-line centre or NMS's point, `approximate`. `measures.geometry_basis` says which.
+- **Windows:** the D) schedule read into UTC windows within B) and C) (`measures.windows`, those still to come, at
+  most 60, with `windows_total`; `window_mode` single, schedule, daily, or `span` when D) was not read in full:
+  sunrise and sunset, or a reading that would fall outside B) to C)). On 26 Nov 2026, 5,386 of 6,131 D) items were
+  read in full.
+- **Health:** the `faa-nms` lane carries `items`, the ranking's `tiers`, `launch_areas` (the count in
+  `launch.json`) and `data_as_of` (the lane's `pulled_to`). A stale lane's items are withheld (`withheld`).
+
+**Launch areas** (`cordon/notamlaunch.py`, method `cordon-notam-launch-1.0`): space operations stay Launch's and are
+never feed items. Cordon publishes them as `/data/notams/launch.json`, listed in `index.json` under `launch` (not
+among the subsets, which are NMS's features as given): every NOTAM of the launch-areas subset that Cordon's
+space-operations rule names (rocket launch, stage and debris fall, reentry; not "airspace", not a model rocket), not a
+cancellation, with a Q-code subject R, W or X or no Q line, in force, still to come or ended within a day. Each is the
+trimmed NMS feature with Cordon's footprint as its geometry and `properties.launch`: id, number, FIR, location, type,
+the number it replaces, issue and update times, Q-code and flight levels, F) and G), `hazard` (reentry, debris fall,
+stage fall or launch, the first the text names) and the launch words it uses, B), C), EST, D), `windows` and
+`window_mode`, `geometry_basis`, `precision_class` and the E) text. A separate file, not feed items, because Launch
+matches NOTAMs to launches by NMS id and needs every space-operations NOTAM, ranked or not, at the moment it is read;
+the feed holds Cordon's own items only. Cordon does not match them to launches.
 
 ## Gaps and no data
 A source that fails keeps its last good data and is marked in `data/health.json`; the page shows its age. NGA

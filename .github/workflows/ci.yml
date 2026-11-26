@@ -18,5 +18,7 @@ jobs:
         run: python tests/test_cordon.py
       - name: Tests (Japan and Netherlands travel advice)
         run: python tests/test_advice_abroad.py
+      - name: Tests (NOTAM reading, NOTAM feed items, launch.json)
+        run: python tests/test_notams.py
       - name: Feed from the committed data passes the kit's linter
         run: python tools/cordon.py check

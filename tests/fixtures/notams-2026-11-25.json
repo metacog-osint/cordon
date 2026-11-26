@@ -1,0 +1,1310 @@
+{
+ "about": "Real NMS-API features (trimmed as cordon/nms.py stores them), cut from Cordon's archive pull of 25 Nov 2026 for the offline NOTAM tests (tests/test_notams.py). NOTAM text as the issuing states wrote it.",
+ "pulled_to": "2026-11-25T23:41:03Z",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Point",
+      "coordinates": [
+       20.848889,
+       13.847222
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1790256349168000",
+      "series": "A",
+      "number": "A0923/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-09-24T13:27:00.000Z",
+      "affectedFir": "FTTT",
+      "selectionCode": "QWDLW",
+      "traffic": "IV",
+      "purpose": "M",
+      "scope": "AW",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "FTTC",
+      "effectiveStart": "2026-09-30T05:30:00.000Z",
+      "effectiveEnd": "2026-12-12T15:30:00.000Z",
+      "text": "AMMUNITIONS DESTRUCTIONS WILL TAKE PLACE TA ABECHE RADIUS 1558M\r\nCENTRE 134245.02N0203045.99E",
+      "classification": "INTL",
+      "accountId": "FCCCYNYX",
+      "lastUpdated": "2026-09-24T13:25:00.000Z",
+      "icaoLocation": "FTTC",
+      "schedule": "0530-1530",
+      "lowerLimit": "GND",
+      "upperLimit": "5111FT AGL",
+      "coordinates": "1342N02030E",
+      "radius": "1"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "A0923/26 NOTAMN \r\nQ)FTTT/QWDLW/IV/M/AW/000/052/1342N02030E001\r\nA)FTTC B)2609300530 C)2612121530\r\nD)0530-1530\r\nE)AMMUNITIONS DESTRUCTIONS WILL TAKE PLACE TA ABECHE RADIUS 1558M\r\nCENTRE 134245.02N0203045.99E\r\nF)GND G)5111FT AGL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         -150.00000000000003,
+         -26.47144548343037
+        ],
+        [
+         -149.48363162339425,
+         -26.510899252887533
+        ],
+        [
+         -148.9818717283134,
+         -26.62814180861035
+        ],
+        [
+         -148.50899685121507,
+         -26.819843065329845
+        ],
+        [
+         -148.07862063605228,
+         -27.080539838121467
+        ],
+        [
+         -147.70336498845978,
+         -27.402765320048562
+        ],
+        [
+         -147.3945348001236,
+         -27.777228556154196
+        ],
+        [
+         -147.16179859776892,
+         -28.193042330516526
+        ],
+        [
+         -147.01287917472735,
+         -28.637997563439086
+        ],
+        [
+         -146.95326100510508,
+         -29.098881843065765
+        ],
+        [
+         -146.98592503938335,
+         -29.561838857548533
+        ],
+        [
+         -147.1111260268269,
+         -30.012764004616916
+        ],
+        [
+         -147.3262320808111,
+         -30.43772915174005
+        ],
+        [
+         -147.62564965860355,
+         -30.82342637281171
+        ],
+        [
+         -148.0008580499373,
+         -31.157616707615272
+        ],
+        [
+         -148.44057447472457,
+         -31.42956607910369
+        ],
+        [
+         -148.93106308802163,
+         -31.630447226528034
+        ],
+        [
+         -149.45658867495922,
+         -31.753684774709782
+        ],
+        [
+         -150.00000000000003,
+         -31.795221183236304
+        ],
+        [
+         -150.54341132504078,
+         -31.753684774709782
+        ],
+        [
+         -151.0689369119784,
+         -31.630447226528034
+        ],
+        [
+         -151.55942552527546,
+         -31.42956607910369
+        ],
+        [
+         -151.9991419500627,
+         -31.157616707615272
+        ],
+        [
+         -152.37435034139648,
+         -30.823426372811713
+        ],
+        [
+         -152.67376791918892,
+         -30.43772915174005
+        ],
+        [
+         -152.8888739731731,
+         -30.012764004616916
+        ],
+        [
+         -153.01407496061665,
+         -29.561838857548533
+        ],
+        [
+         -153.04673899489492,
+         -29.098881843065765
+        ],
+        [
+         -152.98712082527268,
+         -28.637997563439086
+        ],
+        [
+         -152.83820140223108,
+         -28.19304233051653
+        ],
+        [
+         -152.60546519987642,
+         -27.777228556154196
+        ],
+        [
+         -152.29663501154025,
+         -27.402765320048562
+        ],
+        [
+         -151.92137936394775,
+         -27.080539838121467
+        ],
+        [
+         -151.49100314878498,
+         -26.819843065329845
+        ],
+        [
+         -151.01812827168663,
+         -26.62814180861036
+        ],
+        [
+         -150.51636837660578,
+         -26.510899252887533
+        ],
+        [
+         -150.00000000000003,
+         -26.47144548343037
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795466048933000",
+      "series": "A",
+      "number": "A1517/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-23T20:34:00.000Z",
+      "affectedFir": "NTTT",
+      "selectionCode": "QRDCA",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "NTTT",
+      "effectiveStart": "2026-11-29T16:46:00.000Z",
+      "effectiveEnd": "2026-12-05T15:16:00.000Z",
+      "text": "TEMPORARY DANGER AREA DUE TO SPACE DEBRIS RETURN OF SPACEX CYGNUS\r\nNG-25 IN TAHITI FIR WITHIN AN AREA BOUNDED BY FOLLOWING POINTS : \r\n2730S 14948W, 2931S 14750W, 3000S 14821W, 3000S 15238W, \r\n2730S 14948W \r\nTHIS ACTIVITY ALSO IMPACTS THE FOLLOWING FIR : NZZO\r\n\r\nTHE FRENCH VERSION OF THIS NOTAM IS C2854/26.",
+      "classification": "INTL",
+      "accountId": "NTAAYNYX",
+      "lastUpdated": "2026-11-23T20:34:00.000Z",
+      "icaoLocation": "NTTT",
+      "schedule": "29 1646-1737,\r\n30 1620-1712,\r\n01 1558-1649,\r\n02 1535-1627,\r\n03 1513-1604,\r\n04 1447-1538,\r\n05 1424-1516",
+      "lowerLimit": "SFC",
+      "upperLimit": "UNL",
+      "coordinates": "2908S15000W",
+      "radius": "160"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "A1517/26 NOTAMN\r\nQ) NTTT/QRDCA/IV/BO/W/000/999/2908S15000W160\r\nA) NTTT\r\nB) 2611291646 C) 2612051516\r\nD) 29 1646-1737,\r\n30 1620-1712,\r\n01 1558-1649,\r\n02 1535-1627,\r\n03 1513-1604,\r\n04 1447-1538,\r\n05 1424-1516\r\nE) TEMPORARY DANGER AREA DUE TO SPACE DEBRIS RETURN OF SPACEX CYGNUS\r\nNG-25 IN TAHITI FIR WITHIN AN AREA BOUNDED BY FOLLOWING POINTS : \r\n2730S 14948W, 2931S 14750W, 3000S 14821W, 3000S 15238W, \r\n2730S 14948W \r\nTHIS ACTIVITY ALSO IMPACTS THE FOLLOWING FIR : NZZO\r\n\r\nTHE FRENCH VERSION OF THIS NOTAM IS C2854/26.\r\nF) SFC G) UNL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         108.73333333333335,
+         6.96556156529006
+        ],
+        [
+         108.84101512661081,
+         6.956198340415281
+        ],
+        [
+         108.94541289082511,
+         6.928394261974936
+        ],
+        [
+         109.0433439591633,
+         6.882997293680402
+        ],
+        [
+         109.13182508921098,
+         6.821391582065012
+        ],
+        [
+         109.20816405984509,
+         6.745454768873522
+        ],
+        [
+         109.27004189710364,
+         6.657500188299826
+        ],
+        [
+         109.3155831877825,
+         6.560205810557023
+        ],
+        [
+         109.34341238409495,
+         6.456532193830656
+        ],
+        [
+         109.35269450020739,
+         6.349632023254662
+        ],
+        [
+         109.34315912602713,
+         6.242754042490219
+        ],
+        [
+         109.31510721341955,
+         6.1391443194400885
+        ],
+        [
+         109.26940060848924,
+         6.041947834390005
+        ],
+        [
+         109.20743479926429,
+         5.954113340123598
+        ],
+        [
+         109.13109581365094,
+         5.878304323914338
+        ],
+        [
+         109.04270263262016,
+         5.816818705754155
+        ],
+        [
+         108.94493687333119,
+         5.771519641103587
+        ],
+        [
+         108.84076184039125,
+         5.743779465969842
+        ],
+        [
+         108.73333333333335,
+         5.734438434709938
+        ],
+        [
+         108.62590482627543,
+         5.743779465969842
+        ],
+        [
+         108.5217297933355,
+         5.771519641103587
+        ],
+        [
+         108.42396403404653,
+         5.816818705754155
+        ],
+        [
+         108.33557085301574,
+         5.878304323914338
+        ],
+        [
+         108.25923186740239,
+         5.954113340123597
+        ],
+        [
+         108.19726605817745,
+         6.041947834390004
+        ],
+        [
+         108.15155945324715,
+         6.1391443194400885
+        ],
+        [
+         108.12350754063955,
+         6.242754042490219
+        ],
+        [
+         108.11397216645929,
+         6.349632023254662
+        ],
+        [
+         108.12325428257174,
+         6.456532193830656
+        ],
+        [
+         108.15108347888419,
+         6.560205810557022
+        ],
+        [
+         108.19662476956304,
+         6.657500188299826
+        ],
+        [
+         108.2585026068216,
+         6.745454768873522
+        ],
+        [
+         108.3348415774557,
+         6.821391582065012
+        ],
+        [
+         108.42332270750339,
+         6.882997293680402
+        ],
+        [
+         108.52125377584157,
+         6.928394261974936
+        ],
+        [
+         108.62565154005587,
+         6.956198340415281
+        ],
+        [
+         108.73333333333335,
+         6.96556156529006
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795524529509000",
+      "series": "A",
+      "number": "A3590/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-24T12:48:00.000Z",
+      "affectedFir": "WSJC",
+      "selectionCode": "QRALW",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "WSJC",
+      "effectiveStart": "2026-12-01T01:41:00.000Z",
+      "effectiveEnd": "2026-12-01T02:28:00.000Z",
+      "text": "UNBURNED DEBRIS EXPECTED TO FALL WI\r\n0656N10836E-0649N10906E-0545N10850E-0552N10823E-0656N10838E\r\nDUE TO AEROSPACE FLT ACT BY CHINA. RMK/ATS ROUTE L625 BTN GUTUP AND\r\nAKMON NOT AVBL.",
+      "classification": "INTL",
+      "accountId": "WSSSYNYX",
+      "lastUpdated": "2026-11-24T12:48:00.000Z",
+      "icaoLocation": "WSJC",
+      "lowerLimit": "SFC",
+      "upperLimit": "UNL",
+      "coordinates": "0621N10844E",
+      "radius": "37"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "A3590/26 NOTAMN\r\nQ)WSJC/QRALW/IV/BO/W/000/999/0621N10844E037\r\nA)WSJC B)2612010141 C)2612010228\r\nE)UNBURNED DEBRIS EXPECTED TO FALL WI\r\n0656N10836E-0649N10906E-0545N10850E-0552N10823E-0656N10838E\r\nDUE TO AEROSPACE FLT ACT BY CHINA. RMK/ATS ROUTE L625 BTN GUTUP AND\r\nAKMON NOT AVBL.\r\nF)SFC G)UNL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Point",
+      "coordinates": [
+       96.18333333333334,
+       3.8166666666666664
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795155869392000",
+      "series": "A",
+      "number": "A4429/26",
+      "year": "2026",
+      "type": "R",
+      "issued": "2026-11-20T06:16:00.000Z",
+      "affectedFir": "WIIF",
+      "selectionCode": "QRALW",
+      "traffic": "IV",
+      "purpose": "NBO",
+      "scope": "W ",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "WIIF",
+      "effectiveStart": "2026-11-20T06:15:00.000Z",
+      "effectiveEnd": "2026-12-31T23:59:00.000Z",
+      "text": "AIRSPACE RESERVATION FOR WEATHER MODIFICATION TECHNOLOGY FLT\r\nWILL TAKE PLACE WI COORD AS FLW :\r\n054954N0941526E - 055019N0964903E - 045354N0983033E - \r\n034217N0974801E - 024509N0980601E - 014718N0980732E - \r\n032028N0960500E - 044156N0942618E - 054954N0941526E\r\nRMK: ALL TFC SUBJ ATC CLR",
+      "classification": "INTL",
+      "accountId": "WRRRYNYX",
+      "lastUpdated": "2026-11-20T06:24:00.000Z",
+      "icaoLocation": "WIIF",
+      "lowerLimit": "5000FT AMSL",
+      "upperLimit": "12000FT AMSL",
+      "coordinates": "0349N09611E",
+      "radius": "169"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "A4429/26 NOTAMR A4427/26\r\nQ) WIIF/QRALW/IV/NBO/W /050/120/0349N09611E169\r\nA) WIIF B) 2611200615 C) 2612312359\r\nE) AIRSPACE RESERVATION FOR WEATHER MODIFICATION TECHNOLOGY FLT\r\nWILL TAKE PLACE WI COORD AS FLW :\r\n054954N0941526E - 055019N0964903E - 045354N0983033E - \r\n034217N0974801E - 024509N0980601E - 014718N0980732E - \r\n032028N0960500E - 044156N0942618E - 054954N0941526E\r\nRMK: ALL TFC SUBJ ATC CLR\r\nF) 5000FT AMSL G) 12000FT AMSL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Point",
+      "coordinates": [
+       -2.849722,
+       53.333611
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1794489691099000",
+      "series": "A",
+      "number": "A4551/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-12T13:21:00.000Z",
+      "affectedFir": "EGTT",
+      "selectionCode": "QWULW",
+      "traffic": "IV",
+      "purpose": "BO ",
+      "scope": "AW",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "EGGP",
+      "effectiveStart": "2027-02-06T07:00:00.000Z",
+      "effectiveEnd": "2027-02-28T18:00:00.000Z",
+      "text": "UAS OPR WI 1.5NM RADIUS OF 532210N 0024107W (FIDDLERS FERRY,\r\nWIDNES). MAX HGT 705FT AGL. UAS OPERATIONS IN SUPPORT OF\r\nEXPLOSIVE DEMOLITION AT FIDDLERS FERRY. NON-PARTICIPATING ACFT\r\nAND UAS ARE REQUESTED TO AVOID THE AREA OR CONTACT OPR. FOR INFO\r\n07389 859047 / 01778 560929. AR-2026-10825/02.",
+      "classification": "INTL",
+      "accountId": "EGGNYNYX",
+      "lastUpdated": "2026-11-12T13:21:00.000Z",
+      "icaoLocation": "EGGP",
+      "schedule": "06-07 12-14 19-21 26-28 0700-1800",
+      "lowerLimit": "SFC",
+      "upperLimit": "900FT AMSL",
+      "coordinates": "5322N00241W",
+      "radius": "2"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "A4551/26 NOTAMN\r\nQ) EGTT/QWULW/IV/BO /AW/000/009/5322N00241W002\r\nA) EGGP B) 2702060700 C) 2702281800\r\nD) 06-07 12-14 19-21 26-28 0700-1800\r\nE) UAS OPR WI 1.5NM RADIUS OF 532210N 0024107W (FIDDLERS FERRY,\r\nWIDNES). MAX HGT 705FT AGL. UAS OPERATIONS IN SUPPORT OF\r\nEXPLOSIVE DEMOLITION AT FIDDLERS FERRY. NON-PARTICIPATING ACFT\r\nAND UAS ARE REQUESTED TO AVOID THE AREA OR CONTACT OPR. FOR INFO\r\n07389 859047 / 01778 560929. AR-2026-10825/02.\r\nF) SFC G) 900FT AMSL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection"
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795207857104000",
+      "series": "B",
+      "number": "B4735/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-20T20:50:00.000Z",
+      "affectedFir": "MMFR",
+      "selectionCode": "QRDCA",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "MMFR",
+      "effectiveStart": "2026-11-28T04:53:00.000Z",
+      "effectiveEnd": "2026-12-04T08:13:00.000Z",
+      "text": "DANGEROUS AREA FOR ROCKET LAUNCH SPACEX R-7 STAGE 1\r\r\n   LATERAL LIMIT AREA FORMED BY THE UNION OF THE FLW POINTS: \r\r\n   3138N 11903W - 3144N 11850W - 2948N 11739W - 2936N 11716W - 2850N\r\r\n   11719W - 2815N 11719W - 2814N 11720W - 2850N 11749W - 2902N 11759W -\r\r\n   2915N 11802W - 2924N 11808W - 2935N 11812W - 3138N 11903W",
+      "classification": "INTL",
+      "accountId": "MMMXYNYX",
+      "lastUpdated": "2026-11-20T20:50:00.000Z",
+      "icaoLocation": "MMFR",
+      "schedule": "NOV 28 0453-0936, 29 0439-0922, 30 0226-0709, DEC 01 0213-0656, 02\r\r\n   0357-0840, 03 0145-0628, 04 0330-0813",
+      "lowerLimit": "SFC",
+      "upperLimit": "UNL"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "B4735/26 NOTAMN\r\r\nQ) MMFR/QRDCA/IV/BO/W/000/999/\r\r\nA) MMFR\r\r\nB) 2611280453\r\r\nC) 2612040813\r\r\nD) NOV 28 0453-0936, 29 0439-0922, 30 0226-0709, DEC 01 0213-0656, 02\r\r\n   0357-0840, 03 0145-0628, 04 0330-0813\r\r\nE) DANGEROUS AREA FOR ROCKET LAUNCH SPACEX R-7 STAGE 1\r\r\n   LATERAL LIMIT AREA FORMED BY THE UNION OF THE FLW POINTS: \r\r\n   3138N 11903W - 3144N 11850W - 2948N 11739W - 2936N 11716W - 2850N\r\r\n   11719W - 2815N 11719W - 2814N 11720W - 2850N 11749W - 2902N 11759W -\r\r\n   2915N 11802W - 2924N 11808W - 2935N 11812W - 3138N 11903W\r\r\nF) SFC\r\r\nG) UNL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Point",
+      "coordinates": [
+       128.23333333333332,
+       36.05
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1790818176924000",
+      "series": "E",
+      "number": "E4739/26",
+      "year": "2026",
+      "type": "R",
+      "issued": "2026-10-01T01:29:00.000Z",
+      "affectedFir": "RKRR",
+      "selectionCode": "QRTCA",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "RKRR",
+      "effectiveStart": "2026-10-01T01:28:00.000Z",
+      "effectiveEnd": "2027-01-01T15:00:00.000Z",
+      "estimated": "True",
+      "text": "TEMPO RESTRICTED AREA ACT AS FLW :\r\n1. AREA : A SEMICIRCLE, 360118N1281017E - A CLOCKWISE 3NM ARC\r\n   CENTERED ON 360243N1281333E-360408N1281649E TO THE BEGINNING\r\n   EXC A CIRCLE RADIUS 1.5NM CENTERED ON 360243N1281333E FM SFC TO\r\n   9500FT MSL.\r\n2. RMK : \r\n   -  THIS NOTAM APPLIES ONLY TO THE MIL ACFT EQUIPPED WITH EED\r\n      (ELECTRO EXPLOSIVE DEVICE). \r\n   -  REF AIP ENR 5.1-8",
+      "classification": "INTL",
+      "accountId": "RKRRYNYX",
+      "lastUpdated": "2026-10-01T01:29:00.000Z",
+      "icaoLocation": "RKRR",
+      "lowerLimit": "SFC",
+      "upperLimit": "FL196",
+      "coordinates": "3603N12814E",
+      "radius": "4"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "E4739/26 NOTAMR E3260/26 \r\nQ)RKRR/QRTCA/IV/BO/W/000/196/3603N12814E004\r\nA)RKRR B)2610010128 C)2701011500EST\r\nE)TEMPO RESTRICTED AREA ACT AS FLW :\r\n1. AREA : A SEMICIRCLE, 360118N1281017E - A CLOCKWISE 3NM ARC\r\n   CENTERED ON 360243N1281333E-360408N1281649E TO THE BEGINNING\r\n   EXC A CIRCLE RADIUS 1.5NM CENTERED ON 360243N1281333E FM SFC TO\r\n   9500FT MSL.\r\n2. RMK : \r\n   -  THIS NOTAM APPLIES ONLY TO THE MIL ACFT EQUIPPED WITH EED\r\n      (ELECTRO EXPLOSIVE DEVICE). \r\n   -  REF AIP ENR 5.1-8\r\nF)SFC G)FL196"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Point",
+      "coordinates": [
+       113.38333333333334,
+       22.016666666666666
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1794469069406000",
+      "series": "G",
+      "number": "G5051/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-12T07:37:00.000Z",
+      "affectedFir": "ZGZU",
+      "selectionCode": "QFATT",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "A",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "ZGSD",
+      "effectiveStart": "2026-11-14T16:00:00.000Z",
+      "effectiveEnd": "2027-01-10T16:00:00.000Z",
+      "text": "TRIGGER NOTAM\r\nAIP SUP NR.31/26 (NOV 10.2026) ABOUT ZHUHAI/JINWAN AIRPORT (ZGSD) \r\nWILL OPEN FOR CHINA INTERNATIONAL AVIATION AND AEROSPACE \r\nEXHIBITION. \r\nLOG ON AIS CHINA WEBSITE: WWW.EAIPCHINA.CN OR WWW.AISCHINA.COM FOR \r\nPREVIEWING THE WHOLE INFORMATION.",
+      "classification": "INTL",
+      "accountId": "ZBBBYNYX",
+      "lastUpdated": "2026-11-12T07:37:00.000Z",
+      "icaoLocation": "ZGSD",
+      "coordinates": "2201N11323E",
+      "radius": "5"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "G5051/26 NOTAMN\r\nQ)ZGZU/QFATT/IV/BO/A/000/999/2201N11323E005\r\nA)ZGSD B)2611141600 C)2701101600 \r\nE) TRIGGER NOTAM\r\nAIP SUP NR.31/26 (NOV 10.2026) ABOUT ZHUHAI/JINWAN AIRPORT (ZGSD) \r\nWILL OPEN FOR CHINA INTERNATIONAL AVIATION AND AEROSPACE \r\nEXHIBITION. \r\nLOG ON AIS CHINA WEBSITE: WWW.EAIPCHINA.CN OR WWW.AISCHINA.COM FOR \r\nPREVIEWING THE WHOLE INFORMATION.\r\n "
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         104.39473900000002,
+         53.01587395778521
+        ],
+        [
+         104.61077268557838,
+         53.004305714844335
+        ],
+        [
+         104.81990710543563,
+         52.969970736810204
+        ],
+        [
+         105.01549558954574,
+         52.9139646749892
+        ],
+        [
+         105.19138308085654,
+         52.83806902385786
+        ],
+        [
+         105.34211933425844,
+         52.744686767971494
+        ],
+        [
+         105.46313651419067,
+         52.636757091031996
+        ],
+        [
+         105.55088459471025,
+         52.517653381612284
+        ],
+        [
+         105.6029214140474,
+         52.391069273940026
+        ],
+        [
+         105.61795749287428,
+         52.260897595605826
+        ],
+        [
+         105.59585843566957,
+         52.13110690526395
+        ],
+        [
+         105.5376096837476,
+         52.00561987092899
+        ],
+        [
+         105.44524951259565,
+         51.88819715432157
+        ],
+        [
+         105.3217765273481,
+         51.782329816159596
+        ],
+        [
+         105.17103765607305,
+         51.691142613484686
+        ],
+        [
+         104.99760195926277,
+         51.61730997431573
+        ],
+        [
+         104.80662465660652,
+         51.56298593668617
+        ],
+        [
+         104.60370478720723,
+         51.529748938969036
+        ],
+        [
+         104.39473900000002,
+         51.518562042214775
+        ],
+        [
+         104.18577321279281,
+         51.529748938969036
+        ],
+        [
+         103.98285334339349,
+         51.56298593668617
+        ],
+        [
+         103.79187604073725,
+         51.61730997431573
+        ],
+        [
+         103.61844034392696,
+         51.691142613484686
+        ],
+        [
+         103.4677014726519,
+         51.782329816159596
+        ],
+        [
+         103.34422848740437,
+         51.88819715432157
+        ],
+        [
+         103.25186831625238,
+         52.00561987092899
+        ],
+        [
+         103.19361956433045,
+         52.13110690526395
+        ],
+        [
+         103.17152050712573,
+         52.260897595605826
+        ],
+        [
+         103.18655658595262,
+         52.391069273940026
+        ],
+        [
+         103.23859340528978,
+         52.517653381612284
+        ],
+        [
+         103.32634148580935,
+         52.636757091031996
+        ],
+        [
+         103.44735866574158,
+         52.744686767971494
+        ],
+        [
+         103.59809491914348,
+         52.83806902385786
+        ],
+        [
+         103.77398241045428,
+         52.9139646749892
+        ],
+        [
+         103.96957089456438,
+         52.969970736810204
+        ],
+        [
+         104.17870531442163,
+         53.004305714844335
+        ],
+        [
+         104.39473900000002,
+         53.01587395778521
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795241740343000",
+      "series": "L",
+      "number": "L5283/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-21T06:13:00.000Z",
+      "affectedFir": "UIII",
+      "selectionCode": "QRTCA",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "UIII",
+      "effectiveStart": "2026-11-26T00:00:00.000Z",
+      "effectiveEnd": "2026-12-01T23:59:00.000Z",
+      "text": "AIRSPACE CLSD AS FLW:\r\n1. AREA: 603002N1093749E-601825N1102231E-600256N1100700E-\r\n         600138N1102641E-594651N1104852E-594711N1105032E-\r\n         594652N1105144E-594614N1105216E-594538N1105114E-\r\n         594526N1104829E-594538N1104702E-595708N1102107E-\r\n         595732N1100133E-594028N1094230E-593816N1091614E-\r\n         594546N1084854E-594802N1085234E-594841N1085815E-\r\n         600317N1092433E-600602N1092603E-600634N1093159E-\r\n         600530N1093221E-600544N1093431E-600650N1093409E-\r\n         600615N1092603E-603002N1093749E\r\n   650M AMSL-1150M AMSL.\r\n2. WI CIRCLE RADIUS 1KM CENTRE 594616N1104731E\r\n   SFC-1150M AMSL.\r\n3. WI CIRCLE RADIUS 1KM CENTRE 594608N1104903E\r\n   SFC-1150M AMSL.\r\n4. WI CIRCLE RADIUS 1KM CENTRE 602259N1095442E\r\n   SFC-1150M AMSL.\r\n5. WI CIRCLE RADIUS 1KM CENTRE 600330N1093941E\r\n   SFC-1150M AMSL.\r\n6. WI CIRCLE RADIUS 1KM CENTRE 594702N1092517E\r\n   SFC-1150M AMSL.",
+      "classification": "INTL",
+      "accountId": "UUUUYNYX",
+      "lastUpdated": "2026-11-21T06:15:00.000Z",
+      "icaoLocation": "UIII",
+      "lowerLimit": "SFC",
+      "upperLimit": "1150M AMSL",
+      "coordinates": "5946N10951E",
+      "radius": "45"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "L5283/26 NOTAMN\r\nQ)UIII/QRTCA/IV/BO/W/000/040/5946N10951E045\r\nA)UIII B)2611260000 C)2612012359\r\nE)AIRSPACE CLSD AS FLW:\r\n1. AREA: 603002N1093749E-601825N1102231E-600256N1100700E-\r\n         600138N1102641E-594651N1104852E-594711N1105032E-\r\n         594652N1105144E-594614N1105216E-594538N1105114E-\r\n         594526N1104829E-594538N1104702E-595708N1102107E-\r\n         595732N1100133E-594028N1094230E-593816N1091614E-\r\n         594546N1084854E-594802N1085234E-594841N1085815E-\r\n         600317N1092433E-600602N1092603E-600634N1093159E-\r\n         600530N1093221E-600544N1093431E-600650N1093409E-\r\n         600615N1092603E-603002N1093749E\r\n   650M AMSL-1150M AMSL.\r\n2. WI CIRCLE RADIUS 1KM CENTRE 594616N1104731E\r\n   SFC-1150M AMSL.\r\n3. WI CIRCLE RADIUS 1KM CENTRE 594608N1104903E\r\n   SFC-1150M AMSL.\r\n4. WI CIRCLE RADIUS 1KM CENTRE 602259N1095442E\r\n   SFC-1150M AMSL.\r\n5. WI CIRCLE RADIUS 1KM CENTRE 600330N1093941E\r\n   SFC-1150M AMSL.\r\n6. WI CIRCLE RADIUS 1KM CENTRE 594702N1092517E\r\n   SFC-1150M AMSL.\r\nF)SFC  G)1150M AMSL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         136.924444,
+         35.338183995309464
+        ],
+        [
+         136.94215099042438,
+         35.336918954267944
+        ],
+        [
+         136.95931834341974,
+         35.33316238549037
+        ],
+        [
+         136.97542301444548,
+         35.32702876639957
+        ],
+        [
+         136.9899746166432,
+         35.31870497839614
+        ],
+        [
+         137.00253044844135,
+         35.30844456618559
+        ],
+        [
+         137.01270901192643,
+         35.2965599575683
+        ],
+        [
+         137.02020160320583,
+         35.28341288938881
+        ],
+        [
+         137.024781622935,
+         35.269403340390525
+        ],
+        [
+         137.02631133272243,
+         35.254957316429014
+        ],
+        [
+         137.02474586789884,
+         35.24051386659457
+        ],
+        [
+         137.02013440569402,
+         35.22651172950227
+        ],
+        [
+         137.0126184769129,
+         35.213376017028835
+        ],
+        [
+         137.0024274957518,
+         35.201505338259125
+        ],
+        [
+         136.9898716638783,
+         35.191259749897206
+        ],
+        [
+         136.97533247924122,
+         35.18294989176855
+        ],
+        [
+         136.95925114569096,
+         35.17682762842546
+        ],
+        [
+         136.94211523524663,
+         35.17307847159051
+        ],
+        [
+         136.924444,
+         35.17181600469052
+        ],
+        [
+         136.90677276475336,
+         35.17307847159051
+        ],
+        [
+         136.88963685430903,
+         35.17682762842546
+        ],
+        [
+         136.8735555207588,
+         35.18294989176855
+        ],
+        [
+         136.85901633612173,
+         35.191259749897206
+        ],
+        [
+         136.8464605042482,
+         35.201505338259125
+        ],
+        [
+         136.8362695230871,
+         35.213376017028835
+        ],
+        [
+         136.82875359430597,
+         35.22651172950227
+        ],
+        [
+         136.82414213210114,
+         35.24051386659457
+        ],
+        [
+         136.8225766672776,
+         35.254957316429014
+        ],
+        [
+         136.824106377065,
+         35.269403340390525
+        ],
+        [
+         136.82868639679415,
+         35.28341288938881
+        ],
+        [
+         136.83617898807358,
+         35.2965599575683
+        ],
+        [
+         136.84635755155867,
+         35.30844456618559
+        ],
+        [
+         136.8589133833568,
+         35.31870497839614
+        ],
+        [
+         136.8734649855545,
+         35.32702876639957
+        ],
+        [
+         136.88956965658028,
+         35.33316238549037
+        ],
+        [
+         136.9067370095756,
+         35.336918954267944
+        ],
+        [
+         136.924444,
+         35.338183995309464
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795525491450000",
+      "series": "M",
+      "number": "M1563/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-24T13:04:00.000Z",
+      "affectedFir": "RJJJ",
+      "selectionCode": "QWDLW",
+      "traffic": "IV",
+      "purpose": "M",
+      "scope": "AW",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "RJNA",
+      "effectiveStart": "2026-12-06T00:30:00.000Z",
+      "effectiveEnd": "2026-12-06T05:00:00.000Z",
+      "text": "BOMB DISPOSAL:\r\nALERT AREA: RADIUS 300M CENTER 351020N1365524E \r\n(NAGOYA-SHI IN AICHI)\r\nDISPOSAL PSN: 351020N1365524E",
+      "classification": "INTL",
+      "accountId": "RJAAYNYX",
+      "lastUpdated": "2026-11-24T13:04:00.000Z",
+      "icaoLocation": "RJNA",
+      "lowerLimit": "SFC",
+      "upperLimit": "3321FT AMSL",
+      "coordinates": "3515N13655E",
+      "radius": "5"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "M1563/26 NOTAMN\r\nQ)RJJJ/QWDLW/IV/M/AW/000/034/3515N13655E005\r\nA)RJNA B)2612060030 C)2612060500\r\nE)BOMB DISPOSAL:\r\nALERT AREA: RADIUS 300M CENTER 351020N1365524E \r\n(NAGOYA-SHI IN AICHI)\r\nDISPOSAL PSN: 351020N1365524E\r\nF)SFC G)3321FT AMSL"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+     {
+      "type": "Polygon",
+      "coordinates": [
+       [
+        [
+         50.153899,
+         53.55102339718567
+        ],
+        [
+         50.168486772049164,
+         53.550264259000556
+        ],
+        [
+         50.18262977249487,
+         53.548009990735
+        ],
+        [
+         50.195896929153434,
+         53.5443293182411
+        ],
+        [
+         50.20788412987697,
+         53.53933443073325
+        ],
+        [
+         50.21822662167165,
+         53.53317752911689
+        ],
+        [
+         50.22661015700317,
+         53.52604614894188
+        ],
+        [
+         50.23278054101606,
+         53.51815740646991
+        ],
+        [
+         50.23655128985756,
+         53.50975134944726
+        ],
+        [
+         50.23780917549097,
+         53.501083620931944
+        ],
+        [
+         50.23651750337257,
+         53.49241766418727
+        ],
+        [
+         50.232717043175334,
+         53.484016708776245
+        ],
+        [
+         50.22652460655361,
+         53.476135782430674
+        ],
+        [
+         50.21812933723384,
+         53.46901399016064
+        ],
+        [
+         50.207786845379516,
+         53.46286729178753
+        ],
+        [
+         50.195811378552854,
+         53.457881992199496
+        ],
+        [
+         50.18256627448241,
+         53.45420913585481
+        ],
+        [
+         50.16845298545207,
+         53.451959969220866
+        ],
+        [
+         50.153899,
+         53.45120260281431
+        ],
+        [
+         50.139345014547935,
+         53.451959969220866
+        ],
+        [
+         50.125231725517594,
+         53.45420913585481
+        ],
+        [
+         50.11198662144715,
+         53.457881992199496
+        ],
+        [
+         50.10001115462049,
+         53.46286729178753
+        ],
+        [
+         50.089668662766165,
+         53.46901399016064
+        ],
+        [
+         50.081273393446395,
+         53.476135782430674
+        ],
+        [
+         50.075080956824664,
+         53.484016708776245
+        ],
+        [
+         50.07128049662744,
+         53.49241766418727
+        ],
+        [
+         50.06998882450903,
+         53.501083620931944
+        ],
+        [
+         50.07124671014245,
+         53.50975134944726
+        ],
+        [
+         50.075017458983936,
+         53.51815740646991
+        ],
+        [
+         50.08118784299683,
+         53.52604614894188
+        ],
+        [
+         50.08957137832836,
+         53.53317752911689
+        ],
+        [
+         50.09991387012303,
+         53.53933443073325
+        ],
+        [
+         50.11190107084657,
+         53.5443293182411
+        ],
+        [
+         50.12516822750513,
+         53.548009990735
+        ],
+        [
+         50.13931122795084,
+         53.550264259000556
+        ],
+        [
+         50.153899,
+         53.55102339718567
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "properties": {
+    "coreNOTAMData": {
+     "notam": {
+      "id": "NMS_ID_1795250367080000",
+      "series": "N",
+      "number": "N0750/26",
+      "year": "2026",
+      "type": "N",
+      "issued": "2026-11-21T08:30:00.000Z",
+      "affectedFir": "UWWW",
+      "selectionCode": "QRTCA",
+      "traffic": "IV",
+      "purpose": "BO",
+      "scope": "W",
+      "minimumFl": "000",
+      "maximumFl": "999",
+      "location": "UWWW",
+      "effectiveStart": "2026-11-23T00:00:00.000Z",
+      "effectiveEnd": "2026-11-28T23:59:00.000Z",
+      "text": "AIRSPACE CLSD WI CIRCLE RADIUS 5KM CENTRE 525826N0494349E.\r\nFLW FLT NOT AFFECTED:\r\n1. VIP SPECIAL FLT AND ACFT FOR THEIR SUPPORT,\r\n2. INTL AND DOM FLT VIA ATS RTE,\r\n3. FLT FROM/TO SAMARA/KURUMOCH (UWWW) AD,\r\n4. SPECIALLY ALLOTTED TO RENDER ASSISTANCE IN EMERGENCIES AND\r\n   PERFORM OTHER TASKS SUBJ COOR WITH DUTY OFFICER.",
+      "classification": "INTL",
+      "accountId": "UUUUYNYX",
+      "lastUpdated": "2026-11-21T08:39:00.000Z",
+      "icaoLocation": "UWWW",
+      "lowerLimit": "GND",
+      "upperLimit": "3050M AGL",
+      "coordinates": "5258N04943E",
+      "radius": "3"
+     },
+     "notamTranslation": [
+      {
+       "type": "ICAO",
+       "formattedText": "N0750/26 NOTAMN\r\nQ)UWWW/QRTCA/IV/BO/W/000/999/5258N04943E003\r\nA)UWWW B)2611230000 C)2611282359\r\nE)AIRSPACE CLSD WI CIRCLE RADIUS 5KM CENTRE 525826N0494349E.\r\nFLW FLT NOT AFFECTED:\r\n1. VIP SPECIAL FLT AND ACFT FOR THEIR SUPPORT,\r\n2. INTL AND DOM FLT VIA ATS RTE,\r\n3. FLT FROM/TO SAMARA/KURUMOCH (UWWW) AD,\r\n4. SPECIALLY ALLOTTED TO RENDER ASSISTANCE IN EMERGENCIES AND\r\n   PERFORM OTHER TASKS SUBJ COOR WITH DUTY OFFICER.\r\nF)GND  G)3050M AGL"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
