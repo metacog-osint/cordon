@@ -6639,184 +6639,6 @@
     }
    }
   },
-  "6/9740": {
-   "notam_id": "6/9740",
-   "type": "VIP",
-   "facility": "ZID",
-   "state": "OH",
-   "description": "DELAWARE, OH, Thursday, November 26, 2026 Local",
-   "created": "11/24/2026",
-   "first_seen": "2026-11-24T23:40:34Z",
-   "subject": "6/9740",
-   "detail": {
-    "name": "261126 DELAWARE OH VIP ZID",
-    "issued": "2026-11-24T23:29:52Z",
-    "effective": "2026-11-26T14:30:00Z",
-    "expires": "2026-11-26T23:30:00Z",
-    "regulation": "91.141",
-    "purpose": null,
-    "city": "DELAWARE",
-    "floor": "surface",
-    "ceiling": "4999 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/9740 ZID OH..AIRSPACE DELAWARE, OHIO..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 26, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 91.141, ALL ACFT FLT OPS INCLUDING REMOTE CONTROLLED ACFT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 6NM RADIUS OF 401809N0830603W (APE297025.2) SFC-4999FT AGL EFFECTIVE 2611261430 UTC (0930 LOCAL 11/26/26) UNTIL 2611262330 UTC (1830 LOCAL 11/26/26). EXC THE FLT OPS LISTED BLW: 1. ACFT MUST BE SQUAWKING AN ATC DISCRETE BEACON CODE AT ALL TIMES WHILE IN THE TFR AND MUST REMAIN IN TWO-WAY RADIO COM WITH ATC. 2. LAW ENFORCEMENT, FIREFIGHTING, AND MEDEVAC/AIR AMBULANCE FLIGHTS ON ACT MISSIONS. 3. TRANSIENT OPS ARE AUTH FOR SAFETY OF FLT OR TO MEET OPERATIONAL DEMANDS. 4. ACFT MAY NOT LOITER. 5. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. 6. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. 7. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611261430-2611262330",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -83.10083,
-        40.40257
-       ],
-       [
-        -83.0781,
-        40.40105
-       ],
-       [
-        -83.05607,
-        40.39653
-       ],
-       [
-        -83.0354,
-        40.38915
-       ],
-       [
-        -83.01672,
-        40.37913
-       ],
-       [
-        -83.00061,
-        40.36678
-       ],
-       [
-        -82.98756,
-        40.35248
-       ],
-       [
-        -82.97795,
-        40.33666
-       ],
-       [
-        -82.97208,
-        40.31981
-       ],
-       [
-        -82.97013,
-        40.30243
-       ],
-       [
-        -82.97215,
-        40.28505
-       ],
-       [
-        -82.97807,
-        40.26821
-       ],
-       [
-        -82.98772,
-        40.25241
-       ],
-       [
-        -83.0008,
-        40.23813
-       ],
-       [
-        -83.01691,
-        40.22581
-       ],
-       [
-        -83.03556,
-        40.21582
-       ],
-       [
-        -83.05619,
-        40.20845
-       ],
-       [
-        -83.07817,
-        40.20395
-       ],
-       [
-        -83.10083,
-        40.20243
-       ],
-       [
-        -83.1235,
-        40.20395
-       ],
-       [
-        -83.14548,
-        40.20845
-       ],
-       [
-        -83.1661,
-        40.21582
-       ],
-       [
-        -83.18475,
-        40.22581
-       ],
-       [
-        -83.20086,
-        40.23813
-       ],
-       [
-        -83.21394,
-        40.25241
-       ],
-       [
-        -83.22359,
-        40.26821
-       ],
-       [
-        -83.22952,
-        40.28505
-       ],
-       [
-        -83.23154,
-        40.30243
-       ],
-       [
-        -83.22959,
-        40.31981
-       ],
-       [
-        -83.22372,
-        40.33666
-       ],
-       [
-        -83.21411,
-        40.35248
-       ],
-       [
-        -83.20105,
-        40.36678
-       ],
-       [
-        -83.18494,
-        40.37913
-       ],
-       [
-        -83.16627,
-        40.38915
-       ],
-       [
-        -83.1456,
-        40.39653
-       ],
-       [
-        -83.12356,
-        40.40105
-       ],
-       [
-        -83.10083,
-        40.40257
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9741": {
    "notam_id": "6/9741",
    "type": "HAZARDS",
@@ -9514,6 +9336,21 @@
    "first_seen": "2026-11-24T22:10:36Z",
    "subject": "6/9128",
    "left_at": "2026-11-26T13:10:39Z"
+  },
+  "6/9740": {
+   "type": "VIP",
+   "state": "OH",
+   "bbox": [
+    -83.2315,
+    40.2024,
+    -82.9701,
+    40.4026
+   ],
+   "area_km2": 383.8,
+   "ceiling_ft": 4999,
+   "first_seen": "2026-11-24T23:40:34Z",
+   "subject": "6/9740",
+   "left_at": "2026-11-26T23:40:32Z"
   },
   "6/9784": {
    "type": "SECURITY",

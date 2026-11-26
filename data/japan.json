@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169239": {
+   "key": "169239",
+   "type": "R10",
+   "at": "2026-11-26T23:21:07Z",
+   "code": "0052",
+   "iso": "MX",
+   "name_ja": "メキシコ",
+   "title_ja": "【注意喚起】道路上での車両襲撃未遂事案の発生について（グアナファト州セラヤ市）",
+   "lead_ja": "○１１月２４日、セラヤ市内において、走行中の邦人車両の前方に別の車両が割り込み、降車した男２人が銃器を突きつける車両襲撃未遂事案が発生しました。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169239",
+   "mission_ja": "在レオン日本国総領事館"
+  },
   "169238": {
    "key": "169238",
    "type": "R10",
