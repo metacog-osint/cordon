@@ -5225,184 +5225,6 @@
     }
    }
   },
-  "6/8989": {
-   "notam_id": "6/8989",
-   "type": "UAS PUBLIC GATHERING",
-   "facility": "ZHU",
-   "state": "TX",
-   "description": "Houston, TX, Thursday, November 26, 2026 UTC",
-   "created": "11/19/2026",
-   "first_seen": "2026-11-19T15:10:37Z",
-   "subject": "6/8989",
-   "detail": {
-    "name": "2026-44812-CSA-0105 HOU Thanksgiving Parade",
-    "issued": "2026-11-19T14:36:25Z",
-    "effective": "2026-11-26T14:00:00Z",
-    "expires": "2026-11-26T18:00:00Z",
-    "regulation": "44812",
-    "purpose": "the 77th annual HEB Thanksgiving Day Parade under sec 44812 c(2)",
-    "city": "Houston",
-    "floor": "surface",
-    "ceiling": "400 ft AGL",
-    "statutory": false,
-    "text": "!FDC 6/8989 ZHU TX..AIRSPACE HOUSTON, TX..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 49 U.S.C. SECTION 44812 AS AMENDED BY SECTION 935 OF THE FAA REAUTHORIZATION ACT OF 2024 FOR PROTECTION OF LARGE PUBLIC GATHERINGS. UAS FLT OPS ARE PROHIBITED WI AN AREA DEFINED AS 1NM RADIUS OF 294543N0952245W (IAH184011.8) SFC-400FT AGL EFFECTIVE 2611261400 UTC UNTIL 2611261800 UTC. DUE TO THE 77TH ANNUAL HEB THANKSGIVING DAY PARADE UNDER SEC 44812 C (2). UAS OPS FOR OPERATIONAL, SAFETY, SECURITY, OR COMPLIANCE OVERSIGHT PURPOSES MUST CTC POINT OF CONTACT. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C. SECTION 130I AND 6 U.S.C. SECTION 124N, THE DEPARTMENT OF DEFENSE (DOD), THE DEPARTMENT OF HOMELAND SECURITY (DHS) OR THE DEPARTMENT OF JUSTICE (DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. THE HOUSTON POLICE DEPT SGT CARL SEDITA TEL 346-577-2775 IS THE POINT OF CONTACT. 2611261400-2611261800",
-    "geometry": {
-     "type": "Polygon",
-     "coordinates": [
-      [
-       [
-        -95.37917,
-        29.77865
-       ],
-       [
-        -95.37584,
-        29.7784
-       ],
-       [
-        -95.37262,
-        29.77764
-       ],
-       [
-        -95.36959,
-        29.77641
-       ],
-       [
-        -95.36686,
-        29.77474
-       ],
-       [
-        -95.3645,
-        29.77268
-       ],
-       [
-        -95.36258,
-        29.7703
-       ],
-       [
-        -95.36117,
-        29.76766
-       ],
-       [
-        -95.36031,
-        29.76484
-       ],
-       [
-        -95.36002,
-        29.76194
-       ],
-       [
-        -95.36031,
-        29.75904
-       ],
-       [
-        -95.36117,
-        29.75623
-       ],
-       [
-        -95.36258,
-        29.75359
-       ],
-       [
-        -95.3645,
-        29.7512
-       ],
-       [
-        -95.36686,
-        29.74915
-       ],
-       [
-        -95.36959,
-        29.74747
-       ],
-       [
-        -95.37262,
-        29.74624
-       ],
-       [
-        -95.37584,
-        29.74549
-       ],
-       [
-        -95.37917,
-        29.74524
-       ],
-       [
-        -95.38249,
-        29.74549
-       ],
-       [
-        -95.38571,
-        29.74624
-       ],
-       [
-        -95.38874,
-        29.74747
-       ],
-       [
-        -95.39147,
-        29.74915
-       ],
-       [
-        -95.39383,
-        29.7512
-       ],
-       [
-        -95.39575,
-        29.75359
-       ],
-       [
-        -95.39716,
-        29.75623
-       ],
-       [
-        -95.39802,
-        29.75904
-       ],
-       [
-        -95.39832,
-        29.76194
-       ],
-       [
-        -95.39803,
-        29.76484
-       ],
-       [
-        -95.39716,
-        29.76766
-       ],
-       [
-        -95.39575,
-        29.7703
-       ],
-       [
-        -95.39384,
-        29.77268
-       ],
-       [
-        -95.39148,
-        29.77474
-       ],
-       [
-        -95.38874,
-        29.77641
-       ],
-       [
-        -95.38572,
-        29.77764
-       ],
-       [
-        -95.38249,
-        29.7784
-       ],
-       [
-        -95.37917,
-        29.77865
-       ]
-      ]
-     ]
-    }
-   }
-  },
   "6/9306": {
    "notam_id": "6/9306",
    "type": "HAZARDS",
@@ -9414,6 +9236,21 @@
    "first_seen": "2026-11-19T14:40:36Z",
    "subject": "6/8983",
    "left_at": "2026-11-23T03:10:31Z"
+  },
+  "6/8989": {
+   "type": "UAS PUBLIC GATHERING",
+   "state": "TX",
+   "bbox": [
+    -95.3983,
+    29.7452,
+    -95.36,
+    29.7786
+   ],
+   "area_km2": 10.7,
+   "ceiling_ft": 400,
+   "first_seen": "2026-11-19T15:10:37Z",
+   "subject": "6/8989",
+   "left_at": "2026-11-26T18:10:33Z"
   },
   "6/9013": {
    "type": "HAZARDS",
