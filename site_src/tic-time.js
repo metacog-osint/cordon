@@ -1,4 +1,4 @@
-/*! tic-time.js v1.4 · The Intelligence Company shared time display · canonical copy:
+/*! tic-time.js v1.5 · The Intelligence Company shared time display · canonical copy:
  *  the hub's site/shared/tic-time.js (copy this file into each site; keep the version line).
  *  SPDX-License-Identifier: MIT. Copyright (c) 2026 The Intelligence Company. MIT in every repository it is
  *  copied into, whatever that repository's own licence.
@@ -18,6 +18,8 @@
  *    TicTime.mountSettings(el)         adds a "Time" button that opens the settings dialog
  *    TicTime.renderAll(root)           fills every <time datetime="..." data-tic="datetime|time|date"> in root;
  *                                      add data-tic-year for the full date (v1.3)
+ *  v1.5: a date outside the current year carries its year unless year: false is passed, so "21 Dec to 23 Nov" or a
+ *  TFR from "8 Mar 16:00Z" to "8 Mar 15:59Z" (a year apart) no longer reads as running backwards.
  *  v1.4: formatters are built once per zone and option set and reused (a new Intl.DateTimeFormat cost about 1 ms a
  *  call, so pages that format thousands of times drew slowly). Output is unchanged.
  */
@@ -108,7 +110,9 @@
     var d = toDate(v);
     if (!d || isNaN(d.getTime())) return "—";
     var z = zone(), h12 = hour12(), showDate = opts.date !== false, showTime = opts.time !== false;
-    if (opts.year && showDate) {
+    // v1.5: outside the current year, say the year (year: false keeps the short form).
+    var withYear = opts.year || (opts.year !== false && d.getUTCFullYear() !== new Date().getUTCFullYear());
+    if (withYear && showDate) {
       // v1.3: a full date reads the house way, "31 Oct 2026", whatever the zone or clock.
       var q;
       try {
@@ -165,7 +169,7 @@
       var kind = els[i].getAttribute("data-tic");
       els[i].textContent = format(els[i].getAttribute("datetime"),
         { date: kind !== "time", time: kind !== "date", seconds: els[i].hasAttribute("data-tic-seconds"),
-          year: els[i].hasAttribute("data-tic-year") });
+          year: els[i].hasAttribute("data-tic-year") || undefined });
     }
   }
 
@@ -231,6 +235,6 @@
     return btn;
   }
 
-  window.TicTime = { version: "1.4", format: format, zone: zone, zoneLabel: zoneLabel, hour12: hour12, get: function () { return Object.assign({}, settings); },
+  window.TicTime = { version: "1.5", format: format, zone: zone, zoneLabel: zoneLabel, hour12: hour12, get: function () { return Object.assign({}, settings); },
     set: set, onChange: onChange, renderAll: renderAll, mountSettings: mountSettings, zones: ZONES.slice() };
 })();

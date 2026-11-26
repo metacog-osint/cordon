@@ -41,13 +41,7 @@
     return e;
   }
   function day(d) { if (!d) return "—"; var p = String(d).slice(0, 10).split("-"); return Number(p[2]) + " " + MONTHS[Number(p[1]) - 1] + " " + p[0]; }
-  // A date outside this year carries its year ("1 Jan 2027 05:59Z"), so a TFR running 8 Mar 2026 to 8 Mar 2027 does not
-  // read as ending a minute before it starts.
-  function when(iso) {
-    if (!iso) return "—";
-    var y = new Date(iso).getUTCFullYear();
-    return T.format(iso, !isNaN(y) && y !== new Date().getUTCFullYear() ? { year: true } : undefined);
-  }
+  function when(iso) { return iso ? T.format(iso) : "—"; }
   // Leaflet inserts a string tooltip as HTML; a text node keeps source text as text.
   function tip(text) { return h("div", { "class": "tip" }, [text]); }
   function link(url, text) { return url ? h("a", { href: url, rel: "noopener" }, [text]) : text; }
