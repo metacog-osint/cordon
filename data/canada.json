@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-26T19:40:24Z",
+ "generated": "2026-11-26T20:00:24Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -237,7 +237,7 @@
    "level": 3,
    "advisory": "Avoid all travel",
    "regional": false,
-   "updated": "2026-11-26T19:34:11Z",
+   "updated": "2026-11-26T19:44:16Z",
    "update_type": "Regular text update",
    "update": "Natural disasters and climate section – added information on El Niño",
    "link": "https://travel.gc.ca/destinations/burkina-faso"
