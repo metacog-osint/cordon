@@ -76,6 +76,34 @@ class Cause(unittest.TestCase):
         self.assertEqual((c["cause"], c["cause_group"], c["cause_basis"][-1]), ("unknown", "unknown",
                                                                                  "no cause words"))
 
+    def test_a_medical_evacuation_in_a_military_area_is_military(self):
+        # E4492/26 (YMMM, QRRCA), published as hazard to people on 27 Nov 2026 for "EVACUATION".
+        text = ("TASMAN SEA AIRSPACE M440CDGHLM ACT DUE MIL FLYING AND NON-FLYING\r\nFOR SAR, MEDICAL EMERG EVACUATION "
+                "(MEDEVAC) AND FLOOD OR FIRE RELIEF\r\nFIRE FIGHTING (FFR) ACFT CTC TEL: 02 9537 4652\r\n"
+                "POINT OF CTC: FLEET EXERCISE COORDINATOR")
+        c = self.c(q="QRRCA", text=text, fir="YMMM")
+        self.assertEqual((c["cause"], c["cause_group"], c["cause_basis"][-1]),
+                         ("military operation", "military_and_test", "text: MIL"))
+        # A medical evacuation alone is no evacuation; an evacuation of people still is.
+        self.assertNotEqual(self.c(text="AIRSPACE CLSD FOR MEDICAL EVACUATION FLT")["cause_group"], "hazard_to_people")
+        self.assertNotEqual(self.c(text="AEROMEDICAL EVACUATION OPS")["cause_group"], "hazard_to_people")
+        self.assertEqual(self.c(text="EVACUATION OF RESIDENTS DUE TO GAS LEAK")["cause_group"], "hazard_to_people")
+
+    def test_a_military_word_before_the_hazard_word_wins_in_rt_rr_ra(self):
+        # E4739/26 (RKRR, QRTCA): an explosive device carried by military aircraft, not a hazard to people.
+        c = self.c(text="TEMPO RESTRICTED AREA ACT AS FLW : ... THIS NOTAM APPLIES ONLY TO THE MIL ACFT EQUIPPED WITH "
+                        "EED (ELECTRO EXPLOSIVE DEVICE).", fir="RKRR")
+        self.assertEqual(c["cause_group"], "military_and_test")
+        self.assertEqual(self.c(q="QRRCA", text="MIL FLYING FOR FIRE FIGHTING")["cause_group"], "military_and_test")
+        # The hazard word first still wins, and other subjects are unchanged.
+        self.assertEqual(self.c(text="CONTROLLED DETONATION OF UXO BY MIL EOD TEAM")["cause_group"], "hazard_to_people")
+        self.assertEqual(self.c(q="QWULW", text="MIL UAS IN SUPPORT OF EXPLOSIVE DEMOLITION")["cause_group"],
+                         "hazard_to_people")
+
+    def test_a_training_word_anywhere_keeps_wd_military(self):
+        for t in ("TRG WITH LIVE AMMUNITION", "MIL TRG WITH LIVE AMMUNITION", "MILITARY EOD TRAINING"):
+            self.assertEqual(self.c(q="QWDLW", text=t)["cause_group"], "military_and_test", t)
+
     def test_space_words_are_launchs(self):
         for t in ("TEMPORARY DANGER AREA DUE TO SPACE DEBRIS RETURN", "AEROSPACE FLT ACT BY CHINA",
                   "DANGEROUS AREA FOR ROCKET LAUNCH STAGE 1"):

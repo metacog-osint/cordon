@@ -13,7 +13,9 @@ Steps, each writing its reasons:
   - cause(): from the Q-code subject first (CODE_CAUSE: WM, WE, RD, RA military and test; WH, WD, WR a hazard to
     people only with ordnance, structure-demolition, evacuation or release words, else quarry, mine and avalanche
     blasting or spraying (scheduled and routine), training (military and test), or CODE_DEFAULT), then the NOTAM's
-    own words (WORDS, in order; RT, RR, RP and WU take their cause from the words alone). Fireworks under WD or WH
+    own words (WORDS, in order; RT, RR, RP and WU take their cause from the words alone; in RT, RR and RA a military
+    word before a hazard or disaster word wins, MILITARY_FIRST; a medical evacuation is no evacuation, MED_EVAC;
+    a training word anywhere keeps WH, WD and WR military). Fireworks under WD or WH
     are scheduled and routine. Space words (nms.LAUNCH_WORDS, see space()) make it space operations, which Launch
     owns, and a GNSS subject (G) is Noisefloor's and Launch's: both are excluded from the ranking.
   - the baseline (new_baseline(), update(); small, committed, never pruned): counts of new NOTAMs per (region,
@@ -115,6 +117,16 @@ CODE_ROUTINE = [
                 r"PESTICIDE\w*|LOCUST\w*)\b"), "forest or crop spraying"),
 ]
 CODE_MILITARY = re.compile(r"\b(?:MILITARY|MIL|TRG|TRAINING|FIRING|FRNG|EXERCISES?|EXER|RANGE)\b")
+TRAINING = re.compile(r"\b(?:TRG|TRAINING)\b")
+# A medical evacuation (a casualty flown out) is not an evacuation of people from a hazard: "MEDICAL EMERG EVACUATION
+# (MEDEVAC)" in an Australian military area's list of purposes (E4492/26, YMMM, 26 Nov 2026). MEDEVAC, CASEVAC and
+# AEROMEDICAL are single words and never match EVACUAT. The phrase is set aside before the cause words are read.
+MED_EVAC = re.compile(r"\b(?:MEDICAL|AEROMEDICAL|AERO-MEDICAL|MED|CASUALTY|CASUALTIES|PATIENTS?)\s+"
+                      r"(?:(?:EMERG\w*|AIR)\s+)?EVACUAT\w*")
+# RT, RR and RA areas: a military word before the hazard-to-people or disaster word names the area's use, and the
+# hazard word is something done inside it ("ACT DUE MIL FLYING ... FOR SAR, ... FLOOD OR FIRE RELIEF"; "THIS NOTAM
+# APPLIES ONLY TO THE MIL ACFT EQUIPPED WITH EED (ELECTRO EXPLOSIVE DEVICE)", E4739/26, RKRR).
+MILITARY_FIRST = ("RT", "RR", "RA")
 CODE_DEFAULT = {"WH": ("blasting, no hazard words", "scheduled_and_routine"),
                 "WD": ("demolition of explosives, no hazard words", "military_and_test"),
                 "WR": ("radioactive or toxic materials, no hazard words", "unknown")}
@@ -173,12 +185,18 @@ def cause(f: dict) -> dict:
     if sp:
         return {"cause": "space operations", "cause_group": "space_operations",
                 "cause_basis": [code, "text: " + sp], "excluded": "launch"}
+    text = MED_EVAC.sub(" MEDEVAC ", text)
     words = None
     for pat, c, g in WORDS:
         hit = pat.search(text)
         if hit:
             words = (c, g, "text: " + hit.group(0))
             break
+    if words and subj in MILITARY_FIRST and words[1] in ("hazard_to_people", "disaster_response"):
+        pat, c, g = WORDS[-1]
+        mil = pat.search(text)
+        if mil and mil.start() < hit.start():
+            words = (c, g, "text: " + mil.group(0))
     if subj in CODE_CAUSE:
         c, g = CODE_CAUSE[subj]
         if subj in ("WD", "WH") and words and words[0] == "fireworks":
@@ -199,7 +217,7 @@ def _hazard_code(subj: str, c: str, code: str, text: str) -> dict:
     hz = CODE_HAZARD.search(text)
     routine = next(((pat.search(text), name) for pat, name in CODE_ROUTINE if pat.search(text)), None)
     mil = CODE_MILITARY.search(text)
-    if hz and not routine and not (mil and mil.group(0) in ("TRG", "TRAINING")):
+    if hz and not routine and not TRAINING.search(text):
         return {"cause": c, "cause_group": "hazard_to_people", "cause_basis": [code, "text: " + hz.group(0)]}
     if routine:
         return {"cause": routine[1], "cause_group": "scheduled_and_routine",
