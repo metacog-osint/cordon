@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-27T20:40:24Z",
+ "generated": "2026-11-27T21:00:18Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2205,9 +2205,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-27T20:37:12Z",
+   "updated": "2026-11-27T20:59:53Z",
    "update_type": "Regular text update",
-   "update": "Entry and exit requirements section – updated information on visas",
+   "update": "Editorial change",
    "link": "https://travel.gc.ca/destinations/singapore"
   },
   "SI": {
