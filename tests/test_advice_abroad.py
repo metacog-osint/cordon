@@ -403,6 +403,8 @@ class NetherlandsCollect(unittest.TestCase):
         held = {**fourth, "UKR": {**fourth["UKR"], "unread_since": STAMP}}
         f = next(f for f in NetherlandsFeed.build(self, held)["features"] if f["properties"]["id"] == "cordon:netherlands:UKR")
         self.assertEqual(f["properties"]["measures"]["unread_since"], STAMP)
+        self.assertTrue(f["properties"]["title"].endswith(
+            "(last colour read; no colour readable since 25 Nov 2026 19:30 UTC)"))
         regs = registers.ids(ROOT / "doctrine")
         self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
 
@@ -444,6 +446,33 @@ class NetherlandsFeed(unittest.TestCase):
         for f in fc["features"]:
             self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
         self.assertIn("Nederland Wereldwijd", fc["attribution"])
+
+    def test_a_kept_red_reading_says_it_is_the_last_colour_read(self):
+        # A red destination whose introduction stops naming a colour keeps its last reading (netherlands.collect);
+        # the item must not read as today's advice: its title says it is the last colour read and since when none
+        # could be read, and the site's destination picker and Dutch table say the same.
+        kept = {**self.rec("MLI", "ML", "Mali", ["rood"]), "unread_since": "2026-11-24T06:05:00Z"}
+        fc = self.build({"MLI": kept, "UKR": self.rec("UKR", "UA", "Ukraine", ["rood"])})
+        feats = {f["properties"]["id"]: f for f in fc["features"]}
+        items = {k: f["properties"] for k, f in feats.items()}
+        ml = items["cordon:netherlands:MLI"]
+        self.assertEqual(ml["title"], "Netherlands, Mali: Red: do not travel "
+                                      "(last colour read; no colour readable since 24 Nov 2026 06:05 UTC)")
+        self.assertEqual((ml["measures"]["unread_since"], ml["measures"]["advice"]),
+                         ("2026-11-24T06:05:00Z", netherlands.LEVELS["rood"]))
+        self.assertEqual(ml["title"].replace("Netherlands, ", "").split(":")[0], "Mali")  # how the site reads the name
+        uk = items["cordon:netherlands:UKR"]
+        self.assertEqual(uk["title"], "Netherlands, Ukraine: Red: do not travel")
+        self.assertNotIn("unread_since", uk["measures"])
+        regs = registers.ids(ROOT / "doctrine")
+        self.assertEqual([m for _, sev, m in contract.check(feats["cordon:netherlands:MLI"], regs) if sev == "error"], [])
+        # The site's records carry unread_since, and both Dutch rows on the page add the qualifier.
+        tool = (ROOT / "tools" / "cordon.py").read_text(encoding="utf-8")
+        nl = tool.split('"netherlands": [', 1)[1].split("for f in fc", 1)[0]
+        self.assertIn('"unread_since"', nl)
+        js = (ROOT / "site_src" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('" (last colour read; no colour readable since "', js)
+        self.assertEqual(sum(1 for x in js.splitlines() if "c.advice" in x and "nlUnread(c)" in x), 2)
 
     def test_the_picker_does_not_call_an_unlisted_yellow_destination_green(self):
         # A yellow destination not changed or edited lately has no feed item, so the destination picker falls back to
