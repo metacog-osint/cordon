@@ -699,7 +699,7 @@
    "iso": "CO",
    "name_nl": "Colombia",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/colombia",
-   "updated": "2026-09-25T19:55:54.294Z",
+   "updated": "2026-11-27T11:27:27.954Z",
    "colours": [
     "geel",
     "oranje",
@@ -1041,13 +1041,13 @@
    "iso": "FJ",
    "name_nl": "Fiji",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/fiji",
-   "updated": "2026-09-28T08:59:01.281Z",
+   "updated": "2026-11-27T14:39:05.039Z",
    "colours": [
     "groen"
    ],
    "colour": "groen",
    "regional": false,
-   "intro_nl": "In het kort De kleurcode van het reisadvies voor Fiji is groen.",
+   "intro_nl": "De kleurcode van het reisadvies voor Fiji is groen.",
    "name": "Fiji",
    "advice": "Green: no special security risks (travel there)"
   },
@@ -1376,7 +1376,7 @@
    "iso": "HT",
    "name_nl": "Haïti",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/haiti",
-   "updated": "2026-06-17T10:42:00.535Z",
+   "updated": "2026-11-27T14:03:36.284Z",
    "colours": [
     "rood"
    ],
@@ -1690,7 +1690,7 @@
    "iso": "KW",
    "name_nl": "Koeweit",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/koeweit",
-   "updated": "2026-09-17T14:24:53.481Z",
+   "updated": "2026-11-27T14:30:54.494Z",
    "colours": [
     "oranje"
    ],
@@ -3110,13 +3110,13 @@
    "iso": "TO",
    "name_nl": "Tonga",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/tonga",
-   "updated": "2026-04-24T11:13:12.380Z",
+   "updated": "2026-11-27T14:38:35.335Z",
    "colours": [
     "groen"
    ],
    "colour": "groen",
    "regional": false,
-   "intro_nl": "In het kort De kleurcode van het reisadvies voor Tonga is groen.",
+   "intro_nl": "De kleurcode van het reisadvies voor Tonga is groen.",
    "name": "Tonga",
    "advice": "Green: no special security risks (travel there)"
   },
@@ -3204,7 +3204,7 @@
    "iso": "TZ",
    "name_nl": "Tanzania",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/tanzania",
-   "updated": "2026-10-19T11:24:40.529Z",
+   "updated": "2026-11-27T09:11:48.180Z",
    "colours": [
     "geel",
     "oranje"
@@ -3447,7 +3447,7 @@
    "iso": "ZA",
    "name_nl": "Zuid-Afrika",
    "link": "https://www.nederlandwereldwijd.nl/reisadvies/zuid-afrika",
-   "updated": "2026-07-07T14:00:59.863Z",
+   "updated": "2026-11-27T09:26:28.566Z",
    "colours": [
     "geel"
    ],

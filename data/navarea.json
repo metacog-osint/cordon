@@ -2,6 +2,530 @@
  "source": "https://msi.nga.mil/apology_objects/DailyMem*.txt",
  "warnings": [
   {
+   "id": "4-1156-2026",
+   "area": "NAVAREA IV",
+   "subregion": null,
+   "number": "NAVAREA IV 1156/2026",
+   "issued": "271236Z NOV 2026",
+   "authority": "",
+   "category": "search_and_rescue",
+   "sea": "North Atlantic",
+   "place": "Cuba",
+   "headline": "VESSEL SANK IN 23-05.00N 082-59.53W.",
+   "text": "NORTH ATLANTIC.\nSTRAITS OF FLORIDA.\nCUBA.\nVESSEL SANK IN 23-05.00N 082-59.53W.\nSEARCH AND RESCUE OPERATIONS IN PROGRESS IN\nVICINITY. VESSELS IN VICINITY REQUESTED TO KEEP A\nSHARP LOOKOUT, ASSIST IF POSSIBLE.\nREPORTS TO ANY COASTAL RADIO STATION.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.992,
+     23.083
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "4-1155-2026",
+   "area": "NAVAREA IV",
+   "subregion": null,
+   "number": "NAVAREA IV 1155/2026",
+   "issued": "270136Z NOV 2026",
+   "authority": "",
+   "category": "other",
+   "sea": "Caribbean Sea",
+   "place": "Nicaragua",
+   "headline": "NAVAL OPERATIONS 301400Z TO 302100Z NOV IN AREA BOUND BY 12-32.35N 081-59.84W, 12-24.17N 081-29.22W, 12-08.30N 081-33.78W, 12-16.83N 082-04.16W.",
+   "text": "CARIBBEAN SEA.\nNICARAGUA.\n1. NAVAL OPERATIONS 301400Z TO 302100Z NOV\n   IN AREA BOUND BY\n   12-32.35N 081-59.84W, 12-24.17N 081-29.22W,\n   12-08.30N 081-33.78W, 12-16.83N 082-04.16W.\n2. CANCEL THIS MSG 302200Z NOV 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -81.997,
+       12.539
+      ],
+      [
+       -81.487,
+       12.403
+      ],
+      [
+       -81.563,
+       12.138
+      ],
+      [
+       -82.069,
+       12.28
+      ],
+      [
+       -81.997,
+       12.539
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-30T22:00:00Z"
+  },
+  {
+   "id": "4-1154-2026",
+   "area": "NAVAREA IV",
+   "subregion": null,
+   "number": "NAVAREA IV 1154/2026",
+   "issued": "261924Z NOV 2026",
+   "authority": "",
+   "category": "ice",
+   "sea": null,
+   "place": null,
+   "headline": "NORTH AMERICAN ICE SERVICE (NAIS) ICEBERG BULLETIN 270001Z NOV.",
+   "text": "1. NORTH AMERICAN ICE SERVICE (NAIS)\n   ICEBERG BULLETIN 270001Z NOV.\n2. ICEBERG LIMIT ALONG TRACKLINE JOINING\n   50-45N 056-05W, 50-00N 055-00W,\n   49-45N 053-15W, 53-00N 050-15W,\n   60-00N 058-00W.\n3. ESTIMATED ICEBERG LIMIT ALONG\n   TRACKLINE JOINING\n   60-00N 058-00W, 60-55N 054-40W,\n   58-35N 044-20W, 59-35N 040-00W,\n   64-25N 036-50W, 65-00N 028-00W.\n4. WESTERN ICEBERG LIMIT ALONG TRACKLINE\n   JOINING\n   51-49N 056-10W, 51-32N 056-05W.\n5. SEA ICE LIMIT ALONG TRACKLINES\n   JOINING:\n   A. 53-56N 057-08W, 55-00N 057-00W,\n      56-00N 059-59W, 56-58N 060-04W,\n      57-38N 061-54W.\n   B. 59-36N 065-27W, 58-52N 067-23W,\n      59-33N 068-44W, 61-06N 069-01W,\n      63-30N 076-13W, 63-57N 076-05W,\n      62-30N 070-45W, 61-12N 064-35W,\n      62-00N 064-11W, 62-26N 059-36W,\n      64-04N 057-54W.\n6. MOST RECENT RECONNAISSANCE:\n   INTERIOR SATELLITE PASS 26 NOV 26.\n7. REPORT POSITION AND TIME OF ANY ICEBERGS\n   SEA ICE OR STATIONARY RADAR TARGETS THAT\n   MAY LIKELY BE ICE TO THE NEAREST CANADIAN\n   COAST GUARD MARINE COMMUNICATIONS AND\n   TRAFFIC SERVICE STATION OR\n   USING INMARSAT CODE 42.\n8. FOR MORE REPORTING INFORMATION OR TO\n   DOWNLOAD SHAPEFILES AND WEEKLY PREDICTIONS,\n   GO TO WWW.NAVCEN.USCG.GOV/INTERNATIONAL-ICE-PATROL.\n9. CANCEL THIS MSG 280001Z NOV 26.",
+   "geometry": {
+    "type": "MultiLineString",
+    "coordinates": [
+     [
+      [
+       -56.083,
+       50.75
+      ],
+      [
+       -55.0,
+       50.0
+      ],
+      [
+       -53.25,
+       49.75
+      ],
+      [
+       -50.25,
+       53.0
+      ],
+      [
+       -58.0,
+       60.0
+      ]
+     ],
+     [
+      [
+       -58.0,
+       60.0
+      ],
+      [
+       -54.667,
+       60.917
+      ],
+      [
+       -44.333,
+       58.583
+      ],
+      [
+       -40.0,
+       59.583
+      ],
+      [
+       -36.833,
+       64.417
+      ],
+      [
+       -28.0,
+       65.0
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-28T00:01:00Z"
+  },
+  {
+   "id": "4-1151-2026",
+   "area": "NAVAREA IV",
+   "subregion": null,
+   "number": "NAVAREA IV 1151/2026",
+   "issued": "251802Z NOV 2026",
+   "authority": "",
+   "category": "drilling_survey",
+   "sea": null,
+   "place": null,
+   "headline": "NAVAREA IV MOBILE OFFSHORE DRILLING UNITS POSITIONS AT 251750Z NOV",
+   "text": "1. NAVAREA IV MOBILE OFFSHORE DRILLING UNITS\n   POSITIONS AT 251750Z NOV:\n   A. AGOSTO 12 19-23.0N 092-03.1W.\n   B. ARGOS PLATFORM 27-10.4N 090-22.0W.\n   C. ATLANTIS 19-23.9N 092-02.3W.\n   D. AUGER TLP 27-32.7N 092-26.6W.\n   E. BLUE EAGLE 18-31.8N 093-20.3W.\n   F. BORR RAN 18-20.4N 093-53.6W.\n   G. BORR SIF 07-08.3N 055-41.1W.\n   H. BP ATLANTIS PLATFORM 27-11.7N 090-01.6W.\n   I. CAMPECHE 19-33.7N 092-11.0W.\n   J. CENTENARIO GR 21-07.7N 097-08.1W.\n   K. CHIHUAHUA 19-17.7N 091-57.5W.\n   L. CME I 19-34.6N 092-02.7W.\n   M. CME II 18-34.4N 092-46.2W.\n   N. COATZACOALCOS 18-14.0N 094-12.9W.\n   O. CPOC MAGNOLIA 27-12.2N 092-12.2W.\n   P. DEEPWATER ATLAS 26-40.1N 091-33.5W.\n   Q. DEEPWATER CONQUEROR 27-19.0N 090-45.1W.\n   R. DEEPWATER INVICTUS 26-40.7N 092-34.6W.\n   S. DEEPWATER PONTUS 28-00.4N 089-09.7W.\n   T. DEEPWATER POSEIDON 26-10.5N 094-46.4W.\n   U. DEEPWATER PROTEUS 27-32.0N 090-09.9W.\n   V. DEEPWATER THALASSA 25-45.0N 095-24.3W.\n   W. DEEPWATER TITAN 27-09.1N 091-12.7W.\n   X. DEFENDER 18-28.6N 094-01.9W.\n   Y. DEVELOPMENT DRILLER III 10-38.5N 061-39.0W.\n   Z. ERREA WITTU 07-59.5N 056-49.5W.\n   AA. ESSAR WILDCAT 18-51.5N 091-45.7W.\n   AB. FRIDA I 19-36.1N 092-31.6W.\n   AC. GALAR 18-44.5N 093-07.2W.\n   AD. GERSEMI 19-02.5N 092-14.8W.\n   AE. GULF DRILLER VI 18-29.3N 093-20.6W.\n   AF. GULF DRILLER VIII 18-29.9N 094-00.4W.\n   AG. HILD 18-49.0N 091-46.0W.\n   AH. INDEPENDENCIA 1 19-02.5N 092-26.6W.\n   AI. INDEPENDENCIA 2 12-23.2N 070-08.5W.\n   AJ. IOLAIR 19-36.0N 092-14.1W.\n   AK. JACK ST MALO 26-14.1N 091-15.7W.\n   AL. (NEW POSITION) JOE DOUGLAS\n       10-07.3N 060-18.7W.\n   AM. KUKULKAN 18-16.4N 094-03.6W.\n   AN. LA COVADONGA 19-29.3N 091-57.9W.\n   AO. LA SANTA MARIA 18-36.8N 093-17.7W.\n   AP. LIZA DESTINY 08-00.7N 056-59.5W.\n   AQ. LIZA UNITY 08-00.6N 056-54.9W.\n   AR. MAD DOG 27-11.3N 090-16.1W.\n   AS. MARLIN TLP 29-06.5N 087-56.7W.\n   AT. MARS TLP 28-10.4N 089-13.4W.\n   AU. MAZU 18-18.9N 093-49.6W.\n   AV. MIAMTE MV34 18-24.3N 093-46.2W.\n   AW. NABARIMA 10-14.8N 062-09.0W.\n   AX. NFE PIONEER III 22-39.2N 097-40.8W.\n   AY. NJORD 19-15.9N 092-26.2W.\n   AZ. NOBLE BLACKHAWK 29-05.1N 087-57.6W.\n   AAA. NOBLE BLACKHORNET 27-13.4N 090-01.9W.\n   AAB. NOBLE BLACKLION 27-08.8N 090-19.1W.\n   AAC. (NEW POSITION) NOBLE BOB DOUGLAS\n        08-01.2N 056-46.1W.\n   AAD. (NEW POSITION) NOBLE DEVELOPER\n        07-45.0N 057-06.7W.\n   AAE. (NEW POSITION) NOBLE DON TAYLOR\n        07-57.6N 057-06.1W.\n   AAF. NOBLE GLOBETROTTER II 28-51.4N 090-07.4W.\n   AAG. (NEW POSITION) NOBLE SAM CROFT\n        07-59.6N 056-42.4W.\n   AAH. NOBLE STANLEY LAFOSSE 28-50.6N 087-51.6W.\n   AAI. (NEW POSITION) NOBLE TOM MADDEN\n        07-57.7N 056-41.3W.\n   AAJ. NOBLE VOYAGER 28-10.7N 089-07.0W.\n   AAK. OLYMPUS N88 28-09.6N 089-12.8W.\n   AAL. ONE GUYANA 07-57.4N 056-43.0W.\n   AAM. PAPALOAPAN 19-33.4N 092-12.9W.\n   AAN. PERRO NEGRO 10 18-20.2N 093-52.2W.\n   AAO. PIONEER 26-41.7N 090-30.6W.\n   AAP. PROSPERITY 08-11.7N 057-00.2W.\n   AAQ. (NEW POSITION) Q4000 27-43.3N 090-45.0W.\n   AAR. Q5000 27-09.6N 091-14.0W.\n   AAS. RALPH COFFMAN 10-14.8N 060-30.9W.\n   AAT. ROWAN RELENTLESS 07-34.5N 055-27.2W.\n   AAU. SANDUNGA 18-52.9N 091-49.0W.\n   AAV. SEAROSE FPSO 46-47.2N 048-00.8W.\n   AAW. SEVAN LOUISIANA 28-15.9N 088-50.6W.\n   AAX. SHELL WHALE 26-13.4N 094-40.4W.\n   AAY. (NEW POSITION) STENA CARRON\n        08-55.1N 057-19.3W.\n   AAZ. TABASCO 19-35.5N 092-16.3W.\n   AAAA. TAHITI SPAR 27-19.6N 090-42.9W.\n   AAAB. TERRA NOVA 46-28.3N 048-27.9W.\n   AAAC. THUNDER HORSE PDQ 28-11.4N 088-29.7W.\n   AAAD. TURRITELLA 26-25.7N 090-48.8W.\n   AAAE. TUXPAN 18-45.8N 091-45.7W.\n   AAAF. UXPANAPA 18-32.4N 093-17.7W.\n   AAAG. VALARIS DS-16 29-04.5N 087-55.6W.\n   AAAH. VITO FPU 28-01.5N 089-12.6W.\n   AAAI. WEST COURAGEOUS 19-10.3N 092-25.7W.\n   AAAJ. WEST INTREPID 19-34.6N 092-02.8W.\n   AAAK. (NEW POSITION) WEST NEPTUNE\n         28-25.2N 089-05.0W.\n   AAAL. (NEW POSITION) WEST VELA\n         26-19.2N 092-38.7W.\n   AAAM. WFD 400 28-41.0N 090-08.9W.\n   AAAN. YUNUEN 19-32.4N 092-10.5W.\n   AAAO. YUUM K'AK' NAAB 19-36.7N 092-17.9W.\n   AAAP. ZACATECAS 19-29.1N 091-57.1W.\n2. TO REPORT A MOBILE OFFSHORE DRILLING UNIT AS\n   PER IMO RESOLUTION A.1023(26), PARAGRAPH 11.5.1,\n   CONTACT NAVSAFETY@NGA.MIL SUBJ: MODU REPORT.\n3. CANCEL NAVAREA IV 1117/26.",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -92.052,
+      19.383
+     ],
+     [
+      -90.367,
+      27.173
+     ],
+     [
+      -92.038,
+      19.398
+     ],
+     [
+      -92.443,
+      27.545
+     ],
+     [
+      -93.338,
+      18.53
+     ],
+     [
+      -93.893,
+      18.34
+     ],
+     [
+      -55.685,
+      7.138
+     ],
+     [
+      -90.027,
+      27.195
+     ],
+     [
+      -92.183,
+      19.562
+     ],
+     [
+      -97.135,
+      21.128
+     ],
+     [
+      -91.958,
+      19.295
+     ],
+     [
+      -92.045,
+      19.577
+     ],
+     [
+      -92.77,
+      18.573
+     ],
+     [
+      -94.215,
+      18.233
+     ],
+     [
+      -92.203,
+      27.203
+     ],
+     [
+      -91.558,
+      26.668
+     ],
+     [
+      -90.752,
+      27.317
+     ],
+     [
+      -92.577,
+      26.678
+     ],
+     [
+      -89.162,
+      28.007
+     ],
+     [
+      -94.773,
+      26.175
+     ],
+     [
+      -90.165,
+      27.533
+     ],
+     [
+      -95.405,
+      25.75
+     ],
+     [
+      -91.212,
+      27.152
+     ],
+     [
+      -94.032,
+      18.477
+     ],
+     [
+      -61.65,
+      10.642
+     ],
+     [
+      -56.825,
+      7.992
+     ],
+     [
+      -91.762,
+      18.858
+     ],
+     [
+      -92.527,
+      19.602
+     ],
+     [
+      -93.12,
+      18.742
+     ],
+     [
+      -92.247,
+      19.042
+     ],
+     [
+      -93.343,
+      18.488
+     ],
+     [
+      -94.007,
+      18.498
+     ],
+     [
+      -91.767,
+      18.817
+     ],
+     [
+      -92.443,
+      19.042
+     ],
+     [
+      -70.142,
+      12.387
+     ],
+     [
+      -92.235,
+      19.6
+     ],
+     [
+      -91.262,
+      26.235
+     ],
+     [
+      -60.312,
+      10.122
+     ],
+     [
+      -94.06,
+      18.273
+     ],
+     [
+      -91.965,
+      19.488
+     ],
+     [
+      -93.295,
+      18.613
+     ],
+     [
+      -56.992,
+      8.012
+     ],
+     [
+      -56.915,
+      8.01
+     ],
+     [
+      -90.268,
+      27.188
+     ],
+     [
+      -87.945,
+      29.108
+     ],
+     [
+      -89.223,
+      28.173
+     ],
+     [
+      -93.827,
+      18.315
+     ],
+     [
+      -93.77,
+      18.405
+     ],
+     [
+      -62.15,
+      10.247
+     ],
+     [
+      -97.68,
+      22.653
+     ],
+     [
+      -92.437,
+      19.265
+     ],
+     [
+      -87.96,
+      29.085
+     ],
+     [
+      -90.032,
+      27.223
+     ],
+     [
+      -90.318,
+      27.147
+     ],
+     [
+      -56.768,
+      8.02
+     ],
+     [
+      -57.112,
+      7.75
+     ],
+     [
+      -57.102,
+      7.96
+     ],
+     [
+      -90.123,
+      28.857
+     ],
+     [
+      -56.707,
+      7.993
+     ],
+     [
+      -87.86,
+      28.843
+     ],
+     [
+      -56.688,
+      7.962
+     ],
+     [
+      -89.117,
+      28.178
+     ],
+     [
+      -89.213,
+      28.16
+     ],
+     [
+      -56.717,
+      7.957
+     ],
+     [
+      -92.215,
+      19.557
+     ],
+     [
+      -93.87,
+      18.337
+     ],
+     [
+      -90.51,
+      26.695
+     ],
+     [
+      -57.003,
+      8.195
+     ],
+     [
+      -90.75,
+      27.722
+     ],
+     [
+      -91.233,
+      27.16
+     ],
+     [
+      -60.515,
+      10.247
+     ],
+     [
+      -55.453,
+      7.575
+     ],
+     [
+      -91.817,
+      18.882
+     ],
+     [
+      -48.013,
+      46.787
+     ],
+     [
+      -88.843,
+      28.265
+     ],
+     [
+      -94.673,
+      26.223
+     ],
+     [
+      -57.322,
+      8.918
+     ],
+     [
+      -92.272,
+      19.592
+     ],
+     [
+      -90.715,
+      27.327
+     ],
+     [
+      -48.465,
+      46.472
+     ],
+     [
+      -88.495,
+      28.19
+     ],
+     [
+      -90.813,
+      26.428
+     ],
+     [
+      -91.762,
+      18.763
+     ],
+     [
+      -93.295,
+      18.54
+     ],
+     [
+      -87.927,
+      29.075
+     ],
+     [
+      -89.21,
+      28.025
+     ],
+     [
+      -92.428,
+      19.172
+     ],
+     [
+      -92.047,
+      19.577
+     ],
+     [
+      -89.083,
+      28.42
+     ],
+     [
+      -92.645,
+      26.32
+     ],
+     [
+      -90.148,
+      28.683
+     ],
+     [
+      -92.175,
+      19.54
+     ],
+     [
+      -92.298,
+      19.612
+     ],
+     [
+      -91.952,
+      19.485
+     ]
+    ]
+   },
+   "cancel_at": null
+  },
+  {
    "id": "4-1150-2026",
    "area": "NAVAREA IV",
    "subregion": null,
@@ -11,8 +535,8 @@
    "category": "aids_to_navigation",
    "sea": "Caribbean Sea",
    "place": "Jamaica",
-   "headline": "2 BUOY 17-49.50N 077-08.10W UNLIT AND TOPMARK MISSING.",
-   "text": "CARIBBEAN SEA.\nJAMAICA.\n1. 2 BUOY 17-49.50N 077-08.10W UNLIT AND TOPMARK MISSING.\n2. 2 BUOY 17-42.48N 077-02.64W MISSING.\n3. 5 BUOY 17-44.49N 077-02.64W OUT OF POSITION AND UNLIT.\n4. 9 BUOY 17-45.95N 077-05.56W MISSING.",
+   "headline": "#2 BUOY 17-49.50N 077-08.10W UNLIT AND TOPMARK MISSING.",
+   "text": "CARIBBEAN SEA.\nJAMAICA.\n1. #2 BUOY 17-49.50N 077-08.10W UNLIT AND\n   TOPMARK MISSING.\n2. #2 BUOY 17-42.48N 077-02.64W MISSING.\n3. #5 BUOY 17-44.49N 077-02.64W OUT OF POSITION\n   AND UNLIT.\n4. #9 BUOY 17-45.95N 077-05.56W MISSING.",
    "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -56,114 +580,6 @@
     ]
    },
    "cancel_at": "2026-11-28T06:57:00Z"
-  },
-  {
-   "id": "4-1148-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1148/2026",
-   "issued": "250200Z NOV 2026",
-   "authority": "",
-   "category": "other",
-   "sea": "Caribbean Sea",
-   "place": "Colombia",
-   "headline": "NAVAL OPERATIONS 251400Z TO 251700Z NOV IN AREA BOUND BY 10-23.00N 075-33.64W, 10-23.00N 075-33.27W, 10-22.62N 075-33.27W, 10-22.62N 075-33.64W.",
-   "text": "CARIBBEAN SEA.\nCOLOMBIA.\n1. NAVAL OPERATIONS 251400Z TO 251700Z NOV\n   IN AREA BOUND BY\n   10-23.00N 075-33.64W, 10-23.00N 075-33.27W,\n   10-22.62N 075-33.27W, 10-22.62N 075-33.64W.\n2. CANCEL THIS MSG 251800Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -75.561,
-       10.383
-      ],
-      [
-       -75.555,
-       10.383
-      ],
-      [
-       -75.555,
-       10.377
-      ],
-      [
-       -75.561,
-       10.377
-      ],
-      [
-       -75.561,
-       10.383
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-25T18:00:00Z"
-  },
-  {
-   "id": "4-1147-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1147/2026",
-   "issued": "241958Z NOV 2026",
-   "authority": "",
-   "category": "ice",
-   "sea": null,
-   "place": null,
-   "headline": "NORTH AMERICAN ICE SERVICE (NAIS) ICEBERG BULLETIN 250001Z NOV.",
-   "text": "1. NORTH AMERICAN ICE SERVICE (NAIS)\n   ICEBERG BULLETIN 250001Z NOV.\n2. ICEBERG LIMIT ALONG TRACKLINE JOINING\n   50-45N 056-05W, 50-15N 055-00W,\n   50-15N 053-00W, 53-30N 050-45W,\n   60-00N 058-00W.\n3. ESTIMATED ICEBERG LIMIT ALONG\n   TRACKLINE JOINING\n   60-00N 058-00W, 60-55N 054-40W,\n   58-35N 044-20W, 59-35N 040-00W,\n   64-25N 036-50W, 65-00N 028-00W.\n4. WESTERN ICEBERG LIMIT ALONG TRACKLINE\n   JOINING\n   51-49N 056-10W, 51-32N 056-05W.\n5. SEA ICE LIMIT ALONG TRACKLINES\n   JOINING:\n   A. 59-36N 065-27W, 58-52N 067-23W,\n      59-33N 068-44W, 61-06N 069-01W,\n      63-30N 076-13W, 63-57N 076-05W,\n      62-30N 070-45W, 61-45N 066-29W,\n      61-52N 066-02W.\n   B. 61-59N 066-00W, 62-06N 064-05W,\n      64-38N 058-17W, 66-18N 057-58W,\n      69-26N 061-06W, 69-38N 060-52W.\n6. MOST RECENT RECONNAISSANCE:\n   EASTERN LIMIT SATELLITE PASS 24 NOV 26.\n7. REPORT POSITION AND TIME OF ANY ICEBERGS\n   SEA ICE OR STATIONARY RADAR TARGETS THAT\n   MAY LIKELY BE ICE TO THE NEAREST CANADIAN\n   COAST GUARD MARINE COMMUNICATIONS AND\n   TRAFFIC SERVICE STATION OR\n   USING INMARSAT CODE 42.\n8. FOR MORE REPORTING INFORMATION OR TO\n   DOWNLOAD SHAPEFILES AND WEEKLY PREDICTIONS,\n   GO TO\n   WWW.NAVCEN.USCG.GOV/INTERNATIONAL-ICE-PATROL.\n9. CANCEL THIS MSG 260001Z NOV 26.",
-   "geometry": {
-    "type": "MultiLineString",
-    "coordinates": [
-     [
-      [
-       -56.083,
-       50.75
-      ],
-      [
-       -55.0,
-       50.25
-      ],
-      [
-       -53.0,
-       50.25
-      ],
-      [
-       -50.75,
-       53.5
-      ],
-      [
-       -58.0,
-       60.0
-      ]
-     ],
-     [
-      [
-       -58.0,
-       60.0
-      ],
-      [
-       -54.667,
-       60.917
-      ],
-      [
-       -44.333,
-       58.583
-      ],
-      [
-       -40.0,
-       59.583
-      ],
-      [
-       -36.833,
-       64.417
-      ],
-      [
-       -28.0,
-       65.0
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T00:01:00Z"
   },
   {
    "id": "4-1146-2026",
@@ -502,27 +918,6 @@
    "cancel_at": "2026-12-05T15:22:00Z"
   },
   {
-   "id": "4-1140-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1140/2026",
-   "issued": "240258Z NOV 2026",
-   "authority": "",
-   "category": "wreck",
-   "sea": "Caribbean Sea",
-   "place": "Colombia",
-   "headline": "DERELICT EIGHT METER M/V MEDUSA, PINK AND BLACK HULL, ADRIFT IN VICINITY 09-59.45N 075-39.84W.",
-   "text": "CARIBBEAN SEA.\nCOLOMBIA.\n1. DERELICT EIGHT METER M/V MEDUSA,\n   PINK AND BLACK HULL, ADRIFT\n   IN VICINITY 09-59.45N 075-39.84W.\n2. CANCEL NAVAREA IV 1139/26.\n3. CANCEL THIS MSG 270258Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -75.664,
-     9.991
-    ]
-   },
-   "cancel_at": "2026-11-27T02:58:00Z"
-  },
-  {
    "id": "4-1136-2026",
    "area": "NAVAREA IV",
    "subregion": null,
@@ -586,47 +981,6 @@
    "cancel_at": "2026-11-30T00:01:00Z"
   },
   {
-   "id": "4-1125-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1125/2026",
-   "issued": "201301Z NOV 2026",
-   "authority": "",
-   "category": "launch",
-   "sea": "North Atlantic",
-   "place": "French Guiana",
-   "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 0717Z TO 1208Z DAILY 23 NOV THRU 23 DEC IN AREA BOUND BY 05-23.00N 052-54.00W, 05-51.00N 052-48.00W, 05-50.00N 052-20.00W, 05",
-   "text": "NORTH ATLANTIC.\nFRENCH GUIANA.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   0717Z TO 1208Z DAILY 23 NOV THRU 23 DEC\n   IN AREA BOUND BY\n   05-23.00N 052-54.00W, 05-51.00N 052-48.00W,\n   05-50.00N 052-20.00W, 05-13.00N 052-41.00W.\n2. CANCEL NAVAREA IV 1115/26.\n3. CANCEL THIS MSG 231308Z DEC 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -52.9,
-       5.383
-      ],
-      [
-       -52.8,
-       5.85
-      ],
-      [
-       -52.333,
-       5.833
-      ],
-      [
-       -52.683,
-       5.217
-      ],
-      [
-       -52.9,
-       5.383
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-12-23T13:08:00Z"
-  },
-  {
    "id": "4-1124-2026",
    "area": "NAVAREA IV",
    "subregion": null,
@@ -668,450 +1022,6 @@
    "cancel_at": "2026-12-27T00:01:00Z"
   },
   {
-   "id": "4-1117-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1117/2026",
-   "issued": "181720Z NOV 2026",
-   "authority": "",
-   "category": "drilling_survey",
-   "sea": null,
-   "place": null,
-   "headline": "NAVAREA IV MOBILE OFFSHORE DRILLING UNITS POSITIONS AT 181520Z NOV",
-   "text": "1. NAVAREA IV MOBILE OFFSHORE DRILLING UNITS\n   POSITIONS AT 181520Z NOV:\n   A. AGOSTO 12 19-23.0N 092-03.1W.\n   B. ARGOS PLATFORM 27-10.4N 090-22.0W.\n   C. ATLANTIS 19-23.9N 092-02.3W.\n   D. AUGER TLP 27-32.7N 092-26.6W.\n   E. BLUE EAGLE 18-31.8N 093-20.3W.\n   F. BORR RAN 18-20.4N 093-53.6W.\n   G. BORR SIF 07-08.3N 055-41.1W.\n   H. BP ATLANTIS PLATFORM 27-11.7N 090-01.6W.\n   I. CAMPECHE 19-33.7N 092-11.0W.\n   J. CENTENARIO GR 21-07.7N 097-08.1W.\n   K. CHIHUAHUA 19-17.7N 091-57.5W.\n   L. CME I 19-34.6N 092-02.7W.\n   M. CME II 18-34.4N 092-46.2W.\n   N. COATZACOALCOS 18-14.0N 094-12.9W.\n   O. CPOC MAGNOLIA 27-12.2N 092-12.2W.\n   P. DEEPWATER ATLAS 26-40.1N 091-33.5W.\n   Q. DEEPWATER CONQUEROR 27-19.0N 090-45.1W.\n   R. DEEPWATER INVICTUS 26-40.7N 092-34.6W.\n   S. DEEPWATER PONTUS 28-00.4N 089-09.7W.\n   T. DEEPWATER POSEIDON 26-10.5N 094-46.4W.\n   U. DEEPWATER PROTEUS 27-32.0N 090-09.9W.\n   V. DEEPWATER THALASSA 25-45.0N 095-24.3W.\n   W. DEEPWATER TITAN 27-09.1N 091-12.7W.\n   X. DEFENDER 18-28.6N 094-01.9W.\n   Y. DEVELOPMENT DRILLER III 10-38.5N 061-39.0W.\n   Z. ERREA WITTU 07-59.5N 056-49.5W.\n   AA. ESSAR WILDCAT 18-51.5N 091-45.7W.\n   AB. FRIDA I 19-36.1N 092-31.6W.\n   AC. GALAR 18-44.5N 093-07.2W.\n   AD. GERSEMI 19-02.5N 092-14.8W.\n   AE. GULF DRILLER VI 18-29.3N 093-20.6W.\n   AF. GULF DRILLER VIII 18-29.9N 094-00.4W.\n   AG. HILD 18-49.0N 091-46.0W.\n   AH. INDEPENDENCIA 1 19-02.5N 092-26.6W.\n   AI. INDEPENDENCIA 2 12-23.2N 070-08.5W.\n   AJ. IOLAIR 19-36.0N 092-14.1W.\n   AK. JACK ST MALO 26-14.1N 091-15.7W.\n   AL. JOE DOUGLAS 09-59.9N 060-31.9W.\n   AM. KUKULKAN 18-16.4N 094-03.6W.\n   AN. LA COVADONGA 19-29.3N 091-57.9W.\n   AO. LA SANTA MARIA 18-36.8N 093-17.7W.\n   AP. LIZA DESTINY 08-00.7N 056-59.5W.\n   AQ. LIZA UNITY 08-00.6N 056-54.9W.\n   AR. MAD DOG 27-11.3N 090-16.1W.\n   AS. MARLIN TLP 29-06.5N 087-56.7W.\n   AT. MARS TLP 28-10.4N 089-13.4W.\n   AU. MAZU 18-18.9N 093-49.6W.\n   AV. MIAMTE MV34 18-24.3N 093-46.2W.\n   AW. NABARIMA 10-14.8N 062-09.0W.\n   AX. NFE PIONEER III 22-39.2N 097-40.8W.\n   AY. NJORD 19-15.9N 092-26.2W.\n   AZ. NOBLE BLACKHAWK 29-05.1N 087-57.6W.\n   AAA. NOBLE BLACKHORNET 27-13.4N 090-01.9W.\n   AAB. NOBLE BLACKLION 27-08.8N 090-19.1W.\n   AAC. (NEW RIG) NOBLE BOB DOUGLAS\n        08-01.2N 056-46.1W.\n   AAD. (NEW POSITION) NOBLE DEVELOPER\n        07-45.0N 057-06.7W.\n   AAE. (NEW POSITION) NOBLE DON TAYLOR\n        07-57.6N 057-06.1W.\n   AAF. NOBLE GLOBETROTTER II 28-51.4N 090-07.4W.\n   AAG. (NEW POSITION) NOBLE SAM CROFT\n        07-59.9N 056-42.6W.\n   AAH. (NEW POSITION) NOBLE STANLEY LAFOSSE\n        28-50.6N 087-51.6W.\n   AAI. (NEW POSITION) NOBLE TOM MADDEN\n        07-58.7N 056-41.3W.\n   AAJ. NOBLE VOYAGER 28-10.7N 089-07.0W.\n   AAK. OLYMPUS N88 28-09.6N 089-12.8W.\n   AAL. ONE GUYANA 07-57.4N 056-43.0W.\n   AAM. PAPALOAPAN 19-33.4N 092-12.9W.\n   AAN. PERRO NEGRO 10 18-20.2N 093-52.2W.\n   AAO. PIONEER 26-41.7N 090-30.6W.\n   AAP. PROSPERITY 08-11.7N 057-00.2W.\n   AAQ. Q4000 28-34.1N 088-15.4W.\n   AAR. (NEW POSITION) Q5000 27-09.6N 091-14.0W.\n   AAS. RALPH COFFMAN 10-14.8N 060-30.9W.\n   AAT. ROWAN RELENTLESS 07-34.5N 055-27.2W.\n   AAU. SANDUNGA 18-52.9N 091-49.0W.\n   AAV. SEAROSE FPSO 46-47.2N 048-00.8W.\n   AAW. (NEW POSITION) SEVAN LOUISIANA\n        28-15.9N 088-50.6W.\n   AAX. SHELL WHALE 26-13.4N 094-40.4W.\n   AAY. (NEW POSITION) STENA CARRON\n        08-55.1N 057-19.3W.\n   AAZ. TABASCO 19-35.5N 092-16.3W.\n   AAAA. TAHITI SPAR 27-19.6N 090-42.9W.\n   AAAB. TERRA NOVA 46-28.3N 048-27.9W.\n   AAAC. THUNDER HORSE PDQ 28-11.4N 088-29.7W.\n   AAAD. TURRITELLA 26-25.7N 090-48.8W.\n   AAAE. TUXPAN 18-45.8N 091-45.7W.\n   AAAF. UXPANAPA 18-32.4N 093-17.7W.\n   AAAG. VALARIS DS-16 29-04.5N 087-55.6W.\n   AAAH. VITO FPU 28-01.5N 089-12.6W.\n   AAAI. WEST COURAGEOUS 19-10.3N 092-25.7W.\n   AAAJ. WEST INTREPID 19-34.6N 092-02.8W.\n   AAAK. (NEW POSITION) WEST NEPTUNE\n         28-25.2N 089-05.0W.\n   AAAL. WEST VELA 26-19.2N 092-38.7W.\n   AAAM. WFD 400 28-41.0N 090-08.9W.\n   AAAN. YUNUEN 19-32.4N 092-10.5W.\n   AAAO. YUUM K'AK' NAAB 19-36.7N 092-17.9W.\n   AAAP. ZACATECAS 19-29.1N 091-57.1W.\n2. TO REPORT A MOBILE OFFSHORE DRILLING UNIT AS\n   PER IMO RESOLUTION A.1023(26), PARAGRAPH 11.5.1,\n   CONTACT NAVSAFETY@NGA.MIL SUBJ: MODU REPORT.\n3. CANCEL NAVAREA IV 1100/26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -92.052,
-      19.383
-     ],
-     [
-      -90.367,
-      27.173
-     ],
-     [
-      -92.038,
-      19.398
-     ],
-     [
-      -92.443,
-      27.545
-     ],
-     [
-      -93.338,
-      18.53
-     ],
-     [
-      -93.893,
-      18.34
-     ],
-     [
-      -55.685,
-      7.138
-     ],
-     [
-      -90.027,
-      27.195
-     ],
-     [
-      -92.183,
-      19.562
-     ],
-     [
-      -97.135,
-      21.128
-     ],
-     [
-      -91.958,
-      19.295
-     ],
-     [
-      -92.045,
-      19.577
-     ],
-     [
-      -92.77,
-      18.573
-     ],
-     [
-      -94.215,
-      18.233
-     ],
-     [
-      -92.203,
-      27.203
-     ],
-     [
-      -91.558,
-      26.668
-     ],
-     [
-      -90.752,
-      27.317
-     ],
-     [
-      -92.577,
-      26.678
-     ],
-     [
-      -89.162,
-      28.007
-     ],
-     [
-      -94.773,
-      26.175
-     ],
-     [
-      -90.165,
-      27.533
-     ],
-     [
-      -95.405,
-      25.75
-     ],
-     [
-      -91.212,
-      27.152
-     ],
-     [
-      -94.032,
-      18.477
-     ],
-     [
-      -61.65,
-      10.642
-     ],
-     [
-      -56.825,
-      7.992
-     ],
-     [
-      -91.762,
-      18.858
-     ],
-     [
-      -92.527,
-      19.602
-     ],
-     [
-      -93.12,
-      18.742
-     ],
-     [
-      -92.247,
-      19.042
-     ],
-     [
-      -93.343,
-      18.488
-     ],
-     [
-      -94.007,
-      18.498
-     ],
-     [
-      -91.767,
-      18.817
-     ],
-     [
-      -92.443,
-      19.042
-     ],
-     [
-      -70.142,
-      12.387
-     ],
-     [
-      -92.235,
-      19.6
-     ],
-     [
-      -91.262,
-      26.235
-     ],
-     [
-      -60.532,
-      9.998
-     ],
-     [
-      -94.06,
-      18.273
-     ],
-     [
-      -91.965,
-      19.488
-     ],
-     [
-      -93.295,
-      18.613
-     ],
-     [
-      -56.992,
-      8.012
-     ],
-     [
-      -56.915,
-      8.01
-     ],
-     [
-      -90.268,
-      27.188
-     ],
-     [
-      -87.945,
-      29.108
-     ],
-     [
-      -89.223,
-      28.173
-     ],
-     [
-      -93.827,
-      18.315
-     ],
-     [
-      -93.77,
-      18.405
-     ],
-     [
-      -62.15,
-      10.247
-     ],
-     [
-      -97.68,
-      22.653
-     ],
-     [
-      -92.437,
-      19.265
-     ],
-     [
-      -87.96,
-      29.085
-     ],
-     [
-      -90.032,
-      27.223
-     ],
-     [
-      -90.318,
-      27.147
-     ],
-     [
-      -56.768,
-      8.02
-     ],
-     [
-      -57.112,
-      7.75
-     ],
-     [
-      -57.102,
-      7.96
-     ],
-     [
-      -90.123,
-      28.857
-     ],
-     [
-      -56.71,
-      7.998
-     ],
-     [
-      -87.86,
-      28.843
-     ],
-     [
-      -56.688,
-      7.978
-     ],
-     [
-      -89.117,
-      28.178
-     ],
-     [
-      -89.213,
-      28.16
-     ],
-     [
-      -56.717,
-      7.957
-     ],
-     [
-      -92.215,
-      19.557
-     ],
-     [
-      -93.87,
-      18.337
-     ],
-     [
-      -90.51,
-      26.695
-     ],
-     [
-      -57.003,
-      8.195
-     ],
-     [
-      -88.257,
-      28.568
-     ],
-     [
-      -91.233,
-      27.16
-     ],
-     [
-      -60.515,
-      10.247
-     ],
-     [
-      -55.453,
-      7.575
-     ],
-     [
-      -91.817,
-      18.882
-     ],
-     [
-      -48.013,
-      46.787
-     ],
-     [
-      -88.843,
-      28.265
-     ],
-     [
-      -94.673,
-      26.223
-     ],
-     [
-      -57.322,
-      8.918
-     ],
-     [
-      -92.272,
-      19.592
-     ],
-     [
-      -90.715,
-      27.327
-     ],
-     [
-      -48.465,
-      46.472
-     ],
-     [
-      -88.495,
-      28.19
-     ],
-     [
-      -90.813,
-      26.428
-     ],
-     [
-      -91.762,
-      18.763
-     ],
-     [
-      -93.295,
-      18.54
-     ],
-     [
-      -87.927,
-      29.075
-     ],
-     [
-      -89.21,
-      28.025
-     ],
-     [
-      -92.428,
-      19.172
-     ],
-     [
-      -92.047,
-      19.577
-     ],
-     [
-      -89.083,
-      28.42
-     ],
-     [
-      -92.645,
-      26.32
-     ],
-     [
-      -90.148,
-      28.683
-     ],
-     [
-      -92.175,
-      19.54
-     ],
-     [
-      -92.298,
-      19.612
-     ],
-     [
-      -91.952,
-      19.485
-     ]
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "4-1112-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1112/2026",
-   "issued": "171323Z NOV 2026",
-   "authority": "",
-   "category": "drilling_survey",
-   "sea": "North Atlantic",
-   "place": null,
-   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 25 NOV BY TUG DONA JOSE II IN AREA BOUND BY 08-30.00N 054-55.00W, 08-29.80N 055-05.00W, 08-19.80N 055-05.00W, 08-19.80N 055-",
-   "text": "NORTH ATLANTIC.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 25 NOV\n   BY TUG DONA JOSE II IN AREA BOUND BY\n   08-30.00N 054-55.00W, 08-29.80N 055-05.00W,\n   08-19.80N 055-05.00W, 08-19.80N 055-00.00W,\n   07-54.80N 054-20.00W, 07-55.00N 054-20.00W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 260001Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -54.917,
-       8.5
-      ],
-      [
-       -55.083,
-       8.497
-      ],
-      [
-       -55.083,
-       8.33
-      ],
-      [
-       -55.0,
-       8.33
-      ],
-      [
-       -54.333,
-       7.913
-      ],
-      [
-       -54.333,
-       7.917
-      ],
-      [
-       -54.917,
-       8.5
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T00:01:00Z"
-  },
-  {
    "id": "4-1094-2026",
    "area": "NAVAREA IV",
    "subregion": null,
@@ -1131,36 +1041,6 @@
     ]
    },
    "cancel_at": null
-  },
-  {
-   "id": "4-1091-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 1091/2026",
-   "issued": "121645Z NOV 2026",
-   "authority": "",
-   "category": "drilling_survey",
-   "sea": "North Atlantic",
-   "place": "Florida",
-   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV BY M/V FUGRO DISCOVERY WITHIN 500 METERS OF TRACKLINE JOINING 29-28.60N 081-01.60W, 29-27.60N 080-35.73W.",
-   "text": "NORTH ATLANTIC.\nFLORIDA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV\n   BY M/V FUGRO DISCOVERY WITHIN 500 METERS OF\n   TRACKLINE JOINING 29-28.60N 081-01.60W,\n   29-27.60N 080-35.73W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 270001Z NOV 26.",
-   "geometry": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      -81.027,
-      29.477
-     ],
-     [
-      -80.596,
-      29.46
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T00:01:00Z",
-   "corridor_half_width_m": [
-    500.0
-   ]
   },
   {
    "id": "4-1089-2026",
@@ -1926,49 +1806,6 @@
    "cancel_at": "2026-12-01T00:01:00Z"
   },
   {
-   "id": "4-997-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 997/2026",
-   "issued": "141231Z OCT 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "North Atlantic",
-   "place": "Suriname",
-   "headline": "UNDERWATER OPERATIONS 20 OCT THRU 25 NOV BY M/V DONA JOSE II IN",
-   "text": "NORTH ATLANTIC.\nSURINAME.\n1. UNDERWATER OPERATIONS 20 OCT THRU 25 NOV\n   BY M/V DONA JOSE II IN:\n   A. 07-22.22N 055-31.36W.\n   B. 07-21.84N 055-34.03W.\n   C. 07-35.49N 054-55.94W.\n   D. 07-33.28N 054-57.37W.\n   E. 07-30.16N 055-31.14W.\n   F. 07-30.19N 055-28.57W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 260001Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -55.523,
-      7.37
-     ],
-     [
-      -55.567,
-      7.364
-     ],
-     [
-      -54.932,
-      7.591
-     ],
-     [
-      -54.956,
-      7.555
-     ],
-     [
-      -55.519,
-      7.503
-     ],
-     [
-      -55.476,
-      7.503
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T00:01:00Z"
-  },
-  {
    "id": "4-993-2026",
    "area": "NAVAREA IV",
    "subregion": null,
@@ -2480,27 +2317,6 @@
     "coordinates": [
      -64.842,
      60.424
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "4-682-2026",
-   "area": "NAVAREA IV",
-   "subregion": null,
-   "number": "NAVAREA IV 682/2026",
-   "issued": "131529Z JUL 2026",
-   "authority": "",
-   "category": "radio_service",
-   "sea": "Hudson Bay",
-   "place": "Canada",
-   "headline": "MCTS IQALUIT REMOTE STATION CORAL HARBOUR 64-09.00N 083-22.00W MF AND HF SERVICES OFF AIR.",
-   "text": "HUDSON BAY.\nCANADA.\nMCTS IQALUIT REMOTE STATION CORAL HARBOUR\n64-09.00N 083-22.00W MF AND HF SERVICES OFF AIR.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -83.367,
-     64.15
     ]
    },
    "cancel_at": null
@@ -4157,6 +3973,776 @@
    "cancel_at": null
   },
   {
+   "id": "12-847-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 847/2026",
+   "issued": "252116Z NOV 2026",
+   "authority": "",
+   "category": "launch",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS, ROCKET LAUNCHING",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS, ROCKET LAUNCHING:\n   A. 022030Z TO 022353Z DEC, ALTERNATE\n      032016Z TO 032339Z, 042002Z TO 042325Z,\n      051948Z TO 052311Z, 061934Z TO 062257Z,\n      071920Z TO 072243Z AND\n      081906Z TO 082229Z DEC IN AREAS BOUND BY\n      34-19.00N 120-34.00W, 34-27.00N 120-37.00W,\n      34-36.00N 120-39.00W, 34-40.00N 120-38.00W,\n      34-31.00N 120-18.00W, 34-12.00N 120-06.00W,\n      33-15.00N 119-38.00W, 32-30.00N 119-18.00W,\n      32-05.00N 119-08.00W, 32-05.00N 119-09.00W.\n   B. 022030Z TO 022354Z DEC, ALTERNATE\n      032016Z TO 032340Z, 042002Z TO 042326Z,\n      051948Z TO 052312Z, 061934Z TO 062258Z,\n      071920Z TO 072244Z AND\n      081906Z TO 082230Z DEC IN AREA BOUND BY\n      30-26.00N 118-31.00W, 31-23.00N 118-47.00W,\n      30-46.00N 118-15.00W, 29-48.00N 117-39.00W,\n      29-52.00N 117-54.00W, 29-35.00N 118-12.00W.\n   C. 022030Z TO 030013Z DEC, ALTERNATE\n      032016Z TO 032359Z, 042002Z TO 042345Z,\n      051948Z TO 052331Z, 061934Z TO 062317Z,\n      071920Z TO 072303Z AND\n      081906Z TO 082249Z DEC IN AREA BOUND BY\n      29-15.00N 118-02.00W, 29-24.00N 118-08.00W,\n      29-35.00N 118-12.00W, 29-52.00N 117-54.00W,\n      29-48.00N 117-39.00W, 29-36.00N 117-16.00W,\n      28-50.00N 117-19.00W, 28-15.00N 117-19.00W,\n      28-16.00N 117-21.00W, 28-50.00N 117-49.00W,\n      29-02.00N 117-59.00W.\n2. CANCEL THIS MSG 082349Z DEC 26.",
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        -120.567,
+        34.317
+       ],
+       [
+        -120.617,
+        34.45
+       ],
+       [
+        -120.65,
+        34.6
+       ],
+       [
+        -120.633,
+        34.667
+       ],
+       [
+        -120.3,
+        34.517
+       ],
+       [
+        -120.1,
+        34.2
+       ],
+       [
+        -119.633,
+        33.25
+       ],
+       [
+        -119.3,
+        32.5
+       ],
+       [
+        -119.133,
+        32.083
+       ],
+       [
+        -119.15,
+        32.083
+       ],
+       [
+        -120.567,
+        34.317
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -118.517,
+        30.433
+       ],
+       [
+        -118.783,
+        31.383
+       ],
+       [
+        -118.25,
+        30.767
+       ],
+       [
+        -117.65,
+        29.8
+       ],
+       [
+        -117.9,
+        29.867
+       ],
+       [
+        -118.2,
+        29.583
+       ],
+       [
+        -118.517,
+        30.433
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        -118.033,
+        29.25
+       ],
+       [
+        -118.133,
+        29.4
+       ],
+       [
+        -118.2,
+        29.583
+       ],
+       [
+        -117.9,
+        29.867
+       ],
+       [
+        -117.65,
+        29.8
+       ],
+       [
+        -117.267,
+        29.6
+       ],
+       [
+        -117.317,
+        28.833
+       ],
+       [
+        -117.317,
+        28.25
+       ],
+       [
+        -117.35,
+        28.267
+       ],
+       [
+        -117.817,
+        28.833
+       ],
+       [
+        -117.983,
+        29.033
+       ],
+       [
+        -118.033,
+        29.25
+       ]
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-08T23:49:00Z"
+  },
+  {
+   "id": "12-846-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 846/2026",
+   "issued": "232217Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 010800Z DEC TO 010800Z JAN 27 IN AREA BOUND BY 32-55.00N 118-25.00W, 32-55.00N 118-15.00W, 32-40.00N 118-15.00W, 32-40.00N 118-35.00W, 32-4",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS\n   010800Z DEC TO 010800Z JAN 27\n   IN AREA BOUND BY\n   32-55.00N 118-25.00W, 32-55.00N 118-15.00W,\n   32-40.00N 118-15.00W, 32-40.00N 118-35.00W,\n   32-45.00N 118-35.00W.\n2. CANCEL THIS MSG 010900Z JAN 27.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.417,
+       32.917
+      ],
+      [
+       -118.25,
+       32.917
+      ],
+      [
+       -118.25,
+       32.667
+      ],
+      [
+       -118.583,
+       32.667
+      ],
+      [
+       -118.583,
+       32.75
+      ],
+      [
+       -118.417,
+       32.917
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2027-01-01T09:00:00Z"
+  },
+  {
+   "id": "12-845-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 845/2026",
+   "issued": "232213Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 010800Z DEC TO 010800Z JAN 27 IN AREA BOUND BY 32-33.00N 118-25.00W, 32-35.00N 118-16.00W, 32-35.00N 117-40.00W, 31-55.00N 117-40.00W, 31-5",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 010800Z DEC TO\n   010800Z JAN 27 IN AREA BOUND BY\n   32-33.00N 118-25.00W, 32-35.00N 118-16.00W,\n   32-35.00N 117-40.00W, 31-55.00N 117-40.00W,\n   31-55.00N 118-25.00W.\n2. CANCEL THIS MSG 010900Z JAN 27.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.417,
+       32.55
+      ],
+      [
+       -118.267,
+       32.583
+      ],
+      [
+       -117.667,
+       32.583
+      ],
+      [
+       -117.667,
+       31.917
+      ],
+      [
+       -118.417,
+       31.917
+      ],
+      [
+       -118.417,
+       32.55
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2027-01-01T09:00:00Z"
+  },
+  {
+   "id": "12-844-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 844/2026",
+   "issued": "232210Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 010800Z DEC TO 010800Z JAN 27 IN AREA BOUND BY 32-52.70N 119-11.96W, 33-08.06N 118-52.09W, 33-08.06N 118-46.03W, 33-03.86N 118-41.80W, 33-0",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 010800Z DEC TO\n   010800Z JAN 27 IN AREA BOUND BY\n   32-52.70N 119-11.96W, 33-08.06N 118-52.09W,\n   33-08.06N 118-46.03W, 33-03.86N 118-41.80W,\n   33-02.53N 118-43.55W, 32-58.88N 118-43.52W,\n   32-47.66N 118-32.35W, 32-36.92N 118-45.00W,\n   32-36.92N 118-56.95W.\n2. CANCEL THIS MSG 010900Z JAN 27.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -119.199,
+       32.878
+      ],
+      [
+       -118.868,
+       33.134
+      ],
+      [
+       -118.767,
+       33.134
+      ],
+      [
+       -118.697,
+       33.064
+      ],
+      [
+       -118.726,
+       33.042
+      ],
+      [
+       -118.725,
+       32.981
+      ],
+      [
+       -118.539,
+       32.794
+      ],
+      [
+       -118.75,
+       32.615
+      ],
+      [
+       -118.949,
+       32.615
+      ],
+      [
+       -119.199,
+       32.878
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2027-01-01T09:00:00Z"
+  },
+  {
+   "id": "12-843-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 843/2026",
+   "issued": "060032Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC IN AREA WITHIN ONE MILE OF 32-32.97N 117-10.93W.",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC\n   IN AREA WITHIN ONE MILE OF\n   32-32.97N 117-10.93W.\n2. CANCEL THIS MSG 120300Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -117.182,
+       32.5667
+      ],
+      [
+       -117.1781,
+       32.5663
+      ],
+      [
+       -117.1744,
+       32.5654
+      ],
+      [
+       -117.171,
+       32.5638
+      ],
+      [
+       -117.168,
+       32.5618
+      ],
+      [
+       -117.1656,
+       32.5593
+      ],
+      [
+       -117.1637,
+       32.5564
+      ],
+      [
+       -117.1626,
+       32.5532
+      ],
+      [
+       -117.1622,
+       32.55
+      ],
+      [
+       -117.1626,
+       32.5468
+      ],
+      [
+       -117.1637,
+       32.5436
+      ],
+      [
+       -117.1656,
+       32.5407
+      ],
+      [
+       -117.168,
+       32.5382
+      ],
+      [
+       -117.171,
+       32.5362
+      ],
+      [
+       -117.1744,
+       32.5346
+      ],
+      [
+       -117.1781,
+       32.5337
+      ],
+      [
+       -117.182,
+       32.5333
+      ],
+      [
+       -117.1859,
+       32.5337
+      ],
+      [
+       -117.1896,
+       32.5346
+      ],
+      [
+       -117.193,
+       32.5362
+      ],
+      [
+       -117.196,
+       32.5382
+      ],
+      [
+       -117.1984,
+       32.5407
+      ],
+      [
+       -117.2003,
+       32.5436
+      ],
+      [
+       -117.2014,
+       32.5468
+      ],
+      [
+       -117.2018,
+       32.55
+      ],
+      [
+       -117.2014,
+       32.5532
+      ],
+      [
+       -117.2003,
+       32.5564
+      ],
+      [
+       -117.1984,
+       32.5593
+      ],
+      [
+       -117.196,
+       32.5618
+      ],
+      [
+       -117.193,
+       32.5638
+      ],
+      [
+       -117.1896,
+       32.5654
+      ],
+      [
+       -117.1859,
+       32.5663
+      ],
+      [
+       -117.182,
+       32.5667
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-12T03:00:00Z",
+   "radius_m": [
+    1852
+   ]
+  },
+  {
+   "id": "12-842-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 842/2026",
+   "issued": "060018Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC IN AREA WITHIN TWO MILES OF 32-32.97N 117-12.87W.",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC\n   IN AREA WITHIN TWO MILES OF\n   32-32.97N 117-12.87W.\n2. CANCEL THIS MSG 120300Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -117.215,
+       32.5833
+      ],
+      [
+       -117.2073,
+       32.5827
+      ],
+      [
+       -117.1999,
+       32.5808
+      ],
+      [
+       -117.193,
+       32.5777
+      ],
+      [
+       -117.1871,
+       32.5736
+      ],
+      [
+       -117.1821,
+       32.5685
+      ],
+      [
+       -117.1785,
+       32.5627
+      ],
+      [
+       -117.1762,
+       32.5565
+      ],
+      [
+       -117.1755,
+       32.55
+      ],
+      [
+       -117.1762,
+       32.5435
+      ],
+      [
+       -117.1785,
+       32.5373
+      ],
+      [
+       -117.1821,
+       32.5315
+      ],
+      [
+       -117.1871,
+       32.5264
+      ],
+      [
+       -117.193,
+       32.5223
+      ],
+      [
+       -117.1999,
+       32.5192
+      ],
+      [
+       -117.2073,
+       32.5173
+      ],
+      [
+       -117.215,
+       32.5167
+      ],
+      [
+       -117.2227,
+       32.5173
+      ],
+      [
+       -117.2301,
+       32.5192
+      ],
+      [
+       -117.237,
+       32.5223
+      ],
+      [
+       -117.2429,
+       32.5264
+      ],
+      [
+       -117.2479,
+       32.5315
+      ],
+      [
+       -117.2515,
+       32.5373
+      ],
+      [
+       -117.2538,
+       32.5435
+      ],
+      [
+       -117.2545,
+       32.55
+      ],
+      [
+       -117.2538,
+       32.5565
+      ],
+      [
+       -117.2515,
+       32.5627
+      ],
+      [
+       -117.2479,
+       32.5685
+      ],
+      [
+       -117.2429,
+       32.5736
+      ],
+      [
+       -117.237,
+       32.5777
+      ],
+      [
+       -117.2301,
+       32.5808
+      ],
+      [
+       -117.2227,
+       32.5827
+      ],
+      [
+       -117.215,
+       32.5833
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-12T03:00:00Z",
+   "radius_m": [
+    3704
+   ]
+  },
+  {
+   "id": "12-841-2026",
+   "area": "NAVAREA XII",
+   "subregion": null,
+   "number": "NAVAREA XII 841/2026",
+   "issued": "060023Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "California",
+   "headline": "HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC IN AREA WITHIN THREE MILES OF 32-32.97N 117-14.70W.",
+   "text": "NORTH PACIFIC.\nCALIFORNIA.\n1. HAZARDOUS OPERATIONS 011500Z TO 120200Z DEC\n   IN AREA WITHIN THREE MILES OF\n   32-32.97N 117-14.70W.\n2. CANCEL THIS MSG 120300Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -117.245,
+       32.6
+      ],
+      [
+       -117.2334,
+       32.599
+      ],
+      [
+       -117.2223,
+       32.5962
+      ],
+      [
+       -117.2121,
+       32.5915
+      ],
+      [
+       -117.2031,
+       32.5853
+      ],
+      [
+       -117.1957,
+       32.5778
+      ],
+      [
+       -117.1902,
+       32.5691
+      ],
+      [
+       -117.1869,
+       32.5597
+      ],
+      [
+       -117.1857,
+       32.55
+      ],
+      [
+       -117.1869,
+       32.5403
+      ],
+      [
+       -117.1902,
+       32.5309
+      ],
+      [
+       -117.1957,
+       32.5222
+      ],
+      [
+       -117.2031,
+       32.5147
+      ],
+      [
+       -117.2121,
+       32.5085
+      ],
+      [
+       -117.2223,
+       32.5038
+      ],
+      [
+       -117.2334,
+       32.501
+      ],
+      [
+       -117.245,
+       32.5
+      ],
+      [
+       -117.2566,
+       32.501
+      ],
+      [
+       -117.2677,
+       32.5038
+      ],
+      [
+       -117.2779,
+       32.5085
+      ],
+      [
+       -117.2869,
+       32.5147
+      ],
+      [
+       -117.2943,
+       32.5222
+      ],
+      [
+       -117.2998,
+       32.5309
+      ],
+      [
+       -117.3031,
+       32.5403
+      ],
+      [
+       -117.3043,
+       32.55
+      ],
+      [
+       -117.3031,
+       32.5597
+      ],
+      [
+       -117.2998,
+       32.5691
+      ],
+      [
+       -117.2943,
+       32.5778
+      ],
+      [
+       -117.2869,
+       32.5853
+      ],
+      [
+       -117.2779,
+       32.5915
+      ],
+      [
+       -117.2677,
+       32.5962
+      ],
+      [
+       -117.2566,
+       32.599
+      ],
+      [
+       -117.245,
+       32.6
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-12T03:00:00Z",
+   "radius_m": [
+    5556
+   ]
+  },
+  {
    "id": "12-840-2026",
    "area": "NAVAREA XII",
    "subregion": null,
@@ -5111,143 +5697,341 @@
    "cancel_at": null
   },
   {
-   "id": "A-2376-2026",
+   "id": "A-2402-2026",
    "area": "HYDROLANT",
    "subregion": null,
-   "number": "HYDROLANT 2376/2026",
-   "issued": "251342Z NOV 2026",
+   "number": "HYDROLANT 2402/2026",
+   "issued": "271459Z NOV 2026",
    "authority": "",
    "category": "ice",
    "sea": "South Atlantic",
    "place": "Antarctica",
    "headline": "ICEBERGS REPORTED IN",
-   "text": "SOUTH ATLANTIC.\nSCOTIA SEA.\nANTARCTICA.\n1. ICEBERGS REPORTED IN:\n   A. A81, 53-55.00S 035-24.00W.\n   B. D33B, 55-18.00S 036-23.00W.\n   C. D33A, 64-28.00S 055-16.00W.\n   D. D35, 60-13.00S 043-16.00W.\n   E. D33D, 63-36.00S 055-18.00W.\n   F. A83, 59-05.00S 049-55.00W.\n   G. A85, 55-15.00S 044-06.00W.\n   H. D32, 57-48.00S 040-20.00W.\n   I. 55-23.00S 042-40.00W.\n   J. 59-07.00S 040-32.00W.\n   K. 60-46.00S 058-29.00W.\n   L. 61-39.00S 053-56.00W.\n   M. 59-38.00S 043-06.00W.\n   N. 61-37.00S 053-50.00W.\n   O. 63-51.00S 053-53.00W.\n   P. 63-21.00S 052-46.00W.\n   Q. 60-52.00S 043-51.00W.\n   R. 64-05.00S 055-42.00W.\n   S. 63-56.00S 055-31.00W.\n   T. 64-39.00S 056-30.00W.\n2. CANCEL THIS MSG 261344Z NOV 26.",
+   "text": "SOUTH ATLANTIC.\nSCOTIA SEA.\nANTARCTICA.\n1. ICEBERGS REPORTED IN:\n   A. A81, 53-42.00S 036-02.00W.\n   B. D33B, 55-21.00S 036-12.00W.\n   C. D33A, 64-35.00S 055-23.00W.\n   D. D35, 60-10.00S 043-20.00W.\n   E. D33D, 63-33.00S 055-25.00W.\n   F. A83, 59-01.00S 049-50.00W.\n   G. A85, 55-19.00S 044-22.00W.\n   H. D32, 58-03.00S 040-45.00W.\n   I. 55-28.00S 042-50.00W.\n   J. 59-00.00S 040-29.00W.\n   K. 60-46.00S 058-29.00W.\n   L. 61-46.00S 053-45.00W.\n   M. 59-38.00S 043-29.00W.\n   N. 61-39.00S 053-58.00W.\n   O. 63-55.00S 053-52.00W.\n   P. 63-24.00S 052-43.00W.\n   Q. 60-51.00S 043-51.00W.\n2. CANCEL THIS MSG 281447Z NOV 26.",
    "geometry": {
     "type": "MultiPoint",
     "coordinates": [
      [
-      -35.4,
-      -53.917
+      -36.033,
+      -53.7
      ],
      [
-      -36.383,
-      -55.3
+      -36.2,
+      -55.35
      ],
      [
-      -55.267,
-      -64.467
+      -55.383,
+      -64.583
      ],
      [
-      -43.267,
-      -60.217
+      -43.333,
+      -60.167
      ],
      [
-      -55.3,
-      -63.6
+      -55.417,
+      -63.55
      ],
      [
-      -49.917,
-      -59.083
+      -49.833,
+      -59.017
      ],
      [
-      -44.1,
-      -55.25
+      -44.367,
+      -55.317
      ],
      [
-      -40.333,
-      -57.8
+      -40.75,
+      -58.05
      ],
      [
-      -42.667,
-      -55.383
+      -42.833,
+      -55.467
      ],
      [
-      -40.533,
-      -59.117
+      -40.483,
+      -59.0
      ],
      [
       -58.483,
       -60.767
      ],
      [
-      -53.933,
-      -61.65
+      -53.75,
+      -61.767
      ],
      [
-      -43.1,
+      -43.483,
       -59.633
      ],
      [
-      -53.833,
-      -61.617
+      -53.967,
+      -61.65
      ],
      [
-      -53.883,
-      -63.85
+      -53.867,
+      -63.917
      ],
      [
-      -52.767,
-      -63.35
+      -52.717,
+      -63.4
      ],
      [
       -43.85,
-      -60.867
-     ],
-     [
-      -55.7,
-      -64.083
-     ],
-     [
-      -55.517,
-      -63.933
-     ],
-     [
-      -56.5,
-      -64.65
+      -60.85
      ]
     ]
    },
-   "cancel_at": "2026-11-26T13:44:00Z"
+   "cancel_at": "2026-11-28T14:47:00Z"
   },
   {
-   "id": "A-2375-2026",
+   "id": "A-2401-2026",
    "area": "HYDROLANT",
    "subregion": null,
-   "number": "HYDROLANT 2375/2026",
-   "issued": "251247Z NOV 2026",
+   "number": "HYDROLANT 2401/2026",
+   "issued": "271044Z NOV 2026",
    "authority": "",
-   "category": "aids_to_navigation",
+   "category": "search_and_rescue",
+   "sea": "Western Mediterranean Sea",
+   "place": "Spain",
+   "headline": "118 METER VESSEL CAPSIZED AND ADRIFT IN 39-13.27N 001-08.92E AT 270830Z NOV.",
+   "text": "WESTERN MEDITERRANEAN SEA.\nSPAIN.\n118 METER VESSEL CAPSIZED AND ADRIFT\nIN 39-13.27N 001-08.92E AT 270830Z NOV.\nVESSELS IN VICINITY REQUESTED TO KEEP\nA SHARP LOOKOUT, ASSIST IF POSSIBLE.\nREPORTS TO ANY COASTAL RADIO STATION.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.149,
+     39.221
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "A-2400-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2400/2026",
+   "issued": "271029Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
    "sea": "South Atlantic",
    "place": "Brazil",
-   "headline": "PONTA DA TIJOCA LIGHT 00-33.44S 047-53.85W TEMPORARILY ESTABLISHED UNTIL 24 MAY 27 IN 00-34.71S 047-55.28W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. PONTA DA TIJOCA LIGHT 00-33.44S 047-53.85W\n   TEMPORARILY ESTABLISHED UNTIL 24 MAY 27\n   IN 00-34.71S 047-55.28W.\n2. CANCEL THIS MSG 250001Z MAY 27.",
+   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B AND M/V PORT FUKUOKA IN 20-23.48S 040-09.98W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 28 NOV THRU 12 DEC BY\n   M/V COMANDO B AND M/V PORT FUKUOKA\n   IN 20-23.48S 040-09.98W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 121900Z DEC 26.",
    "geometry": {
-    "type": "MultiPoint",
+    "type": "Point",
+    "coordinates": [
+     -40.166,
+     -20.391
+    ]
+   },
+   "cancel_at": "2026-12-12T19:00:00Z"
+  },
+  {
+   "id": "A-2399-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2399/2026",
+   "issued": "271027Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 28 NOV THRU 12 DEC BY M/V SINTRA AND M/V COMANDO B IN 20-23.97S 040-09.85W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 28 NOV THRU 12 DEC BY M/V SINTRA\n   AND M/V COMANDO B IN 20-23.97S 040-09.85W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 121900Z DEC 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -40.164,
+     -20.399
+    ]
+   },
+   "cancel_at": "2026-12-12T19:00:00Z"
+  },
+  {
+   "id": "A-2398-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2398/2026",
+   "issued": "271024Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B AND M/V SARAH H IN 20-23.67S 040-09.55W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B\n   AND M/V SARAH H IN 20-23.67S 040-09.55W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 121900Z DEC 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -40.159,
+     -20.395
+    ]
+   },
+   "cancel_at": "2026-12-12T19:00:00Z"
+  },
+  {
+   "id": "A-2397-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2397/2026",
+   "issued": "271021Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B AND M/V SSI EXCELLENT IN 20-23.38S 040-09.70W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B\n   AND M/V SSI EXCELLENT IN 20-23.38S 040-09.70W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 121900Z DEC 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -40.162,
+     -20.39
+    ]
+   },
+   "cancel_at": "2026-12-12T19:00:00Z"
+  },
+  {
+   "id": "A-2396-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2396/2026",
+   "issued": "271018Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B AND M/V MAERSK KATALIN IN 20-23.82S 040-09.47W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 28 NOV THRU 12 DEC BY M/V COMANDO B\n   AND M/V MAERSK KATALIN\n   IN 20-23.82S 040-09.47W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 121900Z DEC 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -40.158,
+     -20.397
+    ]
+   },
+   "cancel_at": "2026-12-12T19:00:00Z"
+  },
+  {
+   "id": "A-2395-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2395/2026",
+   "issued": "271015Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "HAZARDOUS OPERATIONS 1000Z TO 2130Z DAILY 02 THRU 04 DEC IN AREA BOUND BY 05-53.44S 035-09.75W, 05-56.03S 035-09.85W, 05-58.26S 035-05.35W, 06-12.53S 034-58.33W",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. HAZARDOUS OPERATIONS 1000Z TO 2130Z\n   DAILY 02 THRU 04 DEC IN AREA BOUND BY\n   05-53.44S 035-09.75W, 05-56.03S 035-09.85W,\n   05-58.26S 035-05.35W, 06-12.53S 034-58.33W,\n   06-17.52S 034-54.47W, 06-20.19S 034-36.13W,\n   05-56.49S 034-13.35W, 05-41.13S 034-15.18W,\n   05-35.41S 034-26.85W, 05-33.00S 034-52.91W,\n   05-38.82S 035-03.20W.\n2. CANCEL THIS MSG 042230Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
     "coordinates": [
      [
-      -47.898,
-      -0.557
-     ],
-     [
-      -47.921,
-      -0.579
+      [
+       -35.163,
+       -5.891
+      ],
+      [
+       -35.164,
+       -5.934
+      ],
+      [
+       -35.089,
+       -5.971
+      ],
+      [
+       -34.972,
+       -6.209
+      ],
+      [
+       -34.908,
+       -6.292
+      ],
+      [
+       -34.602,
+       -6.337
+      ],
+      [
+       -34.222,
+       -5.941
+      ],
+      [
+       -34.253,
+       -5.686
+      ],
+      [
+       -34.447,
+       -5.59
+      ],
+      [
+       -34.882,
+       -5.55
+      ],
+      [
+       -35.053,
+       -5.647
+      ],
+      [
+       -35.163,
+       -5.891
+      ]
      ]
     ]
    },
-   "cancel_at": "2027-05-25T00:01:00Z"
+   "cancel_at": "2026-12-04T22:30:00Z"
   },
   {
-   "id": "A-2374-2026",
+   "id": "A-2394-2026",
    "area": "HYDROLANT",
    "subregion": null,
-   "number": "HYDROLANT 2374/2026",
-   "issued": "250359Z NOV 2026",
+   "number": "HYDROLANT 2394/2026",
+   "issued": "270751Z NOV 2026",
+   "authority": "",
+   "category": "wreck",
+   "sea": "Black Sea",
+   "place": "Romania",
+   "headline": "DANGEROUS WRECK IN 45-09.23N 029-46.57E.",
+   "text": "BLACK SEA.\nROMANIA.\nDANGEROUS WRECK IN 45-09.23N 029-46.57E.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.776,
+     45.154
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "A-2393-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2393/2026",
+   "issued": "270519Z NOV 2026",
+   "authority": "",
+   "category": "search_and_rescue",
+   "sea": "South Atlantic",
+   "place": null,
+   "headline": "DISTRESS SIGNAL RECEIVED FROM M/V CETUS BOTTLENOSE IN 39-18.00S 000-53.00E AT 270344Z NOV.",
+   "text": "SOUTH ATLANTIC.\nDISTRESS SIGNAL RECEIVED FROM\nM/V CETUS BOTTLENOSE IN 39-18.00S 000-53.00E\nAT 270344Z NOV. VESSELS IN VICINITY REQUESTED\nTO KEEP A SHARP LOOKOUT, ASSIST IF POSSIBLE.\nREPORTS TO MRCC CAPE TOWN,\nPHONE: 272 1938 3300,\nE-MAIL: MRCC.CT@SAMSA.ORG.ZA OR\nCAPE TOWN RADIO, PHONE: 272 1551 0700,\nEMAIL: MARITIMERADIO@TELKOM.CO.ZA.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.883,
+     -39.3
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "A-2392-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2392/2026",
+   "issued": "270425Z NOV 2026",
    "authority": "",
    "category": "ice",
    "sea": "South Atlantic",
    "place": "Antarctica",
    "headline": "ICEBERGS REPORTED IN",
-   "text": "SOUTH ATLANTIC.\nSCOTIA SEA.\nANTARCTICA.\n1. ICEBERGS REPORTED IN:\n   A. A84, 68-40.20S 088-24.00W.\n   B. A85, 54-58.20S 043-59.40W.\n   C. D33A, 64-28.20S 055-31.20W.\n2. CANCEL THIS MSG 260358Z NOV 26.",
+   "text": "SOUTH ATLANTIC.\nSCOTIA SEA.\nANTARCTICA.\n1. ICEBERGS REPORTED IN:\n   A. A84, 68-40.20S 088-24.00W.\n   B. A85, 54-58.20S 043-59.40W.\n   C. D33A, 64-28.20S 055-31.20W.\n2. CANCEL THIS MSG 280421Z NOV 26.",
    "geometry": {
     "type": "MultiPoint",
     "coordinates": [
@@ -5265,7 +6049,286 @@
      ]
     ]
    },
-   "cancel_at": "2026-11-26T03:58:00Z"
+   "cancel_at": "2026-11-28T04:21:00Z"
+  },
+  {
+   "id": "A-2391-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2391/2026",
+   "issued": "270054Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "HAZARDOUS OPERATIONS 011500Z TO 102100Z DEC IN AREA BOUND BY 30-15.00S 049-54.50W, 30-15.00S 050-06.75W, 31-15.00S 050-42.34W, 31-15.00S 050-26.24W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. HAZARDOUS OPERATIONS 011500Z TO\n   102100Z DEC IN AREA BOUND BY\n   30-15.00S 049-54.50W, 30-15.00S 050-06.75W,\n   31-15.00S 050-42.34W, 31-15.00S 050-26.24W.\n2. CANCEL THIS MSG 102200Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -49.908,
+       -30.25
+      ],
+      [
+       -50.112,
+       -30.25
+      ],
+      [
+       -50.706,
+       -31.25
+      ],
+      [
+       -50.437,
+       -31.25
+      ],
+      [
+       -49.908,
+       -30.25
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-10T22:00:00Z"
+  },
+  {
+   "id": "A-2390-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2390/2026",
+   "issued": "270042Z NOV 2026",
+   "authority": "",
+   "category": "shoal",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "DEPTHS REPORTED UP TO 18.9 METERS LESS THAN CHARTED UNTIL 25 NOV 28 IN AREA BOUND BY 01-57.86S 044-02.06W, 01-57.85S 044-02.05W, 01-57.91S 044-01.98W, 01-57.92S",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. DEPTHS REPORTED UP TO 18.9 METERS LESS THAN\n   CHARTED UNTIL 25 NOV 28 IN AREA BOUND BY\n   01-57.86S 044-02.06W, 01-57.85S 044-02.05W,\n   01-57.91S 044-01.98W, 01-57.92S 044-01.99W.\n2. CANCEL THIS MSG 260001Z NOV 28.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -44.034,
+       -1.964
+      ],
+      [
+       -44.034,
+       -1.964
+      ],
+      [
+       -44.033,
+       -1.965
+      ],
+      [
+       -44.033,
+       -1.965
+      ],
+      [
+       -44.034,
+       -1.964
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2028-11-26T00:01:00Z"
+  },
+  {
+   "id": "A-2389-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2389/2026",
+   "issued": "261838Z NOV 2026",
+   "authority": "",
+   "category": "cable_pipeline",
+   "sea": "Gulf Of Guinea",
+   "place": "Nigeria",
+   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V RAMFORM ATLAS TOWING 12 11000 METER LONG CABLES IN AREA BOUND BY 05-55.05N 004-09.00E, 05-55.00N 003-1",
+   "text": "GULF OF GUINEA.\nNIGERIA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL FURTHER\n   NOTICE BY M/V RAMFORM ATLAS TOWING 12 11000\n   METER LONG CABLES IN AREA BOUND BY\n   05-55.05N 004-09.00E, 05-55.00N 003-16.00E,\n   06-20.00N 003-16.00E, 06-20.00N 004-09.00E.\n   SEVEN MILE BERTH REQUESTED.\n2. CANCEL HYDROLANT 2231/26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.15,
+       5.918
+      ],
+      [
+       3.267,
+       5.917
+      ],
+      [
+       3.267,
+       6.333
+      ],
+      [
+       4.15,
+       6.333
+      ],
+      [
+       4.15,
+       5.918
+      ]
+     ]
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "A-2382-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2382/2026",
+   "issued": "260150Z NOV 2026",
+   "authority": "",
+   "category": "underwater_ops",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "UNDERWATER OPERATIONS IN PROGRESS UNTIL 101800Z DEC BY M/V COMANDO B IN 20-23.63S 040-09.18W.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS IN PROGRESS\n   UNTIL 101800Z DEC BY M/V COMANDO B\n   IN 20-23.63S 040-09.18W.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROLANT 2381/26.\n3. CANCEL THIS MSG 101900Z DEC 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -40.153,
+     -20.394
+    ]
+   },
+   "cancel_at": "2026-12-10T19:00:00Z"
+  },
+  {
+   "id": "A-2380-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2380/2026",
+   "issued": "260111Z NOV 2026",
+   "authority": "",
+   "category": "cable_pipeline",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 30 NOV BY M/V RAMFORM TITAN, VESSEL C.ITAJAI, M/V DRS IPANEMA AND M/V OCEAN MERMAID TOWING TEN 10000 METER LONG CABLES IN AR",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. SURVEY OPERATIONS IN PROGRESS\n   UNTIL 30 NOV BY M/V RAMFORM TITAN,\n   VESSEL C.ITAJAI, M/V DRS IPANEMA AND\n   M/V OCEAN MERMAID TOWING TEN 10000\n   METER LONG CABLES IN AREA BOUND BY\n   35-44.52S 050-08.24W, 34-38.29S 051-57.40W,\n   34-37.27S 051-59.20W, 34-17.30S 051-37.31W,\n   34-11.71S 051-36.50W, 33-39.37S 051-03.34W,\n   33-36.40S 050-50.45W, 33-21.95S 050-33.57W,\n   33-06.34S 050-28.58W, 32-20.33S 050-13.41W,\n   31-31.23S 049-50.13W, 31-17.58S 049-36.35W,\n   30-58.57S 049-17.26W, 30-54.47S 049-13.26W,\n   32-30.47S 046-56.35W, 33-16.40S 047-35.25W,\n   34-35.59S 048-55.47W.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROLANT 2367/26.\n3. CANCEL THIS MSG 010001Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -50.137,
+       -35.742
+      ],
+      [
+       -51.957,
+       -34.638
+      ],
+      [
+       -51.987,
+       -34.621
+      ],
+      [
+       -51.622,
+       -34.288
+      ],
+      [
+       -51.608,
+       -34.195
+      ],
+      [
+       -51.056,
+       -33.656
+      ],
+      [
+       -50.841,
+       -33.607
+      ],
+      [
+       -50.559,
+       -33.366
+      ],
+      [
+       -50.476,
+       -33.106
+      ],
+      [
+       -50.224,
+       -32.339
+      ],
+      [
+       -49.836,
+       -31.52
+      ],
+      [
+       -49.606,
+       -31.293
+      ],
+      [
+       -49.288,
+       -30.976
+      ],
+      [
+       -49.221,
+       -30.908
+      ],
+      [
+       -46.939,
+       -32.508
+      ],
+      [
+       -47.587,
+       -33.273
+      ],
+      [
+       -48.925,
+       -34.593
+      ],
+      [
+       -50.137,
+       -35.742
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-01T00:01:00Z"
+  },
+  {
+   "id": "A-2379-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2379/2026",
+   "issued": "260101Z NOV 2026",
+   "authority": "",
+   "category": "aids_to_navigation",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "ILHA DE PALMAS LIGHT 23-01.55S 043-12.31W UNLIT UNTIL 24 MAY 27.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. ILHA DE PALMAS LIGHT 23-01.55S 043-12.31W\n   UNLIT UNTIL 24 MAY 27.\n2. CANCEL THIS MSG 250001Z MAY 27.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -43.205,
+     -23.026
+    ]
+   },
+   "cancel_at": "2027-05-25T00:01:00Z"
+  },
+  {
+   "id": "A-2378-2026",
+   "area": "HYDROLANT",
+   "subregion": null,
+   "number": "HYDROLANT 2378/2026",
+   "issued": "260049Z NOV 2026",
+   "authority": "",
+   "category": "aids_to_navigation",
+   "sea": "South Atlantic",
+   "place": "Brazil",
+   "headline": "ILHA PONTUDA LIGHT 23-02.28S 043-18.22W UNLIT UNTIL 24 MAY 27.",
+   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. ILHA PONTUDA LIGHT 23-02.28S 043-18.22W\n   UNLIT UNTIL 24 MAY 27.\n2. CANCEL THIS MSG 250001Z MAY 27.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -43.304,
+     -23.038
+    ]
+   },
+   "cancel_at": "2027-05-25T00:01:00Z"
   },
   {
    "id": "A-2373-2026",
@@ -5287,129 +6350,6 @@
     ]
    },
    "cancel_at": null
-  },
-  {
-   "id": "A-2371-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2371/2026",
-   "issued": "241733Z NOV 2026",
-   "authority": "",
-   "category": "ice",
-   "sea": "South Atlantic",
-   "place": "Antarctica",
-   "headline": "ICEBERGS REPORTED IN",
-   "text": "SOUTH ATLANTIC.\nANTARCTICA.\n1. ICEBERGS REPORTED IN:\n   A. A81, 54-00.00S 035-14.00W.\n   B. D33B, 55-51.00S 036-36.00W.\n   C. D33A, 64-32.00S 055-25.00W.\n   D. D35, 60-13.00S 043-14.00W.\n   E. D33D, 63-36.00S 055-19.00W.\n   F. A83, 59-19.00S 049-46.00W.\n   G. A85, 54-31.00S 049-15.00W.\n   H. D32, 56-48.00S 040-21.00W.\n   I. 55-51.00S 034-51.00W.\n   J. 57-38.00S 045-09.00W.\n   K. 59-10.00S 040-37.00W.\n   L. 60-46.00S 058-29.00W.\n   M. 61-33.00S 054-02.00W.\n   N. 54-41.00S 042-56.00W.\n   O. 61-35.00S 053-54.00W.\n   P. 63-52.00S 054-05.00W.\n   Q. 63-20.00S 052-53.00W.\n   R. 60-52.00S 043-52.00W.\n   S. 64-08.00S 055-48.00W.\n   T. 63-56.00S 055-31.00W.\n   U. 63-52.00S 055-39.00W.\n   V. 64-03.00S 054-22.00W.\n   W. 64-41.00S 056-35.00W.\n   X. 62-34.00S 053-18.00W.\n   Y. 61-37.00S 053-58.00W.\n   Z. 60-43.00S 058-32.00W.\n2. CANCEL THIS MSG 251736Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -35.233,
-      -54.0
-     ],
-     [
-      -36.6,
-      -55.85
-     ],
-     [
-      -55.417,
-      -64.533
-     ],
-     [
-      -43.233,
-      -60.217
-     ],
-     [
-      -55.317,
-      -63.6
-     ],
-     [
-      -49.767,
-      -59.317
-     ],
-     [
-      -49.25,
-      -54.517
-     ],
-     [
-      -40.35,
-      -56.8
-     ],
-     [
-      -34.85,
-      -55.85
-     ],
-     [
-      -45.15,
-      -57.633
-     ],
-     [
-      -40.617,
-      -59.167
-     ],
-     [
-      -58.483,
-      -60.767
-     ],
-     [
-      -54.033,
-      -61.55
-     ],
-     [
-      -42.933,
-      -54.683
-     ],
-     [
-      -53.9,
-      -61.583
-     ],
-     [
-      -54.083,
-      -63.867
-     ],
-     [
-      -52.883,
-      -63.333
-     ],
-     [
-      -43.867,
-      -60.867
-     ],
-     [
-      -55.8,
-      -64.133
-     ],
-     [
-      -55.517,
-      -63.933
-     ],
-     [
-      -55.65,
-      -63.867
-     ],
-     [
-      -54.367,
-      -64.05
-     ],
-     [
-      -56.583,
-      -64.683
-     ],
-     [
-      -53.3,
-      -62.567
-     ],
-     [
-      -53.967,
-      -61.617
-     ],
-     [
-      -58.533,
-      -60.717
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-25T17:36:00Z"
   },
   {
    "id": "A-2369-2026",
@@ -5492,99 +6432,6 @@
     ]
    },
    "cancel_at": "2026-11-28T01:00:00Z"
-  },
-  {
-   "id": "A-2367-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2367/2026",
-   "issued": "240958Z NOV 2026",
-   "authority": "",
-   "category": "cable_pipeline",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 30 NOV BY M/V OCEAN MERMAID, M/V RAMFORM TITAN, VESSEL C.ITAJAI AND M/V DRS IPANEMA TOWING TEN 10000 METER LONG CABLES IN AR",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. SURVEY OPERATIONS IN PROGRESS\n   UNTIL 30 NOV BY M/V OCEAN MERMAID,\n   M/V RAMFORM TITAN, VESSEL C.ITAJAI\n   AND M/V DRS IPANEMA TOWING TEN\n   10000 METER LONG CABLES\n   IN AREA BOUND BY\n   35-44.52S 050-08.24W, 34-38.29S 051-57.40W,\n   34-37.27S 051-59.20W, 34-17.30S 051-37.31W,\n   34-11.71S 051-36.50W, 33-39.37S 051-03.34W,\n   33-36.40S 050-50.45W, 33-21.95S 050-33.57W,\n   33-06.34S 050-28.58W, 32-20.33S 050-13.41W,\n   31-31.23S 049-50.13W, 31-17.58S 049-36.35W,\n   30-58.57S 049-17.26W, 30-54.47S 049-13.26W,\n   32-30.47S 046-56.35W, 33-16.40S 047-35.25W,\n   34-35.59S 048-55.47W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 010001Z DEC 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -50.137,
-       -35.742
-      ],
-      [
-       -51.957,
-       -34.638
-      ],
-      [
-       -51.987,
-       -34.621
-      ],
-      [
-       -51.622,
-       -34.288
-      ],
-      [
-       -51.608,
-       -34.195
-      ],
-      [
-       -51.056,
-       -33.656
-      ],
-      [
-       -50.841,
-       -33.607
-      ],
-      [
-       -50.559,
-       -33.366
-      ],
-      [
-       -50.476,
-       -33.106
-      ],
-      [
-       -50.224,
-       -32.339
-      ],
-      [
-       -49.836,
-       -31.52
-      ],
-      [
-       -49.606,
-       -31.293
-      ],
-      [
-       -49.288,
-       -30.976
-      ],
-      [
-       -49.221,
-       -30.908
-      ],
-      [
-       -46.939,
-       -32.508
-      ],
-      [
-       -47.587,
-       -33.273
-      ],
-      [
-       -48.925,
-       -34.593
-      ],
-      [
-       -50.137,
-       -35.742
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-12-01T00:01:00Z"
   },
   {
    "id": "A-2366-2026",
@@ -5747,27 +6594,6 @@
    "cancel_at": "2026-11-28T23:00:00Z"
   },
   {
-   "id": "A-2364-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2364/2026",
-   "issued": "240932Z NOV 2026",
-   "authority": "",
-   "category": "wreck",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "METALLIC CYLINDRICAL OBJECT ADRIFT IN VICINITY 01-29.05S 040-03.60W AT 231630Z NOV.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. METALLIC CYLINDRICAL OBJECT ADRIFT IN\n   VICINITY 01-29.05S 040-03.60W AT 231630Z NOV.\n   REPORTS TO CPAOR,\n   PHONE: 55 919 8266 0196,\n   E-MAIL: CPAOR.CNTM@MAR.MIL.BR\n2. CANCEL THIS MSG 270905Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.06,
-     -1.484
-    ]
-   },
-   "cancel_at": "2026-11-27T09:05:00Z"
-  },
-  {
    "id": "A-2362-2026",
    "area": "HYDROLANT",
    "subregion": null,
@@ -5855,48 +6681,6 @@
    "text": "NGA MARITIME DISSEMINATION ADVISORY\n1. NGA IS EXPERIENCING WEBSITE OUTAGES FOR WWW AND NIPR SITES.\n   THIS AFFECTS DNC, ENC, CPENC, NAVIGATIONAL WARNINGS, AND NAUTICAL PRODUCTS.\n   WEBSITES IMPACTED ARE DNC VDU, MSI, MCDP, AND ESYNC.\n   MARITIME.GEO.NGA.MIL WILL NOW REDIRECT TO A TEMPORARY FAILOVER PAGE FOR\n   ENC REGION AND SUBREGION DOWNLOADS.\n   TO DOWNLOAD AFFECTED PRODUCTS, USE:\n   MARITIME.GEO.NGA.MIL (AUTOMATIC REDIRECT TO TEMPORARY FAILOVER PAGE)\n   HTTPS://GO.INTELINK.GOV/UBLRZAS (LINK IS CASE SENSITIVE)\n   SIPR MCDP (HTTPS://MARITIME.NGA.SMIL.MIL)\n   SIPR ESYNC (HTTPS://ESYNC.NGA.SMIL.MIL)\n   IF YOU REQUIRE FURTHER ASSISTANCE, INCLUDING REQUESTS FOR DIRECT DOWNLOADS\n   VIA DOD SAFE, PLEASE CONTACT MARHELP@NGA.MIL.\n2. CANCEL HYDROLANT 2345/26.",
    "geometry": null,
    "cancel_at": null
-  },
-  {
-   "id": "A-2358-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2358/2026",
-   "issued": "231007Z NOV 2026",
-   "authority": "",
-   "category": "wreck",
-   "sea": "English Channel",
-   "place": "France",
-   "headline": "DERELICT 12 METER S/V ADRIFT IN VICINITY 48-51.00N 004-12.00W AT 230751Z NOV.",
-   "text": "ENGLISH CHANNEL.\nFRANCE.\n1. DERELICT 12 METER S/V ADRIFT IN\n   VICINITY 48-51.00N 004-12.00W\n   AT 230751Z NOV.\n2. CANCEL HYDROLANT 2349/26.\n3. CANCEL THIS MSG 261003Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -4.2,
-     48.85
-    ]
-   },
-   "cancel_at": "2026-11-26T10:03:00Z"
-  },
-  {
-   "id": "A-2357-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2357/2026",
-   "issued": "230549Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 24 NOV THRU 08 DEC BY M/V COMANDO B IN 20-23.37S 040-09.63W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 24 NOV THRU 08 DEC BY M/V COMANDO B\n   IN 20-23.37S 040-09.63W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 081900Z DEC 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.16,
-     -20.39
-    ]
-   },
-   "cancel_at": "2026-12-08T19:00:00Z"
   },
   {
    "id": "A-2355-2026",
@@ -5995,54 +6779,6 @@
     ]
    },
    "cancel_at": "2027-02-23T22:00:00Z"
-  },
-  {
-   "id": "A-2352-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2352/2026",
-   "issued": "221230Z NOV 2026",
-   "authority": "",
-   "category": "radio_service",
-   "sea": "North Sea",
-   "place": "England",
-   "headline": "NAVTEX STATION CULLERCOATS (G) 55-04.00N 001-28.00W OFF AIR 0900Z TO 1700Z DAILY 23 THRU 26 NOV.",
-   "text": "NORTH SEA.\nENGLAND.\n1. NAVTEX STATION CULLERCOATS (G)\n   55-04.00N 001-28.00W OFF AIR 0900Z TO 1700Z DAILY\n   23 THRU 26 NOV.\n2. CULLERCOATS BROADCASTS WILL BE TRANSMITTED FROM\n   PORTPATRICK (O) 54-50.6N 005-07.5W\n3. CANCEL THIS MSG 261800Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -1.467,
-      55.067
-     ],
-     [
-      -5.125,
-      54.843
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T18:00:00Z"
-  },
-  {
-   "id": "A-2347-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2347/2026",
-   "issued": "211236Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 22 NOV THRU 06 DEC BY M/V COMANDO B IN 20-23.80S 040-09.33W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY\n   22 NOV THRU 06 DEC BY M/V COMANDO B\n   IN 20-23.80S 040-09.33W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 061900Z DEC 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.156,
-     -20.397
-    ]
-   },
-   "cancel_at": "2026-12-06T19:00:00Z"
   },
   {
    "id": "A-2343-2026",
@@ -6408,48 +7144,6 @@
    "cancel_at": "2026-11-28T20:00:00Z"
   },
   {
-   "id": "A-2331-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2331/2026",
-   "issued": "191723Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 20 NOV THRU 04 DEC BY M/V COMANDO B IN 20-23.92S 040-09.40W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY\n   20 NOV THRU 04 DEC BY M/V COMANDO B\n   IN 20-23.92S 040-09.40W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 041900Z DEC 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.157,
-     -20.399
-    ]
-   },
-   "cancel_at": "2026-12-04T19:00:00Z"
-  },
-  {
-   "id": "A-2330-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2330/2026",
-   "issued": "191717Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 20 NOV THRU 04 DEC BY M/V COMANDO B IN 20-23.52S 040-09.63W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY\n   20 NOV THRU 04 DEC BY M/V COMANDO B\n   IN 20-23.52S 040-09.63W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 041900Z DEC 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.16,
-     -20.392
-    ]
-   },
-   "cancel_at": "2026-12-04T19:00:00Z"
-  },
-  {
    "id": "A-2329-2026",
    "area": "HYDROLANT",
    "subregion": null,
@@ -6810,116 +7504,6 @@
    "cancel_at": "2026-12-13T00:01:00Z"
   },
   {
-   "id": "A-2322-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2322/2026",
-   "issued": "181628Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Black Sea",
-   "place": "Romania",
-   "headline": "HAZARDOUS OPERATIONS 0500Z TO 1300Z DAILY 25 AND 26 NOV IN AREA BOUND BY 44-25.43N 028-42.50E, 44-29.50N 028-55.58E, 44-29.55N 029-31.12E, 44-24.20N 029-31.93E,",
-   "text": "BLACK SEA.\nROMANIA.\n1. HAZARDOUS OPERATIONS 0500Z TO 1300Z DAILY\n   25 AND 26 NOV IN AREA BOUND BY\n   44-25.43N 028-42.50E, 44-29.50N 028-55.58E,\n   44-29.55N 029-31.12E, 44-24.20N 029-31.93E,\n   44-09.02N 029-26.73E, 44-04.45N 029-22.32E,\n   44-13.55N 028-51.50E, 44-22.08N 028-42.42E.\n2. CANCEL THIS MSG 261400Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       28.708,
-       44.424
-      ],
-      [
-       28.926,
-       44.492
-      ],
-      [
-       29.519,
-       44.492
-      ],
-      [
-       29.532,
-       44.403
-      ],
-      [
-       29.445,
-       44.15
-      ],
-      [
-       29.372,
-       44.074
-      ],
-      [
-       28.858,
-       44.226
-      ],
-      [
-       28.707,
-       44.368
-      ],
-      [
-       28.708,
-       44.424
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T14:00:00Z"
-  },
-  {
-   "id": "A-2321-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2321/2026",
-   "issued": "181606Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Black Sea",
-   "place": "Romania",
-   "headline": "HAZARDOUS OPERATIONS 241000Z TO 241400Z AND 251300Z TO 251700Z NOV IN AREA BOUND BY 44-25.43N 028-42.50E, 44-29.50N 028-55.58E, 44-25.08N 029-01.20E, 44-19.70N",
-   "text": "BLACK SEA.\nROMANIA.\n1. HAZARDOUS OPERATIONS 241000Z TO 241400Z AND\n   251300Z TO 251700Z NOV IN AREA BOUND BY\n   44-25.43N 028-42.50E, 44-29.50N 028-55.58E,\n   44-25.08N 029-01.20E, 44-19.70N 029-00.82E,\n   44-14.57N 028-57.93E, 44-13.10N 028-56.33E,\n   44-22.08N 028-42.42E.\n2. CANCEL THIS MSG 251800Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       28.708,
-       44.424
-      ],
-      [
-       28.926,
-       44.492
-      ],
-      [
-       29.02,
-       44.418
-      ],
-      [
-       29.014,
-       44.328
-      ],
-      [
-       28.965,
-       44.243
-      ],
-      [
-       28.939,
-       44.218
-      ],
-      [
-       28.707,
-       44.368
-      ],
-      [
-       28.708,
-       44.424
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-25T18:00:00Z"
-  },
-  {
    "id": "A-2314-2026",
    "area": "HYDROLANT",
    "subregion": null,
@@ -7105,33 +7689,6 @@
     ]
    },
    "cancel_at": "2026-12-06T00:01:00Z"
-  },
-  {
-   "id": "A-2284-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2284/2026",
-   "issued": "140001Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 0800Z TO 1800Z DAILY 14 THRU 28 NOV BY M/V COMANDO B IN",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 0800Z TO 1800Z\n   DAILY 14 THRU 28 NOV BY M/V COMANDO B IN:\n   A. 20-23.27S 040-09.72W.\n   B. 20-23.90S 040-09.67W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 281900Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -40.162,
-      -20.388
-     ],
-     [
-      -40.161,
-      -20.398
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-28T19:00:00Z"
   },
   {
    "id": "A-2280-2026",
@@ -7377,178 +7934,6 @@
     ]
    },
    "cancel_at": "2026-11-27T21:00:00Z"
-  },
-  {
-   "id": "A-2264-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2264/2026",
-   "issued": "110132Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 1100Z TO 2100Z DAILY 12 THRU 26 NOV BY M/V SINTRA AND M/V COMANDO B IN 20-23.97S 040-09.85W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 1100Z TO 2100Z\n   DAILY 12 THRU 26 NOV BY M/V SINTRA AND\n   M/V COMANDO B IN 20-23.97S 040-09.85W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 262200Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.164,
-     -20.399
-    ]
-   },
-   "cancel_at": "2026-11-26T22:00:00Z"
-  },
-  {
-   "id": "A-2262-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2262/2026",
-   "issued": "110100Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 1100Z TO 2100Z DAILY 12 THRU 26 NOV BY M/V OMISHIMA AND M/V COMANDO B IN 20-23.08S 040-09.77W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 1100Z TO 2100Z\n   DAILY 12 THRU 26 NOV BY M/V OMISHIMA\n   AND M/V COMANDO B IN 20-23.08S 040-09.77W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 262200Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.163,
-     -20.385
-    ]
-   },
-   "cancel_at": "2026-11-26T22:00:00Z"
-  },
-  {
-   "id": "A-2261-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2261/2026",
-   "issued": "110052Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "South Atlantic",
-   "place": "Brazil",
-   "headline": "UNDERWATER OPERATIONS 1100Z TO 2100Z DAILY 12 THRU 26 NOV BY M/V SARAH H AND M/V COMANDO B IN 20-23.67S 040-09.55W.",
-   "text": "SOUTH ATLANTIC.\nBRAZIL.\n1. UNDERWATER OPERATIONS 1100Z TO 2100Z\n   DAILY 12 THRU 26 NOV BY M/V SARAH H AND\n   M/V COMANDO B IN 20-23.67S 040-09.55W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 262200Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -40.159,
-     -20.395
-    ]
-   },
-   "cancel_at": "2026-11-26T22:00:00Z"
-  },
-  {
-   "id": "A-2249-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2249/2026",
-   "issued": "091451Z NOV 2026",
-   "authority": "",
-   "category": "cable_pipeline",
-   "sea": "South Atlantic",
-   "place": null,
-   "headline": "CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC BY M/V REBECCA ALONG TRACKLINE JOINING 27-19.68S 007-56.75E, 21-05.60S 000-05.18W.",
-   "text": "SOUTH ATLANTIC.\n1. CABLE OPERATIONS IN PROGRESS UNTIL 15 DEC\n   BY M/V REBECCA ALONG TRACKLINE JOINING\n   27-19.68S 007-56.75E, 21-05.60S 000-05.18W.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 160001Z DEC 26.",
-   "geometry": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      7.946,
-      -27.328
-     ],
-     [
-      -0.086,
-      -21.093
-     ]
-    ]
-   },
-   "cancel_at": "2026-12-16T00:01:00Z"
-  },
-  {
-   "id": "A-2238-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2238/2026",
-   "issued": "072335Z NOV 2026",
-   "authority": "",
-   "category": "cable_pipeline",
-   "sea": "South Atlantic",
-   "place": null,
-   "headline": "CONGO, (BRAZZAVILLE).",
-   "text": "SOUTH ATLANTIC.\nCONGO, (BRAZZAVILLE).\nCABLE OPERATIONS 11 NOV UNTIL FURTHER NOTICE\nBY CABLESHIP LEON THEVENIN IN AREA BOUND BY\n05-27.80S 010-42.70E, 05-38.70S 010-54.20E,\n05-49.70S 010-30.40E, 05-44.50S 010-25.40E.\nWIDE BERTH REQUESTED.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       10.712,
-       -5.463
-      ],
-      [
-       10.903,
-       -5.645
-      ],
-      [
-       10.507,
-       -5.828
-      ],
-      [
-       10.423,
-       -5.742
-      ],
-      [
-       10.712,
-       -5.463
-      ]
-     ]
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "A-2231-2026",
-   "area": "HYDROLANT",
-   "subregion": null,
-   "number": "HYDROLANT 2231/2026",
-   "issued": "061932Z NOV 2026",
-   "authority": "",
-   "category": "cable_pipeline",
-   "sea": "Gulf Of Guinea",
-   "place": "Benin",
-   "headline": "SURVEY OPERATIONS 08 NOV UNTIL FURTHER NOTICE BY M/V RAMFORM ATLAS TOWING 12 11000 METER LONG CABLES IN AREA BOUND BY 05-56.58N 002-49.92E, 05-58.12N 002-07.18E",
-   "text": "GULF OF GUINEA.\nBENIN.\nSURVEY OPERATIONS 08 NOV UNTIL FURTHER NOTICE\nBY M/V RAMFORM ATLAS\nTOWING 12 11000 METER LONG CABLES\nIN AREA BOUND BY\n05-56.58N 002-49.92E, 05-58.12N 002-07.18E,\n04-17.09N 002-59.66E, 04-19.03N 003-18.85E,\n05-56.58N 002-49.93E.\nSEVEN MILE BERTH REQUESTED.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       2.832,
-       5.943
-      ],
-      [
-       2.12,
-       5.969
-      ],
-      [
-       2.994,
-       4.285
-      ],
-      [
-       3.314,
-       4.317
-      ],
-      [
-       2.832,
-       5.943
-      ]
-     ]
-    ]
-   },
-   "cancel_at": null
   },
   {
    "id": "A-2227-2026",
@@ -10326,17 +10711,930 @@
    ]
   },
   {
-   "id": "P-3483-2026",
+   "id": "P-3519-2026",
    "area": "HYDROPAC",
    "subregion": null,
-   "number": "HYDROPAC 3483/2026",
-   "issued": "251426Z NOV 2026",
+   "number": "HYDROPAC 3519/2026",
+   "issued": "271554Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Arabian Sea",
+   "place": "Pakistan",
+   "headline": "HAZARDOUS OPERATIONS 0300Z-1900Z DAILY 01 THRU 04, 07 THRU 11, 14 THRU 18, 21 THRU 25, AND 28 THRU 31 DEC IN AREAS BOUND BY",
+   "text": "ARABIAN SEA.\nPAKISTAN.\n1. HAZARDOUS OPERATIONS 0300Z-1900Z DAILY\n   01 THRU 04, 07 THRU 11, 14 THRU 18, 21 THRU 25,\n   AND 28 THRU 31 DEC IN AREAS BOUND BY:\n   A. 24-24.30N 066-42.00E, 24-19.00N 066-58.00E,\n      24-00.00N 066-39.00E, 24-11.00N 066-27.00E.\n   B. 24-36.02N 062-30.03E, 24-36.02N 063-15.03E,\n      24-21.02N 063-15.03E, 24-21.02N 062-30.03E.\n   C. 24-36.02N 061-45.03E, 24-36.02N 062-30.03E,\n      24-21.02N 062-30.03E, 24-21.02N 061-45.03E.\n   D. 24-22.00N 066-27.00E, 24-16.30N 066-33.00E,\n      24-10.30N 066-27.00E, 24-16.18N 066-20.50E.\n2. CANCEL THIS MSG 312000Z DEC 26.",
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        66.7,
+        24.405
+       ],
+       [
+        66.967,
+        24.317
+       ],
+       [
+        66.65,
+        24.0
+       ],
+       [
+        66.45,
+        24.183
+       ],
+       [
+        66.7,
+        24.405
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        62.501,
+        24.6
+       ],
+       [
+        63.251,
+        24.6
+       ],
+       [
+        63.251,
+        24.35
+       ],
+       [
+        62.501,
+        24.35
+       ],
+       [
+        62.501,
+        24.6
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        61.751,
+        24.6
+       ],
+       [
+        62.501,
+        24.6
+       ],
+       [
+        62.501,
+        24.35
+       ],
+       [
+        61.751,
+        24.35
+       ],
+       [
+        61.751,
+        24.6
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        66.45,
+        24.367
+       ],
+       [
+        66.55,
+        24.272
+       ],
+       [
+        66.45,
+        24.172
+       ],
+       [
+        66.342,
+        24.27
+       ],
+       [
+        66.45,
+        24.367
+       ]
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-31T20:00:00Z"
+  },
+  {
+   "id": "P-3518-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3518/2026",
+   "issued": "271510Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "South Pacific",
+   "place": "Moorea",
+   "headline": "GUNNERY EXERCISES 291800Z TO 300001Z NOV IN AREA BOUND BY 17-13.00S 149-48.00W, 16-37.00S 150-08.00W, 16-30.00S 149-36.00W, 17-10.00S 149-36.00W.",
+   "text": "SOUTH PACIFIC.\nMOOREA.\n1. GUNNERY EXERCISES 291800Z TO 300001Z NOV\n   IN AREA BOUND BY\n   17-13.00S 149-48.00W, 16-37.00S 150-08.00W,\n   16-30.00S 149-36.00W, 17-10.00S 149-36.00W.\n2. CANCEL THIS MSG 300100Z NOV 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -149.8,
+       -17.217
+      ],
+      [
+       -150.133,
+       -16.617
+      ],
+      [
+       -149.6,
+       -16.5
+      ],
+      [
+       -149.6,
+       -17.167
+      ],
+      [
+       -149.8,
+       -17.217
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-30T01:00:00Z"
+  },
+  {
+   "id": "P-3517-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3517/2026",
+   "issued": "271451Z NOV 2026",
+   "authority": "",
+   "category": "drilling_survey",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 18 DEC BY M/V SAMUDRA KAUSTUBH IN AREA BOUND BY 17-56.54N 083-32.05E, 18-04.42N 083-41.48E, 17-58.07N 083-48.40E, 17-50.62N",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 18 DEC\n   BY M/V SAMUDRA KAUSTUBH\n   IN AREA BOUND BY\n   17-56.54N 083-32.05E, 18-04.42N 083-41.48E,\n   17-58.07N 083-48.40E, 17-50.62N 083-48.42E,\n   17-46.34N 083-43.05E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 190001Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       83.534,
+       17.942
+      ],
+      [
+       83.691,
+       18.074
+      ],
+      [
+       83.807,
+       17.968
+      ],
+      [
+       83.807,
+       17.844
+      ],
+      [
+       83.718,
+       17.772
+      ],
+      [
+       83.534,
+       17.942
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-19T00:01:00Z"
+  },
+  {
+   "id": "P-3516-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3516/2026",
+   "issued": "271426Z NOV 2026",
    "authority": "",
    "category": "military",
    "sea": "Bay Of Bengal",
    "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 270030Z TO 271230Z NOV IN AREA BOUND BY 17-30.02N 083-33.17E, 17-20.07N 083-21.79E, 17-09.14N 083-32.41E, 17-19.36N 083-43.72E.",
-   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 270030Z TO 271230Z NOV\n   IN AREA BOUND BY\n   17-30.02N 083-33.17E, 17-20.07N 083-21.79E,\n   17-09.14N 083-32.41E, 17-19.36N 083-43.72E.\n2. CANCEL HYDROPAC 3453/26.\n3. CANCEL THIS MSG 271330Z NOV 26.",
+   "headline": "HAZARDOUS OPERATIONS 2330Z TO 1030Z DAILY 29 THRU 30 NOV IN AREA BOUND BY 17-22.00N 083-45.00E, 17-34.00N 083-54.00E, 17-26.00N 084-06.00E, 17-14.00N 083-58.00E",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS\n   2330Z TO 1030Z DAILY 29 THRU 30 NOV\n   IN AREA BOUND BY\n   17-22.00N 083-45.00E, 17-34.00N 083-54.00E,\n   17-26.00N 084-06.00E, 17-14.00N 083-58.00E.\n2. CANCEL THIS MSG 011130Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       83.75,
+       17.367
+      ],
+      [
+       83.9,
+       17.567
+      ],
+      [
+       84.1,
+       17.433
+      ],
+      [
+       83.967,
+       17.233
+      ],
+      [
+       83.75,
+       17.367
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-01T11:30:00Z"
+  },
+  {
+   "id": "P-3515-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3515/2026",
+   "issued": "271350Z NOV 2026",
+   "authority": "",
+   "category": "cable_pipeline",
+   "sea": "Arabian Sea",
+   "place": "India",
+   "headline": "PIPELINE AND SURVEY OPERATIONS IN PROGRESS UNTIL 27 DEC BY M/V CREATIVE 1, M/V AESEN MAGELLAN 2, M/V WILCHIEF 1, M/V LTS 3000, M/V JT ODYSSEY AND M/V CCC PIONEE",
+   "text": "ARABIAN SEA.\nGULF OF KHAMBHAT.\nINDIA.\n1. PIPELINE AND SURVEY OPERATIONS IN PROGRESS\n   UNTIL 27 DEC BY M/V CREATIVE 1,\n   M/V AESEN MAGELLAN 2, M/V WILCHIEF 1,\n   M/V LTS 3000, M/V JT ODYSSEY AND M/V CCC PIONEER\n   IN AREAS BOUND BY:\n   A. 20-28.00N 071-13.00E, 20-28.83N 071-13.01E,\n      20-27.49N 072-30.63E, 20-00.35N 072-27.73E,\n      20-00.00N 072-27.00E, 20-01.00N 071-14.00E.\n   B. 19-43.00N 071-02.00E, 19-43.57N 071-02.99E,\n      19-42.47N 072-17.18E, 19-09.06N 072-16.51E,\n      19-09.00N 072-16.00E, 19-10.00N 071-02.00E.\n   C. 18-45.00N 072-13.00E, 18-44.00N 072-25.00E,\n      18-22.00N 072-24.00E, 18-22.00N 072-09.00E.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROPAC 3494/26.\n3. CANCEL THIS MSG 280001Z DEC 26.",
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        71.217,
+        20.467
+       ],
+       [
+        71.217,
+        20.48
+       ],
+       [
+        72.51,
+        20.458
+       ],
+       [
+        72.462,
+        20.006
+       ],
+       [
+        72.45,
+        20.0
+       ],
+       [
+        71.233,
+        20.017
+       ],
+       [
+        71.217,
+        20.467
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        71.033,
+        19.717
+       ],
+       [
+        71.05,
+        19.726
+       ],
+       [
+        72.286,
+        19.708
+       ],
+       [
+        72.275,
+        19.151
+       ],
+       [
+        72.267,
+        19.15
+       ],
+       [
+        71.033,
+        19.167
+       ],
+       [
+        71.033,
+        19.717
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        72.217,
+        18.75
+       ],
+       [
+        72.417,
+        18.733
+       ],
+       [
+        72.4,
+        18.367
+       ],
+       [
+        72.15,
+        18.367
+       ],
+       [
+        72.217,
+        18.75
+       ]
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-28T00:01:00Z"
+  },
+  {
+   "id": "P-3514-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3514/2026",
+   "issued": "271340Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Arabian Sea",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 020330Z TO 020830Z DEC IN AREA BOUND BY 21-32.00N 069-24.00E, 21-17.00N 069-24.00E, 21-17.00N 069-06.00E, 21-32.00N 068-56.00E.",
+   "text": "ARABIAN SEA.\nINDIA.\n1. HAZARDOUS OPERATIONS 020330Z TO 020830Z DEC\n   IN AREA BOUND BY\n   21-32.00N 069-24.00E, 21-17.00N 069-24.00E,\n   21-17.00N 069-06.00E, 21-32.00N 068-56.00E.\n2. CANCEL THIS MSG 020930Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       69.4,
+       21.533
+      ],
+      [
+       69.4,
+       21.283
+      ],
+      [
+       69.1,
+       21.283
+      ],
+      [
+       68.933,
+       21.533
+      ],
+      [
+       69.4,
+       21.533
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-02T09:30:00Z"
+  },
+  {
+   "id": "P-3513-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3513/2026",
+   "issued": "271334Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 0430Z TO 0830Z DAILY 01 THRU 03 DEC IN AREA BOUND BY 17-48.27N 083-34.01E, 17-33.42N 083-38.12E, 17-38.82N 084-00.47E, 17-48.18N 084-02.40E",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 0430Z TO 0830Z DAILY\n   01 THRU 03 DEC IN AREA BOUND BY\n   17-48.27N 083-34.01E, 17-33.42N 083-38.12E,\n   17-38.82N 084-00.47E, 17-48.18N 084-02.40E.\n2. CANCEL THIS MSG 030930Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       83.567,
+       17.805
+      ],
+      [
+       83.635,
+       17.557
+      ],
+      [
+       84.008,
+       17.647
+      ],
+      [
+       84.04,
+       17.803
+      ],
+      [
+       83.567,
+       17.805
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-03T09:30:00Z"
+  },
+  {
+   "id": "P-3512-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3512/2026",
+   "issued": "271326Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 0430Z TO 0630Z AND 0900Z TO 1100Z DAILY 01 THRU 03 DEC IN AREA BOUND BY 20-45.80N 087-00.21E, 20-39.93N 087-03.71E, 20-19.05N 087-46.10E, 2",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS\n   0430Z TO 0630Z AND 0900Z TO 1100Z DAILY\n   01 THRU 03 DEC IN AREA BOUND BY\n   20-45.80N 087-00.21E, 20-39.93N 087-03.71E,\n   20-19.05N 087-46.10E, 20-51.11N 088-19.61E,\n   21-34.88N 087-52.46E, 21-27.50N 087-02.05E.\n2. CANCEL THIS MSG 031200Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       87.004,
+       20.763
+      ],
+      [
+       87.062,
+       20.666
+      ],
+      [
+       87.768,
+       20.317
+      ],
+      [
+       88.327,
+       20.852
+      ],
+      [
+       87.874,
+       21.581
+      ],
+      [
+       87.034,
+       21.458
+      ],
+      [
+       87.004,
+       20.763
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-03T12:00:00Z"
+  },
+  {
+   "id": "P-3511-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3511/2026",
+   "issued": "271308Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Arabian Sea",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 30430Z TO 300730Z NOV IN AREA BOUND BY 22-40.00N 069-09.11E, 22-35.12N 069-16.12E, 22-28.30N 069-17.10E, 22-28.45N 068-51.05E, 22-42.11N 06",
+   "text": "ARABIAN SEA.\nGULF OF KACHCHH.\nINDIA.\n1. HAZARDOUS OPERATIONS 30430Z TO 300730Z NOV\n   IN AREA BOUND BY\n   22-40.00N 069-09.11E, 22-35.12N 069-16.12E,\n   22-28.30N 069-17.10E, 22-28.45N 068-51.05E,\n   22-42.11N 068-55.34E.\n2. CANCEL THIS MSG 300830Z NOV 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       69.152,
+       22.667
+      ],
+      [
+       69.269,
+       22.585
+      ],
+      [
+       69.285,
+       22.472
+      ],
+      [
+       68.851,
+       22.474
+      ],
+      [
+       68.922,
+       22.702
+      ],
+      [
+       69.152,
+       22.667
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-30T08:30:00Z"
+  },
+  {
+   "id": "P-3510-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3510/2026",
+   "issued": "271219Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 0730Z TO 1330Z DAILY 01 THRU 04 DEC IN AREA BOUND BY 17-41.80N 083-18.50E, 17-46.10N 083-25.00E, 17-46.10N 083-31.30E, 17-34.00N 083-31.10E",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 0730Z TO 1330Z DAILY\n   01 THRU 04 DEC IN AREA BOUND BY\n   17-41.80N 083-18.50E, 17-46.10N 083-25.00E,\n   17-46.10N 083-31.30E, 17-34.00N 083-31.10E,\n   17-34.10N 083-17.50E.\n2. CANCEL THIS MSG 041430Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       83.308,
+       17.697
+      ],
+      [
+       83.417,
+       17.768
+      ],
+      [
+       83.522,
+       17.768
+      ],
+      [
+       83.518,
+       17.567
+      ],
+      [
+       83.292,
+       17.568
+      ],
+      [
+       83.308,
+       17.697
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-04T14:30:00Z"
+  },
+  {
+   "id": "P-3509-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3509/2026",
+   "issued": "271205Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Andaman Sea",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 280430Z TO 280800Z AND 300030Z TO 300430Z NOV IN AREA BOUND BY 11-15.00N 092-31.00E, 11-14.00N 092-46.00E, 11-10.00N 092-46.00E, 11-07.00N",
+   "text": "ANDAMAN SEA.\nINDIA.\n1. HAZARDOUS OPERATIONS\n   280430Z TO 280800Z AND 300030Z TO 300430Z NOV\n   IN AREA BOUND BY\n   11-15.00N 092-31.00E, 11-14.00N 092-46.00E,\n   11-10.00N 092-46.00E, 11-07.00N 092-32.00E.\n2. CANCEL HYDROPAC 3497/26\n3. CANCEL THIS MSG 300530Z NOV 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       92.517,
+       11.25
+      ],
+      [
+       92.767,
+       11.233
+      ],
+      [
+       92.767,
+       11.167
+      ],
+      [
+       92.533,
+       11.117
+      ],
+      [
+       92.517,
+       11.25
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-30T05:30:00Z"
+  },
+  {
+   "id": "P-3508-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3508/2026",
+   "issued": "271038Z NOV 2026",
+   "authority": "",
+   "category": "cable_pipeline",
+   "sea": "Coral Sea",
+   "place": "Papua New Guinea",
+   "headline": "PIPELINE OPERATIONS IN PROGRESS UNTIL 01 APR 27 BY BARGE TIMAS DLB-01 IN 08-06.00S 144-33.80E.",
+   "text": "CORAL SEA.\nPAPUA NEW GUINEA.\n1. PIPELINE OPERATIONS IN PROGRESS UNTIL\n   01 APR 27 BY BARGE TIMAS DLB-01\n   IN 08-06.00S 144-33.80E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 020001Z APR 27.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     144.563,
+     -8.1
+    ]
+   },
+   "cancel_at": "2027-04-02T00:01:00Z"
+  },
+  {
+   "id": "P-3507-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3507/2026",
+   "issued": "271032Z NOV 2026",
+   "authority": "",
+   "category": "radio_service",
+   "sea": "Coral Sea",
+   "place": "Australia",
+   "headline": "SANDY CAPE LIGHT 24-43.80S 153-12.53E UNRELIABLE.",
+   "text": "CORAL SEA.\nAUSTRALIA.\nSANDY CAPE LIGHT 24-43.80S 153-12.53E\nUNRELIABLE.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     153.209,
+     -24.73
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "P-3506-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3506/2026",
+   "issued": "270743Z NOV 2026",
+   "authority": "",
+   "category": "cable_pipeline",
+   "sea": "Coral Sea",
+   "place": null,
+   "headline": "CABLE OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V LAYLA ALONG TRACKLINE JOINING 12-24.93S 148-41.98E, 17-08.43S 153-12.03E.",
+   "text": "CORAL SEA.\nCABLE OPERATIONS IN PROGRESS UNTIL\nFURTHER NOTICE BY M/V LAYLA\nALONG TRACKLINE JOINING\n12-24.93S 148-41.98E, 17-08.43S 153-12.03E.\nTWO MILE BERTH REQUESTED.",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      148.7,
+      -12.415
+     ],
+     [
+      153.201,
+      -17.14
+     ]
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "P-3503-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3503/2026",
+   "issued": "270441Z NOV 2026",
+   "authority": "",
+   "category": "launch",
+   "sea": "South Pacific",
+   "place": null,
+   "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 022217Z TO 030155Z, 032203Z TO 040141Z, 042149Z TO 050127Z, 052135Z TO 060113Z, 062121Z TO 070059Z, 072107Z TO 080045Z AND 08",
+   "text": "SOUTH PACIFIC.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   022217Z TO 030155Z, 032203Z TO 040141Z,\n   042149Z TO 050127Z, 052135Z TO 060113Z,\n   062121Z TO 070059Z, 072107Z TO 080045Z\n   AND 082053Z TO 090031Z DEC\n   IN AREA BOUND BY\n   27-59.00S 122-44.00W, 27-09.00S 120-43.00W,\n   38-21.00S 115-04.00W, 49-09.00S 107-22.00W,\n   59-09.00S 095-34.00W, 59-58.00S 099-05.00W,\n   44-34.00S 114-13.00W.\n2. CANCEL THIS MSG 090131Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -122.733,
+       -27.983
+      ],
+      [
+       -120.717,
+       -27.15
+      ],
+      [
+       -115.067,
+       -38.35
+      ],
+      [
+       -107.367,
+       -49.15
+      ],
+      [
+       -95.567,
+       -59.15
+      ],
+      [
+       -99.083,
+       -59.967
+      ],
+      [
+       -114.217,
+       -44.567
+      ],
+      [
+       -122.733,
+       -27.983
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-09T01:31:00Z"
+  },
+  {
+   "id": "P-3501-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3501/2026",
+   "issued": "270118Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "South Pacific",
+   "place": "Chile",
+   "headline": "HAZARDOUS OPERATIONS 1400Z TO 2100Z DAILY 01 AND 02 DEC IN AREA BOUND BY 33-07.00S 072-31.50W, 33-07.00S 072-08.00W, 33-27.00S 072-12.40W, 33-27.00S 072-31.50W.",
+   "text": "SOUTH PACIFIC.\nCHILE.\n1. HAZARDOUS OPERATIONS 1400Z TO 2100Z\n   DAILY 01 AND 02 DEC IN AREA BOUND BY\n   33-07.00S 072-31.50W, 33-07.00S 072-08.00W,\n   33-27.00S 072-12.40W, 33-27.00S 072-31.50W.\n2. CANCEL THIS MSG 022200Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -72.525,
+       -33.117
+      ],
+      [
+       -72.133,
+       -33.117
+      ],
+      [
+       -72.207,
+       -33.45
+      ],
+      [
+       -72.525,
+       -33.45
+      ],
+      [
+       -72.525,
+       -33.117
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-02T22:00:00Z"
+  },
+  {
+   "id": "P-3499-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3499/2026",
+   "issued": "261427Z NOV 2026",
+   "authority": "",
+   "category": "launch",
+   "sea": "Eastern Indian Ocean",
+   "place": null,
+   "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 010001Z TO 010600Z DEC IN AREA BOUND BY 38-40.64S 095-42.55E, 38-50.45S 096-22.11E, 42-15.89S 094-54.83E, 42-05.57S 094-13.42",
+   "text": "EASTERN INDIAN OCEAN.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   010001Z TO 010600Z DEC IN AREA BOUND BY\n   38-40.64S 095-42.55E, 38-50.45S 096-22.11E,\n   42-15.89S 094-54.83E, 42-05.57S 094-13.42E.\n2. CANCEL THIS MSG 010700Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       95.709,
+       -38.677
+      ],
+      [
+       96.368,
+       -38.841
+      ],
+      [
+       94.914,
+       -42.265
+      ],
+      [
+       94.224,
+       -42.093
+      ],
+      [
+       95.709,
+       -38.677
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-01T07:00:00Z"
+  },
+  {
+   "id": "P-3498-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3498/2026",
+   "issued": "261408Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 0030Z TO 1630Z DAILY 01 THRU 11 DEC IN AREA BOUND BY 15-50.56N 080-29.40E, 15-32.10N 081-22.19E, 15-11.86N 081-08.66E, 15-00.24N 080-50.37E",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 0030Z TO 1630Z DAILY\n   01 THRU 11 DEC IN AREA BOUND BY\n   15-50.56N 080-29.40E, 15-32.10N 081-22.19E,\n   15-11.86N 081-08.66E, 15-00.24N 080-50.37E,\n   14-56.30N 080-29.43E, 14-59.36N 080-09.79E.\n2. CANCEL THIS MSG 111730Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       80.49,
+       15.843
+      ],
+      [
+       81.37,
+       15.535
+      ],
+      [
+       81.144,
+       15.198
+      ],
+      [
+       80.84,
+       15.004
+      ],
+      [
+       80.49,
+       14.938
+      ],
+      [
+       80.163,
+       14.989
+      ],
+      [
+       80.49,
+       15.843
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-11T17:30:00Z"
+  },
+  {
+   "id": "P-3496-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3496/2026",
+   "issued": "261339Z NOV 2026",
+   "authority": "",
+   "category": "drilling_survey",
+   "sea": "Arabian Sea",
+   "place": "India",
+   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 03 DEC BY M/V SAMUDRA SHAUDHIKAMA IN AREA BOUND BY 15-37.36N 073-26.25E, 15-32.72N 073-11.34E, 15-55.95N 073-03.61E, 15-59.2",
+   "text": "ARABIAN SEA.\nINDIA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 03 DEC\n   BY M/V SAMUDRA SHAUDHIKAMA\n   IN AREA BOUND BY\n   15-37.36N 073-26.25E, 15-32.72N 073-11.34E,\n   15-55.95N 073-03.61E, 15-59.27N 073-14.28E,\n   15-51.53N 073-16.86E, 15-52.85N 073-21.12E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 040001Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       73.438,
+       15.623
+      ],
+      [
+       73.189,
+       15.545
+      ],
+      [
+       73.06,
+       15.932
+      ],
+      [
+       73.238,
+       15.988
+      ],
+      [
+       73.281,
+       15.859
+      ],
+      [
+       73.352,
+       15.881
+      ],
+      [
+       73.438,
+       15.623
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-04T00:01:00Z"
+  },
+  {
+   "id": "P-3493-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3493/2026",
+   "issued": "261316Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Bay Of Bengal",
+   "place": "India",
+   "headline": "HAZARDOUS OPERATIONS 270630Z TO 271630Z IN AREA BOUND BY 17-30.02N 083-33.17E, 17-20.07N 083-21.79E, 17-09.14N 083-32.41E, 17-19.36N 083-43.72E.",
+   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 270630Z TO 271630Z\n   IN AREA BOUND BY\n   17-30.02N 083-33.17E, 17-20.07N 083-21.79E,\n   17-09.14N 083-32.41E, 17-19.36N 083-43.72E.\n2. CANCEL HYDROPAC 3483/26.\n3. CANCEL THIS MSG 271730Z NOV 26.",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -10364,7 +11662,513 @@
      ]
     ]
    },
-   "cancel_at": "2026-11-27T13:30:00Z"
+   "cancel_at": "2026-11-27T17:30:00Z"
+  },
+  {
+   "id": "P-3492-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3492/2026",
+   "issued": "261309Z NOV 2026",
+   "authority": "",
+   "category": "wreck",
+   "sea": "Bay Of Bengal",
+   "place": "Bangladesh",
+   "headline": "M/V BALASUR I MARKED WITH BLACK BUOY AND WHITE LIGHT SANK IN 22-13.61N 091-46.00E.",
+   "text": "BAY OF BENGAL.\nBANGLADESH.\nM/V BALASUR I MARKED WITH BLACK BUOY AND\nWHITE LIGHT SANK IN 22-13.61N 091-46.00E.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     91.767,
+     22.227
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "P-3491-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3491/2026",
+   "issued": "261230Z NOV 2026",
+   "authority": "",
+   "category": "aids_to_navigation",
+   "sea": "North Pacific",
+   "place": "Philippines",
+   "headline": "LOLONG POINT LIGHT 13-56.81N 124-21.29E UNLIT.",
+   "text": "NORTH PACIFIC.\nPHILIPPINE SEA.\nPHILIPPINES.\nLOLONG POINT LIGHT 13-56.81N 124-21.29E UNLIT.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     124.355,
+     13.947
+    ]
+   },
+   "cancel_at": null
+  },
+  {
+   "id": "P-3490-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3490/2026",
+   "issued": "261219Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": null,
+   "headline": "GUNNERY EXERCISES 2300Z TO 0900Z DAILY 30 NOV THRU 30 DEC IN AREA BOUND BY 28-15.15N 146-29.47E, 25-25.16N 147-37.47E, 25-00.16N 145-35.48E, 27-55.15N 144-57.48",
+   "text": "NORTH PACIFIC.\n1. GUNNERY EXERCISES 2300Z TO 0900Z DAILY\n   30 NOV THRU 30 DEC IN AREA BOUND BY\n   28-15.15N 146-29.47E, 25-25.16N 147-37.47E,\n   25-00.16N 145-35.48E, 27-55.15N 144-57.48E.\n2. CANCEL THIS MSG 311000Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       146.491,
+       28.253
+      ],
+      [
+       147.625,
+       25.419
+      ],
+      [
+       145.591,
+       25.003
+      ],
+      [
+       144.958,
+       27.919
+      ],
+      [
+       146.491,
+       28.253
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-31T10:00:00Z"
+  },
+  {
+   "id": "P-3489-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3489/2026",
+   "issued": "261212Z NOV 2026",
+   "authority": "",
+   "category": "launch",
+   "sea": "South China Sea",
+   "place": "Indonesia",
+   "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 010001Z TO 010600Z DEC IN AREAS BOUND BY",
+   "text": "SOUTH CHINA SEA.\nINDONESIA.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS 010001Z\n   TO 010600Z DEC IN AREAS BOUND BY:\n   A. 06-55.18N 108-38.95E, 06-48.60N 109-05.30E,\n      05-45.81N 108-49.39E, 05-52.38N 108-23.09E.\n   B. 06-46.82N 108-36.86E, 06-40.24N 109-03.20E,\n      05-37.45N 108-47.30E, 05-44.02N 108-21.01E.\n2. CANCEL THIS MSG 010700Z DEC 26.",
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        108.649,
+        6.92
+       ],
+       [
+        109.088,
+        6.81
+       ],
+       [
+        108.823,
+        5.764
+       ],
+       [
+        108.385,
+        5.873
+       ],
+       [
+        108.649,
+        6.92
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        108.614,
+        6.78
+       ],
+       [
+        109.053,
+        6.671
+       ],
+       [
+        108.788,
+        5.624
+       ],
+       [
+        108.35,
+        5.734
+       ],
+       [
+        108.614,
+        6.78
+       ]
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-01T07:00:00Z"
+  },
+  {
+   "id": "P-3488-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3488/2026",
+   "issued": "240758Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "North Pacific",
+   "place": "Guam",
+   "headline": "HAZARDOUS OPERATIONS 0100Z TO 1300Z DAILY 01 THRU 03 DEC IN AREAS WITHIN THREE MILES OF",
+   "text": "NORTH PACIFIC.\nPHILIPPINE SEA.\nGUAM.\n1. HAZARDOUS OPERATIONS 0100Z TO 1300Z\n   DAILY 01 THRU 03 DEC IN AREAS WITHIN\n   THREE MILES OF:\n   A. 13-25.58N 145-09.86E.\n   B. 13-42.00N 144-36.00E.\n2. CANCEL THIS MSG 031400Z DEC 26.",
+   "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+     [
+      [
+       [
+        145.164,
+        13.476
+       ],
+       [
+        145.174,
+        13.475
+       ],
+       [
+        145.1837,
+        13.4722
+       ],
+       [
+        145.1925,
+        13.4675
+       ],
+       [
+        145.2003,
+        13.4613
+       ],
+       [
+        145.2067,
+        13.4538
+       ],
+       [
+        145.2115,
+        13.4451
+       ],
+       [
+        145.2144,
+        13.4357
+       ],
+       [
+        145.2154,
+        13.426
+       ],
+       [
+        145.2144,
+        13.4163
+       ],
+       [
+        145.2115,
+        13.4069
+       ],
+       [
+        145.2067,
+        13.3982
+       ],
+       [
+        145.2003,
+        13.3907
+       ],
+       [
+        145.1925,
+        13.3845
+       ],
+       [
+        145.1837,
+        13.3798
+       ],
+       [
+        145.174,
+        13.377
+       ],
+       [
+        145.164,
+        13.376
+       ],
+       [
+        145.154,
+        13.377
+       ],
+       [
+        145.1443,
+        13.3798
+       ],
+       [
+        145.1355,
+        13.3845
+       ],
+       [
+        145.1277,
+        13.3907
+       ],
+       [
+        145.1213,
+        13.3982
+       ],
+       [
+        145.1165,
+        13.4069
+       ],
+       [
+        145.1136,
+        13.4163
+       ],
+       [
+        145.1126,
+        13.426
+       ],
+       [
+        145.1136,
+        13.4357
+       ],
+       [
+        145.1165,
+        13.4451
+       ],
+       [
+        145.1213,
+        13.4538
+       ],
+       [
+        145.1277,
+        13.4613
+       ],
+       [
+        145.1355,
+        13.4675
+       ],
+       [
+        145.1443,
+        13.4722
+       ],
+       [
+        145.154,
+        13.475
+       ],
+       [
+        145.164,
+        13.476
+       ]
+      ]
+     ],
+     [
+      [
+       [
+        144.6,
+        13.75
+       ],
+       [
+        144.61,
+        13.749
+       ],
+       [
+        144.6197,
+        13.7462
+       ],
+       [
+        144.6286,
+        13.7415
+       ],
+       [
+        144.6364,
+        13.7353
+       ],
+       [
+        144.6428,
+        13.7278
+       ],
+       [
+        144.6475,
+        13.7191
+       ],
+       [
+        144.6504,
+        13.7097
+       ],
+       [
+        144.6514,
+        13.7
+       ],
+       [
+        144.6504,
+        13.6903
+       ],
+       [
+        144.6475,
+        13.6809
+       ],
+       [
+        144.6428,
+        13.6722
+       ],
+       [
+        144.6364,
+        13.6647
+       ],
+       [
+        144.6286,
+        13.6585
+       ],
+       [
+        144.6197,
+        13.6538
+       ],
+       [
+        144.61,
+        13.651
+       ],
+       [
+        144.6,
+        13.65
+       ],
+       [
+        144.59,
+        13.651
+       ],
+       [
+        144.5803,
+        13.6538
+       ],
+       [
+        144.5714,
+        13.6585
+       ],
+       [
+        144.5636,
+        13.6647
+       ],
+       [
+        144.5572,
+        13.6722
+       ],
+       [
+        144.5525,
+        13.6809
+       ],
+       [
+        144.5496,
+        13.6903
+       ],
+       [
+        144.5486,
+        13.7
+       ],
+       [
+        144.5496,
+        13.7097
+       ],
+       [
+        144.5525,
+        13.7191
+       ],
+       [
+        144.5572,
+        13.7278
+       ],
+       [
+        144.5636,
+        13.7353
+       ],
+       [
+        144.5714,
+        13.7415
+       ],
+       [
+        144.5803,
+        13.7462
+       ],
+       [
+        144.59,
+        13.749
+       ],
+       [
+        144.6,
+        13.75
+       ]
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-03T14:00:00Z",
+   "radius_m": [
+    5556
+   ]
+  },
+  {
+   "id": "P-3486-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3486/2026",
+   "issued": "260233Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "South Pacific",
+   "place": "Chile",
+   "headline": "HAZARDOUS OPERATIONS 301300Z TO 301900Z NOV IN AREA BOUND BY 38-20.15S 074-41.85W, 38-19.75S 074-29.83W, 38-28.66S 074-29.33W, 38-28.85S 074-42.35W.",
+   "text": "SOUTH PACIFIC.\nCHILE.\n1. HAZARDOUS OPERATIONS 301300Z TO\n   301900Z NOV IN AREA BOUND BY\n   38-20.15S 074-41.85W, 38-19.75S 074-29.83W,\n   38-28.66S 074-29.33W, 38-28.85S 074-42.35W.\n2. CANCEL THIS MSG 302000Z NOV 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -74.698,
+       -38.336
+      ],
+      [
+       -74.497,
+       -38.329
+      ],
+      [
+       -74.489,
+       -38.478
+      ],
+      [
+       -74.706,
+       -38.481
+      ],
+      [
+       -74.698,
+       -38.336
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-11-30T20:00:00Z"
+  },
+  {
+   "id": "P-3485-2026",
+   "area": "HYDROPAC",
+   "subregion": null,
+   "number": "HYDROPAC 3485/2026",
+   "issued": "260221Z NOV 2026",
+   "authority": "",
+   "category": "wreck",
+   "sea": "South Pacific",
+   "place": null,
+   "headline": "DART BUOY 4G ADRIFT IN 31-54.16S 073-52.68W.",
+   "text": "SOUTH PACIFIC.\n1. DART BUOY 4G ADRIFT IN 31-54.16S 073-52.68W.\n2. CANCEL THIS MSG 290221Z NOV 26.",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.878,
+     -31.903
+    ]
+   },
+   "cancel_at": "2026-11-29T02:21:00Z"
   },
   {
    "id": "P-3482-2026",
@@ -10408,47 +12212,6 @@
    "cancel_at": null
   },
   {
-   "id": "P-3481-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3481/2026",
-   "issued": "251017Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Bay Of Bengal",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 270330Z TO 270930Z NOV IN AREA BOUND BY 17-22.00N 083-34.00E, 17-25.00N 083-38.00E, 17-22.00N 083-42.00E, 17-18.00N 083-38.00E.",
-   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 270330Z TO 270930Z NOV\n   IN AREA BOUND BY\n   17-22.00N 083-34.00E, 17-25.00N 083-38.00E,\n   17-22.00N 083-42.00E, 17-18.00N 083-38.00E.\n2. CANCEL THIS MSG 271030Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       83.567,
-       17.367
-      ],
-      [
-       83.633,
-       17.417
-      ],
-      [
-       83.7,
-       17.367
-      ],
-      [
-       83.633,
-       17.3
-      ],
-      [
-       83.567,
-       17.367
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T10:30:00Z"
-  },
-  {
    "id": "P-3480-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -10488,68 +12251,6 @@
     ]
    },
    "cancel_at": "2026-12-03T00:01:00Z"
-  },
-  {
-   "id": "P-3479-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3479/2026",
-   "issued": "250714Z NOV 2026",
-   "authority": "",
-   "category": "search_and_rescue",
-   "sea": "South China Sea",
-   "place": "Vietnam",
-   "headline": "M/V LINH GIANG, SEVEN PERSONS ON BOARD, DISABLED AND ADRIFT DUE TO ENIGINE FAILURE IN 09-36.23N 109-17.36E AT 250224Z NOV.",
-   "text": "SOUTH CHINA SEA.\nVIETNAM.\n1. M/V LINH GIANG, SEVEN PERSONS ON BOARD,\n   DISABLED AND ADRIFT DUE TO ENIGINE FAILURE\n   IN 09-36.23N 109-17.36E AT 250224Z NOV.\n   VESSELS IN VICINITY REQUESTED TO KEEP\n   A SHARP LOOKOUT, ASSIST IF POSSIBLE.\n   REPORTS TO MRCC VIETNAM,\n   EMAIL: HPLES-GMDSS@HPLES.COM.VN.\n2. CANCEL HYDROPAC 3478/26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     109.289,
-     9.604
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "P-3477-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3477/2026",
-   "issued": "250432Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "South Pacific",
-   "place": "French Polynesia",
-   "headline": "GUNNERY EXERCISES 260001Z TO 260300Z NOV IN AREA BOUND BY 14-40.00S 150-08.00W, 14-40.00S 149-47.00W, 15-10.00S 149-47.00W, 15-10.00S 150-08.00W.",
-   "text": "SOUTH PACIFIC.\nFRENCH POLYNESIA.\n1. GUNNERY EXERCISES 260001Z TO 260300Z NOV\n   IN AREA BOUND BY\n   14-40.00S 150-08.00W, 14-40.00S 149-47.00W,\n   15-10.00S 149-47.00W, 15-10.00S 150-08.00W.\n2. CANCEL THIS MSG 260400Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -150.133,
-       -14.667
-      ],
-      [
-       -149.783,
-       -14.667
-      ],
-      [
-       -149.783,
-       -15.167
-      ],
-      [
-       -150.133,
-       -15.167
-      ],
-      [
-       -150.133,
-       -14.667
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T04:00:00Z"
   },
   {
    "id": "P-3476-2026",
@@ -10653,118 +12354,6 @@
     ]
    },
    "cancel_at": null
-  },
-  {
-   "id": "P-3473-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3473/2026",
-   "issued": "242254Z NOV 2026",
-   "authority": "",
-   "category": "launch",
-   "sea": "South Pacific",
-   "place": null,
-   "headline": "HAZARDOUS OPERATIONS, SPACE DEBRIS 262200Z NOV TO 091945Z DEC IN AREAS BOUND BY",
-   "text": "SOUTH PACIFIC.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\n   262200Z NOV TO 091945Z DEC\n   IN AREAS BOUND BY:\n   A. 37-42.00S 177-18.00W, 37-00.00S 173-12.00W,\n      38-36.00S 172-48.00W, 39-18.00S 176-57.00W.\n   B. 35-36.00S 165-48.00W, 34-24.00S 161-00.00W,\n      36-00.00S 160-18.00W, 37-18.00S 165-24.00W.\n2. CANCEL HYDROPAC 3445/26.\n3. CANCEL THIS MSG 092045Z DEC 26.",
-   "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-     [
-      [
-       [
-        -177.3,
-        -37.7
-       ],
-       [
-        -173.2,
-        -37.0
-       ],
-       [
-        -172.8,
-        -38.6
-       ],
-       [
-        -176.95,
-        -39.3
-       ],
-       [
-        -177.3,
-        -37.7
-       ]
-      ]
-     ],
-     [
-      [
-       [
-        -165.8,
-        -35.6
-       ],
-       [
-        -161.0,
-        -34.4
-       ],
-       [
-        -160.3,
-        -36.0
-       ],
-       [
-        -165.4,
-        -37.3
-       ],
-       [
-        -165.8,
-        -35.6
-       ]
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-12-09T20:45:00Z"
-  },
-  {
-   "id": "P-3472-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3472/2026",
-   "issued": "242243Z NOV 2026",
-   "authority": "",
-   "category": "launch",
-   "sea": "South Pacific",
-   "place": "New Zealand",
-   "headline": "HAZARDOUS OPERATIONS, ROCKET LAUNCHING 262200Z NOV TO 091945Z DEC IN AREA BOUND BY 39-12.00S 177-45.00E, 39-09.00S 177-57.00E, 39-00.37S 178-35.57E, 39-21.37S 1",
-   "text": "SOUTH PACIFIC.\nNEW ZEALAND.\n1. HAZARDOUS OPERATIONS, ROCKET LAUNCHING\n   262200Z NOV TO 091945Z DEC IN AREA BOUND BY\n   39-12.00S 177-45.00E, 39-09.00S 177-57.00E,\n   39-00.37S 178-35.57E, 39-21.37S 178-40.15E,\n   39-24.00S 177-48.00E.\n2. CANCEL HYDROPAC 3446/26.\n3. CANCEL THIS MSG 092045Z DEC 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       177.75,
-       -39.2
-      ],
-      [
-       177.95,
-       -39.15
-      ],
-      [
-       178.593,
-       -39.006
-      ],
-      [
-       178.669,
-       -39.356
-      ],
-      [
-       177.8,
-       -39.4
-      ],
-      [
-       177.75,
-       -39.2
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-12-09T20:45:00Z"
   },
   {
    "id": "P-3471-2026",
@@ -11012,27 +12601,6 @@
    "cancel_at": "2026-12-05T08:42:00Z"
   },
   {
-   "id": "P-3459-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3459/2026",
-   "issued": "240221Z NOV 2026",
-   "authority": "",
-   "category": "wreck",
-   "sea": "Timor Sea",
-   "place": "Australia",
-   "headline": "EIGHT METER LONG FISHING NET REPORTED ADRIFT IN 11-18.66S 130-45.01E AT 230630Z NOV.",
-   "text": "TIMOR SEA.\nAUSTRALIA.\n1. EIGHT METER LONG FISHING NET REPORTED\n   ADRIFT IN 11-18.66S 130-45.01E AT 230630Z NOV.\n2. CANCEL THIS MSG 270222Z NOV 26.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     130.75,
-     -11.311
-    ]
-   },
-   "cancel_at": "2026-11-27T02:22:00Z"
-  },
-  {
    "id": "P-3456-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -11227,47 +12795,6 @@
    "cancel_at": "2026-12-03T00:01:00Z"
   },
   {
-   "id": "P-3449-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3449/2026",
-   "issued": "231413Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Andaman Sea",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 260900Z TO 261230Z NOV IN AREA BOUND BY 11-39.70N 092-46.30E, 11-40.60N 092-47.00E, 11-38.70N 092-53.10E, 11-32.90N 092-48.30E.",
-   "text": "ANDAMAN SEA.\nINDIA.\n1. HAZARDOUS OPERATIONS 260900Z TO 261230Z NOV\n    IN AREA BOUND BY\n   11-39.70N 092-46.30E, 11-40.60N 092-47.00E,\n   11-38.70N 092-53.10E, 11-32.90N 092-48.30E.\n2. CANCEL THIS MSG 261330Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       92.772,
-       11.662
-      ],
-      [
-       92.783,
-       11.677
-      ],
-      [
-       92.885,
-       11.645
-      ],
-      [
-       92.805,
-       11.548
-      ],
-      [
-       92.772,
-       11.662
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T13:30:00Z"
-  },
-  {
    "id": "P-3448-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -11297,47 +12824,6 @@
     ]
    },
    "cancel_at": "2026-12-16T00:01:00Z"
-  },
-  {
-   "id": "P-3447-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3447/2026",
-   "issued": "231333Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Andaman Sea",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 0830Z TO 1030Z DAILY 25 THRU 27 NOV IN AREA BOUND BY 12-50.00N 093-40.00E, 12-50.00N 094-10.00E, 13-00.00N 094-10.00E, 13-00.00N 093-40.00E",
-   "text": "ANDAMAN SEA.\nINDIA.\n1. HAZARDOUS OPERATIONS 0830Z TO 1030Z DAILY\n   25 THRU 27 NOV IN AREA BOUND BY\n   12-50.00N 093-40.00E, 12-50.00N 094-10.00E,\n   13-00.00N 094-10.00E, 13-00.00N 093-40.00E.\n2. CANCEL THIS MSG 271230Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       93.667,
-       12.833
-      ],
-      [
-       94.167,
-       12.833
-      ],
-      [
-       94.167,
-       13.0
-      ],
-      [
-       93.667,
-       13.0
-      ],
-      [
-       93.667,
-       12.833
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T12:30:00Z"
   },
   {
    "id": "P-3443-2026",
@@ -11483,97 +12969,6 @@
     ]
    },
    "cancel_at": "2026-11-28T12:30:00Z"
-  },
-  {
-   "id": "P-3418-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3418/2026",
-   "issued": "201045Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Bay Of Bengal",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 2330Z TO 1030Z DAILY 22 THRU 26 NOV IN AREAS BOUND BY",
-   "text": "BAY OF BENGAL.\nINDIA.\n1. HAZARDOUS OPERATIONS 2330Z TO 1030Z DAILY\n   22 THRU 26 NOV IN AREAS BOUND BY:\n   A. 17-58.90N 084-11.70E, 17-58.90N 084-27.30E,\n      17-49.50N 084-15.70E, 17-49.50N 083-59.60E.\n   B. 17-42.00N 083-53.00E, 17-31.00N 084-10.00E,\n      17-14.00N 083-58.00E, 17-25.00N 083-41.00E.\n   C. 17-47.00N 083-55.00E, 17-47.00N 084-05.05E,\n      17-37.00N 084-05.05E, 17-37.00N 083-55.00E.\n2. CANCEL THIS MSG 271130Z NOV 26.",
-   "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-     [
-      [
-       [
-        84.195,
-        17.982
-       ],
-       [
-        84.455,
-        17.982
-       ],
-       [
-        84.262,
-        17.825
-       ],
-       [
-        83.993,
-        17.825
-       ],
-       [
-        84.195,
-        17.982
-       ]
-      ]
-     ],
-     [
-      [
-       [
-        83.883,
-        17.7
-       ],
-       [
-        84.167,
-        17.517
-       ],
-       [
-        83.967,
-        17.233
-       ],
-       [
-        83.683,
-        17.417
-       ],
-       [
-        83.883,
-        17.7
-       ]
-      ]
-     ],
-     [
-      [
-       [
-        83.917,
-        17.783
-       ],
-       [
-        84.084,
-        17.783
-       ],
-       [
-        84.084,
-        17.617
-       ],
-       [
-        83.917,
-        17.617
-       ],
-       [
-        83.917,
-        17.783
-       ]
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T11:30:00Z"
   },
   {
    "id": "P-3417-2026",
@@ -11751,47 +13146,6 @@
     ]
    },
    "cancel_at": null
-  },
-  {
-   "id": "P-3408-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3408/2026",
-   "issued": "191122Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Andaman Sea",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 0330Z TO 0530Z AND 0830Z TO 1030Z DAILY 23 THRU 27 NOV IN AREA BOUND BY 11-15.00N 092-30.00E, 11-20.00N 092-55.00E, 11-05.00N 092-55.00E, 1",
-   "text": "ANDAMAN SEA.\nINDIA.\n1. HAZARDOUS OPERATIONS 0330Z TO 0530Z AND\n   0830Z TO 1030Z DAILY 23 THRU 27 NOV\n   IN AREA BOUND BY\n   11-15.00N 092-30.00E, 11-20.00N 092-55.00E,\n   11-05.00N 092-55.00E, 11-00.00N 092-30.00E.\n2. CANCEL THIS MSG 271130Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       92.5,
-       11.25
-      ],
-      [
-       92.917,
-       11.333
-      ],
-      [
-       92.917,
-       11.083
-      ],
-      [
-       92.5,
-       11.0
-      ],
-      [
-       92.5,
-       11.25
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T11:30:00Z"
   },
   {
    "id": "P-3404-2026",
@@ -12169,55 +13523,6 @@
    "radius_m": [
     5556
    ]
-  },
-  {
-   "id": "P-3378-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3378/2026",
-   "issued": "171423Z NOV 2026",
-   "authority": "",
-   "category": "drilling_survey",
-   "sea": "Eastern Indian Ocean",
-   "place": "India",
-   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 25 NOV IN AREA BOUND BY 08-00.00N 076-58.00E, 08-00.00N 077-14.45E, 07-52.00N 077-25.85E, 07-46.00N 078-06.65E, 07-31.90N 07",
-   "text": "EASTERN INDIAN OCEAN.\nINDIA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL\n   25 NOV IN AREA BOUND BY\n   08-00.00N 076-58.00E, 08-00.00N 077-14.45E,\n   07-52.00N 077-25.85E, 07-46.00N 078-06.65E,\n   07-31.90N 077-57.50E, 07-31.90N 076-58.00E.\n   WIDE BERTH REQUESTED.\n2. CANCEL HYDROPAC 3374/26.\n3. CANCEL THIS MSG 260001Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       76.967,
-       8.0
-      ],
-      [
-       77.241,
-       8.0
-      ],
-      [
-       77.431,
-       7.867
-      ],
-      [
-       78.111,
-       7.767
-      ],
-      [
-       77.958,
-       7.532
-      ],
-      [
-       76.967,
-       7.532
-      ],
-      [
-       76.967,
-       8.0
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-26T00:01:00Z"
   },
   {
    "id": "P-3367-2026",
@@ -12846,47 +14151,6 @@
    "cancel_at": "2027-01-13T00:01:00Z"
   },
   {
-   "id": "P-3324-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3324/2026",
-   "issued": "131534Z NOV 2026",
-   "authority": "",
-   "category": "military",
-   "sea": "Eastern Indian Ocean",
-   "place": "India",
-   "headline": "HAZARDOUS OPERATIONS 0900Z TO 1200Z DAILY 02, 06, 09, 13, 16, 20, 23 AND 27 NOV AND 1230Z TO 1430Z DAILY 06, 13, 20 AND 27 NOV IN AREA BOUND BY 09-57.60N 076-14",
-   "text": "EASTERN INDIAN OCEAN.\nINDIA.\n1. HAZARDOUS OPERATIONS 0900Z TO 1200Z DAILY\n   02, 06, 09, 13, 16, 20, 23 AND 27 NOV AND\n   1230Z TO 1430Z DAILY 06, 13, 20 AND 27 NOV\n   IN AREA BOUND BY\n   09-57.60N 076-14.50E, 09-47.40N 076-16.60E,\n   09-46.80N 076-11.60E, 09-50.00N 076-07.60E.\n2. CANCEL THIS MSG 271530Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       76.242,
-       9.96
-      ],
-      [
-       76.277,
-       9.79
-      ],
-      [
-       76.193,
-       9.78
-      ],
-      [
-       76.127,
-       9.833
-      ],
-      [
-       76.242,
-       9.96
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T15:30:00Z"
-  },
-  {
    "id": "P-3322-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -13253,48 +14517,6 @@
    "cancel_at": "2026-12-16T00:01:00Z"
   },
   {
-   "id": "P-3280-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3280/2026",
-   "issued": "100620Z NOV 2026",
-   "authority": "",
-   "category": "search_and_rescue",
-   "sea": "South China Sea",
-   "place": "Laos",
-   "headline": "M/V VTA NEPTUNE, 20 PERSONS ON BOARD, AGROUND IN 16-20.63N 107-57.10E ON 09 NOV.",
-   "text": "SOUTH CHINA SEA.\nLAOS.\nM/V VTA NEPTUNE, 20 PERSONS ON BOARD,\nAGROUND IN 16-20.63N 107-57.10E ON 09 NOV.\nVESSELS IN VICINITY REQUESTED TO KEEP A SHARP\nLOOKOUT, ASSIST IF POSSIBLE.\nREPORTS TO MRCC VIETNAM,\nEMAIL: HPLES-GMDSS@HPLES.COM.VN.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     107.952,
-     16.344
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "P-3279-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3279/2026",
-   "issued": "100557Z NOV 2026",
-   "authority": "",
-   "category": "search_and_rescue",
-   "sea": "Vietnam",
-   "place": null,
-   "headline": "M/V TONG CHENG 301, 14 PERSONS ON BOARD, AGROUND IN 14-37.65N 109-04.26E AT 092330Z NOV.",
-   "text": "VIETNAM.\nM/V TONG CHENG 301, 14 PERSONS ON BOARD,\nAGROUND IN 14-37.65N 109-04.26E AT 092330Z NOV.\nVESSELS IN VICINITY REQUESTED TO KEEP A SHARP\nLOOKOUT, ASSIST IF POSSIBLE.\nREPORTS TO MRCC VIETNAM,\nEMAIL: HPLES-GMDSS@HPLES.COM.VN.",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     109.071,
-     14.627
-    ]
-   },
-   "cancel_at": null
-  },
-  {
    "id": "P-3278-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -13606,47 +14828,6 @@
      [
       115.412,
       -20.69
-     ]
-    ]
-   },
-   "cancel_at": null
-  },
-  {
-   "id": "P-3177-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3177/2026",
-   "issued": "012139Z NOV 2026",
-   "authority": "",
-   "category": "underwater_ops",
-   "sea": "Indian Ocean",
-   "place": "Australia",
-   "headline": "UNDERWATER OPERATIONS IN PROGRESS UNTIL FURTHER NOTICE BY M/V FUGRO KWILENA IN AREA BOUND BY 19-22.00S 115-48.00E, 20-05.00S 115-48.00E, 20-05.00S 116-45.00E, 1",
-   "text": "INDIAN OCEAN.\nAUSTRALIA.\n1. UNDERWATER OPERATIONS IN PROGRESS UNTIL\n   FURTHER NOTICE BY M/V FUGRO KWILENA\n   IN AREA BOUND BY\n   19-22.00S 115-48.00E, 20-05.00S 115-48.00E,\n   20-05.00S 116-45.00E, 19-22.00S 116-45.00E.\n   TWO MILE BERTH REQUESTED.\n2. CANCEL HYDROPAC 3134/26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       115.8,
-       -19.367
-      ],
-      [
-       115.8,
-       -20.083
-      ],
-      [
-       116.75,
-       -20.083
-      ],
-      [
-       116.75,
-       -19.367
-      ],
-      [
-       115.8,
-       -19.367
-      ]
      ]
     ]
    },
@@ -14132,47 +15313,6 @@
    "cancel_at": "2026-11-30T19:30:00Z"
   },
   {
-   "id": "P-3125-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3125/2026",
-   "issued": "271950Z OCT 2026",
-   "authority": "",
-   "category": "cable_pipeline",
-   "sea": "Persian Gulf",
-   "place": "Saudi Arabia",
-   "headline": "PIPELINE OPERATIONS 28 OCT THRU 26 NOV BY BARGE MC DERMOTT DB30 IN AREA BOUND BY 26-26.00N 051-54.30E, 26-22.50N 051-58.40E, 26-09.50N 051-43.90E, 26-12.30N 051",
-   "text": "PERSIAN GULF.\nSAUDI ARABIA.\n1. PIPELINE OPERATIONS 28 OCT THRU 26 NOV BY\n   BARGE MC DERMOTT DB30 IN AREA BOUND BY\n   26-26.00N 051-54.30E, 26-22.50N 051-58.40E,\n   26-09.50N 051-43.90E, 26-12.30N 051-39.80E.\n   TWO MILE BERTH REQUESTED.\n2. CANCEL HYDROPAC 2891/26.\n3. CANCEL THIS MSG 270001Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       51.905,
-       26.433
-      ],
-      [
-       51.973,
-       26.375
-      ],
-      [
-       51.732,
-       26.158
-      ],
-      [
-       51.663,
-       26.205
-      ],
-      [
-       51.905,
-       26.433
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T00:01:00Z"
-  },
-  {
    "id": "P-3122-2026",
    "area": "HYDROPAC",
    "subregion": null,
@@ -14497,55 +15637,6 @@
     ]
    },
    "cancel_at": "2027-01-21T00:01:00Z"
-  },
-  {
-   "id": "P-3030-2026",
-   "area": "HYDROPAC",
-   "subregion": null,
-   "number": "HYDROPAC 3030/2026",
-   "issued": "191019Z OCT 2026",
-   "authority": "",
-   "category": "drilling_survey",
-   "sea": "Arabian Sea",
-   "place": "India",
-   "headline": "SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV BY M/V SAMUDRA SHAUDHIKAMA IN AREA BOUND BY 16-40.27N 072-48.68E, 16-45.32N 073-05.97E, 15-50.65N 073-27.82E, 14-58.3",
-   "text": "ARABIAN SEA.\nINDIA.\n1. SURVEY OPERATIONS IN PROGRESS UNTIL 26 NOV\n   BY M/V SAMUDRA SHAUDHIKAMA\n   IN AREA BOUND BY\n   16-40.27N 072-48.68E, 16-45.32N 073-05.97E,\n   15-50.65N 073-27.82E, 14-58.30N 073-46.00E,\n   14-58.30N 073-25.15E, 15-42.45N 073-08.08E.\n   WIDE BERTH REQUESTED.\n2. CANCEL THIS MSG 270001Z NOV 26.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       72.811,
-       16.671
-      ],
-      [
-       73.1,
-       16.755
-      ],
-      [
-       73.464,
-       15.844
-      ],
-      [
-       73.767,
-       14.972
-      ],
-      [
-       73.419,
-       14.972
-      ],
-      [
-       73.135,
-       15.707
-      ],
-      [
-       72.811,
-       16.671
-      ]
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T00:01:00Z"
   },
   {
    "id": "P-3000-2026",
@@ -16646,6 +17737,87 @@
    "cancel_at": null
   },
   {
+   "id": "C-357-2026",
+   "area": "HYDROARC",
+   "subregion": null,
+   "number": "HYDROARC 357/2026",
+   "issued": "261735Z NOV 2026",
+   "authority": "",
+   "category": "military",
+   "sea": "Barents Sea",
+   "place": "Russia",
+   "headline": "HAZARDOUS OPERATIONS 0300Z TO 2000Z DAILY 01 THRU 05 DEC IN AREA BOUND BY 69-43.00N 033-50.50E, 70-17.40N 045-06.00E, 70-30.00N 045-08.00E, 70-22.00N 055-58.50E",
+   "text": "BARENTS SEA.\nKARA SEA.\nRUSSIA.\n1. HAZARDOUS OPERATIONS 0300Z TO 2000Z DAILY\n   01 THRU 05 DEC IN AREA BOUND BY\n   69-43.00N 033-50.50E, 70-17.40N 045-06.00E,\n   70-30.00N 045-08.00E, 70-22.00N 055-58.50E,\n   70-30.10N 058-32.00E, 70-26.00N 058-49.00E,\n   69-54.00N 060-26.00E, 69-50.00N 060-45.00E,\n   69-30.00N 060-12.00E, 69-49.50N 059-10.00E,\n   69-38.00N 056-02.00E, 69-45.00N 045-15.00E,\n   69-58.00N 045-07.30E, 69-24.15N 034-05.00E.\n2. CANCEL THIS MSG 052100Z DEC 26.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       33.842,
+       69.717
+      ],
+      [
+       45.1,
+       70.29
+      ],
+      [
+       45.133,
+       70.5
+      ],
+      [
+       55.975,
+       70.367
+      ],
+      [
+       58.533,
+       70.502
+      ],
+      [
+       58.817,
+       70.433
+      ],
+      [
+       60.433,
+       69.9
+      ],
+      [
+       60.75,
+       69.833
+      ],
+      [
+       60.2,
+       69.5
+      ],
+      [
+       59.167,
+       69.825
+      ],
+      [
+       56.033,
+       69.633
+      ],
+      [
+       45.25,
+       69.75
+      ],
+      [
+       45.122,
+       69.967
+      ],
+      [
+       34.083,
+       69.403
+      ],
+      [
+       33.842,
+       69.717
+      ]
+     ]
+    ]
+   },
+   "cancel_at": "2026-12-05T21:00:00Z"
+  },
+  {
    "id": "C-356-2026",
    "area": "HYDROARC",
    "subregion": null,
@@ -16731,68 +17903,6 @@
     ]
    },
    "cancel_at": "2026-12-13T00:01:00Z"
-  },
-  {
-   "id": "C-355-2026",
-   "area": "HYDROARC",
-   "subregion": null,
-   "number": "HYDROARC 355/2026",
-   "issued": "241358Z NOV 2026",
-   "authority": "",
-   "category": "ice",
-   "sea": "Laptev Sea",
-   "place": null,
-   "headline": "ICEBERGS REPORTED AT 241250Z NOV IN",
-   "text": "LAPTEV SEA.\n1. ICEBERGS REPORTED AT 241250Z NOV IN:\n   A. 77-02.80N 118-49.70E.\n   B. 77-22.20N 116-48.80E.\n   C. 77-17.10N 116-26.30E.\n2. CANCEL THIS MSG 251522Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      118.828,
-      77.047
-     ],
-     [
-      116.813,
-      77.37
-     ],
-     [
-      116.438,
-      77.285
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-25T15:22:00Z"
-  },
-  {
-   "id": "C-354-2026",
-   "area": "HYDROARC",
-   "subregion": null,
-   "number": "HYDROARC 354/2026",
-   "issued": "241013Z NOV 2026",
-   "authority": "",
-   "category": "ice",
-   "sea": "Laptev Sea",
-   "place": null,
-   "headline": "ICEBERGS REPORTED AT 240918Z NOV IN",
-   "text": "LAPTEV SEA.\n1. ICEBERGS REPORTED AT 240918Z NOV IN:\n   A. 76-56.20N 120-02.70E.\n   B. 76-57.10N 119-57.10E.\n   C. 77-02.70N 119-07.00E.\n2. CANCEL THIS MSG 271011Z NOV 26.",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      120.045,
-      76.937
-     ],
-     [
-      119.952,
-      76.952
-     ],
-     [
-      119.117,
-      77.045
-     ]
-    ]
-   },
-   "cancel_at": "2026-11-27T10:11:00Z"
   },
   {
    "id": "C-353-2026",

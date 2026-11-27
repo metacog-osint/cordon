@@ -1729,12 +1729,12 @@
   "poland": {
    "slug": "poland",
    "name": "Poland",
-   "updated": "2026-11-11T15:42:44Z",
-   "change": "Updated information following the terrorist attack in Kraków, including advice for those affected (‘Warnings and insurance’ page).",
+   "updated": "2026-11-27T16:40:32Z",
+   "change": "Updated information on risks from terrorism (see ‘Safety and security’ page)",
    "link": "https://www.gov.uk/foreign-travel-advice/poland",
    "iso": "PL",
    "alert_status": [],
-   "status_for": "2026-11-11T15:42:44Z"
+   "status_for": "2026-11-27T16:40:32Z"
   },
   "portugal": {
    "slug": "portugal",

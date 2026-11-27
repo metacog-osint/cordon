@@ -123,8 +123,12 @@ Rules that come with them:
      `last_change_at` still says when it began.
 3. The numbers that show it are in the item.
 
-**Corroboration (kit 0.6.2, D11): "reported, then corroborated".** An optional `corroboration` member on items
-that report an event (a strike, an attack at sea, an alert), never on measurements:
+**Corroboration: the event ladder (kit 0.6.2, D11; three states from kit 0.6.13).** The states lead, confirmed and
+verified, the promotion rule `ladder-1`, the party and state-media rule and the coverage table are defined in one
+place, [the event ladder](event-ladder.md), which also lists the members and the linter's checks. The table below is
+the kit 0.6.2 shape, still accepted: `reported` is the earlier name of `lead`, `corroborated` of `verified`, and
+`corroborated_at` of `verified_at`. An optional `corroboration` member on items that report an event (a strike, an
+attack at sea, an alert), never on measurements:
 
 | Member | Meaning |
 |---|---|
