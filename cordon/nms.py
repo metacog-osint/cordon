@@ -296,7 +296,9 @@ def save_store(store: dict) -> None:
 
 
 def from_published(fetch=None) -> tuple[dict | None, dict | None]:
-    """(store, index) rebuilt from Cordon's own published files, or (None, index or None)."""
+    """(store, index) rebuilt from Cordon's own published files, or (None, index or None): the subsets, and the
+    ranked international NOTAMs in significant.json (their significance block dropped; it is judged again), so the
+    ranked list does not read empty until the next bulk pull. Routine international NOTAMs return with that bulk."""
     fetch = fetch or _get_json
     try:
         index = fetch(PUBLISHED + "index.json")
@@ -307,6 +309,11 @@ def from_published(fetch=None) -> tuple[dict | None, dict | None]:
         for s in index.get("subsets") or []:
             for f in features(fetch(PUBLISHED + s["file"])):
                 store[key(f)] = f
+        sig = index.get("significance") or {}
+        if sig.get("file") and sig.get("status") == "ok":
+            for f in features(fetch(PUBLISHED + sig["file"])):
+                props = {k: v for k, v in (f.get("properties") or {}).items() if k != "significance"}
+                store.setdefault(key(f), {**f, "properties": props})
     except Exception:  # noqa: BLE001 - a partial rebuild would publish a partial set: none
         return None, index
     return store, index
@@ -411,8 +418,16 @@ def chains_path() -> Path:
     return CACHE / "archive" / "significance-chains.json.gz"
 
 
+def stamp_path() -> Path:
+    """The baseline time the chains were saved with, beside them in the cache."""
+    return CACHE / "archive" / "significance-chains.stamp"
+
+
 def load_significance() -> tuple[dict | None, dict | None]:
-    """(baseline or None, chains or None) from data/ and the cache."""
+    """(baseline or None, chains or None) from data/ and the cache. Chains saved with another baseline time than the
+    committed baseline's are treated as lost: the cache and the data commit are saved apart (a failed data push, or a
+    cache save that did not land), and chains ahead of the baseline would take the NOTAMs the baseline never counted
+    for repeats, never to be counted."""
     b = load(SIG_BASELINE, None)
     chains = None
     p = chains_path()
@@ -420,6 +435,10 @@ def load_significance() -> tuple[dict | None, dict | None]:
         try:
             chains = json.loads(gzip.decompress(p.read_bytes()))
         except (OSError, ValueError):
+            chains = None
+    st = stamp_path()
+    if chains is not None and b is not None and st.exists():
+        if st.read_text(encoding="utf-8").strip() != (b.get("updated_at") or ""):
             chains = None
     return b, chains
 
@@ -430,6 +449,7 @@ def save_significance(b: dict, chains: dict) -> None:
     p = chains_path()
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_bytes(gzip.compress(json.dumps(chains, separators=(",", ":")).encode("utf-8"), 6))
+    stamp_path().write_text(b.get("updated_at") or "", encoding="utf-8")
 
 
 def archive_pulls(data: bytes):
@@ -488,14 +508,17 @@ def backfill(b: dict | None, chains: dict | None, now: datetime, gh, budget_s: f
                        "to": bf.get("to"), "of": len(days), "seconds": round(time.monotonic() - t0, 1)}
 
 
-def update_significance(feats: list[dict], now: datetime, env: dict | None = None, gh=None) -> dict:
+def update_significance(feats: list[dict], now: datetime, env: dict | None = None, gh=None,
+                        mode: str | None = None) -> dict:
     """This pull's features into the baseline and the chains; saves both. Never raises.
 
     Until the baseline holds the whole archive (its backfill block done), the lane builds it from the archive's
     release day files itself (backfill(), bounded by BACKFILL_BUDGET_S a run, resumed next run), with the workflow's
     GITHUB_TOKEN; this pull is already in today's day file, so it is counted there. Without a token a missing
     baseline starts today, and a later run with one rebuilds it. Missing chains (a lost cache) after the backfill
-    are rebuilt without counting again what the baseline already counted."""
+    are rebuilt without counting again what the baseline already counted: the baseline keeps that time as
+    rechain_before until a bulk pull (mode "bulk") has brought every held NOTAM back into the chains, since the runs
+    between see only deltas and the NOTAMs held from before come back unchained with the bulk."""
     try:
         env = os.environ if env is None else env
         b, chains = load_significance()
@@ -513,13 +536,19 @@ def update_significance(feats: list[dict], now: datetime, env: dict | None = Non
         if b is None:
             b = significance.new_baseline(now.strftime("%Y-%m-%d"))
             out["note"] = "baseline started " + b["start"] + " without a GITHUB_TOKEN; a run with one backfills it"
-        counted_before = None
+        counted_before = b.get("rechain_before")
         if chains is None:
             chains = {}
-            counted_before = b.get("updated_at")
+            counted_before = b.get("updated_at") or counted_before
+            if counted_before:
+                b["rechain_before"] = counted_before
             out["chains_rebuilt"] = True
         if feats:
             out["counts"] = significance.update(b, chains, feats, now, counted_before=counted_before)
+            if mode == "bulk":
+                b.pop("rechain_before", None)               # every held NOTAM is chained again
+        if b.get("rechain_before"):
+            out["rechain_before"] = b["rechain_before"]
         out["pruned"] = significance.prune(chains, now)
         save_significance(b, chains)
         out.update(start=b["start"], updated_at=b["updated_at"], chains=len(chains))
@@ -594,7 +623,7 @@ def collect(now: datetime | None = None, env: dict | None = None, opener=None, f
     state["archive"] = {k: arch.get(k) for k in ("status", "error", "note", "day", "added", "uploaded", "pending",
                                                  "archived_to", "day_bytes", "seen", "seen_from")}
     state["archived_to"] = arch.get("archived_to") or prev.get("archived_to")
-    state["significance"] = update_significance(feats, now, env)
+    state["significance"] = update_significance(feats, now, env, mode=res["mode"])
     if res["mode"] in ("bulk", "delta"):
         save_store(store)
     if store is not None:
