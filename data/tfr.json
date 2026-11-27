@@ -8427,6 +8427,7 @@
    "description": "Brunswick, GA, Monday, November 30, 2026 through Friday, December 18, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T13:10:33Z",
+   "subject": "6/9873",
    "detail": {
     "name": "261130-1218 FLETC cUAS",
     "issued": "2026-11-27T12:54:29Z",
@@ -8594,8 +8595,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9873"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",

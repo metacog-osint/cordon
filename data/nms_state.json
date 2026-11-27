@@ -1,63 +1,63 @@
 {
  "env": "prod",
  "bulk_at": "2026-11-27T01:41:04Z",
- "pulled_to": "2026-11-27T13:11:12Z",
+ "pulled_to": "2026-11-27T13:41:15Z",
  "mode": "delta",
- "delta_from": "2026-11-27T12:41:23Z",
+ "delta_from": "2026-11-27T13:11:12Z",
  "counts": {
-  "features": 523,
-  "added": 107,
-  "removed": 19,
-  "held": 15052
+  "features": 571,
+  "added": 89,
+  "removed": 26,
+  "held": 15087
  },
  "requests": 2,
  "status": "ok",
- "checked_at": "2026-11-27T13:11:12Z",
+ "checked_at": "2026-11-27T13:41:15Z",
  "rebuilt_from_published": false,
  "archive": {
   "status": "ok",
   "error": null,
   "note": null,
   "day": "2026-11-27",
-  "added": 508,
+  "added": 527,
   "uploaded": [
    "nms-2026-11-27.jsonl.gz"
   ],
   "pending": [],
-  "archived_to": "2026-11-27T13:11:12Z",
-  "day_bytes": 13045584,
-  "seen": 110303,
+  "archived_to": "2026-11-27T13:41:15Z",
+  "day_bytes": 13949564,
+  "seen": 110830,
   "seen_from": "cache"
  },
- "archived_to": "2026-11-27T13:11:12Z",
+ "archived_to": "2026-11-27T13:41:15Z",
  "significance": {
   "status": "ok",
   "counts": {
-   "seen": 82,
+   "seen": 77,
    "new": 52,
-   "replaced": 3,
-   "cancelled": 15,
-   "repeat": 19,
+   "replaced": 0,
+   "cancelled": 23,
+   "repeat": 25,
    "rechained": 0,
-   "other_location": 8,
+   "other_location": 0,
    "excluded": 0
   },
   "pruned": {
    "chains_dropped": 0,
-   "chains": 18071
+   "chains": 18123
   },
   "start": "2026-11-19",
-  "updated_at": "2026-11-27T13:11:12Z",
-  "chains": 18071,
+  "updated_at": "2026-11-27T13:41:15Z",
+  "chains": 18123,
   "tiers": {
    "significant": 0,
    "notable": 4,
-   "routine": 8912,
+   "routine": 8931,
    "excluded": 28
   }
  },
  "subsets": {
-  "launch-areas": 3841,
-  "gnss": 3703
+  "launch-areas": 3866,
+  "gnss": 3704
  }
 }
