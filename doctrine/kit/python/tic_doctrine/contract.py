@@ -129,51 +129,99 @@ def check_signal(sig, err) -> None:
                          f"(smallest is 1 in {n + 1})")
 
 
-def check_corroboration(c, published, err) -> None:
-    """D11 (kit 0.6.2): an event item's corroboration member, "reported, then corroborated". Errors only."""
+def check_corroboration(c, published, err, p=None, note=None) -> None:
+    """An event item's corroboration member: the ladder lead, confirmed, verified (kit 0.6.13, docs/event-ladder.md),
+    read with its kit 0.6.2 names reported and corroborated. Errors, plus a note for the earlier names. The two rules
+    0.6.13 added (a claim is verified only on origins; a claim keeps tier routine) are notes, not errors, for an item
+    that uses the earlier names, which passed without them through 0.6.12 (kit 0.6.17)."""
     if not isinstance(c, dict):
         err(GENERAL, "corroboration must be an object")
         return
-    state, basis = c.get("state"), c.get("basis")
-    if state not in vocab.enum("corroboration_state"):
-        err(GENERAL, f"corroboration.state={state!r} not in {sorted(vocab.enum('corroboration_state'))}")
-    if basis is not None and basis not in vocab.enum("corroboration_basis"):
+    p = p or {}
+    raw_state, basis = c.get("state"), c.get("basis")
+    earlier = vocab.load("event_ladder")["earlier_names"]
+    if not isinstance(raw_state, str) or raw_state not in vocab.enum("corroboration_state"):
+        err(GENERAL, f"corroboration.state={raw_state!r} not in {sorted(vocab.enum('corroboration_state'))}")
+        raw_state = None
+    elif raw_state in earlier and note:
+        note(f"corroboration.state {raw_state!r} is the kit 0.6.2 name of {earlier[raw_state]!r} "
+             "(docs/event-ladder.md)")
+    state = earlier.get(raw_state, raw_state)
+    old = raw_state in earlier and note is not None
+
+    def ladder_err(msg):
+        if old:
+            note(msg + " (an error under the names lead and verified, kit 0.6.13)")
+        else:
+            err(GENERAL, msg)
+
+    if basis is not None and (not isinstance(basis, str) or basis not in vocab.enum("corroboration_basis")):
         err(GENERAL, f"corroboration.basis={basis!r} not in {sorted(vocab.enum('corroboration_basis'))}")
     n = c.get("origins")
     if not (isinstance(n, int) and not isinstance(n, bool) and n >= 1):
         err(GENERAL, "corroboration.origins must be a whole number of independent origins, at least 1")
         n = None
     if not (isinstance(c.get("rule"), str) and c["rule"].strip()):
-        err(GENERAL, "corroboration.rule missing: print the rule's id and text (e.g. 'corroborate-1: two independent "
-                     "origins, or one official source within its remit')")
-    pc = c.get("party_claim", False)
-    if not isinstance(pc, bool):
-        err(GENERAL, "corroboration.party_claim must be true or false")
+        err(GENERAL, "corroboration.rule missing: print the rule's id and text (vocab/event_ladder.json, "
+                     "'ladder-1: ...')")
+    flags = {}
+    for k in ("party_claim", "state_media"):
+        flags[k] = c.get(k, False)
+        if not isinstance(flags[k], bool):
+            err(GENERAL, f"corroboration.{k} must be true or false")
+    claim = flags["party_claim"] is True or flags["state_media"] is True
     first = parse_utc(c.get("first_reported_at"))
     if first is None:
         err(GENERAL, "corroboration.first_reported_at must be a UTC time (when the first origin appeared)")
-    at_raw = c.get("corroborated_at")
-    at = parse_utc(at_raw)
-    if state == "reported":
-        if basis is not None or at_raw is not None:
-            err(GENERAL, "a reported item has basis and corroborated_at null: the rule is not met yet")
-    elif state == "corroborated":
+    if "verified_at" in c and "corroborated_at" in c:
+        err(GENERAL, "corroboration has verified_at and corroborated_at: corroborated_at is the earlier name, use one")
+    v_raw = c.get("verified_at", c.get("corroborated_at"))
+    v_at = parse_utc(v_raw)
+    c_raw = c.get("confirmed_at")
+    c_at = parse_utc(c_raw)
+    if c_raw is not None and c_at is None:
+        err(GENERAL, "corroboration.confirmed_at must be a UTC time or null")
+    if state == "lead":
+        if basis is not None or v_raw is not None or c_raw is not None:
+            err(GENERAL, "a lead has basis, confirmed_at and verified_at null: nobody has checked it yet")
+    elif state == "confirmed":
+        if c_at is None:
+            err(GENERAL, "a confirmed item needs confirmed_at, a UTC time (when a reviewer confirmed it)")
+        if p.get("human_review") != "full":
+            err(GENERAL, "a confirmed item was reviewed by a person: its human_review must be 'full'")
+        if basis is not None or v_raw is not None:
+            err(GENERAL, "a confirmed item has basis and verified_at null: it is not verified yet")
+    elif state == "verified":
         if basis is None:
-            err(GENERAL, "a corroborated item names its basis: origins or official")
-        if at is None:
-            err(GENERAL, "a corroborated item needs corroborated_at, a UTC time (when the rule was met)")
+            err(GENERAL, "a verified item names its basis: origins, official or geolocation")
+        if v_at is None:
+            err(GENERAL, "a verified item needs verified_at, a UTC time (when the rule was met)")
         if basis == "origins" and n is not None and n < 2:
-            err(GENERAL, "corroborated on origins needs origins of 2 or more")
+            err(GENERAL, "verified on origins needs origins of 2 or more")
         if basis == "official" and not (isinstance(c.get("official"), str) and c["official"]):
-            err(GENERAL, "corroborated on official needs official: the issuer's source id")
-        if pc is True and not (n is not None and n >= 2):
-            err(GENERAL, "a party's claim is corroborated only by an origin outside the party: origins of 2 or more")
+            err(GENERAL, "verified on official needs official: the issuer's source id")
+        if basis == "geolocation":
+            ids = {s.get("id") for s in p.get("sources") or [] if isinstance(s, dict)}
+            if not (isinstance(c.get("geolocation"), str) and c["geolocation"] in ids):
+                err(GENERAL, "verified on geolocation needs geolocation: the id of one of the item's sources")
+        if claim and basis != "origins":
+            ladder_err("a party's claim or state media is verified only on origins outside them, never on "
+                       f"{basis}")
+        if claim and not (n is not None and n >= 2):
+            err(GENERAL, "a party's claim or state media is verified only by an origin outside them: origins of 2 "
+                         "or more")
+    if claim and state != "verified" and p.get("tier") in ("anomaly", "warning"):
+        ladder_err("an item resting only on a party's claim or on state media raises nothing on its own: "
+                   "tier routine until it is verified")
     if basis != "official" and c.get("official") is not None:
         err(GENERAL, "corroboration.official is the issuer's id only when basis is official; otherwise null")
-    if first and at and at < first:
-        err(GENERAL, "corroboration.corroborated_at is before first_reported_at")
-    if at and published and at > published:
-        err(GENERAL, "corroboration.corroborated_at is after published_at")
+    if basis != "geolocation" and c.get("geolocation") is not None:
+        err(GENERAL, "corroboration.geolocation is a source id only when basis is geolocation; otherwise null")
+    for label, at in (("verified_at", v_at), ("confirmed_at", c_at)):
+        if first and at and at < first:
+            err(GENERAL, f"corroboration.{label} is before first_reported_at")
+        if at and published and at > published:
+            err(GENERAL, f"corroboration.{label} is after published_at")
 
 
 def check_health(health, strict: bool = False) -> list[tuple[str, str, str]]:
@@ -453,10 +501,10 @@ def _check_revision(p: dict, geom, strict: bool, err, warn) -> None:
         if isinstance(s, dict) and s.get("lane") is not None and not (isinstance(s["lane"], str) and s["lane"]):
             err("sources", f"sources[{i}].lane must be the lane's key in the feed header's health (a non-empty string)")
 
-    # F7. Corroboration (D11, kit 0.6.2). Shape only when present; no field marks an item as an event report, so
-    # its absence is not noted.
+    # F7. Corroboration: the event ladder (D11, kit 0.6.2; three states from kit 0.6.13). Checked only when present;
+    # no field marks an item as an event report, so its absence is not noted.
     if p.get("corroboration") is not None:
-        check_corroboration(p["corroboration"], published, err)
+        check_corroboration(p["corroboration"], published, err, p, note)
 
     # Tier anomaly, revision 2.1 (D5). Warnings only: each program adopts the rule as its own method version.
     if p.get("tier") == "anomaly":

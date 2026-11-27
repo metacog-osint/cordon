@@ -1365,6 +1365,79 @@ export const VOCAB = {
     "named": "A party is named: a victim's country, a network's home, an operator's origin. A join by place skips it.",
     "zone": "The program's own multi-country zone; counts as one place, not as each country in it."
   },
+  "event_ladder": {
+    "url": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/event-ladder.md",
+    "rule": {
+      "id": "ladder-1",
+      "text": "ladder-1: a report is a lead until a reviewer confirms it or it is verified by two independent origins, an official source within its own remit, or a published geolocation; a party's claims and state media count as one origin per government and never verify or raise an item alone"
+    },
+    "states": [
+      {
+        "id": "lead",
+        "step": 1,
+        "label": "Lead",
+        "meaning": "Reported by one origin and screened into scope, but not checked. Read it as reported, not as fact."
+      },
+      {
+        "id": "confirmed",
+        "step": 2,
+        "label": "Confirmed",
+        "meaning": "A reviewer judged it a real event within scope. It still rests on one origin: nothing independent has checked it."
+      },
+      {
+        "id": "verified",
+        "step": 3,
+        "label": "Verified",
+        "meaning": "Checked independently: two or more independent origins, an official source within its own remit, or a published geolocation."
+      }
+    ],
+    "earlier_names": {
+      "reported": "lead",
+      "corroborated": "verified"
+    },
+    "basis_labels": {
+      "origins": "independent origins",
+      "official": "an official source within its own remit",
+      "geolocation": "a published geolocation"
+    },
+    "claim_labels": {
+      "party_claim": {
+        "label": "Party claim",
+        "meaning": "Rests only on a party to the conflict describing its own action or an adversary's loss. It raises nothing on its own."
+      },
+      "state_media": {
+        "label": "State media",
+        "meaning": "Rests only on media a state owns or controls. It raises nothing on its own."
+      }
+    },
+    "coverage": [
+      {
+        "id": "several",
+        "label": "Several independent sources",
+        "min": 3,
+        "max": null
+      },
+      {
+        "id": "few",
+        "label": "One or two sources",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "id": "none",
+        "label": "Not monitored",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "id": "no_independent",
+        "label": "No independent source",
+        "min": 0,
+        "max": 0,
+        "uncounted": true
+      }
+    ]
+  },
   "zones": {
     "01_Ukraine_Conflict": {
       "name": "Ukraine Conflict",
@@ -1913,6 +1986,46 @@ export function ladderRung(stage) {
   const l = VOCAB.ladders[ladder];
   if (!l || !l.values[value]) return null;
   return { ladder: l.name, value, ...l.values[value] };
+}
+
+/**
+ * An event item's place on the ladder lead, confirmed, verified (docs/event-ladder.md), or null for an item outside
+ * it (a measurement or a judgment). Reads the kit 0.6.2 names reported and corroborated as lead and verified.
+ * Returns {state, step, label, meaning, basis, basis_label, claim, claim_label, claim_meaning, rule, url}.
+ */
+export function eventState(item) {
+  const c = item && (item.properties || item).corroboration;
+  if (!c || typeof c !== "object") return null;
+  const L = VOCAB.event_ladder;
+  const id = L.earlier_names[c.state] || c.state;
+  const s = L.states.find((x) => x.id === id);
+  if (!s) return null;
+  const claimKey = c.party_claim === true ? "party_claim" : c.state_media === true ? "state_media" : null;
+  const claim = claimKey && id !== "verified" ? L.claim_labels[claimKey] : null;
+  return {
+    state: s.id, step: s.step, label: s.label, meaning: s.meaning,
+    basis: id === "verified" ? c.basis || null : null,
+    basis_label: id === "verified" ? L.basis_labels[c.basis] || null : null,
+    claim: claim ? claimKey : null, claim_label: claim ? claim.label : null, claim_meaning: claim ? claim.meaning : null,
+    rule: L.rule.text, url: L.url,
+  };
+}
+
+/** The coverage table's class: {id, label}. Pass a tic-coverage/1 row, or a count of independent source groups and
+ * the count of groups read but set aside or not counted (kit 0.6.17: none independent but some read is
+ * no_independent, "No independent source", not "Not monitored"). */
+export function coverageClass(independent, uncounted = 0) {
+  let n = independent, u = uncounted;
+  if (independent && typeof independent === "object") {
+    n = independent.independent;
+    u = (independent.set_aside || []).length + (independent.not_counted || []).length;
+  }
+  n = Number(n) || 0;
+  u = Number(u) || 0;
+  const classes = VOCAB.event_ladder.coverage;
+  const c = n <= 0 && u > 0 ? classes.find((x) => x.uncounted)
+    : classes.find((x) => !x.uncounted && n >= x.min && (x.max === null || n <= x.max));
+  return c ? { id: c.id, label: c.label } : { id: "none", label: "Not monitored" };
 }
 
 const ARROWS = { new: "✦", raised: "↑", lowered: "↓", unchanged: "→", changed: "⇄", withdrawn: "✕" };

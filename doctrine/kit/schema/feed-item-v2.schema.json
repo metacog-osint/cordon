@@ -365,7 +365,7 @@
     },
     "actors": {
       "type": "array",
-      "description": "How feed items characterise entities and sides (31 Oct 2026: 'we don't have to say adversary but we do need a mechanism to characterize entities and sides'). A role says what part an actor plays in what the item describes, as the cited sources describe it; it is never a judgment of friend or foe. No value here means friendly, hostile, enemy or adversary, and the drawing frame is only ever 'unknown' or 'neutral' (the COP symbol rule). A side is named the way the sources name it ('Russia', 'Ukraine'), never judged.",
+      "description": "How feed items characterise entities and sides without calling any of them an adversary (31 Oct 2026). A role says what part an actor plays in what the item describes, as the cited sources describe it; it is never a judgment of friend or foe. No value here means friendly, hostile, enemy or adversary, and the drawing frame is only ever 'unknown' or 'neutral' (the COP symbol rule). A side is named the way the sources name it ('Russia', 'Ukraine'), never judged.",
       "items": {
         "type": "object",
         "required": [
@@ -1064,23 +1064,27 @@
         "first_reported_at",
         "rule"
       ],
-      "description": "Revision 2.1, F7 (kit 0.6.2, D11). Event items only: reported until two independent origins, or one official source within its remit; never moves back.",
+      "description": "Revision 2.1, F7 (kit 0.6.2, D11; three states from kit 0.6.13). Event items only: the ladder lead, confirmed, verified (docs/event-ladder.md); reported and corroborated are the earlier names of lead and verified. Moves up only.",
       "properties": {
         "state": {
           "enum": [
+            "confirmed",
             "corroborated",
-            "reported"
+            "lead",
+            "reported",
+            "verified"
           ],
-          "description": "Feed contract revision 2.1, F7 (18 Nov 2026, D11): reported, then corroborated"
+          "description": "Feed contract revision 2.1, F7 (D11); the three-state ladder from kit 0.6.13 (docs/event-ladder.md)"
         },
         "basis": {
           "oneOf": [
             {
               "enum": [
+                "geolocation",
                 "official",
                 "origins"
               ],
-              "description": "Feed contract revision 2.1, F7 (D11)"
+              "description": "Feed contract revision 2.1, F7 (D11); geolocation from kit 0.6.13"
             },
             {
               "type": "null"
@@ -1097,12 +1101,43 @@
             "null"
           ]
         },
+        "geolocation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "party_claim": {
+          "type": "boolean"
+        },
+        "state_media": {
           "type": "boolean"
         },
         "first_reported_at": {
           "type": "string",
           "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?Z$"
+        },
+        "confirmed_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verified_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "corroborated_at": {
           "oneOf": [
@@ -1113,7 +1148,8 @@
             {
               "type": "null"
             }
-          ]
+          ],
+          "description": "Earlier name of verified_at (kit 0.6.2)."
         },
         "rule": {
           "type": "string",

@@ -13,8 +13,8 @@ drawn on one map (COP) and scored (Verdict).
 | `geo/` | Country outlines and label points, US state outlines, and the sea gazetteer (`seas.json`, Natural Earth's named marine areas, public domain) |
 | `python/tic_doctrine/` | Likelihood, confidence, contract checks, the tradecraft linter, register checks, source health, withholding counts, tips between programs, the history log (standard library only) |
 | `js/tic-doctrine.js` | The same likelihood, confidence, lifeline, ladder and tip-matching logic for web pages (ES module, no dependencies) |
-| `vocab/programs.json` | The suite registry: every program, its feed, and the datasets it owns |
-| `docs/` | The contract, the reader's language key, the confidence rubric, the sources-and-withholding page, the history log format |
+| `vocab/programs.json` | The suite registry: every program, its feed, its home layer, and the datasets it owns |
+| `docs/` | The contract, the reader's language key, the confidence rubric, the sources-and-withholding page, the history log format, the significance method for closures and official warnings (draft) |
 | `templates/doctrine/` | A program's registers: requirements, indicators and warning problems, assumptions, function map, sources, method |
 | `tools/` | `sync.py` copies the kit into a program as `doctrine/kit/`; `build_js.py` and `build_schema.py` regenerate from `vocab/` |
 
@@ -173,6 +173,46 @@ traffic by network). `terms` already credits Cloudflare Radar data CC BY-NC 4.0.
 
 **0.6.11 (24 Nov 2026): neutral attributions.** Dated notes in the schema, vocabularies, templates, docs and tools no longer name a person: each keeps its date ("(15 Nov 2026)"), and a rule or decision is "the suite's". Wording only; no field, value or rule changes.
 
+**0.6.18 (27 Nov 2026): each program's home layer in the registry.** `vocab/programs.json` (registry version 1.1)
+lists the seven layers of the operational environment as the hub draws them (`layers`: systems, human, cyber, ems,
+space, air, land, top to bottom), and every program names its one home `layer`: a layer key, `all` for a program that
+reads every layer (COP, Verdict), or null for one outside the drawing (Dead Drop). `tips.layers()` and
+`tips.program_layer(id)` read them. `family` is unchanged: it stays COP's colour and preset grouping, and one family
+can span two layers (Noisefloor is the spectrum; Orbit and Launch are space). Additive: no field changes meaning.
+
+**0.6.17 (27 Nov 2026): "No independent source" in the coverage table, and earlier ladder names keep passing.**
+- A place whose only sources are set aside (state media, a party's claim) or are the suite's own is now class
+  `no_independent`, "No independent source", not `none`, "Not monitored": something was read there.
+  `ladder.coverage_place()` lists the suite's own sources under a new `not_counted` member and names their programs in
+  `programs` (before, an item whose sources were all the suite's own left its program out).
+  `ladder.coverage_class(independent, uncounted=0)` and the browser module's `coverageClass(independent, uncounted)` or
+  `coverageClass(row)` give the class; called with a count alone they answer as before.
+- The two ladder rules added in 0.6.13 (a party's claim or state media is verified only on origins; such an item keeps
+  tier routine until verified) are notes, not errors, for an item that uses the 0.6.2 names `reported` and
+  `corroborated`, so a feed that passed under 0.6.12 passes with the same errors. Under the names `lead` and
+  `verified` they stay errors.
+- `corroboration.state` or `basis` given as a list or an object is reported as an error instead of stopping the
+  linter.
+- The actor vocabulary's note (and the schema built from it) states its rule plainly instead of quoting.
+
+**0.6.15 (27 Nov 2026): the draft significance note stays in the kit repo.** `tools/sync.py` no longer copies
+`docs/significance.md` (a draft that no program reads) into programs, so a program's `KIT.json` doesn't list it.
+No other file changes.
+
+**0.6.14 (27 Nov 2026): the coverage table counts only outside sources.** `ladder.coverage_place()` no longer
+counts sources the suite makes itself (`source_type` suite_program, derived, model or machine summary, listed in
+`vocab/event_ladder.json`). A program citing another program's reading, or its own model or summary, does not add an
+independent source for a place.
+
+**0.6.13 (27 Nov 2026): the event ladder and the coverage table.** [`docs/event-ladder.md`](docs/event-ladder.md)
+defines, in one place, the states lead, confirmed and verified for event reports, the promotion rule `ladder-1`, the
+rule that a party's claims and state media never verify or raise an item alone, and the coverage-table format
+`tic-coverage/1` (several independent sources, one or two, not monitored). The `corroboration` member takes the new
+state names, `confirmed_at`, `verified_at`, `geolocation` and `state_media`; `reported` and `corroborated` still pass
+as the earlier names of lead and verified, with a note. New: `vocab/event_ladder.json`, `ladder.py`
+(`state_of`, `rests_on_claim`, `coverage_place`, `coverage_class`), and `eventState()` and `coverageClass()` in the
+browser module.
+
 **0.6.12 (24 Nov 2026): zone list rebuilt from Watchfloor's catalog at 3ab3a28.** The retired zone `17_Horn_of_Africa` keeps its reason without a name. Text only; keys, countries and map points unchanged.
 
 **Tests:** `python tests/test_kit.py`, `python tests/test_history.py` and `node tests/test_js.mjs`.
@@ -182,3 +222,7 @@ Community elements only; this is an independent, non-commercial research effort,
 released doctrine is cited.
 
 Code: MIT. Vocabulary files restate public US government and allied publications, credited in each file.
+
+## AI assistance
+
+This repository is built with AI coding assistance (Anthropic's Claude Code). The Intelligence Company is responsible for everything published here.
