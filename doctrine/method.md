@@ -59,6 +59,9 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   names are Cordon's rendering with the ministry's Japanese in `measures.advice_ja`. Times are Japan time in the
   source (checked against the file's HTTP Last-Modified) and stored here in UTC. A listing dated more than six hours
   before the run is treated as frozen and the lane fails. Stale after 12 hours (the lists refresh every 5 minutes).
+  `data/japan.json` holds the notices of the last 14 days; every notice is first appended to
+  `data/japan_notices.jsonl` (committed, append-only, written when first seen and again only if its text changes),
+  and nothing is dropped from `japan.json` in a run whose archive write failed.
 - **Netherlands travel advice** (Nederland Wereldwijd open data API, `opendata.nederlandwereldwijd.nl`, keyless XML,
   200 documents a request; listed as CC0 1.0 on data.overheid.nl, the API itself stating no licence line; Cordon
   credits the ministry anyway): for 226 destinations the page's introduction (in Dutch), its address and its
@@ -67,7 +70,10 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   highest is the destination's colour, and more than one means the colour differs by area. English words are a
   fixed glossary beside the Dutch (`measures.colour_nl`, `intro_nl`). The ministry's last-modified time moves on
   any edit of the page, so a destination updated in the last 72 hours is listed as routine; only a colour or regional
-  colour change Cordon sees is an anomaly.
+  colour change Cordon sees is an anomaly. Paging goes by the documents the API returned, not those Cordon kept. A
+  destination whose introduction names no colour in a run keeps its last reading, marked `unread_since` (in the feed,
+  `measures.unread_since`), so a change across the gap is still recorded; one never read, or with an ISO code Cordon
+  does not know, is kept in `data/netherlands.json` and not placed. Health counts both.
 - **CDC travel health notices** (`wwwnc.cdc.gov/travel/rss/notices.xml`, keyless, US public domain; CDC asks for
   credit, a no-endorsement disclaimer and unaltered substance): every notice in force, at CDC's level (1 Practice Usual
   Precautions to 4 Avoid All Travel), with the disease, CDC's summary, the places it names and CDC's date.

@@ -7,7 +7,8 @@ BQ-SE for the three Caribbean municipalities), the page's address, an introducti
 `lastmodified` (UTC). The colour code is only in the introduction's sentences: "De kleurcode van het reisadvies voor
 Oekraine is rood", and for a country with regional advice "De kleurcode van het reisadvies is oranje voor het
 grensgebied ... Voor de rest van Zambia geldt kleurcode geel". Cordon reads every colour word in a sentence that says
-"kleurcode"; the highest is the country's colour, and more than one means the colour differs by area.
+"kleurcode"; the highest is the country's colour, and more than one means the colour differs by area. A destination
+whose introduction names no colour keeps its last reading, marked unread_since; none is dropped (see collect()).
 
 The four colours (kleurcodes), lowest first, are the ministry's: groen (no special security risks), geel (special
 security risks, travel with care), oranje (travel only if essential), rood (do not travel). The English words are
@@ -98,6 +99,12 @@ def first_sentence(intro: str | None) -> str | None:
 
 def parse(body: bytes) -> list[dict]:
     """The page's documents as {key, iso, name_nl, link, updated, colours, colour, regional, intro_nl, api_url}."""
+    return parse_page(body)[0]
+
+
+def parse_page(body: bytes) -> tuple[list[dict], int]:
+    """(the travel-advice documents, as parse() gives them; how many documents the page held). Paging goes by the
+    second: a document parse() leaves out (no isocode, another type) still fills the page."""
     try:
         root = ET.fromstring(body)
     except ET.ParseError as e:
@@ -105,7 +112,8 @@ def parse(body: bytes) -> list[dict]:
     if root.tag != "documents":
         raise ValueError("not a documents list")
     out = []
-    for d in root.findall("document"):
+    raw = root.findall("document")
+    for d in raw:
         key = (d.findtext("isocode") or "").strip().upper()
         iso = ISO.get(key)
         if not key or d.findtext("type") != "reisadvies":
@@ -118,7 +126,7 @@ def parse(body: bytes) -> list[dict]:
                     "https://www.nederlandwereldwijd.nl/reisadvies",
                     "updated": (d.findtext("lastmodified") or "").strip() or None, "colours": cols,
                     "colour": cols[-1] if cols else None, "regional": len(cols) > 1, "intro_nl": first_sentence(intro)})
-    return out
+    return out, len(raw)
 
 
 def diff(old: dict, new: dict, when: str) -> list[dict]:
@@ -146,27 +154,36 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, paus
         if body is None:
             return old, [], err
         try:
-            got = parse(body)
+            got, n_raw = parse_page(body)
         except (ValueError, UnicodeDecodeError) as e:
             return old, [], f"unreadable: {e}"[:120]
         docs += got
-        if len(got) < PAGE_SIZE:
+        if n_raw < PAGE_SIZE:
             break
         if pause:
             time.sleep(pause)
     new = {}
-    unread = 0
+    unread = read_ok = 0
     for r in docs:
-        if not r["iso"]:
-            continue  # a destination Cordon has no code for is left out, not guessed
+        # The three Caribbean municipalities share BQ: each keeps the ministry's own name. A destination Cordon has
+        # no code for is kept with iso None (not guessed); the feed leaves it out.
+        name = r["name_nl"] if "-" in r["key"] or not r["iso"] else country_name(r["iso"], r["name_nl"])
         if not r["colour"]:
+            # Its introduction names no colour this run: the last reading is kept, marked, so a change across the
+            # gap is still seen when the colour can be read again. A destination never read is kept with no colour.
             unread += 1
+            prev = old.get(r["key"])
+            if prev and prev.get("colour"):
+                new[r["key"]] = {**prev, "unread_since": prev.get("unread_since") or when}
+            else:
+                new[r["key"]] = {**r, "name": name, "advice": None,
+                                 "unread_since": (prev or {}).get("unread_since") or when}
             continue
-        # The three Caribbean municipalities share BQ: each keeps the ministry's own name.
-        name = r["name_nl"] if "-" in r["key"] else country_name(r["iso"], r["name_nl"])
+        if r["iso"]:
+            read_ok += 1
         new[r["key"]] = {**r, "name": name, "advice": LEVELS[r["colour"]]}
-    if len(new) < MIN_COUNTRIES:
-        return old, [], f"only {len(new)} destinations listed"
+    if read_ok < MIN_COUNTRIES:
+        return old, [], f"only {read_ok} destinations listed"
     if unread > MAX_UNREAD_SHARE * len(docs):
         return old, [], f"{unread} of {len(docs)} introductions name no colour"
     return dict(sorted(new.items())), diff(old, new, when), None

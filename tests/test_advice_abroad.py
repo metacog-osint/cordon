@@ -2,6 +2,7 @@
 the live formats read on 25 Nov 2026. Run as a plain script or with unittest."""
 import json
 import sys
+import tempfile
 import unittest
 import unittest.mock
 from datetime import datetime, timezone
@@ -163,6 +164,37 @@ class JapanCollect(unittest.TestCase):
         held, changes, err, read, failed = japan.collect(None, STAMP, fetch, pause=0)
         self.assertEqual((err, read, failed), (None, 0, japan.READABLE))
         self.assertEqual(held["countries"], {})
+
+    def test_every_notice_is_archived_before_the_prune(self):
+        # japan.json keeps 14 days of notices; a notice naming no country reaches no other file, so the archive is
+        # its only lasting copy.
+        old_notice = {"key": "160000", "type": "R10", "at": "2026-11-01T00:00:00Z", "code": None, "iso": None,
+                      "name_ja": None, "title_ja": "古い領事メール", "lead_ja": "本文", "link": japan.INDEX_URL,
+                      "mission_ja": "在ニューヨーク日本国総領事館"}
+        old = {"notices": {"160000": old_notice}, "countries": {}}
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / japan.ARCHIVE
+            arch = lambda ns: japan.archive_notices(path, ns, STAMP)  # noqa: E731
+            held = japan.collect(old, STAMP, self.fetcher([]), pause=0, archive=arch)[0]
+            self.assertNotIn("160000", held["notices"], "over 14 days: out of japan.json")
+            rows = [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(sorted(r["key"] for r in rows), ["160000", "169100", "169200", "169214", "169220"])
+            self.assertEqual(next(r for r in rows if r["key"] == "160000")["notice"], old_notice)
+            # Run again: nothing is written twice; a notice whose text changed is written again.
+            japan.collect(held, STAMP, self.fetcher([]), pause=0, archive=arch)
+            self.assertEqual(len(path.read_text(encoding="utf-8").splitlines()), 5)
+            changed = listing([mail("169220", "R10", "2026/11/26 02:51:05", "0033", "訂正版"),
+                               mail("169200", "R10", "2026/11/25 15:51:03", "0966", "x"),
+                               mail("169214", "R10", "2026/11/26 00:01:15", "", "y")])
+            japan.collect(held, STAMP, self.fetcher([], changed), pause=0, archive=arch)
+            self.assertEqual(len(path.read_text(encoding="utf-8").splitlines()), 8)
+        # No archive, or a failing one: nothing is pruned.
+        self.assertIn("160000", japan.collect(old, STAMP, self.fetcher([]), pause=0)[0]["notices"])
+
+        def broken(ns):
+            raise OSError("disk full")
+        self.assertIn("160000", japan.collect(old, STAMP, self.fetcher([]), pause=0,
+                                              archive=broken)[0]["notices"])
 
 
 class JapanFeed(unittest.TestCase):
@@ -328,6 +360,51 @@ class NetherlandsCollect(unittest.TestCase):
         keys = [k for k in sorted(netherlands.ISO) if "-" not in k][:190]
         docs = [doc(k, k.title(), GREEN.format(k)) for k in keys[:160]] + [doc(k, k.title(), INTROS["NLX"]) for k in keys[160:]]
         self.assertIn("name no colour", netherlands.collect(kept, STAMP, lambda u, t=40: (nl_page(docs), None), pause=0)[2])
+
+    def test_paging_counts_the_documents_the_api_returned(self):
+        # A document with no isocode on the first page left 199 parsed of 200 returned: paging stopped there and the
+        # destinations on the next page were lost with no error.
+        docs = many(222)
+        docs.insert(5, doc("", "Nergens", GREEN.format("Nergens")))
+        calls = []
+        got, changes, err = netherlands.collect(None, STAMP, self.fetcher(docs, calls), pause=0)
+        self.assertEqual((err, len(calls), len(got)), (None, 2, 222))
+        self.assertEqual(netherlands.parse_page(nl_page(docs[:200]))[1], 200)
+
+    def test_an_unreadable_colour_keeps_the_last_reading(self):
+        yellow = "<p>De kleurcode van het reisadvies voor Oekraïne is geel.</p>"
+        base = many(170)
+        first, _, err = netherlands.collect(None, STAMP, self.fetcher(base + [doc("UKR", "Oekraine", yellow)], []), pause=0)
+        self.assertEqual((err, first["UKR"]["colour"]), (None, "geel"))
+        # Its introduction names no colour this run: the yellow reading stays, marked, and no change is recorded.
+        later = "2026-11-26T19:30:00Z"
+        second, changes, err = netherlands.collect(
+            first, later, self.fetcher(base + [doc("UKR", "Oekraine", INTROS["NLX"])], []), pause=0)
+        self.assertEqual((err, changes), (None, []))
+        self.assertEqual((second["UKR"]["colour"], second["UKR"]["unread_since"]), ("geel", later))
+        # Next run it reads red: the change from yellow is seen, and the mark is gone.
+        third, changes, err = netherlands.collect(
+            second, "2026-11-27T19:30:00Z", self.fetcher(base + [doc("UKR", "Oekraine", INTROS["UKR"])], []), pause=0)
+        self.assertEqual([(c["key"], c["kind"], c["from"], c["to"]) for c in changes], [("UKR", "level", "geel", "rood")])
+        self.assertNotIn("unread_since", third["UKR"])
+        # A destination never read, and one with no country code, are kept, not dropped.
+        fourth, _, err = netherlands.collect(
+            third, STAMP, self.fetcher(base + [doc("UKR", "Oekraine", INTROS["UKR"]), doc("SXX", "Nieuwland", GREEN.format("x")),
+                                               doc("ZWE", "Zimbabwe", INTROS["NLX"])], []), pause=0)
+        self.assertEqual((fourth["SXX"]["iso"], fourth["SXX"]["colour"]), (None, "groen"))
+        self.assertEqual((fourth["ZWE"]["colour"], fourth["ZWE"]["unread_since"]), (None, STAMP))
+        fc = NetherlandsFeed.build(self, fourth)
+        self.assertEqual(fc["dropped"], [])
+        ids = {f["properties"]["id"] for f in fc["features"]}
+        self.assertNotIn("cordon:netherlands:SXX", ids)
+        self.assertNotIn("cordon:netherlands:ZWE", ids)
+        self.assertIn("cordon:netherlands:UKR", ids)
+        # A kept reading says since when the colour could not be read.
+        held = {**fourth, "UKR": {**fourth["UKR"], "unread_since": STAMP}}
+        f = next(f for f in NetherlandsFeed.build(self, held)["features"] if f["properties"]["id"] == "cordon:netherlands:UKR")
+        self.assertEqual(f["properties"]["measures"]["unread_since"], STAMP)
+        regs = registers.ids(ROOT / "doctrine")
+        self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
 
 
 class NetherlandsFeed(unittest.TestCase):

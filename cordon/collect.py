@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 
 from . import (canada, cdc, easa, embassy, faa, faaprn, fcdo, japan, navarea, netherlands, nms, safetravel,
                state, tfr)
+from . import common
 from .common import append_jsonl, health, load, now_utc, save
 
 
@@ -112,7 +113,9 @@ def run(when: str | None = None) -> dict:
     summary["safetravel"] = err or f"{len(dests)} destinations, {len(nz_changes)} changes, {read} pages read"
 
     held_jp = load("japan.json", {})
-    jp, jp_changes, err, read, failed = japan.collect(held_jp, when)
+    # Every notice is archived (data/japan_notices.jsonl, append-only) before japan.json drops those over 14 days.
+    jp, jp_changes, err, read, failed = japan.collect(
+        held_jp, when, archive=lambda ns: japan.archive_notices(common.DATA / japan.ARCHIVE, ns, when))
     if err:
         health("jp-mofa-overseas-safety", False, err, when)
     else:
@@ -137,9 +140,13 @@ def run(when: str | None = None) -> dict:
         save("netherlands.json", {"source": netherlands.API, "countries": nl_docs})
         append_jsonl("changes.jsonl", [{**c, "lane": "netherlands"} for c in nl_changes])
         n = {c: sum(1 for r in nl_docs.values() if r["colour"] == c) for c in netherlands.ORDER}
-        regional = sum(1 for r in nl_docs.values() if r["regional"])
+        regional = sum(1 for r in nl_docs.values() if r.get("regional"))
+        unread = sum(1 for r in nl_docs.values() if r.get("unread_since"))
+        no_code = sum(1 for r in nl_docs.values() if not r.get("iso"))
         health("nl-minbuza-travel-advice", True, f"{len(nl_docs)} destinations: {n['rood']} red, {n['oranje']} orange, "
-               f"{n['geel']} yellow, {n['groen']} green; {regional} with more than one colour", when)
+               f"{n['geel']} yellow, {n['groen']} green; {regional} with more than one colour"
+               + (f"; {unread} whose colour could not be read (last reading kept)" if unread else "")
+               + (f"; {no_code} with no country code (not placed)" if no_code else ""), when)
     summary["netherlands"] = err or f"{len(nl_docs)} destinations, {len(nl_changes)} changes"
 
     notices, cdc_changes, err = cdc.collect(load("cdc.json", {}).get("notices"), when)
