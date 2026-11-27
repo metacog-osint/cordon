@@ -8961,6 +8961,7 @@
    "description": "Killeen, TX, Monday, November 30, 2026 through Friday, December 4, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T19:10:30Z",
+   "subject": "6/9880",
    "detail": {
     "name": "261130-261204 Ft. Hood UAS Only",
     "issued": "2026-11-27T18:57:47Z",
@@ -9000,8 +9001,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9880"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
