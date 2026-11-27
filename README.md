@@ -19,6 +19,7 @@ Cordon collects official warnings every hour, straight from the issuing authorit
 | FAA National Airspace System status (the JSON behind nasstatus.faa.gov) | Ground stops, ground delay programs and airport closures in effect, with the FAA's airport coordinates | US Government work (17 U.S.C. 105); the FAA states no licence |
 | FAA temporary flight restrictions (tfr.faa.gov list and detail files) | Space launches and recoveries, security, VIP movements, fires and other hazards, with the FAA's own outline and UTC times | US Government work (17 U.S.C. 105); the FAA states no licence |
 | FAA Prohibitions, Restrictions and Notices (faa.gov/air_traffic/publications/us_restrictions) | US flight prohibitions (SFARs) and security NOTAMs (KICZ: prohibitions, advisories, pointers) for foreign airspace, by country or region | US Government work (17 U.S.C. 105); the FAA states no licence |
+| FAA NOTAM Management Service API (NMS-API; Cordon holds the suite's keys) | International NOTAMs that Cordon ranks notable or significant (cause, rarity in their FIR, changes, size), with the issuing state's own text and an area read from it; and the space-operations NOTAMs Launch reads, in `/data/notams/launch.json` | FAA NMS-API terms of service (7 Oct 2026): redistribution allowed; not FAA data as published by Cordon, and not the authoritative source for NOTAMs issued outside the United States |
 | CDC travel health notices (Travelers' Health RSS) | Disease outbreak notices at CDC's four levels, with the places each names | US public domain; Source: CDC, available free at wwwnc.cdc.gov/travel/notices; no endorsement by CDC, HHS or the US Government is implied |
 | New Zealand SafeTravel travel advice (MFAT; the destination list in safetravel.govt.nz/destinations, and country pages) | New Zealand's level for about 222 destinations, the date of each update, and each country page's note of other levels in some areas | Crown copyright, CC BY 4.0 (Ministry of Foreign Affairs and Trade) |
 | Government of Canada travel advice and advisories (open data index) | Canada's level for about 230 places, its regional advisories, and its note of each update | Open Government Licence - Canada |
@@ -49,6 +50,13 @@ OSAC is not used: its terms bar republishing.
 - The FAA's SFARs and KICZ NOTAMs for foreign airspace are listed per country or region, titled by the strongest
   (prohibition, advisory, pointer). One that appears or is withdrawn makes the section an anomaly for 30 days; the
   page gives no dates, so a NOTAM's year is read from its number. They bind US operators only.
+- International NOTAMs are ranked by Cordon's own significance method (cause from the Q-code, then the NOTAM's own
+  words; rarity against Cordon's record of new NOTAMs per FIR, which needs 90 days before it labels anything; changes
+  along a chain of replacements; size for the FIR). Notable and significant ones are items, in the NOTAM's own words;
+  only a significant one issued in the last 72 hours is an anomaly. The area is the shape the text draws where Cordon
+  can read it, else the Q line's circle, marked approximate. The D) schedule is read into UTC windows where it can be
+  read in full (not sunrise or sunset). Space operations NOTAMs are Launch's: Cordon publishes them, with the same
+  areas and windows, in `/data/notams/launch.json` and ranks none of them.
 - The FCDO's statements are reported as the FCDO words them; a change in the last 30 days is an anomaly. Cordon does
   not rank them against the State Department's levels. A country's page is read only when the FCDO updates it.
 - Canada's levels are reported in Canada's words; a level or regional-advisory change in the last 30 days, or an

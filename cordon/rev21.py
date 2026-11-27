@@ -90,11 +90,11 @@ def corroboration(state: str, basis: str | None, official: str | None, first: st
 
 
 # Why an item names its countries: an advisory is about the country wherever you are; a TFR, an airport program, an
-# outbreak, a bulletin's airspace and an embassy alert are there. NGA warnings name no countries.
+# outbreak, a bulletin's airspace, an embassy alert and a NOTAM's area are there. NGA warnings name no countries.
 PLACE_BASIS = {"advisory": "subject", "posture": "subject", "canada": "subject", "safetravel": "subject",
                "fcdo": "subject", "japan": "subject", "netherlands": "subject", "japannotice": "location",
                "faaprn": "location", "tfr": "location", "faa": "location", "cdc": "location",
-               "czib": "location", "alert": "location"}
+               "czib": "location", "alert": "location", "notam": "location"}
 
 
 def lane(props: dict) -> str:

@@ -53,6 +53,9 @@
      "question": "Where does the Netherlands advise travelling only if essential or not travelling (orange and red), where does the colour differ by area, and when do those change?",
      "series": ["Netherlands travel advice (reisadvies) colour codes from the Nederland Wereldwijd open data API", "changes.jsonl (lane netherlands: colour and regional changes)"],
      "warning_problems": ["CD-WP-1"]},
+    {"id": "CD-PIR-14", "type": "pir", "parent": "CD-SQ-1",
+     "question": "Which international NOTAMs close or restrict airspace for a hazard to people, a disaster response or something rare for that FIR, where, and when are they in force?",
+     "series": ["FAA NMS-API international NOTAMs (Q line, items A-G, the issuing state's text), ranked by tic-significance (cordon/significance.py)", "nms_significance.json (Cordon's own count of new NOTAMs per FIR, subject and cause group)"]},
     {"id": "CD-EEI-1", "type": "eei", "parent": "CD-PIR-2",
      "question": "Is each source answering (data/health.json)?",
      "series": ["source health"]}

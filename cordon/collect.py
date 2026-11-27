@@ -174,13 +174,15 @@ def run(when: str | None = None) -> dict:
         health("faa-prohibitions-notices", True, faaprn.summary(sections), when)
     summary["faaprn"] = err or f"{len(sections)} sections, {len(prn_changes)} changes"
 
-    # FAA NMS-API: the suite's one NOTAM reader (cordon/nms.py). No feed items of its own yet: it publishes subset
-    # files for other programs. Health is written only when a request was made, so "waiting" (no keys) and the
-    # bulk-window wait leave the feed's health block untouched.
+    # FAA NMS-API: the suite's one NOTAM reader (cordon/nms.py). It publishes subset files for other programs and
+    # launch.json for Launch; the feed's NOTAM items (feed.notam_items) are built from its significant.json. Health is
+    # written only when a request was made, so "waiting" (no keys) and the bulk-window wait leave the feed's health
+    # block untouched.
     st, asked = nms.collect()
     if asked:
         health("faa-nms", st.get("status") == "ok", st.get("error") or
-               f"{st.get('mode')}; {(st.get('counts') or {}).get('held', 0)} held; subsets {st.get('subsets')}", when)
+               f"{st.get('mode')}; {(st.get('counts') or {}).get('held', 0)} held; subsets {st.get('subsets')}; "
+               f"launch {st.get('launch')}", when)
     summary["nms"] = (f"{st.get('status')} ({st.get('mode') or '-'}): " +
                       (st.get("error") or st.get("note") or f"subsets {st.get('subsets')}, {st.get('requests')} requests"))
     return summary

@@ -39,7 +39,7 @@
     <h1>Where governments and aviation and maritime authorities are warning people away.</h1>
     <p class="lede" id="lede">US travel advisories and embassy departure status, the UK's, Canada's and New Zealand's travel advice, CDC travel health notices, European
       aviation conflict-zone bulletins, the FAA's flight prohibitions and advisories for foreign airspace, US navigational warnings to mariners, and the FAA's ground stops, ground delay
-      programs, airport closures and temporary flight restrictions, collected every hour from the issuing authorities.</p>
+      programs, airport closures and temporary flight restrictions, and international NOTAMs that Cordon ranks notable or significant, collected every hour from the issuing authorities.</p>
     <p class="tic-reading" id="reading" aria-live="polite"></p>
     <div class="tiles tic-tiles" id="tiles"></div>
   </section>
@@ -54,6 +54,7 @@
         <label><input type="checkbox" data-layer="navwarn" checked> Warnings to mariners</label>
         <label><input type="checkbox" data-layer="faa" checked> US airport programs (FAA)</label>
         <label><input type="checkbox" data-layer="tfr" checked> US flight restrictions (FAA TFRs)</label>
+        <label><input type="checkbox" data-layer="notam" checked> Ranked international NOTAMs</label>
       </fieldset>
       <div class="legend" id="legend"></div>
     </div>
@@ -179,6 +180,20 @@
           <a href="https://launch.theintelligence.company/">Launch</a>.</p>
         <div id="tfrs"></div>
       </section>
+      <section class="card" aria-labelledby="notam-h">
+        <h2 id="notam-h">International NOTAMs ranked notable or significant</h2>
+        <p class="muted small">NOTAMs issued outside the United States, read through the FAA's NOTAM Management Service
+          (NMS-API) and ranked by Cordon: what caused the closure (its Q-code, then its own words), how rare that is in
+          its FIR against Cordon's own record, how the NOTAM has changed, and its size for the FIR. Notable or
+          significant only; a significant NOTAM issued in the last 72 hours is marked new. Rarity needs 90 days of
+          record, so until then nothing is significant. The text is the NOTAM's own; Cordon adds no cause. The area is
+          the one the text draws where Cordon can read it, else the Q line's circle (an envelope, drawn dashed). Not
+          FAA data as published by Cordon, and not the authoritative source for these NOTAMs. Space operations
+          (launches, stage and debris fall, reentry) are on
+          <a href="https://launch.theintelligence.company/">Launch</a>, which reads them from Cordon's
+          <a href="data/notams/launch.json">launch.json</a>.</p>
+        <div id="notams"></div>
+      </section>
     </div>
     <div id="sec-sea" data-tab-label="Sea">
       <section class="card" aria-labelledby="nav-h">
@@ -202,7 +217,7 @@
           (safetravel.govt.nz), Crown copyright, licensed under CC BY 4.0. Japan's travel advice: 出典：外務省 海外安全情報オープンデータ
           (https://www.ezairyu.mofa.go.jp/html/opendata/index.html); edited and processed by Cordon (translated headings,
           selection and ranking), and not produced by the Government of Japan. The Netherlands' travel advice: Ministerie van
-          Buitenlandse Zaken, Nederland Wereldwijd, open data under CC0. FAA flight restrictions (tfr.faa.gov) and the FAA's Prohibitions, Restrictions and Notices are US Government works. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
+          Buitenlandse Zaken, Nederland Wereldwijd, open data under CC0. FAA flight restrictions (tfr.faa.gov) and the FAA's Prohibitions, Restrictions and Notices are US Government works. NOTAMs are read through the FAA NOTAM Management Service API (NMS-API) under its terms of service; they are not FAA data as published by Cordon, and Cordon is not the authoritative source for NOTAMs issued outside the United States. Country outlines: Natural Earth (public domain). Map drawn with Leaflet (BSD 2-Clause).
           OSAC is not used: its terms bar republishing.</p>
       </section>
     </div>

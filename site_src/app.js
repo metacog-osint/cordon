@@ -162,8 +162,8 @@
     lyr._base = { opacity: lyr.options.opacity == null ? 1 : lyr.options.opacity, fillOpacity: lyr.options.fillOpacity };
   }
   function dim(d) {
-    var n = { tfr: [0, 0], faa: [0, 0], nav: [0, 0] };
-    [["tfr", "tfr"], ["navwarn", "nav"], ["faa", "faa"]].forEach(function (pair) {
+    var n = { tfr: [0, 0], faa: [0, 0], nav: [0, 0], notam: [0, 0] };
+    [["tfr", "tfr"], ["navwarn", "nav"], ["faa", "faa"], ["notam", "notam"]].forEach(function (pair) {
       var group = layers[pair[0]];
       if (!group) return;
       group.eachLayer(function (lyr) {
@@ -176,13 +176,14 @@
     var note = document.getElementById("area-note");
     if (!A || A.get().kind === "all") {
       note.textContent = "Area: everywhere. Choose one with the Area button at the top to dim flight restrictions, airport " +
-        "programs and maritime warnings elsewhere.";
+        "programs, maritime warnings and NOTAMs elsewhere.";
       return;
     }
     function part(c, one, many) { return c[0] + " " + (c[0] === 1 ? one : many) + (c[1] ? " (" + c[1] + " flagged)" : ""); }
     note.textContent = "Your area: " + A.label() + ". In it: " + part(n.tfr, "flight restriction", "flight restrictions") +
       ", " + part(n.faa, "FAA airport program", "FAA airport programs") + ", " +
-      part(n.nav, "maritime warning", "maritime warnings") + ". The rest are dimmed.";
+      part(n.nav, "maritime warning", "maritime warnings") + ", " + part(n.notam, "ranked NOTAM", "ranked NOTAMs") +
+      ". The rest are dimmed.";
   }
 
   function draw(world, d) {
@@ -282,6 +283,23 @@
       }
     }).addTo(map);
 
+    // Ranked international NOTAMs (cordon/significance.py): the area the text draws, or the Q line circle dashed.
+    layers.notam = L.geoJSON({ type: "FeatureCollection", features: (d.notams || []).filter(function (t) { return t.geometry; })
+      .map(function (t) { return { type: "Feature", geometry: t.geometry, properties: t }; }) }, {
+      style: function (f) { var key = f.properties.tier === "anomaly"; var env = f.properties.precision !== "area";
+        return { color: key ? css("--notam-key") : css("--notam"), weight: key ? 2 : 1.4, fillOpacity: key ? 0.16 : 0.08,
+                 dashArray: env ? "4 4" : null }; },
+      pointToLayer: function (f, ll) { return L.circleMarker(ll, { radius: 5 }); },
+      onEachFeature: function (f, lyr) {
+        keepBase(lyr);
+        var t = f.properties, s = t.significance || {};
+        lyr.bindTooltip(tip(t.title + "\n" + [t.lower, t.upper].filter(Boolean).join(" to ")
+          + (t.start ? "\nFrom " + when(t.start) : "") + (t.until ? "\nUntil " + when(t.until) : "")
+          + "\nRanked " + (s.tier || "") + (s.reasons && s.reasons.length ? ": " + s.reasons.join("; ") : "")
+          + (t.precision !== "area" ? "\nArea: the Q line circle, an envelope" : "")), { sticky: true });
+      }
+    }).addTo(map);
+
     document.querySelectorAll(".layers input").forEach(function (box) {
       box.addEventListener("change", function () {
         var l = layers[box.getAttribute("data-layer")];
@@ -303,7 +321,9 @@
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa") }), "FAA airport program"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--faa-key") }), "unusual number of ground stops"]),
       h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr") }), "FAA flight restriction"]),
-      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new restriction of some impact"]));
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--tfr-key") }), "new restriction of some impact"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--notam") }), "ranked international NOTAM"]),
+      h("span", null, [h("span", { "class": "dt", style: "background:" + css("--notam-key") }), "significant NOTAM, new"]));
   }
 
   // Header row (tic-shell): counts from this build. A source that is not fresh is withheld from the map, so its tile
@@ -504,6 +524,23 @@
       : h("p", { "class": "empty" }, [(d.health["faa-tfr"] || {}).state === "fresh"
           ? "The FAA lists no flight restriction with an area." : "No current FAA TFR data: see Sources below."]));
 
+    var nt = (d.notams || []).slice().sort(function (x, y) {
+      return (y.tier === "anomaly") - (x.tier === "anomaly") || ((y.significance || {}).tier === "significant")
+        - ((x.significance || {}).tier === "significant") || (x.start || "").localeCompare(y.start || ""); });
+    document.getElementById("notams").replaceChildren(nt.length ? table(["NOTAM", "Where", "What", "Ranked", "From", "Until"],
+      nt.map(function (t) {
+        var s = t.significance || {};
+        var row = [t.number + (t.tier === "anomaly" ? " (new)" : ""), [t.location, t.fir].filter(function (x, i, a) {
+            return x && a.indexOf(x) === i; }).join(" / ") + ((t.countries || []).length ? " (" + t.countries.join(", ") + ")" : ""),
+          h("span", null, [h("strong", null, [t.subject || "NOTAM"]), ": " + (t.text || "").replace(/\s+/g, " ").slice(0, 220)
+            + ((t.text || "").length > 220 ? " ..." : "")]),
+          (s.tier || "") + (s.reasons && s.reasons.length ? ": " + s.reasons.join("; ") : ""),
+          { td: when(t.start), cls: "num" }, { td: when(t.until), cls: "num" }];
+        if (!inArea(t)) row.cls = "outside";
+        return row; }))
+      : h("p", { "class": "empty" }, [(d.health["faa-nms"] || {}).state === "fresh"
+          ? "No international NOTAM is ranked notable or significant now." : "No current NOTAM data: see Sources below."]));
+
     var hi = d.advisories.filter(function (a) { return a.level >= 3; })
       .sort(function (x, y) { return y.level - x.level || x.name.localeCompare(y.name); });
     document.getElementById("levels").replaceChildren(table(["Level", "Place", "Advice"], hi.map(function (a) {
@@ -513,6 +550,7 @@
       "easa-czib": "EASA conflict-zone bulletins", "nga-navwarnings": "NGA warnings to mariners",
       "faa-nas-status": "FAA airport status (ground stops, delay programs, closures)",
       "faa-tfr": "FAA temporary flight restrictions",
+      "faa-nms": "NOTAMs (FAA NMS-API)",
       "faa-prohibitions-notices": "FAA prohibitions and advisories for foreign airspace", "uk-fcdo-travel-advice": "UK FCDO foreign travel advice",
       "gac-travel-advisories": "Government of Canada travel advisories",
       "nz-mfat-safetravel": "New Zealand SafeTravel advice",

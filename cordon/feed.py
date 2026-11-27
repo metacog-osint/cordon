@@ -7,13 +7,13 @@ previous value. Each item is checked with the doctrine kit's linter; a failing i
 import re
 from datetime import datetime, timedelta, timezone
 
-from . import (airports, canada, cdc, faa, faaprn, fcdo, japan, launchwarn, navarea, netherlands, rev21,
-               safetravel, tfr)
+from . import (airports, canada, cdc, faa, faaprn, fcdo, japan, launchwarn, navarea, netherlands, nms, notamtext,
+               rev21, safetravel, significance, tfr)
 from .common import ROOT, digest, load, point, read_jsonl, to_utc  # first: puts the doctrine kit on sys.path
 from tic_doctrine import CONTRACT, CONTRACT_REV, __version__ as KIT, contract, geo, registers, vocab  # noqa: E402
 
 SITE = "https://cordon.theintelligence.company/"
-METHOD = "cordon-feed-1.2"
+METHOD = "cordon-feed-1.3"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 NEW_HOURS = 72  # a navigational warning issued within this long is new
@@ -69,6 +69,12 @@ TFR_SRC = {"id": "faa-tfr", "publisher": "US Federal Aviation Administration (FA
            "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); the FAA states no licence on "
            "the TFR site", "grade": "A1", "independence_group": "faa", "source_type": "official notice",
            "descriptor": "Temporary flight restriction (NOTAM), with the FAA's own boundary"}
+NMS_SRC = {"id": "faa-nms", "publisher": "FAA NOTAM Management Service API (NMS-API), read by Cordon",
+           "url": nms.PUBLISHED + nms.SIG_FILE, "licence": nms.TERMS, "grade": "A2", "independence_group": "faa",
+           "source_type": "official notice",
+           "descriptor": "International NOTAM, in the issuing state's own words, as the FAA's NMS-API relays it. "
+                         + nms.SOURCE_NOTE}
+NOTAM_WINDOWS = 60  # a NOTAM item lists at most this many of its windows still to come (the rest are counted)
 FAA_WORDS = {"ground_stop": "ground stop", "ground_delay": "ground delay program", "closure": "airport closure"}
 FAAPRN_SRC = {"id": "faa-prohibitions-notices", "publisher": "US Federal Aviation Administration (FAA)",
               "url": faaprn.PAGE_URL, "licence": "US Government work, not subject to US copyright (17 U.S.C. 105); "
@@ -663,12 +669,114 @@ def faaprn_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     return out
 
 
+def _first_words(text: str, limit: int = 90) -> str:
+    """The start of the NOTAM's own words, cut at a word, for a title."""
+    t = " ".join((text or "").split())
+    if len(t) <= limit:
+        return t
+    cut = t[:limit].rsplit(" ", 1)[0]
+    return cut + " ..."
+
+
+def notam_items(sig: dict, now: datetime) -> tuple[list[dict], dict]:
+    """(items, counts): one item per international NOTAM that tic-significance ranks notable or significant
+    (cordon/significance.py, from the lane's significant.json). The NOTAM's own words are the text; Cordon adds no
+    cause of its own (the cause and its basis are significance's, read from the Q-code and the text). Tier: anomaly
+    only for a significant NOTAM issued (new, or replacing another) within NEW_HOURS; a notable one, or an older
+    significant one, is routine (significance is a ranking, not a change). Space operations (Launch's, in
+    launch.json) and GNSS (Noisefloor's) are never ranked, so never items. The footprint is notamtext.geometry: the
+    shape in the E) text, NMS's polygon where it agrees with the Q) line, else the Q) line circle (approximate)."""
+    stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched = sig.get("pulled_to") or sig.get("generated_at") or stamp
+    new_from = (now - timedelta(hours=NEW_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out, n = [], {"significant": 0, "notable": 0, "ended": 0}
+    for f in sig.get("features") or []:
+        m, text = nms.meta(f), nms.icao_text(f) or ""
+        s = (f.get("properties") or {}).get("significance") or {}
+        if s.get("tier") not in ("significant", "notable"):
+            continue
+        start, end = to_utc(m.get("effectiveStart")), to_utc(m.get("effectiveEnd"))
+        if end and end < stamp:
+            n["ended"] += 1                             # ended since the lane wrote the file
+            continue
+        q = notamtext.qline(text)
+        it = notamtext.items(text)
+        number = m.get("number") or "?"
+        fir = (q or {}).get("fir") or m.get("affectedFir") or m.get("icaoLocation") or "XXXX"
+        loc = m.get("icaoLocation") or m.get("location")
+        geom, basis, precision = notamtext.geometry(f, text)
+        words = notamtext.e_text(text, m.get("text"))
+        schedule = m.get("schedule") or it.get("D")
+        wins, mode = notamtext.windows(m.get("effectiveStart"), m.get("effectiveEnd"), schedule)
+        ahead = [w for w in wins if w["end"] >= stamp]
+        issued = to_utc(m.get("issued"))
+        is_new = bool(issued and issued >= new_from and m.get("type") in ("N", "R"))
+        alert = s["tier"] == "significant" and is_new
+        n[s["tier"]] += 1
+        code = (q or {}).get("code") or m.get("selectionCode")
+        subj = (code or "")[1:3]
+        name = significance.SUBJECTS.get(subj, "NOTAM")
+        first = (s.get("chain_first") or number).replace("/", "-")
+        title = f"NOTAM {number} {loc or fir}" + (f" ({fir})" if loc and loc != fir else "") + f", {name}: " \
+                + _first_words(words)
+        countries = geo.countries_overlapping(geom) if geom else []
+        props = {**_base(fetched), "id": f"cordon:notam:{fir}:{number.replace('/', '-')}",
+                 "subject_id": f"cordon:notam:{fir}:{first}", "title": title,
+                 "tier": "anomaly" if alert else "routine", "data_as_of": to_utc(m.get("lastUpdated")) or fetched,
+                 "countries": countries, "precision_class": precision if geom else "none",
+                 "ncf": ["transport_by_air"], "sector": vocab.derive_sectors(["transport_by_air"]),
+                 "requirement_ids": ["CD-PIR-14"], "ie_aspect": ["physical"],
+                 "pmesii_pt": ["infrastructure"] + (["military"] if s.get("cause_group") == "military_and_test" else []),
+                 "ascope": ["areas"], "sources": [{**NMS_SRC, "accessed_at": fetched}],
+                 "measures": {"number": number, "fir": fir, "location": loc, "type": m.get("type"),
+                              "chain_first": s.get("chain_first"), "q_code": code, "subject": name,
+                              "lower_fl": (q or {}).get("lower_fl"), "upper_fl": (q or {}).get("upper_fl"),
+                              "lower": it.get("F"), "upper": it.get("G"), "issued": issued,
+                              "effective_start": start, "effective_end": end, "estimated": m.get("estimated"),
+                              "schedule": schedule, "window_mode": mode, "windows": ahead[:NOTAM_WINDOWS],
+                              "windows_total": len(wins), "geometry_basis": basis, "text": words, "new": is_new,
+                              "significance": {k: s.get(k) for k in (
+                                  "tier", "method", "cause", "cause_group", "cause_basis", "rarity", "rarity_basis",
+                                  "rarity_counts", "dynamics", "large_for_region", "large_basis", "reasons", "basis")}}}
+        props["measures"] = {k: v for k, v in props["measures"].items() if v is not None}
+        if m.get("type") == "R":
+            ref = nms.refers(f)
+            if ref:
+                props["measures"]["replaces"] = ref.split("|", 1)[0]
+        subs = us_subdivisions(countries, geom)
+        if subs:
+            props["subdivisions"] = subs
+        if end:
+            props["valid_until"] = end
+        rev21.event(props, start, end)
+        if is_new:
+            rev21.stamp(props, "changed" if m.get("type") == "R" else "new", issued)
+        rc = s.get("rarity_counts") or {}
+        if isinstance(rc.get("earlier"), int) and s.get("rarity") != "history_short":
+            # Earlier NOTAMs of the same subject and cause group in the same FIR (or ICAO prefix): Cordon's own count,
+            # once the history is long enough to rank rarity (significance.MIN_HISTORY_DAYS); before that, none.
+            rev21.signal(props, "earlier NOTAMs of this subject and cause here", rc["earlier"],
+                         f"NOTAMs in {rc.get('days')} days")
+        if alert:
+            props["baseline_ref"] = {"id": "cordon-notam-history", "type": "rolling", "version": "1",
+                                     "window": f"new international NOTAMs of the same subject and cause group in the "
+                                               f"FIR or ICAO prefix, in the {significance.WINDOW_DAYS} days before "
+                                               f"({s.get('method')})"}
+        if not geom:
+            props["visual"] = {"type": "page", "url": NMS_SRC["url"]}
+        out.append({"type": "Feature", "geometry": geom, "properties": props})
+    return out, n
+
+
 def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None = None,
           health: dict | None = None, nas: dict | None = None, faa_counts: list[dict] | None = None,
           uk: dict | None = None, tfrs: dict | None = None, ca: dict | None = None,
           health_notices: dict | None = None, nz: dict | None = None, prn: dict | None = None,
-          jp: dict | None = None, nl: dict | None = None, dropped_log=None) -> dict:
-    """`dropped_log`: a path; the items the linter drops are appended there whole (cordon/dropped.py, C5)."""
+          jp: dict | None = None, nl: dict | None = None, notams: dict | None = None,
+          notam_index: dict | None = None, dropped_log=None) -> dict:
+    """`dropped_log`: a path; the items the linter drops are appended there whole (cordon/dropped.py, C5).
+    `notams`: the NMS lane's significant.json and `notam_index` its index.json (cache/nms/out/), when collect wrote
+    them in this run's cache."""
     now = now or datetime.now(timezone.utc)
     src_health = source_health(health, nav, now)
     nga = src_health.get(NGA_SRC["id"]) or {}
@@ -917,6 +1025,25 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
             feats += items
             tf.update({k: v for k, v in counts.items() if v})
 
+    if notams is not None:
+        nm = src_health.setdefault(NMS_SRC["id"], {"state": "never"})
+        if nm["state"] in ("stale", "never"):
+            nm["withheld"] = sum(1 for f in notams.get("features") or []
+                                 if ((f.get("properties") or {}).get("significance") or {}).get("tier")
+                                 in ("significant", "notable"))
+        else:
+            items, counts = notam_items(notams, now)
+            feats += items
+            nm.update({"items": len(items), "tiers": notams.get("tiers"),
+                       **({"ended": counts["ended"]} if counts["ended"] else {})})
+        if notams.get("pulled_to"):
+            nm["data_as_of"] = notams["pulled_to"]
+    if notam_index is not None:
+        nm = src_health.setdefault(NMS_SRC["id"], {"state": "never"})
+        la = notam_index.get("launch") or {}
+        if la.get("status") == "ok":
+            nm["launch_areas"] = la.get("n")
+
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     # Published when built (rev 2.1): the history step after the build runs with --now at the feed's generated_at,
     # so a change it records is never later than the item's publication. Each source's accessed_at keeps its read.
@@ -944,7 +1071,9 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                        "content under the Open Government Licence - Canada; CDC content US public domain; New Zealand MFAT "
                        "content Crown copyright under CC BY 4.0; Japan Ministry of Foreign Affairs overseas safety open data under its "
                        "terms (Government Standard Terms 2.0, compatible with CC BY 4.0), edited and processed by Cordon; "
-                       "Netherlands travel advice from Nederland Wereldwijd, CC0 1.0",
+                       "Netherlands travel advice from Nederland Wereldwijd, CC0 1.0; NOTAMs read through the FAA "
+                       "NMS-API under its terms of service (redistribution allowed; not FAA data as published by "
+                       "Cordon)",
             "attribution": "Cordon, The Intelligence Company. Sources: US Department of State, EASA, NGA, FAA, UK FCDO, "
                            "Global Affairs Canada. Contains public sector information licensed under the Open "
                            "Government Licence v3.0. Contains information licensed under the Open Government "
@@ -954,6 +1083,8 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
                            "SafeTravel (safetravel.govt.nz), licensed under CC BY 4.0. Japan: 外務省 海外安全情報オープンデータ "
                            "(https://www.ezairyu.mofa.go.jp/html/opendata/index.html), edited and processed by Cordon; "
                            "not produced by the Government of Japan. Netherlands: Ministerie van Buitenlandse Zaken, "
-                           "Nederland Wereldwijd (CC0).",
+                           "Nederland Wereldwijd (CC0). NOTAMs: read through the FAA NOTAM Management Service API "
+                           "(NMS-API) by Cordon; not FAA data as published by Cordon, and not the authoritative "
+                           "source for NOTAMs issued outside the United States.",
             "language_key": "https://github.com/metacog-osint/tic-doctrine/blob/main/docs/language-key.md",
             "health": src_health, "dropped": dropped, "features": kept}
