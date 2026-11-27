@@ -34,7 +34,8 @@ OSAC is not used: its terms bar republishing.
 - State's country codes are mostly FIPS 10-4. Fourteen advisories use ISO or State's own codes (Switzerland comes as
   "SR"), so the title decides for those. Gaza and the West Bank, filed under Israel's code, are placed by hand.
 - Departure status has no field. Cordon reads it from the text with a phrase set; "suspended operations" counts only
-  when the sentence names the embassy. Every change is flagged for a person to review.
+  when the sentence names the embassy. A country whose advisory says there is no US embassy, or names a protecting
+  power, reads "no_post". Every change in State's text that moves the status is flagged for a person to review.
 - NGA warnings are plain text. Cordon reads the positions written in them, draws an "area bound by" as a polygon,
   sorts each warning into a category from its wording, and drops self-cancelling notices and in-force lists.
 - FAA programs are reported as the FAA lists them, reason included ("wind", "other"); Cordon adds no cause. A ground

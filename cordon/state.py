@@ -27,9 +27,10 @@ TITLE_ISO = {
 }
 
 # Departure status, most severe first. Each pattern must name the post, staff or family members leaving.
+# The last entry, "no_post", is read only when no departure or suspension wording matches.
 POSTURE = [
     ("suspended_operations", re.compile(
-        r"(suspended (?:its |all |normal )?(?:operations|embassy operations|consular operations)"
+        r"(suspended (?:its |all |normal )?(?:operations|(?:US )?embassy operations|consular operations)"
         r"|(?:embassy|consulate)[^.]{0,80}(?:has |have )?(?:suspended operations|closed))", re.I)),
     ("ordered_departure", re.compile(
         r"(ordered (?:the )?departure|ordered non-emergency[^.]{0,160}to leave"
@@ -37,6 +38,9 @@ POSTURE = [
     ("authorized_departure", re.compile(
         r"(authorized (?:the )?(?:voluntary )?departure|authorized non-emergency[^.]{0,160}to leave"
         r"|on authorized departure)", re.I)),
+    # No US embassy to leave: not a departure status, but not a normally working post either.
+    ("no_post", re.compile(
+        r"(there is (?:currently )?no US embassy|serves as the (?:US )?protecting power)", re.I)),
 ]
 
 
@@ -111,7 +115,8 @@ def diff(old: dict, new: dict, when: str) -> list[dict]:
             continue
         if prev["level"] != rec["level"]:
             changes.append({**base, "kind": "level", "from": prev["level"], "to": rec["level"]})
-        if prev["posture"]["state"] != rec["posture"]["state"]:
+        # A different reading of unchanged text comes from Cordon's phrase set, not from State: no change.
+        if prev["posture"]["state"] != rec["posture"]["state"] and prev["text_hash"] != rec["text_hash"]:
             changes.append({**base, "kind": "posture", "from": prev["posture"]["state"],
                             "to": rec["posture"]["state"], "sentence": rec["posture"]["sentence"],
                             "needs_review": True})

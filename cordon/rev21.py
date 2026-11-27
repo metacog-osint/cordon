@@ -48,7 +48,7 @@ def alert_subject(iso: str, title: str) -> str:
 
 
 # Ladders. last_change is raised or lowered when the level moves on the issuer's own ladder.
-POSTURE_RANK = {"normal": 0, "authorized_departure": 1, "ordered_departure": 2, "suspended_operations": 3}
+POSTURE_RANK = {"normal": 0, "no_post": 0, "authorized_departure": 1, "ordered_departure": 2, "suspended_operations": 3}
 
 
 def moved(old, new) -> str:

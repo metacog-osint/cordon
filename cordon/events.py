@@ -22,7 +22,8 @@ from .feed import (CANADA_SRC, CDC_SRC, FAAPRN_SRC, FCDO_SRC, JAPAN_SRC, NL_SRC,
 
 EASA_PAGE = "https://www.easa.europa.eu/en/domains/air-operations/czibs"
 POSTURE_WORDS = {"normal": "normal operations", "authorized_departure": "authorized departure",
-                 "ordered_departure": "ordered departure", "suspended_operations": "suspended operations"}
+                 "ordered_departure": "ordered departure", "suspended_operations": "suspended operations",
+                 "no_post": "no US embassy"}
 RECENT_DAYS = 30
 COVER_DAYS = 2  # a Canada change Cordon saw within this long after Canada's own update is that update
 # The change kinds each lane turns into events (State's text-only edits, new and removed advisories stay out).

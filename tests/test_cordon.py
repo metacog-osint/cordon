@@ -141,6 +141,20 @@ class State(unittest.TestCase):
         self.assertEqual(r["BY"]["posture"]["state"], "suspended_operations")
         self.assertEqual(r["MX"]["posture"]["state"], "authorized_departure")
 
+    def test_no_embassy_wording(self):
+        read = lambda text: state.posture_of(text)["state"]
+        self.assertEqual(read("The U.S. government suspended U.S. Embassy operations in 2012."), "suspended_operations")
+        self.assertEqual(read("There is no U.S. Embassy in Iran."), "no_post")
+        self.assertEqual(read("There is currently no U.S. Embassy in Libya."), "no_post")
+        self.assertEqual(read("Sweden serves as the U.S. protecting power in North Korea."), "no_post")
+        self.assertEqual(read("The U.S. Embassy suspended operations. Sweden serves as the protecting power."),
+                         "suspended_operations")
+
+    def test_a_new_reading_of_unchanged_text_is_not_a_change(self):
+        new = state.parse(STATE)
+        old = {k: {**v, "posture": {"state": "normal", "sentence": None}} for k, v in new.items()}
+        self.assertEqual(state.diff(old, new, "t"), [])
+
     def test_diff_flags_posture_changes_for_review(self):
         old = state.parse(STATE)
         new = state.parse([adv("Saudi Arabia - Level 4: Do Not Travel", ["SA"], "<p>Do not travel.</p>")] + STATE[1:])
