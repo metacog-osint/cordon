@@ -179,17 +179,30 @@
     }
   },
   "corroboration_state": {
-    "basis": "Feed contract revision 2.1, F7 (18 Nov 2026, D11): reported, then corroborated",
+    "basis": "Feed contract revision 2.1, F7 (D11); the three-state ladder from kit 0.6.13 (docs/event-ladder.md)",
     "values": {
-      "reported": "One origin so far, or only the party's own claim: not yet corroborated.",
-      "corroborated": "Two independent origins, or one official source speaking within its own remit."
+      "lead": "Reported by one origin and screened into scope, but not checked.",
+      "confirmed": "A reviewer judged it a real event within scope; still one origin.",
+      "verified": "Two or more independent origins, an official source within its own remit, or a published geolocation.",
+      "reported": "Earlier name of lead (kit 0.6.2).",
+      "corroborated": "Earlier name of verified (kit 0.6.2)."
     }
   },
   "corroboration_basis": {
-    "basis": "Feed contract revision 2.1, F7 (D11)",
+    "basis": "Feed contract revision 2.1, F7 (D11); geolocation from kit 0.6.13",
     "values": {
       "origins": "Two or more independent origins (wire copies and near-identical texts are one origin; one government's outlets are one origin).",
-      "official": "The issuer speaking about its own remit: UKMTO for incidents it logs, an embassy for its own alert, an agency for its own measurement. An official about someone else's action is a party claim."
+      "official": "The issuer speaking about its own remit: UKMTO for incidents it logs, an embassy for its own alert, an agency for its own measurement. An official about someone else's action is a party claim.",
+      "geolocation": "A published geolocation of imagery of the event, cited as one of the item's sources."
+    }
+  },
+  "coverage_class": {
+    "basis": "Kit 0.6.13: the coverage table (docs/event-ladder.md)",
+    "values": {
+      "several": "Three or more independent source groups.",
+      "few": "One or two independent source groups.",
+      "none": "Not monitored: no source read for the place.",
+      "no_independent": "No independent source (kit 0.6.17): sources were read for the place, but every one was set aside (state media, a party's claim) or is the suite's own."
     }
   }
 }
