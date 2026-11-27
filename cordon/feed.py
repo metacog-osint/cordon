@@ -698,7 +698,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         rev21.event(props, to_utc(r.get("updated")))  # the date the advisory took effect
         rev21.signal(props, "State Dept advisory level 1-4", r["level"], "level 1-4")
         feats.append(_place({"type": "Feature", "geometry": _pt(key, r["iso"]), "properties": props}, r["link"]))
-        if r["posture"]["state"] != "normal":
+        if r["posture"]["state"] not in ("normal", "no_post"):
             pc = last_posture.get(key)
             word = POSTURE_WORDS[r["posture"]["state"]]
             pp = {**_base(fetched), "id": f"cordon:posture:{key}", "title": f"{r['name']}: US embassy on {word}"

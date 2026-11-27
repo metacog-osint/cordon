@@ -7,7 +7,8 @@ is the change's stable key, so a change is never filed twice.
 from datetime import datetime, timedelta, timezone
 
 WORDS = {"normal": "normal operations", "authorized_departure": "authorized departure",
-         "ordered_departure": "ordered departure", "suspended_operations": "suspended operations"}
+         "ordered_departure": "ordered departure", "suspended_operations": "suspended operations",
+         "no_post": "no US embassy"}
 WINDOW_DAYS = 30
 
 

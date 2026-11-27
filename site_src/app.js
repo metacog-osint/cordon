@@ -95,7 +95,8 @@
       (src.state[iso] || []).forEach(function (a) {
         rows.push(["US State Department", link(a.link, (a.name !== names[iso] ? a.name + ": " : "") + "Level " + a.level + ", " + a.level_text),
           { td: date(a.updated), cls: "num" }]);
-        if (POSTURE[a.posture]) rows.push(["US embassy", POSTURE[a.posture][1] + (a.sentence ? ": " + a.sentence : ""), "—"]);
+        var post = POSTURE[a.posture] ? POSTURE[a.posture][1] : a.posture === "no_post" ? "No US embassy" : null;
+        if (post) rows.push(["US embassy", post + (a.sentence ? ": " + a.sentence : ""), "—"]);
       });
       if (!src.state[iso]) rows.push(["US State Department", none("state-travel-advisories", "No advisory for this place"), "—"]);
       (src.fcdo[iso] || []).forEach(function (u) { rows.push(["UK FCDO", link(u.link, ukWords(u.alert_status)), { td: date(u.updated), cls: "num" }]); });
