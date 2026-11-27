@@ -34,7 +34,7 @@ LEVELS = {0: "Exercise normal security precautions", 1: "Exercise a high degree 
 ADVISORY_UPDATE = re.compile(r"advisory", re.I)
 RISK_NOTE = re.compile(r"^Risk levels?\b", re.I)
 # For Verdict's calendar a declared change must name the advisory: Ethiopia's "Risk level - updated information"
-# (29 Oct 2026) says no advisory was issued, changed or removed, so it is not an event (Tom, 15 Nov 2026).
+# (29 Oct 2026) says no advisory was issued, changed or removed, so it is not an event (15 Nov 2026).
 ADVISORY_WORD = re.compile(r"\b(advisor(y|ies)|avoid)\b", re.I)
 # Updates that do not count as new: Canada's own "Editorial change", and a note about only the "Need help?" section
 # (embassy and consulate contacts). On 13 Nov 2026 23 of 30 updates in 72 hours were "updated mission coordinates".

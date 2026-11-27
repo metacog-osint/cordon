@@ -97,7 +97,7 @@ A change of the FCDO's statements for a country in the last 30 days is an anomal
 countries where the FCDO advises against some travel, or that it updated in the last 72 hours, are listed as routine.
 Cordon does not rank the FCDO's statements against the State Department's levels. A TFR for security or a
 special notice issued in the last 72 hours is an anomaly against the TFRs listed before it, when it is of some
-impact and not a re-issue (since 15 Nov 2026, Tom's request that alerts weigh what a restriction does). Impact is
+impact and not a re-issue (since 15 Nov 2026, so that alerts weigh what a restriction does). Impact is
 measured from the FAA's own outline, floor, ceiling and times: high when within 56 km (30 nm) of one of the FAA's
 Core 30 airports with a ceiling of 3,000 ft or more, when it covers 2,500 km2 or more, or when it reaches FL180 (the
 floor of Class A) over 500 km2 or more; moderate when it reaches FL180 over 100 km2 or more, covers 250 km2 or more,
@@ -183,7 +183,7 @@ fields (`cordon/rev21.py`):
   replaced once that one has left the FAA's list (the first re-issue of a split takes it; a re-issue listed alongside its
   predecessor is a second restriction and keeps its own); the subject is stamped once in `data/tfr.json` and never
   changed. An embassy alert's subject is its title with the post's own date cut (trailing, in brackets, or after
-  "Alert:") and punctuation folded, so a re-dated alert under the same headline is one alert (Tom, 18 Nov 2026). Only
+  "Alert:") and punctuation folded, so a re-dated alert under the same headline is one alert (18 Nov 2026). Only
   the newest post of a subject is an item; the earlier posts' titles, dates and links are in `measures.earlier`.
 - **Last change** (`last_change`, `last_change_at`), stated where Cordon's own record knows it: a level raised or
   lowered on the issuer's ladder (State and CDC 1-4, Canada 0-3, New Zealand 1-4; an embassy's status from normal to
@@ -205,7 +205,7 @@ fields (`cordon/rev21.py`):
   anomalies rest on a new warning of a category, not a number, and carry none.
 - **Corroboration** (kit D11): an embassy alert is its issuer speaking within its remit, `corroborated` on one
   official origin; an NGA security warning relays an incident others report, `reported` on one origin, and its
-  corroboration is left to COP (Tom, 18 Nov 2026). Advisories, levels and TFRs are notices, not event reports, and
+  corroboration is left to COP (18 Nov 2026). Advisories, levels and TFRs are notices, not event reports, and
   carry none.
 - **Grades**: every source is A2, a reliable source that nothing else has confirmed (kit 0.6.2: credibility 1 needs a
   second independence group).

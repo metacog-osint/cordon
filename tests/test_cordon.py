@@ -1013,7 +1013,7 @@ class Tfr(unittest.TestCase):
                            "statutory": False, "text": "x", "geometry": geom}}
 
     def test_impact_levels_weigh_size_height_and_the_busiest_airports(self):
-        # Tom, 15 Nov 2026: a small volcano TFR in Hawaii is not one over a hub.
+        # 15 Nov 2026: a small volcano TFR in Hawaii is not one over a hub.
         volcano = tfr.impact(self.rec("6/1", "HAZARDS", "HI", self.square(-155.28, 19.41, 0.03), "4000 ft MSL"))
         self.assertEqual((volcano["impact"], volcano["nearest_core30"]["airport"], volcano["ceiling_ft"]),
                          ("low", "HNL", 4000))
@@ -1022,7 +1022,7 @@ class Tfr(unittest.TestCase):
         self.assertEqual((hub["impact"], hub["impact_basis"]), ("high", ["within 56 km of ORD (Core 30)"]))
         wide = tfr.impact(self.rec("6/3", "VIP", "AK", self.square(-149.9, 61.2, 0.5), "17999 ft MSL"))
         self.assertEqual(wide["impact"], "high")
-        # Tom, 16 Nov 2026 UTC: a small column to unlimited (Santa Rosa Island munitions test, 29 km2) rates low;
+        # 16 Nov 2026 UTC: a small column to unlimited (Santa Rosa Island munitions test, 29 km2) rates low;
         # reaching Class A counts from 100 km2.
         tall = tfr.impact(self.rec("6/4", "SECURITY", "FL", self.square(-86.6, 30.36, 0.03), "FL999"))
         self.assertEqual((tall["impact"], tall["ceiling_ft"], tall["impact_basis"]), ("low", 99900, []))
@@ -1333,7 +1333,7 @@ DEBRIS_1081 = ("GULF OF AMERICA.\nTEXAS.\n1. HAZARDOUS OPERATIONS, SPACE DEBRIS\
 
 
 class LaunchWarn(unittest.TestCase):
-    """Windows, hazard and cancels for Cordon's launch category (ported from Orbit, Tom's decision 17 Nov 2026)."""
+    """Windows, hazard and cancels for Cordon's launch category (ported from Orbit, 17 Nov 2026)."""
 
     def test_lettered_areas_alternates_and_cancel(self):
         m = launchwarn.measures(VSFB_801, "2026-11-13T00:14:00Z", "NAVAREA XII")

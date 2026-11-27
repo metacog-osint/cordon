@@ -17,7 +17,7 @@ METHOD = "cordon-feed-1.2"
 RECENT_DAYS = 30
 STALE_HOURS = 48  # a source with no good fetch for this long is stale, whatever it last said
 NEW_HOURS = 72  # a navigational warning issued within this long is new
-# A new warning of these kinds is an anomaly, not routine (launch and military added by Tom, 13 Nov 2026).
+# A new warning of these kinds is an anomaly, not routine (launch and military added 13 Nov 2026).
 NEW_ALERT = {"security", "mines", "piracy", "gnss", "launch", "military"}
 HAND_POINT = {"PS-GZ": [34.38, 31.42], "PS-WB": [35.25, 31.95],  # [lon, lat], as Watchfloor places them
               "PT-20": [-25.67, 37.74]}  # the Azores (Ponta Delgada), which Canada advises on apart from Portugal
@@ -222,7 +222,7 @@ def faa_items(nas: dict, state: str, now: datetime, counts_rows: list[dict]) -> 
             props["visual"] = {"type": "page", "url": faa.PAGE_URL}
         geom = {"type": "Point", "coordinates": where[:2]} if where else None
         if where:
-            # Impact (Tom, 15 Nov 2026): whether the airport is one of the FAA's Core 30, whose programs ripple across
+            # Impact (15 Nov 2026): whether the airport is one of the FAA's Core 30, whose programs ripple across
             # the system, or how far it is from the nearest. Measured only; the tier rule above is unchanged.
             near = airports.nearest_core30([(where[1], where[0])])
             code = apt.upper()[1:] if len(apt) == 4 and apt.upper().startswith("K") else apt.upper()
@@ -534,7 +534,7 @@ def cdc_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
         ch = last.get(slug)
         is_new = bool(r.get("published") and r["published"] >= new_from)
         # Ranking only: a change older than NEW_HOURS stays on the item (measures, baseline_ref, last_change) but the
-        # item is routine, so it stops ranking as a pick (Tom, 23 Nov 2026).
+        # item is routine, so it stops ranking as a pick (23 Nov 2026).
         fresh = bool(ch and ch["at"] >= new_from)
         props = {**_base(fetched), "id": f"cordon:cdc:{slug}",
                  "title": f"CDC Level {r['level']} ({r['level_text']}): {r['disease_place']}",
@@ -813,7 +813,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
         if is_new:
             rev21.stamp(props, "new", issued)
         if w["category"] == "security":
-            # NGA relays an incident others report: one origin, corroboration left to COP (Tom, 18 Nov 2026).
+            # NGA relays an incident others report: one origin, corroboration left to COP (18 Nov 2026).
             props["corroboration"] = rev21.corroboration("reported", None, None, issued or nv_fetched)
         if w["id"] in leads:
             props["measures"]["rebroadcasts"] = [{**r, "id": f"cordon:navwarn:{r['id']}"} for r in leads[w["id"]]]
@@ -830,7 +830,7 @@ def build(adv: dict, alerts: dict, czibs: dict, nav: dict, now: datetime | None 
 
     al_fetched = alerts.get("fetched_at") or fetched
     for iso, items in sorted((alerts.get("posts") or {}).items()):
-        # One item per alert subject (Tom, 18 Nov 2026): a post re-dated under the same headline is the newest
+        # One item per alert subject (18 Nov 2026): a post re-dated under the same headline is the newest
         # reading of one alert, with the earlier posts' dates and links in measures.earlier.
         subjects = {}
         for a in items:

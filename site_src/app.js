@@ -156,7 +156,7 @@
 
   function levelColor(n) { return n ? css("--l" + n) : css("--land"); }
 
-  // "My area" (tic-area.js, Tom 15 Nov 2026): place-bound notices outside the viewer's area are dimmed, not hidden.
+  // "My area" (tic-area.js, 15 Nov 2026): place-bound notices outside the viewer's area are dimmed, not hidden.
   // Travel advice is about destinations, so it is never dimmed.
   var A = window.TicArea;
   function inArea(item) { return !A || A.contains(item); }
