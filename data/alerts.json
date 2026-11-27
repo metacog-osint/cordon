@@ -103,9 +103,9 @@
   "ET": [
    {
     "iso": "ET",
-    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 13, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOTVxNTNCblZ5RVJWVVdQb2pEbUVCSzY3MWtDVjI5dGhqbmlTeDdDRjFiZVlxdTlyX1dOV1FsYkRWdklrV2tSYzZLZ05sOWVsNll6d2U4Wjh1WE1oMGwxSzBza0RVN3AtUVpYYm8xaFNZMllwRDhRdHJqV00zVzBIVjFjaWUxTWhVMVFRd3Vvd3h1amhl?oc=5",
-    "published_at": "2026-11-13T08:00:00Z",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
@@ -218,15 +218,6 @@
     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOV0luWm03dVRNRnM0MjNDNW9BMXZSM1d0ajZacnpqQVpZcmJIaUh1dWwzdDh1VlBtd3lRQmx2RnpPenpObmVoTzZveTc4cEVobnBrV0YxZG9ucGZFeGw0eGtSeXZnMGZuaEFqdE9ZTzB5OGJNbFdsUzhyM3J0MzNOcFZB?oc=5",
     "published_at": "2026-11-24T21:22:49Z",
     "type": "security",
-    "via": "google-news",
-    "post_url": "https://kw.usembassy.gov/category/alert/"
-   },
-   {
-    "iso": "KW",
-    "title": "Routine Message: November 24, 2026",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTVJMRW5yc0FpUlRJajNjMnNScnVPc1hHX3kwekZ6dHZ1U2F3RENVT2I2bmtGVWdod2tMM3JKWWFpVzhzeFV4UTkyZ0FMemZsM25UTW1IWlZrdEFhV0p6azQ3RWE3RGdnbmlBTlVRNFZOWUF3QzJ2N3RKSjFZX2JZdmxQSlE1d3Q0aFY0?oc=5",
-    "published_at": "2026-11-24T08:00:00Z",
-    "type": "routine",
     "via": "google-news",
     "post_url": "https://kw.usembassy.gov/category/alert/"
    }
