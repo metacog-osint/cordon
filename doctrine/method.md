@@ -72,7 +72,8 @@ The Intelligence Company's doctrine kit (`doctrine/kit/`).
   any edit of the page, so a destination updated in the last 72 hours is listed as routine; only a colour or regional
   colour change Cordon sees is an anomaly. Paging goes by the documents the API returned, not those Cordon kept. A
   destination whose introduction names no colour in a run keeps its last reading, marked `unread_since` (in the feed,
-  `measures.unread_since`), so a change across the gap is still recorded; one never read, or with an ISO code Cordon
+  `measures.unread_since`), so a change across the gap is still recorded, and its title and the page add "last colour
+  read; no colour readable since" that time, so it never reads as current advice; one never read, or with an ISO code Cordon
   does not know, is kept in `data/netherlands.json` and not placed. Health counts both.
 - **CDC travel health notices** (`wwwnc.cdc.gov/travel/rss/notices.xml`, keyless, US public domain; CDC asks for
   credit, a no-endorsement disclaimer and unaltered substance): every notice in force, at CDC's level (1 Practice Usual

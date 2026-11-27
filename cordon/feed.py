@@ -459,6 +459,13 @@ def japan_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     return out
 
 
+def _utc_words(iso: str) -> str:
+    """A stored UTC time for a title: "27 Nov 2026 06:11 UTC"."""
+    t = datetime.strptime(iso[:16], "%Y-%m-%dT%H:%M")
+    month = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")[t.month - 1]
+    return f"{t.day} {month} {t.year} {t:%H:%M} UTC"
+
+
 def netherlands_items(data: dict, now: datetime, changes: list[dict]) -> list[dict]:
     """The Netherlands' advice for every destination at orange (travel only if essential) or red, whose colour changed
     in the last RECENT_DAYS, or that the ministry updated in the last NEW_HOURS (any edit of the page counts)."""
@@ -480,6 +487,9 @@ def netherlands_items(data: dict, now: datetime, changes: list[dict]) -> list[di
         title = f"Netherlands, {r['name']}: {r['advice']}"
         if r.get("regional"):
             title += " (other colours apply in some areas)"
+        if r.get("unread_since"):
+            # Its introduction has named no colour since then, so this is the last colour read, not today's advice.
+            title += f" (last colour read; no colour readable since {_utc_words(r['unread_since'])})"
         props = {**_base(fetched), "id": f"cordon:netherlands:{key}", "title": title,
                  "tier": "anomaly" if (lc or rc) else "routine", "data_as_of": r.get("updated") or fetched,
                  "countries": [r["iso"]], "precision_class": "country", "requirement_ids": ["CD-PIR-13"],

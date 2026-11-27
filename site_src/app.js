@@ -42,6 +42,8 @@
   }
   function day(d) { if (!d) return "—"; var p = String(d).slice(0, 10).split("-"); return Number(p[2]) + " " + MONTHS[Number(p[1]) - 1] + " " + p[0]; }
   function when(iso) { return iso ? T.format(iso) : "—"; }
+  // A Dutch destination whose introduction has named no colour since unread_since shows the last colour read.
+  function nlUnread(c) { return c.unread_since ? " (last colour read; no colour readable since " + T.format(c.unread_since, { year: true }) + ")" : ""; }
   // Leaflet inserts a string tooltip as HTML; a text node keeps source text as text.
   function tip(text) { return h("div", { "class": "tip" }, [text]); }
   function link(url, text) { return url ? h("a", { href: url, rel: "noopener" }, [text]) : text; }
@@ -112,7 +114,7 @@
           { td: day(c.updated_day), cls: "num" }]); });
       if (!src.japan[iso]) rows.push(["Japan", none("jp-mofa-overseas-safety", "Nothing above Level 1 (exercise caution)"), "—"]);
       (src.netherlands[iso] || []).forEach(function (c) {
-        rows.push(["Netherlands", link(c.link, c.advice + (c.regional ? " (the colour differs by area)" : "")),
+        rows.push(["Netherlands", link(c.link, c.advice + (c.regional ? " (the colour differs by area)" : "") + nlUnread(c)),
           { td: c.updated ? date(c.updated) : "—", cls: "num" }]); });
       if (!src.netherlands[iso]) rows.push(["Netherlands", none("nl-minbuza-travel-advice", "Nothing above yellow (special security risks, travel with care), or not listed"), "—"]);
       (src.cdc[iso] || []).forEach(function (n) {
@@ -471,7 +473,7 @@
       nlr.map(function (c) {
         var name = c.title.replace(/^Netherlands, /, "").split(":")[0];
         var was = c.tier !== "anomaly" ? "" : c.from_advice ? " (changed; was: " + c.from_advice + ")" : " (colours in some areas changed)";
-        return [link(c.link, name), c.advice + (c.regional ? " (the colour differs by area)" : "") + was,
+        return [link(c.link, name), c.advice + (c.regional ? " (the colour differs by area)" : "") + was + nlUnread(c),
           { td: c.updated ? T.format(c.updated, { year: true, time: false }) : "—", cls: "num" }]; }))
       : h("p", { "class": "empty" }, [fresh(d, "nl-minbuza-travel-advice")
           ? "The Netherlands advises against travel nowhere and lists no change." : "No current Dutch data: see Sources below."]));

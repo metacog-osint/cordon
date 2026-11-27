@@ -116,7 +116,8 @@ def map_data(d: dict, fc: dict) -> dict:
                          "link": f["properties"]["link"], "countries": f["properties"]["countries"],
                          **{k: f["properties"]["measures"].get(k) for k in ("colour", "colour_nl", "colours", "advice",
                                                                             "regional", "intro_nl", "updated", "new",
-                                                                            "from_advice", "from_colours")}}
+                                                                            "from_advice", "from_colours",
+                                                                            "unread_since")}}
                         for f in fc["features"] if f["properties"]["id"].startswith("cordon:netherlands:")],
         # The FAA's prohibitions and advisories as published in the feed (withheld there when stale).
         "faaprn": [{"id": f["properties"]["id"], "tier": f["properties"]["tier"], "title": f["properties"]["title"],
