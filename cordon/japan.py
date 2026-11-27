@@ -30,11 +30,14 @@ and never present it as if the State had made it; the terms follow the Governmen
 compatible with CC BY 4.0; logos and symbol marks are excluded; the content may change or disappear without notice.
 """
 import gzip
+import hashlib
+import json
 import re
 import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from .common import MAX_BYTES, USER_AGENT, country_name, describe, now_utc
 
@@ -44,8 +47,10 @@ TERMS_URL = SITE + "/html/opendata/support/terms.html"
 NEW_URL = SITE + "/opendata/area/newarrival.xml"
 COUNTRY_URL = SITE + "/opendata/country/{code}L.xml"
 JST = timezone(timedelta(hours=9))
-KEEP_DAYS = 14  # notices kept in data/japan.json
+KEEP_DAYS = 14  # notices kept in data/japan.json; every notice is kept for good in ARCHIVE first
 MAX_NOTICES = 400
+ARCHIVE = "japan_notices.jsonl"  # in data/, committed, append-only (archive_notices)
+ARCHIVE_FORMAT = "cordon-japan-notice/1"
 LEAD_CHARS = 600
 MIN_NEW = 3  # a listing with fewer notices than this is not the listing
 MAX_LISTING_AGE_H = 6  # the listing is regenerated every 5 minutes; this old, it is frozen (the same rule as NGA's)
@@ -233,9 +238,38 @@ def pick_reads(listing: dict, countries: dict, when: str, batch: int = READ_BATC
     return list(dict.fromkeys(never + pending + rotation(when, batch)))[:limit]
 
 
-def collect(old: dict | None, when: str | None = None, fetch=fetch_gz, pause: float = PAUSE_S):
+def archive_notices(path, notices: dict, at: str) -> list:
+    """Append to the archive (ARCHIVE, append-only JSONL) every notice not already in it as it is now: a notice is
+    written when first seen and again only if the ministry's text for it changes. Returns the lines written. The
+    archive is the permanent copy; data/japan.json holds only the last KEEP_DAYS."""
+    path = Path(path)
+    seen = set()
+    if path.exists():
+        with path.open(encoding="utf-8") as fh:
+            for ln in fh:
+                try:
+                    seen.add(json.loads(ln)["digest"])
+                except (ValueError, KeyError, TypeError):
+                    continue
+    out = []
+    for key, n in sorted(notices.items(), key=lambda kv: (kv[1].get("at") or "", kv[0])):
+        dg = hashlib.sha1(json.dumps(n, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
+        if dg in seen:
+            continue
+        seen.add(dg)
+        out.append({"format": ARCHIVE_FORMAT, "archived_at": at, "key": key, "digest": dg, "notice": n})
+    if out:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a", encoding="utf-8", newline="\n") as fh:
+            for line in out:
+                fh.write(json.dumps(line, ensure_ascii=False, separators=(",", ":")) + "\n")
+    return out
+
+
+def collect(old: dict | None, when: str | None = None, fetch=fetch_gz, pause: float = PAUSE_S, archive=None):
     """(held, changes, error, read, failed). `held` is {"notices", "countries"}; on error the caller keeps
-    the old one."""
+    the old one. `archive`: called with every notice held this run before any is pruned (archive_notices); without
+    it, or when it raises OSError, nothing is pruned."""
     when = when or now_utc()
     old = old or {}
     body, err = fetch(NEW_URL, 40)
@@ -253,9 +287,17 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_gz, pause: fl
     held = dict(old.get("countries") or {})
     notices = dict(old.get("notices") or {})
     notices.update(listing)
-    cutoff = (datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ") - timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    notices = dict(sorted(((k, n) for k, n in notices.items() if n["at"] >= cutoff), key=lambda kv: kv[1]["at"],
-                          reverse=True)[:MAX_NOTICES])
+    # Every notice goes to the append-only archive first; only an archived set is pruned (no archive given, or the
+    # archive failed: nothing is pruned this run).
+    try:
+        archived = archive is not None and archive(notices) is not None
+    except OSError:
+        archived = False
+    if archived:
+        cutoff = (datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ")
+                  - timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        notices = dict(sorted(((k, n) for k, n in notices.items() if n["at"] >= cutoff), key=lambda kv: kv[1]["at"],
+                              reverse=True)[:MAX_NOTICES])
     read = failed = 0
     fresh = {}
     for code in pick_reads(listing, held, when):

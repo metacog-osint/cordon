@@ -470,6 +470,8 @@ def netherlands_items(data: dict, now: datetime, changes: list[dict]) -> list[di
     reg = {c["key"]: c for c in mine if c.get("kind") == "regional"}
     out = []
     for key, r in sorted((data.get("countries") or {}).items()):
+        if not r.get("colour") or not r.get("iso"):
+            continue  # never read, or no country code: kept in data/netherlands.json, not placed
         rank = netherlands.level_rank(r["colour"])
         is_new = bool(r.get("updated") and r["updated"] >= new_from)
         lc, rc = lvl.get(key), reg.get(key)
@@ -487,6 +489,8 @@ def netherlands_items(data: dict, now: datetime, changes: list[dict]) -> list[di
                               "colours": [netherlands.COLOURS_EN.get(c) for c in r.get("colours") or []],
                               "advice": r["advice"], "regional": bool(r.get("regional")), "intro_nl": r.get("intro_nl"),
                               "updated": r.get("updated"), "new": is_new}}
+        if r.get("unread_since"):  # the colour could not be read since then: this is the last reading
+            props["measures"]["unread_since"] = r["unread_since"]
         if lc or rc:
             props["baseline_ref"] = {"id": "previous-minbuza-colour", "type": "fixed", "version": "1",
                                      "window": "the Netherlands' previous colour code for the destination"}
