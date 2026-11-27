@@ -81,8 +81,8 @@
    "updated": "2026-10-22T20:00:00-04:00",
    "text_hash": "sha256:ada0ef5a6072d8a2b7dad54946445cb967d44bf8e2f370b0276602cb97142b36",
    "posture": {
-    "state": "normal",
-    "sentence": null
+    "state": "no_post",
+    "sentence": "There is no US Embassy in Iran."
    },
    "words": 711
   },
@@ -98,8 +98,8 @@
    "updated": "2026-10-22T20:00:00-04:00",
    "text_hash": "sha256:86eb5cb42b3ec10f5f7a6b074ae728629aab3ea68e8f92cec12589afccf76fdd",
    "posture": {
-    "state": "normal",
-    "sentence": null
+    "state": "suspended_operations",
+    "sentence": "The US government suspended US Embassy operations in 2012."
    },
    "words": 599
   },
@@ -642,8 +642,8 @@
    "updated": "2026-08-30T20:00:00-04:00",
    "text_hash": "sha256:d2314c53ac4febda4f534939372613233f2645ebf10559043829c8edbf7ca673",
    "posture": {
-    "state": "normal",
-    "sentence": null
+    "state": "no_post",
+    "sentence": "Restrictions on US Government Personnel Movement There is currently no US Embassy in Libya."
    },
    "words": 711
   },
@@ -2988,8 +2988,8 @@
    "updated": "2025-12-10T19:00:00-05:00",
    "text_hash": "sha256:2af1481e63d0ab7d2ff248dbdb2bcbcf9ea46917e62c3c44aac0baa48c075b06",
    "posture": {
-    "state": "normal",
-    "sentence": null
+    "state": "no_post",
+    "sentence": "There is no US embassy or consulate in Guinea-Bissau."
    },
    "words": 168
   },
@@ -3464,8 +3464,8 @@
    "updated": "2025-04-28T20:00:00-04:00",
    "text_hash": "sha256:6834438b000c5b3d6a9a79157ef1e5c9eabe5b86ec219adfabb1df46e362c04d",
    "posture": {
-    "state": "normal",
-    "sentence": null
+    "state": "no_post",
+    "sentence": "Sweden serves as the US protecting power in North Korea through its Embassy in Pyongyang and provides limited consular services to US citizens."
    },
    "words": 227
   },
