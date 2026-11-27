@@ -370,20 +370,36 @@ def _count(b: dict, scope: str, subj: str, group: str, lo: int, hi: int) -> int:
     return sum(v for k in keys for d, v in (b["counts"].get(k) or {}).items() if lo <= int(d) <= hi)
 
 
-def rarity(b: dict, reg: str, subj: str, group: str, day: int) -> tuple[str, list]:
+def rarity(b: dict, reg: str, subj: str, group: str, day: int, own_day: int | None = None) -> tuple[str, list]:
     """(label, [scope, count, days]) for a NOTAM of this subject and cause group first seen in this region on this
     day, against what the baseline held before it (the same day's earlier ones included): the region if it has
     MIN_HISTORY_DAYS of history, else its ICAO prefix if that has, else history_short with the region's count and days
-    held. A scope's history starts the first day an international NOTAM of any subject was seen there."""
+    held. A scope's history starts the first day an international NOTAM of any subject was seen there.
+
+    own_day: the day the baseline already counted this NOTAM itself (it is judged again after the chains were lost).
+    That one count is taken off when it falls in the window, so a NOTAM is never judged against itself."""
+    def count(scope: str, lo: int) -> int:
+        n = _count(b, scope, subj, group, lo, day)
+        return n - 1 if n and own_day is not None and lo <= own_day <= day else n
     for scope in (reg, prefix(reg)):
         held = _history(b, scope, day)
         if held is None or held < MIN_HISTORY_DAYS:
             continue
         win = min(WINDOW_DAYS, held)
-        n = _count(b, scope, subj, group, day - win, day)
+        n = count(scope, day - win)
         return ("rare" if n == 0 else "uncommon" if n <= 2 else "common"), [scope, n, win]
     held = _history(b, reg, day) or 0
-    return "history_short", [reg, _count(b, reg, subj, group, day - held, day), held]
+    return "history_short", [reg, count(reg, day - held), held]
+
+
+def own_day(b: dict, m: dict, counted_before: str | None) -> int | None:
+    """The baseline day a NOTAM issued before counted_before (the baseline's time when the chains were lost) was
+    counted on: its issue day, no earlier than the baseline's first day. None when it was not counted before."""
+    when = m.get("issued") or m.get("lastUpdated")
+    if not counted_before or not when or when >= counted_before:
+        return None
+    d = nms._dt(when)
+    return max(0, day_of(b, d)) if d else None
 
 
 def rarity_text(label: str, nums: list, subj: str, reg: str, group: str = "") -> str:
@@ -437,7 +453,9 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
     day = day_of(b, now)
     out = {"seen": 0, "new": 0, "replaced": 0, "cancelled": 0, "repeat": 0, "rechained": 0, "other_location": 0,
            "excluded": 0}
-    held = {k.rsplit("|", 1)[0] for k in chains}       # number|FIR of every chain
+    held: dict = {}                                    # number|FIR -> a chain of that NOTAM
+    for kk in sorted(chains):
+        held.setdefault(kk.rsplit("|", 1)[0], kk)
     for f in sorted(feats, key=_order):
         m = nms.meta(f)
         if m.get("classification") != "INTL":
@@ -485,19 +503,24 @@ def update(b: dict, chains: dict, feats: list[dict], now: datetime, counted_befo
             if old.get("x") is None:
                 old["x"] = int(now.timestamp() // 60)      # the replaced NOTAM ends where its replacement is seen
             chains[k] = ch
-            held.add(k.rsplit("|", 1)[0])
+            held.setdefault(k.rsplit("|", 1)[0], k)
             out["replaced"] += 1
             continue
-        # a new chain, judged against the history before it
-        g = c["cause_group"]
-        lab, rn = rarity(b, reg, subj, g, day)
-        big, ln = large(b, reg, subj, a, day)
+        # a new chain, judged against the history before it; another location of a NOTAM already held is the same
+        # NOTAM, so it takes that chain's judgement (judged again, it would count the first location against itself)
+        g, nf = c["cause_group"], k.rsplit("|", 1)[0]
+        sib = chains.get(held.get(nf, ""))
+        if sib is not None and "ra" in sib:
+            lab, rn, big, ln = sib["ra"], sib["rn"], sib.get("lg"), sib.get("ln")
+        else:
+            lab, rn = rarity(b, reg, subj, g, day, own_day=own_day(b, m, counted_before))
+            big, ln = large(b, reg, subj, a, day)
         chains[k] = {"id": m.get("id"), "r": reg, "q": subj, "g": g, "d": day, "s": s, "e": e, "a": a, "fl": fl,
                      "n": 1, "sl": 0, "ex": False, "en": False, "ra": lab, "rn": rn, "lg": big, "ln": ln}
-        if k.rsplit("|", 1)[0] in held:
+        if nf in held:
             out["other_location"] += 1                  # counted under its first location
             continue
-        held.add(k.rsplit("|", 1)[0])
+        held[nf] = k
         if counted_before and (m.get("issued") or m.get("lastUpdated") or "9") < counted_before:
             out["rechained"] += 1                       # counted before the chains were lost
             continue
@@ -622,8 +645,10 @@ def assess(f: dict, b: dict, chains: dict, now: datetime, country=country_of) ->
     reg, subj = region(m), subject(m, nms.icao_text(f))
     ch = chains.get(nms.key(f))
     if ch is None:
-        # not seen through the chains (a store rebuilt from the published files): judged now
-        lab, rn = rarity(b, reg, subj, c["cause_group"], day_of(b, now))
+        # not seen through the chains (a store rebuilt from the published files): judged now, without its own count
+        # when the baseline counted it before the chains were lost
+        lab, rn = rarity(b, reg, subj, c["cause_group"], day_of(b, now),
+                         own_day=own_day(b, m, b.get("rechain_before")))
         big, ln = large(b, reg, subj, area_km2(f), day_of(b, now))
         ch = {"ra": lab, "rn": rn, "lg": big, "ln": ln}
     dyn = dynamics(ch)
@@ -650,16 +675,16 @@ def active(f: dict, now: datetime) -> bool:
 def ranked(store: dict, b: dict, chains: dict, now: datetime, country=country_of) -> tuple[list[dict], dict]:
     """The held international NOTAMs, active, that are notable or significant: each its trimmed NMS feature plus
     properties.significance, significant first, newest issued first within a tier; and the count of each tier. A
-    NOTAM NMS lists once per location appears once (its first location in key order)."""
+    NOTAM NMS lists once per location appears once: its first chained location in key order, else its first."""
     out, tiers = [], {"significant": 0, "notable": 0, "routine": 0, "excluded": 0}
-    seen = set()
+    pick: dict = {}
     for k, f in sorted(store.items()):
         if not candidate(f) or not active(f, now):
             continue
         nf = k.rsplit("|", 1)[0]
-        if nf in seen:
-            continue
-        seen.add(nf)
+        if nf not in pick or (pick[nf][0] not in chains and k in chains):
+            pick[nf] = (k, f)
+    for k, f in pick.values():
         s = assess(f, b, chains, now, country=country)
         if s is None:
             tiers["excluded"] += 1

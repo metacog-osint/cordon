@@ -383,5 +383,98 @@ class SelfBackfill(unittest.TestCase):
         self.assertFalse((common.DATA / nms.SIG_BASELINE).exists(), "nothing half-built is saved")
 
 
+class NeverItsOwnBaseline(unittest.TestCase):
+    """A NOTAM is never judged against its own count: several locations, lost chains, the bulk after a lost cache,
+    and chains saved apart from the committed baseline."""
+    BOMB = {"q": "QWDLW", "text": "BOMB DISPOSAL: ALERT AREA RADIUS 300M", "fir": "RJJJ", "point": (139.8, 35.6)}
+
+    def setUp(self):
+        self.b, self.ch = sg.new_baseline("2026-08-01"), {}
+        self.b["first"] = {"RJJJ": 0, "RJ": 0}              # 110 days of history at DAY0, none of these before
+        self.now = DAY0
+
+    def bomb(self, loc, **kw):
+        return feat("A0001/26", loc=loc, nid="N" + loc, **{**self.BOMB, **kw})
+
+    def test_every_location_takes_the_first_judgement(self):
+        r = sg.update(self.b, self.ch, [self.bomb("RJTT"), self.bomb("RJAA")], self.now)
+        self.assertEqual((r["new"], r["other_location"]), (1, 1))
+        self.assertEqual({c["ra"] for c in self.ch.values()}, {"rare"}, "the second location is the same NOTAM")
+        store = {nms.key(f): f for f in (self.bomb("RJTT"), self.bomb("RJAA"))}
+        out, tiers = sg.ranked(store, self.b, self.ch, self.now, country=None)
+        self.assertEqual(tiers["significant"], 1)
+        self.assertIn("0 earlier", out[0]["properties"]["significance"]["rarity_basis"])
+
+    def test_rechained_after_lost_chains_keeps_its_rarity(self):
+        f = self.bomb("RJTT")
+        sg.update(self.b, self.ch, [f], self.now)
+        self.assertEqual(sg.assess(f, self.b, self.ch, self.now, country=None)["tier"], "significant")
+        lost = {}
+        r = sg.update(self.b, lost, [f], self.now + timedelta(hours=2), counted_before=self.b["updated_at"])
+        self.assertEqual(r["rechained"], 1)
+        self.assertEqual(sg.assess(f, self.b, lost, self.now + timedelta(hours=2), country=None)["tier"],
+                         "significant")
+        # an older count of the same kind still counts: the NOTAM takes only its own count off
+        self.b["counts"]["RJJJ|WD|hazard_to_people"]["50"] = 1
+        self.assertEqual(sg.rarity(self.b, "RJJJ", "WD", "hazard_to_people", 110, own_day=110)[1][1], 1)
+
+    def test_unchained_after_lost_chains_is_judged_without_itself(self):
+        f = self.bomb("RJTT")
+        sg.update(self.b, self.ch, [f], self.now)
+        self.b["rechain_before"] = self.b["updated_at"]
+        s = sg.assess(f, self.b, {}, self.now + timedelta(hours=2), country=None)
+        self.assertEqual((s["rarity"], s["tier"]), ("rare", "significant"))
+
+
+class LostCacheLane(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        t = Path(self.tmp.name)
+        self.saved = (common.DATA, nms.CACHE, nms.STORE, nms.OUT)
+        common.DATA = t / "data"
+        nms.CACHE, nms.STORE, nms.OUT = t / "cache", t / "cache" / "store.json.gz", t / "cache" / "out"
+
+    def tearDown(self):
+        common.DATA, nms.CACHE, nms.STORE, nms.OUT = self.saved
+        self.tmp.cleanup()
+
+    def test_the_bulk_after_a_lost_cache_counts_nothing_twice(self):
+        a, b2 = feat("A0001/26"), feat("A0002/26", lu="2026-11-19T13:00:00.000Z")
+        nms.update_significance([a], DAY0, env={}, mode="bulk")
+        nms.chains_path().unlink()                                      # the Actions cache is lost
+        out = nms.update_significance([b2], DAY0 + timedelta(hours=2), env={}, mode="delta")
+        self.assertTrue(out["chains_rebuilt"])
+        out = nms.update_significance([a, b2], DAY0 + timedelta(hours=26), env={}, mode="bulk")
+        self.assertEqual((out["counts"]["rechained"], out["counts"]["new"]), (1, 0))
+        b, _ = nms.load_significance()
+        self.assertEqual(b["counts"]["UUWV|RT|unknown"], {"0": 2}, "A0001 and A0002 once each")
+        self.assertNotIn("rechain_before", b, "the bulk chained every held NOTAM again")
+
+    def test_chains_saved_apart_from_the_baseline_are_lost_chains(self):
+        a = feat("A0001/26")
+        nms.update_significance([a], DAY0, env={}, mode="bulk")
+        old = (common.DATA / nms.SIG_BASELINE).read_text(encoding="utf-8")
+        out = nms.update_significance([feat("A0002/26", lu="2026-11-19T13:00:00.000Z")], DAY0 + timedelta(hours=1),
+                                      env={}, mode="delta")
+        self.assertNotIn("chains_rebuilt", out)
+        (common.DATA / nms.SIG_BASELINE).write_text(old, encoding="utf-8")   # the data push failed; the cache saved
+        self.assertIsNone(nms.load_significance()[1])
+        out = nms.update_significance([feat("A0002/26", lu="2026-11-19T13:00:00.000Z")], DAY0 + timedelta(hours=2),
+                                      env={}, mode="delta")
+        self.assertTrue(out["chains_rebuilt"])
+        self.assertEqual(out["counts"]["new"], 1, "A0002 counted now, where the failed push lost its count")
+
+    def test_rebuild_from_published_keeps_the_ranked_notams(self):
+        ranked = feat("A0009/26", q="QWHLW", text="UXO DISPOSAL")
+        ranked["properties"]["significance"] = {"tier": "notable"}
+        files = {"index.json": {"subsets": [{"name": "launch-areas", "file": "launch-areas.json"}],
+                                "significance": {"file": "significant.json", "status": "ok"}},
+                 "launch-areas.json": {"type": "FeatureCollection", "features": []},
+                 "significant.json": {"type": "FeatureCollection", "features": [ranked]}}
+        store, _ = nms.from_published(lambda url: files[url[len(nms.PUBLISHED):]])
+        self.assertEqual(list(store), [nms.key(ranked)])
+        self.assertNotIn("significance", store[nms.key(ranked)]["properties"], "judged again, not copied")
+
+
 if __name__ == "__main__":
     unittest.main()

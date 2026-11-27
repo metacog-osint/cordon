@@ -238,7 +238,12 @@ is ranked on them. Code: `cordon/significance.py`.
   `rare` is none of its subject and cause group in the region in the year before (or the whole history, if shorter),
   `uncommon` at most two, `common` the rest; the FIR's ICAO prefix (its first two letters, not a country) is used
   when the FIR's own history is short. A label needs 90 days of history; until then the rarity is `history_short`,
-  with the count and the days held. Rarity and size are judged when a NOTAM is first seen.
+  with the count and the days held. Rarity and size are judged when a NOTAM is first seen. A NOTAM is never judged
+  against its own count: another location of a NOTAM already held takes that location's judgement, and a NOTAM the
+  record counted before the working chains were lost (a lost Actions cache, or chains saved apart from the committed
+  record after a failed data push) is judged with its own count taken off, until the next bulk pull has brought every
+  held NOTAM back. After a lost cache the ranked list is rebuilt from the published `significant.json` as well as the
+  subsets, so it does not read empty until that bulk.
 - **Dynamics,** along a chain of replacing NOTAMs: `date_slips` (the start moved later before the earlier start was
   reached: a postponement, not a standing area re-activated day by day), `extended` (end moved later), `enlarged`
   (the Q-line radius grew or the ceiling rose), `cancelled_early`.
