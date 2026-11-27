@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-27T15:40:15Z",
+ "generated": "2026-11-27T20:40:24Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -2205,9 +2205,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-20T17:30:28Z",
+   "updated": "2026-11-27T20:37:12Z",
    "update_type": "Regular text update",
-   "update": "Natural disasters and climate section – updated information on air pollution",
+   "update": "Entry and exit requirements section – updated information on visas",
    "link": "https://travel.gc.ca/destinations/singapore"
   },
   "SI": {
@@ -2577,9 +2577,9 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-23T19:47:01Z",
+   "updated": "2026-11-27T20:35:14Z",
    "update_type": "Regular text update",
-   "update": "Need help? section – updated the address and contact information for the Consulate General of Canada in Denver, United States",
+   "update": "Laws and culture section – added information on cashing and depositing Canadian cheques",
    "link": "https://travel.gc.ca/destinations/united-states"
   },
   "UY": {
