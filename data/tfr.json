@@ -7359,6 +7359,7 @@
    "description": "Cape Canaveral, FL, Tuesday, December 1, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9856",
    "detail": {
     "name": "261201 FCS SpaceX Cygnus NG-25 (X4118",
     "issued": "2026-11-27T00:29:48Z",
@@ -7526,8 +7527,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9856"
+   }
   },
   "6/9857": {
    "notam_id": "6/9857",
@@ -7537,6 +7537,7 @@
    "description": "Cape Canaveral, FL, Tuesday, December 1, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9857",
    "detail": {
     "name": "261201 FCS SpaceX Cygnus NG-25 (X4118",
     "issued": "2026-11-27T00:30:22Z",
@@ -7704,8 +7705,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9857"
+   }
   },
   "6/9859": {
    "notam_id": "6/9859",
@@ -7715,6 +7715,7 @@
    "description": "Cape Canaveral, FL, Monday, November 30, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9859",
    "detail": {
     "name": "261130 FCS SpaceX Cygnus NG-25 (X4118",
     "issued": "2026-11-27T00:31:03Z",
@@ -7882,8 +7883,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9859"
+   }
   },
   "6/9860": {
    "notam_id": "6/9860",
@@ -7893,6 +7893,7 @@
    "description": "Cape Canaveral, FL, Monday, November 30, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9860",
    "detail": {
     "name": "261130 FCS SpaceX Cygnus NG-25 (X4118",
     "issued": "2026-11-27T00:31:42Z",
@@ -8060,8 +8061,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9860"
+   }
   },
   "6/9861": {
    "notam_id": "6/9861",
@@ -8071,6 +8071,7 @@
    "description": "Cape Canaveral, FL, Sunday, November 29, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9861",
    "detail": {
     "name": "261129 FCS SpaceX Cygnus NG-25 (X4118",
     "issued": "2026-11-27T00:32:15Z",
@@ -8238,8 +8239,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9861"
+   }
   },
   "6/9862": {
    "notam_id": "6/9862",
@@ -8249,6 +8249,7 @@
    "description": "Cape Canaveral, FL, Sunday, November 29, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T00:40:34Z",
+   "subject": "6/9862",
    "detail": {
     "name": "261129 FCS SpaceX Cygnus NG-25 (X4118)",
     "issued": "2026-11-27T00:32:46Z",
@@ -8416,8 +8417,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9862"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
