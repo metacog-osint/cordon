@@ -1,21 +1,6 @@
 {
  "source": "https://nasstatus.faa.gov/api/airport-events",
- "programs": [
-  {
-   "kind": "ground_stop",
-   "airport": "LGA",
-   "airport_name": "La Guardia",
-   "start": "2026-11-27T00:59:00Z",
-   "end": "2026-11-27T02:00:00Z",
-   "updated": "2026-11-27T01:12:02Z",
-   "reason": "other",
-   "center": "ZNY",
-   "advisory_url": "https://www.fly.faa.gov/adv/adv_otherdis.jsp?advn=17&adv_date=11272026&facId=LGA&title=ATCSCC ADVZY 017 LGA/ZNY 11/27/2026 CDM GROUND STOP&titleDate=11/27/2026",
-   "included_facilities": 15,
-   "included_flights": "CARRIER DAL ONLY",
-   "probability_of_extension": "MEDIUM"
-  }
- ],
+ "programs": [],
  "airports": {
   "ABQ": [
    -106.6129,
