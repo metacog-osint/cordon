@@ -103,9 +103,9 @@
   "ET": [
    {
     "iso": "ET",
-    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (November 13, 2026)",
-    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOTVxNTNCblZ5RVJWVVdQb2pEbUVCSzY3MWtDVjI5dGhqbmlTeDdDRjFiZVlxdTlyX1dOV1FsYkRWdklrV2tSYzZLZ05sOWVsNll6d2U4Wjh1WE1oMGwxSzBza0RVN3AtUVpYYm8xaFNZMllwRDhRdHJqV00zVzBIVjFjaWUxTWhVMVFRd3Vvd3h1amhl?oc=5",
-    "published_at": "2026-11-13T08:00:00Z",
+    "title": "Security Alert: U.S. Embassy Addis Ababa, Ethiopia (October 30, 2026)",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmxYT0pCb0NFY0JhQzh2Y3NmN1lyaHJjMjRwa05jMUxwMjdFc3BLR2NfMzM2bjk0QTBKSWlDaEstVXJmVTBoYXgxcFdrbmV2ZFdxQktSN1YydnVydEUwYWsxbGNtbnVTUTFmMDkzWXoyU3FhSFItaDNVS0tJUnZnV0E3WGpuYVczWE1KamNjaGZDT1U?oc=5",
+    "published_at": "2026-10-30T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://et.usembassy.gov/category/alert/"
@@ -299,19 +299,19 @@
    },
    {
     "iso": "MX",
-    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
+    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
     "published_at": "2026-10-30T07:00:00Z",
-    "type": "demonstration",
+    "type": "security",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
    {
     "iso": "MX",
-    "title": "Security Alert: Update – Law Enforcement Activity in the City of Matamoros",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHBBU0NEOE1DOV90Y0FSbThaV0RmZldfT012d3pXNDRsYmxuNG1ZWTJOMEpXbUlsSlI2YmtHSEZnUDF6YjlfejdYcW5sT2FOTG4wUFRWbmI5bzBhLVVaRmJDT29lMmVBaldDMDhvYTJLN1BzMV95a0tvQnZYelZseXVyMXJUTnN3LXVJZWxVVkd3WVhjNXk0eW51eFRmdw?oc=5",
+    "title": "Demonstration Alert: Protest and Traffic Related Disruptions on Friday, October 30",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNb003VXVRd0ZuNC1tUjdDS3MtNzItcUFjdTB2Yl83ZHN5Y2hIMmEtMWhQZVdPbVZ1RHBsVnZwOWg5Nll4MWlxSG9wdlFLbzBkNjVYZlZXQUN1OTduSWg4RTJWaFpFMi1ENHIyV1dReVN0aDNVWTI2YnlhclB2SGlaOUtuSVcwandVRlJJeUliQ21YLVIxanVMTHM4WVYxcnVCQU9IRHlIYVFIdw?oc=5",
     "published_at": "2026-10-30T07:00:00Z",
-    "type": "security",
+    "type": "demonstration",
     "via": "google-news",
     "post_url": "https://mx.usembassy.gov/category/alert/"
    },
@@ -448,9 +448,9 @@
    },
    {
     "iso": "SA",
-    "title": "Security Alert: U.S. Mission to Saudi Arabia – November 3, 2026",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN1B6S1FGa21zTS1qcHU3aUozc0tPQkhFUXU1c0xTNnNkS3pPZ1pKd0l0TWdpX1FfY014LVVnZUNEQ0h1LTJ5N0pFam1PNEdvZ3pucXYtOVFCd2Y2MHZHcTJRN2FGUjBXTUdoVFNmS3R2MTJ4dm1IYU93V25xd3NGSkdfSHNqRDZ4OVlGVg?oc=5",
-    "published_at": "2026-11-03T08:00:00Z",
+    "title": "Security Alert: U.S. Mission to Saudi Arabia – October 28, 2026",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSGVBUWdBTkFqVVBlMUNJUHBsVW42RlE1ZmpvMUlpN1RJN0drNE42M3Nqbks2VXNCU2JpS21mN2lMYjRUeXp4V1JuSk8wZnVsNlZVQWxwM1puNEJRbVBoWkhOTC12ZDlpaFpzVUtEdEttUjN2U0FPZDE0SUdYcXBUOVhpYUVZSkJ1QndlYg?oc=5",
+    "published_at": "2026-10-28T07:00:00Z",
     "type": "security",
     "via": "google-news",
     "post_url": "https://sa.usembassy.gov/category/alert/"
