@@ -14,9 +14,8 @@ jobs:
         with: { python-version: "3.12" }
       - name: Doctrine kit copy and registers (tic-doctrine)
         run: python doctrine/kit/tic.py kitcheck && python doctrine/kit/tic.py registers doctrine
-      - name: Tests
-        run: python tests/test_cordon.py
-      - name: Tests (Japan and Netherlands travel advice)
-        run: python tests/test_advice_abroad.py
+      # Every tests/test_*.py, so a new test file cannot be left out (tests/test_archive_lanes.py checks this line).
+      - name: Tests (every tests/test_*.py)
+        run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Feed from the committed data passes the kit's linter
         run: python tools/cordon.py check

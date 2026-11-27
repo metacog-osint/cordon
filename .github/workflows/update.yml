@@ -2,7 +2,14 @@ name: update
 # Hourly: collect every source, commit data/ when its content changed, build site/, log what changed in data/history/
 # (new, changed and ended items, kept after they leave the feed) and publish site/ to GitHub Pages
 # (https://cordon.theintelligence.company/). A failing source keeps its last good data; nothing here fails the run
-# except a broken build. Free: public repo. Secrets: NMS_CLIENT_ID and NMS_CLIENT_SECRET (FAA NMS-API, set by hand).
+# except a broken build. Free: public repo. Secrets: NMS_CLIENT_ID and NMS_CLIENT_SECRET (FAA NMS-API, set by hand),
+# TIC_ARCHIVE_TOKEN (the private archive below).
+#
+# Private archive (the step after the deploy): the NMS archive's closed days, data/, data/history/ and the deployed
+# site/ also go to the PRIVATE repo metacog-osint/tic-archive (tools/tic_archive.py), where nothing is replaced or
+# deleted. The public copies are replaced every run (data/, site/, today's NMS day asset) or kept only for a while
+# (the Actions cache, the unpushed-data artifact); the archive keeps every version. Nothing here reads the archive
+# back: a lost cache is still rebuilt from the public release and the published files.
 #
 # GitHub delays and drops scheduled runs under load: from 1 to 4 Nov 2026 a single hourly trigger ran about once every
 # six hours. So the schedule fires four times an hour and the gate job skips the run when the site was deployed less
@@ -69,6 +76,7 @@ jobs:
           key: nms-store-${{ github.run_id }}
           restore-keys: nms-store-
       - name: Collect
+        id: collect
         env:
           # FAA NMS-API keys (production), set by hand; without them the nms lane waits and makes no request.
           NMS_CLIENT_ID: ${{ secrets.NMS_CLIENT_ID }}
@@ -176,6 +184,72 @@ jobs:
       - id: deployment_retry
         if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
+      # What this public repository replaces, or keeps only for a while, to the private archive, one lane each
+      # (release cordon-<lane>-YYYY-MM; a snapshot per run, only changed files uploaded, nothing replaced or deleted):
+      #   nms      cache/nms/archive/days/: the NMS archive's closed UTC days (cordon/nmsarchive.py), byte for byte
+      #            the day assets of release nms-archive-YYYY-MM. Today's file is left out: it is rebuilt during the
+      #            day, each copy holding every record of the one before (a union), so the closed day holds them all;
+      #            it goes up with the first run after midnight UTC. A closed day leaves the cache after 3 days and
+      #            stays restorable from the snapshots that held it. The dedupe index (seen.json.gz), the significance
+      #            chains and the NMS store are working state built from these records, so they are not archived.
+      #   data     data/ without history/: each source's last good copy, and health.json and nms_state.json, which
+      #            are committed only beside another change. Only once collect finished.
+      #   history  data/history/ as the History step left it (the log, state.json, dropped.jsonl). Only when that
+      #            step logged this run; when its push failed, the snapshot holds lines main did not get.
+      #   site     site/ as deployed, without data/notams/ (lane notams). Only when a Pages deploy succeeded.
+      #   notams   site/data/notams/, the NOTAM subsets as published: at most one snapshot in 6 hours (about 2.5 MB
+      #            compressed each). They are built every run from the NMS records that lane nms keeps.
+      # Nothing is restored from the archive into this run, and the step changes nothing in the work tree. Each lane
+      # is tried even if another failed; a missing token or any failed lane turns the run red after the deploy.
+      - name: Private archive (NMS days, data, history and site, to tic-archive)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 10
+        env:
+          GH_TOKEN: ${{ secrets.TIC_ARCHIVE_TOKEN }}
+          COLLECTED: ${{ steps.collect.outcome }}
+          HISTORY: ${{ steps.history.outcome }}
+          HISTORY_FAILED: ${{ steps.history.outputs.failed }}
+          DEPLOYED: ${{ steps.deployment.outcome == 'success' || steps.deployment_retry.outcome == 'success' }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::secret TIC_ARCHIVE_TOKEN is not set, so the NMS days, data/, data/history/ and site/ did not reach the private archive"; exit 1
+          fi
+          failed=0
+          today=$(date -u +%Y-%m-%d)
+          closed=0
+          for f in cache/nms/archive/days/*.jsonl.gz; do
+            if [ -f "$f" ] && [ "$(basename "$f" .jsonl.gz)" \< "$today" ]; then closed=$((closed + 1)); fi
+          done
+          if [ "$closed" -gt 0 ]; then
+            python tools/tic_archive.py put --program cordon --lane nms --src cache/nms/archive/days \
+              --exclude "$today.jsonl.gz" || failed=1
+          else
+            echo "nms: no closed NMS archive day in the cache this run, so none was archived"
+          fi
+          if [ "$COLLECTED" = "success" ]; then
+            python tools/tic_archive.py put --program cordon --lane data --src data --exclude 'history/*' || failed=1
+          else
+            echo "data: collect did not finish this run, so data/ was not archived"
+          fi
+          if [ "$HISTORY" = "success" ] && [ "$HISTORY_FAILED" != "yes" ]; then
+            python tools/tic_archive.py put --program cordon --lane history --src data/history || failed=1
+          else
+            echo "history: the History step did not log this run, so data/history/ was not archived"
+          fi
+          if [ "$DEPLOYED" = "true" ]; then
+            python tools/tic_archive.py put --program cordon --lane site --src site --exclude 'data/notams/*' || failed=1
+            if [ -d site/data/notams ]; then
+              python tools/tic_archive.py put --program cordon --lane notams --src site/data/notams \
+                --min-interval-hours 6 || failed=1
+            else
+              echo "notams: no NOTAM subsets in site/ this run"
+            fi
+          else
+            echo "site: not deployed this run, so site/ was not archived"
+          fi
+          if [ "$failed" != 0 ]; then
+            echo "::error::a lane did not reach the private archive this run (see above)"; exit 1
+          fi
       # After the deploy (audit C2): a failed history step or an unpushed commit fails the run, so it is seen, while
       # the site was still deployed and the data kept as the unpushed-data artifact.
       - name: Fail the run when history or a push failed
