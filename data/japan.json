@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169246": {
+   "key": "169246",
+   "type": "R10",
+   "at": "2026-11-27T10:16:08Z",
+   "code": "0036",
+   "iso": "HU",
+   "name_ja": "ハンガリー",
+   "title_ja": "クリスマス・年末年始等のイベントシーズンにおける注意喚起 （外務省広域情報の発出）",
+   "lead_ja": "外務省は、クリスマス、年末年始等のイベントシーズンを迎えるに当たり、欧米地域等を対象とした広域情報(欧米等でのテロ等に関する注意喚起)を発出していますので、下記のリンクから参照頂き、お出かけや御旅行に際して安全に注意頂くようお願い致します。\n　　\n欧米等でのテロ等に関する注意喚起（在ハンガリー日本国大使館ホームページ ）（広域情報）\nhttps://www.anzen.mofa.go.jp/info/pcwideareaspecificinfo_2026C053.html\n\nパンフレット 海外へ進出する日本人・企業のための爆弾テロ対策Q＆A\nhttps://www.anzen.mofa.go.jp/pamph/pamph_03.html",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169246",
+   "mission_ja": "在ハンガリー日本国大使館"
+  },
   "169245": {
    "key": "169245",
    "type": "R10",
