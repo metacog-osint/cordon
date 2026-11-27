@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169242": {
+   "key": "169242",
+   "type": "R10",
+   "at": "2026-11-27T06:01:12Z",
+   "code": "0092",
+   "iso": "PK",
+   "name_ja": "パキスタン",
+   "title_ja": "抗議活動に関する注意喚起",
+   "lead_ja": "１　JUI-F（Jamiat Ulema-e-Islam-F）党首 Maulana Fazlur Rehmanが、党員の拘束を受けて、全国規模で道路封鎖等の抗議活動を呼びかけています。当地治安当局によると、本日（２７日）午後３時より、サダル地内プレスクラブ前において、JUI-Fが抗議活動を予定しており、付近の交通状況に影響が及ぶおそれがあります。\n\n２　在留邦人の皆様にあっては、最新の情報取得に努め、抗議活動が行われている場所に近づかないようにしてください。\n\n３　なお、上記注意点以外にも、当地で安全に滞在するための参考となる情報が以下のウェブサイトに掲載されておりますので、そちらもあわせてご確認ください。",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169242",
+   "mission_ja": "在カラチ日本国総領事館"
+  },
   "169241": {
    "key": "169241",
    "type": "R10",
