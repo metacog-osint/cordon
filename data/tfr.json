@@ -8783,6 +8783,7 @@
    "description": "Palm Beach, FL, Saturday, November 28, 2026 through Sunday, November 29, 2026 Local",
    "created": "11/27/2026",
    "first_seen": "2026-11-27T18:10:32Z",
+   "subject": "6/9522",
    "detail": {
     "name": "261128-29 Palm Beach UAS Only Reissue",
     "issued": "2026-11-27T17:53:35Z",
@@ -8950,8 +8951,7 @@
       ]
      ]
     }
-   },
-   "subject": "6/9522"
+   }
   },
   "9/2934": {
    "notam_id": "9/2934",
