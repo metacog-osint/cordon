@@ -217,9 +217,12 @@ is ranked on them. Code: `cordon/significance.py`.
 - **Cause:** the Q-code subject first: WM, WE, RD and RA are military and test. WH blasting, WD demolition of
   explosives and WR radioactive or toxic materials are a hazard to people only when the text names ordnance, the
   demolition of a structure, an evacuation or a release (a leak, a spill); quarry, mine and avalanche-control blasting
-  and forest or crop spraying are scheduled and routine, explosives training is military (in the week from 19 Nov
-  2026, 102 of 111 such notices had no hazard words). RT, RR, RP and WU take their cause from the NOTAM's own words
-  (hazard, disaster response, VIP movements and public events, security, military), else `unknown`. Fireworks are
+  and forest or crop spraying are scheduled and routine, explosives training (a training word anywhere in the text)
+  is military (in the week from 19 Nov 2026, 102 of 111 such notices had no hazard words). RT, RR, RP and WU take
+  their cause from the NOTAM's own words (hazard, disaster response, VIP movements and public events, security,
+  military), else `unknown`; in an RT, RR or RA area a military word before the hazard or disaster word names the
+  area's use, so the area is military ("ACT DUE MIL FLYING ... FOR SAR ... AND FLOOD OR FIRE RELIEF"). A medical
+  evacuation ("MEDICAL EMERG EVACUATION", MEDEVAC, CASEVAC) is not an evacuation from a hazard. Fireworks are
   scheduled and routine, under WD and WH too. Launch's launch words make a NOTAM space operations, except a bare
   missile, rocket or stage (military firing, model rockets) and the "space" inside "airspace".
 - **Rarity:** counted against Cordon's own record of new NOTAMs per flight information region (FIR; the location when

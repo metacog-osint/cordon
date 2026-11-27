@@ -368,6 +368,23 @@ class NetherlandsFeed(unittest.TestCase):
             self.assertEqual([m for _, sev, m in contract.check(f, regs) if sev == "error"], [])
         self.assertIn("Nederland Wereldwijd", fc["attribution"])
 
+    def test_the_picker_does_not_call_an_unlisted_yellow_destination_green(self):
+        # A yellow destination not changed or edited lately has no feed item, so the destination picker falls back to
+        # its "none" text; that text must not say green (Brazil, the Bahamas, Belize and 52 more on 27 Nov 2026).
+        fc = self.build({"BRA": self.rec("BRA", "BR", "Brazil", ["geel"])})
+        self.assertEqual(fc["features"], [])
+        js = (ROOT / "site_src" / "app.js").read_text(encoding="utf-8")
+        line = next(x for x in js.splitlines() if 'none("nl-minbuza-travel-advice"' in x)
+        self.assertNotIn("Green, or not listed", line)
+        self.assertIn("Nothing above yellow", line)
+
+    def test_the_japan_card_names_levels_3_and_4_only(self):
+        # Avoiding non-essential travel is level 2 (japan.LEVELS), which the card's table does not show.
+        html = (ROOT / "site_src" / "index.html").read_text(encoding="utf-8")
+        card = html.split('id="japan-h"', 1)[1].split("</p>", 1)[0]
+        self.assertNotIn("non-essential", card)
+        self.assertIn("danger levels 3 and 4", " ".join(card.split()))
+
     def test_a_stale_set_is_withheld_and_events(self):
         fc = self.build({"UKR": self.rec("UKR", "UA", "Ukraine", ["rood"]), "FRA": self.rec("FRA", "FR", "France", ["groen"])},
                         last_ok="2026-11-20T00:00:00Z")

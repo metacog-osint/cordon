@@ -114,7 +114,7 @@
       (src.netherlands[iso] || []).forEach(function (c) {
         rows.push(["Netherlands", link(c.link, c.advice + (c.regional ? " (the colour differs by area)" : "")),
           { td: c.updated ? date(c.updated) : "—", cls: "num" }]); });
-      if (!src.netherlands[iso]) rows.push(["Netherlands", none("nl-minbuza-travel-advice", "Green, or not listed"), "—"]);
+      if (!src.netherlands[iso]) rows.push(["Netherlands", none("nl-minbuza-travel-advice", "Nothing above yellow (special security risks, travel with care), or not listed"), "—"]);
       (src.cdc[iso] || []).forEach(function (n) {
         rows.push(["CDC health notice", link(n.link, "Level " + n.level + ": " + n.title.replace(/^CDC Level [^:]+: /, "")),
           { td: n.date ? day(n.date) : date(n.published), cls: "num" }]); });
