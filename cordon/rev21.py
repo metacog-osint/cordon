@@ -2,7 +2,7 @@
 signals and corroboration. The builders in feed.py state what they know per lane (event times, last_change from
 Cordon's own change record, signals); finish() then fills what follows from the lane alone.
 
-Decisions (Tom, 18 Nov 2026): an embassy alert's subject is its title with the date cut and punctuation folded, one
+Rules (18 Nov 2026): an embassy alert's subject is its title with the date cut and punctuation folded, one
 item per subject (the newest post, earlier posts in measures.earlier); alerts are placed by location; NGA security
 warnings are reported by one origin, corroboration left to COP. Every source is graded A2: a reliable source that
 nothing else has confirmed (credibility 1 needs a second independence group, kit 0.6.2).

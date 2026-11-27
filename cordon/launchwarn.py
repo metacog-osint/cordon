@@ -1,7 +1,7 @@
 """Launch, space-debris and reentry warnings: the time windows, hazard and cancels in an NGA warning's own words.
 
 Ported from Orbit's NGA parser (orbit/navwarn.py at 4cd3fdc, 17 Nov 2026) so that Cordon, NGA's only live reader in
-the suite, publishes them and Launch reads them from Cordon's feed (Tom's decision, 17 Nov 2026: "Cordon publishes").
+the suite, publishes them and Launch reads them from Cordon's feed (17 Nov 2026).
 Cordon's `launch` category also holds missile firings; those carry no launch hazard here (`hazard` None), which is
 how a reader tells them apart. Windows are UTC [start, end] pairs; a window whose date or time does not exist (a typo
 in the warning) is left out and the rest are still read.

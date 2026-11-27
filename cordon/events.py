@@ -10,7 +10,7 @@ e.g. CZIB-2026-04, or the lane's own key) so Verdict can link each event to the 
 A change is one Cordon saw between two of its own reads (data/changes.jsonl), dated the day Cordon saw it; two of
 one kind for one place on one day are one event, the later. Canada also says in its own update notes when it
 issued, changed or removed an advisory. Such an update in the last 30 days is an event too, dated by Canada, when
-the note names the advisory (canada.names_advisory_change; Tom, 15 Nov 2026) and no change Cordon saw for that
+the note names the advisory (canada.names_advisory_change; 15 Nov 2026) and no change Cordon saw for that
 place within COVER_DAYS after it already stands for it. Cordon holds only Canada's latest update per place, so one
 replaced before Verdict's daily sync is missed.
 """

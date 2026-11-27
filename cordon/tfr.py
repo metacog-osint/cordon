@@ -43,7 +43,7 @@ NEW_HOURS = 72
 NEW_ALERT = {"SPACE OPERATIONS", "SECURITY", "SPECIAL"}
 # Types left out of the feed (kept in data and counted as skipped in health), each with the TIC program that
 # publishes it instead. SPACE OPERATIONS TFRs are Launch's (launch.theintelligence.company), which tiers a new one
-# anomaly by the same 72-hour rule; COP drew each twice while both carried them (Tom, 14 Nov 2026). Empty this to
+# anomaly by the same 72-hour rule; COP drew each twice while both carried them (14 Nov 2026). Empty this to
 # bring them back.
 SKIP_TYPES: dict[str, str] = {"SPACE OPERATIONS": "Launch"}
 # The list's state field for US territories with their own ISO code; every other TFR is the US's. (The world outlines
@@ -229,7 +229,7 @@ def collect(old: dict | None, when: str | None = None, fetch=fetch_or_none, paus
     return dict(sorted(out.items())), None, read, failed
 
 
-# Impact (Tom, 15 Nov 2026: alerts should weigh what a restriction does, so a small volcano or range TFR far from
+# Impact (15 Nov 2026: alerts should weigh what a restriction does, so a small volcano or range TFR far from
 # busy airspace is not flagged like one over a hub). Measured on the 43 shaped TFRs held 15 Nov (space operations
 # left out): hazards 11-1,066 km2 up to 11,000 ft; most security TFRs 11-700 km2; DC's SFRA 11,571 km2; the VIP TFR
 # at Anchorage 10,646 km2 to 17,999 ft. FL180 is the floor of Class A (jet routes); 56 km (30 nm) is about the
@@ -240,13 +240,13 @@ CLASS_A_FT = 18000
 WIDE_KM2 = 2500.0
 SIZEABLE_KM2 = 500.0
 MODERATE_KM2 = 250.0
-# Reaching Class A counts only over CLASS_A_MIN_KM2 or more (Tom, 16 Nov 2026 UTC): a 29 km2 surface-to-unlimited
+# Reaching Class A counts only over CLASS_A_MIN_KM2 or more (16 Nov 2026 UTC): a 29 km2 surface-to-unlimited
 # munitions test off Santa Rosa Island (6/7507) is a point that jet traffic steps around, not a moderate impact.
 # 100 km2 is about a 5.6 km radius, the size of a VIP TFR's 3 nm inner ring.
 CLASS_A_MIN_KM2 = 100.0
 # A VIP TFR is listed but routine unless its impact is high (a presidential visit's 30 nm ring is).
 IMPACT_ALERT = {"VIP"}
-# Re-issues (item 4 of Tom's list, 15 Nov 2026): the FAA cancels a changed TFR and issues it under a new number,
+# Re-issues (15 Nov 2026): the FAA cancels a changed TFR and issues it under a new number,
 # and long-running ranges are renewed. A new TFR is a re-issue when one of the same type, whose bounding box
 # overlaps its own by REISSUE_IOU, was held before it, now or within GONE_DAYS; it counts as new only if it is
 # larger (area over ENLARGED_BY times the earlier one, or a higher ceiling).
