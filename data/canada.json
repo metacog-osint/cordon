@@ -1,6 +1,6 @@
 {
  "source": "https://data.international.gc.ca/travel-voyage/index-alpha-eng.json",
- "generated": "2026-11-26T21:40:18Z",
+ "generated": "2026-11-27T13:02:07Z",
  "countries": {
   "AD": {
    "key": "AD",
@@ -153,7 +153,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-25T12:47:43Z",
+   "updated": "2026-11-27T12:43:57Z",
    "update_type": "Regular text update",
    "update": "Natural disasters and climate section – added information on El Niño",
    "link": "https://travel.gc.ca/destinations/australia"
@@ -1317,7 +1317,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions",
    "regional": false,
-   "updated": "2026-11-24T17:38:04Z",
+   "updated": "2026-11-27T12:45:00Z",
    "update_type": "Regular text update",
    "update": "Entry and exit requirements section – updated information on exemption from the Korea Electronic Travel Authority (K-ETA)",
    "link": "https://travel.gc.ca/destinations/south-korea"
@@ -2109,7 +2109,7 @@
    "level": 0,
    "advisory": "Exercise normal security precautions (with regional advisories)",
    "regional": true,
-   "updated": "2026-11-13T12:20:00Z",
+   "updated": "2026-11-27T12:47:00Z",
    "update_type": "Regular text update",
    "update": "Safety and security section – removed information on parliamentary elections",
    "link": "https://travel.gc.ca/destinations/serbia"

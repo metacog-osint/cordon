@@ -8419,6 +8419,184 @@
     }
    }
   },
+  "6/9873": {
+   "notam_id": "6/9873",
+   "type": "SECURITY",
+   "facility": "ZJX",
+   "state": "GA",
+   "description": "Brunswick, GA, Monday, November 30, 2026 through Friday, December 18, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T13:10:33Z",
+   "detail": {
+    "name": "261130-1218 FLETC cUAS",
+    "issued": "2026-11-27T12:54:29Z",
+    "effective": "2026-11-30T12:00:00Z",
+    "expires": "2026-12-18T22:00:00Z",
+    "regulation": "99.7",
+    "purpose": null,
+    "city": "Brunswick",
+    "floor": "surface",
+    "ceiling": "400 ft AGL",
+    "statutory": false,
+    "text": "!FDC 6/9873 ZJX GA..AIRSPACE BRUNSWICK, GA..TEMPORARY FLIGHT RESTRICTIONS. NOVEMBER 30-DECEMBER 18, 2026 LOCAL. PURSUANT TO 49 USC 40103(B)(3), THE FEDERAL AVIATION ADMINISTRATION (FAA) CLASSIFIES THE AIRSPACE DEFINED IN THIS NOTAM AS 'NTL DEFENSE AIRSPACE'. PILOTS WHO DO NOT ADHERE TO THE FOLLOWING PROC MAY BE INTERCEPTED, DETAINED AND INTERVIEWED BY LAW ENFORCEMENT/SECURITY PERSONNEL. ANY OF THE FOLLOWING ADDITIONAL ACTIONS MAY ALSO BE TAKEN AGAINST A PILOT WHO DOES NOT COMPLY WITH THE RQMNTS OR ANY SPECIAL INSTRUCTIONS OR PROC ANNOUNCED IN THIS NOTAM: A) THE FAA MAY TAKE ADMINISTRATIVE ACTION, INCLUDING IMPOSING CIVIL PENALTIES AND THE SUSPENSION OR REVOCATION OF AIRMEN CERTIFICATES; OR B) THE UNITED STATES GOVERNMENT MAY PURSUE CRIMINAL CHARGES, INCLUDING CHARGES UNDER 49 USC SECTION 46307; OR C) THE UNITED STATES GOVERNMENT MAY USE DEADLY FORCE AGAINST THE AIRBORNE ACFT, IF IT IS DETERMINED THAT THE ACFT POSES AN IMMINENT SECURITY THREAT. PURSUANT TO 14 CFR 99.7, SPECIAL SECURITY INSTRUCTIONS (SSI), ALL UNMANNED ACFT SYSTEM (UAS) FLT OPS ARE PROHIBITED: WI AN AREA DEFINED AS 0.5NM RADIUS OF 311417N0812825W (SSI357011.3) SFC-400FT AGL EFFECTIVE 2611301200 UTC (0700 LOCAL 11/30/26) UNTIL 2612182200 UTC (1700 LOCAL 12/18/26) DLY 1200-2200 (0700-1700 LOCAL). EXC AS SPECIFIED BLW: A. UAS OPS MAY BE AUTH WI THE DEFINED SSI AIRSPACE IF IN COMPLIANCE WITH THE RQMNTS LISTED BLW: 1) UAS OPS IN DCT SUPPORT OF AN ACT NTL DEFENSE, HOMELAND SECURITY, LAW ENFORCEMENT, FIREFIGHTING, SAR, OR DISASTER RESPONSE MISSION; 2) UAS OPS IN SUPPORT OF EVENT OPS; 3) COMMERCIAL UAS OPS WITH A VALID STATEMENT OF WORK; 4) MUST BE IN POSSESSION OF AN APPROVED SPECIAL GOVERNMENTAL INTEREST(SGI) AIRSPACE WAIVER; 5) AND COMPLY WITH ALL OTHER APPLICABLE FEDERAL AVIATION REGULATIONS. B. UAS OPR IDENTIFIED IN A.1, A.2 OR A.3 ABV MUST APPLY FOR A SGI WAIVER VIA HTTPS://WAIVERS.FAA.GOV.. C. UAS OPR WHO DO NOT COMPLY WITH APPLICABLE AIRSPACE RESTRICTIONS ARE WARNED THAT PURSUANT TO 10 U.S.C.SECTION 130I AND 6 U.S.C.SECTION 124N, THE DEPARTMENT OF DEFENSE(DOD), THE DEPARTMENT OF HOMELAND SECURITY(DHS) OR THE DEPARTMENT OF JUSTICE(DOJ) MAY TAKE SECURITY ACTION THAT RESULTS IN THE INTERFERENCE, DISRUPTION, SEIZURE, DAMAGING, OR DESTRUCTION OF UNMANNED ACFT DEEMED TO POSE A CREDIBLE SAFETY OR SECURITY THREAT TO PROTECTED PERSONNEL, FAC, OR ASSETS. D. THE SYSTEM OPERATIONS SUPPORT CENTER (SOSC), IS THE CDN FAC FOR UAS OPS, SUBMIT SGI WAIVER REQUEST VIA HTTPS://WAIVERS.FAA.GOV, FIRST RESPONDERS EMGERGENCY OPS CTC THE SOSC AT 202-267-8276. E. THE FAA RECOMMENDS THAT ALL ACFT OPR CK NOTAMS FREQUENTLY FOR POSSIBLE CHANGES TO THIS TFR PRIOR TO OPS. OPR MAY REVIEW THE TFR DETAILS AT HTTPS://TFR.FAA.GOV/ OR HTTPS://WWW.1800WXBRIEF.COM. 2611301200-2612182200",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -81.47361,
+        31.24641
+       ],
+       [
+        -81.47192,
+        31.24628
+       ],
+       [
+        -81.47029,
+        31.2459
+       ],
+       [
+        -81.46875,
+        31.24529
+       ],
+       [
+        -81.46736,
+        31.24445
+       ],
+       [
+        -81.46616,
+        31.24342
+       ],
+       [
+        -81.46519,
+        31.24223
+       ],
+       [
+        -81.46448,
+        31.24091
+       ],
+       [
+        -81.46404,
+        31.23951
+       ],
+       [
+        -81.46389,
+        31.23806
+       ],
+       [
+        -81.46404,
+        31.2366
+       ],
+       [
+        -81.46448,
+        31.2352
+       ],
+       [
+        -81.46519,
+        31.23388
+       ],
+       [
+        -81.46617,
+        31.23269
+       ],
+       [
+        -81.46736,
+        31.23166
+       ],
+       [
+        -81.46875,
+        31.23082
+       ],
+       [
+        -81.47029,
+        31.23021
+       ],
+       [
+        -81.47192,
+        31.22983
+       ],
+       [
+        -81.47361,
+        31.2297
+       ],
+       [
+        -81.4753,
+        31.22983
+       ],
+       [
+        -81.47694,
+        31.23021
+       ],
+       [
+        -81.47847,
+        31.23082
+       ],
+       [
+        -81.47986,
+        31.23166
+       ],
+       [
+        -81.48106,
+        31.23269
+       ],
+       [
+        -81.48203,
+        31.23388
+       ],
+       [
+        -81.48274,
+        31.2352
+       ],
+       [
+        -81.48318,
+        31.2366
+       ],
+       [
+        -81.48333,
+        31.23806
+       ],
+       [
+        -81.48318,
+        31.23951
+       ],
+       [
+        -81.48275,
+        31.24091
+       ],
+       [
+        -81.48203,
+        31.24223
+       ],
+       [
+        -81.48106,
+        31.24342
+       ],
+       [
+        -81.47986,
+        31.24445
+       ],
+       [
+        -81.47847,
+        31.24529
+       ],
+       [
+        -81.47694,
+        31.2459
+       ],
+       [
+        -81.4753,
+        31.24628
+       ],
+       [
+        -81.47361,
+        31.24641
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9873"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
