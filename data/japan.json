@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169258": {
+   "key": "169258",
+   "type": "R10",
+   "at": "2026-11-27T21:01:12Z",
+   "code": "9001",
+   "iso": "CA",
+   "name_ja": "カナダ",
+   "title_ja": "【安全注意喚起】住居侵入事案の増加について",
+   "lead_ja": "●報道によれば、トロントでは、本年に入り１１１件の住居侵入事案が発生しており、昨年の同時期に比べて約３割増加しているとのことです。\n●２５日（水）には、St. Clair Avenue West近くの住居に強盗が侵入し、住民１名が射殺される事件が発生しています。\n●在宅中に強盗の侵入が疑われる場合や、外出先から自宅に戻った際に侵入があった疑いがある場合には、速やかに「９１１」まで連絡をしてください。\n●トロント警察より、「住居侵入の防止策（BREAK & ENTER PREVENTION）」が公開されておりますので、ご参照ください。\nhttps://www.tps.ca/crime-prevention/break-and-enter-prevention/",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169258",
+   "mission_ja": "在トロント日本国総領事館"
+  },
   "169257": {
    "key": "169257",
    "type": "R10",
