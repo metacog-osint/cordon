@@ -7351,6 +7351,1074 @@
     }
    }
   },
+  "6/9856": {
+   "notam_id": "6/9856",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZMA",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Tuesday, December 1, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261201 FCS SpaceX Cygnus NG-25 (X4118",
+    "issued": "2026-11-27T00:29:48Z",
+    "effective": "2026-12-01T14:42:00Z",
+    "expires": "2026-12-01T15:55:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9856 ZMA FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2612011442 UTC (0942 LOCAL 12/01/26) UNTIL 2612011555 UTC (1055 LOCAL 12/01/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2612011442-2612011555",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9856"
+  },
+  "6/9857": {
+   "notam_id": "6/9857",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZJX",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Tuesday, December 1, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261201 FCS SpaceX Cygnus NG-25 (X4118",
+    "issued": "2026-11-27T00:30:22Z",
+    "effective": "2026-12-01T14:42:00Z",
+    "expires": "2026-12-01T15:55:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9857 ZJX FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2612011442 UTC (0942 LOCAL 12/01/26) UNTIL 2612011555 UTC (1055 LOCAL 12/01/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2612011442-2612011555",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9857"
+  },
+  "6/9859": {
+   "notam_id": "6/9859",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZJX",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Monday, November 30, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261130 FCS SpaceX Cygnus NG-25 (X4118",
+    "issued": "2026-11-27T00:31:03Z",
+    "effective": "2026-11-30T15:04:00Z",
+    "expires": "2026-11-30T16:18:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9859 ZJX FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2611301504 UTC (1004 LOCAL 11/30/26) UNTIL 2611301618 UTC (1118 LOCAL 11/30/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2611301504-2611301618",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9859"
+  },
+  "6/9860": {
+   "notam_id": "6/9860",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZMA",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Monday, November 30, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261130 FCS SpaceX Cygnus NG-25 (X4118",
+    "issued": "2026-11-27T00:31:42Z",
+    "effective": "2026-11-30T15:04:00Z",
+    "expires": "2026-11-30T16:18:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9860 ZMA FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2611301504 UTC (1004 LOCAL 11/30/26) UNTIL 2611301618 UTC (1118 LOCAL 11/30/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2611301504-2611301618",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9860"
+  },
+  "6/9861": {
+   "notam_id": "6/9861",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZMA",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Sunday, November 29, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261129 FCS SpaceX Cygnus NG-25 (X4118",
+    "issued": "2026-11-27T00:32:15Z",
+    "effective": "2026-11-29T15:30:00Z",
+    "expires": "2026-11-29T16:43:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9861 ZMA FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2611291530 UTC (1030 LOCAL 11/29/26) UNTIL 2611291643 UTC (1143 LOCAL 11/29/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2611291530-2611291643",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9861"
+  },
+  "6/9862": {
+   "notam_id": "6/9862",
+   "type": "SPACE OPERATIONS",
+   "facility": "ZJX",
+   "state": "FL",
+   "description": "Cape Canaveral, FL, Sunday, November 29, 2026 Local",
+   "created": "11/27/2026",
+   "first_seen": "2026-11-27T00:40:34Z",
+   "detail": {
+    "name": "261129 FCS SpaceX Cygnus NG-25 (X4118)",
+    "issued": "2026-11-27T00:32:46Z",
+    "effective": "2026-11-29T15:30:00Z",
+    "expires": "2026-11-29T16:43:00Z",
+    "regulation": "91.143",
+    "purpose": null,
+    "city": "Cape Canaveral",
+    "floor": "surface",
+    "ceiling": "FL180",
+    "statutory": false,
+    "text": "!FDC 6/9862 ZJX FL..AIRSPACE CAPE CANAVERAL, FL..TEMPORARY FLIGHT RESTRICTIONS. PURSUANT TO 14 CFR SECTION 91.143, SPACE OPS AREA, ACFT OPS ARE PROHIBITED WI AN AREA DEFINED AS 285116N0804219W TO 290730N0803000W TO 290557N0802718W TO 290506N0802429W TO 290403N0802144W TO 290248N0801907W TO 290120N0801638W TO 285942N0801419W TO 285753N0801209W TO 285554N0801011W TO 285347N0800826W TO 285133N0800653W TO 284912N0800534W TO 284645N0800429W TO 284414N0800340W TO 284139N0800305W TO 283903N0800246W TO 283625N0800242W TO 283348N0800254W TO 283112N0800322W TO 282840N0800404W TO 282611N0800502W TO 282347N0800614W TO 282129N0800739W TO 281918N0800918W TO 281715N0801110W TO 281521N0801313W TO 281337N0801526W TO 281330N0801600W TO 282501N0803029W TO 282501N0803759W TO 282501N0804144W TO 283121N0804349W TO 283801N0804701W TO 284910N0805044W TO 285116N0804714W TO POINT OF ORIGIN SFC-FL180 EFFECTIVE 2611291530 UTC (1030 LOCAL 11/29/26) UNTIL 2611291643 UTC (1143 LOCAL 11/29/26). EXCLUDING AIRSPACE OVER INTERNATIONAL WATERS. THIS AREA ENCOMPASSES R2932, R2933 AND PORTIONS OF R2934 AND W497A. ADDITIONAL WARNING AND RESTRICTED AREAS WILL BE ACT. PILOTS MUST CONSULT ALL NOTAMS REGARDING THESE OPS AND MAY CTC ZMA FOR CURRENT AIRSPACE STATUS. MIAMI /ZMA/ ARTCC, TEL 305-716-1588, IS THE FAA CDN FAC. 2611291530-2611291643",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -80.70528,
+        28.85444
+       ],
+       [
+        -80.5,
+        29.125
+       ],
+       [
+        -80.4551,
+        29.09912
+       ],
+       [
+        -80.40792,
+        29.08513
+       ],
+       [
+        -80.36233,
+        29.06757
+       ],
+       [
+        -80.31868,
+        29.04657
+       ],
+       [
+        -80.27729,
+        29.0223
+       ],
+       [
+        -80.23849,
+        28.99493
+       ],
+       [
+        -80.20256,
+        28.96469
+       ],
+       [
+        -80.1698,
+        28.9318
+       ],
+       [
+        -80.14043,
+        28.89651
+       ],
+       [
+        -80.1147,
+        28.85911
+       ],
+       [
+        -80.09278,
+        28.81986
+       ],
+       [
+        -80.07484,
+        28.77909
+       ],
+       [
+        -80.06102,
+        28.73708
+       ],
+       [
+        -80.05141,
+        28.69418
+       ],
+       [
+        -80.04609,
+        28.6507
+       ],
+       [
+        -80.04508,
+        28.60697
+       ],
+       [
+        -80.0484,
+        28.56334
+       ],
+       [
+        -80.05601,
+        28.52012
+       ],
+       [
+        -80.06784,
+        28.47766
+       ],
+       [
+        -80.08381,
+        28.43626
+       ],
+       [
+        -80.10378,
+        28.39625
+       ],
+       [
+        -80.12761,
+        28.35793
+       ],
+       [
+        -80.1551,
+        28.32158
+       ],
+       [
+        -80.18605,
+        28.28749
+       ],
+       [
+        -80.22022,
+        28.2559
+       ],
+       [
+        -80.25735,
+        28.22706
+       ],
+       [
+        -80.26667,
+        28.225
+       ],
+       [
+        -80.50806,
+        28.41694
+       ],
+       [
+        -80.63306,
+        28.41694
+       ],
+       [
+        -80.69556,
+        28.41694
+       ],
+       [
+        -80.73028,
+        28.5225
+       ],
+       [
+        -80.78361,
+        28.63361
+       ],
+       [
+        -80.84556,
+        28.81944
+       ],
+       [
+        -80.78722,
+        28.85444
+       ],
+       [
+        -80.70528,
+        28.85444
+       ]
+      ]
+     ]
+    }
+   },
+   "subject": "6/9862"
+  },
   "9/2934": {
    "notam_id": "9/2934",
    "type": "VIP",
