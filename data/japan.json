@@ -1,6 +1,18 @@
 {
  "source": "https://www.ezairyu.mofa.go.jp/opendata/area/newarrival.xml",
  "notices": {
+  "169259": {
+   "key": "169259",
+   "type": "R10",
+   "at": "2026-11-28T08:11:03Z",
+   "code": "0211",
+   "iso": "SS",
+   "name_ja": "南スーダン",
+   "title_ja": "11月28日発行：ジュバ市等における事件・事故情報につきまして",
+   "lead_ja": "【お知らせ】\n外交専門誌『外交』Vol.99の発行\n\n　外交専門誌『外交』は、『外交』編集委員会が幅広い視点から、日本を取り巻く国際情勢の現状、外交に関する各界各層の様々な議論を広く紹介する、国内唯一の外交専門誌です。　　　\nこの機会にぜひご一読ください。\n　なお、一部記事については、外務省HPにも掲載されていますのでご案内します。\n［外務省HP］\nhttps://www.mofa.go.jp/mofaj/press/pr/gaikou/vol99.html",
+   "link": "https://www.anzen.mofa.go.jp/od/ryojiMailDetail.html?keyCd=169259",
+   "mission_ja": "在南スーダン日本国大使館"
+  },
   "169258": {
    "key": "169258",
    "type": "R10",
