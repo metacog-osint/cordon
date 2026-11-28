@@ -1,102 +1,102 @@
 {
  "state-travel-advisories": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-18T19:40:31Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "217 advisories"
  },
  "us-embassy-alerts": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-27T11:40:38Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "23 of 56 posts answered (23 only through Google News search); e.g. HTTP 403; Google News: no alert in the last 30 days"
  },
  "easa-czib": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-27T15:10:31Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "16 active"
  },
  "nga-navwarnings": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-13T04:39:32Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "421 warnings in force",
   "newest_item": "2026-11-27T15:54:00Z",
   "held_areas": {}
  },
  "faa-nas-status": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-24T07:10:32Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "0 ground stops, 0 ground delay programs, 0 closures"
  },
  "uk-fcdo-travel-advice": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "226 countries, 70 with advice against some travel; 0 country pages read"
  },
  "faa-tfr": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-15T10:10:31Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "56 TFRs listed, 44 with an area; 6 space operations TFRs left to Launch; 0 detail files read"
  },
  "gac-travel-advisories": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-15T19:40:30Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "230 places: 22 avoid all travel, 14 avoid non-essential travel, 90 high degree of caution, 64 with regional advisories; index generated 2026-11-27T21:00:18Z"
  },
  "cdc-travel-notices": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "25 notices: 1 level 4, 1 level 3, 13 level 2, 10 level 1"
  },
  "nz-mfat-safetravel": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "222 destinations: 23 do not travel, 12 avoid non-essential travel, 80 increased caution, 57 with other levels in some areas; 0 country pages read"
  },
  "faa-prohibitions-notices": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "20 of 24 sections with an SFAR or KICZ NOTAM: 8 SFARs, 22 KICZ NOTAMs; 12 prohibitions, 10 advisories, 8 pointers"
  },
  "faa-nms": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": "2026-11-26T19:10:37Z",
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
-  "detail": "delta; 14053 held; subsets {'launch-areas': 3357, 'gnss': 3669}"
+  "checked_at": "2026-11-28T03:40:32Z",
+  "detail": "delta; 14063 held; subsets {'launch-areas': 3368, 'gnss': 3669}"
  },
  "jp-mofa-overseas-safety": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "54 notices held (38 in the last 72 hours, 5 naming no country); danger levels for 183 of 183 countries: 34 at level 4, 29 at level 3, 25 at level 2; 8 country files read"
  },
  "nl-minbuza-travel-advice": {
-  "last_ok": "2026-11-28T03:10:33Z",
+  "last_ok": "2026-11-28T03:40:32Z",
   "last_error": null,
   "failures": 0,
-  "checked_at": "2026-11-28T03:10:33Z",
+  "checked_at": "2026-11-28T03:40:32Z",
   "detail": "226 destinations: 61 red, 24 orange, 60 yellow, 81 green; 72 with more than one colour"
  }
 }
